@@ -1,0 +1,9 @@
+{
+  "name": "Salvaged Contraption",
+  "passiveStats": [
+    { "name": "Item:Salvaged Contraption:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Salvaged Contraption:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 200, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Salvaged Contraption:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

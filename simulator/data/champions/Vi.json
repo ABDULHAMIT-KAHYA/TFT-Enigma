@@ -1,0 +1,19 @@
+{
+  "name": "Vi",
+  "cost": 2,
+  "stats": {
+    "hp": 1200,
+    "ad": 85,
+    "ap": 0,
+    "armor": 40,
+    "mr": 40,
+    "attackSpeed": 1.0,
+    "critChance": 0.0,
+    "critDamage": 1.5,
+    "durability": 0.0,
+    "range": 1
+  },
+  "autoAttackDamageType": "Physical",
+  "mana": { "maxMana": 0, "manaGainOnAttack": 0, "startMana": 0 },
+  "traits": ["Bruiser"]
+}

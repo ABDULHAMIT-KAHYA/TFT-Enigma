@@ -1,0 +1,8 @@
+{
+  "name": "The Eternal Flame",
+  "passiveStats": [
+    { "name": "Item:The Eternal Flame:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:The Eternal Flame:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

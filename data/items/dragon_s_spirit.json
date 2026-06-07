@@ -1,0 +1,8 @@
+{
+  "name": "Dragon's Spirit",
+  "passiveStats": [
+    { "name": "Item:Dragon's Spirit:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Dragon's Spirit:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

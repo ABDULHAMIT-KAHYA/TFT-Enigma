@@ -1,0 +1,7 @@
+{
+  "name": "gain @TFTUnitProperty.item:TFT8_Admin_ManaGained@ Mana",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

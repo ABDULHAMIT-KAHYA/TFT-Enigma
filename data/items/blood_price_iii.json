@@ -1,0 +1,8 @@
+{
+  "name": "Blood Price III",
+  "passiveStats": [
+    { "name": "Item:Blood Price III:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Blood Price III:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

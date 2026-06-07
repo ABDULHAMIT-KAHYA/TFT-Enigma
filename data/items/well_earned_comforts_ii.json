@@ -1,0 +1,7 @@
+{
+  "name": "Well-Earned Comforts II",
+  "passiveStats": [
+    { "name": "Item:Well-Earned Comforts II:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 111, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

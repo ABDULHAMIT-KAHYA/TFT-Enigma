@@ -1,0 +1,9 @@
+{
+  "name": "Shroud of Reverence",
+  "passiveStats": [
+    { "name": "Item:Shroud of Reverence:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 400, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Shroud of Reverence:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Shroud of Reverence:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

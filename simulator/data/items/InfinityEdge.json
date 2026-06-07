@@ -1,0 +1,17 @@
+{
+  "name": "Infinity Edge",
+  "passiveStats": [
+    {
+      "name": "Infinity Edge Crit Damage",
+      "effectType": "CritDamageBonus",
+      "crowdControlType": "None",
+      "affectedStat": "CritDamage",
+      "modifierType": "Flat",
+      "value": 0.35,
+      "durationMs": 12000,
+      "tickIntervalMs": 0,
+      "damageType": "True"
+    }
+  ],
+  "triggeredEffects": []
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Combat Medic",
+  "passiveStats": [
+    { "name": "Item:Combat Medic:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

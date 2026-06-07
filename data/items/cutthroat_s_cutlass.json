@@ -1,0 +1,10 @@
+{
+  "name": "Cutthroat's Cutlass",
+  "passiveStats": [
+    { "name": "Item:Cutthroat's Cutlass:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Cutthroat's Cutlass:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Cutthroat's Cutlass:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Cutthroat's Cutlass:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Kinetic Launcher Rockets",
+  "passiveStats": [
+    { "name": "Item:Kinetic Launcher Rockets:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.89, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Kinetic Launcher Rockets:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 5.67, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Kinetic Launcher Rockets:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1234, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

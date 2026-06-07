@@ -1,0 +1,8 @@
+{
+  "name": "Ionic Dark-Spark",
+  "passiveStats": [
+    { "name": "Item:Ionic Dark-Spark:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Ionic Dark-Spark:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

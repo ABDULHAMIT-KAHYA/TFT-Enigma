@@ -1,0 +1,7 @@
+{
+  "name": "You Have My Sword",
+  "passiveStats": [
+    { "name": "Item:You Have My Sword:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

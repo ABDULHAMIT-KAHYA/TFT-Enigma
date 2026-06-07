@@ -1,0 +1,7 @@
+{
+  "name": "Celestial Blessing III",
+  "passiveStats": [
+    { "name": "Item:Celestial Blessing III:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

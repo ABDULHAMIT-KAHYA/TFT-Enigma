@@ -1,0 +1,9 @@
+{
+  "name": "Goldmancer's Staff",
+  "passiveStats": [
+    { "name": "Item:Goldmancer's Staff:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Goldmancer's Staff:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Goldmancer's Staff:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

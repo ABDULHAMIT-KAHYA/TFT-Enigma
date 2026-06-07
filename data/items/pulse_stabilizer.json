@@ -1,0 +1,9 @@
+{
+  "name": "Pulse Stabilizer",
+  "passiveStats": [
+    { "name": "Item:Pulse Stabilizer:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Pulse Stabilizer:CritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Pulse Stabilizer:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Bloodthirster",
+  "passiveStats": [],
+  "triggeredEffects": [
+    {
+      "name": "Bloodthirster lifesteal",
+      "trigger": "OnHit",
+      "healPercentOfDamage": 0.30,
+      "areaShape": "SingleTarget"
+    },
+    {
+      "name": "Bloodthirster shield",
+      "trigger": "OnLowHealth",
+      "areaShape": "Self",
+      "maxStacks": 1,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": {
+        "name": "Bloodthirster Shield",
+        "effectType": "Shield",
+        "crowdControlType": "None",
+        "affectedStat": "None",
+        "modifierType": "Flat",
+        "value": 300.0,
+        "durationMs": 4000,
+        "tickIntervalMs": 0,
+        "damageType": "True"
+      }
+    }
+  ]
+}

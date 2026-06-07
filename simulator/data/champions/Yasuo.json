@@ -1,0 +1,19 @@
+{
+  "name": "Yasuo",
+  "cost": 3,
+  "stats": {
+    "hp": 900,
+    "ad": 95,
+    "ap": 0,
+    "armor": 35,
+    "mr": 35,
+    "attackSpeed": 1.1111111,
+    "critChance": 0.0,
+    "critDamage": 1.5,
+    "durability": 0.0,
+    "range": 1
+  },
+  "autoAttackDamageType": "Physical",
+  "mana": { "maxMana": 0, "manaGainOnAttack": 0, "startMana": 0 },
+  "traits": ["Duelist", "Executioner"]
+}

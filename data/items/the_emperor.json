@@ -1,0 +1,8 @@
+{
+  "name": "The Emperor",
+  "passiveStats": [
+    { "name": "Item:The Emperor:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:The Emperor:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Bruiser",
+  "breakpoints": [2, 4, 6],
+  "tiers": [
+    {
+      "breakpoint": 2,
+      "effects": [
+        {
+          "hook": "OnCombatStart",
+          "type": "ApplyStatusToTraitUnits",
+          "statusEffect": {
+            "name": "Bruiser Bonus HP",
+            "effectType": "Buff",
+            "crowdControlType": "None",
+            "affectedStat": "MaxHp",
+            "modifierType": "Flat",
+            "value": 300.0,
+            "durationMs": 12000,
+            "tickIntervalMs": 0,
+            "damageType": "True"
+          }
+        }
+      ]
+    },
+    {
+      "breakpoint": 4,
+      "effects": [
+        {
+          "hook": "OnCombatStart",
+          "type": "ApplyStatusToTraitUnits",
+          "statusEffect": {
+            "name": "Bruiser Bonus HP",
+            "effectType": "Buff",
+            "crowdControlType": "None",
+            "affectedStat": "MaxHp",
+            "modifierType": "Flat",
+            "value": 650.0,
+            "durationMs": 12000,
+            "tickIntervalMs": 0,
+            "damageType": "True"
+          }
+        }
+      ]
+    },
+    {
+      "breakpoint": 6,
+      "effects": [
+        {
+          "hook": "OnCombatStart",
+          "type": "ApplyStatusToTraitUnits",
+          "statusEffect": {
+            "name": "Bruiser Bonus HP",
+            "effectType": "Buff",
+            "crowdControlType": "None",
+            "affectedStat": "MaxHp",
+            "modifierType": "Flat",
+            "value": 1200.0,
+            "durationMs": 12000,
+            "tickIntervalMs": 0,
+            "damageType": "True"
+          }
+        }
+      ]
+    }
+  ]
+}

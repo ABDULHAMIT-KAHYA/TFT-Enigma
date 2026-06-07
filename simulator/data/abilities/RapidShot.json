@@ -1,0 +1,39 @@
+{
+  "id": "RapidShot",
+  "name": "Rapid Shot",
+  "manaCost": 80,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Rapid Shot",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 0, "adRatio": 1.0, "apRatio": 0.0, "damageType": "Physical" },
+      "areaShape": "SingleTarget",
+      "canCrit": true
+    },
+    {
+      "name": "Rapid Shot",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 0, "adRatio": 1.0, "apRatio": 0.0, "damageType": "Physical" },
+      "areaShape": "SingleTarget",
+      "canCrit": true
+    },
+    {
+      "name": "Rapid Shot",
+      "trigger": "OnCast",
+      "areaShape": "SingleTarget",
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": {
+        "name": "Armor Shred",
+        "effectType": "Debuff",
+        "crowdControlType": "None",
+        "affectedStat": "Armor",
+        "modifierType": "Flat",
+        "value": -20.0,
+        "durationMs": 4000,
+        "tickIntervalMs": 0,
+        "damageType": "Physical"
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "WarCry",
+  "name": "War Cry",
+  "manaCost": 80,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "War Cry",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 120, "adRatio": 0.0, "apRatio": 0.0, "damageType": "Physical" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": {
+        "name": "Stun",
+        "effectType": "CrowdControl",
+        "crowdControlType": "Stun",
+        "affectedStat": "None",
+        "modifierType": "Flat",
+        "value": 0.0,
+        "durationMs": 2000,
+        "tickIntervalMs": 0,
+        "damageType": "True"
+      }
+    }
+  ]
+}

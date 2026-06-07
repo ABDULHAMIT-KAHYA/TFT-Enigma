@@ -1,0 +1,7 @@
+{
+  "name": "On kill, the killer gains @TFTUnitProperty.item:TFT8_Admin_ASAmount@% Attack Speed",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

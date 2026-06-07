@@ -1,0 +1,9 @@
+{
+  "name": "Radiant Last Whisper",
+  "passiveStats": [
+    { "name": "Item:Radiant Last Whisper:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Radiant Last Whisper:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Radiant Last Whisper:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

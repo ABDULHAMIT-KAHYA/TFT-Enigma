@@ -1,0 +1,7 @@
+{
+  "name": "Big Friend II",
+  "passiveStats": [
+    { "name": "Item:Big Friend II:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.13, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Ultra Friendly Object",
+  "name": "Ultra Friendly Object",
+  "manaCost": 60,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Ultra Friendly Object",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 5, "adRatio": 0, "apRatio": 0.8, "damageType": "Magic" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    }
+  ]
+}

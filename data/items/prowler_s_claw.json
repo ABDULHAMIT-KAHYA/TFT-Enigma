@@ -1,0 +1,10 @@
+{
+  "name": "Prowler's Claw",
+  "passiveStats": [
+    { "name": "Item:Prowler's Claw:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Prowler's Claw:CritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Prowler's Claw:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Prowler's Claw:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

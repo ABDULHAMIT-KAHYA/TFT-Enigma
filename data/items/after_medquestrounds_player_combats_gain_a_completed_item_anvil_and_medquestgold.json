@@ -1,0 +1,7 @@
+{
+  "name": "After @MedQuestRounds@ player combats, gain a completed item anvil and @MedQuestGold@ gold.",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

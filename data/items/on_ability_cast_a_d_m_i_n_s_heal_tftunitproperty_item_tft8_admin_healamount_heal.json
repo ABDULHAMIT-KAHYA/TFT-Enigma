@@ -1,0 +1,7 @@
+{
+  "name": "On Ability cast, A.D.M.I.N.s heal @TFTUnitProperty.item:TFT8_Admin_HealAmount@ Health",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

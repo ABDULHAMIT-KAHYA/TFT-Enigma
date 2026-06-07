@@ -1,0 +1,17 @@
+{
+  "id": "Harbinger of The End",
+  "name": "Harbinger of The End",
+  "manaCost": 60,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Harbinger of The End",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 200, "adRatio": 0, "apRatio": 0.8, "damageType": "Magic" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    }
+  ]
+}

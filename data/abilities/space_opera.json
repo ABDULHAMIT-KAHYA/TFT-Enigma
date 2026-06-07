@@ -1,0 +1,17 @@
+{
+  "id": "Space Opera",
+  "name": "Space Opera",
+  "manaCost": 60,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Space Opera",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0.8, "damageType": "Magic" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    }
+  ]
+}

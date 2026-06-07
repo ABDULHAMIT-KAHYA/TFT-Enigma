@@ -1,0 +1,7 @@
+{
+  "name": "Your team gains 18 Ability Power.",
+  "passiveStats": [
+    { "name": "Item:Your team gains 18 Ability Power.:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

@@ -1,0 +1,7 @@
+{
+  "name": "The Sentinels of Light",
+  "passiveStats": [
+    { "name": "Item:The Sentinels of Light:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.11, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

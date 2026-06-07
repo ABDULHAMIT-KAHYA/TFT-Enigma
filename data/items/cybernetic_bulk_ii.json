@@ -1,0 +1,7 @@
+{
+  "name": "Cybernetic Bulk II",
+  "passiveStats": [
+    { "name": "Item:Cybernetic Bulk II:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

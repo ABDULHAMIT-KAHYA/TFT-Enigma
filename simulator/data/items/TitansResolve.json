@@ -1,0 +1,24 @@
+{
+  "name": "Titan's Resolve",
+  "passiveStats": [],
+  "triggeredEffects": [
+    {
+      "name": "Titan stack: +2 AD",
+      "trigger": "OnAttack",
+      "areaShape": "Self",
+      "maxStacks": 25,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": {
+        "name": "Titan Stack",
+        "effectType": "BonusAttackDamage",
+        "crowdControlType": "None",
+        "affectedStat": "AttackDamage",
+        "modifierType": "Flat",
+        "value": 2.0,
+        "durationMs": 15000,
+        "tickIntervalMs": 0,
+        "damageType": "True"
+      }
+    }
+  ]
+}

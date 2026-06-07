@@ -1,0 +1,42 @@
+{
+  "id": "HarbingerOfTheEnd",
+  "name": "Harbinger of The End",
+  "manaCost": 90,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Passive swords",
+      "trigger": "Passive",
+      "damageFormula": { "baseDamage": 0, "adRatio": 0.5, "apRatio": 0.5, "damageType": "Physical" },
+      "areaShape": "Grid",
+      "radius": 2,
+      "canCrit": false
+    },
+    {
+      "name": "Durability",
+      "trigger": "OnCast",
+      "areaShape": "Self",
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": {
+        "name": "Durability",
+        "effectType": "DamageReduction",
+        "crowdControlType": "None",
+        "affectedStat": "DamageReduction",
+        "modifierType": "Flat",
+        "value": 0.25,
+        "durationMs": 1500,
+        "tickIntervalMs": 0,
+        "damageType": "True"
+      }
+    },
+    {
+      "name": "Sword landing",
+      "trigger": "OnCast",
+      "delayMs": 800,
+      "damageFormula": { "baseDamage": 0, "adRatio": 2.0, "apRatio": 2.0, "damageType": "Physical" },
+      "areaShape": "CircleRadius",
+      "radius": 1,
+      "canCrit": true
+    }
+  ]
+}

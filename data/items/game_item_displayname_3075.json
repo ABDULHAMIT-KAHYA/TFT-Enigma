@@ -1,0 +1,7 @@
+{
+  "name": "game_item_displayname_3075",
+  "passiveStats": [
+    { "name": "Item:game_item_displayname_3075:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

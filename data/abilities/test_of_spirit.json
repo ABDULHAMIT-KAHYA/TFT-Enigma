@@ -1,0 +1,17 @@
+{
+  "id": "Test of Spirit",
+  "name": "Test of Spirit",
+  "manaCost": 60,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Test of Spirit",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 250, "adRatio": 0, "apRatio": 0.8, "damageType": "Magic" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    }
+  ]
+}

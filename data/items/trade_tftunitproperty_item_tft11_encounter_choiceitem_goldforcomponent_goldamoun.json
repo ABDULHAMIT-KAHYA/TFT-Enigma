@@ -1,0 +1,7 @@
+{
+  "name": "Trade @TFTUnitProperty.item:TFT11_Encounter_ChoiceItem_GoldForComponent_GoldAmount@ gold for a random component. You currently have @TFTUnitProperty.item:TFT11_Encounter_ChoiceItem_GoldForComponent_CurrentGold@ gold.",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

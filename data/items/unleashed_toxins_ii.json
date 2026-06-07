@@ -1,0 +1,7 @@
+{
+  "name": "Unleashed Toxins II",
+  "passiveStats": [
+    { "name": "Item:Unleashed Toxins II:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

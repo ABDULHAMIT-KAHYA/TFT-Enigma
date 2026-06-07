@@ -1,0 +1,7 @@
+{
+  "name": "On Ability cast, A.D.M.I.N.s gain a @TFTUnitProperty.item:TFT8_Admin_ShieldAmount@% Health shield",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

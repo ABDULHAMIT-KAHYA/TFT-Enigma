@@ -1,0 +1,19 @@
+{
+  "name": "Fiora",
+  "cost": 1,
+  "stats": {
+    "hp": 850,
+    "ad": 85,
+    "ap": 0,
+    "armor": 30,
+    "mr": 30,
+    "attackSpeed": 1.0526316,
+    "critChance": 0.0,
+    "critDamage": 1.5,
+    "durability": 0.0,
+    "range": 1
+  },
+  "autoAttackDamageType": "Physical",
+  "mana": { "maxMana": 0, "manaGainOnAttack": 0, "startMana": 0 },
+  "traits": ["Duelist"]
+}

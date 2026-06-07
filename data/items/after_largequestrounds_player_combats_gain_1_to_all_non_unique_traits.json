@@ -1,0 +1,7 @@
+{
+  "name": "After @LargeQuestRounds@ player combats, gain +1 to all non-unique traits.",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

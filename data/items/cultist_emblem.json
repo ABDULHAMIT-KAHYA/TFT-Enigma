@@ -1,0 +1,7 @@
+{
+  "name": "Cultist Emblem",
+  "passiveStats": [
+    { "name": "Item:Cultist Emblem:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

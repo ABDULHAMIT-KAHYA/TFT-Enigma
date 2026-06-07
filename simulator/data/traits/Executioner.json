@@ -1,0 +1,48 @@
+{
+  "name": "Executioner",
+  "breakpoints": [2, 4],
+  "tiers": [
+    {
+      "breakpoint": 2,
+      "effects": [
+        {
+          "hook": "OnAttack",
+          "type": "TempCritBonusVsLowHp",
+          "targetHpPercentThreshold": 0.5,
+          "statusEffect": {
+            "name": "Executioner Crit Damage",
+            "effectType": "CritDamageBonus",
+            "crowdControlType": "None",
+            "affectedStat": "CritDamage",
+            "modifierType": "Flat",
+            "value": 0.40,
+            "durationMs": 200,
+            "tickIntervalMs": 0,
+            "damageType": "True"
+          }
+        }
+      ]
+    },
+    {
+      "breakpoint": 4,
+      "effects": [
+        {
+          "hook": "OnAttack",
+          "type": "TempCritBonusVsLowHp",
+          "targetHpPercentThreshold": 0.66,
+          "statusEffect": {
+            "name": "Executioner Crit Damage",
+            "effectType": "CritDamageBonus",
+            "crowdControlType": "None",
+            "affectedStat": "CritDamage",
+            "modifierType": "Flat",
+            "value": 0.80,
+            "durationMs": 200,
+            "tickIntervalMs": 0,
+            "damageType": "True"
+          }
+        }
+      ]
+    }
+  ]
+}

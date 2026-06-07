@@ -1,0 +1,7 @@
+{
+  "name": "TFT17_Augment_Psionic_EmergencySupplies_Name",
+  "passiveStats": [
+    { "name": "Item:TFT17_Augment_Psionic_EmergencySupplies_Name:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

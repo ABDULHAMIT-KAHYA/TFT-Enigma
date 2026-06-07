@@ -1,0 +1,7 @@
+{
+  "name": "Harmonized Chassis",
+  "passiveStats": [
+    { "name": "Item:Harmonized Chassis:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 400, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

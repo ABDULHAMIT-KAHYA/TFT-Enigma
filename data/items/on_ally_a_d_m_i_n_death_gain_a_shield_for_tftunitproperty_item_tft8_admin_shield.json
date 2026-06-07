@@ -1,0 +1,7 @@
+{
+  "name": "On ally A.D.M.I.N. death, gain a shield for @TFTUnitProperty.item:TFT8_Admin_ShieldAmount@% of maximum Health",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

@@ -1,0 +1,7 @@
+{
+  "name": "tft_item_name_Railgun",
+  "passiveStats": [
+    { "name": "Item:tft_item_name_Railgun:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

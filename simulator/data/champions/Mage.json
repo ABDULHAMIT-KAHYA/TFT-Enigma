@@ -1,0 +1,20 @@
+{
+  "name": "Mage",
+  "cost": 2,
+  "stats": {
+    "hp": 1500,
+    "ad": 110,
+    "ap": 0,
+    "armor": 10,
+    "mr": 100,
+    "attackSpeed": 0.5555556,
+    "critChance": 0.0,
+    "critDamage": 1.5,
+    "durability": 0.0,
+    "range": 3
+  },
+  "autoAttackDamageType": "Magic",
+  "mana": { "maxMana": 50, "manaGainOnAttack": 25, "startMana": 0 },
+  "traits": [],
+  "abilityId": "ArcaneBurst"
+}

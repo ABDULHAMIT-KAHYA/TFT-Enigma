@@ -1,0 +1,7 @@
+{
+  "name": "Cursed Hextech Gunblade",
+  "passiveStats": [
+    { "name": "Item:Cursed Hextech Gunblade:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Radiant Deathblade",
+  "passiveStats": [
+    { "name": "Item:Radiant Deathblade:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 1.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

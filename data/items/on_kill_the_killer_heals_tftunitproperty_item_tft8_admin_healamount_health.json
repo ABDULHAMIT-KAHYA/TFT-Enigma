@@ -1,0 +1,7 @@
+{
+  "name": "On kill, the killer heals @TFTUnitProperty.item:TFT8_Admin_HealAmount@ Health",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

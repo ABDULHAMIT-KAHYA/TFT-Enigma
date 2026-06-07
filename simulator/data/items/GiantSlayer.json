@@ -1,0 +1,14 @@
+{
+  "name": "Giant Slayer",
+  "passiveStats": [],
+  "triggeredEffects": [
+    {
+      "name": "Giant Slayer bonus",
+      "trigger": "OnHit",
+      "damageFormula": { "baseDamage": 0, "adRatio": 0.0, "apRatio": 0.0, "damageType": "Physical" },
+      "targetMaxHpThreshold": 1600,
+      "targetMaxHpPercentDamage": 0.08,
+      "areaShape": "SingleTarget"
+    }
+  ]
+}

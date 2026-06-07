@@ -1,0 +1,76 @@
+{
+  "name": "Eradicator",
+  "breakpoints": [2, 4],
+  "tiers": [
+    {
+      "breakpoint": 2,
+      "effects": [
+        {
+          "hook": "OnCombatStart",
+          "type": "ApplyStatusToEnemyTeam",
+          "statusEffect": {
+            "name": "Eradicator Shred Armor",
+            "effectType": "Debuff",
+            "crowdControlType": "None",
+            "affectedStat": "Armor",
+            "modifierType": "Flat",
+            "value": -20.0,
+            "durationMs": 12000,
+            "tickIntervalMs": 0,
+            "damageType": "Physical"
+          }
+        },
+        {
+          "hook": "OnCombatStart",
+          "type": "ApplyStatusToEnemyTeam",
+          "statusEffect": {
+            "name": "Eradicator Shred MR",
+            "effectType": "Debuff",
+            "crowdControlType": "None",
+            "affectedStat": "MagicResist",
+            "modifierType": "Flat",
+            "value": -20.0,
+            "durationMs": 12000,
+            "tickIntervalMs": 0,
+            "damageType": "Magic"
+          }
+        }
+      ]
+    },
+    {
+      "breakpoint": 4,
+      "effects": [
+        {
+          "hook": "OnCombatStart",
+          "type": "ApplyStatusToEnemyTeam",
+          "statusEffect": {
+            "name": "Eradicator Shred Armor",
+            "effectType": "Debuff",
+            "crowdControlType": "None",
+            "affectedStat": "Armor",
+            "modifierType": "Flat",
+            "value": -40.0,
+            "durationMs": 12000,
+            "tickIntervalMs": 0,
+            "damageType": "Physical"
+          }
+        },
+        {
+          "hook": "OnCombatStart",
+          "type": "ApplyStatusToEnemyTeam",
+          "statusEffect": {
+            "name": "Eradicator Shred MR",
+            "effectType": "Debuff",
+            "crowdControlType": "None",
+            "affectedStat": "MagicResist",
+            "modifierType": "Flat",
+            "value": -40.0,
+            "durationMs": 12000,
+            "tickIntervalMs": 0,
+            "damageType": "Magic"
+          }
+        }
+      ]
+    }
+  ]
+}

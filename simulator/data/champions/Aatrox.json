@@ -1,0 +1,20 @@
+{
+  "name": "Aatrox",
+  "cost": 4,
+  "stats": {
+    "hp": 15214,
+    "ad": 135,
+    "ap": 100,
+    "armor": 60,
+    "mr": 60,
+    "attackSpeed": 0.9,
+    "critChance": 0.25,
+    "critDamage": 1.4,
+    "durability": 0.0,
+    "range": 1
+  },
+  "autoAttackDamageType": "Physical",
+  "mana": { "maxMana": 90, "manaGainOnAttack": 30, "startMana": 30 },
+  "traits": ["Bruiser", "Executioner"],
+  "abilityId": "HarbingerOfTheEnd"
+}

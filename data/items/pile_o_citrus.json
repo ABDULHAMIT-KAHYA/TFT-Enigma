@@ -1,0 +1,7 @@
+{
+  "name": "Pile O' Citrus",
+  "passiveStats": [
+    { "name": "Item:Pile O' Citrus:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 600, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

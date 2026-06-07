@@ -1,0 +1,7 @@
+{
+  "name": "Combat start: your team gains @TFTUnitProperty.item:TFT8_Admin_ManaGained@ Mana",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

@@ -1,0 +1,7 @@
+{
+  "name": "On ally death, A.D.M.I.N.s gain @TFTUnitProperty.trait:TFT8_Admin_ManaGained@ Mana",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

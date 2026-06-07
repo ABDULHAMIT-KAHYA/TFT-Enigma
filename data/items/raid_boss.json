@@ -1,0 +1,7 @@
+{
+  "name": "Raid Boss",
+  "passiveStats": [
+    { "name": "Item:Raid Boss:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

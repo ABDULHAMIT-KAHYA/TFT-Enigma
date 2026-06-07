@@ -1,0 +1,14 @@
+{
+  "id": "IronWill",
+  "name": "Iron Will",
+  "manaCost": 60,
+  "targetType": "Self",
+  "effects": [
+    {
+      "name": "Iron Will",
+      "trigger": "OnCast",
+      "healAmount": 200,
+      "areaShape": "Self"
+    }
+  ]
+}

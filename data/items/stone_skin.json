@@ -1,0 +1,7 @@
+{
+  "name": "Stone Skin",
+  "passiveStats": [
+    { "name": "Item:Stone Skin:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

@@ -1,0 +1,7 @@
+{
+  "name": "tft_item_name_CelestialSpatulaItem",
+  "passiveStats": [
+    { "name": "Item:tft_item_name_CelestialSpatulaItem:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

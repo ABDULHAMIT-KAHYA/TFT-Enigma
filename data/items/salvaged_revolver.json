@@ -1,0 +1,7 @@
+{
+  "name": "Salvaged Revolver",
+  "passiveStats": [
+    { "name": "Item:Salvaged Revolver:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

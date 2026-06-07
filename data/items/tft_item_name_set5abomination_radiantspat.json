@@ -1,0 +1,7 @@
+{
+  "name": "tft_item_name_Set5Abomination_RadiantSpat",
+  "passiveStats": [
+    { "name": "Item:tft_item_name_Set5Abomination_RadiantSpat:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

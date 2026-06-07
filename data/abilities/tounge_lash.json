@@ -1,0 +1,17 @@
+{
+  "id": "Tounge Lash",
+  "name": "Tounge Lash",
+  "manaCost": 60,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Tounge Lash",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 120, "adRatio": 0, "apRatio": 0.8, "damageType": "Magic" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    }
+  ]
+}

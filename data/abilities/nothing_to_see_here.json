@@ -1,0 +1,17 @@
+{
+  "id": "Nothing To See Here!",
+  "name": "Nothing To See Here!",
+  "manaCost": 60,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Nothing To See Here!",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 0, "adRatio": 0, "apRatio": 0.8, "damageType": "Magic" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Dance n' Dice",
+  "name": "Dance n' Dice",
+  "manaCost": 60,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Dance n' Dice",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 180, "adRatio": 0, "apRatio": 0.8, "damageType": "Magic" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Edgelord Emblem",
+  "passiveStats": [
+    { "name": "Item:Edgelord Emblem:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Growing Roots",
+  "passiveStats": [
+    { "name": "Item:Growing Roots:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

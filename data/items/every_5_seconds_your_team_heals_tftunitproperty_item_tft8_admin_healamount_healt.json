@@ -1,0 +1,7 @@
+{
+  "name": "Every 5 seconds, your team heals @TFTUnitProperty.item:TFT8_Admin_HealAmount@ Health",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

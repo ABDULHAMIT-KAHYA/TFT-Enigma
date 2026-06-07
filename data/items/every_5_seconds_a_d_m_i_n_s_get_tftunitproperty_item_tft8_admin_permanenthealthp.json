@@ -1,0 +1,7 @@
+{
+  "name": "Every 5 seconds, A.D.M.I.N.s get @TFTUnitProperty.item:TFT8_Admin_PermanentHealthPerActivation@ permanent maximum Health",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

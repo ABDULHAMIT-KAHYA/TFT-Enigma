@@ -1,0 +1,17 @@
+{
+  "id": "Pale Cascade",
+  "name": "Pale Cascade",
+  "manaCost": 60,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Pale Cascade",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 100, "adRatio": 0, "apRatio": 0.8, "damageType": "Magic" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    }
+  ]
+}

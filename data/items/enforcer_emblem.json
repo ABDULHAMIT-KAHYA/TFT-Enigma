@@ -1,0 +1,7 @@
+{
+  "name": "Enforcer Emblem",
+  "passiveStats": [
+    { "name": "Item:Enforcer Emblem:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

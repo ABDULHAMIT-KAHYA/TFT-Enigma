@@ -1,0 +1,7 @@
+{
+  "name": "The Bloodharbor Zealot+",
+  "passiveStats": [
+    { "name": "Item:The Bloodharbor Zealot+:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 1.8, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

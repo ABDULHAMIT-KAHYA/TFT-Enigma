@@ -1,0 +1,18 @@
+{
+  "seed": 2001,
+  "dtMs": 100,
+  "teamA": [
+    { "championIndex": 0, "pos": { "x": 3, "y": 7 }, "items": [] },
+    { "championIndex": 1, "pos": { "x": 4, "y": 7 }, "items": [] },
+    { "championIndex": 2, "pos": { "x": 5, "y": 7 }, "items": [] },
+    { "championIndex": 3, "pos": { "x": 6, "y": 7 }, "items": [] },
+    { "championIndex": 4, "pos": { "x": 7, "y": 7 }, "items": [] }
+  ],
+  "teamB": [
+    { "championIndex": 0, "pos": { "x": 3, "y": 2 }, "items": [] },
+    { "championIndex": 1, "pos": { "x": 4, "y": 2 }, "items": [] },
+    { "championIndex": 2, "pos": { "x": 5, "y": 2 }, "items": [] },
+    { "championIndex": 3, "pos": { "x": 6, "y": 2 }, "items": [] },
+    { "championIndex": 4, "pos": { "x": 7, "y": 2 }, "items": [] }
+  ]
+}

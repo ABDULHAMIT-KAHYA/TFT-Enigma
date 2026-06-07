@@ -1,0 +1,27 @@
+{
+  "id": "ArcaneBurst",
+  "name": "Arcane Burst",
+  "manaCost": 50,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Arcane Burst",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 150, "adRatio": 0.0, "apRatio": 0.0, "damageType": "Magic" },
+      "areaShape": "CircleRadius",
+      "radius": 2,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": {
+        "name": "Burn",
+        "effectType": "DamageOverTime",
+        "crowdControlType": "None",
+        "affectedStat": "None",
+        "modifierType": "Flat",
+        "value": 20.0,
+        "durationMs": 5000,
+        "tickIntervalMs": 1000,
+        "damageType": "Magic"
+      }
+    }
+  ]
+}

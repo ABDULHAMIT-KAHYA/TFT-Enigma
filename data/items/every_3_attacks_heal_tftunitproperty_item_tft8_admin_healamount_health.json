@@ -1,0 +1,7 @@
+{
+  "name": "Every 3 attacks, heal @TFTUnitProperty.item:TFT8_Admin_HealAmount@ Health.",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

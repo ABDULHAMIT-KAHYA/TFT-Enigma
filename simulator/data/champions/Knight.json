@@ -1,0 +1,20 @@
+{
+  "name": "Knight",
+  "cost": 1,
+  "stats": {
+    "hp": 900,
+    "ad": 70,
+    "ap": 0,
+    "armor": 60,
+    "mr": 20,
+    "attackSpeed": 0.8333333,
+    "critChance": 0.0,
+    "critDamage": 1.5,
+    "durability": 0.0,
+    "range": 1
+  },
+  "autoAttackDamageType": "Physical",
+  "mana": { "maxMana": 60, "manaGainOnAttack": 20, "startMana": 0 },
+  "traits": ["Eradicator"],
+  "abilityId": "IronWill"
+}

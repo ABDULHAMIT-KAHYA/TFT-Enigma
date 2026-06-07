@@ -1,0 +1,7 @@
+{
+  "name": "Every 5 seconds, your team gains @TFTUnitProperty.item:TFT8_Admin_ASAmount@% Attack Speed",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": []
+}

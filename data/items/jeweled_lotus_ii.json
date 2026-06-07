@@ -1,0 +1,8 @@
+{
+  "name": "Jeweled Lotus II",
+  "passiveStats": [
+    { "name": "Item:Jeweled Lotus II:CritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:Jeweled Lotus II:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Health is Wealth III",
+  "passiveStats": [
+    { "name": "Item:Health is Wealth III:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

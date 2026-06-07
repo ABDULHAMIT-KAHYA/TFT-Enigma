@@ -1,0 +1,90 @@
+{
+  "name": "Duelist",
+  "breakpoints": [2, 4, 6, 8],
+  "tiers": [
+    {
+      "breakpoint": 2,
+      "effects": [
+        {
+          "hook": "OnAttack",
+          "type": "StackStatusOnAttack",
+          "maxStacks": 12,
+          "statusEffect": {
+            "name": "Duelist Stack",
+            "effectType": "BonusAttackSpeed",
+            "crowdControlType": "None",
+            "affectedStat": "AttackSpeed",
+            "modifierType": "Percent",
+            "value": 0.05,
+            "durationMs": 15000,
+            "tickIntervalMs": 0,
+            "damageType": "True"
+          }
+        }
+      ]
+    },
+    {
+      "breakpoint": 4,
+      "effects": [
+        {
+          "hook": "OnAttack",
+          "type": "StackStatusOnAttack",
+          "maxStacks": 12,
+          "statusEffect": {
+            "name": "Duelist Stack",
+            "effectType": "BonusAttackSpeed",
+            "crowdControlType": "None",
+            "affectedStat": "AttackSpeed",
+            "modifierType": "Percent",
+            "value": 0.08,
+            "durationMs": 15000,
+            "tickIntervalMs": 0,
+            "damageType": "True"
+          }
+        }
+      ]
+    },
+    {
+      "breakpoint": 6,
+      "effects": [
+        {
+          "hook": "OnAttack",
+          "type": "StackStatusOnAttack",
+          "maxStacks": 15,
+          "statusEffect": {
+            "name": "Duelist Stack",
+            "effectType": "BonusAttackSpeed",
+            "crowdControlType": "None",
+            "affectedStat": "AttackSpeed",
+            "modifierType": "Percent",
+            "value": 0.10,
+            "durationMs": 15000,
+            "tickIntervalMs": 0,
+            "damageType": "True"
+          }
+        }
+      ]
+    },
+    {
+      "breakpoint": 8,
+      "effects": [
+        {
+          "hook": "OnAttack",
+          "type": "StackStatusOnAttack",
+          "maxStacks": 15,
+          "statusEffect": {
+            "name": "Duelist Stack",
+            "effectType": "BonusAttackSpeed",
+            "crowdControlType": "None",
+            "affectedStat": "AttackSpeed",
+            "modifierType": "Percent",
+            "value": 0.12,
+            "durationMs": 15000,
+            "tickIntervalMs": 0,
+            "damageType": "True"
+          }
+        }
+      ]
+    }
+  ]
+}

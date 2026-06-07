@@ -1,0 +1,7 @@
+{
+  "name": "Amplify I",
+  "passiveStats": [
+    { "name": "Item:Amplify I:CritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

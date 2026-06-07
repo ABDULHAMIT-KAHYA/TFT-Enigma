@@ -1,0 +1,17 @@
+{
+  "id": "Psionic Storm",
+  "name": "Psionic Storm",
+  "manaCost": 60,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Psionic Storm",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 200, "adRatio": 0, "apRatio": 0.8, "damageType": "Magic" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "tft_item_name_TFT8_AdminCause_HealthThreshold",
+  "passiveStats": [
+    { "name": "Item:tft_item_name_TFT8_AdminCause_HealthThreshold:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:tft_item_name_TFT8_AdminCause_HealthThreshold:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.6, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

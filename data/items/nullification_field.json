@@ -1,0 +1,7 @@
+{
+  "name": "Nullification Field",
+  "passiveStats": [
+    { "name": "Item:Nullification Field:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 99, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

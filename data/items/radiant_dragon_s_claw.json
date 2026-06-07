@@ -1,0 +1,7 @@
+{
+  "name": "Radiant Dragon's Claw",
+  "passiveStats": [
+    { "name": "Item:Radiant Dragon's Claw:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 120, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

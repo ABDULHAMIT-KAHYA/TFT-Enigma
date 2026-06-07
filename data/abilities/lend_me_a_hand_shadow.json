@@ -1,0 +1,17 @@
+{
+  "id": "Lend Me a Hand, Shadow!",
+  "name": "Lend Me a Hand, Shadow!",
+  "manaCost": 60,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Lend Me a Hand, Shadow!",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 200, "adRatio": 0, "apRatio": 0.8, "damageType": "Magic" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    }
+  ]
+}

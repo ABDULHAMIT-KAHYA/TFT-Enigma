@@ -1,0 +1,7 @@
+{
+  "name": "Shield Melt",
+  "passiveStats": [
+    { "name": "Item:Shield Melt:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 250, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

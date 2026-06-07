@@ -1,0 +1,17 @@
+{
+  "id": "Groovin' Susan",
+  "name": "Groovin' Susan",
+  "manaCost": 60,
+  "targetType": "CurrentEnemy",
+  "effects": [
+    {
+      "name": "Groovin' Susan",
+      "trigger": "OnCast",
+      "damageFormula": { "baseDamage": 18, "adRatio": 0, "apRatio": 0.8, "damageType": "Magic" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    }
+  ]
+}

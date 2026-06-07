@@ -1,0 +1,7 @@
+{
+  "name": "Vampirism II",
+  "passiveStats": [
+    { "name": "Item:Vampirism II:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.01, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}

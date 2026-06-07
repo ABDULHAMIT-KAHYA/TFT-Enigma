@@ -1,0 +1,7 @@
+{
+  "name": "Dusk Emblem",
+  "passiveStats": [
+    { "name": "Item:Dusk Emblem:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": []
+}
