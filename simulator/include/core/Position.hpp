@@ -10,6 +10,16 @@ struct Position
     std::int32_t y;
 };
 
+inline bool operator==(const Position& a, const Position& b)
+{
+    return a.x == b.x && a.y == b.y;
+}
+
+inline bool operator!=(const Position& a, const Position& b)
+{
+    return !(a == b);
+}
+
 inline std::int32_t distanceBetween(const Position& a, const Position& b)
 {
     const std::int32_t dq = a.x - b.x;

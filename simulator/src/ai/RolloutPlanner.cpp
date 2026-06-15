@@ -760,7 +760,7 @@ MacroAction RolloutPlanner::chooseAction(const PlayerState& player,
 
             std::ostream& sink = cfg.debug ? out : nullOut;
             PlayerState opponent("Opponent");
-            Random oppRng(mixSeed(rSeed, 0x0PP0A11u));
+            Random oppRng(mixSeed(rSeed, 0x0FF0A11u));
             ShopSystem oppShop(content, state.pool);
             if (enemy)
             {

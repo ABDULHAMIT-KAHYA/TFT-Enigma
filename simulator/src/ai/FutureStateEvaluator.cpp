@@ -1,5 +1,6 @@
 #include "ai/FutureStateEvaluator.hpp"
 #include "ai/BoardStrengthEvaluator.hpp"
+#include "ai/ScoutSystem.hpp"
 #include "ai/UpgradePotentialEvaluator.hpp"
 #include "ai/UnitValueEvaluator.hpp"
 #include "constants/AIConstants.hpp"

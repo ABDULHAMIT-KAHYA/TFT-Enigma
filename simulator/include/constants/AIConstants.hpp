@@ -140,6 +140,7 @@ struct AIConstants
 
     static constexpr float EndTurnGreedBonus = 8.0f;
     static constexpr float EndTurnLowPressureThreshold = 0.2f;
+    static constexpr float EndTurnMaxInterestPreservationBonus = 300.0f;
 
     static constexpr float ScoreBoardScale = 0.002f;
     static constexpr float CompConfidenceScale = 25.0f;

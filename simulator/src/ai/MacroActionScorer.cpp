@@ -560,7 +560,15 @@ std::vector<ActionScore> MacroActionScorer::scoreActions(const PlayerState& play
         else if (a.type == MacroActionType::EndTurn)
         {
             s += 0.0f;
-            if (gold >= floor && pressure <= AIConstants::EndTurnLowPressureThreshold) s += AIConstants::EndTurnGreedBonus;
+            if (gold >= floor && pressure <= AIConstants::EndTurnLowPressureThreshold)
+            {
+                s += AIConstants::EndTurnGreedBonus;
+                if (gold >= MacroConstants::MaxInterestGold)
+                {
+                    s += AIConstants::EndTurnMaxInterestPreservationBonus;
+                    why << "max-interest ";
+                }
+            }
             if (underLeveled)
             {
                 s -= static_cast<float>(lvlDef) * AIConstants::StageLevelDeficitEndTurnPenalty;
