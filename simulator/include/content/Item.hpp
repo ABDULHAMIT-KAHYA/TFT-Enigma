@@ -9,5 +9,5 @@ struct Item
     std::string name;
     std::vector<StatusEffect> passiveStats;
     std::vector<AbilityEffect> triggeredEffects;
+    ContentMetadata metadata{};
 };
-

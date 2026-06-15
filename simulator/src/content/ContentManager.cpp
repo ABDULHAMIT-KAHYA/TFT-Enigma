@@ -171,6 +171,78 @@ static bool optionalBool(const JsonValue& obj, std::string_view key, bool fallba
     return v.asBool();
 }
 
+static std::vector<std::string> optionalStringArray(const JsonValue& obj, std::string_view key)
+{
+    std::vector<std::string> out;
+    if (!hasKey(obj, key))
+    {
+        return out;
+    }
+    const JsonValue& arr = obj.at(key);
+    if (!arr.isArray())
+    {
+        return out;
+    }
+    for (const JsonValue& v : arr.asArray())
+    {
+        if (v.isString())
+        {
+            out.push_back(v.asString());
+        }
+    }
+    return out;
+}
+
+static std::vector<RawVariableMetadata> optionalRawVariables(const JsonValue& obj)
+{
+    std::vector<RawVariableMetadata> out;
+    if (!hasKey(obj, "rawVariables"))
+    {
+        return out;
+    }
+    const JsonValue& arr = obj.at("rawVariables");
+    if (!arr.isArray())
+    {
+        return out;
+    }
+    for (const JsonValue& v : arr.asArray())
+    {
+        if (!v.isObject())
+        {
+            continue;
+        }
+        RawVariableMetadata raw{};
+        raw.name = optionalString(v, "name", "");
+        raw.value = optionalString(v, "value", "");
+        if (!raw.name.empty())
+        {
+            out.push_back(std::move(raw));
+        }
+    }
+    return out;
+}
+
+static ContentMetadata parseMetadata(const JsonValue& obj)
+{
+    ContentMetadata m{};
+    m.sourceId = optionalString(obj, "sourceId", "");
+    m.description = optionalString(obj, "description", "");
+    m.tooltip = optionalString(obj, "tooltip", "");
+    m.iconPath = optionalString(obj, "iconPath", "");
+    m.squareIconPath = optionalString(obj, "squareIconPath", "");
+    m.tileIconPath = optionalString(obj, "tileIconPath", "");
+    m.splashPath = optionalString(obj, "splashPath", "");
+    m.targetingMetadata = optionalString(obj, "targetingMetadata", "");
+    m.areaMetadata = optionalString(obj, "areaMetadata", "");
+    m.damageMetadata = optionalString(obj, "damageMetadata", "");
+    m.effectMetadata = optionalString(obj, "effectMetadata", "");
+    m.itemCategory = optionalString(obj, "itemCategory", "");
+    m.rawVariables = optionalRawVariables(obj);
+    m.importWarnings = optionalStringArray(obj, "importWarnings");
+    m.isPlaceholder = optionalBool(obj, "isPlaceholder", false);
+    return m;
+}
+
 static DamageType parseDamageType(std::string_view s)
 {
     if (s == "Physical") return DamageType::Physical;
@@ -327,6 +399,49 @@ static DamageFormula parseDamageFormula(const JsonValue& obj)
     return f;
 }
 
+static bool isPlaceholderSingleTargetMagicAbility(const Ability& ability)
+{
+    constexpr float Epsilon = 0.0001f;
+    if (ability.effects.size() != 1)
+    {
+        return false;
+    }
+    const AbilityEffect& e = ability.effects.front();
+    return e.trigger == AbilityTrigger::OnCast &&
+           e.damageFormula.damageType == DamageType::Magic &&
+           std::fabs(e.damageFormula.adRatio) <= Epsilon &&
+           std::fabs(e.damageFormula.apRatio - 0.8f) <= Epsilon &&
+           e.areaShape == AreaShape::SingleTarget &&
+           e.radius == 0 &&
+           e.delayMs == 0 &&
+           !e.canCrit &&
+           !e.appliesStatusEffect &&
+           e.healAmount == 0 &&
+           e.healPercentOfDamage == 0.0f &&
+           e.shieldAmount == 0 &&
+           e.maxStacks == 0 &&
+           e.targetMaxHpThreshold == 0 &&
+           e.targetMaxHpPercentDamage == 0.0f;
+}
+
+static bool isStatOnlyTraitApproximation(const TraitDefinition& def)
+{
+    bool hasAnyEffect = false;
+    for (const TraitTier& tier : def.tiers)
+    {
+        for (const TraitEffect& e : tier.effects)
+        {
+            hasAnyEffect = true;
+            if (e.hook != TraitHook::OnCombatStart ||
+                e.type != TraitEffectType::ApplyStatusToTraitUnits)
+            {
+                return false;
+            }
+        }
+    }
+    return hasAnyEffect;
+}
+
 static AbilityEffect parseAbilityEffect(const JsonValue& obj)
 {
     AbilityEffect e{};
@@ -367,6 +482,7 @@ static Ability parseAbility(const JsonValue& root)
     a.name = requiredString(root, "name");
     a.manaCost = optionalInt(root, "manaCost", 0);
     a.targetType = parseTargetType(hasKey(root, "targetType") ? requiredString(root, "targetType") : "CurrentEnemy");
+    a.metadata = parseMetadata(root);
 
     if (hasKey(root, "effects"))
     {
@@ -380,6 +496,10 @@ static Ability parseAbility(const JsonValue& root)
             a.effects.push_back(parseAbilityEffect(e));
         }
     }
+    if (!hasKey(root, "isPlaceholder"))
+    {
+        a.metadata.isPlaceholder = isPlaceholderSingleTargetMagicAbility(a);
+    }
     return a;
 }
 
@@ -387,6 +507,7 @@ static Item parseItem(const JsonValue& root)
 {
     Item item{};
     item.name = requiredString(root, "name");
+    item.metadata = parseMetadata(root);
 
     if (hasKey(root, "passiveStats"))
     {
@@ -413,6 +534,15 @@ static Item parseItem(const JsonValue& root)
             item.triggeredEffects.push_back(parseAbilityEffect(e));
         }
     }
+    if (!hasKey(root, "isPlaceholder"))
+    {
+        item.metadata.isPlaceholder = item.triggeredEffects.empty();
+    }
+    if (item.metadata.itemCategory.empty())
+    {
+        item.metadata.itemCategory =
+            (!item.passiveStats.empty() || !item.triggeredEffects.empty()) ? "CombatItem" : "Unknown";
+    }
 
     return item;
 }
@@ -421,6 +551,7 @@ static TraitDefinition parseTrait(const JsonValue& root)
 {
     TraitDefinition def{};
     def.trait.name = requiredString(root, "name");
+    def.metadata = parseMetadata(root);
 
     const JsonValue& bps = root.at("breakpoints");
     if (!bps.isArray())
@@ -472,6 +603,10 @@ static TraitDefinition parseTrait(const JsonValue& root)
             def.tiers.push_back(std::move(tier));
         }
     }
+    if (!hasKey(root, "isPlaceholder"))
+    {
+        def.metadata.isPlaceholder = def.tiers.empty() || isStatOnlyTraitApproximation(def);
+    }
 
     return def;
 }
@@ -480,6 +615,7 @@ static ChampionDefinition parseChampion(const JsonValue& root)
 {
     ChampionDefinition c{};
     c.name = trimEdges(requiredString(root, "name"));
+    c.metadata = parseMetadata(root);
     c.cost = optionalInt(root, "cost", 1);
     c.spritePath = trimEdges(optionalString(root, "spritePath", ""));
 

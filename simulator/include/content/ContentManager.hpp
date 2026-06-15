@@ -41,6 +41,7 @@ struct ChampionDefinition
 
     bool isPlayable = true;
     std::vector<std::string> tags{};
+    ContentMetadata metadata{};
 };
 
 using ChampionData = ChampionDefinition;

@@ -33,4 +33,5 @@ struct TraitDefinition
 {
     Trait trait{};
     std::vector<TraitTier> tiers{};
+    ContentMetadata metadata{};
 };

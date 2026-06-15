@@ -10,6 +10,7 @@
 #include <sstream>
 #include <stdexcept>
 #include <string>
+#include <string_view>
 #include <tuple>
 #include <utility>
 #include <vector>
@@ -101,6 +102,27 @@ static std::string toSnakeLower(std::string s)
     while (!out.empty() && out.back() == '_') out.pop_back();
     if (out.empty()) out = "unknown";
     return out;
+}
+
+static std::string toLowerText(std::string s)
+{
+    for (char& c : s)
+    {
+        c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+    }
+    return s;
+}
+
+static bool containsAny(std::string_view text, const std::vector<std::string_view>& needles)
+{
+    for (std::string_view needle : needles)
+    {
+        if (text.find(needle) != std::string_view::npos)
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 static bool hasKeyObj(const JsonValue& v, std::string_view key)
@@ -205,6 +227,193 @@ static std::string jsonString(std::string_view s)
     return out;
 }
 
+static void appendStringArrayJson(std::ostringstream& ss, const std::vector<std::string>& values)
+{
+    ss << "[";
+    for (std::size_t i = 0; i < values.size(); ++i)
+    {
+        if (i) ss << ", ";
+        ss << jsonString(values[i]);
+    }
+    ss << "]";
+}
+
+static std::string jsonValueSummary(const JsonValue& v)
+{
+    if (v.isString()) return v.asString();
+    if (v.isNumber())
+    {
+        std::ostringstream ss;
+        ss << v.asNumber();
+        return ss.str();
+    }
+    if (v.isBool()) return v.asBool() ? "true" : "false";
+    if (v.isNull()) return "null";
+    if (v.isArray())
+    {
+        return "array(" + std::to_string(v.asArray().size()) + ")";
+    }
+    if (v.isObject())
+    {
+        return "object(" + std::to_string(v.asObject().size()) + ")";
+    }
+    return "";
+}
+
+static void appendRawVariablesJson(std::ostringstream& ss, const std::vector<std::pair<std::string, std::string>>& vars)
+{
+    ss << "[";
+    for (std::size_t i = 0; i < vars.size(); ++i)
+    {
+        if (i) ss << ", ";
+        ss << "{ \"name\": " << jsonString(vars[i].first)
+           << ", \"value\": " << jsonString(vars[i].second) << " }";
+    }
+    ss << "]";
+}
+
+static std::vector<std::pair<std::string, std::string>> collectObjectVariables(const JsonValue& obj)
+{
+    std::vector<std::pair<std::string, std::string>> vars;
+    if (!obj.isObject())
+    {
+        return vars;
+    }
+    for (const auto& [k, v] : obj.asObject())
+    {
+        vars.emplace_back(k, jsonValueSummary(v));
+    }
+    std::sort(vars.begin(), vars.end(), [](const auto& a, const auto& b) {
+        return a.first < b.first;
+    });
+    return vars;
+}
+
+static std::vector<std::pair<std::string, std::string>> collectSpellVariables(const JsonValue& spell)
+{
+    std::vector<std::pair<std::string, std::string>> vars;
+    if (!spell.isObject() || !hasKeyObj(spell, "variables") || !spell.at("variables").isArray())
+    {
+        return vars;
+    }
+    for (const JsonValue& v : spell.at("variables").asArray())
+    {
+        if (!v.isObject())
+        {
+            continue;
+        }
+        const std::string name = getString(v, "name", "");
+        if (name.empty())
+        {
+            continue;
+        }
+        std::string value;
+        if (hasKeyObj(v, "value"))
+        {
+            value = jsonValueSummary(v.at("value"));
+        }
+        else if (hasKeyObj(v, "values"))
+        {
+            value = jsonValueSummary(v.at("values"));
+        }
+        vars.emplace_back(name, value);
+    }
+    std::sort(vars.begin(), vars.end(), [](const auto& a, const auto& b) {
+        return a.first < b.first;
+    });
+    return vars;
+}
+
+static bool hasNonEmptyArrayField(const JsonValue& obj, std::string_view key)
+{
+    return hasKeyObj(obj, key) && obj.at(key).isArray() && !obj.at(key).asArray().empty();
+}
+
+static bool hasNonEmptyObjectField(const JsonValue& obj, std::string_view key)
+{
+    return hasKeyObj(obj, key) && obj.at(key).isObject() && !obj.at(key).asObject().empty();
+}
+
+static bool hasSourceFieldValue(const JsonValue& obj, std::string_view key)
+{
+    return hasKeyObj(obj, key) && !obj.at(key).isNull();
+}
+
+static void appendArrayStringsForClassification(std::string& text, const JsonValue& obj, std::string_view key)
+{
+    if (!hasKeyObj(obj, key) || !obj.at(key).isArray())
+    {
+        return;
+    }
+    for (const JsonValue& v : obj.at(key).asArray())
+    {
+        if (v.isString())
+        {
+            text += " ";
+            text += v.asString();
+        }
+    }
+}
+
+static std::string classifyItemCategory(const JsonValue& itemObj, const std::string& name)
+{
+    std::string text;
+    text += getString(itemObj, "apiName", "");
+    text += " ";
+    text += getString(itemObj, "icon", "");
+    text += " ";
+    text += getString(itemObj, "desc", "");
+    text += " ";
+    text += getString(itemObj, "description", "");
+    text += " ";
+    text += name;
+    appendArrayStringsForClassification(text, itemObj, "tags");
+    appendArrayStringsForClassification(text, itemObj, "associatedTraits");
+    appendArrayStringsForClassification(text, itemObj, "incompatibleTraits");
+
+    const std::string lower = toLowerText(std::move(text));
+    const bool hasBuildPath = hasSourceFieldValue(itemObj, "from") || hasNonEmptyArrayField(itemObj, "composition");
+    const bool hasEffectVariables = hasNonEmptyObjectField(itemObj, "effects");
+
+    if (containsAny(lower, { "augment", "/augments/", "hexcore" }))
+    {
+        return "Augment";
+    }
+    if (containsAny(lower, { "anvil" }))
+    {
+        return "Anvil";
+    }
+    if (containsAny(lower, { "radiant" }))
+    {
+        return "RadiantItem";
+    }
+    if (containsAny(lower, { "artifact", "/artifacts/" }))
+    {
+        return "Artifact";
+    }
+    if (containsAny(lower, { "support" }))
+    {
+        return "SupportItem";
+    }
+    if (containsAny(lower, { "emblem" }))
+    {
+        return "Emblem";
+    }
+    if (containsAny(lower, { "consumable", "consumables", "gold", "reroll", "xp", "shop" }))
+    {
+        return "Consumable";
+    }
+    if (containsAny(lower, { "loot", "orb", "chest" }))
+    {
+        return "LootObject";
+    }
+    if (hasBuildPath || hasEffectVariables)
+    {
+        return "CombatItem";
+    }
+    return "Unknown";
+}
+
 static std::string writeChampionNormalized(const std::string& name,
                                            int cost,
                                            int hp,
@@ -224,8 +433,14 @@ static std::string writeChampionNormalized(const std::string& name,
                                            bool isPlayable,
                                            const std::vector<std::string>& tags,
                                            const std::string& abilityName,
+                                           const std::string& sourceId,
+                                           const std::string& description,
+                                           const std::string& tooltip,
                                            const std::string& iconPath,
-                                           const std::string& splashPath)
+                                           const std::string& squareIconPath,
+                                           const std::string& tileIconPath,
+                                           const std::string& splashPath,
+                                           const std::vector<std::string>& importWarnings)
 {
     std::ostringstream ss;
     ss << "{\n";
@@ -261,8 +476,16 @@ static std::string writeChampionNormalized(const std::string& name,
     ss << "],\n";
     ss << "  \"abilityName\": " << jsonString(abilityName) << ",\n";
     ss << "  \"autoAttackDamageType\": \"Physical\",\n";
+    ss << "  \"sourceId\": " << jsonString(sourceId) << ",\n";
+    ss << "  \"description\": " << jsonString(description) << ",\n";
+    ss << "  \"tooltip\": " << jsonString(tooltip) << ",\n";
     ss << "  \"iconPath\": " << jsonString(iconPath) << ",\n";
-    ss << "  \"splashPath\": " << jsonString(splashPath) << "\n";
+    ss << "  \"squareIconPath\": " << jsonString(squareIconPath) << ",\n";
+    ss << "  \"tileIconPath\": " << jsonString(tileIconPath) << ",\n";
+    ss << "  \"splashPath\": " << jsonString(splashPath) << ",\n";
+    ss << "  \"importWarnings\": ";
+    appendStringArrayJson(ss, importWarnings);
+    ss << "\n";
     ss << "}\n";
     return ss.str();
 }
@@ -276,14 +499,37 @@ static std::string writeAbilityNormalized(const std::string& id,
                                           const std::string& shape,
                                           int radius,
                                           int delayMs,
-                                          bool canCrit)
+                                          bool canCrit,
+                                          const JsonValue& spellObj,
+                                          const std::vector<std::string>& importWarnings)
 {
     std::ostringstream ss;
+    const std::string sourceId = getString(spellObj, "apiName", getString(spellObj, "name", id));
+    const std::string description = getString(spellObj, "desc", getString(spellObj, "description", ""));
+    const std::string tooltip = getString(spellObj, "tooltip", "");
+    const std::vector<std::pair<std::string, std::string>> rawVars = collectSpellVariables(spellObj);
+    const std::string damageMetadata = std::string("baseDamage=") + std::to_string(baseDamage) +
+                                       "; damageType=Magic; adRatio=0; apRatio=0.8";
+
     ss << "{\n";
     ss << "  \"id\": " << jsonString(id) << ",\n";
     ss << "  \"name\": " << jsonString(name) << ",\n";
     ss << "  \"manaCost\": " << manaCost << ",\n";
     ss << "  \"targetType\": \"CurrentEnemy\",\n";
+    ss << "  \"isPlaceholder\": true,\n";
+    ss << "  \"sourceId\": " << jsonString(sourceId) << ",\n";
+    ss << "  \"description\": " << jsonString(description) << ",\n";
+    ss << "  \"tooltip\": " << jsonString(tooltip) << ",\n";
+    ss << "  \"targetingMetadata\": " << jsonString(getString(spellObj, "targeting", "")) << ",\n";
+    ss << "  \"areaMetadata\": " << jsonString(shape) << ",\n";
+    ss << "  \"damageMetadata\": " << jsonString(damageMetadata) << ",\n";
+    ss << "  \"effectMetadata\": " << jsonString(jsonValueSummary(spellObj)) << ",\n";
+    ss << "  \"rawVariables\": ";
+    appendRawVariablesJson(ss, rawVars);
+    ss << ",\n";
+    ss << "  \"importWarnings\": ";
+    appendStringArrayJson(ss, importWarnings);
+    ss << ",\n";
     ss << "  \"effects\": [\n";
     ss << "    {\n";
     ss << "      \"name\": " << jsonString(name) << ",\n";
@@ -314,6 +560,12 @@ static std::string writeTraitNormalized(const std::string& name, const std::vect
         ss << breakpoints[i];
     }
     ss << "],\n";
+    ss << "  \"isPlaceholder\": true,\n";
+    ss << "  \"sourceId\": " << jsonString(name) << ",\n";
+    ss << "  \"description\": \"\",\n";
+    ss << "  \"tooltip\": \"\",\n";
+    ss << "  \"rawVariables\": [],\n";
+    ss << "  \"importWarnings\": [\"No trait effects were mapped from source data\"],\n";
     ss << "  \"tiers\": []\n";
     ss << "}\n";
     return ss.str();
@@ -464,6 +716,12 @@ static void appendStatusEffectJson(std::ostringstream& ss,
 static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj, const std::string& name, const std::vector<int>& breakpoints)
 {
     std::ostringstream ss;
+    const std::string sourceId = getString(traitObj, "apiName", name);
+    const std::string description = getString(traitObj, "desc", getString(traitObj, "description", ""));
+    std::vector<std::pair<std::string, std::string>> allRawVariables;
+    std::vector<std::string> importWarnings;
+    bool mappedAny = false;
+
     ss << "{\n";
     ss << "  \"name\": " << jsonString(name) << ",\n";
     ss << "  \"breakpoints\": [";
@@ -473,6 +731,10 @@ static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj, co
         ss << breakpoints[i];
     }
     ss << "],\n";
+    ss << "  \"isPlaceholder\": true,\n";
+    ss << "  \"sourceId\": " << jsonString(sourceId) << ",\n";
+    ss << "  \"description\": " << jsonString(description) << ",\n";
+    ss << "  \"tooltip\": " << jsonString(description) << ",\n";
 
     ss << "  \"tiers\": [\n";
     bool firstTier = true;
@@ -495,8 +757,10 @@ static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj, co
             {
                 for (const auto& [k, v] : e.at("variables").asObject())
                 {
+                    allRawVariables.emplace_back(k, jsonValueSummary(v));
                     if (!v.isNumber())
                     {
+                        importWarnings.push_back("Unmapped non-numeric trait variable: " + k);
                         continue;
                     }
                     std::string stat;
@@ -504,10 +768,12 @@ static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj, co
                     double outVal = 0.0;
                     if (!tryMapVariableToStatEffect(k, v.asNumber(), stat, mod, outVal))
                     {
+                        importWarnings.push_back("Unmapped trait variable: " + k);
                         continue;
                     }
                     if (std::abs(outVal) <= VerySmallValueEpsilon)
                     {
+                        importWarnings.push_back("Ignored zero trait variable: " + k);
                         continue;
                     }
                     mapped.emplace_back(std::move(stat), std::move(mod), outVal);
@@ -516,8 +782,10 @@ static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj, co
 
             if (mapped.empty())
             {
+                importWarnings.push_back("No executable effects mapped for breakpoint " + std::to_string(bp));
                 continue;
             }
+            mappedAny = true;
 
             if (!firstTier) ss << ",\n";
             firstTier = false;
@@ -544,7 +812,24 @@ static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj, co
         }
     }
 
-    ss << "\n  ]\n";
+    std::sort(allRawVariables.begin(), allRawVariables.end(), [](const auto& a, const auto& b) {
+        return a.first < b.first;
+    });
+    importWarnings.erase(std::remove(importWarnings.begin(), importWarnings.end(), ""), importWarnings.end());
+    std::sort(importWarnings.begin(), importWarnings.end());
+    importWarnings.erase(std::unique(importWarnings.begin(), importWarnings.end()), importWarnings.end());
+    if (!mappedAny)
+    {
+        importWarnings.push_back("Trait has no mapped executable effects");
+    }
+
+    ss << "\n  ],\n";
+    ss << "  \"rawVariables\": ";
+    appendRawVariablesJson(ss, allRawVariables);
+    ss << ",\n";
+    ss << "  \"importWarnings\": ";
+    appendStringArrayJson(ss, importWarnings);
+    ss << "\n";
     ss << "}\n";
     return ss.str();
 }
@@ -552,8 +837,21 @@ static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj, co
 static std::string writeItemNormalizedFromCdragon(const JsonValue& itemObj, const std::string& name)
 {
     std::ostringstream ss;
+    const std::string sourceId = getString(itemObj, "apiName", name);
+    const std::string description = getString(itemObj, "desc", getString(itemObj, "description", ""));
+    const std::string iconPath = getString(itemObj, "icon", "");
+    const std::string itemCategory = classifyItemCategory(itemObj, name);
+    std::vector<std::pair<std::string, std::string>> rawVariables;
+    std::vector<std::string> importWarnings;
+
     ss << "{\n";
     ss << "  \"name\": " << jsonString(name) << ",\n";
+    ss << "  \"isPlaceholder\": true,\n";
+    ss << "  \"sourceId\": " << jsonString(sourceId) << ",\n";
+    ss << "  \"description\": " << jsonString(description) << ",\n";
+    ss << "  \"tooltip\": " << jsonString(description) << ",\n";
+    ss << "  \"iconPath\": " << jsonString(iconPath) << ",\n";
+    ss << "  \"itemCategory\": " << jsonString(itemCategory) << ",\n";
     ss << "  \"passiveStats\": [\n";
 
     bool first = true;
@@ -561,8 +859,10 @@ static std::string writeItemNormalizedFromCdragon(const JsonValue& itemObj, cons
     {
         for (const auto& [k, v] : itemObj.at("effects").asObject())
         {
+            rawVariables.emplace_back(k, jsonValueSummary(v));
             if (!v.isNumber())
             {
+                importWarnings.push_back("Unmapped non-numeric item variable: " + k);
                 continue;
             }
             std::string stat;
@@ -570,10 +870,12 @@ static std::string writeItemNormalizedFromCdragon(const JsonValue& itemObj, cons
             double outVal = 0.0;
             if (!tryMapVariableToStatEffect(k, v.asNumber(), stat, mod, outVal))
             {
+                importWarnings.push_back("Unmapped item variable: " + k);
                 continue;
             }
             if (std::abs(outVal) <= VerySmallValueEpsilon)
             {
+                importWarnings.push_back("Ignored zero item variable: " + k);
                 continue;
             }
 
@@ -583,9 +885,25 @@ static std::string writeItemNormalizedFromCdragon(const JsonValue& itemObj, cons
             appendStatusEffectJson(ss, std::string("Item:") + name + ":" + stat, stat, mod, outVal);
         }
     }
+    else
+    {
+        importWarnings.push_back("Item has no effects object in source data");
+    }
+
+    std::sort(rawVariables.begin(), rawVariables.end(), [](const auto& a, const auto& b) {
+        return a.first < b.first;
+    });
+    std::sort(importWarnings.begin(), importWarnings.end());
+    importWarnings.erase(std::unique(importWarnings.begin(), importWarnings.end()), importWarnings.end());
 
     ss << "\n  ],\n";
-    ss << "  \"triggeredEffects\": []\n";
+    ss << "  \"triggeredEffects\": [],\n";
+    ss << "  \"rawVariables\": ";
+    appendRawVariablesJson(ss, rawVariables);
+    ss << ",\n";
+    ss << "  \"importWarnings\": ";
+    appendStringArrayJson(ss, importWarnings);
+    ss << "\n";
     ss << "}\n";
     return ss.str();
 }
@@ -828,7 +1146,14 @@ TFTDataImporter::ImportResult TFTDataImporter::importLiveTft(const std::string& 
             }
 
             const std::string iconPath = getString(c, "iconPath", "");
+            const std::string icon = getString(c, "icon", iconPath);
+            const std::string squareIconPath = getString(c, "squareIcon", "");
+            const std::string tileIconPath = getString(c, "tileIcon", "");
             const std::string splashPath = getString(c, "splashPath", "");
+            const std::string sourceId = getString(c, "apiName", getString(c, "characterName", name));
+            const std::string description = getString(c, "desc", getString(c, "description", ""));
+            const std::string tooltip = getString(c, "tooltip", "");
+            std::vector<std::string> championWarnings;
 
             std::string abilityId;
             std::string abilityName;
@@ -854,10 +1179,16 @@ TFTDataImporter::ImportResult TFTDataImporter::importLiveTft(const std::string& 
             {
                 abilityId = name + "Ability";
                 abilityName = abilityId;
+                championWarnings.push_back("No ability id in source data");
                 result.warnings += 1;
             }
 
+            std::vector<std::string> abilityWarnings;
             const int baseDamage = pickDamageFromVariables(spellObj, result.warnings);
+            if (baseDamage == 0)
+            {
+                abilityWarnings.push_back("Ability damage required fallback/default inference");
+            }
             const float adRatio = 0.0f;
             const float apRatio = 0.8f;
 
@@ -868,6 +1199,7 @@ TFTDataImporter::ImportResult TFTDataImporter::importLiveTft(const std::string& 
             if (maxMana <= 0)
             {
                 maxMana = 60;
+                abilityWarnings.push_back("Ability max mana required fallback/default inference");
                 result.warnings += 1;
             }
 
@@ -877,6 +1209,10 @@ TFTDataImporter::ImportResult TFTDataImporter::importLiveTft(const std::string& 
             if (!hasAbilityData) tags.push_back("NoAbilityData");
             if (hp <= 0 || ad <= 0 || range <= 0 || as <= 0.0f) tags.push_back("InvalidCombatStats");
             if (range <= 0) tags.push_back("Object");
+            for (const std::string& tag : tags)
+            {
+                championWarnings.push_back("Champion tag: " + tag);
+            }
 
             const bool isPlayable =
                 cost >= 1 && cost <= 5 &&
@@ -888,13 +1224,16 @@ TFTDataImporter::ImportResult TFTDataImporter::importLiveTft(const std::string& 
     std::filesystem::path(outputDataRoot) / "champions" /
     (safeFileName(toSnakeLower(name)) + ".json"),
                               writeChampionNormalized(name, cost, hp, ad, armor, mr, startMana, maxMana, manaGainOnAttack, range, as, ap,
-                                                     critChance, critDamage, durability, traitsList, isPlayable, tags, abilityName, iconPath, splashPath));
+                                                     critChance, critDamage, durability, traitsList, isPlayable, tags, abilityName,
+                                                     sourceId, description, tooltip, icon, squareIconPath, tileIconPath, splashPath,
+                                                     championWarnings));
             result.champions += 1;
 
             writeStringToFile(
     std::filesystem::path(outputDataRoot) / "abilities" /
     (safeFileName(toSnakeLower(abilityId)) + ".json"),
-                              writeAbilityNormalized(abilityId, abilityName, maxMana, baseDamage, adRatio, apRatio, "SingleTarget", 0, 0, false));
+                              writeAbilityNormalized(abilityId, abilityName, maxMana, baseDamage, adRatio, apRatio, "SingleTarget", 0, 0, false,
+                                                     spellObj, abilityWarnings));
             result.abilities += 1;
         }
     }

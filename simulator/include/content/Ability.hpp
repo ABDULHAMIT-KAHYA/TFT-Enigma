@@ -5,6 +5,32 @@
 #include <vector>
 #include "combat/DamageType.hpp"
 #include "combat/StatusEffect.hpp"
+
+struct RawVariableMetadata
+{
+    std::string name{};
+    std::string value{};
+};
+
+struct ContentMetadata
+{
+    std::string sourceId{};
+    std::string description{};
+    std::string tooltip{};
+    std::string iconPath{};
+    std::string squareIconPath{};
+    std::string tileIconPath{};
+    std::string splashPath{};
+    std::string targetingMetadata{};
+    std::string areaMetadata{};
+    std::string damageMetadata{};
+    std::string effectMetadata{};
+    std::string itemCategory{};
+    std::vector<RawVariableMetadata> rawVariables{};
+    std::vector<std::string> importWarnings{};
+    bool isPlaceholder = false;
+};
+
 enum class AbilityTrigger
 {
     Passive,
@@ -79,4 +105,5 @@ struct Ability
     std::int32_t manaCost = 0;
     TargetType targetType = TargetType::CurrentEnemy;
     std::vector<AbilityEffect> effects{};
+    ContentMetadata metadata{};
 };

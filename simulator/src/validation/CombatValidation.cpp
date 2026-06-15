@@ -439,6 +439,214 @@ static StatusEffect makePercentBuff(std::string name, StatusEffectType type, Sta
     return e;
 }
 
+static bool isPlaceholderSingleTargetMagicAbility(const Ability& ability)
+{
+    constexpr float Epsilon = 0.0001f;
+    if (ability.effects.size() != 1)
+    {
+        return false;
+    }
+
+    const AbilityEffect& effect = ability.effects.front();
+    return effect.trigger == AbilityTrigger::OnCast &&
+           effect.damageFormula.damageType == DamageType::Magic &&
+           std::fabs(effect.damageFormula.adRatio) <= Epsilon &&
+           std::fabs(effect.damageFormula.apRatio - 0.8f) <= Epsilon &&
+           effect.areaShape == AreaShape::SingleTarget &&
+           effect.radius == 0 &&
+           effect.delayMs == 0 &&
+           !effect.canCrit &&
+           !effect.appliesStatusEffect &&
+           effect.healAmount == 0 &&
+           effect.healPercentOfDamage == 0.0f &&
+           effect.shieldAmount == 0 &&
+           effect.maxStacks == 0 &&
+           effect.targetMaxHpThreshold == 0 &&
+           effect.targetMaxHpPercentDamage == 0.0f;
+}
+
+static std::size_t effectCountForTrait(const TraitDefinition& trait)
+{
+    std::size_t count = 0;
+    for (const TraitTier& tier : trait.tiers)
+    {
+        count += tier.effects.size();
+    }
+    return count;
+}
+
+static std::size_t countJsonFiles(const std::filesystem::path& dir)
+{
+    if (!std::filesystem::exists(dir))
+    {
+        return 0;
+    }
+
+    std::size_t count = 0;
+    for (const auto& entry : std::filesystem::directory_iterator(dir))
+    {
+        if (entry.is_regular_file() && entry.path().extension() == ".json")
+        {
+            count += 1;
+        }
+    }
+    return count;
+}
+
+static std::vector<std::string> orderedItemCategories()
+{
+    return {
+        "CombatItem",
+        "Emblem",
+        "RadiantItem",
+        "Artifact",
+        "SupportItem",
+        "Consumable",
+        "Anvil",
+        "LootObject",
+        "Augment",
+        "Unknown"
+    };
+}
+
+static void contentFidelityValidationTest(const ContentManager& content, ValidationReport& report, std::ostream& out)
+{
+    const std::filesystem::path dataRoot = std::filesystem::absolute(std::filesystem::path("../../data"));
+
+    const std::size_t championFiles = countJsonFiles(dataRoot / "champions");
+    const std::size_t abilityFiles = countJsonFiles(dataRoot / "abilities");
+    const std::size_t traitFiles = countJsonFiles(dataRoot / "traits");
+    const std::size_t itemFiles = countJsonFiles(dataRoot / "items");
+
+    std::size_t placeholderAbilities = 0;
+    std::size_t explicitPlaceholderAbilities = 0;
+    for (const auto& [_, ability] : content.abilities())
+    {
+        if (isPlaceholderSingleTargetMagicAbility(ability))
+        {
+            placeholderAbilities += 1;
+        }
+        if (ability.metadata.isPlaceholder)
+        {
+            explicitPlaceholderAbilities += 1;
+        }
+    }
+    const std::size_t nonPlaceholderAbilities = content.abilityCount() - placeholderAbilities;
+
+    std::size_t traitsWithEffects = 0;
+    std::size_t traitsWithoutEffects = 0;
+    std::size_t explicitPlaceholderTraits = 0;
+    for (const auto& [_, trait] : content.traits())
+    {
+        if (effectCountForTrait(trait) > 0)
+        {
+            traitsWithEffects += 1;
+        }
+        else
+        {
+            traitsWithoutEffects += 1;
+        }
+        if (trait.metadata.isPlaceholder)
+        {
+            explicitPlaceholderTraits += 1;
+        }
+    }
+
+    std::size_t passiveOnlyItems = 0;
+    std::size_t triggeredItems = 0;
+    std::size_t noRuntimeEffectItems = 0;
+    std::size_t explicitPlaceholderItems = 0;
+    std::map<std::string, std::size_t> itemCategoryCounts;
+    const std::vector<std::string> categoryOrder = orderedItemCategories();
+    for (const std::string& category : categoryOrder)
+    {
+        itemCategoryCounts[category] = 0;
+    }
+    for (const auto& [_, item] : content.items())
+    {
+        const bool hasPassive = !item.passiveStats.empty();
+        const bool hasTriggered = !item.triggeredEffects.empty();
+        const std::string category = item.metadata.itemCategory.empty() ? "Unknown" : item.metadata.itemCategory;
+        if (hasTriggered)
+        {
+            triggeredItems += 1;
+        }
+        if (hasPassive && !hasTriggered)
+        {
+            passiveOnlyItems += 1;
+        }
+        if (!hasPassive && !hasTriggered)
+        {
+            noRuntimeEffectItems += 1;
+        }
+        if (item.metadata.isPlaceholder)
+        {
+            explicitPlaceholderItems += 1;
+        }
+        itemCategoryCounts[category] += 1;
+    }
+
+    out << "Content Fidelity Summary\n";
+    out << "Data root: " << dataRoot.string() << "\n";
+    out << "JSON files | champions=" << championFiles
+        << " abilities=" << abilityFiles
+        << " traits=" << traitFiles
+        << " items=" << itemFiles << "\n";
+    out << "Loaded content | champions=" << content.championCount()
+        << " abilities=" << content.abilityCount()
+        << " traits=" << content.traitCount()
+        << " items=" << content.itemCount() << "\n";
+    out << "Abilities | placeholder_single_target_magic=" << placeholderAbilities
+        << " non_placeholder=" << nonPlaceholderAbilities << "\n";
+    out << "Traits | executable_effects=" << traitsWithEffects
+        << " empty_or_no_executable_effects=" << traitsWithoutEffects << "\n";
+    out << "Items | passive_stats_only=" << passiveOnlyItems
+        << " triggered_effects=" << triggeredItems
+        << " no_runtime_effects=" << noRuntimeEffectItems << "\n";
+    out << "Placeholder flags | abilities=" << explicitPlaceholderAbilities
+        << " traits=" << explicitPlaceholderTraits
+        << " items=" << explicitPlaceholderItems << "\n";
+    out << "Item categories |";
+    for (const std::string& category : categoryOrder)
+    {
+        out << " " << category << "=" << itemCategoryCounts[category];
+    }
+    for (const auto& [category, count] : itemCategoryCounts)
+    {
+        if (std::find(categoryOrder.begin(), categoryOrder.end(), category) == categoryOrder.end())
+        {
+            out << " " << category << "=" << count;
+        }
+    }
+    out << "\n";
+
+    if (championFiles != content.championCount() ||
+        abilityFiles != content.abilityCount() ||
+        traitFiles != content.traitCount() ||
+        itemFiles != content.itemCount())
+    {
+        report.warning("Content fidelity: loaded content count differs from normalized JSON file count");
+    }
+    if (placeholderAbilities > 0)
+    {
+        report.warning("Content fidelity: placeholder single-target magic abilities present");
+    }
+    if (traitsWithoutEffects > 0)
+    {
+        report.warning("Content fidelity: traits with empty/no executable effects present");
+    }
+    if (passiveOnlyItems > 0)
+    {
+        report.warning("Content fidelity: passive-stat-only items present");
+    }
+    if (noRuntimeEffectItems > 0)
+    {
+        report.warning("Content fidelity: items with no runtime effects present");
+    }
+
+    report.pass("Content fidelity summary generated");
+}
+
 static void critStatisticsTest(ValidationReport& report, std::ostream& out)
 {
     const float expected = ValidationConstants::CritExpectedChance;
@@ -2939,6 +3147,7 @@ ValidationReport CombatValidation::runAll(const ContentManager& content, std::os
         logValidationEnd(out, name, passed, ms);
     };
 
+    step("Content fidelity", [&]() { contentFidelityValidationTest(content, report, out); });
     step("Attack speed timing", [&]() { attackSpeedTimerTest(report, out); });
     step("Mana system", [&]() { manaSystemTest(content, report, out); });
     step("Projectile timing", [&]() { projectileTimingTest(content, report); });
