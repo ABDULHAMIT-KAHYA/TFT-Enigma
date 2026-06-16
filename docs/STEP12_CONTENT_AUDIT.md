@@ -30,6 +30,8 @@ Step 12F-4 fixed trait source identity collisions during trait import only. Same
 
 Step 12F-6 added metadata-only support for same-display-name trait variants. Variant metadata is imported, loaded, and reported by content fidelity validation, but trait activation remains unchanged and active variants remain zero.
 
+Step 12F-7 added validation-only combat fixtures for regenerated trait JSON effects. The fixtures load actual normalized trait definitions and execute them through `TraitSystem::onCombatStart`.
+
 # Content Statistics
 
 | Metric | Count |
@@ -437,6 +439,18 @@ Step 12F-6 progress:
 - Reported one trait variant group: `Stargazer=7`.
 - Confirmed `active_variants=0`.
 - Preserved trait activation, `TraitResolver`, `TraitEffectExecutor`, and combat runtime behavior unchanged.
+- Build and validation remain PASS.
+
+Step 12F-7 progress:
+
+- Added regenerated trait JSON effect validation.
+- Validated `Brawler`, `Challenger`, `Bastion`, `Marauder`, and `Sniper`.
+- Confirmed effects do not apply below breakpoint.
+- Confirmed regenerated breakpoint tiers apply their exact normalized status payloads.
+- Confirmed `ApplyStatusToTraitUnits` targets trait units only.
+- Confirmed `ApplyStatusToAllies` targets allies and not enemies.
+- Confirmed deterministic replay remains PASS.
+- No importer mapping, `TraitResolver`, `TraitEffectExecutor`, Stargazer activation, or Stargazer variable mapping changes were made.
 - Build and validation remain PASS.
 
 # Risks To Determinism

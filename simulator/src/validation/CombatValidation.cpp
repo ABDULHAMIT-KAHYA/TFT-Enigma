@@ -14,6 +14,7 @@
 #include "combat/StatSystem.hpp"
 #include "combat/TargetingSystem.hpp"
 #include "combat/TraitEffectExecutor.hpp"
+#include "combat/TraitSystem.hpp"
 #include "macro/LegalActionGenerator.hpp"
 #include "macro/MacroExecutor.hpp"
 #include "macro/MacroSimulation.hpp"
@@ -949,6 +950,208 @@ static bool hasActiveShield(const Unit& unit, int expectedAmount)
            shield->effectType == StatusEffectType::Shield &&
            shield->remainingMs > 0 &&
            static_cast<int>(shield->value) == expectedAmount;
+}
+
+static bool statusMatches(const StatusEffect& actual, const StatusEffect& expected)
+{
+    constexpr float Epsilon = 0.0001f;
+    return actual.name == expected.name &&
+           actual.effectType == expected.effectType &&
+           actual.affectedStat == expected.affectedStat &&
+           actual.modifierType == expected.modifierType &&
+           std::fabs(actual.value - expected.value) <= Epsilon;
+}
+
+static bool hasMatchingStatus(const Unit& unit, const StatusEffect& expected)
+{
+    for (const StatusEffect& actual : unit.statusEffects())
+    {
+        if (statusMatches(actual, expected))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+static std::vector<Unit> runRegeneratedTraitCombatStart(const ContentManager& content,
+                                                        std::string_view traitName,
+                                                        int traitUnitCount)
+{
+    std::ostringstream oss;
+    Logger logger(oss);
+    logger.setMode(LogMode::Silent);
+
+    Board board(GameConstants::BoardWidth, GameConstants::BoardHeight);
+    std::vector<Unit> units;
+    for (int i = 0; i < traitUnitCount; ++i)
+    {
+        units.push_back(makeValidationTraitUnit(
+            "RegeneratedTraitUnit" + std::to_string(i),
+            TeamId::TeamA,
+            Position{ i % GameConstants::BoardWidth, i / GameConstants::BoardWidth },
+            traitName));
+    }
+    units.push_back(makeValidationUnit("RegeneratedAlly", TeamId::TeamA, Position{ 6, 0 }));
+    units.push_back(makeValidationUnit("RegeneratedEnemy", TeamId::TeamB, Position{ 6, 7 }));
+
+    GameState state(std::move(board), std::move(units), std::move(logger), content);
+    TraitSystem::onCombatStart(state);
+    return state.units();
+}
+
+static const TraitTier* tierForBreakpoint(const TraitDefinition& trait, int breakpoint)
+{
+    for (const TraitTier& tier : trait.tiers)
+    {
+        if (tier.breakpoint == breakpoint)
+        {
+            return &tier;
+        }
+    }
+    return nullptr;
+}
+
+static bool validateRegeneratedTraitBelowBreakpoint(const ContentManager& content,
+                                                    const TraitDefinition& trait)
+{
+    if (trait.trait.breakpoints.empty())
+    {
+        return false;
+    }
+
+    const int minBreakpoint = *std::min_element(trait.trait.breakpoints.begin(), trait.trait.breakpoints.end());
+    if (minBreakpoint <= 1)
+    {
+        return true;
+    }
+
+    const TraitTier* firstTier = tierForBreakpoint(trait, minBreakpoint);
+    if (!firstTier)
+    {
+        return false;
+    }
+
+    const std::vector<Unit> units =
+        runRegeneratedTraitCombatStart(content, trait.trait.name, minBreakpoint - 1);
+    for (const Unit& unit : units)
+    {
+        for (const TraitEffect& effect : firstTier->effects)
+        {
+            if (hasMatchingStatus(unit, effect.statusEffect))
+            {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+static bool validateRegeneratedTraitBreakpointTargets(const ContentManager& content,
+                                                      const TraitDefinition& trait,
+                                                      int breakpoint)
+{
+    const TraitTier* tier = tierForBreakpoint(trait, breakpoint);
+    if (!tier || tier->effects.empty())
+    {
+        return false;
+    }
+
+    const std::vector<Unit> units =
+        runRegeneratedTraitCombatStart(content, trait.trait.name, breakpoint);
+    if (units.size() < static_cast<std::size_t>(breakpoint + 2))
+    {
+        return false;
+    }
+
+    const Unit& ally = units[static_cast<std::size_t>(breakpoint)];
+    const Unit& enemy = units[static_cast<std::size_t>(breakpoint + 1)];
+    for (const TraitEffect& effect : tier->effects)
+    {
+        if (effect.type == TraitEffectType::ApplyStatusToTraitUnits)
+        {
+            for (int i = 0; i < breakpoint; ++i)
+            {
+                if (!hasMatchingStatus(units[static_cast<std::size_t>(i)], effect.statusEffect))
+                {
+                    return false;
+                }
+            }
+            if (hasMatchingStatus(ally, effect.statusEffect) ||
+                hasMatchingStatus(enemy, effect.statusEffect))
+            {
+                return false;
+            }
+        }
+        else if (effect.type == TraitEffectType::ApplyStatusToAllies)
+        {
+            for (int i = 0; i < breakpoint; ++i)
+            {
+                if (!hasMatchingStatus(units[static_cast<std::size_t>(i)], effect.statusEffect))
+                {
+                    return false;
+                }
+            }
+            if (!hasMatchingStatus(ally, effect.statusEffect) ||
+                hasMatchingStatus(enemy, effect.statusEffect))
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+static void regeneratedTraitJsonValidationTest(const ContentManager& content, ValidationReport& report)
+{
+    const std::vector<std::string> traitNames = {
+        "Brawler",
+        "Challenger",
+        "Bastion",
+        "Marauder",
+        "Sniper"
+    };
+
+    for (const std::string& traitName : traitNames)
+    {
+        const TraitDefinition* trait = content.getTrait(traitName);
+        if (!trait || trait->tiers.empty())
+        {
+            report.fail("RegeneratedTrait: " + traitName + " loads executable normalized JSON");
+            continue;
+        }
+
+        if (validateRegeneratedTraitBelowBreakpoint(content, *trait))
+        {
+            report.pass("RegeneratedTrait: " + traitName + " does not apply below breakpoint");
+        }
+        else
+        {
+            report.fail("RegeneratedTrait: " + traitName + " does not apply below breakpoint");
+        }
+
+        bool breakpointsOk = true;
+        for (int breakpoint : trait->trait.breakpoints)
+        {
+            if (!validateRegeneratedTraitBreakpointTargets(content, *trait, breakpoint))
+            {
+                breakpointsOk = false;
+                break;
+            }
+        }
+        if (breakpointsOk)
+        {
+            report.pass("RegeneratedTrait: " + traitName + " applies correct breakpoint targets");
+        }
+        else
+        {
+            report.fail("RegeneratedTrait: " + traitName + " applies correct breakpoint targets");
+        }
+    }
 }
 
 static void traitEffectVocabularyValidationTest(ValidationReport& report)
@@ -4160,6 +4363,7 @@ ValidationReport CombatValidation::runAll(const ContentManager& content, std::os
     step("Replay consistency", [&]() { replayConsistencyTest(content, report, out); });
     step("Benchmark", [&]() { benchmarkTest(content, report, out); });
     step("Trait effect vocabulary", [&]() { traitEffectVocabularyValidationTest(report); });
+    step("Regenerated trait JSON effects", [&]() { regeneratedTraitJsonValidationTest(content, report); });
     step("Validation scenarios", [&]() { scenarioSuite(content, report, out); });
     step("Macro validations", [&]() { macroSystemValidationTest(content, report, out); });
     step("Strategic AI validations", [&]() { strategicAiValidationTest(content, report); });

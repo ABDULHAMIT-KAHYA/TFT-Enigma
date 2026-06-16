@@ -889,3 +889,40 @@ Trait variant groups | Stargazer=7
 - Regenerated only `data/traits/*.json` with `.\engine.exe --import-cached-traits`.
 - Did not change `TraitResolver`, `TraitEffectExecutor`, trait activation, combat runtime behavior, or Stargazer mechanics.
 - Validation remains PASS.
+
+# Step 12F-7 Implementation Notes
+
+- Added validation-only combat fixtures for regenerated normalized trait JSON.
+- The fixtures use the loaded `ContentManager` data from `data/traits/*.json` and execute effects through `TraitSystem::onCombatStart`.
+- Validated regenerated executable traits:
+  - `Brawler`
+  - `Challenger`
+  - `Bastion`
+  - `Marauder`
+  - `Sniper`
+- Each trait validation checks:
+  - no effects apply below the minimum breakpoint
+  - every generated breakpoint applies the exact normalized status payload for that tier
+  - `ApplyStatusToTraitUnits` affects trait units only
+  - `ApplyStatusToAllies` affects alive allied units and not enemies
+- Validation output:
+
+```text
+PASS: RegeneratedTrait: Brawler does not apply below breakpoint
+PASS: RegeneratedTrait: Brawler applies correct breakpoint targets
+PASS: RegeneratedTrait: Challenger does not apply below breakpoint
+PASS: RegeneratedTrait: Challenger applies correct breakpoint targets
+PASS: RegeneratedTrait: Bastion does not apply below breakpoint
+PASS: RegeneratedTrait: Bastion applies correct breakpoint targets
+PASS: RegeneratedTrait: Marauder does not apply below breakpoint
+PASS: RegeneratedTrait: Marauder applies correct breakpoint targets
+PASS: RegeneratedTrait: Sniper does not apply below breakpoint
+PASS: RegeneratedTrait: Sniper applies correct breakpoint targets
+PASS: Deterministic replay
+```
+
+- No importer mapping changes were made.
+- No `TraitEffectExecutor` changes were made.
+- Stargazer variants remain inactive.
+- `Mountain_*` and `Wolf_*` variables remain unmapped.
+- Build and validation remain PASS.
