@@ -1,13 +1,24 @@
 {
   "name": "Fateweaver",
+  "displayName": "Fateweaver",
   "breakpoints": [2, 4],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Fateweaver",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Innate: Fateweavers have <TFTKeyword>Precision</TFTKeyword>.<br><br><row>(@MinUnits@) Chance effects on abilities are <TFTKeyword>Lucky</TFTKeyword>.</row><br><row>(@MinUnits@) Gain @CritChance*100@% Crit Chance and @CritDamage@%&nbsp;Crit Damage. Critical strikes are also <TFTKeyword>Lucky</TFTKeyword>.</row><br><br>{{TFT_Keyword_Precision}}<br><rules>Lucky: Check twice and take the better outcome.</rules>",
+  "tooltip": "Innate: Fateweavers have <TFTKeyword>Precision</TFTKeyword>.<br><br><row>(@MinUnits@) Chance effects on abilities are <TFTKeyword>Lucky</TFTKeyword>.</row><br><row>(@MinUnits@) Gain @CritChance*100@% Crit Chance and @CritDamage@%&nbsp;Crit Damage. Critical strikes are also <TFTKeyword>Lucky</TFTKeyword>.</row><br><br>{{TFT_Keyword_Precision}}<br><rules>Lucky: Check twice and take the better outcome.</rules>",
   "tiers": [
     {
       "breakpoint": 4,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Fateweaver:CritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Fateweaver:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Fateweaver:CritChance:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Fateweaver:CritDamage:CritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     }
-  ]
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "0.2" }, { "name": "CritDamage", "value": "null" }, { "name": "CritDamage", "value": "20" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 2", "Unmapped non-numeric trait variable: CritDamage"]
 }

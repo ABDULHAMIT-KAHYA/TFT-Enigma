@@ -1,0 +1,18 @@
+{
+  "name": "TFT17_Stargazer_Shield",
+  "displayName": "Stargazer",
+  "breakpoints": [3],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Stargazer_Shield",
+  "isVariant": true,
+  "variantGroup": "Stargazer",
+  "variantParentSourceId": "TFT17_Stargazer",
+  "variantSelectionKey": "Shield",
+  "description": "Stargazers chart a different constellation every game. This game: <TFTStargazer>The Altar</TFTStargazer>.<br><br><row>(@MinUnits@) When ANY champion dies, they are sacrificed to the Altar. Allies in empowered hexes gain @Shield_Health_Teamwide@% Health and @Shield_AS_Teamwide@% Attack Speed.<br><br>After @Shield_NumDeaths@ sacrifices, Stargazers in empowered hexes gain an additional @Shield_CashoutHP@% %i:scaleHealth% and @Shield_CashoutAS@% %i:scaleAS%<br><br>Sacrifices: (@TFTUnitProperty.trait:TFT17_Stargazer_Shield_Deaths@ / @Shield_NumDeaths@)</row><br><br><rules>More hexes reveal at each player level</rules>",
+  "tooltip": "Stargazers chart a different constellation every game. This game: <TFTStargazer>The Altar</TFTStargazer>.<br><br><row>(@MinUnits@) When ANY champion dies, they are sacrificed to the Altar. Allies in empowered hexes gain @Shield_Health_Teamwide@% Health and @Shield_AS_Teamwide@% Attack Speed.<br><br>After @Shield_NumDeaths@ sacrifices, Stargazers in empowered hexes gain an additional @Shield_CashoutHP@% %i:scaleHealth% and @Shield_CashoutAS@% %i:scaleAS%<br><br>Sacrifices: (@TFTUnitProperty.trait:TFT17_Stargazer_Shield_Deaths@ / @Shield_NumDeaths@)</row><br><br><rules>More hexes reveal at each player level</rules>",
+  "tiers": [
+
+  ],
+  "rawVariables": [{ "name": "Shield_AS_Teamwide", "value": "8" }, { "name": "Shield_CashoutAS", "value": "18" }, { "name": "Shield_CashoutHP", "value": "20" }, { "name": "Shield_Health_Teamwide", "value": "8" }, { "name": "Shield_NumDeaths", "value": "60" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 3", "Unmapped trait variable: Shield_AS_Teamwide", "Unmapped trait variable: Shield_CashoutAS", "Unmapped trait variable: Shield_CashoutHP", "Unmapped trait variable: Shield_Health_Teamwide", "Unmapped trait variable: Shield_NumDeaths", "Trait has no mapped executable effects"]
+}

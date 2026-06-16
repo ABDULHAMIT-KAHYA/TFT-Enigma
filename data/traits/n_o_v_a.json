@@ -1,18 +1,18 @@
 {
   "name": "N.O.V.A.",
+  "displayName": "N.O.V.A.",
   "breakpoints": [2, 5],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_DRX",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "<row>(@MinUnits@) @TeamAttackDelay@ seconds into combat, N.O.V.A. grant a power surge to allies based on champions.</row><br><row>(@MinUnits@) Gain a Striker selector. The chosen N.O.V.A. activates their Strike during the power surge.</row><br><br><ShowIf.TFT17_DRX_HasAatrox><status>Aatrox:</status> Ally Damage @ShredAndSunder*100@% <TFTKeyword>Shred</TFTKeyword> and <TFTKeyword>Sunders</TFTKeyword> enemies</ShowIf.TFT17_DRX_HasAatrox><ShowIfNot.TFT17_DRX_HasAatrox><TFTGuildInactive>Aatrox: Shred and Sunder enemies</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAatrox><br><ShowIf.TFT17_DRX_HasCaitlyn><status>Caitlyn:</status> Grant allies @AS*100@% Attack Speed</ShowIf.TFT17_DRX_HasCaitlyn><ShowIfNot.TFT17_DRX_HasCaitlyn><TFTGuildInactive>Caitlyn: Grant Attack Speed</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasCaitlyn><br><ShowIf.TFT17_DRX_HasAkali><status>Akali:</status> Allies gain <TFTKeyword>Precision</TFTKeyword></ShowIf.TFT17_DRX_HasAkali><ShowIfNot.TFT17_DRX_HasAkali><TFTGuildInactive>Akali: Allies gain Precision</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAkali><br><ShowIf.TFT17_DRX_HasMaokai><status>Maokai:</status> Allies heal @Heal*100@% max Health</ShowIf.TFT17_DRX_HasMaokai><ShowIfNot.TFT17_DRX_HasMaokai><TFTGuildInactive>Maokai: Heal allies</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasMaokai><br><ShowIf.TFT17_DRX_HasKindred><status>Kindred:</status> Shield the strongest Tank for <TFTBonus>@ShieldValue@</TFTBonus></ShowIf.TFT17_DRX_HasKindred><ShowIfNot.TFT17_DRX_HasKindred><TFTGuildInactive>Kindred: Shield an ally</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasKindred><br><ShowIf.TFT17_DRX_HasEmblem><status>Emblem:</status> Allies deal @BonusTrueDamage*100@% stacking bonus true damage</ShowIf.TFT17_DRX_HasEmblem><ShowIfNot.TFT17_DRX_HasEmblem><TFTGuildInactive>Emblem: Deal bonus true damage</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasEmblem>",
+  "tooltip": "<row>(@MinUnits@) @TeamAttackDelay@ seconds into combat, N.O.V.A. grant a power surge to allies based on champions.</row><br><row>(@MinUnits@) Gain a Striker selector. The chosen N.O.V.A. activates their Strike during the power surge.</row><br><br><ShowIf.TFT17_DRX_HasAatrox><status>Aatrox:</status> Ally Damage @ShredAndSunder*100@% <TFTKeyword>Shred</TFTKeyword> and <TFTKeyword>Sunders</TFTKeyword> enemies</ShowIf.TFT17_DRX_HasAatrox><ShowIfNot.TFT17_DRX_HasAatrox><TFTGuildInactive>Aatrox: Shred and Sunder enemies</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAatrox><br><ShowIf.TFT17_DRX_HasCaitlyn><status>Caitlyn:</status> Grant allies @AS*100@% Attack Speed</ShowIf.TFT17_DRX_HasCaitlyn><ShowIfNot.TFT17_DRX_HasCaitlyn><TFTGuildInactive>Caitlyn: Grant Attack Speed</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasCaitlyn><br><ShowIf.TFT17_DRX_HasAkali><status>Akali:</status> Allies gain <TFTKeyword>Precision</TFTKeyword></ShowIf.TFT17_DRX_HasAkali><ShowIfNot.TFT17_DRX_HasAkali><TFTGuildInactive>Akali: Allies gain Precision</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAkali><br><ShowIf.TFT17_DRX_HasMaokai><status>Maokai:</status> Allies heal @Heal*100@% max Health</ShowIf.TFT17_DRX_HasMaokai><ShowIfNot.TFT17_DRX_HasMaokai><TFTGuildInactive>Maokai: Heal allies</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasMaokai><br><ShowIf.TFT17_DRX_HasKindred><status>Kindred:</status> Shield the strongest Tank for <TFTBonus>@ShieldValue@</TFTBonus></ShowIf.TFT17_DRX_HasKindred><ShowIfNot.TFT17_DRX_HasKindred><TFTGuildInactive>Kindred: Shield an ally</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasKindred><br><ShowIf.TFT17_DRX_HasEmblem><status>Emblem:</status> Allies deal @BonusTrueDamage*100@% stacking bonus true damage</ShowIf.TFT17_DRX_HasEmblem><ShowIfNot.TFT17_DRX_HasEmblem><TFTGuildInactive>Emblem: Deal bonus true damage</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasEmblem>",
   "tiers": [
-    {
-      "breakpoint": 2,
-      "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:N.O.V.A.:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
-      ]
-    },
-    {
-      "breakpoint": 5,
-      "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:N.O.V.A.:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
-      ]
-    }
-  ]
+
+  ],
+  "rawVariables": [{ "name": "AS", "value": "0.2" }, { "name": "AS", "value": "0.2" }, { "name": "BonusTrueDamage", "value": "0.1" }, { "name": "BonusTrueDamage", "value": "0.1" }, { "name": "Heal", "value": "0.12" }, { "name": "Heal", "value": "0.12" }, { "name": "ShieldValue", "value": "800" }, { "name": "ShieldValue", "value": "800" }, { "name": "ShredAndSunder", "value": "0.3" }, { "name": "ShredAndSunder", "value": "0.3" }, { "name": "TeamAttackDelay", "value": "6" }, { "name": "TeamAttackDelay", "value": "6" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 2", "No executable effects mapped for breakpoint 5", "Unmapped trait variable: AS", "Unmapped trait variable: BonusTrueDamage", "Unmapped trait variable: Heal", "Unmapped trait variable: ShieldValue", "Unmapped trait variable: ShredAndSunder", "Unmapped trait variable: TeamAttackDelay", "Trait has no mapped executable effects"]
 }

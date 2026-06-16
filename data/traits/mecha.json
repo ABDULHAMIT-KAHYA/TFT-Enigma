@@ -1,27 +1,38 @@
 {
   "name": "Mecha",
+  "displayName": "Mecha",
   "breakpoints": [3, 4, 6],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Mecha",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Innate: Mecha units can transform into their Ultimate form, upgrading their ability and gaining @TransformedPercentHealth*100@% Health. Transformed Mechas take up two team slots and count twice for the Mecha trait.<br><br><row>(@MinUnits@) Energy Cells: Mechas gain @AP@%&nbsp;%i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Overclocked Cells: Increased to @AP@%&nbsp;%i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Precision Engineering: +@TeamSize@ max team size</row><br><br><rules>Use the Mecha-Former item to toggle the forms of your Mecha units</rules>",
+  "tooltip": "Innate: Mecha units can transform into their Ultimate form, upgrading their ability and gaining @TransformedPercentHealth*100@% Health. Transformed Mechas take up two team slots and count twice for the Mecha trait.<br><br><row>(@MinUnits@) Energy Cells: Mechas gain @AP@%&nbsp;%i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Overclocked Cells: Increased to @AP@%&nbsp;%i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Precision Engineering: +@TeamSize@ max team size</row><br><br><rules>Use the Mecha-Former item to toggle the forms of your Mecha units</rules>",
   "tiers": [
     {
       "breakpoint": 3,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Mecha:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Mecha:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Mecha:AP:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Mecha:AD:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 4,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Mecha:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Mecha:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Mecha:AP:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Mecha:AD:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 6,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Mecha:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Mecha:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Mecha:AP:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Mecha:AD:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     }
-  ]
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.25" }, { "name": "AD", "value": "0.45" }, { "name": "AD", "value": "0.35" }, { "name": "AP", "value": "25" }, { "name": "AP", "value": "45" }, { "name": "AP", "value": "35" }, { "name": "TeamSize", "value": "1" }, { "name": "TeamSize", "value": "1" }, { "name": "TeamSize", "value": "1" }, { "name": "TransformedPercentHealth", "value": "0.4" }, { "name": "TransformedPercentHealth", "value": "0.4" }, { "name": "TransformedPercentHealth", "value": "0.4" }],
+  "importWarnings": ["Unmapped trait variable: TeamSize", "Unmapped trait variable: TransformedPercentHealth"]
 }

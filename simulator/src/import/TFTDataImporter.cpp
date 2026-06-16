@@ -7,6 +7,7 @@
 #include <cmath>
 #include <filesystem>
 #include <fstream>
+#include <map>
 #include <sstream>
 #include <stdexcept>
 #include <string>
@@ -692,6 +693,184 @@ static bool tryMapVariableToStatEffect(std::string_view varName,
     return false;
 }
 
+struct TraitStatVariableMapping
+{
+    std::string affectedStat;
+    std::string modifierType;
+    double value = 0.0;
+};
+
+static std::string compactLowerKey(std::string_view s)
+{
+    std::string out;
+    out.reserve(s.size());
+    for (char c : s)
+    {
+        if (std::isalnum(static_cast<unsigned char>(c)))
+        {
+            out.push_back(static_cast<char>(std::tolower(static_cast<unsigned char>(c))));
+        }
+    }
+    return out;
+}
+
+static bool isBlockedTeamwideTraitText(const std::string& lowerDescription)
+{
+    return containsAny(lowerDescription, {
+        "empowered hex",
+        "adjacent",
+        "nearby",
+        "tank",
+        "strongest",
+        "chosen",
+        "marked",
+        "when ",
+        "while ",
+        "after ",
+        "per "
+    });
+}
+
+static bool traitDescriptionClearlyTeamwide(std::string_view variableName, const std::string& description)
+{
+    const std::string lower = toLowerText(description);
+    if (isBlockedTeamwideTraitText(lower))
+    {
+        return false;
+    }
+
+    const std::string marker = "@" + std::string(variableName);
+    const std::string lowerMarker = toLowerText(marker);
+    return lower.find("your team gains " + lowerMarker) != std::string::npos ||
+           lower.find("all allies gain " + lowerMarker) != std::string::npos ||
+           lower.find("all units gain " + lowerMarker) != std::string::npos ||
+           lower.find("allies gain " + lowerMarker) != std::string::npos;
+}
+
+static bool descriptionMentions(std::string description, std::string_view needle)
+{
+    description = toLowerText(std::move(description));
+    return description.find(needle) != std::string::npos;
+}
+
+static void pushTraitStatMapping(std::vector<TraitStatVariableMapping>& out,
+                                 std::string affectedStat,
+                                 std::string modifierType,
+                                 double value)
+{
+    out.push_back(TraitStatVariableMapping{ std::move(affectedStat), std::move(modifierType), value });
+}
+
+static bool tryMapTraitStatVariable(std::string_view varName,
+                                    double value,
+                                    const std::string& description,
+                                    std::vector<TraitStatVariableMapping>& out,
+                                    std::string& effectTypeOut)
+{
+    const std::string v = compactLowerKey(varName);
+    out.clear();
+
+    if (v == "attackspeedpercent" || v == "attackspeed" || v == "teamwideas")
+    {
+        pushTraitStatMapping(out, "AttackSpeed", "Percent", value > StatPercentThreshold ? (value / PercentScale) : value);
+    }
+    else if (v == "ad" || v == "bonusad" || v == "bonusdamage" || v == "damageincrease")
+    {
+        pushTraitStatMapping(out, "AttackDamage", "Percent", value > StatPercentThreshold ? (value / PercentScale) : value);
+    }
+    else if (v == "ap")
+    {
+        pushTraitStatMapping(out, "AbilityPower", "Flat", value);
+    }
+    else if (v == "bonusoffensivestat" || v == "bonusoffensivestats")
+    {
+        const double normalized = value > StatPercentThreshold ? (value / PercentScale) : value;
+        pushTraitStatMapping(out, "AttackDamage", "Percent", normalized);
+        pushTraitStatMapping(out, "AbilityPower", "Flat", normalized * PercentScale);
+    }
+    else if (v == "bonushealth")
+    {
+        pushTraitStatMapping(out, "MaxHp", value > StatPercentThreshold ? "Flat" : "Percent", value);
+    }
+    else if (v == "healthbonus" || v == "maxhealth" || v == "maxhp" || v == "hp" || v == "health")
+    {
+        pushTraitStatMapping(out, "MaxHp", "Percent", value > StatPercentThreshold ? (value / PercentScale) : value);
+    }
+    else if (v == "omnivamp")
+    {
+        pushTraitStatMapping(out, "Omnivamp", "Flat", value > StatPercentThreshold ? (value / PercentScale) : value);
+    }
+    else if (v == "critchance")
+    {
+        pushTraitStatMapping(out, "CritChance", "Flat", value > StatPercentThreshold ? (value / PercentScale) : value);
+    }
+    else if (v == "critdamage")
+    {
+        pushTraitStatMapping(out, "CritDamage", "Flat", value > StatPercentThreshold ? (value / PercentScale) : value);
+    }
+    else if (v == "durability" || v == "damagereductionpct" || v == "enhanceddurability" || v == "damagereduction")
+    {
+        pushTraitStatMapping(out, "DamageReduction", "Flat", value > StatPercentThreshold ? (value / PercentScale) : value);
+    }
+    else if (v == "percentdamageincrease" || v == "damageamp")
+    {
+        pushTraitStatMapping(out, "DamageAmplification", "Flat", value > StatPercentThreshold ? (value / PercentScale) : value);
+    }
+    else if (v == "bonusarmor" || v == "armor")
+    {
+        pushTraitStatMapping(out, "Armor", "Flat", value);
+    }
+    else if (v == "bonusmr" || v == "mr" || v == "magicresist")
+    {
+        pushTraitStatMapping(out, "MagicResist", "Flat", value);
+    }
+    else if (v == "teamwideresists" || v == "resistances")
+    {
+        pushTraitStatMapping(out, "Armor", "Flat", value);
+        pushTraitStatMapping(out, "MagicResist", "Flat", value);
+    }
+    else if (v == "pctresists")
+    {
+        const double normalized = value > StatPercentThreshold ? (value / PercentScale) : value;
+        pushTraitStatMapping(out, "Armor", "Percent", -normalized);
+        pushTraitStatMapping(out, "MagicResist", "Percent", -normalized);
+    }
+    else if (v == "teamwidebonus")
+    {
+        const double normalized = value > StatPercentThreshold ? (value / PercentScale) : value;
+        if (descriptionMentions(description, "omnivamp"))
+        {
+            pushTraitStatMapping(out, "Omnivamp", "Flat", normalized);
+        }
+        else if (descriptionMentions(description, "health"))
+        {
+            pushTraitStatMapping(out, "MaxHp", "Percent", normalized);
+        }
+        else if (descriptionMentions(description, "attack speed"))
+        {
+            pushTraitStatMapping(out, "AttackSpeed", "Percent", normalized);
+        }
+        else if (descriptionMentions(description, "armor") || descriptionMentions(description, "magic resist"))
+        {
+            pushTraitStatMapping(out, "Armor", "Flat", value);
+            pushTraitStatMapping(out, "MagicResist", "Flat", value);
+        }
+        else
+        {
+            return false;
+        }
+    }
+    else
+    {
+        return false;
+    }
+
+    effectTypeOut = traitDescriptionClearlyTeamwide(varName, description)
+        ? "ApplyStatusToAllies"
+        : "ApplyStatusToTraitUnits";
+    return true;
+}
+
 static void appendStatusEffectJson(std::ostringstream& ss,
                                   std::string_view effectName,
                                   std::string_view affectedStat,
@@ -713,7 +892,19 @@ static void appendStatusEffectJson(std::ostringstream& ss,
        << " }";
 }
 
-static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj, const std::string& name, const std::vector<int>& breakpoints)
+struct TraitVariantMetadata
+{
+    bool isVariant = false;
+    std::string variantGroup{};
+    std::string variantParentSourceId{};
+    std::string variantSelectionKey{};
+};
+
+static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj,
+                                                   const std::string& name,
+                                                   const std::string& displayName,
+                                                   const std::vector<int>& breakpoints,
+                                                   const TraitVariantMetadata& variantMetadata)
 {
     std::ostringstream ss;
     const std::string sourceId = getString(traitObj, "apiName", name);
@@ -724,6 +915,7 @@ static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj, co
 
     ss << "{\n";
     ss << "  \"name\": " << jsonString(name) << ",\n";
+    ss << "  \"displayName\": " << jsonString(displayName) << ",\n";
     ss << "  \"breakpoints\": [";
     for (std::size_t i = 0; i < breakpoints.size(); ++i)
     {
@@ -733,6 +925,10 @@ static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj, co
     ss << "],\n";
     ss << "  \"isPlaceholder\": true,\n";
     ss << "  \"sourceId\": " << jsonString(sourceId) << ",\n";
+    ss << "  \"isVariant\": " << (variantMetadata.isVariant ? "true" : "false") << ",\n";
+    ss << "  \"variantGroup\": " << jsonString(variantMetadata.variantGroup) << ",\n";
+    ss << "  \"variantParentSourceId\": " << jsonString(variantMetadata.variantParentSourceId) << ",\n";
+    ss << "  \"variantSelectionKey\": " << jsonString(variantMetadata.variantSelectionKey) << ",\n";
     ss << "  \"description\": " << jsonString(description) << ",\n";
     ss << "  \"tooltip\": " << jsonString(description) << ",\n";
 
@@ -752,32 +948,63 @@ static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj, co
                 continue;
             }
 
-            std::vector<std::tuple<std::string, std::string, double>> mapped;
+            std::vector<std::tuple<std::string, std::string, double, std::string, std::string>> mapped;
+            auto processTraitVariable = [&](const std::string& k, const JsonValue& v)
+            {
+                allRawVariables.emplace_back(k, jsonValueSummary(v));
+                if (!v.isNumber())
+                {
+                    importWarnings.push_back("Unmapped non-numeric trait variable: " + k);
+                    return;
+                }
+                std::vector<TraitStatVariableMapping> statMappings;
+                std::string effectType;
+                if (!tryMapTraitStatVariable(k, v.asNumber(), description, statMappings, effectType))
+                {
+                    importWarnings.push_back("Unmapped trait variable: " + k);
+                    return;
+                }
+                bool emittedAny = false;
+                for (TraitStatVariableMapping& statMapping : statMappings)
+                {
+                    if (std::abs(statMapping.value) <= VerySmallValueEpsilon)
+                    {
+                        continue;
+                    }
+                    mapped.emplace_back(effectType,
+                                        std::move(statMapping.affectedStat),
+                                        statMapping.value,
+                                        std::move(statMapping.modifierType),
+                                        k);
+                    emittedAny = true;
+                }
+                if (!emittedAny)
+                {
+                    importWarnings.push_back("Ignored zero trait variable: " + k);
+                    return;
+                }
+            };
+
+            std::vector<std::string> seenVariables;
             if (hasKeyObj(e, "variables") && e.at("variables").isObject())
             {
                 for (const auto& [k, v] : e.at("variables").asObject())
                 {
-                    allRawVariables.emplace_back(k, jsonValueSummary(v));
-                    if (!v.isNumber())
-                    {
-                        importWarnings.push_back("Unmapped non-numeric trait variable: " + k);
-                        continue;
-                    }
-                    std::string stat;
-                    std::string mod;
-                    double outVal = 0.0;
-                    if (!tryMapVariableToStatEffect(k, v.asNumber(), stat, mod, outVal))
-                    {
-                        importWarnings.push_back("Unmapped trait variable: " + k);
-                        continue;
-                    }
-                    if (std::abs(outVal) <= VerySmallValueEpsilon)
-                    {
-                        importWarnings.push_back("Ignored zero trait variable: " + k);
-                        continue;
-                    }
-                    mapped.emplace_back(std::move(stat), std::move(mod), outVal);
+                    seenVariables.push_back(k);
+                    processTraitVariable(k, v);
                 }
+            }
+            for (const auto& [k, v] : e.asObject())
+            {
+                if (k == "minUnits" || k == "maxUnits" || k == "style" || k == "variables")
+                {
+                    continue;
+                }
+                if (std::find(seenVariables.begin(), seenVariables.end(), k) != seenVariables.end())
+                {
+                    continue;
+                }
+                processTraitVariable(k, v);
             }
 
             if (mapped.empty())
@@ -794,15 +1021,20 @@ static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj, co
             ss << "      \"breakpoint\": " << bp << ",\n";
             ss << "      \"effects\": [\n";
 
+            std::sort(mapped.begin(), mapped.end(), [](const auto& a, const auto& b) {
+                return std::tie(std::get<0>(a), std::get<1>(a), std::get<3>(a), std::get<4>(a), std::get<2>(a)) <
+                       std::tie(std::get<0>(b), std::get<1>(b), std::get<3>(b), std::get<4>(b), std::get<2>(b));
+            });
+
             bool firstEffect = true;
-            for (const auto& [stat, mod, val] : mapped)
+            for (const auto& [effectType, stat, val, mod, sourceVar] : mapped)
             {
                 if (!firstEffect) ss << ",\n";
                 firstEffect = false;
 
-                ss << "        { \"hook\": \"OnCombatStart\", \"type\": \"ApplyStatusToTraitUnits\", \"statusEffect\": ";
+                ss << "        { \"hook\": \"OnCombatStart\", \"type\": " << jsonString(effectType) << ", \"statusEffect\": ";
                 std::ostringstream se;
-                appendStatusEffectJson(se, std::string("Trait:") + name + ":" + stat, stat, mod, val);
+                appendStatusEffectJson(se, std::string("Trait:") + displayName + ":" + sourceVar + ":" + stat, stat, mod, val);
                 ss << se.str();
                 ss << " }";
             }
@@ -831,7 +1063,17 @@ static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj, co
     appendStringArrayJson(ss, importWarnings);
     ss << "\n";
     ss << "}\n";
-    return ss.str();
+    std::string out = ss.str();
+    if (mappedAny)
+    {
+        const std::string placeholderTrue = "\"isPlaceholder\": true";
+        const std::size_t pos = out.find(placeholderTrue);
+        if (pos != std::string::npos)
+        {
+            out.replace(pos, placeholderTrue.size(), "\"isPlaceholder\": false");
+        }
+    }
+    return out;
 }
 
 static std::string writeItemNormalizedFromCdragon(const JsonValue& itemObj, const std::string& name)
@@ -990,6 +1232,232 @@ bool TFTDataImporter::downloadToFile(const std::string& url, const std::string& 
     return std::filesystem::exists(outFilePath);
 }
 
+static const JsonValue* findSetObjectForImport(const JsonValue& root, int setNumber)
+{
+    if (setNumber > 0 && hasKeyObj(root, "sets") && root.at("sets").isObject())
+    {
+        const auto& sets = root.at("sets").asObject();
+        const std::string key = std::to_string(setNumber);
+        auto it = sets.find(key);
+        if (it != sets.end() && it->second.isObject())
+        {
+            return &it->second;
+        }
+    }
+
+    if (hasKeyObj(root, "setData") && root.at("setData").isArray())
+    {
+        for (const JsonValue& e : root.at("setData").asArray())
+        {
+            if (!e.isObject())
+            {
+                continue;
+            }
+            const int n = static_cast<int>(getNumber(e, "number", getNumber(e, "setNumber", 0)));
+            if (n == setNumber)
+            {
+                return &e;
+            }
+        }
+    }
+
+    return nullptr;
+}
+
+static const JsonValue* findTraitsArrayForImport(const JsonValue& root, const JsonValue* setObj)
+{
+    if (setObj && setObj->isObject() && hasKeyObj(*setObj, "traits"))
+    {
+        return &setObj->at("traits");
+    }
+    if (hasKeyObj(root, "traits"))
+    {
+        return &root.at("traits");
+    }
+    return nullptr;
+}
+
+static std::vector<int> collectTraitBreakpoints(const JsonValue& traitObj)
+{
+    std::vector<int> breakpoints;
+    if (hasKeyObj(traitObj, "effects") && traitObj.at("effects").isArray())
+    {
+        for (const JsonValue& e : traitObj.at("effects").asArray())
+        {
+            if (!e.isObject())
+            {
+                continue;
+            }
+            const int bp = static_cast<int>(getNumber(e, "minUnits", 0));
+            if (bp > 0)
+            {
+                breakpoints.push_back(bp);
+            }
+        }
+    }
+    if (breakpoints.empty())
+    {
+        breakpoints = { 1 };
+    }
+    std::sort(breakpoints.begin(), breakpoints.end());
+    breakpoints.erase(std::unique(breakpoints.begin(), breakpoints.end()), breakpoints.end());
+    return breakpoints;
+}
+
+static int writeNormalizedTraits(const JsonValue& traits,
+                                 const std::filesystem::path& traitsDir,
+                                 std::ostream& out)
+{
+    std::filesystem::create_directories(traitsDir);
+    for (const auto& entry : std::filesystem::directory_iterator(traitsDir))
+    {
+        if (entry.is_regular_file() && entry.path().extension() == ".json")
+        {
+            std::filesystem::remove(entry.path());
+        }
+    }
+
+    int count = 0;
+    if (!traits.isArray())
+    {
+        return count;
+        }
+
+    std::map<std::string, int> displayNameCounts;
+    std::map<std::string, std::string> displayNameParentSourceIds;
+    for (const JsonValue& t : traits.asArray())
+    {
+        if (!t.isObject())
+        {
+            continue;
+        }
+        const std::string displayName = getString(t, "name", getString(t, "displayName", ""));
+        if (!displayName.empty())
+        {
+            const std::string displayKey = toSnakeLower(displayName);
+            const std::string sourceId = getString(t, "apiName", displayName);
+            const std::string sourceKey = toSnakeLower(sourceId);
+            displayNameCounts[displayKey] += 1;
+            if (displayNameParentSourceIds[displayKey].empty())
+            {
+                displayNameParentSourceIds[displayKey] = sourceId;
+            }
+            const std::string suffix = "_" + displayKey;
+            if (sourceKey == displayKey ||
+                (sourceKey.size() >= suffix.size() &&
+                 sourceKey.compare(sourceKey.size() - suffix.size(), suffix.size(), suffix) == 0))
+            {
+                displayNameParentSourceIds[displayKey] = sourceId;
+            }
+        }
+    }
+
+    auto runtimeTraitName = [&](const JsonValue& t, const std::string& displayName) {
+        const std::string sourceId = getString(t, "apiName", displayName);
+        const std::string displayKey = toSnakeLower(displayName);
+        const std::string sourceKey = toSnakeLower(sourceId);
+        if (displayNameCounts[displayKey] <= 1)
+        {
+            return displayName;
+        }
+        if (sourceKey == displayKey || sourceKey.size() >= displayKey.size() + 1)
+        {
+            const std::string suffix = "_" + displayKey;
+            if (sourceKey.size() >= suffix.size() &&
+                sourceKey.compare(sourceKey.size() - suffix.size(), suffix.size(), suffix) == 0)
+            {
+                return displayName;
+            }
+        }
+        return sourceId.empty() ? displayName : sourceId;
+    };
+
+    auto variantMetadata = [&](const JsonValue& t, const std::string& displayName, const std::string& runtimeName) {
+        TraitVariantMetadata metadata{};
+        const std::string displayKey = toSnakeLower(displayName);
+        if (displayNameCounts[displayKey] <= 1)
+        {
+            return metadata;
+        }
+
+        const std::string sourceId = getString(t, "apiName", displayName);
+        metadata.variantGroup = displayName;
+        metadata.variantParentSourceId = displayNameParentSourceIds[displayKey];
+        metadata.isVariant = runtimeName != displayName || sourceId != metadata.variantParentSourceId;
+
+        if (metadata.isVariant)
+        {
+            const std::string prefix = metadata.variantParentSourceId + "_";
+            if (!metadata.variantParentSourceId.empty() &&
+                sourceId.size() > prefix.size() &&
+                sourceId.compare(0, prefix.size(), prefix) == 0)
+            {
+                metadata.variantSelectionKey = sourceId.substr(prefix.size());
+            }
+            else
+            {
+                metadata.variantSelectionKey = sourceId.empty() ? runtimeName : sourceId;
+            }
+        }
+        return metadata;
+    };
+
+    for (const JsonValue& t : traits.asArray())
+    {
+        if (!t.isObject())
+        {
+            continue;
+        }
+        const std::string displayName = getString(t, "name", getString(t, "displayName", ""));
+        if (displayName.empty())
+        {
+            continue;
+        }
+        const std::string runtimeName = runtimeTraitName(t, displayName);
+        const TraitVariantMetadata metadata = variantMetadata(t, displayName, runtimeName);
+
+        writeStringToFile(
+            traitsDir / (safeFileName(toSnakeLower(runtimeName)) + ".json"),
+            writeTraitNormalizedFromCdragon(t, runtimeName, displayName, collectTraitBreakpoints(t), metadata));
+        count += 1;
+    }
+
+    out << "Traits Imported: " << count << "\n";
+    return count;
+}
+
+TFTDataImporter::ImportResult TFTDataImporter::importTraitsFromCachedTft(const std::string& outputDataRoot, std::ostream& out)
+{
+    ImportResult result{};
+    const std::filesystem::path cachePath =
+        std::filesystem::path(outputDataRoot) / "_import_cache" / "cdragon_tft_en_us.json";
+
+    if (!std::filesystem::exists(cachePath))
+    {
+        out << "ERROR: cached CommunityDragon TFT dataset not found: " << cachePath.string() << "\n";
+        return result;
+    }
+
+    const JsonValue root = parseJson(readFileToString(cachePath));
+    const int setNumber = detectCurrentSet(root);
+    result.detectedSet = setNumber;
+    const JsonValue* setObj = findSetObjectForImport(root, setNumber);
+    const JsonValue* traits = findTraitsArrayForImport(root, setObj);
+    if (!traits || !traits->isArray())
+    {
+        out << "ERROR: cached CommunityDragon TFT dataset has no trait array for detected set.\n";
+        return result;
+    }
+
+    out << "\n=== TFT CACHED TRAIT IMPORT REPORT ===\n\n";
+    out << "Current Set Detected: Set " << (setNumber > 0 ? setNumber : 0) << "\n";
+    out << "Cache: " << cachePath.string() << "\n";
+
+    result.traits = writeNormalizedTraits(*traits, std::filesystem::path(outputDataRoot) / "traits", out);
+    out << "PASS: Trait parsing\n\n";
+    return result;
+}
+
 TFTDataImporter::ImportResult TFTDataImporter::importLiveTft(const std::string& outputDataRoot, std::ostream& out)
 {
     ImportResult result{};
@@ -1064,31 +1532,7 @@ TFTDataImporter::ImportResult TFTDataImporter::importLiveTft(const std::string& 
 
     if (traits && traits->isArray())
     {
-        for (const JsonValue& t : traits->asArray())
-        {
-            if (!t.isObject()) continue;
-            const std::string name = getString(t, "name", getString(t, "displayName", ""));
-            if (name.empty()) continue;
-
-            std::vector<int> breakpoints;
-            if (hasKeyObj(t, "effects") && t.at("effects").isArray())
-            {
-                for (const JsonValue& e : t.at("effects").asArray())
-                {
-                    if (!e.isObject()) continue;
-                    const int bp = static_cast<int>(getNumber(e, "minUnits", 0));
-                    if (bp > 0) breakpoints.push_back(bp);
-                }
-            }
-            if (breakpoints.empty()) breakpoints = { 1 };
-            std::sort(breakpoints.begin(), breakpoints.end());
-            breakpoints.erase(std::unique(breakpoints.begin(), breakpoints.end()), breakpoints.end());
-
-            writeStringToFile(
-                std::filesystem::path(outputDataRoot) / "traits" / (safeFileName(toSnakeLower(name)) + ".json"),
-                writeTraitNormalizedFromCdragon(t, name, breakpoints));
-            result.traits += 1;
-        }
+        result.traits = writeNormalizedTraits(*traits, std::filesystem::path(outputDataRoot) / "traits", out);
     }
 
     if (items && items->isArray())

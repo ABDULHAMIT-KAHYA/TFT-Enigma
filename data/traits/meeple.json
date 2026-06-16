@@ -1,30 +1,41 @@
 {
   "name": "Meeple",
+  "displayName": "Meeple",
   "breakpoints": [3, 5, 7, 10],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Astronaut",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Meeple attract Meeps that empower Meeple abilities in meepy ways. They also gain bonus Health.<br><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%. Create a Cloning Slot on your bench. Gain gold and a 1-star copy of the champion placed there when cloning completes.</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%. SUMMON THE FOUR MEEPLORDS!</row><br><br><rules>Cloning time = Champion cost</rules>",
+  "tooltip": "Meeple attract Meeps that empower Meeple abilities in meepy ways. They also gain bonus Health.<br><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%. Create a Cloning Slot on your bench. Gain gold and a 1-star copy of the champion placed there when cloning completes.</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%. SUMMON THE FOUR MEEPLORDS!</row><br><br><rules>Cloning time = Champion cost</rules>",
   "tiers": [
     {
       "breakpoint": 3,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Meeple:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Meeple:BonusHealth:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 5,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Meeple:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 400, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Meeple:BonusHealth:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 400, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 7,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Meeple:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 400, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Meeple:BonusHealth:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 400, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 10,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Meeple:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 500, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Meeple:BonusHealth:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 500, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     }
-  ]
+  ],
+  "rawVariables": [{ "name": "BonusHealth", "value": "100" }, { "name": "BonusHealth", "value": "400" }, { "name": "BonusHealth", "value": "400" }, { "name": "BonusHealth", "value": "500" }, { "name": "Meeps", "value": "2" }, { "name": "Meeps", "value": "3" }, { "name": "Meeps", "value": "4" }, { "name": "Meeps", "value": "6" }],
+  "importWarnings": ["Unmapped trait variable: Meeps"]
 }

@@ -1,7 +1,18 @@
 {
   "name": "Arbiter",
+  "displayName": "Arbiter",
   "breakpoints": [2, 3],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_ADMIN",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Scribe a unique divine law, allowing you to choose an effect to apply to Arbiters when a chosen cause occurs.<br><br><row>(@MinUnits@) Choose a cause and effect for your law</row><br><row>(@MinUnits@) Effects are stronger. </row>",
+  "tooltip": "Scribe a unique divine law, allowing you to choose an effect to apply to Arbiters when a chosen cause occurs.<br><br><row>(@MinUnits@) Choose a cause and effect for your law</row><br><row>(@MinUnits@) Effects are stronger. </row>",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [{ "name": "DamageInstances", "value": "10" }, { "name": "DamageInstances", "value": "10" }, { "name": "HealthThreshold", "value": "0.4" }, { "name": "HealthThreshold", "value": "0.4" }, { "name": "ManaToSpend", "value": "50" }, { "name": "ManaToSpend", "value": "50" }, { "name": "NumAttacks", "value": "3" }, { "name": "NumAttacks", "value": "3" }, { "name": "NumSeconds", "value": "4" }, { "name": "NumSeconds", "value": "4" }, { "name": "ShieldDuration", "value": "4" }, { "name": "ShieldDuration", "value": "4" }, { "name": "{fefec6fb}", "value": "1" }, { "name": "{fefec6fb}", "value": "1" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 2", "No executable effects mapped for breakpoint 3", "Unmapped trait variable: DamageInstances", "Unmapped trait variable: HealthThreshold", "Unmapped trait variable: ManaToSpend", "Unmapped trait variable: NumAttacks", "Unmapped trait variable: NumSeconds", "Unmapped trait variable: ShieldDuration", "Unmapped trait variable: {fefec6fb}", "Trait has no mapped executable effects"]
 }

@@ -1,7 +1,18 @@
 {
   "name": "Party Animal",
+  "displayName": "Party Animal",
   "breakpoints": [1],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_BlitzcrankUniqueTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Once per combat, after falling below @HealthThreshold*100@% percent Health, become untargetable and repair @PercentHealthHeal*100@% max Health per second. Upon reaching full Health, or when no other allies remain, return to combat. If fully healed, for the rest of combat Blitzcrank is in {{TFT17_SpaceGroove_TheGroove}} and Party Crasher's passive fires bolts four times as fast.",
+  "tooltip": "Once per combat, after falling below @HealthThreshold*100@% percent Health, become untargetable and repair @PercentHealthHeal*100@% max Health per second. Upon reaching full Health, or when no other allies remain, return to combat. If fully healed, for the rest of combat Blitzcrank is in {{TFT17_SpaceGroove_TheGroove}} and Party Crasher's passive fires bolts four times as fast.",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [{ "name": "HealthThreshold", "value": "0.45" }, { "name": "PercentHealthHeal", "value": "0.15" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 1", "Unmapped trait variable: HealthThreshold", "Unmapped trait variable: PercentHealthHeal", "Trait has no mapped executable effects"]
 }

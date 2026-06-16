@@ -226,6 +226,7 @@ static ContentMetadata parseMetadata(const JsonValue& obj)
 {
     ContentMetadata m{};
     m.sourceId = optionalString(obj, "sourceId", "");
+    m.displayName = optionalString(obj, "displayName", "");
     m.description = optionalString(obj, "description", "");
     m.tooltip = optionalString(obj, "tooltip", "");
     m.iconPath = optionalString(obj, "iconPath", "");
@@ -237,9 +238,13 @@ static ContentMetadata parseMetadata(const JsonValue& obj)
     m.damageMetadata = optionalString(obj, "damageMetadata", "");
     m.effectMetadata = optionalString(obj, "effectMetadata", "");
     m.itemCategory = optionalString(obj, "itemCategory", "");
+    m.variantGroup = optionalString(obj, "variantGroup", "");
+    m.variantParentSourceId = optionalString(obj, "variantParentSourceId", "");
+    m.variantSelectionKey = optionalString(obj, "variantSelectionKey", "");
     m.rawVariables = optionalRawVariables(obj);
     m.importWarnings = optionalStringArray(obj, "importWarnings");
     m.isPlaceholder = optionalBool(obj, "isPlaceholder", false);
+    m.isVariant = optionalBool(obj, "isVariant", false);
     return m;
 }
 
@@ -364,7 +369,12 @@ static TraitHook parseTraitHook(std::string_view s)
 static TraitEffectType parseTraitEffectType(std::string_view s)
 {
     if (s == "ApplyStatusToTraitUnits") return TraitEffectType::ApplyStatusToTraitUnits;
+    if (s == "ApplyStatusToAllies") return TraitEffectType::ApplyStatusToAllies;
+    if (s == "ApplyStatusToEnemies") return TraitEffectType::ApplyStatusToEnemies;
     if (s == "ApplyStatusToEnemyTeam") return TraitEffectType::ApplyStatusToEnemyTeam;
+    if (s == "Shield") return TraitEffectType::Shield;
+    if (s == "Heal") return TraitEffectType::Heal;
+    if (s == "DealDamage") return TraitEffectType::DealDamage;
     if (s == "StackStatusOnAttack") return TraitEffectType::StackStatusOnAttack;
     if (s == "ShieldOnCombatStart") return TraitEffectType::ShieldOnCombatStart;
     if (s == "ExecuteBelowHpPercent") return TraitEffectType::ExecuteBelowHpPercent;
@@ -589,7 +599,12 @@ static TraitDefinition parseTrait(const JsonValue& root)
                 {
                     te.statusEffect = parseStatusEffect(e.at("statusEffect"));
                 }
+                if (hasKey(e, "damageFormula"))
+                {
+                    te.damageFormula = parseDamageFormula(e.at("damageFormula"));
+                }
                 te.shieldAmount = optionalInt(e, "shieldAmount", 0);
+                te.healAmount = optionalInt(e, "healAmount", 0);
                 te.targetHpPercentThreshold = optionalFloat(e, "targetHpPercentThreshold", -1.0f);
                 te.maxStacks = optionalInt(e, "maxStacks", 0);
                 te.critChanceBonus = optionalFloat(e, "critChanceBonus", 0.0f);

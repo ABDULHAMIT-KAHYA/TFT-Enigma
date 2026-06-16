@@ -1,7 +1,18 @@
 {
   "name": "Conduit",
+  "displayName": "Conduit",
   "breakpoints": [2, 3, 4, 5],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_ManaTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Innate: Conduits gain @InnateManaGain*100@% additional Mana from all sources.<br><br>Your team gains Mana Regen, increased for Conduits.<br><br><expandRow>(@MinUnits@) @TeamManaRegen@ %i:TFTManaRegen% | @ChannelerManaRegen@ %i:TFTManaRegen%</expandRow><br><br>",
+  "tooltip": "Innate: Conduits gain @InnateManaGain*100@% additional Mana from all sources.<br><br>Your team gains Mana Regen, increased for Conduits.<br><br><expandRow>(@MinUnits@) @TeamManaRegen@ %i:TFTManaRegen% | @ChannelerManaRegen@ %i:TFTManaRegen%</expandRow><br><br>",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [{ "name": "ChannelerManaRegen", "value": "3" }, { "name": "ChannelerManaRegen", "value": "5" }, { "name": "ChannelerManaRegen", "value": "7" }, { "name": "ChannelerManaRegen", "value": "9" }, { "name": "InnateManaGain", "value": "0.2" }, { "name": "InnateManaGain", "value": "0.2" }, { "name": "InnateManaGain", "value": "0.2" }, { "name": "InnateManaGain", "value": "0.2" }, { "name": "TeamManaRegen", "value": "1" }, { "name": "TeamManaRegen", "value": "1" }, { "name": "TeamManaRegen", "value": "2" }, { "name": "TeamManaRegen", "value": "3" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 2", "No executable effects mapped for breakpoint 3", "No executable effects mapped for breakpoint 4", "No executable effects mapped for breakpoint 5", "Unmapped trait variable: ChannelerManaRegen", "Unmapped trait variable: InnateManaGain", "Unmapped trait variable: TeamManaRegen", "Trait has no mapped executable effects"]
 }

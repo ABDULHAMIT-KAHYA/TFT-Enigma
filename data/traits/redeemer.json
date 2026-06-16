@@ -1,7 +1,18 @@
 {
   "name": "Redeemer",
+  "displayName": "Redeemer",
   "breakpoints": [1],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_RhaastUniqueTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "<row>(@MinUnits@) For each non-unique trait you have active, your team gains @BonusOffensiveStat1*100@% Attack Speed, and @BonusDefensiveStat1@ Armor and Magic Resist.</row><br><br>Teamwide Attack Speed: @TFTUnitProperty.trait:TFT17_RhaastUnique_OffensiveStatToGain@% %i:scaleAS%<br>Teamwide Resists: @TFTUnitProperty.trait:TFT17_RhaastUnique_DefensiveStatToGain@ %i:scaleArmor%%i:scaleMR%",
+  "tooltip": "<row>(@MinUnits@) For each non-unique trait you have active, your team gains @BonusOffensiveStat1*100@% Attack Speed, and @BonusDefensiveStat1@ Armor and Magic Resist.</row><br><br>Teamwide Attack Speed: @TFTUnitProperty.trait:TFT17_RhaastUnique_OffensiveStatToGain@% %i:scaleAS%<br>Teamwide Resists: @TFTUnitProperty.trait:TFT17_RhaastUnique_DefensiveStatToGain@ %i:scaleArmor%%i:scaleMR%",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [{ "name": "BonusDefensiveStat1", "value": "2" }, { "name": "BonusDefensiveStat2", "value": "2" }, { "name": "BonusDefensiveStat3", "value": "2" }, { "name": "BonusOffensiveStat1", "value": "0.02" }, { "name": "BonusOffensiveStat2", "value": "0.02" }, { "name": "BonusOffensiveStat3", "value": "0.02" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 1", "Unmapped trait variable: BonusDefensiveStat1", "Unmapped trait variable: BonusDefensiveStat2", "Unmapped trait variable: BonusDefensiveStat3", "Unmapped trait variable: BonusOffensiveStat1", "Unmapped trait variable: BonusOffensiveStat2", "Unmapped trait variable: BonusOffensiveStat3", "Trait has no mapped executable effects"]
 }

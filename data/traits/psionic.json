@@ -1,7 +1,18 @@
 {
   "name": "Psionic",
+  "displayName": "Psionic",
   "breakpoints": [2, 4],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_PsyOps",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Gain Psionic items that can be equipped to any ally.<br><br><row>(@MinUnits@) Gain the @TFTUnitProperty.trait:TFT17_PsyOps_Item1@</row><br><row>(@MinUnits@) Gain the @TFTUnitProperty.trait:TFT17_PsyOps_Item2@, Psionic items gain extra effects on Psionic units</row><br><br><br>",
+  "tooltip": "Gain Psionic items that can be equipped to any ally.<br><br><row>(@MinUnits@) Gain the @TFTUnitProperty.trait:TFT17_PsyOps_Item1@</row><br><row>(@MinUnits@) Gain the @TFTUnitProperty.trait:TFT17_PsyOps_Item2@, Psionic items gain extra effects on Psionic units</row><br><br><br>",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [{ "name": "{1b889d1c}", "value": "null" }, { "name": "{1b889d1c}", "value": "50" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 2", "No executable effects mapped for breakpoint 4", "Unmapped non-numeric trait variable: {1b889d1c}", "Unmapped trait variable: {1b889d1c}", "Trait has no mapped executable effects"]
 }

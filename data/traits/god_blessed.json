@@ -1,7 +1,18 @@
 {
   "name": "God-Blessed",
+  "displayName": "God-Blessed",
   "breakpoints": [1],
+  "isPlaceholder": true,
+  "sourceId": "Set17_CarouselMarket_EmpoweredHexTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey1@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey2@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey3@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey4@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey5@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey6@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey7@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey8@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey9@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey10@<br>",
+  "tooltip": "@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey1@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey2@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey3@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey4@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey5@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey6@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey7@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey8@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey9@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey10@<br>",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [],
+  "importWarnings": ["Trait has no mapped executable effects"]
 }

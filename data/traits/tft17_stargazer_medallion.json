@@ -1,0 +1,18 @@
+{
+  "name": "TFT17_Stargazer_Medallion",
+  "displayName": "Stargazer",
+  "breakpoints": [3],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Stargazer_Medallion",
+  "isVariant": true,
+  "variantGroup": "Stargazer",
+  "variantParentSourceId": "TFT17_Stargazer",
+  "variantSelectionKey": "Medallion",
+  "description": "Stargazers chart a different constellation every game. This game: <TFTStargazer>The Medallion</TFTStargazer>.<br><br><row>(@MinUnits@) Allies in empowered hexes gain @Medallion_DA@% Damage Amp, which increases by @Medallion_IncreasePer3Star@% for each 3-star ally.</row><br><br>(Current&nbsp;Bonus:&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Medallion_Increase@% %i:scaleDA%)<br><br><rules>More hexes reveal at each player level</rules>",
+  "tooltip": "Stargazers chart a different constellation every game. This game: <TFTStargazer>The Medallion</TFTStargazer>.<br><br><row>(@MinUnits@) Allies in empowered hexes gain @Medallion_DA@% Damage Amp, which increases by @Medallion_IncreasePer3Star@% for each 3-star ally.</row><br><br>(Current&nbsp;Bonus:&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Medallion_Increase@% %i:scaleDA%)<br><br><rules>More hexes reveal at each player level</rules>",
+  "tiers": [
+
+  ],
+  "rawVariables": [{ "name": "Medallion_DA", "value": "15" }, { "name": "Medallion_IncreasePer3Star", "value": "5" }, { "name": "{37204635}", "value": "10" }, { "name": "{3d49cc86}", "value": "20" }, { "name": "{c32af02f}", "value": "0.05" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 3", "Unmapped trait variable: Medallion_DA", "Unmapped trait variable: Medallion_IncreasePer3Star", "Unmapped trait variable: {37204635}", "Unmapped trait variable: {3d49cc86}", "Unmapped trait variable: {c32af02f}", "Trait has no mapped executable effects"]
+}

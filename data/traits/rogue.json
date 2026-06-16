@@ -1,34 +1,45 @@
 {
   "name": "Rogue",
+  "displayName": "Rogue",
   "breakpoints": [2, 3, 4, 5],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_AssassinTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Rogues gain Attack Damage and Ability Power. The first time they fall below @HealthThreshold*100@% health, they slip into shadows. Enemies targeting them are redirected to a nearby unit, preferring Tanks.<br><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row>",
+  "tooltip": "Rogues gain Attack Damage and Ability Power. The first time they fall below @HealthThreshold*100@% health, they slip into shadows. Enemies targeting them are redirected to a nearby unit, preferring Tanks.<br><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row>",
   "tiers": [
     {
       "breakpoint": 2,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AP:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AD:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 3,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AP:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AD:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 4,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AP:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AD:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 5,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AP:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Rogue:AD:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     }
-  ]
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.12" }, { "name": "AD", "value": "0.25" }, { "name": "AD", "value": "0.4" }, { "name": "AD", "value": "0.55" }, { "name": "AP", "value": "12" }, { "name": "AP", "value": "25" }, { "name": "AP", "value": "40" }, { "name": "AP", "value": "55" }, { "name": "Duration", "value": "3" }, { "name": "Duration", "value": "3" }, { "name": "Duration", "value": "3" }, { "name": "Duration", "value": "3" }, { "name": "HealthThreshold", "value": "0.5" }, { "name": "HealthThreshold", "value": "0.5" }, { "name": "HealthThreshold", "value": "0.5" }, { "name": "HealthThreshold", "value": "0.5" }],
+  "importWarnings": ["Unmapped trait variable: Duration", "Unmapped trait variable: HealthThreshold"]
 }

@@ -1,30 +1,45 @@
 {
   "name": "Challenger",
+  "displayName": "Challenger",
   "breakpoints": [2, 3, 4, 5],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_ASTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Your team gains @TeamwideAS*100@% Attack Speed. Challengers gain bonus Attack Speed. When their target dies, Challengers dash to a new target and increase their Attack Speed bonus by @BurstPercent*100@% for @BurstDuration@ seconds.<br><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row>",
+  "tooltip": "Your team gains @TeamwideAS*100@% Attack Speed. Challengers gain bonus Attack Speed. When their target dies, Challengers dash to a new target and increase their Attack Speed bonus by @BurstPercent*100@% for @BurstDuration@ seconds.<br><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row>",
   "tiers": [
     {
       "breakpoint": 2,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Challenger:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Challenger:AttackSpeedPercent:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Challenger:TeamwideAS:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 3,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Challenger:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.28, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Challenger:AttackSpeedPercent:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.28, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Challenger:TeamwideAS:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 4,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Challenger:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.42, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Challenger:AttackSpeedPercent:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.42, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Challenger:TeamwideAS:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 5,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Challenger:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Challenger:AttackSpeedPercent:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Challenger:TeamwideAS:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     }
-  ]
+  ],
+  "rawVariables": [{ "name": "AttackSpeedPercent", "value": "0.55" }, { "name": "AttackSpeedPercent", "value": "0.15" }, { "name": "AttackSpeedPercent", "value": "0.28" }, { "name": "AttackSpeedPercent", "value": "0.42" }, { "name": "BurstDuration", "value": "2.5" }, { "name": "BurstDuration", "value": "2.5" }, { "name": "BurstDuration", "value": "2.5" }, { "name": "BurstDuration", "value": "2.5" }, { "name": "BurstPercent", "value": "0.5" }, { "name": "BurstPercent", "value": "0.5" }, { "name": "BurstPercent", "value": "0.5" }, { "name": "BurstPercent", "value": "0.5" }, { "name": "DamageReduction", "value": "null" }, { "name": "DamageReduction", "value": "null" }, { "name": "DamageReduction", "value": "null" }, { "name": "DamageReduction", "value": "null" }, { "name": "TeamwideAS", "value": "0.1" }, { "name": "TeamwideAS", "value": "0.1" }, { "name": "TeamwideAS", "value": "0.1" }, { "name": "TeamwideAS", "value": "0.1" }],
+  "importWarnings": ["Unmapped non-numeric trait variable: DamageReduction", "Unmapped trait variable: BurstDuration", "Unmapped trait variable: BurstPercent"]
 }

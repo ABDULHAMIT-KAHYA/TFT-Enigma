@@ -1,7 +1,23 @@
 {
   "name": "Galaxy Hunter",
+  "displayName": "Galaxy Hunter",
   "breakpoints": [1],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_ZedUniqueTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Zed is obtained from the Invader Zed augment.<br><br>While at least one clone is alive, Zed gains @BonusAD*100@% bonus Attack Damage.",
+  "tooltip": "Zed is obtained from the Invader Zed augment.<br><br>While at least one clone is alive, Zed gains @BonusAD*100@% bonus Attack Damage.",
   "tiers": [
-
-  ]
+    {
+      "breakpoint": 1,
+      "effects": [
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Galaxy Hunter:BonusAD:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+      ]
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAD", "value": "0.4" }],
+  "importWarnings": []
 }

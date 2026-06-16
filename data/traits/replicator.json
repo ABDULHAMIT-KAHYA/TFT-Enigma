@@ -1,7 +1,18 @@
 {
   "name": "Replicator",
+  "displayName": "Replicator",
   "breakpoints": [2, 4],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_APTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Replicator abilities occur a second time at reduced effectiveness.<br><br><expandRow>(@MinUnits@) @Effectiveness*100@% strength</expandRow>",
+  "tooltip": "Replicator abilities occur a second time at reduced effectiveness.<br><br><expandRow>(@MinUnits@) @Effectiveness*100@% strength</expandRow>",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [{ "name": "Effectiveness", "value": "0.22" }, { "name": "Effectiveness", "value": "0.45" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 2", "No executable effects mapped for breakpoint 4", "Unmapped trait variable: Effectiveness", "Trait has no mapped executable effects"]
 }

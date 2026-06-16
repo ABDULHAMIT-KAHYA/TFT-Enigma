@@ -1,27 +1,44 @@
 {
   "name": "Bastion",
+  "displayName": "Bastion",
   "breakpoints": [2, 4, 6],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_ResistTank",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Your team gains @TeamwideResists@ Armor and Magic Resist.<br><br>Bastions gain more, and the value doubles in the first @Duration@ seconds of combat.<br><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%</row><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%</row><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%; Non-Bastions gain an additional @EnhancedTeamwideArmor@ %i:scaleArmor%%i:scaleMR%.</row>",
+  "tooltip": "Your team gains @TeamwideResists@ Armor and Magic Resist.<br><br>Bastions gain more, and the value doubles in the first @Duration@ seconds of combat.<br><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%</row><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%</row><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%; Non-Bastions gain an additional @EnhancedTeamwideArmor@ %i:scaleArmor%%i:scaleMR%.</row>",
   "tiers": [
     {
       "breakpoint": 2,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bastion:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 16, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bastion:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 16, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToAllies", "statusEffect": { "name": "Trait:Bastion:TeamwideResists:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToAllies", "statusEffect": { "name": "Trait:Bastion:TeamwideResists:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bastion:BonusArmor:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 16, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bastion:BonusMR:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 16, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 4,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bastion:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bastion:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToAllies", "statusEffect": { "name": "Trait:Bastion:TeamwideResists:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToAllies", "statusEffect": { "name": "Trait:Bastion:TeamwideResists:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bastion:BonusArmor:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bastion:BonusMR:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 6,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bastion:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 60, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bastion:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 60, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToAllies", "statusEffect": { "name": "Trait:Bastion:TeamwideResists:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToAllies", "statusEffect": { "name": "Trait:Bastion:TeamwideResists:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bastion:BonusArmor:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 60, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bastion:BonusMR:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 60, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     }
-  ]
+  ],
+  "rawVariables": [{ "name": "BonusArmor", "value": "60" }, { "name": "BonusArmor", "value": "16" }, { "name": "BonusArmor", "value": "40" }, { "name": "BonusMR", "value": "60" }, { "name": "BonusMR", "value": "16" }, { "name": "BonusMR", "value": "40" }, { "name": "Duration", "value": "10" }, { "name": "Duration", "value": "10" }, { "name": "Duration", "value": "10" }, { "name": "EnhancedTeamwideArmor", "value": "20" }, { "name": "EnhancedTeamwideArmor", "value": "20" }, { "name": "EnhancedTeamwideArmor", "value": "20" }, { "name": "StatMultiplier", "value": "2" }, { "name": "StatMultiplier", "value": "2" }, { "name": "StatMultiplier", "value": "2" }, { "name": "TeamwideResists", "value": "15" }, { "name": "TeamwideResists", "value": "15" }, { "name": "TeamwideResists", "value": "15" }],
+  "importWarnings": ["Unmapped trait variable: Duration", "Unmapped trait variable: EnhancedTeamwideArmor", "Unmapped trait variable: StatMultiplier"]
 }

@@ -1,7 +1,24 @@
 {
   "name": "Eradicator",
+  "displayName": "Eradicator",
   "breakpoints": [1],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_JhinUniqueTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Enemies have @PctResists*100@% less Armor and Magic Resist.",
+  "tooltip": "Enemies have @PctResists*100@% less Armor and Magic Resist.",
   "tiers": [
-
-  ]
+    {
+      "breakpoint": 1,
+      "effects": [
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Eradicator:PctResists:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Percent", "value": -0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Eradicator:PctResists:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Percent", "value": -0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+      ]
+    }
+  ],
+  "rawVariables": [{ "name": "PctResists", "value": "0.1" }],
+  "importWarnings": []
 }

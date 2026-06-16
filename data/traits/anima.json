@@ -1,7 +1,18 @@
 {
   "name": "Anima",
+  "displayName": "Anima",
   "breakpoints": [3, 6],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_AnimaSquad",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "After losing a player combat, gain @TechPerCombat@ Tech, plus additional Tech equal to @TechPerLoss@ times the length of your loss streak. Additionally, gain @TechPerKill@ Tech per Anima takedown.<br><br>Each time Animas get @TechBreakpoint@ Tech, they prototype new Anima Weapons. You can take them, or save your Tech to get more powerful weapons next time.<br><br><row>(@MinUnits@) Start Researching! </row><br><row>(@MinUnits@) After each player combat, gain loot!</row><br><br><ShowIf.TFT17_AnimaSquad_IsDoubleUp><rules>Gain @PairsPartnerWinMultiplier*100@% Tech from losing if your partner wins a combat in Double Up.</rules></ShowIf.TFT17_AnimaSquad_IsDoubleUp>",
+  "tooltip": "After losing a player combat, gain @TechPerCombat@ Tech, plus additional Tech equal to @TechPerLoss@ times the length of your loss streak. Additionally, gain @TechPerKill@ Tech per Anima takedown.<br><br>Each time Animas get @TechBreakpoint@ Tech, they prototype new Anima Weapons. You can take them, or save your Tech to get more powerful weapons next time.<br><br><row>(@MinUnits@) Start Researching! </row><br><row>(@MinUnits@) After each player combat, gain loot!</row><br><br><ShowIf.TFT17_AnimaSquad_IsDoubleUp><rules>Gain @PairsPartnerWinMultiplier*100@% Tech from losing if your partner wins a combat in Double Up.</rules></ShowIf.TFT17_AnimaSquad_IsDoubleUp>",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [{ "name": "TechBreakpoint", "value": "100" }, { "name": "TechBreakpoint", "value": "100" }, { "name": "TechPerCombat", "value": "20" }, { "name": "TechPerCombat", "value": "20" }, { "name": "TechPerCombat_DU", "value": "20" }, { "name": "TechPerCombat_DU", "value": "20" }, { "name": "TechPerDeath_PVE", "value": "1" }, { "name": "TechPerDeath_PVE", "value": "1" }, { "name": "TechPerKill", "value": "2" }, { "name": "TechPerKill", "value": "2" }, { "name": "TechPerLoss", "value": "5" }, { "name": "TechPerLoss", "value": "5" }, { "name": "TechPerLoss_DU", "value": "5" }, { "name": "TechPerLoss_DU", "value": "5" }, { "name": "TechPerRound_PVE", "value": "20" }, { "name": "TechPerRound_PVE", "value": "20" }, { "name": "{18a09431}", "value": "0.85" }, { "name": "{18a09431}", "value": "0.85" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 3", "No executable effects mapped for breakpoint 6", "Unmapped trait variable: TechBreakpoint", "Unmapped trait variable: TechPerCombat", "Unmapped trait variable: TechPerCombat_DU", "Unmapped trait variable: TechPerDeath_PVE", "Unmapped trait variable: TechPerKill", "Unmapped trait variable: TechPerLoss", "Unmapped trait variable: TechPerLoss_DU", "Unmapped trait variable: TechPerRound_PVE", "Unmapped trait variable: {18a09431}", "Trait has no mapped executable effects"]
 }

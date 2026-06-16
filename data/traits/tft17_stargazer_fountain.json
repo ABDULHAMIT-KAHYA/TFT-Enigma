@@ -1,0 +1,18 @@
+{
+  "name": "TFT17_Stargazer_Fountain",
+  "displayName": "Stargazer",
+  "breakpoints": [3, 5],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Stargazer_Fountain",
+  "isVariant": true,
+  "variantGroup": "Stargazer",
+  "variantParentSourceId": "TFT17_Stargazer",
+  "variantSelectionKey": "Fountain",
+  "description": "Stargazers chart a different constellation every game. This game: <TFTStargazer>The Fountain</TFTStargazer>.<br><br>Allies in empowered hexes heal @Fountain_HealthRegen_Teamwide*100@% max Health every @Fountain_Interval@ seconds. Stargazers in empowered hexes heal an additional @Fountain_HealthRegen*100@% and gain stacking Attack Damage and Ability Power every @Fountain_Interval@ seconds.<br><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><br><rules>More hexes reveal at each player level</rules>",
+  "tooltip": "Stargazers chart a different constellation every game. This game: <TFTStargazer>The Fountain</TFTStargazer>.<br><br>Allies in empowered hexes heal @Fountain_HealthRegen_Teamwide*100@% max Health every @Fountain_Interval@ seconds. Stargazers in empowered hexes heal an additional @Fountain_HealthRegen*100@% and gain stacking Attack Damage and Ability Power every @Fountain_Interval@ seconds.<br><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><br><rules>More hexes reveal at each player level</rules>",
+  "tiers": [
+
+  ],
+  "rawVariables": [{ "name": "MaxStacks", "value": "null" }, { "name": "MaxStacks", "value": "null" }, { "name": "{13a2a786}", "value": "4" }, { "name": "{13a2a786}", "value": "9" }, { "name": "{8d19f5db}", "value": "2" }, { "name": "{8d19f5db}", "value": "2" }, { "name": "{d7e6d620}", "value": "0.01" }, { "name": "{d7e6d620}", "value": "0.01" }, { "name": "{f2840aed}", "value": "0.03" }, { "name": "{f2840aed}", "value": "0.03" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 3", "No executable effects mapped for breakpoint 5", "Unmapped non-numeric trait variable: MaxStacks", "Unmapped trait variable: {13a2a786}", "Unmapped trait variable: {8d19f5db}", "Unmapped trait variable: {d7e6d620}", "Unmapped trait variable: {f2840aed}", "Trait has no mapped executable effects"]
+}

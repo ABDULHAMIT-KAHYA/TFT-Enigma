@@ -11,8 +11,10 @@ struct TraitEffect
     TraitEffectType type = TraitEffectType::ApplyStatusToTraitUnits;
 
     StatusEffect statusEffect{};
+    DamageFormula damageFormula{};
 
     std::int32_t shieldAmount = 0;
+    std::int32_t healAmount = 0;
     float targetHpPercentThreshold = -1.0f;
     std::int32_t maxStacks = 0;
     float critChanceBonus = 0.0f;

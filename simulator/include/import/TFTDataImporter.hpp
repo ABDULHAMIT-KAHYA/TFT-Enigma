@@ -18,8 +18,8 @@ public:
     };
 
     ImportResult importLiveTft(const std::string& outputDataRoot, std::ostream& out);
+    ImportResult importTraitsFromCachedTft(const std::string& outputDataRoot, std::ostream& out);
 
 private:
     bool downloadToFile(const std::string& url, const std::string& outFilePath, std::ostream& out);
 };
-

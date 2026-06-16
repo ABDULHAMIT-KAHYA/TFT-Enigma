@@ -15,6 +15,7 @@ struct RawVariableMetadata
 struct ContentMetadata
 {
     std::string sourceId{};
+    std::string displayName{};
     std::string description{};
     std::string tooltip{};
     std::string iconPath{};
@@ -26,9 +27,13 @@ struct ContentMetadata
     std::string damageMetadata{};
     std::string effectMetadata{};
     std::string itemCategory{};
+    std::string variantGroup{};
+    std::string variantParentSourceId{};
+    std::string variantSelectionKey{};
     std::vector<RawVariableMetadata> rawVariables{};
     std::vector<std::string> importWarnings{};
     bool isPlaceholder = false;
+    bool isVariant = false;
 };
 
 enum class AbilityTrigger

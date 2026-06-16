@@ -1,7 +1,18 @@
 {
   "name": "Primordian",
+  "displayName": "Primordian",
   "breakpoints": [2, 3],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Primordian",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "<row>(@MinUnits@) Dealing damage spawns Swarmlings based on unique Primordian star level.</row><br><row>(@MinUnits@) Spawn @PercentMoreSwarmlings@% more Swarmlings! After each player combat, gain a random 1 or 2-cost champion. </row><br><br><rules>@DamageTakenPercentModifier*100@% of damage taken contributes to damage dealt.</rules>",
+  "tooltip": "<row>(@MinUnits@) Dealing damage spawns Swarmlings based on unique Primordian star level.</row><br><row>(@MinUnits@) Spawn @PercentMoreSwarmlings@% more Swarmlings! After each player combat, gain a random 1 or 2-cost champion. </row><br><br><rules>@DamageTakenPercentModifier*100@% of damage taken contributes to damage dealt.</rules>",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [{ "name": "DamageMultiplier", "value": "1" }, { "name": "DamageMultiplier", "value": "1.45" }, { "name": "DamageTakenPercentModifier", "value": "0.08" }, { "name": "DamageTakenPercentModifier", "value": "0.08" }, { "name": "PercentMoreSwarmlings", "value": "45" }, { "name": "PercentMoreSwarmlings", "value": "45" }, { "name": "{3ed71f24}", "value": "6" }, { "name": "{3ed71f24}", "value": "6" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 2", "No executable effects mapped for breakpoint 3", "Unmapped trait variable: DamageMultiplier", "Unmapped trait variable: DamageTakenPercentModifier", "Unmapped trait variable: PercentMoreSwarmlings", "Unmapped trait variable: {3ed71f24}", "Trait has no mapped executable effects"]
 }

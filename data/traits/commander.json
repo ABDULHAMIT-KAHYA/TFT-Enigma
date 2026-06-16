@@ -1,12 +1,18 @@
 {
   "name": "Commander",
+  "displayName": "Commander",
   "breakpoints": [1],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_SonaUniqueTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "(@MinUnits@) Sona gives you a random Command Mod every @RoundsPerMod@ rounds which allows you to alter the way an ally behaves during combat. Command Mods last @RoundsPerMod@ player combats even if they are not equipped.",
+  "tooltip": "(@MinUnits@) Sona gives you a random Command Mod every @RoundsPerMod@ rounds which allows you to alter the way an ally behaves during combat. Command Mods last @RoundsPerMod@ player combats even if they are not equipped.",
   "tiers": [
-    {
-      "breakpoint": 1,
-      "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Commander:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
-      ]
-    }
-  ]
+
+  ],
+  "rawVariables": [{ "name": "AS", "value": "0.15" }, { "name": "HealthRatio", "value": "0.15" }, { "name": "RoundsPerMod", "value": "2" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 1", "Unmapped trait variable: AS", "Unmapped trait variable: HealthRatio", "Unmapped trait variable: RoundsPerMod", "Trait has no mapped executable effects"]
 }

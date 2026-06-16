@@ -1,12 +1,23 @@
 {
   "name": "Dark Lady",
+  "displayName": "Dark Lady",
   "breakpoints": [1],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_MorganaUniqueTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Your team gains @Durability*100@% Durability, increased to @TransformedDurability*100@% when Morgana is in her Dark Form.",
+  "tooltip": "Your team gains @Durability*100@% Durability, increased to @TransformedDurability*100@% when Morgana is in her Dark Form.",
   "tiers": [
     {
       "breakpoint": 1,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Dark Lady:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.04, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Dark Lady:Durability:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.04, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     }
-  ]
+  ],
+  "rawVariables": [{ "name": "Durability", "value": "0.04" }, { "name": "{816175b9}", "value": "0.1" }],
+  "importWarnings": ["Unmapped trait variable: {816175b9}"]
 }

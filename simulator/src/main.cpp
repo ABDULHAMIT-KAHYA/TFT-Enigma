@@ -26,6 +26,7 @@ int main(int argc, char** argv)
     const std::uint32_t baseSeed = 1u;
     bool validate = false;
     bool importLive = false;
+    bool importCachedTraits = false;
     bool useMonteCarlo = false;
     bool mcDebug = false;
     int selfplay = 0;
@@ -40,6 +41,10 @@ int main(int argc, char** argv)
         else if (arg == "--import-live-tft")
         {
             importLive = true;
+        }
+        else if (arg == "--import-cached-traits")
+        {
+            importCachedTraits = true;
         }
         else if (arg == "--selfplay" && i + 1 < argc)
         {
@@ -70,6 +75,15 @@ int main(int argc, char** argv)
         std::cout << "Data root: " << dataRoot.string() << "\n";
         TFTDataImporter importer;
         importer.importLiveTft(dataRoot.string(), std::cout);
+        return 0;
+    }
+
+    if (importCachedTraits)
+    {
+        std::cout << "TFT cached trait import\n";
+        std::cout << "Data root: " << dataRoot.string() << "\n";
+        TFTDataImporter importer;
+        importer.importTraitsFromCachedTft(dataRoot.string(), std::cout);
         return 0;
     }
 

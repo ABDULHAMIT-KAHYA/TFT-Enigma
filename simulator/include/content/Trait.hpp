@@ -26,7 +26,12 @@ enum class TraitHook
 enum class TraitEffectType
 {
     ApplyStatusToTraitUnits,
+    ApplyStatusToAllies,
+    ApplyStatusToEnemies,
     ApplyStatusToEnemyTeam,
+    Shield,
+    Heal,
+    DealDamage,
     StackStatusOnAttack,
     ShieldOnCombatStart,
     ExecuteBelowHpPercent,

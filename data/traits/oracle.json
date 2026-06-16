@@ -1,7 +1,18 @@
 {
   "name": "Oracle",
+  "displayName": "Oracle",
   "breakpoints": [1],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_TahmKenchUniqueTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Every @Rounds@ rounds, Tahm Kench grants a reward!<br><br>Rounds Remaining: @TFTUnitProperty.trait:TFT17_TahmKench_RoundsRemaining@<br>Last Reward: @TFTUnitProperty.trait:TFT17_TahmKench_LastReward@",
+  "tooltip": "Every @Rounds@ rounds, Tahm Kench grants a reward!<br><br>Rounds Remaining: @TFTUnitProperty.trait:TFT17_TahmKench_RoundsRemaining@<br>Last Reward: @TFTUnitProperty.trait:TFT17_TahmKench_LastReward@",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [{ "name": "rounds", "value": "3" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 1", "Unmapped trait variable: rounds", "Trait has no mapped executable effects"]
 }

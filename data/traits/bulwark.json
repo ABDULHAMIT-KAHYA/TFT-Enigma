@@ -1,13 +1,23 @@
 {
   "name": "Bulwark",
+  "displayName": "Bulwark",
   "breakpoints": [1],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_ShenUniqueTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Summon a placeable relic. At the start of combat, it grants adjacent allies a @PercentHealthShield*100@% max Health shield and @AttackSpeed*100@% Attack Speed.",
+  "tooltip": "Summon a placeable relic. At the start of combat, it grants adjacent allies a @PercentHealthShield*100@% max Health shield and @AttackSpeed*100@% Attack Speed.",
   "tiers": [
     {
       "breakpoint": 1,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bulwark:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.6, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bulwark:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Bulwark:AttackSpeed:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     }
-  ]
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.1" }, { "name": "AttackSpeedDuration", "value": "60" }, { "name": "PercentHealthShield", "value": "0.1" }, { "name": "ShieldDuration", "value": "60" }],
+  "importWarnings": ["Unmapped trait variable: AttackSpeedDuration", "Unmapped trait variable: PercentHealthShield", "Unmapped trait variable: ShieldDuration"]
 }

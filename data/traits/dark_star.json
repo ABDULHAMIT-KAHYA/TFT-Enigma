@@ -1,7 +1,18 @@
 {
   "name": "Dark Star",
+  "displayName": "Dark Star",
   "breakpoints": [2, 4, 6, 9],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_DarkStar",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "<row>(@MinUnits@) Dark Stars create a black hole that consumes enemies at <ShowIf.TFT17_DarkStar_HasNeutronStar><TFTBonus>@TFTUnitProperty.trait:TFT17_Augment_DarkStar_NeutronStar_BonusExecutePercent*100@%</TFTBonus></ShowIf.TFT17_DarkStar_HasNeutronStar><ShowIfNot.TFT17_DarkStar_HasNeutronStar>@ExecuteHPPercent*100@%</ShowIfNot.TFT17_DarkStar_HasNeutronStar> max health.</row><br><row>(@MinUnits@) AND they gain @ADAP@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) AND the strongest Dark Star unit goes supermassive, gaining @SupermassivePercentBonus*100@% effectiveness from Dark Star, and creates 2 minor Black Holes.</row><br><row>(@MinUnits@) All Dark Stars are supermassive. At level 10, CONSUME EVERYONE. </row>",
+  "tooltip": "<row>(@MinUnits@) Dark Stars create a black hole that consumes enemies at <ShowIf.TFT17_DarkStar_HasNeutronStar><TFTBonus>@TFTUnitProperty.trait:TFT17_Augment_DarkStar_NeutronStar_BonusExecutePercent*100@%</TFTBonus></ShowIf.TFT17_DarkStar_HasNeutronStar><ShowIfNot.TFT17_DarkStar_HasNeutronStar>@ExecuteHPPercent*100@%</ShowIfNot.TFT17_DarkStar_HasNeutronStar> max health.</row><br><row>(@MinUnits@) AND they gain @ADAP@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) AND the strongest Dark Star unit goes supermassive, gaining @SupermassivePercentBonus*100@% effectiveness from Dark Star, and creates 2 minor Black Holes.</row><br><row>(@MinUnits@) All Dark Stars are supermassive. At level 10, CONSUME EVERYONE. </row>",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [{ "name": "ADAP", "value": "45" }, { "name": "ADAP", "value": "45" }, { "name": "ADAP", "value": "45" }, { "name": "ADAP", "value": "45" }, { "name": "ExecuteHPPercent", "value": "0.08" }, { "name": "ExecuteHPPercent", "value": "0.08" }, { "name": "ExecuteHPPercent", "value": "0.08" }, { "name": "ExecuteHPPercent", "value": "0.08" }, { "name": "PercentHealth", "value": "0.25" }, { "name": "PercentHealth", "value": "0.25" }, { "name": "PercentHealth", "value": "0.25" }, { "name": "PercentHealth", "value": "0.25" }, { "name": "SupermassivePercentBonus", "value": "0.7" }, { "name": "SupermassivePercentBonus", "value": "0.7" }, { "name": "SupermassivePercentBonus", "value": "0.7" }, { "name": "SupermassivePercentBonus", "value": "0.7" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 2", "No executable effects mapped for breakpoint 4", "No executable effects mapped for breakpoint 6", "No executable effects mapped for breakpoint 9", "Unmapped trait variable: ADAP", "Unmapped trait variable: ExecuteHPPercent", "Unmapped trait variable: PercentHealth", "Unmapped trait variable: SupermassivePercentBonus", "Trait has no mapped executable effects"]
 }

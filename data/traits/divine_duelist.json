@@ -1,12 +1,18 @@
 {
   "name": "Divine Duelist",
+  "displayName": "Divine Duelist",
   "breakpoints": [1],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_FioraUniqueTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Your Tactician heals for @PlayerOmnivamp*100@% of player damage dealt from winning.<br><br>Fiora always wins a one on one duel.",
+  "tooltip": "Your Tactician heals for @PlayerOmnivamp*100@% of player damage dealt from winning.<br><br>Fiora always wins a one on one duel.",
   "tiers": [
-    {
-      "breakpoint": 1,
-      "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Divine Duelist:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
-      ]
-    }
-  ]
+
+  ],
+  "rawVariables": [{ "name": "DUHeal", "value": "1" }, { "name": "PVEHP", "value": "1" }, { "name": "PVENumWins", "value": "4" }, { "name": "PlayerOmnivamp", "value": "0.15" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 1", "Unmapped trait variable: DUHeal", "Unmapped trait variable: PVEHP", "Unmapped trait variable: PVENumWins", "Unmapped trait variable: PlayerOmnivamp", "Trait has no mapped executable effects"]
 }

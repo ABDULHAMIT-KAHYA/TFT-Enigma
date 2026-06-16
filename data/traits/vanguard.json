@@ -1,27 +1,38 @@
 {
   "name": "Vanguard",
+  "displayName": "Vanguard",
   "breakpoints": [2, 4, 6],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_ShieldTank",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Vanguards gain @DamageReductionPct*100@% Durability while Shielded. <br><br>Combat start and @HealthThreshold*100@%&nbsp;Health: Gain a max Health Shield for @ShieldDuration@&nbsp;seconds.<br><br><row>(@MinUnits@) @ShieldPercentAmount*100@% max Health</row><br><row>(@MinUnits@) @ShieldPercentAmount*100@% max Health</row><br><row>(@MinUnits@) @ShieldPercentAmount*100@% max Health;<br>@EnhancedDurability*100@%&nbsp;%i:scaleDR% while Shielded</row>",
+  "tooltip": "Vanguards gain @DamageReductionPct*100@% Durability while Shielded. <br><br>Combat start and @HealthThreshold*100@%&nbsp;Health: Gain a max Health Shield for @ShieldDuration@&nbsp;seconds.<br><br><row>(@MinUnits@) @ShieldPercentAmount*100@% max Health</row><br><row>(@MinUnits@) @ShieldPercentAmount*100@% max Health</row><br><row>(@MinUnits@) @ShieldPercentAmount*100@% max Health;<br>@EnhancedDurability*100@%&nbsp;%i:scaleDR% while Shielded</row>",
   "tiers": [
     {
       "breakpoint": 2,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Vanguard:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Vanguard:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Vanguard:DamageReductionPct:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Vanguard:EnhancedDurability:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 4,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Vanguard:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Vanguard:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Vanguard:DamageReductionPct:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Vanguard:EnhancedDurability:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 6,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Vanguard:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Vanguard:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Vanguard:DamageReductionPct:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Vanguard:EnhancedDurability:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     }
-  ]
+  ],
+  "rawVariables": [{ "name": "DamageReductionPct", "value": "0.05" }, { "name": "DamageReductionPct", "value": "0.05" }, { "name": "DamageReductionPct", "value": "0.05" }, { "name": "EnhancedDurability", "value": "0.08" }, { "name": "EnhancedDurability", "value": "0.08" }, { "name": "EnhancedDurability", "value": "0.08" }, { "name": "HealthThreshold", "value": "0.5" }, { "name": "HealthThreshold", "value": "0.5" }, { "name": "HealthThreshold", "value": "0.5" }, { "name": "ShieldDuration", "value": "10" }, { "name": "ShieldDuration", "value": "10" }, { "name": "ShieldDuration", "value": "10" }, { "name": "ShieldPercentAmount", "value": "0.16" }, { "name": "ShieldPercentAmount", "value": "0.3" }, { "name": "ShieldPercentAmount", "value": "0.4" }],
+  "importWarnings": ["Unmapped trait variable: HealthThreshold", "Unmapped trait variable: ShieldDuration", "Unmapped trait variable: ShieldPercentAmount"]
 }

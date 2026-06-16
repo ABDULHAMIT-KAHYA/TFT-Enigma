@@ -1,7 +1,38 @@
 {
   "name": "Brawler",
+  "displayName": "Brawler",
   "breakpoints": [2, 4, 6],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_HPTank",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Your team gains @TeamwideBonus*100@% Health. Brawlers gain more.<br><br><expandRow>(@MinUnits@) +@HealthBonus*100@% maximum Health</expandRow>",
+  "tooltip": "Your team gains @TeamwideBonus*100@% Health. Brawlers gain more.<br><br><expandRow>(@MinUnits@) +@HealthBonus*100@% maximum Health</expandRow>",
   "tiers": [
-
-  ]
+    {
+      "breakpoint": 2,
+      "effects": [
+        { "hook": "OnCombatStart", "type": "ApplyStatusToAllies", "statusEffect": { "name": "Trait:Brawler:TeamwideBonus:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Percent", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Brawler:HealthBonus:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+      ]
+    },
+    {
+      "breakpoint": 4,
+      "effects": [
+        { "hook": "OnCombatStart", "type": "ApplyStatusToAllies", "statusEffect": { "name": "Trait:Brawler:TeamwideBonus:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Percent", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Brawler:HealthBonus:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Percent", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+      ]
+    },
+    {
+      "breakpoint": 6,
+      "effects": [
+        { "hook": "OnCombatStart", "type": "ApplyStatusToAllies", "statusEffect": { "name": "Trait:Brawler:TeamwideBonus:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Percent", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Brawler:HealthBonus:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Percent", "value": 0.65, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+      ]
+    }
+  ],
+  "rawVariables": [{ "name": "HealthBonus", "value": "0.25" }, { "name": "HealthBonus", "value": "0.45" }, { "name": "HealthBonus", "value": "0.65" }, { "name": "TeamwideBonus", "value": "0.05" }, { "name": "TeamwideBonus", "value": "0.05" }, { "name": "TeamwideBonus", "value": "0.05" }],
+  "importWarnings": []
 }

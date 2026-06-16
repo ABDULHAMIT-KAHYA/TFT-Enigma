@@ -1,7 +1,18 @@
 {
   "name": "Space Groove",
+  "displayName": "Space Groove",
   "breakpoints": [1, 3, 5, 7, 10],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_SpaceGroove",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "<row>(@MinUnits@) Groovians can enter {{TFT17_SpaceGroove_TheGroove}}. While in it, they gain Attack Speed and max Health Regen, increased per Groovian on your team.</row><br><row>(@MinUnits@) All Groovians start combat in {{TFT17_SpaceGroove_TheGroove}} for @StartOfCombatDuration@ seconds.</row><br><row>(@MinUnits@) Each second spent in {{TFT17_SpaceGroove_TheGroove}} grants @ADAPPerSecond@% stacking Attack Damage and Ability Power.</row><br><row>(@MinUnits@) Increase these effects by @EffectBonus@%!</row><br><row>(@MinUnits@) {{TFT17_SpaceGroove_Groove}}</row><br><br>{{TFT17_SpaceGroove_TheGroove}}: @TFTUnitProperty.:TFT17_SpaceGroove_AS*100@% %i:scaleAS%, @TFTUnitProperty.:TFT17_SpaceGroove_HealthRegen*100@% %i:scaleHPRegen%",
+  "tooltip": "<row>(@MinUnits@) Groovians can enter {{TFT17_SpaceGroove_TheGroove}}. While in it, they gain Attack Speed and max Health Regen, increased per Groovian on your team.</row><br><row>(@MinUnits@) All Groovians start combat in {{TFT17_SpaceGroove_TheGroove}} for @StartOfCombatDuration@ seconds.</row><br><row>(@MinUnits@) Each second spent in {{TFT17_SpaceGroove_TheGroove}} grants @ADAPPerSecond@% stacking Attack Damage and Ability Power.</row><br><row>(@MinUnits@) Increase these effects by @EffectBonus@%!</row><br><row>(@MinUnits@) {{TFT17_SpaceGroove_Groove}}</row><br><br>{{TFT17_SpaceGroove_TheGroove}}: @TFTUnitProperty.:TFT17_SpaceGroove_AS*100@% %i:scaleAS%, @TFTUnitProperty.:TFT17_SpaceGroove_HealthRegen*100@% %i:scaleHPRegen%",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [{ "name": "ADAPPerSecond", "value": "5" }, { "name": "ADAPPerSecond", "value": "10" }, { "name": "ADAPPerSecond", "value": "5" }, { "name": "ADAPPerSecond", "value": "null" }, { "name": "ADAPPerSecond", "value": "null" }, { "name": "EffectBonus", "value": "null" }, { "name": "EffectBonus", "value": "null" }, { "name": "EffectBonus", "value": "15" }, { "name": "EffectBonus", "value": "500" }, { "name": "EffectBonus", "value": "null" }, { "name": "StartOfCombatDuration", "value": "4" }, { "name": "StartOfCombatDuration", "value": "4" }, { "name": "StartOfCombatDuration", "value": "null" }, { "name": "StartOfCombatDuration", "value": "4" }, { "name": "StartOfCombatDuration", "value": "60" }, { "name": "{32ed1fda}", "value": "800" }, { "name": "{3e46e556}", "value": "1500" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 1", "No executable effects mapped for breakpoint 10", "No executable effects mapped for breakpoint 3", "No executable effects mapped for breakpoint 5", "No executable effects mapped for breakpoint 7", "Unmapped non-numeric trait variable: ADAPPerSecond", "Unmapped non-numeric trait variable: EffectBonus", "Unmapped non-numeric trait variable: StartOfCombatDuration", "Unmapped trait variable: ADAPPerSecond", "Unmapped trait variable: EffectBonus", "Unmapped trait variable: StartOfCombatDuration", "Unmapped trait variable: {32ed1fda}", "Unmapped trait variable: {3e46e556}", "Trait has no mapped executable effects"]
 }

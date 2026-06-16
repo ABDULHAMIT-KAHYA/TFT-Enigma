@@ -1,7 +1,18 @@
 {
   "name": "Shepherd",
+  "displayName": "Shepherd",
   "breakpoints": [3, 5, 7],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_SummonTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Shepherds summon the Bond of the Stars to aid them in battle.<br><br><row>(@MinUnits@) Summon Bia</row><br><row>(@MinUnits@) Summon Bayin</row><br><row>(@MinUnits@) Bia and Bayin's bond grows deeper</row><br><br><rules>Bia and Bayin's power are increased by the total star level of all Shepherds.</rules>",
+  "tooltip": "Shepherds summon the Bond of the Stars to aid them in battle.<br><br><row>(@MinUnits@) Summon Bia</row><br><row>(@MinUnits@) Summon Bayin</row><br><row>(@MinUnits@) Bia and Bayin's bond grows deeper</row><br><br><rules>Bia and Bayin's power are increased by the total star level of all Shepherds.</rules>",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [],
+  "importWarnings": ["No executable effects mapped for breakpoint 3", "No executable effects mapped for breakpoint 5", "No executable effects mapped for breakpoint 7", "Trait has no mapped executable effects"]
 }

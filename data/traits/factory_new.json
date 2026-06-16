@@ -1,7 +1,18 @@
 {
   "name": "Factory New",
+  "displayName": "Factory New",
   "breakpoints": [1],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "After participating in combat, open an armory to purchase a permanent upgrade for your strongest Graves.<br><br>Every @NumberOfUpgradesBeforeRoundCostIncrease@ upgrades, future upgrades will take an additional round.<br><br><rules>Next Upgrade: @TFTUnitProperty.trait:TFT17_GravesTrait_RoundsUntilUpgrade@ Rounds.</rules>",
+  "tooltip": "After participating in combat, open an armory to purchase a permanent upgrade for your strongest Graves.<br><br>Every @NumberOfUpgradesBeforeRoundCostIncrease@ upgrades, future upgrades will take an additional round.<br><br><rules>Next Upgrade: @TFTUnitProperty.trait:TFT17_GravesTrait_RoundsUntilUpgrade@ Rounds.</rules>",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [{ "name": "NumberOfUpgradesBeforeRoundCostIncrease", "value": "3" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 1", "Unmapped trait variable: NumberOfUpgradesBeforeRoundCostIncrease", "Trait has no mapped executable effects"]
 }

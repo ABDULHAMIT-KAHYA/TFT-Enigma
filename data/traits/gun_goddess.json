@@ -1,12 +1,23 @@
 {
   "name": "Gun Goddess",
+  "displayName": "Gun Goddess",
   "breakpoints": [1],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_MissFortuneUniqueTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "When you field Miss Fortune, choose between Conduit Mode, Challenger Mode, and Replicator Mode. Miss Fortune has a unique ability based on her mode and gains the associated trait.",
+  "tooltip": "When you field Miss Fortune, choose between Conduit Mode, Challenger Mode, and Replicator Mode. Miss Fortune has a unique ability based on her mode and gains the associated trait.",
   "tiers": [
     {
       "breakpoint": 1,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Gun Goddess:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.01, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Gun Goddess:DamageAmp:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.01, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     }
-  ]
+  ],
+  "rawVariables": [{ "name": "Allies", "value": "2" }, { "name": "DamageAmp", "value": "0.01" }, { "name": "FlatDamage", "value": "100" }, { "name": "Mana", "value": "2" }, { "name": "NumAttacks", "value": "3" }],
+  "importWarnings": ["Unmapped trait variable: Allies", "Unmapped trait variable: FlatDamage", "Unmapped trait variable: Mana", "Unmapped trait variable: NumAttacks"]
 }

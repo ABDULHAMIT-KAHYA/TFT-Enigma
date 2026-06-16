@@ -13,6 +13,7 @@
 #include "core/RandomManager.hpp"
 #include "combat/StatSystem.hpp"
 #include "combat/TargetingSystem.hpp"
+#include "combat/TraitEffectExecutor.hpp"
 #include "macro/LegalActionGenerator.hpp"
 #include "macro/MacroExecutor.hpp"
 #include "macro/MacroSimulation.hpp"
@@ -25,6 +26,7 @@
 #include "content/ChampionFilter.hpp"
 #include "constants/ValidationConstants.hpp"
 #include "core/Random.hpp"
+#include "core/Json.hpp"
 #include "macro/RoundSystem.hpp"
 #include "macro/RoundSchedule.hpp"
 #include "ai/FutureStateEvaluator.hpp"
@@ -465,6 +467,694 @@ static bool isPlaceholderSingleTargetMagicAbility(const Ability& ability)
            effect.targetMaxHpPercentDamage == 0.0f;
 }
 
+static std::string traitEffectTypeName(TraitEffectType type)
+{
+    switch (type)
+    {
+        case TraitEffectType::ApplyStatusToTraitUnits: return "ApplyStatusToTraitUnits";
+        case TraitEffectType::ApplyStatusToAllies: return "ApplyStatusToAllies";
+        case TraitEffectType::ApplyStatusToEnemies: return "ApplyStatusToEnemies";
+        case TraitEffectType::ApplyStatusToEnemyTeam: return "ApplyStatusToEnemyTeam";
+        case TraitEffectType::Shield: return "Shield";
+        case TraitEffectType::Heal: return "Heal";
+        case TraitEffectType::DealDamage: return "DealDamage";
+        case TraitEffectType::StackStatusOnAttack: return "StackStatusOnAttack";
+        case TraitEffectType::ShieldOnCombatStart: return "ShieldOnCombatStart";
+        case TraitEffectType::ExecuteBelowHpPercent: return "ExecuteBelowHpPercent";
+        case TraitEffectType::TempCritBonusVsLowHp: return "TempCritBonusVsLowHp";
+    }
+    return "ApplyStatusToTraitUnits";
+}
+
+static bool hasStatusNamed(const Unit& unit, std::string_view statusName)
+{
+    for (const StatusEffect& effect : unit.statusEffects())
+    {
+        if (effect.name == statusName)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+static std::string traitFanoutJson(TraitEffectType type, std::string_view traitName, std::string_view statusName)
+{
+    std::ostringstream ss;
+    ss << "{\n"
+       << "  \"name\": \"" << traitName << "\",\n"
+       << "  \"breakpoints\": [1],\n"
+       << "  \"tiers\": [\n"
+       << "    {\n"
+       << "      \"breakpoint\": 1,\n"
+       << "      \"effects\": [\n"
+       << "        {\n"
+       << "          \"hook\": \"OnCombatStart\",\n"
+       << "          \"type\": \"" << traitEffectTypeName(type) << "\",\n"
+       << "          \"statusEffect\": {\n"
+       << "            \"name\": \"" << statusName << "\",\n"
+       << "            \"effectType\": \"Buff\",\n"
+       << "            \"crowdControlType\": \"None\",\n"
+       << "            \"affectedStat\": \"AttackDamage\",\n"
+       << "            \"modifierType\": \"Flat\",\n"
+       << "            \"value\": 7,\n"
+       << "            \"durationMs\": " << ValidationConstants::LongDurationMs << ",\n"
+       << "            \"remainingMs\": " << ValidationConstants::LongDurationMs << ",\n"
+       << "            \"tickIntervalMs\": 0,\n"
+       << "            \"tickTimerMs\": 0,\n"
+       << "            \"damageType\": \"True\"\n"
+       << "          }\n"
+       << "        }\n"
+       << "      ]\n"
+       << "    }\n"
+       << "  ]\n"
+       << "}\n";
+    return ss.str();
+}
+
+static std::string traitShieldJson(TraitEffectType type, std::string_view traitName, int shieldAmount)
+{
+    std::ostringstream ss;
+    ss << "{\n"
+       << "  \"name\": \"" << traitName << "\",\n"
+       << "  \"breakpoints\": [1],\n"
+       << "  \"tiers\": [\n"
+       << "    {\n"
+       << "      \"breakpoint\": 1,\n"
+       << "      \"effects\": [\n"
+       << "        {\n"
+       << "          \"hook\": \"OnCombatStart\",\n"
+       << "          \"type\": \"" << traitEffectTypeName(type) << "\",\n"
+       << "          \"shieldAmount\": " << shieldAmount << "\n"
+       << "        }\n"
+       << "      ]\n"
+       << "    }\n"
+       << "  ]\n"
+       << "}\n";
+    return ss.str();
+}
+
+static std::string traitHealJson(std::string_view traitName, int healAmount)
+{
+    std::ostringstream ss;
+    ss << "{\n"
+       << "  \"name\": \"" << traitName << "\",\n"
+       << "  \"breakpoints\": [1],\n"
+       << "  \"tiers\": [\n"
+       << "    {\n"
+       << "      \"breakpoint\": 1,\n"
+       << "      \"effects\": [\n"
+       << "        {\n"
+       << "          \"hook\": \"OnCombatStart\",\n"
+       << "          \"type\": \"Heal\",\n"
+       << "          \"healAmount\": " << healAmount << "\n"
+       << "        }\n"
+       << "      ]\n"
+       << "    }\n"
+       << "  ]\n"
+       << "}\n";
+    return ss.str();
+}
+
+static std::string damageTypeJsonName(DamageType type)
+{
+    switch (type)
+    {
+        case DamageType::Physical: return "Physical";
+        case DamageType::Magic: return "Magic";
+        case DamageType::TrueDamage: return "True";
+    }
+    return "True";
+}
+
+static std::string traitDealDamageJson(std::string_view traitName,
+                                       int baseDamage,
+                                       DamageType damageType)
+{
+    std::ostringstream ss;
+    ss << "{\n"
+       << "  \"name\": \"" << traitName << "\",\n"
+       << "  \"breakpoints\": [1],\n"
+       << "  \"tiers\": [\n"
+       << "    {\n"
+       << "      \"breakpoint\": 1,\n"
+       << "      \"effects\": [\n"
+       << "        {\n"
+       << "          \"hook\": \"OnCombatStart\",\n"
+       << "          \"type\": \"DealDamage\",\n"
+       << "          \"damageFormula\": {\n"
+       << "            \"baseDamage\": " << baseDamage << ",\n"
+       << "            \"adRatio\": 0,\n"
+       << "            \"apRatio\": 0,\n"
+       << "            \"damageType\": \"" << damageTypeJsonName(damageType) << "\"\n"
+       << "          }\n"
+       << "        }\n"
+       << "      ]\n"
+       << "    }\n"
+       << "  ]\n"
+       << "}\n";
+    return ss.str();
+}
+
+static ContentManager loadSyntheticTraitContent(TraitEffectType type,
+                                                std::string_view traitName,
+                                                std::string_view statusName)
+{
+    const std::filesystem::path root =
+        std::filesystem::temp_directory_path() /
+        ("tft_trait_effect_validation_" + traitEffectTypeName(type));
+    std::filesystem::remove_all(root);
+    std::filesystem::create_directories(root / "traits");
+    std::filesystem::create_directories(root / "abilities");
+    std::filesystem::create_directories(root / "items");
+    std::filesystem::create_directories(root / "champions");
+
+    {
+        std::ofstream f(root / "traits" / "validation_trait.json", std::ios::out | std::ios::binary | std::ios::trunc);
+        f << traitFanoutJson(type, traitName, statusName);
+    }
+
+    ContentManager synthetic;
+    synthetic.loadAll(root.string());
+    return synthetic;
+}
+
+static ContentManager loadSyntheticTraitDamageContent(std::string_view traitName,
+                                                      int baseDamage,
+                                                      DamageType damageType)
+{
+    const std::filesystem::path root =
+        std::filesystem::temp_directory_path() /
+        ("tft_trait_damage_validation_" + damageTypeJsonName(damageType));
+    std::filesystem::remove_all(root);
+    std::filesystem::create_directories(root / "traits");
+    std::filesystem::create_directories(root / "abilities");
+    std::filesystem::create_directories(root / "items");
+    std::filesystem::create_directories(root / "champions");
+
+    {
+        std::ofstream f(root / "traits" / "validation_trait.json", std::ios::out | std::ios::binary | std::ios::trunc);
+        f << traitDealDamageJson(traitName, baseDamage, damageType);
+    }
+
+    ContentManager synthetic;
+    synthetic.loadAll(root.string());
+    return synthetic;
+}
+
+static ContentManager loadSyntheticTraitHealContent(std::string_view traitName, int healAmount)
+{
+    const std::filesystem::path root =
+        std::filesystem::temp_directory_path() / "tft_trait_heal_validation";
+    std::filesystem::remove_all(root);
+    std::filesystem::create_directories(root / "traits");
+    std::filesystem::create_directories(root / "abilities");
+    std::filesystem::create_directories(root / "items");
+    std::filesystem::create_directories(root / "champions");
+
+    {
+        std::ofstream f(root / "traits" / "validation_trait.json", std::ios::out | std::ios::binary | std::ios::trunc);
+        f << traitHealJson(traitName, healAmount);
+    }
+
+    ContentManager synthetic;
+    synthetic.loadAll(root.string());
+    return synthetic;
+}
+
+static ContentManager loadSyntheticTraitShieldContent(TraitEffectType type,
+                                                      std::string_view traitName,
+                                                      int shieldAmount)
+{
+    const std::filesystem::path root =
+        std::filesystem::temp_directory_path() /
+        ("tft_trait_shield_validation_" + traitEffectTypeName(type));
+    std::filesystem::remove_all(root);
+    std::filesystem::create_directories(root / "traits");
+    std::filesystem::create_directories(root / "abilities");
+    std::filesystem::create_directories(root / "items");
+    std::filesystem::create_directories(root / "champions");
+
+    {
+        std::ofstream f(root / "traits" / "validation_trait.json", std::ios::out | std::ios::binary | std::ios::trunc);
+        f << traitShieldJson(type, traitName, shieldAmount);
+    }
+
+    ContentManager synthetic;
+    synthetic.loadAll(root.string());
+    return synthetic;
+}
+
+static Unit makeValidationTraitUnit(std::string name, TeamId team, Position position, std::string_view traitName)
+{
+    Unit unit(std::move(name),
+              1000,
+              50,
+              20,
+              20,
+              1000,
+              1,
+              DamageType::Physical,
+              position,
+              team);
+    unit.addTrait(std::string(traitName));
+    return unit;
+}
+
+static Unit makeValidationUnit(std::string name, TeamId team, Position position)
+{
+    return Unit(std::move(name),
+                1000,
+                50,
+                20,
+                20,
+                1000,
+                1,
+                DamageType::Physical,
+                position,
+                team);
+}
+
+static std::vector<Unit> runTraitFanoutEffect(TraitEffectType type,
+                                              bool includeDeadUnits,
+                                              std::string_view statusName)
+{
+    static constexpr std::string_view TraitName = "ValidationFanoutTrait";
+    ContentManager synthetic = loadSyntheticTraitContent(type, TraitName, statusName);
+
+    std::ostringstream oss;
+    Logger logger(oss);
+    logger.setMode(LogMode::Silent);
+
+    Board board(GameConstants::BoardWidth, GameConstants::BoardHeight);
+    std::vector<Unit> units;
+    units.push_back(makeValidationTraitUnit("ValidationTraitSource", TeamId::TeamA, Position{ 1, 1 }, TraitName));
+    units.push_back(makeValidationUnit("ValidationAlly", TeamId::TeamA, Position{ 2, 1 }));
+    units.push_back(makeValidationUnit("ValidationEnemy", TeamId::TeamB, Position{ 1, 5 }));
+    units.push_back(makeValidationUnit("ValidationEnemyTwo", TeamId::TeamB, Position{ 2, 5 }));
+    if (includeDeadUnits)
+    {
+        units.push_back(makeValidationUnit("ValidationDeadAlly", TeamId::TeamA, Position{ 3, 1 }));
+        units.back().setHp(0);
+        units.push_back(makeValidationUnit("ValidationDeadEnemy", TeamId::TeamB, Position{ 3, 5 }));
+        units.back().setHp(0);
+    }
+
+    GameState state(std::move(board), std::move(units), std::move(logger), synthetic);
+    const std::vector<ActiveTrait> activeTraits = {
+        ActiveTrait{ std::string(TraitName), 1, 1 }
+    };
+
+    TraitEffectExecutor::apply(
+        state,
+        TeamId::TeamA,
+        activeTraits,
+        TraitHook::OnCombatStart,
+        nullptr,
+        nullptr
+    );
+
+    return state.units();
+}
+
+static StatusEffect makeValidationShieldStatus(int amount)
+{
+    StatusEffect shield{};
+    shield.name = "Validation Enemy Shield";
+    shield.effectType = StatusEffectType::Shield;
+    shield.crowdControlType = CrowdControlType::None;
+    shield.affectedStat = StatType::None;
+    shield.modifierType = ModifierType::Flat;
+    shield.value = static_cast<float>(amount);
+    shield.durationMs = ValidationConstants::LongDurationMs;
+    shield.remainingMs = ValidationConstants::LongDurationMs;
+    shield.tickIntervalMs = 0;
+    shield.tickTimerMs = 0;
+    shield.damageType = DamageType::TrueDamage;
+    return shield;
+}
+
+static std::vector<Unit> runTraitDamageEffect(DamageType damageType,
+                                              bool includeDeadEnemy,
+                                              bool shieldEnemy,
+                                              int baseDamage)
+{
+    static constexpr std::string_view TraitName = "ValidationDamageTrait";
+    ContentManager synthetic = loadSyntheticTraitDamageContent(TraitName, baseDamage, damageType);
+
+    std::ostringstream oss;
+    Logger logger(oss);
+    logger.setMode(LogMode::Silent);
+
+    Board board(GameConstants::BoardWidth, GameConstants::BoardHeight);
+    std::vector<Unit> units;
+    units.push_back(makeValidationTraitUnit("ValidationTraitSource", TeamId::TeamA, Position{ 1, 1 }, TraitName));
+    units.push_back(makeValidationUnit("ValidationAlly", TeamId::TeamA, Position{ 2, 1 }));
+    units.push_back(makeValidationUnit("ValidationEnemy", TeamId::TeamB, Position{ 1, 5 }));
+    units.push_back(makeValidationUnit("ValidationEnemyTwo", TeamId::TeamB, Position{ 2, 5 }));
+
+    for (Unit& unit : units)
+    {
+        unit.setArmor(0);
+        unit.setMagicResist(0);
+    }
+    if (shieldEnemy)
+    {
+        units[2].addStatusEffect(makeValidationShieldStatus(baseDamage));
+    }
+    if (includeDeadEnemy)
+    {
+        units.push_back(makeValidationUnit("ValidationDeadEnemy", TeamId::TeamB, Position{ 3, 5 }));
+        units.back().setHp(0);
+    }
+
+    GameState state(std::move(board), std::move(units), std::move(logger), synthetic);
+    const std::vector<ActiveTrait> activeTraits = {
+        ActiveTrait{ std::string(TraitName), 1, 1 }
+    };
+
+    TraitEffectExecutor::apply(
+        state,
+        TeamId::TeamA,
+        activeTraits,
+        TraitHook::OnCombatStart,
+        nullptr,
+        nullptr
+    );
+
+    return state.units();
+}
+
+static std::vector<Unit> runTraitHealEffect(bool includeDeadUnits, int healAmount)
+{
+    static constexpr std::string_view TraitName = "ValidationHealTrait";
+    ContentManager synthetic = loadSyntheticTraitHealContent(TraitName, healAmount);
+
+    std::ostringstream oss;
+    Logger logger(oss);
+    logger.setMode(LogMode::Silent);
+
+    Board board(GameConstants::BoardWidth, GameConstants::BoardHeight);
+    std::vector<Unit> units;
+    units.push_back(makeValidationTraitUnit("ValidationTraitSource", TeamId::TeamA, Position{ 1, 1 }, TraitName));
+    units.push_back(makeValidationUnit("ValidationAlly", TeamId::TeamA, Position{ 2, 1 }));
+    units.push_back(makeValidationUnit("ValidationEnemy", TeamId::TeamB, Position{ 1, 5 }));
+
+    units[0].setHp(700);
+    units[1].setHp(800);
+    units[2].setHp(700);
+
+    if (includeDeadUnits)
+    {
+        units.push_back(makeValidationUnit("ValidationDeadAlly", TeamId::TeamA, Position{ 3, 1 }));
+        units.back().setHp(0);
+        units.push_back(makeValidationUnit("ValidationDeadEnemy", TeamId::TeamB, Position{ 3, 5 }));
+        units.back().setHp(0);
+    }
+
+    GameState state(std::move(board), std::move(units), std::move(logger), synthetic);
+    const std::vector<ActiveTrait> activeTraits = {
+        ActiveTrait{ std::string(TraitName), 1, 1 }
+    };
+
+    TraitEffectExecutor::apply(
+        state,
+        TeamId::TeamA,
+        activeTraits,
+        TraitHook::OnCombatStart,
+        nullptr,
+        nullptr
+    );
+
+    return state.units();
+}
+
+static std::vector<Unit> runTraitShieldEffect(TraitEffectType type,
+                                              bool includeDeadUnits,
+                                              int shieldAmount)
+{
+    static constexpr std::string_view TraitName = "ValidationShieldTrait";
+    ContentManager synthetic = loadSyntheticTraitShieldContent(type, TraitName, shieldAmount);
+
+    std::ostringstream oss;
+    Logger logger(oss);
+    logger.setMode(LogMode::Silent);
+
+    Board board(GameConstants::BoardWidth, GameConstants::BoardHeight);
+    std::vector<Unit> units;
+    units.push_back(makeValidationTraitUnit("ValidationTraitSource", TeamId::TeamA, Position{ 1, 1 }, TraitName));
+    units.push_back(makeValidationUnit("ValidationAlly", TeamId::TeamA, Position{ 2, 1 }));
+    units.push_back(makeValidationUnit("ValidationEnemy", TeamId::TeamB, Position{ 1, 5 }));
+    if (includeDeadUnits)
+    {
+        units.push_back(makeValidationUnit("ValidationDeadAlly", TeamId::TeamA, Position{ 3, 1 }));
+        units.back().setHp(0);
+        units.push_back(makeValidationUnit("ValidationDeadEnemy", TeamId::TeamB, Position{ 3, 5 }));
+        units.back().setHp(0);
+    }
+
+    GameState state(std::move(board), std::move(units), std::move(logger), synthetic);
+    const std::vector<ActiveTrait> activeTraits = {
+        ActiveTrait{ std::string(TraitName), 1, 1 }
+    };
+
+    TraitEffectExecutor::apply(
+        state,
+        TeamId::TeamA,
+        activeTraits,
+        TraitHook::OnCombatStart,
+        nullptr,
+        nullptr
+    );
+
+    return state.units();
+}
+
+static const StatusEffect* findStatusNamed(const Unit& unit, std::string_view statusName)
+{
+    for (const StatusEffect& effect : unit.statusEffects())
+    {
+        if (effect.name == statusName)
+        {
+            return &effect;
+        }
+    }
+    return nullptr;
+}
+
+static bool hasActiveShield(const Unit& unit, int expectedAmount)
+{
+    const StatusEffect* shield = findStatusNamed(unit, "Trait Shield");
+    return shield &&
+           shield->effectType == StatusEffectType::Shield &&
+           shield->remainingMs > 0 &&
+           static_cast<int>(shield->value) == expectedAmount;
+}
+
+static void traitEffectVocabularyValidationTest(ValidationReport& report)
+{
+    {
+        static constexpr std::string_view StatusName = "Validation Allies Status";
+        const std::vector<Unit> units =
+            runTraitFanoutEffect(TraitEffectType::ApplyStatusToAllies, false, StatusName);
+        const bool ok =
+            hasStatusNamed(units[0], StatusName) &&
+            hasStatusNamed(units[1], StatusName) &&
+            !hasStatusNamed(units[2], StatusName) &&
+            !hasStatusNamed(units[3], StatusName);
+        if (ok) report.pass("TraitEffect: ApplyStatusToAllies applies to alive allies");
+        else report.fail("TraitEffect: ApplyStatusToAllies applies to alive allies");
+    }
+
+    {
+        static constexpr std::string_view StatusName = "Validation Enemies Status";
+        const std::vector<Unit> units =
+            runTraitFanoutEffect(TraitEffectType::ApplyStatusToEnemies, false, StatusName);
+        const bool ok =
+            !hasStatusNamed(units[0], StatusName) &&
+            !hasStatusNamed(units[1], StatusName) &&
+            hasStatusNamed(units[2], StatusName) &&
+            hasStatusNamed(units[3], StatusName);
+        if (ok) report.pass("TraitEffect: ApplyStatusToEnemies applies to alive enemies");
+        else report.fail("TraitEffect: ApplyStatusToEnemies applies to alive enemies");
+    }
+
+    {
+        static constexpr std::string_view StatusName = "Validation Dead Skip Status";
+        const std::vector<Unit> units =
+            runTraitFanoutEffect(TraitEffectType::ApplyStatusToAllies, true, StatusName);
+        const bool ok =
+            hasStatusNamed(units[0], StatusName) &&
+            hasStatusNamed(units[1], StatusName) &&
+            !hasStatusNamed(units[4], StatusName) &&
+            !hasStatusNamed(units[5], StatusName);
+        if (ok) report.pass("TraitEffect: status fanout skips dead units");
+        else report.fail("TraitEffect: status fanout skips dead units");
+    }
+
+    {
+        static constexpr std::string_view StatusName = "Validation EnemyTeam Status";
+        const std::vector<Unit> units =
+            runTraitFanoutEffect(TraitEffectType::ApplyStatusToEnemyTeam, false, StatusName);
+        const bool ok =
+            !hasStatusNamed(units[0], StatusName) &&
+            !hasStatusNamed(units[1], StatusName) &&
+            hasStatusNamed(units[2], StatusName) &&
+            hasStatusNamed(units[3], StatusName);
+        if (ok) report.pass("TraitEffect: ApplyStatusToEnemyTeam remains compatible");
+        else report.fail("TraitEffect: ApplyStatusToEnemyTeam remains compatible");
+    }
+
+    {
+        static constexpr int ShieldAmount = 120;
+        const std::vector<Unit> units =
+            runTraitShieldEffect(TraitEffectType::Shield, false, ShieldAmount);
+        const bool ok =
+            hasActiveShield(units[0], ShieldAmount) &&
+            hasActiveShield(units[1], ShieldAmount) &&
+            !hasStatusNamed(units[2], "Trait Shield");
+        if (ok) report.pass("TraitEffect: Shield applies to alive allies");
+        else report.fail("TraitEffect: Shield applies to alive allies");
+    }
+
+    {
+        static constexpr int ShieldAmount = 120;
+        const std::vector<Unit> units =
+            runTraitShieldEffect(TraitEffectType::Shield, true, ShieldAmount);
+        const bool ok =
+            hasActiveShield(units[0], ShieldAmount) &&
+            hasActiveShield(units[1], ShieldAmount) &&
+            !hasStatusNamed(units[3], "Trait Shield") &&
+            !hasStatusNamed(units[4], "Trait Shield");
+        if (ok) report.pass("TraitEffect: Shield skips dead units");
+        else report.fail("TraitEffect: Shield skips dead units");
+    }
+
+    {
+        static constexpr int ShieldAmount = 120;
+        static constexpr int DamageAmount = 90;
+        std::vector<Unit> units =
+            runTraitShieldEffect(TraitEffectType::Shield, false, ShieldAmount);
+        const int hpBefore = units[0].getHp();
+        units[0].applyDamage(DamageAmount);
+        const bool ok =
+            units[0].getHp() == hpBefore &&
+            hasActiveShield(units[0], ShieldAmount - DamageAmount);
+        if (ok) report.pass("TraitEffect: Shield absorbs incoming damage");
+        else report.fail("TraitEffect: Shield absorbs incoming damage");
+    }
+
+    {
+        static constexpr int ShieldAmount = 120;
+        const std::vector<Unit> units =
+            runTraitShieldEffect(TraitEffectType::ShieldOnCombatStart, false, ShieldAmount);
+        const bool ok =
+            hasActiveShield(units[0], ShieldAmount) &&
+            !hasStatusNamed(units[1], "Trait Shield") &&
+            !hasStatusNamed(units[2], "Trait Shield");
+        if (ok) report.pass("TraitEffect: ShieldOnCombatStart remains compatible");
+        else report.fail("TraitEffect: ShieldOnCombatStart remains compatible");
+    }
+
+    {
+        static constexpr int HealAmount = 120;
+        const std::vector<Unit> units = runTraitHealEffect(false, HealAmount);
+        const bool ok =
+            units[0].getHp() == 820 &&
+            units[1].getHp() == 920;
+        if (ok) report.pass("TraitEffect: Heal increases damaged allied HP");
+        else report.fail("TraitEffect: Heal increases damaged allied HP");
+    }
+
+    {
+        static constexpr int HealAmount = 500;
+        const std::vector<Unit> units = runTraitHealEffect(false, HealAmount);
+        const bool ok =
+            units[0].getHp() == units[0].getMaxHp() &&
+            units[1].getHp() == units[1].getMaxHp();
+        if (ok) report.pass("TraitEffect: Heal does not exceed max HP");
+        else report.fail("TraitEffect: Heal does not exceed max HP");
+    }
+
+    {
+        static constexpr int HealAmount = 120;
+        const std::vector<Unit> units = runTraitHealEffect(true, HealAmount);
+        const bool ok =
+            units[3].getHp() == 0 &&
+            units[4].getHp() == 0;
+        if (ok) report.pass("TraitEffect: Heal skips dead units");
+        else report.fail("TraitEffect: Heal skips dead units");
+    }
+
+    {
+        static constexpr int HealAmount = 120;
+        const std::vector<Unit> units = runTraitHealEffect(false, HealAmount);
+        const bool ok = units[2].getHp() == 700;
+        if (ok) report.pass("TraitEffect: Heal does not affect enemies");
+        else report.fail("TraitEffect: Heal does not affect enemies");
+    }
+
+    {
+        static constexpr int DamageAmount = 120;
+        const std::vector<Unit> units =
+            runTraitDamageEffect(DamageType::TrueDamage, false, false, DamageAmount);
+        const bool ok =
+            units[2].getHp() == 1000 - DamageAmount &&
+            units[3].getHp() == 1000 - DamageAmount;
+        if (ok) report.pass("TraitEffect: DealDamage reduces enemy HP");
+        else report.fail("TraitEffect: DealDamage reduces enemy HP");
+    }
+
+    {
+        static constexpr int DamageAmount = 120;
+        const std::vector<Unit> units =
+            runTraitDamageEffect(DamageType::TrueDamage, false, false, DamageAmount);
+        const bool ok =
+            units[0].getHp() == 1000 &&
+            units[1].getHp() == 1000;
+        if (ok) report.pass("TraitEffect: DealDamage does not affect allies");
+        else report.fail("TraitEffect: DealDamage does not affect allies");
+    }
+
+    {
+        static constexpr int DamageAmount = 120;
+        const std::vector<Unit> units =
+            runTraitDamageEffect(DamageType::TrueDamage, true, false, DamageAmount);
+        const bool ok = units[4].getHp() == 0;
+        if (ok) report.pass("TraitEffect: DealDamage skips dead enemies");
+        else report.fail("TraitEffect: DealDamage skips dead enemies");
+    }
+
+    {
+        static constexpr int DamageAmount = 120;
+        const std::vector<Unit> units =
+            runTraitDamageEffect(DamageType::TrueDamage, false, true, DamageAmount);
+        const StatusEffect* shield = findStatusNamed(units[2], "Validation Enemy Shield");
+        const bool ok =
+            units[2].getHp() == 1000 &&
+            shield &&
+            static_cast<int>(shield->value) == 0;
+        if (ok) report.pass("TraitEffect: DealDamage is absorbed by shields");
+        else report.fail("TraitEffect: DealDamage is absorbed by shields");
+    }
+
+    {
+        static constexpr int DamageAmount = 120;
+        const std::vector<Unit> physical =
+            runTraitDamageEffect(DamageType::Physical, false, false, DamageAmount);
+        const std::vector<Unit> magic =
+            runTraitDamageEffect(DamageType::Magic, false, false, DamageAmount);
+        const std::vector<Unit> trueDamage =
+            runTraitDamageEffect(DamageType::TrueDamage, false, false, DamageAmount);
+        const bool ok =
+            physical[2].getHp() == 1000 - DamageAmount &&
+            magic[2].getHp() == 1000 - DamageAmount &&
+            trueDamage[2].getHp() == 1000 - DamageAmount;
+        if (ok) report.pass("TraitEffect: DealDamage supports physical magic true formulas");
+        else report.fail("TraitEffect: DealDamage supports physical magic true formulas");
+    }
+}
+
 static std::size_t effectCountForTrait(const TraitDefinition& trait)
 {
     std::size_t count = 0;
@@ -509,9 +1199,278 @@ static std::vector<std::string> orderedItemCategories()
     };
 }
 
+struct TraitStatMappingProjection
+{
+    bool cacheFound = false;
+    std::size_t rawTraitRecords = 0;
+    std::size_t projectedTraitsWithExecutableEffects = 0;
+    std::size_t mappedVariables = 0;
+    std::size_t unmappedVariables = 0;
+    std::vector<std::pair<std::string, std::size_t>> topUnmappedVariables;
+};
+
+static bool hasJsonKey(const JsonValue& obj, std::string_view key)
+{
+    return obj.isObject() && obj.hasKey(key);
+}
+
+static std::string jsonStringOr(const JsonValue& obj, std::string_view key, std::string fallback)
+{
+    if (!hasJsonKey(obj, key))
+    {
+        return fallback;
+    }
+    const JsonValue& v = obj.at(key);
+    return v.isString() ? v.asString() : fallback;
+}
+
+static std::string compactLowerKeyForValidation(std::string_view s)
+{
+    std::string out;
+    out.reserve(s.size());
+    for (char c : s)
+    {
+        if (std::isalnum(static_cast<unsigned char>(c)))
+        {
+            out.push_back(static_cast<char>(std::tolower(static_cast<unsigned char>(c))));
+        }
+    }
+    return out;
+}
+
+static std::string lowerTextForValidation(std::string s)
+{
+    for (char& c : s)
+    {
+        c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+    }
+    return s;
+}
+
+static bool rawDescriptionAllowsTeamwideBonus(std::string_view varName, std::string description)
+{
+    description = lowerTextForValidation(std::move(description));
+    const std::string marker = "@" + std::string(varName);
+    std::string lowerMarker = marker;
+    lowerMarker = lowerTextForValidation(std::move(lowerMarker));
+    return description.find("your team gains " + lowerMarker) != std::string::npos ||
+           description.find("all allies gain " + lowerMarker) != std::string::npos ||
+           description.find("all units gain " + lowerMarker) != std::string::npos ||
+           description.find("allies gain " + lowerMarker) != std::string::npos;
+}
+
+static bool isAllowedStep12FTraitStatVariable(std::string_view varName, const std::string& description)
+{
+    const std::string v = compactLowerKeyForValidation(varName);
+    return v == "attackspeedpercent" ||
+           v == "ad" ||
+           v == "bonusad" ||
+           v == "ap" ||
+           v == "bonushealth" ||
+           v == "healthbonus" ||
+           v == "omnivamp" ||
+           v == "critchance" ||
+           v == "critdamage" ||
+           v == "durability" ||
+           v == "damagereductionpct" ||
+           v == "enhanceddurability" ||
+           v == "percentdamageincrease" ||
+           v == "bonusarmor" ||
+           v == "armor" ||
+           v == "bonusmr" ||
+           v == "mr" ||
+           v == "magicresist" ||
+           v == "teamwideas" ||
+           v == "teamwideresists" ||
+           v == "bonusoffensivestat" ||
+           v == "bonusoffensivestats" ||
+           v == "attackspeed" ||
+           v == "pctresists" ||
+           v == "maxhealth" ||
+           v == "maxhp" ||
+           v == "hp" ||
+           v == "health" ||
+           v == "damageamp" ||
+           v == "damageincrease" ||
+           v == "bonusdamage" ||
+           v == "damagereduction" ||
+           v == "resistances" ||
+           (v == "teamwidebonus" && rawDescriptionAllowsTeamwideBonus(varName, description));
+}
+
+static const JsonValue* findLatestRawTraitArray(const JsonValue& root)
+{
+    if (hasJsonKey(root, "sets") && root.at("sets").isObject())
+    {
+        const auto& sets = root.at("sets").asObject();
+        int bestSet = std::numeric_limits<int>::min();
+        const JsonValue* best = nullptr;
+        for (const auto& [key, setValue] : sets)
+        {
+            int setNumber = 0;
+            bool numeric = !key.empty();
+            for (char c : key)
+            {
+                if (c < '0' || c > '9')
+                {
+                    numeric = false;
+                    break;
+                }
+                setNumber = setNumber * 10 + (c - '0');
+            }
+            if (!numeric || !setValue.isObject() || !hasJsonKey(setValue, "traits"))
+            {
+                continue;
+            }
+            if (setNumber >= bestSet)
+            {
+                bestSet = setNumber;
+                best = &setValue.at("traits");
+            }
+        }
+        if (best && best->isArray())
+        {
+            return best;
+        }
+    }
+
+    if (hasJsonKey(root, "setData") && root.at("setData").isArray())
+    {
+        int bestSet = std::numeric_limits<int>::min();
+        const JsonValue* best = nullptr;
+        for (const JsonValue& setValue : root.at("setData").asArray())
+        {
+            if (!setValue.isObject() || !hasJsonKey(setValue, "traits"))
+            {
+                continue;
+            }
+            int setNumber = 0;
+            if (hasJsonKey(setValue, "number") && setValue.at("number").isNumber())
+            {
+                setNumber = static_cast<int>(std::lround(setValue.at("number").asNumber()));
+            }
+            if (setNumber >= bestSet)
+            {
+                bestSet = setNumber;
+                best = &setValue.at("traits");
+            }
+        }
+        if (best && best->isArray())
+        {
+            return best;
+        }
+    }
+
+    if (hasJsonKey(root, "traits") && root.at("traits").isArray())
+    {
+        return &root.at("traits");
+    }
+    return nullptr;
+}
+
+static TraitStatMappingProjection projectTraitStatMappingFromRawCache(const std::filesystem::path& cachePath)
+{
+    TraitStatMappingProjection projection{};
+    std::ifstream f(cachePath, std::ios::in | std::ios::binary);
+    if (!f.is_open())
+    {
+        return projection;
+    }
+
+    std::ostringstream ss;
+    ss << f.rdbuf();
+    const JsonValue root = parseJson(ss.str());
+    const JsonValue* traits = findLatestRawTraitArray(root);
+    if (!traits || !traits->isArray())
+    {
+        return projection;
+    }
+
+    projection.cacheFound = true;
+    std::map<std::string, std::size_t> unmappedFrequency;
+    for (const JsonValue& trait : traits->asArray())
+    {
+        if (!trait.isObject())
+        {
+            continue;
+        }
+        projection.rawTraitRecords += 1;
+        const std::string description =
+            jsonStringOr(trait, "desc", jsonStringOr(trait, "description", ""));
+        bool mappedTrait = false;
+        if (!hasJsonKey(trait, "effects") || !trait.at("effects").isArray())
+        {
+            continue;
+        }
+        auto countVariable = [&](const std::string& name, const JsonValue& value)
+        {
+            if (value.isNumber() &&
+                std::fabs(value.asNumber()) > 0.00001 &&
+                isAllowedStep12FTraitStatVariable(name, description))
+            {
+                projection.mappedVariables += 1;
+                mappedTrait = true;
+            }
+            else
+            {
+                projection.unmappedVariables += 1;
+                unmappedFrequency[name] += 1;
+            }
+        };
+
+        for (const JsonValue& effect : trait.at("effects").asArray())
+        {
+            if (!effect.isObject())
+            {
+                continue;
+            }
+            std::vector<std::string> seenVariables;
+            if (hasJsonKey(effect, "variables") && effect.at("variables").isObject())
+            {
+                for (const auto& [name, value] : effect.at("variables").asObject())
+                {
+                    seenVariables.push_back(name);
+                    countVariable(name, value);
+                }
+            }
+            for (const auto& [name, value] : effect.asObject())
+            {
+                if (name == "minUnits" || name == "maxUnits" || name == "style" || name == "variables")
+                {
+                    continue;
+                }
+                if (std::find(seenVariables.begin(), seenVariables.end(), name) != seenVariables.end())
+                {
+                    continue;
+                }
+                countVariable(name, value);
+            }
+        }
+        if (mappedTrait)
+        {
+            projection.projectedTraitsWithExecutableEffects += 1;
+        }
+    }
+    projection.topUnmappedVariables.assign(unmappedFrequency.begin(), unmappedFrequency.end());
+    std::sort(projection.topUnmappedVariables.begin(), projection.topUnmappedVariables.end(), [](const auto& a, const auto& b) {
+        if (a.second != b.second)
+        {
+            return a.second > b.second;
+        }
+        return a.first < b.first;
+    });
+    if (projection.topUnmappedVariables.size() > 10)
+    {
+        projection.topUnmappedVariables.resize(10);
+    }
+    return projection;
+}
+
 static void contentFidelityValidationTest(const ContentManager& content, ValidationReport& report, std::ostream& out)
 {
     const std::filesystem::path dataRoot = std::filesystem::absolute(std::filesystem::path("../../data"));
+    const TraitStatMappingProjection traitMappingProjection =
+        projectTraitStatMappingFromRawCache(dataRoot / "_import_cache" / "cdragon_tft_en_us.json");
 
     const std::size_t championFiles = countJsonFiles(dataRoot / "champions");
     const std::size_t abilityFiles = countJsonFiles(dataRoot / "abilities");
@@ -536,6 +1495,9 @@ static void contentFidelityValidationTest(const ContentManager& content, Validat
     std::size_t traitsWithEffects = 0;
     std::size_t traitsWithoutEffects = 0;
     std::size_t explicitPlaceholderTraits = 0;
+    std::map<std::string, std::size_t> traitVariantGroups;
+    std::size_t traitVariants = 0;
+    std::size_t activeTraitVariants = 0;
     for (const auto& [_, trait] : content.traits())
     {
         if (effectCountForTrait(trait) > 0)
@@ -549,6 +1511,12 @@ static void contentFidelityValidationTest(const ContentManager& content, Validat
         if (trait.metadata.isPlaceholder)
         {
             explicitPlaceholderTraits += 1;
+        }
+        if (trait.metadata.isVariant)
+        {
+            traitVariants += 1;
+            const std::string group = trait.metadata.variantGroup.empty() ? "Unknown" : trait.metadata.variantGroup;
+            traitVariantGroups[group] += 1;
         }
     }
 
@@ -600,6 +1568,34 @@ static void contentFidelityValidationTest(const ContentManager& content, Validat
         << " non_placeholder=" << nonPlaceholderAbilities << "\n";
     out << "Traits | executable_effects=" << traitsWithEffects
         << " empty_or_no_executable_effects=" << traitsWithoutEffects << "\n";
+    out << "Trait variants | groups=" << traitVariantGroups.size()
+        << " variants=" << traitVariants
+        << " active_variants=" << activeTraitVariants << "\n";
+    out << "Trait variant groups |";
+    if (traitVariantGroups.empty())
+    {
+        out << " none";
+    }
+    for (const auto& [group, count] : traitVariantGroups)
+    {
+        out << " " << group << "=" << count;
+    }
+    out << "\n";
+    out << "Trait stat mapping | current_executable_before_import=" << traitsWithEffects
+        << " projected_executable_after_import=" << traitMappingProjection.projectedTraitsWithExecutableEffects
+        << " raw_trait_records=" << traitMappingProjection.rawTraitRecords
+        << " mapped_variables=" << traitMappingProjection.mappedVariables
+        << " unmapped_variables=" << traitMappingProjection.unmappedVariables << "\n";
+    out << "Trait stat mapping top unmapped |";
+    if (traitMappingProjection.topUnmappedVariables.empty())
+    {
+        out << " none";
+    }
+    for (const auto& [name, count] : traitMappingProjection.topUnmappedVariables)
+    {
+        out << " " << name << "=" << count;
+    }
+    out << "\n";
     out << "Items | passive_stats_only=" << passiveOnlyItems
         << " triggered_effects=" << triggeredItems
         << " no_runtime_effects=" << noRuntimeEffectItems << "\n";
@@ -634,6 +1630,10 @@ static void contentFidelityValidationTest(const ContentManager& content, Validat
     if (traitsWithoutEffects > 0)
     {
         report.warning("Content fidelity: traits with empty/no executable effects present");
+    }
+    if (!traitMappingProjection.cacheFound)
+    {
+        report.warning("Content fidelity: raw TFT cache missing for trait stat mapping projection");
     }
     if (passiveOnlyItems > 0)
     {
@@ -3159,6 +4159,7 @@ ValidationReport CombatValidation::runAll(const ContentManager& content, std::os
     step("Delayed events", [&]() { delayedEventTest(content, report); });
     step("Replay consistency", [&]() { replayConsistencyTest(content, report, out); });
     step("Benchmark", [&]() { benchmarkTest(content, report, out); });
+    step("Trait effect vocabulary", [&]() { traitEffectVocabularyValidationTest(report); });
     step("Validation scenarios", [&]() { scenarioSuite(content, report, out); });
     step("Macro validations", [&]() { macroSystemValidationTest(content, report, out); });
     step("Strategic AI validations", [&]() { strategicAiValidationTest(content, report); });

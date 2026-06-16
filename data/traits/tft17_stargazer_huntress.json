@@ -1,0 +1,18 @@
+{
+  "name": "TFT17_Stargazer_Huntress",
+  "displayName": "Stargazer",
+  "breakpoints": [3, 5, 7],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Stargazer_Huntress",
+  "isVariant": true,
+  "variantGroup": "Stargazer",
+  "variantParentSourceId": "TFT17_Stargazer",
+  "variantSelectionKey": "Huntress",
+  "description": "Stargazers chart a different constellation every game. This game: <TFTStargazer>The Huntress</TFTStargazer>.<br><br>Combat Start: Mark the highest Health enemies. <br><br>Allies in empowered hexes gain @Huntress_AS_Teamwide*100@% Attack Speed. Stargazers in empowered hexes gain more and heal for @Huntress_Heal*100@% of their max Health when a marked enemy dies.<br><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marks</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marks</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marks</row><br><br><rules>More hexes reveal at each player level</rules>",
+  "tooltip": "Stargazers chart a different constellation every game. This game: <TFTStargazer>The Huntress</TFTStargazer>.<br><br>Combat Start: Mark the highest Health enemies. <br><br>Allies in empowered hexes gain @Huntress_AS_Teamwide*100@% Attack Speed. Stargazers in empowered hexes gain more and heal for @Huntress_Heal*100@% of their max Health when a marked enemy dies.<br><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marks</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marks</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marks</row><br><br><rules>More hexes reveal at each player level</rules>",
+  "tiers": [
+
+  ],
+  "rawVariables": [{ "name": "Huntress_AS", "value": "0.15" }, { "name": "Huntress_AS", "value": "0.45" }, { "name": "Huntress_AS", "value": "0.7" }, { "name": "Huntress_AS_Teamwide", "value": "0.15" }, { "name": "Huntress_AS_Teamwide", "value": "0.15" }, { "name": "Huntress_AS_Teamwide", "value": "0.15" }, { "name": "Huntress_Heal", "value": "0.15" }, { "name": "Huntress_Heal", "value": "0.15" }, { "name": "Huntress_Heal", "value": "0.15" }, { "name": "NumMarks", "value": "3" }, { "name": "NumMarks", "value": "5" }, { "name": "NumMarks", "value": "9" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 3", "No executable effects mapped for breakpoint 5", "No executable effects mapped for breakpoint 7", "Unmapped trait variable: Huntress_AS", "Unmapped trait variable: Huntress_AS_Teamwide", "Unmapped trait variable: Huntress_Heal", "Unmapped trait variable: NumMarks", "Trait has no mapped executable effects"]
+}

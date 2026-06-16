@@ -1,27 +1,41 @@
 {
   "name": "Marauder",
+  "displayName": "Marauder",
   "breakpoints": [2, 4, 6],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_MeleeTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Your team gains @TeamwideBonus*100@% Omnivamp. Marauders gain more Omnivamp, Attack Damage, and their Omnivamp overhealing is converted into Shield (up to @MaxPercentHealthShield*100@% max Health.)<br><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%.</row>",
+  "tooltip": "Your team gains @TeamwideBonus*100@% Omnivamp. Marauders gain more Omnivamp, Attack Damage, and their Omnivamp overhealing is converted into Shield (up to @MaxPercentHealthShield*100@% max Health.)<br><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%.</row>",
   "tiers": [
     {
       "breakpoint": 2,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Marauder:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Marauder:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToAllies", "statusEffect": { "name": "Trait:Marauder:TeamwideBonus:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Marauder:AD:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Marauder:Omnivamp:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 4,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Marauder:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.07, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Marauder:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToAllies", "statusEffect": { "name": "Trait:Marauder:TeamwideBonus:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Marauder:AD:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Marauder:Omnivamp:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.07, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 6,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Marauder:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Marauder:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToAllies", "statusEffect": { "name": "Trait:Marauder:TeamwideBonus:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Marauder:AD:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } },
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Marauder:Omnivamp:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     }
-  ]
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.18" }, { "name": "AD", "value": "0.35" }, { "name": "AD", "value": "0.55" }, { "name": "MaxPercentHealthShield", "value": "0.25" }, { "name": "MaxPercentHealthShield", "value": "0.25" }, { "name": "MaxPercentHealthShield", "value": "0.25" }, { "name": "Omnivamp", "value": "0.05" }, { "name": "Omnivamp", "value": "0.07" }, { "name": "Omnivamp", "value": "0.1" }, { "name": "ShieldAD", "value": "null" }, { "name": "ShieldAD", "value": "null" }, { "name": "ShieldAD", "value": "0.2" }, { "name": "TeamwideBonus", "value": "0.05" }, { "name": "TeamwideBonus", "value": "0.05" }, { "name": "TeamwideBonus", "value": "0.05" }],
+  "importWarnings": ["Unmapped non-numeric trait variable: ShieldAD", "Unmapped trait variable: MaxPercentHealthShield", "Unmapped trait variable: ShieldAD"]
 }

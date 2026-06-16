@@ -1,24 +1,35 @@
 {
   "name": "Timebreaker",
+  "displayName": "Timebreaker",
   "breakpoints": [2, 3, 4],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Timebreaker",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "<row>(@MinUnits@) Allies gain @AttackSpeed*100@% Attack Speed.</row><br><row>(@MinUnits@) AND When you lose, gain free rerolls. When you win, store XP in a Temporal Core (scales with stage).</row><br><row>(@MinUnits@) AND Timebreakers gain an additional @TimebreakerAdditionalAS*100@% Attack Speed</row><br><br><rules>Rerolls on Loss: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>XP on Win: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
+  "tooltip": "<row>(@MinUnits@) Allies gain @AttackSpeed*100@% Attack Speed.</row><br><row>(@MinUnits@) AND When you lose, gain free rerolls. When you win, store XP in a Temporal Core (scales with stage).</row><br><row>(@MinUnits@) AND Timebreakers gain an additional @TimebreakerAdditionalAS*100@% Attack Speed</row><br><br><rules>Rerolls on Loss: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>XP on Win: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
   "tiers": [
     {
       "breakpoint": 2,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Timebreaker:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Timebreaker:AttackSpeed:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 3,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Timebreaker:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Timebreaker:AttackSpeed:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     },
     {
       "breakpoint": 4,
       "effects": [
-        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Timebreaker:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Timebreaker:AttackSpeed:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
       ]
     }
-  ]
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.15" }, { "name": "AttackSpeed", "value": "0.15" }, { "name": "AttackSpeed", "value": "0.15" }, { "name": "TimebreakerAdditionalAS", "value": "null" }, { "name": "TimebreakerAdditionalAS", "value": "null" }, { "name": "TimebreakerAdditionalAS", "value": "0.5" }, { "name": "{aaae13a0}", "value": "null" }, { "name": "{aaae13a0}", "value": "1" }, { "name": "{aaae13a0}", "value": "1" }],
+  "importWarnings": ["Unmapped non-numeric trait variable: TimebreakerAdditionalAS", "Unmapped non-numeric trait variable: {aaae13a0}", "Unmapped trait variable: TimebreakerAdditionalAS", "Unmapped trait variable: {aaae13a0}"]
 }

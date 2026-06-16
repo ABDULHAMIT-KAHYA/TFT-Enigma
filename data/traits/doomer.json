@@ -1,7 +1,18 @@
 {
   "name": "Doomer",
+  "displayName": "Doomer",
   "breakpoints": [1],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_VexUniqueTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Combat Start: Mark all enemies with Doom.<br><br>The first time enemies are damaged each combat, their Doom is consumed, stealing @ADAP1@% Attack Damage and Ability Power from them and granting it to your strongest Vex.",
+  "tooltip": "Combat Start: Mark all enemies with Doom.<br><br>The first time enemies are damaged each combat, their Doom is consumed, stealing @ADAP1@% Attack Damage and Ability Power from them and granting it to your strongest Vex.",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [{ "name": "ADAP1", "value": "12" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 1", "Unmapped trait variable: ADAP1", "Trait has no mapped executable effects"]
 }

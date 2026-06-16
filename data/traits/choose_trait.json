@@ -1,7 +1,18 @@
 {
   "name": "Choose Trait",
+  "displayName": "Choose Trait",
   "breakpoints": [1],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MissFortuneUndeterminedTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "When you field Miss Fortune, choose between Conduit Mode, Challenger Mode, and Replicator Mode. Miss Fortune has a unique ability based on her mode and gains the associated trait.",
+  "tooltip": "When you field Miss Fortune, choose between Conduit Mode, Challenger Mode, and Replicator Mode. Miss Fortune has a unique ability based on her mode and gains the associated trait.",
   "tiers": [
 
-  ]
+  ],
+  "rawVariables": [],
+  "importWarnings": ["Trait has no mapped executable effects"]
 }

@@ -1,7 +1,35 @@
 {
   "name": "Sniper",
+  "displayName": "Sniper",
   "breakpoints": [2, 3, 4],
+  "isPlaceholder": false,
+  "sourceId": "TFT17_RangedTrait",
+  "isVariant": false,
+  "variantGroup": "",
+  "variantParentSourceId": "",
+  "variantSelectionKey": "",
+  "description": "Snipers gain Damage Amp, increased against targets farther away.<br><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA%; +@PerHexIncrease@%&nbsp;%i:scaleDA% per hex</row><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA%; +@PerHexIncrease@%&nbsp;%i:scaleDA% per hex</row><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA%; +@PerHexIncrease@%&nbsp;%i:scaleDA% per hex</row>",
+  "tooltip": "Snipers gain Damage Amp, increased against targets farther away.<br><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA%; +@PerHexIncrease@%&nbsp;%i:scaleDA% per hex</row><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA%; +@PerHexIncrease@%&nbsp;%i:scaleDA% per hex</row><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA%; +@PerHexIncrease@%&nbsp;%i:scaleDA% per hex</row>",
   "tiers": [
-
-  ]
+    {
+      "breakpoint": 2,
+      "effects": [
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Sniper:PercentDamageIncrease:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+      ]
+    },
+    {
+      "breakpoint": 3,
+      "effects": [
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Sniper:PercentDamageIncrease:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+      ]
+    },
+    {
+      "breakpoint": 4,
+      "effects": [
+        { "hook": "OnCombatStart", "type": "ApplyStatusToTraitUnits", "statusEffect": { "name": "Trait:Sniper:PercentDamageIncrease:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" } }
+      ]
+    }
+  ],
+  "rawVariables": [{ "name": "PerHexIncrease", "value": "2" }, { "name": "PerHexIncrease", "value": "3" }, { "name": "PerHexIncrease", "value": "4" }, { "name": "PercentDamageIncrease", "value": "18" }, { "name": "PercentDamageIncrease", "value": "25" }, { "name": "PercentDamageIncrease", "value": "35" }],
+  "importWarnings": ["Unmapped trait variable: PerHexIncrease"]
 }

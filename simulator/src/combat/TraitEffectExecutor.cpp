@@ -1,6 +1,7 @@
 #include "combat/TraitEffectExecutor.hpp"
 #include "constants/CombatConstants.hpp"
 #include "content/ContentManager.hpp"
+#include "combat/DamageSystem.hpp"
 #include "combat/StatSystem.hpp"
 #include <algorithm>
 #include <cmath>
@@ -69,6 +70,47 @@ static void applyStatus(GameState& state, Unit& applier, Unit& target, const Sta
     state.logger().combat(ss.str());
 }
 
+static Unit* findApplier(GameState& state, TeamId team, const TraitDefinition& def, Unit* source)
+{
+    if (source && source->isAlive() && source->getTeamId() == team)
+    {
+        return source;
+    }
+
+    for (Unit& u : state.units())
+    {
+        if (u.isAlive() && u.getTeamId() == team && u.hasTrait(def.trait.name))
+        {
+            return &u;
+        }
+    }
+
+    for (Unit& u : state.units())
+    {
+        if (u.isAlive() && u.getTeamId() == team)
+        {
+            return &u;
+        }
+    }
+
+    return nullptr;
+}
+
+static void applyStatusToTeam(GameState& state,
+                              TeamId targetTeam,
+                              Unit& applier,
+                              const StatusEffect& effect)
+{
+    for (Unit& u : state.units())
+    {
+        if (!u.isAlive() || u.getTeamId() != targetTeam)
+        {
+            continue;
+        }
+        applyStatus(state, applier, u, effect);
+    }
+}
+
 static void applyShield(GameState& state, Unit& applier, Unit& target, int amount, std::int32_t durationMs)
 {
     if (amount <= 0)
@@ -84,13 +126,136 @@ static void applyShield(GameState& state, Unit& applier, Unit& target, int amoun
         ModifierType::Flat,
         static_cast<float>(amount),
         durationMs,
-        0,
+        durationMs,
         0,
         0,
         DamageType::TrueDamage
     };
 
     applyStatus(state, applier, target, shield);
+}
+
+static void applyShieldToTeam(GameState& state,
+                              TeamId targetTeam,
+                              Unit& applier,
+                              int amount,
+                              std::int32_t durationMs)
+{
+    for (Unit& u : state.units())
+    {
+        if (!u.isAlive() || u.getTeamId() != targetTeam)
+        {
+            continue;
+        }
+        applyShield(state, applier, u, amount, durationMs);
+    }
+}
+
+static void applyHeal(GameState& state, Unit& applier, Unit& target, int amount)
+{
+    if (amount <= 0)
+    {
+        return;
+    }
+
+    const std::int32_t hpBefore = target.getHp();
+    target.heal(amount);
+
+    std::ostringstream ss;
+    ss << state.timeMs() << "ms " << applier.getName()
+       << " heals " << target.getName()
+       << " for " << (target.getHp() - hpBefore);
+    state.logger().combat(ss.str());
+}
+
+static void applyHealToTeam(GameState& state,
+                            TeamId targetTeam,
+                            Unit& applier,
+                            int amount)
+{
+    for (Unit& u : state.units())
+    {
+        if (!u.isAlive() || u.getTeamId() != targetTeam)
+        {
+            continue;
+        }
+        applyHeal(state, applier, u, amount);
+    }
+}
+
+static bool shouldApplyDamage(const DamageFormula& formula)
+{
+    return formula.baseDamage != 0 ||
+           formula.adRatio != 0.0f ||
+           formula.apRatio != 0.0f;
+}
+
+static const char* damageTypeName(DamageType type)
+{
+    switch (type)
+    {
+        case DamageType::Physical: return "Physical";
+        case DamageType::Magic: return "Magic";
+        case DamageType::TrueDamage: return "True";
+    }
+    return "Unknown";
+}
+
+static std::int32_t lroundToInt(float v)
+{
+    return static_cast<std::int32_t>(std::lround(v));
+}
+
+static void applyDamage(GameState& state,
+                        const TraitDefinition& def,
+                        Unit& applier,
+                        Unit& target,
+                        const DamageFormula& formula)
+{
+    if (!shouldApplyDamage(formula))
+    {
+        return;
+    }
+
+    const float ad = StatSystem::getFinalStat(applier, StatType::AttackDamage);
+    const float ap = StatSystem::getFinalStat(applier, StatType::AbilityPower);
+    const std::int32_t adContribution = lroundToInt(ad * formula.adRatio);
+    const std::int32_t apContribution = lroundToInt(ap * formula.apRatio);
+    const std::int32_t raw = formula.baseDamage + adContribution + apContribution;
+    if (raw <= 0)
+    {
+        return;
+    }
+
+    const DamageDebugResult dmg =
+        DamageSystem::calculateDamageDebug(raw, formula.damageType, target);
+    target.applyDamage(dmg.finalDamage);
+
+    std::ostringstream ss;
+    ss << state.timeMs() << "ms " << applier.getName()
+       << " deals trait damage [" << def.trait.name << "] to " << target.getName()
+       << " | Raw: " << raw
+       << " = " << formula.baseDamage << " base + "
+       << adContribution << " AD + " << apContribution << " AP"
+       << " | Type: " << damageTypeName(formula.damageType)
+       << " | Final: " << dmg.finalDamage;
+    state.logger().combat(ss.str());
+}
+
+static void applyDamageToTeam(GameState& state,
+                              const TraitDefinition& def,
+                              TeamId targetTeam,
+                              Unit& applier,
+                              const DamageFormula& formula)
+{
+    for (Unit& u : state.units())
+    {
+        if (!u.isAlive() || u.getTeamId() != targetTeam)
+        {
+            continue;
+        }
+        applyDamage(state, def, applier, u, formula);
+    }
 }
 
 static void logActivation(GameState& state, TeamId team, const ActiveTrait& trait)
@@ -135,40 +300,61 @@ static void runEffectsForHook(GameState& state,
                 applyStatus(state, u, u, effect.statusEffect);
             }
         }
-        else if (effect.type == TraitEffectType::ApplyStatusToEnemyTeam)
+        else if (effect.type == TraitEffectType::ApplyStatusToAllies)
         {
-            const TeamId enemy = enemyTeamOf(team);
-            Unit* applierPtr = source;
-            if (!applierPtr)
-            {
-                for (Unit& u : state.units())
-                {
-                    if (!u.isAlive() || u.getTeamId() != team)
-                    {
-                        continue;
-                    }
-                    if (!u.hasTrait(def.trait.name))
-                    {
-                        continue;
-                    }
-                    applierPtr = &u;
-                    break;
-                }
-            }
-
+            Unit* applierPtr = findApplier(state, team, def, source);
             if (!applierPtr)
             {
                 continue;
             }
 
-            for (Unit& u : state.units())
+            applyStatusToTeam(state, team, *applierPtr, effect.statusEffect);
+        }
+        else if (effect.type == TraitEffectType::ApplyStatusToEnemies ||
+                 effect.type == TraitEffectType::ApplyStatusToEnemyTeam)
+        {
+            const TeamId enemy = enemyTeamOf(team);
+            Unit* applierPtr = findApplier(state, team, def, source);
+            if (!applierPtr)
             {
-                if (!u.isAlive() || u.getTeamId() != enemy)
-                {
-                    continue;
-                }
-                applyStatus(state, *applierPtr, u, effect.statusEffect);
+                continue;
             }
+
+            applyStatusToTeam(state, enemy, *applierPtr, effect.statusEffect);
+        }
+        else if (effect.type == TraitEffectType::Shield)
+        {
+            Unit* applierPtr = findApplier(state, team, def, source);
+            if (!applierPtr)
+            {
+                continue;
+            }
+
+            const std::int32_t durationMs =
+                effect.statusEffect.durationMs > 0
+                    ? effect.statusEffect.durationMs
+                    : CombatConstants::TraitShieldOnCombatStartDurationMs;
+            applyShieldToTeam(state, team, *applierPtr, effect.shieldAmount, durationMs);
+        }
+        else if (effect.type == TraitEffectType::Heal)
+        {
+            Unit* applierPtr = findApplier(state, team, def, source);
+            if (!applierPtr)
+            {
+                continue;
+            }
+
+            applyHealToTeam(state, team, *applierPtr, effect.healAmount);
+        }
+        else if (effect.type == TraitEffectType::DealDamage)
+        {
+            Unit* applierPtr = findApplier(state, team, def, source);
+            if (!applierPtr)
+            {
+                continue;
+            }
+
+            applyDamageToTeam(state, def, enemyTeamOf(team), *applierPtr, effect.damageFormula);
         }
         else if (effect.type == TraitEffectType::StackStatusOnAttack)
         {

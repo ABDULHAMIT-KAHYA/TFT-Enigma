@@ -1,0 +1,18 @@
+{
+  "name": "TFT17_Stargazer_Serpent",
+  "displayName": "Stargazer",
+  "breakpoints": [3, 5, 7],
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Stargazer_Serpent",
+  "isVariant": true,
+  "variantGroup": "Stargazer",
+  "variantParentSourceId": "TFT17_Stargazer",
+  "variantSelectionKey": "Serpent",
+  "description": "Stargazers chart a different constellation every game. This game: <TFTStargazer>The Serpent</TFTStargazer>.<br><br>Allies in empowered hexes gain @Serpent_DR_Teamwide*100@% Durability. Stargazers in empowered hexes gain more and poison enemies, repeating a portion of damage dealt as magic damage over @Serpent_Duration@ seconds.<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%, @Serpent_Poison*100@% poison damage</expandRow><br><br><rules>More hexes reveal at each player level</rules>",
+  "tooltip": "Stargazers chart a different constellation every game. This game: <TFTStargazer>The Serpent</TFTStargazer>.<br><br>Allies in empowered hexes gain @Serpent_DR_Teamwide*100@% Durability. Stargazers in empowered hexes gain more and poison enemies, repeating a portion of damage dealt as magic damage over @Serpent_Duration@ seconds.<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%, @Serpent_Poison*100@% poison damage</expandRow><br><br><rules>More hexes reveal at each player level</rules>",
+  "tiers": [
+
+  ],
+  "rawVariables": [{ "name": "Serpent_DR", "value": "0.05" }, { "name": "Serpent_DR", "value": "0.1" }, { "name": "Serpent_DR", "value": "0.15" }, { "name": "Serpent_DR_Teamwide", "value": "0.05" }, { "name": "Serpent_DR_Teamwide", "value": "0.05" }, { "name": "Serpent_DR_Teamwide", "value": "0.05" }, { "name": "Serpent_Duration", "value": "3" }, { "name": "Serpent_Duration", "value": "3" }, { "name": "Serpent_Duration", "value": "3" }, { "name": "Serpent_Poison", "value": "0.2" }, { "name": "Serpent_Poison", "value": "0.4" }, { "name": "Serpent_Poison", "value": "0.6" }],
+  "importWarnings": ["No executable effects mapped for breakpoint 3", "No executable effects mapped for breakpoint 5", "No executable effects mapped for breakpoint 7", "Unmapped trait variable: Serpent_DR", "Unmapped trait variable: Serpent_DR_Teamwide", "Unmapped trait variable: Serpent_Duration", "Unmapped trait variable: Serpent_Poison", "Trait has no mapped executable effects"]
+}
