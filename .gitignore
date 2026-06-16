@@ -6,12 +6,11 @@ run_output.txt
 
 build/
 .vscode/
-# Python virtual environments
-aider-env/
+
 venv/
 .venv/
 
-# Python cache
+
 __pycache__/
 *.pyc
 .aider*
