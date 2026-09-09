@@ -321,6 +321,93 @@ static void applyHealFromDamage(GameState& state,
     state.logger().combat(ss.str());
 }
 
+static void applyDirectHeal(GameState& state,
+                            Unit& owner,
+                            Unit& target,
+                            const AbilityEffect& effect,
+                            const std::string& itemName,
+                            bool& triggered)
+{
+    if (effect.healAmount <= 0)
+    {
+        return;
+    }
+
+    const std::int32_t before = target.getHp();
+    target.heal(effect.healAmount);
+    if (target.getHp() == before)
+    {
+        return;
+    }
+
+    triggered = true;
+    std::ostringstream ss;
+    ss << state.timeMs() << "ms " << itemName << " heals " << target.getName()
+       << " for " << (target.getHp() - before)
+       << " from " << owner.getName();
+    state.logger().combat(ss.str());
+}
+
+static void applyDirectShield(GameState& state,
+                              Unit& owner,
+                              Unit& target,
+                              const AbilityEffect& effect,
+                              const std::string& itemName,
+                              bool& triggered)
+{
+    if (effect.shieldAmount <= 0)
+    {
+        return;
+    }
+
+    StatusEffect shield{};
+    shield.name = effect.name.empty() ? itemName + " Shield" : effect.name;
+    shield.effectType = StatusEffectType::Shield;
+    shield.crowdControlType = CrowdControlType::None;
+    shield.affectedStat = StatType::None;
+    shield.modifierType = ModifierType::Flat;
+    shield.value = static_cast<float>(effect.shieldAmount);
+    shield.durationMs = CombatConstants::TraitShieldOnCombatStartDurationMs;
+    shield.remainingMs = shield.durationMs;
+    shield.tickIntervalMs = 0;
+    shield.tickTimerMs = 0;
+    shield.damageType = DamageType::TrueDamage;
+
+    target.addStatusEffect(shield);
+    triggered = true;
+
+    std::ostringstream ss;
+    ss << state.timeMs() << "ms " << itemName << " shields " << target.getName()
+       << " for " << effect.shieldAmount
+       << " from " << owner.getName();
+    state.logger().combat(ss.str());
+}
+
+static std::size_t findUnitIndex(GameState& state, const Unit& unit)
+{
+    const std::vector<Unit>& units = state.units();
+    for (std::size_t i = 0; i < units.size(); ++i)
+    {
+        if (&units[i] == &unit)
+        {
+            return i;
+        }
+    }
+    return units.size();
+}
+
+static Unit* firstAliveEnemy(GameState& state, const Unit& owner)
+{
+    for (Unit& unit : state.units())
+    {
+        if (unit.isAlive() && unit.isEnemyOf(owner))
+        {
+            return &unit;
+        }
+    }
+    return nullptr;
+}
+
 static void executeItemEffects(GameState& state,
                               Unit& owner,
                               Unit& target,
@@ -369,19 +456,13 @@ static void executeItemEffects(GameState& state,
                 triggered = true;
             }
 
-            if (trigger == AbilityTrigger::OnHit)
+            applyDirectHeal(state, owner, *t, effect, item.name, triggered);
+            applyDirectShield(state, owner, *t, effect, item.name, triggered);
+
+            if (trigger == AbilityTrigger::OnHit || trigger == AbilityTrigger::OnDamage)
             {
                 applyHealFromDamage(state, owner, effect, item.name, damageDealt);
                 if (effect.healPercentOfDamage > 0.0f && damageDealt > 0)
-                {
-                    triggered = true;
-                }
-            }
-
-            if (trigger == AbilityTrigger::OnCrit && wasCrit)
-            {
-                applyStatusWithStacking(state, owner, *t, effect, item.name);
-                if (effect.appliesStatusEffect)
                 {
                     triggered = true;
                 }
@@ -500,6 +581,51 @@ namespace ItemSystem
         }
     }
 
+    void onDamage(GameState& state, Unit& source, Unit& target, std::int32_t damageDealt)
+    {
+        if (damageDealt <= 0 || !source.isAlive())
+        {
+            return;
+        }
+
+        const std::size_t ownerIndex = findUnitIndex(state, source);
+        const std::vector<Item>& items = source.items();
+        for (std::size_t itemIndex = 0; itemIndex < items.size(); ++itemIndex)
+        {
+            executeItemEffects(state, source, target, items[itemIndex], ownerIndex, itemIndex, AbilityTrigger::OnDamage, damageDealt, false);
+        }
+    }
+
+    void onDamageTaken(GameState& state, Unit& unit, Unit* source, std::int32_t damageTaken)
+    {
+        if (damageTaken <= 0 || !unit.isAlive())
+        {
+            return;
+        }
+
+        Unit& target = source ? *source : unit;
+        const std::size_t ownerIndex = findUnitIndex(state, unit);
+        const std::vector<Item>& items = unit.items();
+        for (std::size_t itemIndex = 0; itemIndex < items.size(); ++itemIndex)
+        {
+            executeItemEffects(state, unit, target, items[itemIndex], ownerIndex, itemIndex, AbilityTrigger::OnDamageTaken, damageTaken, false);
+        }
+    }
+
+    void onKill(GameState& state, Unit& killer, Unit& victim)
+    {
+        if (!killer.isAlive())
+        {
+            return;
+        }
+
+        const std::size_t ownerIndex = findUnitIndex(state, killer);
+        const std::vector<Item>& items = killer.items();
+        for (std::size_t itemIndex = 0; itemIndex < items.size(); ++itemIndex)
+        {
+            executeItemEffects(state, killer, victim, items[itemIndex], ownerIndex, itemIndex, AbilityTrigger::OnKill, 0, false);
+        }
+    }
     void onLowHealth(GameState& state, Unit& unit)
     {
         Unit& dummyTarget = unit;
@@ -519,22 +645,39 @@ namespace ItemSystem
         }
     }
 
-    void onDeath(GameState& state, Unit& unit)
+    void onDeath(GameState& state, Unit& unit, Unit* source)
     {
-        Unit& dummyTarget = unit;
-        std::size_t ownerIndex = 0;
-        std::vector<Unit>& units = state.units();
-        for (; ownerIndex < units.size(); ++ownerIndex)
-        {
-            if (&units[ownerIndex] == &unit)
-            {
-                break;
-            }
-        }
+        Unit& target = source ? *source : unit;
+        const std::size_t ownerIndex = findUnitIndex(state, unit);
         const std::vector<Item>& items = unit.items();
         for (std::size_t itemIndex = 0; itemIndex < items.size(); ++itemIndex)
         {
-            executeItemEffects(state, unit, dummyTarget, items[itemIndex], ownerIndex, itemIndex, AbilityTrigger::OnDeath, 0, false);
+            executeItemEffects(state, unit, target, items[itemIndex], ownerIndex, itemIndex, AbilityTrigger::OnDeath, 0, false);
+        }
+    }
+
+    void tick(GameState& state)
+    {
+        std::vector<Unit>& units = state.units();
+        for (std::size_t unitIndex = 0; unitIndex < units.size(); ++unitIndex)
+        {
+            Unit& unit = units[unitIndex];
+            if (!unit.isAlive())
+            {
+                continue;
+            }
+
+            Unit* target = firstAliveEnemy(state, unit);
+            if (!target)
+            {
+                continue;
+            }
+
+            const std::vector<Item>& items = unit.items();
+            for (std::size_t itemIndex = 0; itemIndex < items.size(); ++itemIndex)
+            {
+                executeItemEffects(state, unit, *target, items[itemIndex], unitIndex, itemIndex, AbilityTrigger::Periodic, 0, false);
+            }
         }
     }
 }

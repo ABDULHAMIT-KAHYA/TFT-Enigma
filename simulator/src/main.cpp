@@ -5,6 +5,7 @@
 #include "ai/SelfPlay.hpp"
 #include "import/TFTDataImporter.hpp"
 #include "validation/ReplaySystem.hpp"
+#include "macro/LobbySimulation.hpp"
 #include "macro/MacroSimulation.hpp"
 #include "core/RandomManager.hpp"
 #include "macro/PlayerState.hpp"
@@ -31,6 +32,8 @@ int main(int argc, char** argv)
     bool importCachedItems = false;
     bool useMonteCarlo = false;
     bool mcDebug = false;
+    bool lobby = false;
+    std::uint32_t lobbySeed = baseSeed;
     int selfplay = 0;
     std::string scenarioPath;
     std::string recordReplayScenario;
@@ -69,6 +72,16 @@ int main(int argc, char** argv)
         {
             useMonteCarlo = true;
             mcDebug = true;
+        }
+        else if (arg == "--lobby")
+        {
+            lobby = true;
+        }
+        else if (arg == "--lobby-seed" && i + 1 < argc)
+        {
+            lobby = true;
+            lobbySeed = static_cast<std::uint32_t>(std::stoul(argv[i + 1]));
+            i += 1;
         }
         else if (arg == "--scenario" && i + 1 < argc)
         {
@@ -125,6 +138,10 @@ int main(int argc, char** argv)
     if (!scenarioPath.empty())
     {
         std::cout << "Scenario run\n";
+    }
+    else if (lobby)
+    {
+        std::cout << "Lobby simulation\n";
     }
     else if (selfplay > 0)
     {
@@ -272,6 +289,11 @@ int main(int argc, char** argv)
     if (selfplay > 0)
     {
         return SelfPlay::run(content, baseSeed, selfplay, std::cout);
+    }
+
+    if (lobby)
+    {
+        return LobbySimulation::run(content, lobbySeed, std::cout);
     }
 
     if (validate)

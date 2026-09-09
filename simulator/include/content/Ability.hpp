@@ -47,7 +47,9 @@ enum class AbilityTrigger
     OnKill,
     OnDeath,
     OnLowHealth,
-    OnDamageTaken
+    OnDamageTaken,
+    OnDamage,
+    Periodic
 };
 
 enum class TargetType

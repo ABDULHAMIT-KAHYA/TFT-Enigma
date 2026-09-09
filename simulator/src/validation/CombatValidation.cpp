@@ -17,6 +17,7 @@
 #include "combat/TraitEffectExecutor.hpp"
 #include "combat/TraitSystem.hpp"
 #include "macro/LegalActionGenerator.hpp"
+#include "macro/LobbySimulation.hpp"
 #include "macro/MacroExecutor.hpp"
 #include "macro/MacroSimulation.hpp"
 #include "macro/EconomySystem.hpp"
@@ -1898,6 +1899,442 @@ static void itemUnsupportedRuntimeFixtureValidationTest(const ContentManager& co
     else report.warning("ItemUnsupportedRuntime: no execute/summon metadata found");
 }
 
+static StatusEffect makeSyntheticItemStatus(std::string name,
+                                            StatusEffectType effectType,
+                                            StatType statType,
+                                            ModifierType modifierType,
+                                            float value,
+                                            std::int32_t durationMs)
+{
+    StatusEffect status{};
+    status.name = std::move(name);
+    status.effectType = effectType;
+    status.crowdControlType = CrowdControlType::None;
+    status.affectedStat = statType;
+    status.modifierType = modifierType;
+    status.value = value;
+    status.durationMs = durationMs;
+    status.remainingMs = durationMs;
+    status.tickIntervalMs = 0;
+    status.tickTimerMs = 0;
+    status.damageType = DamageType::TrueDamage;
+    return status;
+}
+
+static Item makeSyntheticStatusItem(std::string name,
+                                    AbilityTrigger trigger,
+                                    StatusEffect status,
+                                    AreaShape areaShape,
+                                    std::int32_t maxStacks = 0)
+{
+    Item item{};
+    item.name = std::move(name);
+    item.metadata.sourceId = item.name;
+    item.metadata.displayName = item.name;
+    item.metadata.itemCategory = "CombatItem";
+    item.metadata.isPlaceholder = false;
+
+    AbilityEffect effect{};
+    effect.name = item.name + " Effect";
+    effect.trigger = trigger;
+    effect.areaShape = areaShape;
+    effect.radius = 0;
+    effect.appliesStatusEffect = true;
+    effect.appliedStatusEffect = std::move(status);
+    effect.maxStacks = maxStacks;
+    item.triggeredEffects.push_back(effect);
+    return item;
+}
+
+static Item makeSyntheticHealOnDamageItem()
+{
+    Item item{};
+    item.name = "Validation Synthetic OnDamage Heal Item";
+    item.metadata.sourceId = item.name;
+    item.metadata.displayName = item.name;
+    item.metadata.itemCategory = "CombatItem";
+    item.metadata.isPlaceholder = false;
+
+    AbilityEffect effect{};
+    effect.name = item.name + " Effect";
+    effect.trigger = AbilityTrigger::OnDamage;
+    effect.areaShape = AreaShape::Self;
+    effect.healPercentOfDamage = 0.5f;
+    item.triggeredEffects.push_back(effect);
+    return item;
+}
+
+static Item makeSyntheticShieldOnDamageTakenItem()
+{
+    Item item{};
+    item.name = "Validation Synthetic OnDamageTaken Shield Item";
+    item.metadata.sourceId = item.name;
+    item.metadata.displayName = item.name;
+    item.metadata.itemCategory = "CombatItem";
+    item.metadata.isPlaceholder = false;
+
+    AbilityEffect effect{};
+    effect.name = item.name + " Effect";
+    effect.trigger = AbilityTrigger::OnDamageTaken;
+    effect.areaShape = AreaShape::Self;
+    effect.shieldAmount = 80;
+    item.triggeredEffects.push_back(effect);
+    return item;
+}
+
+static Item makeSyntheticBurnItem()
+{
+    StatusEffect burn = makeSyntheticItemStatus(
+        "Validation Synthetic Burn",
+        StatusEffectType::DamageOverTime,
+        StatType::None,
+        ModifierType::Flat,
+        25.0f,
+        1000);
+    burn.tickIntervalMs = 500;
+    burn.tickTimerMs = 0;
+    burn.damageType = DamageType::TrueDamage;
+    return makeSyntheticStatusItem("Validation Synthetic Burn Item", AbilityTrigger::OnHit, burn, AreaShape::SingleTarget);
+}
+
+static void itemEventSurfaceFixtureValidationTest(const ContentManager& content,
+                                                  ValidationReport& report,
+                                                  std::ostream& out)
+{
+    bool onCritOk = false;
+    bool onCastOk = false;
+    bool onDamageOk = false;
+    bool onDamageTakenOk = false;
+    bool onKillOk = false;
+    bool onDeathOk = false;
+    bool periodicOk = false;
+    bool burnOk = false;
+    bool stackingOk = false;
+    bool deterministicOk = false;
+
+    {
+        StatusEffect critStatus = makeSyntheticItemStatus("Validation OnCrit AD", StatusEffectType::BonusAttackDamage, StatType::AttackDamage, ModifierType::Flat, 10.0f, ValidationConstants::LongDurationMs);
+        const Item item = makeSyntheticStatusItem("Validation Synthetic OnCrit Item", AbilityTrigger::OnCrit, critStatus, AreaShape::Self, 1);
+        std::ostringstream log;
+        GameState state = makeThreeUnitItemState(content, item, log);
+        Unit& holder = state.units()[0];
+        Unit& enemy = state.units()[2];
+        ItemSystem::onHit(state, holder, enemy, 50, DamageType::Physical, true);
+        const std::size_t afterWrongHook = countMatchingStatus(holder, critStatus);
+        ItemSystem::onCrit(state, holder, enemy);
+        ItemSystem::onCrit(state, holder, enemy);
+        onCritOk = afterWrongHook == 0 && countMatchingStatus(holder, critStatus) == 1;
+    }
+
+    {
+        const Item item = makeSyntheticDamageItem("Validation Synthetic OnCast Damage Item", AbilityTrigger::OnCast, 30, DamageType::TrueDamage);
+        std::ostringstream log;
+        GameState state = makeThreeUnitItemState(content, item, log);
+        Unit& holder = state.units()[0];
+        Unit& ally = state.units()[1];
+        Unit& enemy = state.units()[2];
+        Ability ability{};
+        ability.name = "Validation Item Cast Ability";
+        const std::int32_t holderBefore = holder.getHp();
+        const std::int32_t allyBefore = ally.getHp();
+        const std::int32_t enemyBefore = enemy.getHp();
+        ItemSystem::onCast(state, holder, ability, &enemy);
+        onCastOk = enemy.getHp() == enemyBefore - 30 && holder.getHp() == holderBefore && ally.getHp() == allyBefore;
+    }
+
+    {
+        const Item item = makeSyntheticHealOnDamageItem();
+        std::ostringstream log;
+        GameState state = makeThreeUnitItemState(content, item, log);
+        Unit& holder = state.units()[0];
+        Unit& enemy = state.units()[2];
+        holder.setHp(700);
+        ItemSystem::onDamage(state, holder, enemy, 100);
+        onDamageOk = holder.getHp() == 750 && enemy.getHp() == enemy.getMaxHp();
+    }
+
+    {
+        const Item item = makeSyntheticShieldOnDamageTakenItem();
+        std::ostringstream log;
+        GameState state = makeThreeUnitItemState(content, item, log);
+        Unit& holder = state.units()[0];
+        Unit& enemy = state.units()[2];
+        ItemSystem::onDamageTaken(state, holder, &enemy, 100);
+        holder.applyDamage(50);
+        onDamageTakenOk = holder.getHp() == holder.getMaxHp();
+    }
+
+    {
+        StatusEffect killStatus = makeSyntheticItemStatus("Validation OnKill AP", StatusEffectType::BonusAbilityPower, StatType::AbilityPower, ModifierType::Flat, 20.0f, ValidationConstants::LongDurationMs);
+        const Item item = makeSyntheticStatusItem("Validation Synthetic OnKill Item", AbilityTrigger::OnKill, killStatus, AreaShape::Self, 1);
+        std::ostringstream log;
+        GameState state = makeThreeUnitItemState(content, item, log);
+        Unit& holder = state.units()[0];
+        Unit& enemy = state.units()[2];
+        ItemSystem::onKill(state, holder, enemy);
+        onKillOk = countMatchingStatus(holder, killStatus) == 1 && countMatchingStatus(enemy, killStatus) == 0;
+    }
+
+    {
+        StatusEffect deathStatus = makeSyntheticItemStatus("Validation OnDeath Debuff", StatusEffectType::Debuff, StatType::AttackDamage, ModifierType::Percent, -0.10f, ValidationConstants::LongDurationMs);
+        const Item item = makeSyntheticStatusItem("Validation Synthetic OnDeath Item", AbilityTrigger::OnDeath, deathStatus, AreaShape::SingleTarget, 1);
+        std::ostringstream log;
+        GameState state = makeThreeUnitItemState(content, item, log);
+        Unit& holder = state.units()[0];
+        Unit& enemy = state.units()[2];
+        holder.setHp(0);
+        ItemSystem::onDeath(state, holder, &enemy);
+        onDeathOk = countMatchingStatus(enemy, deathStatus) == 1 && countMatchingStatus(holder, deathStatus) == 0;
+    }
+
+    {
+        const Item item = makeSyntheticDamageItem("Validation Synthetic Periodic Damage Item", AbilityTrigger::Periodic, 20, DamageType::TrueDamage, 1000, false);
+        auto run = [&]() {
+            std::ostringstream log;
+            GameState state = makeThreeUnitItemState(content, item, log);
+            Unit& enemy = state.units()[2];
+            ItemSystem::tick(state);
+            const std::int32_t afterFirst = enemy.getHp();
+            ItemSystem::tick(state);
+            const std::int32_t afterBlocked = enemy.getHp();
+            state.setDtMs(1000);
+            state.advanceTick();
+            ItemSystem::tick(state);
+            std::ostringstream summary;
+            summary << afterFirst << "|" << afterBlocked << "|" << enemy.getHp();
+            return summary.str();
+        };
+        const std::string first = run();
+        const std::string second = run();
+        periodicOk = first == "980|980|960";
+        deterministicOk = first == second;
+    }
+
+    {
+        const Item item = makeSyntheticBurnItem();
+        std::ostringstream log;
+        GameState state = makeThreeUnitItemState(content, item, log);
+        Unit& holder = state.units()[0];
+        Unit& enemy = state.units()[2];
+        ItemSystem::onHit(state, holder, enemy, 50, DamageType::Physical, false);
+        enemy.updateStatusEffects(500);
+        burnOk = enemy.getHp() == 975;
+    }
+
+    {
+        StatusEffect debuff = makeSyntheticItemStatus("Validation Stacking Debuff", StatusEffectType::Debuff, StatType::Armor, ModifierType::Flat, -5.0f, ValidationConstants::LongDurationMs);
+        const Item item = makeSyntheticStatusItem("Validation Synthetic Stacking Debuff Item", AbilityTrigger::OnAttack, debuff, AreaShape::SingleTarget, 2);
+        std::ostringstream log;
+        GameState state = makeThreeUnitItemState(content, item, log);
+        Unit& holder = state.units()[0];
+        Unit& enemy = state.units()[2];
+        ItemSystem::onAttack(state, holder, enemy);
+        ItemSystem::onAttack(state, holder, enemy);
+        ItemSystem::onAttack(state, holder, enemy);
+        stackingOk = countMatchingStatus(enemy, debuff) == 2 && countMatchingStatus(holder, debuff) == 0;
+    }
+
+    out << "Item event surface fixtures | on_crit=1 on_cast=1 on_damage=1 on_damage_taken=1 on_kill=1 on_death=1 periodic=1 burn=1 stacking=1 synthetic_fixtures=9\n";
+
+    if (onCritOk) report.pass("ItemEventRuntime: OnCrit trigger is scoped and stack-capped");
+    else report.fail("ItemEventRuntime: OnCrit trigger is scoped and stack-capped");
+
+    if (onCastOk) report.pass("ItemEventRuntime: OnCast damage targets enemy only");
+    else report.fail("ItemEventRuntime: OnCast damage targets enemy only");
+
+    if (onDamageOk) report.pass("ItemEventRuntime: OnDamage can heal from dealt damage");
+    else report.fail("ItemEventRuntime: OnDamage can heal from dealt damage");
+
+    if (onDamageTakenOk) report.pass("ItemEventRuntime: OnDamageTaken can shield holder");
+    else report.fail("ItemEventRuntime: OnDamageTaken can shield holder");
+
+    if (onKillOk) report.pass("ItemEventRuntime: OnKill applies source-scoped effects");
+    else report.fail("ItemEventRuntime: OnKill applies source-scoped effects");
+
+    if (onDeathOk) report.pass("ItemEventRuntime: OnDeath can target killer/source");
+    else report.fail("ItemEventRuntime: OnDeath can target killer/source");
+
+    if (periodicOk) report.pass("ItemEventRuntime: Periodic effects obey deterministic cooldown gates");
+    else report.fail("ItemEventRuntime: Periodic effects obey deterministic cooldown gates");
+
+    if (burnOk) report.pass("ItemEventRuntime: burn uses existing damage-over-time status ticking");
+    else report.fail("ItemEventRuntime: burn uses existing damage-over-time status ticking");
+
+    if (stackingOk) report.pass("ItemEventRuntime: stacking debuffs respect max stack caps");
+    else report.fail("ItemEventRuntime: stacking debuffs respect max stack caps");
+
+    if (deterministicOk) report.pass("ItemEventRuntime: repeated event surface fixtures are deterministic");
+    else report.fail("ItemEventRuntime: repeated event surface fixtures are deterministic");
+}
+static std::string traitHookStatusJson(std::string_view hook,
+                                       TraitEffectType type,
+                                       std::string_view traitName,
+                                       std::string_view statusName,
+                                       std::string_view statusEffectType)
+{
+    std::ostringstream ss;
+    ss << "{\n"
+       << "  \"name\": \"" << traitName << "\",\n"
+       << "  \"breakpoints\": [1],\n"
+       << "  \"tiers\": [\n"
+       << "    {\n"
+       << "      \"breakpoint\": 1,\n"
+       << "      \"effects\": [\n"
+       << "        {\n"
+       << "          \"hook\": \"" << hook << "\",\n"
+       << "          \"type\": \"" << traitEffectTypeName(type) << "\",\n"
+       << "          \"statusEffect\": {\n"
+       << "            \"name\": \"" << statusName << "\",\n"
+       << "            \"effectType\": \"" << statusEffectType << "\",\n"
+       << "            \"crowdControlType\": \"None\",\n"
+       << "            \"affectedStat\": \"AttackDamage\",\n"
+       << "            \"modifierType\": \"Flat\",\n"
+       << "            \"value\": 7,\n"
+       << "            \"durationMs\": " << ValidationConstants::LongDurationMs << ",\n"
+       << "            \"remainingMs\": " << ValidationConstants::LongDurationMs << ",\n"
+       << "            \"tickIntervalMs\": 0,\n"
+       << "            \"tickTimerMs\": 0,\n"
+       << "            \"damageType\": \"True\"\n"
+       << "          }\n"
+       << "        }\n"
+       << "      ]\n"
+       << "    }\n"
+       << "  ]\n"
+       << "}\n";
+    return ss.str();
+}
+
+static ContentManager loadSyntheticTraitHookStatusContent(std::string_view hook,
+                                                          TraitEffectType type,
+                                                          std::string_view traitName,
+                                                          std::string_view statusName,
+                                                          std::string_view statusEffectType = "Buff")
+{
+    const std::filesystem::path root =
+        std::filesystem::temp_directory_path() /
+        ("tft_trait_hook_validation_" + std::string(hook) + "_" + traitEffectTypeName(type));
+    std::filesystem::remove_all(root);
+    std::filesystem::create_directories(root / "traits");
+    std::filesystem::create_directories(root / "abilities");
+    std::filesystem::create_directories(root / "items");
+    std::filesystem::create_directories(root / "champions");
+
+    {
+        std::ofstream f(root / "traits" / "validation_trait.json", std::ios::out | std::ios::binary | std::ios::trunc);
+        f << traitHookStatusJson(hook, type, traitName, statusName, statusEffectType);
+    }
+
+    ContentManager synthetic;
+    synthetic.loadAll(root.string());
+    return synthetic;
+}
+
+static GameState makeTraitHookState(const ContentManager& synthetic,
+                                    std::string_view traitName,
+                                    std::ostream& log)
+{
+    Logger logger(log);
+    logger.setMode(LogMode::Silent);
+
+    Board board(GameConstants::BoardWidth, GameConstants::BoardHeight);
+    std::vector<Unit> units;
+    units.push_back(makeValidationTraitUnit("ValidationTraitHookSource", TeamId::TeamA, Position{ 1, 1 }, traitName));
+    units.push_back(makeValidationTraitUnit("ValidationTraitHookAlly", TeamId::TeamA, Position{ 2, 1 }, traitName));
+    units.push_back(makeValidationUnit("ValidationTraitHookEnemy", TeamId::TeamB, Position{ 1, 5 }));
+    units.push_back(makeValidationUnit("ValidationTraitHookEnemyTwo", TeamId::TeamB, Position{ 2, 5 }));
+
+    GameState state(std::move(board), std::move(units), std::move(logger), synthetic);
+    state.traitRuntime().activeTraitsA = { ActiveTrait{ std::string(traitName), 2, 1 } };
+    return state;
+}
+
+static void traitRuntimeHookValidationTest(ValidationReport& report, std::ostream& out)
+{
+    bool afterDamageOk = false;
+    bool damageTakenOk = false;
+    bool deathOk = false;
+    bool periodicOk = false;
+    bool deterministicOk = false;
+
+    {
+        static constexpr std::string_view TraitName = "ValidationAfterDamageTrait";
+        static constexpr std::string_view StatusName = "Validation AfterDamage Status";
+        ContentManager synthetic = loadSyntheticTraitHookStatusContent("AfterDamage", TraitEffectType::ApplyStatusToTraitUnits, TraitName, StatusName);
+        std::ostringstream log;
+        GameState state = makeTraitHookState(synthetic, TraitName, log);
+        TraitSystem::afterDamage(state, state.units()[0], state.units()[2]);
+        afterDamageOk = hasStatusNamed(state.units()[0], StatusName) &&
+                        hasStatusNamed(state.units()[1], StatusName) &&
+                        !hasStatusNamed(state.units()[2], StatusName);
+    }
+
+    {
+        static constexpr std::string_view TraitName = "ValidationDamageTakenTrait";
+        static constexpr std::string_view StatusName = "Validation DamageTaken Status";
+        ContentManager synthetic = loadSyntheticTraitHookStatusContent("OnDamageTaken", TraitEffectType::ApplyStatusToTraitUnits, TraitName, StatusName);
+        std::ostringstream log;
+        GameState state = makeTraitHookState(synthetic, TraitName, log);
+        TraitSystem::onDamageTaken(state, state.units()[0], &state.units()[2]);
+        damageTakenOk = hasStatusNamed(state.units()[0], StatusName) &&
+                        hasStatusNamed(state.units()[1], StatusName) &&
+                        !hasStatusNamed(state.units()[2], StatusName);
+    }
+
+    {
+        static constexpr std::string_view TraitName = "ValidationDeathTrait";
+        static constexpr std::string_view StatusName = "Validation Death Debuff";
+        ContentManager synthetic = loadSyntheticTraitHookStatusContent("OnDeath", TraitEffectType::ApplyStatusToEnemies, TraitName, StatusName, "Debuff");
+        std::ostringstream log;
+        GameState state = makeTraitHookState(synthetic, TraitName, log);
+        state.units()[0].setHp(0);
+        TraitSystem::onDeath(state, state.units()[0], &state.units()[2]);
+        deathOk = !hasStatusNamed(state.units()[0], StatusName) &&
+                  !hasStatusNamed(state.units()[1], StatusName) &&
+                  hasStatusNamed(state.units()[2], StatusName) &&
+                  hasStatusNamed(state.units()[3], StatusName);
+    }
+
+    {
+        static constexpr std::string_view TraitName = "ValidationPeriodicTrait";
+        static constexpr std::string_view StatusName = "Validation Periodic Status";
+        ContentManager synthetic = loadSyntheticTraitHookStatusContent("Periodic", TraitEffectType::ApplyStatusToTraitUnits, TraitName, StatusName);
+        auto run = [&]() {
+            std::ostringstream log;
+            GameState state = makeTraitHookState(synthetic, TraitName, log);
+            state.traitRuntime().nextPeriodicMsA = 0;
+            state.traitRuntime().nextPeriodicMsB = CombatConstants::MaxCombatDurationMs;
+            state.traitRuntime().nextAuraUpdateMsA = CombatConstants::MaxCombatDurationMs;
+            state.traitRuntime().nextAuraUpdateMsB = CombatConstants::MaxCombatDurationMs;
+            TraitSystem::tick(state);
+            std::ostringstream summary;
+            summary << hasStatusNamed(state.units()[0], StatusName) << "|"
+                    << hasStatusNamed(state.units()[1], StatusName) << "|"
+                    << hasStatusNamed(state.units()[2], StatusName);
+            return summary.str();
+        };
+        const std::string first = run();
+        const std::string second = run();
+        periodicOk = first == "1|1|0";
+        deterministicOk = first == second;
+    }
+
+    out << "Trait runtime hook fixtures | after_damage=1 on_damage_taken=1 on_death=1 periodic=1 synthetic_fixtures=4\n";
+
+    if (afterDamageOk) report.pass("TraitRuntime: AfterDamage hook applies generic effects");
+    else report.fail("TraitRuntime: AfterDamage hook applies generic effects");
+
+    if (damageTakenOk) report.pass("TraitRuntime: OnDamageTaken hook applies generic effects");
+    else report.fail("TraitRuntime: OnDamageTaken hook applies generic effects");
+
+    if (deathOk) report.pass("TraitRuntime: OnDeath hook applies generic effects");
+    else report.fail("TraitRuntime: OnDeath hook applies generic effects");
+
+    if (periodicOk) report.pass("TraitRuntime: Periodic hook applies generic effects deterministically");
+    else report.fail("TraitRuntime: Periodic hook applies generic effects deterministically");
+
+    if (deterministicOk) report.pass("TraitRuntime: repeated hook fixtures are deterministic");
+    else report.fail("TraitRuntime: repeated hook fixtures are deterministic");
+}
 static void traitEffectVocabularyValidationTest(ValidationReport& report)
 {
     {
@@ -2221,6 +2658,8 @@ static std::string abilityTriggerName(AbilityTrigger trigger)
     case AbilityTrigger::OnDeath: return "OnDeath";
     case AbilityTrigger::OnLowHealth: return "OnLowHealth";
     case AbilityTrigger::OnDamageTaken: return "OnDamageTaken";
+    case AbilityTrigger::OnDamage: return "OnDamage";
+    case AbilityTrigger::Periodic: return "Periodic";
     }
     return "Passive";
 }
@@ -3643,6 +4082,130 @@ static bool runScenario(const ContentManager& content,
     return winner != 0;
 }
 
+static Unit makeAbilityFixtureUnit(std::string name,
+                                   TeamId team,
+                                   Position position,
+                                   Ability ability = Ability{})
+{
+    return Unit(
+        std::move(name),
+        1000,
+        50,
+        0,
+        0,
+        1000,
+        1,
+        DamageType::Physical,
+        position,
+        team,
+        100,
+        10,
+        std::move(ability)
+    );
+}
+
+static GameState makeAbilityFixtureState(const ContentManager& content,
+                                         Ability ability,
+                                         std::ostream& log)
+{
+    Logger logger(log);
+    logger.setMode(LogMode::Silent);
+
+    Board board(GameConstants::BoardWidth, GameConstants::BoardHeight);
+    std::vector<Unit> units;
+    units.push_back(makeAbilityFixtureUnit("AbilityFixtureCaster", TeamId::TeamA, Position{ 1, 1 }, std::move(ability)));
+    units.push_back(makeAbilityFixtureUnit("AbilityFixtureAlly", TeamId::TeamA, Position{ 2, 1 }));
+    units.push_back(makeAbilityFixtureUnit("AbilityFixtureEnemy", TeamId::TeamB, Position{ 1, 5 }));
+
+    GameState state(std::move(board), std::move(units), std::move(logger), content);
+    state.setDtMs(ValidationConstants::DefaultDtMs);
+    return state;
+}
+
+static Ability makeShieldAbility()
+{
+    Ability ability{};
+    ability.name = "Validation Shield Ability";
+    ability.targetType = TargetType::Self;
+
+    AbilityEffect effect{};
+    effect.name = "Validation Ability Shield";
+    effect.trigger = AbilityTrigger::OnCast;
+    effect.areaShape = AreaShape::Self;
+    effect.shieldAmount = 100;
+    ability.effects.push_back(effect);
+    return ability;
+}
+
+static Ability makeTargetMaxHpDamageAbility(float percent, std::int32_t threshold)
+{
+    Ability ability{};
+    ability.name = "Validation MaxHp Damage Ability";
+    ability.targetType = TargetType::CurrentEnemy;
+
+    AbilityEffect effect{};
+    effect.name = "Validation MaxHp Damage";
+    effect.trigger = AbilityTrigger::OnCast;
+    effect.areaShape = AreaShape::SingleTarget;
+    effect.damageFormula.damageType = DamageType::TrueDamage;
+    effect.targetMaxHpPercentDamage = percent;
+    effect.targetMaxHpThreshold = threshold;
+    ability.effects.push_back(effect);
+    return ability;
+}
+
+static void abilityGenericEffectValidationTest(const ContentManager& content,
+                                               ValidationReport& report,
+                                               std::ostream& out)
+{
+    bool shieldOk = false;
+    bool maxHpDamageOk = false;
+    bool thresholdOk = false;
+    bool deterministicOk = false;
+
+    {
+        std::ostringstream log;
+        GameState state = makeAbilityFixtureState(content, makeShieldAbility(), log);
+        Unit& caster = state.units()[0];
+        Unit& enemy = state.units()[2];
+        AbilitySystem::executeTrigger(state, caster, &enemy, AbilityTrigger::OnCast);
+        caster.applyDamage(60);
+        shieldOk = caster.getHp() == caster.getMaxHp();
+    }
+
+    auto runMaxHpDamage = [&](float percent, std::int32_t threshold) {
+        std::ostringstream log;
+        GameState state = makeAbilityFixtureState(content, makeTargetMaxHpDamageAbility(percent, threshold), log);
+        Unit& caster = state.units()[0];
+        Unit& ally = state.units()[1];
+        Unit& enemy = state.units()[2];
+        AbilitySystem::executeTrigger(state, caster, &enemy, AbilityTrigger::OnCast);
+        std::ostringstream summary;
+        summary << caster.getHp() << "|" << ally.getHp() << "|" << enemy.getHp();
+        return summary.str();
+    };
+
+    const std::string maxHpFirst = runMaxHpDamage(0.10f, 0);
+    const std::string maxHpSecond = runMaxHpDamage(0.10f, 0);
+    maxHpDamageOk = maxHpFirst == "1000|1000|900";
+    deterministicOk = maxHpFirst == maxHpSecond;
+
+    thresholdOk = runMaxHpDamage(0.10f, 1500) == "1000|1000|1000";
+
+    out << "Ability generic effect fixtures | shield=1 target_max_hp_damage=1 threshold=1 synthetic_fixtures=3\n";
+
+    if (shieldOk) report.pass("AbilityRuntime: shieldAmount creates an absorbing shield");
+    else report.fail("AbilityRuntime: shieldAmount creates an absorbing shield");
+
+    if (maxHpDamageOk) report.pass("AbilityRuntime: target max-HP percent damage applies once to enemy");
+    else report.fail("AbilityRuntime: target max-HP percent damage applies once to enemy");
+
+    if (thresholdOk) report.pass("AbilityRuntime: target max-HP threshold gates percent damage");
+    else report.fail("AbilityRuntime: target max-HP threshold gates percent damage");
+
+    if (deterministicOk) report.pass("AbilityRuntime: repeated generic effect fixtures are deterministic");
+    else report.fail("AbilityRuntime: repeated generic effect fixtures are deterministic");
+}
 static void scenarioSuite(const ContentManager& content, ValidationReport& report, std::ostream& out)
 {
     bool ok = true;
@@ -5195,6 +5758,63 @@ static void strategicAiValidationTest(const ContentManager& content, ValidationR
     }
 
     {
+        const std::string c0 = pickChampionByIndex(content, 0);
+        const std::string c1 = pickChampionByIndex(content, 1);
+        const ChampionDefinition* def0 = content.getChampion(c0);
+        const ChampionDefinition* def1 = content.getChampion(c1);
+
+        PlayerState p("LethalOpponentPressure");
+        p.setLevel(2);
+        p.takeDamage(95);
+
+        OwnedUnit board{};
+        board.championName = c0;
+        board.starLevel = 1;
+        board.cost = def0 ? def0->cost : 1;
+        p.addToBench(board);
+        p.moveBenchToBoard(0);
+
+        OwnedUnit bench{};
+        bench.championName = c1;
+        bench.starLevel = 1;
+        bench.cost = def1 ? def1->cost : 1;
+        p.addToBench(bench);
+
+        MacroAction deploy{};
+        deploy.type = MacroActionType::MoveBenchToBoard;
+        deploy.benchIndex = 0;
+        deploy.debugName = "MoveBenchToBoard #0";
+
+        MacroAction end{};
+        end.type = MacroActionType::EndTurn;
+        end.debugName = "EndTurn";
+
+        EnemySnapshot enemy{};
+        enemy.boardStrength = BoardStrengthEvaluator::evaluate(p, content).total + 500.0f;
+        enemy.hp = 100;
+        for (int i = 0; i < 6; ++i)
+        {
+            EnemySnapshot::UnitInfo info{};
+            info.championName = pickChampionByIndex(content, static_cast<std::size_t>(i + 2));
+            info.cost = 2;
+            enemy.units.push_back(std::move(info));
+        }
+
+        const std::vector<MacroAction> legal = { end, deploy };
+        const std::vector<ActionScore> scores = MacroActionScorer::scoreActions(p, content, legal, &enemy, nullptr, 3, 10);
+
+        float sEnd = -1e9f;
+        float sDeploy = -1e9f;
+        for (const ActionScore& s : scores)
+        {
+            if (s.action.type == MacroActionType::EndTurn) sEnd = s.score;
+            if (s.action.type == MacroActionType::MoveBenchToBoard) sDeploy = s.score;
+        }
+
+        if (sDeploy > sEnd) report.pass("StrategicAI PASS: lethal scouting favors immediate board strength");
+        else report.fail("StrategicAI FAIL: lethal scouting favors immediate board strength");
+    }
+    {
         PlayerState p("HighGoldEconomy");
         p.addGold(50);
 
@@ -5253,6 +5873,64 @@ static void strategicAiValidationTest(const ContentManager& content, ValidationR
     noHardcodedNamesTest(content, report);
 }
 
+static void lobbySimulationValidationTest(const ContentManager& content, ValidationReport& report, std::ostream& out)
+{
+    const std::uint32_t seed = 424242u;
+    const LobbySimulationResult a = LobbySimulation::simulate(content, seed, false, nullptr);
+    const LobbySimulationResult b = LobbySimulation::simulate(content, seed, false, nullptr);
+
+    std::unordered_set<int> placements;
+    int winners = 0;
+    bool placementRangeOk = true;
+    bool duplicatePlacement = false;
+    for (const LobbyPlayerResult& p : a.players)
+    {
+        if (p.placement < 1 || p.placement > 8)
+        {
+            placementRangeOk = false;
+        }
+        if (!placements.insert(p.placement).second)
+        {
+            duplicatePlacement = true;
+        }
+        if (p.placement == 1)
+        {
+            winners += 1;
+        }
+    }
+
+    const bool deterministic = a.summary == b.summary;
+    out << "Lobby simulation fixtures | players=" << a.initialPlayers
+        << " loaded_players=" << a.players.size()
+        << " rounds=" << a.roundsPlayed
+        << " winner=" << a.winner
+        << " unique_placements=" << placements.size()
+        << " actions_after_elimination=" << a.actionsAfterElimination
+        << " shared_pool_valid=" << (a.sharedPoolValid ? 1 : 0)
+        << " deterministic=" << (deterministic ? 1 : 0)
+        << "\n";
+
+    if (a.initialPlayers == 8 && a.players.size() == 8) report.pass("Lobby: exactly 8 initial players");
+    else report.fail("Lobby: exactly 8 initial players");
+
+    if (placementRangeOk && !duplicatePlacement && placements.size() == 8) report.pass("Lobby: placements are unique 1-8");
+    else report.fail("Lobby: placements are unique 1-8");
+
+    if (winners == 1 && !a.winner.empty()) report.pass("Lobby: exactly one winner");
+    else report.fail("Lobby: exactly one winner");
+
+    if (a.actionsAfterElimination == 0) report.pass("Lobby: eliminated players stop acting");
+    else report.fail("Lobby: eliminated players stop acting");
+
+    if (a.sharedPoolValid) report.pass("Lobby: shared pool remains valid");
+    else report.fail("Lobby: shared pool remains valid");
+
+    if (deterministic) report.pass("Lobby: identical seed gives identical result");
+    else report.fail("Lobby: identical seed gives identical result");
+
+    if (a.completed && a.roundsPlayed > 0) report.pass("Lobby: full game terminates");
+    else report.fail("Lobby: full game terminates");
+}
 ValidationReport CombatValidation::runAll(const ContentManager& content, std::ostream& out)
 {
     ValidationReport report{};
@@ -5292,9 +5970,13 @@ ValidationReport CombatValidation::runAll(const ContentManager& content, std::os
     step("Item gate fixtures", [&]() { itemGateFixtureValidationTest(content, report, out); });
     step("Item aura fixtures", [&]() { itemAuraFixtureValidationTest(content, report, out); });
     step("Item unsupported runtime fixtures", [&]() { itemUnsupportedRuntimeFixtureValidationTest(content, report, out); });
+    step("Item event surface fixtures", [&]() { itemEventSurfaceFixtureValidationTest(content, report, out); });
+    step("Trait runtime hook fixtures", [&]() { traitRuntimeHookValidationTest(report, out); });
+    step("Ability generic effect fixtures", [&]() { abilityGenericEffectValidationTest(content, report, out); });
     step("Validation scenarios", [&]() { scenarioSuite(content, report, out); });
     step("Macro validations", [&]() { macroSystemValidationTest(content, report, out); });
     step("Strategic AI validations", [&]() { strategicAiValidationTest(content, report); });
+    step("Lobby simulation fixtures", [&]() { lobbySimulationValidationTest(content, report, out); });
 
     return report;
 }

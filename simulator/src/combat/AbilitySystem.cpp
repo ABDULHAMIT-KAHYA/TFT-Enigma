@@ -32,6 +32,8 @@ static const char* toString(AbilityTrigger trigger)
         case AbilityTrigger::OnDeath:        return "OnDeath";
         case AbilityTrigger::OnLowHealth:    return "OnLowHealth";
         case AbilityTrigger::OnDamageTaken:  return "OnDamageTaken";
+        case AbilityTrigger::OnDamage:       return "OnDamage";
+        case AbilityTrigger::Periodic:       return "Periodic";
     }
     return "Unknown";
 }
@@ -242,7 +244,23 @@ static void executeEffectNow(GameState& state,
             state.logger().combat(ss.str());
         }
 
-        if (shouldApplyDamage(effect.damageFormula))
+        if (effect.shieldAmount > 0)
+        {
+            StatusEffect shield{};
+            shield.name = effect.name.empty() ? ability.name + " Shield" : effect.name;
+            shield.effectType = StatusEffectType::Shield;
+            shield.crowdControlType = CrowdControlType::None;
+            shield.affectedStat = StatType::None;
+            shield.modifierType = ModifierType::Flat;
+            shield.value = static_cast<float>(effect.shieldAmount);
+            shield.durationMs = CombatConstants::TraitShieldOnCombatStartDurationMs;
+            shield.remainingMs = shield.durationMs;
+            shield.tickIntervalMs = 0;
+            shield.tickTimerMs = 0;
+            shield.damageType = DamageType::TrueDamage;
+            applyStatusEffectWithLog(state, owner, *target, shield);
+        }
+        if (shouldApplyDamage(effect.damageFormula) || effect.targetMaxHpPercentDamage > 0.0f)
         {
             const float ad = StatSystem::getFinalStat(owner, StatType::AttackDamage);
             const float ap = StatSystem::getFinalStat(owner, StatType::AbilityPower);
@@ -250,8 +268,18 @@ static void executeEffectNow(GameState& state,
             const std::int32_t adContribution = lroundToInt(ad * effect.damageFormula.adRatio);
             const std::int32_t apContribution = lroundToInt(ap * effect.damageFormula.apRatio);
 
-            const std::int32_t rawBeforeCrit =
+            std::int32_t rawBeforeCrit =
                 effect.damageFormula.baseDamage + adContribution + apContribution;
+
+            if (effect.targetMaxHpPercentDamage > 0.0f)
+            {
+                const std::int32_t targetMaxHp = std::max(1, StatSystem::getFinalStatInt(*target, StatType::MaxHp));
+                if (effect.targetMaxHpThreshold > 0 && targetMaxHp < effect.targetMaxHpThreshold)
+                {
+                    continue;
+                }
+                rawBeforeCrit += lroundToInt(static_cast<float>(targetMaxHp) * effect.targetMaxHpPercentDamage);
+            }
 
             bool didCrit = false;
             float critChanceUsed = 0.0f;
@@ -303,15 +331,19 @@ static void executeEffectNow(GameState& state,
 
             AbilitySystem::executeTrigger(state, owner, target, AbilityTrigger::OnHit);
             AbilitySystem::executeTrigger(state, *target, &owner, AbilityTrigger::OnDamageTaken);
+        TraitSystem::onDamageTaken(state, *target, &owner);
         TraitSystem::afterDamage(state, owner, *target);
+        ItemSystem::onDamage(state, owner, *target, dmg.finalDamage);
+        ItemSystem::onDamageTaken(state, *target, &owner, dmg.finalDamage);
         ItemSystem::onHit(state, owner, *target, dmg.finalDamage, dmg.damageType, didCrit);
-
             if (!target->isAlive())
             {
                 AbilitySystem::executeTrigger(state, owner, target, AbilityTrigger::OnKill);
                 AbilitySystem::executeTrigger(state, *target, &owner, AbilityTrigger::OnDeath);
             TraitSystem::onKill(state, owner, *target);
-            ItemSystem::onDeath(state, *target);
+            TraitSystem::onDeath(state, *target, &owner);
+            ItemSystem::onKill(state, owner, *target);
+            ItemSystem::onDeath(state, *target, &owner);
             }
             else
             {

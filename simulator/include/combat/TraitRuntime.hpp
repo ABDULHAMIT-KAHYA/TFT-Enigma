@@ -14,6 +14,8 @@ enum class TraitTriggerType
     OnCrit,
     OnKill,
     OnLowHealth,
+    OnDamageTaken,
+    OnDeath,
     Periodic,
     AuraUpdate
 };

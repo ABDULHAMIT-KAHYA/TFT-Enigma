@@ -82,6 +82,17 @@ namespace TraitSystem
         TraitEffectExecutor::apply(state, killer.getTeamId(), active, TraitHook::OnKill, &killer, &victim);
     }
 
+    void onDamageTaken(GameState& state, Unit& unit, Unit* source)
+    {
+        const std::vector<ActiveTrait>& active = activeTraitsForTeam(state, unit.getTeamId());
+        TraitEffectExecutor::apply(state, unit.getTeamId(), active, TraitHook::OnDamageTaken, &unit, source);
+    }
+
+    void onDeath(GameState& state, Unit& unit, Unit* source)
+    {
+        const std::vector<ActiveTrait>& active = activeTraitsForTeam(state, unit.getTeamId());
+        TraitEffectExecutor::apply(state, unit.getTeamId(), active, TraitHook::OnDeath, &unit, source);
+    }
     void onLowHealth(GameState& state, Unit& unit)
     {
         const std::vector<ActiveTrait>& active = activeTraitsForTeam(state, unit.getTeamId());

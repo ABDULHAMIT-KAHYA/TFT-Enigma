@@ -18,7 +18,11 @@ namespace ItemSystem
                bool wasCrit);
     void onCrit(GameState& state, Unit& attacker, Unit& target);
     void onCast(GameState& state, Unit& caster, const Ability& ability, Unit* target);
+    void onDamage(GameState& state, Unit& source, Unit& target, std::int32_t damageDealt);
+    void onDamageTaken(GameState& state, Unit& unit, Unit* source, std::int32_t damageTaken);
+    void onKill(GameState& state, Unit& killer, Unit& victim);
     void onLowHealth(GameState& state, Unit& unit);
-    void onDeath(GameState& state, Unit& unit);
+    void onDeath(GameState& state, Unit& unit, Unit* source = nullptr);
+    void tick(GameState& state);
 }
 

@@ -299,7 +299,10 @@ static void performAutoAttack(GameState& state,
 
     AbilitySystem::executeTrigger(state, attacker, &target, AbilityTrigger::OnHit);
     AbilitySystem::executeTrigger(state, target, &attacker, AbilityTrigger::OnDamageTaken);
+    TraitSystem::onDamageTaken(state, target, &attacker);
     TraitSystem::afterDamage(state, attacker, target);
+    ItemSystem::onDamage(state, attacker, target, dmg.finalDamage);
+    ItemSystem::onDamageTaken(state, target, &attacker, dmg.finalDamage);
     ItemSystem::onHit(state, attacker, target, dmg.finalDamage, dmg.damageType, didCrit);
 
     if (!target.isAlive())
@@ -307,7 +310,9 @@ static void performAutoAttack(GameState& state,
         AbilitySystem::executeTrigger(state, attacker, &target, AbilityTrigger::OnKill);
         AbilitySystem::executeTrigger(state, target, &attacker, AbilityTrigger::OnDeath);
         TraitSystem::onKill(state, attacker, target);
-        ItemSystem::onDeath(state, target);
+        TraitSystem::onDeath(state, target, &attacker);
+        ItemSystem::onKill(state, attacker, target);
+        ItemSystem::onDeath(state, target, &attacker);
     }
     else
     {
@@ -462,6 +467,7 @@ void Combat::run(GameState& state)
 
         state.processCombatEvents();
         TraitSystem::tick(state);
+        ItemSystem::tick(state);
 
         board.rebuildOccupancy(collectAlivePositions(units));
 

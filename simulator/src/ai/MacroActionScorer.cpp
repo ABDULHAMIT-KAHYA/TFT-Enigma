@@ -56,6 +56,21 @@ static float hpPressure(const PlayerState& player, const EnemySnapshot* enemy)
     return p;
 }
 
+static float estimatedLossDamageFromEnemy(const EnemySnapshot* enemy, int stage)
+{
+    if (!enemy)
+    {
+        return 0.0f;
+    }
+    int base = 2;
+    if (stage <= 2) base = 2;
+    else if (stage == 3) base = 4;
+    else if (stage == 4) base = 6;
+    else if (stage == 5) base = 8;
+    else if (stage == 6) base = 10;
+    else base = 12;
+    return static_cast<float>(base + std::max<std::size_t>(1u, enemy->units.size()));
+}
 static void autoLevelFromXp(PlayerState& player)
 {
     while (player.level() < GameConstants::MaxLevel)
@@ -577,6 +592,43 @@ std::vector<ActionScore> MacroActionScorer::scoreActions(const PlayerState& play
                 why << "lvl-pressure ";
             }
             why << "end";
+        }
+
+        if (enemy)
+        {
+            const float candidateBoard = boardScore.total + deltaBoard;
+            const float deficitBefore = std::max(0.0f, enemy->boardStrength - boardScore.total);
+            const float deficitAfter = std::max(0.0f, enemy->boardStrength - candidateBoard);
+            const float deficitReduced = std::max(0.0f, deficitBefore - deficitAfter);
+            const float deficitWorsened = std::max(0.0f, deficitAfter - deficitBefore);
+            if (deficitReduced > 0.0f)
+            {
+                s += deficitReduced * AIConstants::StrategicEnemyDeficitReductionWeight * (1.0f + pressure);
+                why << "opp-gap-close ";
+            }
+            if (deficitWorsened > 0.0f)
+            {
+                s -= deficitWorsened * AIConstants::StrategicEnemyDeficitWorseningWeight * (1.0f + pressure);
+                why << "opp-gap-open ";
+            }
+
+            const float lethalWindow = estimatedLossDamageFromEnemy(enemy, stage) + AIConstants::StrategicDeathRiskHpBuffer;
+            const bool deathRisk = static_cast<float>(player.health()) <= lethalWindow && deficitBefore > 0.0f;
+            if (deathRisk)
+            {
+                if (deltaBoard > 0.0f)
+                {
+                    s += std::min(deltaBoard, deficitBefore) * AIConstants::StrategicDeathRiskImmediateBoardWeight;
+                    why << "survival ";
+                }
+                else if (a.type == MacroActionType::EndTurn ||
+                         a.type == MacroActionType::RerollShop ||
+                         a.type == MacroActionType::BuyXp)
+                {
+                    s -= AIConstants::StrategicDeathRiskNonImprovingPenalty;
+                    why << "death-risk ";
+                }
+            }
         }
 
         s += boardScore.total * AIConstants::ScoreBoardScale;

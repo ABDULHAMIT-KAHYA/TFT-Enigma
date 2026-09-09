@@ -18,6 +18,8 @@ enum class TraitHook
     OnCast,
     OnCrit,
     OnLowHealth,
+    OnDamageTaken,
+    OnDeath,
     AfterDamage,
     Periodic,
     AuraUpdate

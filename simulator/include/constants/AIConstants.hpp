@@ -287,6 +287,12 @@ struct AIConstants
     static constexpr float StageLevelDeficitCapPressurePenalty = 0.35f;
     static constexpr float StageLevelDeficitBuyXpFarBonusPerBuy = 32.0f;
 
+    static constexpr float StrategicEnemyDeficitReductionWeight = 0.18f;
+    static constexpr float StrategicEnemyDeficitWorseningWeight = 0.10f;
+    static constexpr float StrategicDeathRiskHpBuffer = 3.0f;
+    static constexpr float StrategicDeathRiskImmediateBoardWeight = 0.9f;
+    static constexpr float StrategicDeathRiskNonImprovingPenalty = 120.0f;
+
     static constexpr float PositioningMinAttackSpeed = 0.1f;
     static constexpr float PositioningRangeBonus = 12.0f;
     static constexpr float PositioningAdAsWeight = 2.0f;

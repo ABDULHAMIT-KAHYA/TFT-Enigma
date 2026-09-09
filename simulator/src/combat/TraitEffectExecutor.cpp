@@ -72,7 +72,7 @@ static void applyStatus(GameState& state, Unit& applier, Unit& target, const Sta
 
 static Unit* findApplier(GameState& state, TeamId team, const TraitDefinition& def, Unit* source)
 {
-    if (source && source->isAlive() && source->getTeamId() == team)
+    if (source && source->getTeamId() == team)
     {
         return source;
     }

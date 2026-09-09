@@ -16,6 +16,8 @@ namespace TraitSystem
     void onCast(GameState& state, Unit& caster, const Ability& ability, Unit* target);
     void onCrit(GameState& state, Unit& attacker, Unit& target);
     void onKill(GameState& state, Unit& killer, Unit& victim);
+    void onDamageTaken(GameState& state, Unit& unit, Unit* source);
+    void onDeath(GameState& state, Unit& unit, Unit* source = nullptr);
     void onLowHealth(GameState& state, Unit& unit);
     void afterDamage(GameState& state, Unit& source, Unit& target);
 }

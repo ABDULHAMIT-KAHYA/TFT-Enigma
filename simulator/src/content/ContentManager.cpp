@@ -268,6 +268,8 @@ static AbilityTrigger parseAbilityTrigger(std::string_view s)
     if (s == "OnDeath") return AbilityTrigger::OnDeath;
     if (s == "OnLowHealth") return AbilityTrigger::OnLowHealth;
     if (s == "OnDamageTaken") return AbilityTrigger::OnDamageTaken;
+    if (s == "OnDamage") return AbilityTrigger::OnDamage;
+    if (s == "Periodic") return AbilityTrigger::Periodic;
     throw std::runtime_error("Unknown AbilityTrigger: " + std::string(s));
 }
 
@@ -360,6 +362,8 @@ static TraitHook parseTraitHook(std::string_view s)
     if (s == "OnCast") return TraitHook::OnCast;
     if (s == "OnCrit") return TraitHook::OnCrit;
     if (s == "OnLowHealth") return TraitHook::OnLowHealth;
+    if (s == "OnDamageTaken") return TraitHook::OnDamageTaken;
+    if (s == "OnDeath") return TraitHook::OnDeath;
     if (s == "AfterDamage") return TraitHook::AfterDamage;
     if (s == "Periodic") return TraitHook::Periodic;
     if (s == "AuraUpdate") return TraitHook::AuraUpdate;
