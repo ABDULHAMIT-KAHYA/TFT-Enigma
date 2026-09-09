@@ -24,6 +24,15 @@ std::uint32_t RandomManager::seed() const
     return seed_;
 }
 
+std::uint32_t RandomManager::state() const
+{
+    return rng_.state();
+}
+
+void RandomManager::setState(std::uint32_t state)
+{
+    rng_.setState(state);
+}
 float RandomManager::randomFloat01()
 {
     return rng_.nextFloat01();
@@ -44,4 +53,5 @@ RandomManager& RandomManager::global()
     static RandomManager g(1u);
     return g;
 }
+
 

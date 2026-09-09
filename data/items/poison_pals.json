@@ -1,7 +1,42 @@
 {
   "name": "Poison Pals",
+  "displayName": "Poison Pals",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_TeamupAugment_SingedTeemo",
+  "description": "Gain a 2-star Teemo. Singed's damage refreshes Teemo's poisons, and every @TeemoDamageReq@ magic damage Teemo deals grants your strongest Singed @SingedAPGain@% Ability Power. Gain a Teemo after each player combat.",
+  "tooltip": "Gain a 2-star Teemo. Singed's damage refreshes Teemo's poisons, and every @TeemoDamageReq@ magic damage Teemo deals grants your strongest Singed @SingedAPGain@% Ability Power. Gain a Teemo after each player combat.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PoisonPals_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "SingedAPGain",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "TeemoDamageReq",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 100, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "SingedAPGain", "value": "2" }, { "name": "TeemoDamageReq", "value": "100" }],
+  "importWarnings": ["Unmapped item variable: SingedAPGain", "Unmapped item variable: TeemoDamageReq"]
 }

@@ -1,7 +1,41 @@
 {
   "name": "TFT12_Doodad_DragonkissedWeapons_Name",
+  "displayName": "TFT12_Doodad_DragonkissedWeapons_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_DragonkissedWeapons",
+  "description": "TFT12_Doodad_DragonkissedWeapons_Tooltip",
+  "tooltip": "TFT12_Doodad_DragonkissedWeapons_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BurnDuration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MagicDamage",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 50, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    }
+  ],
+  "rawVariables": [{ "name": "BurnDuration", "value": "3" }, { "name": "MagicDamage", "value": "50" }],
+  "importWarnings": ["Unmapped item variable: BurnDuration", "Unmapped item variable: MagicDamage"]
 }

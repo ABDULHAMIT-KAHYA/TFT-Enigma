@@ -1,0 +1,51 @@
+{
+  "name": "TFT16_Augment_Slayer_TotalDomination",
+  "displayName": "Total Domination",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_Slayer_TotalDomination",
+  "description": "Slayers gain @BaseDA*100@% Damage Amp, plus @DAPerBreakpoint*100@% for every @SurvivingSlayerBreakpoint@ surviving Slayers at the end of combat. Gain a Briar and a Qiyana.<br><br><rules>Current Damage Amp: @TFTUnitProperty.trait:TFT16_Augment_Slayer_TotalDomination_CurrentDA@%</rules>",
+  "tooltip": "Slayers gain @BaseDA*100@% Damage Amp, plus @DAPerBreakpoint*100@% for every @SurvivingSlayerBreakpoint@ surviving Slayers at the end of combat. Gain a Briar and a Qiyana.<br><br><rules>Current Damage Amp: @TFTUnitProperty.trait:TFT16_Augment_Slayer_TotalDomination_CurrentDA@%</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/Missing-T2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseDA",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DAPerBreakpoint",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SurvivingSlayerBreakpoint",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseDA", "value": "0.1" }, { "name": "DAPerBreakpoint", "value": "0.01" }, { "name": "SurvivingSlayerBreakpoint", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: BaseDA", "Unmapped item variable: DAPerBreakpoint", "Unmapped item variable: SurvivingSlayerBreakpoint"]
+}

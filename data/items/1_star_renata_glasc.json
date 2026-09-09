@@ -1,7 +1,17 @@
 {
   "name": "1-star Renata Glasc",
+  "displayName": "1-star Renata Glasc",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_ChampionItem_RenataGlasc",
+  "description": "Gain a 1-star Renata Glasc",
+  "tooltip": "Gain a 1-star Renata Glasc",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_ChampionItem_RenataGlasc.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,40 @@
+{
+  "name": "TFT9_Augment_Legend_OnARoll",
+  "displayName": "On a Roll",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Legend_OnARoll",
+  "description": "Whenever you star up a champion, gain up to @TurnLimit@ free Shop rerolls per round. Gain @Gold@ gold.",
+  "tooltip": "Whenever you star up a champion, gain up to @TurnLimit@ free Shop rerolls per round. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/On-a-Roll-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TurnLimit",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "1" }, { "name": "TurnLimit", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: TurnLimit", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: TurnLimit"]
+}

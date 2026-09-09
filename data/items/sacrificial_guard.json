@@ -1,7 +1,30 @@
 {
   "name": "Sacrificial Guard",
+  "displayName": "Sacrificial Guard",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_XerathZap_SacrificialGuard",
+  "description": "Next combat: Azir's Guards explode on death, dealing @ExplosionDamage@ magic damage in a 2 hex area.",
+  "tooltip": "Next combat: Azir's Guards explode on death, dealing @ExplosionDamage@ magic damage in a 2 hex area.",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_XerathWand_Self.TFT_Set12.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 750,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ExplosionDamage",
+      "rawSourceValue": "750",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 750, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "ExplosionDamage", "value": "750" }],
+  "importWarnings": ["Unmapped item variable: ExplosionDamage"]
 }

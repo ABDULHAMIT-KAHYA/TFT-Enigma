@@ -1,7 +1,29 @@
 {
   "name": "Choke",
+  "displayName": "Choke",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_Choke",
+  "description": "Reduce projectile spread by @SpreadDecrease*100@%.",
+  "tooltip": "Reduce projectile spread by @SpreadDecrease*100@%.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_Choke.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SpreadDecrease",
+      "rawSourceValue": "0.75",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "SpreadDecrease", "value": "0.75" }],
+  "importWarnings": ["Unmapped item variable: SpreadDecrease"]
 }

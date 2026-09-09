@@ -1,7 +1,17 @@
 {
   "name": "Realm Warp",
+  "displayName": "Realm Warp",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_WorldRune",
+  "description": "Use on any champion to gain an emblem for each of their listed traits.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Use on any champion to gain an emblem for each of their listed traits.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/RealmWrap.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

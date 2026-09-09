@@ -1,7 +1,40 @@
 {
   "name": "TFT12_Doodad_CursingCat_Name",
+  "displayName": "TFT12_Doodad_CursingCat_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_CursingCat",
+  "description": "TFT12_Doodad_CursingCat_Tooltip",
+  "tooltip": "TFT12_Doodad_CursingCat_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": -0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Size",
+      "rawSourceValue": "-0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": -200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{0e9f4928}",
+      "rawSourceValue": "-200",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Size", "value": "-0.5" }, { "name": "{0e9f4928}", "value": "-200" }],
+  "importWarnings": ["Unmapped item variable: Size", "Unmapped item variable: {0e9f4928}", "Unsupported item effect metadata: Size", "Unsupported item effect metadata: {0e9f4928}"]
 }

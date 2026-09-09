@@ -1,7 +1,40 @@
 {
   "name": "Lit Fuse",
+  "displayName": "Lit Fuse",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Incoming",
+  "description": "Allies that start in the back two rows split @Mana@ total Mana after @DelaySeconds@ seconds of combat.",
+  "tooltip": "Allies that start in the back two rows split @Mana@ total Mana after @DelaySeconds@ seconds of combat.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Incoming_I.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DelaySeconds",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DelaySeconds", "value": "6" }, { "name": "Mana", "value": "60" }],
+  "importWarnings": ["Unmapped item variable: DelaySeconds", "Unmapped item variable: Mana", "Unsupported item effect metadata: DelaySeconds"]
 }

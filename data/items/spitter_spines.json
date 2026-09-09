@@ -1,7 +1,54 @@
 {
   "name": "Spitter Spines",
+  "displayName": "Spitter Spines",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Consumable_Void_SpitterSpines",
+  "description": "After dealing @DamageRequirement@ damage, fire spikes at the @NumTargets@ nearest enemies that deal <scaleLevel>@TFTUnitProperty.item:TFT16_Void_SpitterSpinesDamage@</scaleLevel> physical&nbsp;damage.<br><br><rules>Recommended users: Rek'Sai, Malzahar, and Kai'sa</rules>",
+  "tooltip": "After dealing @DamageRequirement@ damage, fire spikes at the @NumTargets@ nearest enemies that deal <scaleLevel>@TFTUnitProperty.item:TFT16_Void_SpitterSpinesDamage@</scaleLevel> physical&nbsp;damage.<br><br><rules>Recommended users: Rek'Sai, Malzahar, and Kai'sa</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT16_VoidMutation_SpitterSpines.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "DamageRequirement",
+      "rawSourceValue": "1000",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1000, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumTargets",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{f3c924e3}",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 100, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageRequirement", "value": "1000" }, { "name": "NumTargets", "value": "2" }, { "name": "{f3c924e3}", "value": "100" }],
+  "importWarnings": ["Unmapped item variable: DamageRequirement", "Unmapped item variable: NumTargets", "Unmapped item variable: {f3c924e3}"]
 }

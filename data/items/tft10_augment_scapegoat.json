@@ -1,0 +1,40 @@
+{
+  "name": "TFT10_Augment_Scapegoat",
+  "displayName": "Scapegoat",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_Scapegoat",
+  "description": "Gain a Training Dummy and @InitialGold@ gold. If it is the first to die each player combat, gain @Gold@ gold.",
+  "tooltip": "Gain a Training Dummy and @InitialGold@ gold. If it is the first to die each player combat, gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/The-Scapegoat-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InitialGold",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "1" }, { "name": "InitialGold", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: InitialGold"]
+}

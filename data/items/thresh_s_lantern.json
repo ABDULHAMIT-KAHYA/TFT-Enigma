@@ -1,9 +1,78 @@
 {
   "name": "Thresh's Lantern",
+  "displayName": "Thresh's Lantern",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Item_Artifact_ThreshLantern",
+  "description": "After @Delay@ seconds of combat, pull the leftmost benched unit onto the battlefield. While that unit lives, @DamageShare*100@% of all damage the holder would take is redirected to them.<br><br><tftitemrules>Traits of champions flung onto the board do not become active</tftitemrules>",
+  "tooltip": "After @Delay@ seconds of combat, pull the leftmost benched unit onto the battlefield. While that unit lives, @DamageShare*100@% of all damage the holder would take is redirected to them.<br><br><tftitemrules>Traits of champions flung onto the board do not become active</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_Item_Artifact_ThreshLantern.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Thresh's Lantern:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Thresh's Lantern:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 400, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Thresh's Lantern:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 400,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "400",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 400, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageShare",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "35" }, { "name": "DamageShare", "value": "0.2" }, { "name": "Delay", "value": "6" }, { "name": "Health", "value": "400" }, { "name": "MagicResist", "value": "35" }],
+  "importWarnings": ["Unmapped item variable: DamageShare", "Unmapped item variable: Delay"]
 }

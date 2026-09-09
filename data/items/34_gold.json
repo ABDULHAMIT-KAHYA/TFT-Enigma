@@ -1,7 +1,17 @@
 {
   "name": "34 gold",
+  "displayName": "34 gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Gold_34",
+  "description": "34 gold",
+  "tooltip": "34 gold",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistGiveGold.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

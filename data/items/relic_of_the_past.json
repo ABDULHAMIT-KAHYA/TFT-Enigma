@@ -1,7 +1,29 @@
 {
   "name": "Relic of the Past",
+  "displayName": "Relic of the Past",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DarkflightZekes",
+  "description": "Gain a special Darkflight Zeke's Herald from the past.",
+  "tooltip": "Gain a special Darkflight Zeke's Herald from the past.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Zekes-Herald.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CombatNum",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CombatNum", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: CombatNum", "Unsupported item effect metadata: CombatNum"]
 }

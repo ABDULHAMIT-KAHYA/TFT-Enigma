@@ -1,7 +1,63 @@
 {
   "name": "Archangel's Staff",
+  "displayName": "Archangel's Staff",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_ArchangelsStaff",
+  "description": "Combat start: Gain @APPerInterval@% Ability Power every @IntervalSeconds@ seconds in combat.",
+  "tooltip": "Combat start: Gain @APPerInterval@% Ability Power every @IntervalSeconds@ seconds in combat.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_ArchangelsStaff.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Archangel's Staff:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "APPerInterval",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "IntervalSeconds",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "30" }, { "name": "APPerInterval", "value": "20" }, { "name": "IntervalSeconds", "value": "5" }, { "name": "ManaRegen", "value": "1" }],
+  "importWarnings": ["Metadata-only item effect: AP -> GrantStats", "Metadata-only item effect: ManaRegen -> Heal", "Unmapped item variable: APPerInterval", "Unmapped item variable: IntervalSeconds", "Unmapped item variable: ManaRegen", "Unsupported item effect metadata: APPerInterval", "Unsupported item effect metadata: IntervalSeconds"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Dragon Soul",
+  "displayName": "Dragon Soul",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DragonTrait2",
+  "description": "Your team counts as having 1 additional Dragon. Gain a Zippy and a Gargoyle Stoneplate.",
+  "tooltip": "Your team counts as having 1 additional Dragon. Gain a Zippy and a Gargoyle Stoneplate.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dragon-Crown-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

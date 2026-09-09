@@ -1,9 +1,79 @@
 {
   "name": "Sacrificial Infinity Edge",
+  "displayName": "Sacrificial Infinity Edge",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_InfinityEdgeShadow",
+  "description": "Grants @CritChance@% Critical Strike Chance (including components). Each point of Critical Strike Chance above 100% becomes +@BonusCritDmgPerCritAbove100@% Critical Strike Damage. <br><br><TFTShadowItemBonus>The holder also gains @BonusCritDamage@% Critical Strike Damage.</TFTShadowItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "tooltip": "Grants @CritChance@% Critical Strike Chance (including components). Each point of Critical Strike Chance above 100% becomes +@BonusCritDmgPerCritAbove100@% Critical Strike Damage. <br><br><TFTShadowItemBonus>The holder also gains @BonusCritDamage@% Critical Strike Damage.</TFTShadowItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Infinity_Edge.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Sacrificial Infinity Edge:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.75, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Sacrificial Infinity Edge:CritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Sacrificial Infinity Edge:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusCritDmgPerCritAbove100",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{174c0f45}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusCritDamage",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusCritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "75",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.75, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "10" }, { "name": "BonusCritDamage", "value": "50" }, { "name": "BonusCritDmgPerCritAbove100", "value": "1" }, { "name": "CritChance", "value": "75" }, { "name": "{174c0f45}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: BonusCritDmgPerCritAbove100", "Unmapped non-numeric item variable: {174c0f45}"]
 }

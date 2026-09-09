@@ -1,7 +1,17 @@
 {
   "name": "Disruptor Crown",
+  "displayName": "Disruptor Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_DisruptorCrown",
+  "description": "Get a Disruptor Emblem, a Malzahar, and a Blue Buff.",
+  "tooltip": "Get a Disruptor Emblem, a Malzahar, and a Blue Buff.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_BastionCirclet",
+  "displayName": "Bastion Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_BastionCirclet",
+  "description": "Gain a Bastion Emblem, a Giant's Belt, and a Leona.",
+  "tooltip": "Gain a Bastion Emblem, a Giant's Belt, and a Leona.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Bastion_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

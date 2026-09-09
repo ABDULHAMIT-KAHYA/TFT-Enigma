@@ -1,7 +1,41 @@
 {
   "name": "Cursed Hextech Gunblade",
+  "displayName": "Cursed Hextech Gunblade",
+  "isPlaceholder": false,
+  "sourceId": "TFT12_Item_MilioThreeStar_CursedHextechGunblade",
+  "description": "The holder deals @NegativeDamageAmp*100@% less damage. They also take @DamageRatio*100@% of their max health as true damage per second, and heal Milio for the same amount.  ",
+  "tooltip": "The holder deals @NegativeDamageAmp*100@% less damage. They also take @DamageRatio*100@% of their max health as true damage per second, and heal Milio for the same amount.  ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Hextech_Gunblade.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Cursed Hextech Gunblade:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NegativeDamageAmp",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:NegativeDamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageRatio",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageRatio", "value": "0.2" }, { "name": "NegativeDamageAmp", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: DamageRatio"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Haunted Spyglass",
+  "displayName": "Haunted Spyglass",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Bilgewater_HauntedSpyglass",
+  "description": "<danger>NYI</danger><br>Once per fight, after 3 takedowns, summon the ghost of the Dreadway, dealing <magicDamage>650% (%i:scaleAP%) magic damage</magicDamage> in a 3-hex radius.",
+  "tooltip": "<danger>NYI</danger><br>Once per fight, after 3 takedowns, summon the ghost of the Dreadway, dealing <magicDamage>650% (%i:scaleAP%) magic damage</magicDamage> in a 3-hex radius.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Item_Bilgewater_HauntedSpyglass.TFT_Set16.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

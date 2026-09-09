@@ -1,0 +1,17 @@
+{
+  "name": "TFT13_Augment_BruiserCrest",
+  "displayName": "Bruiser Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_BruiserCrest",
+  "description": "Gain a Bruiser Emblem and a Sett.",
+  "tooltip": "Gain a Bruiser Emblem and a Sett.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Bruiser_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

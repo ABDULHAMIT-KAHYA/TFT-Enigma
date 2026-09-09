@@ -1,5 +1,12 @@
 {
   "name": "Eternal Monarch's Crown",
+  "displayName": "Eternal Monarch's Crown",
+  "isPlaceholder": false,
+  "sourceId": "TFT12_Item_Faerie_QueensCrownRadiant",
+  "description": "After dealing damage @MaxNumStacks@ times, gain <TFTRadiantItemBonus>@TFTUnitProperty.item:TFT12_Faerie_DamageAmp@%</TFTRadiantItemBonus> %i:scaleDA% for the rest of combat.<br><br><TFTRadiantItemBonus>After dealing damage @RadiantMaxStacks@ times, gain @RadiantMaxHealth*100@% maximum Health, @RadiantOmnivamp*100@% Omnivamp, and @RadiantDamageAmp*100@% damage amp.</TFTRadiantItemBonus><br><br><tftitemrules>Only Faeries can hold this item.</tftitemrules><br><tftitemrules>Bench the champion to remove it.</tftitemrules>",
+  "tooltip": "After dealing damage @MaxNumStacks@ times, gain <TFTRadiantItemBonus>@TFTUnitProperty.item:TFT12_Faerie_DamageAmp@%</TFTRadiantItemBonus> %i:scaleDA% for the rest of combat.<br><br><TFTRadiantItemBonus>After dealing damage @RadiantMaxStacks@ times, gain @RadiantMaxHealth*100@% maximum Health, @RadiantOmnivamp*100@% Omnivamp, and @RadiantDamageAmp*100@% damage amp.</TFTRadiantItemBonus><br><br><tftitemrules>Only Faeries can hold this item.</tftitemrules><br><tftitemrules>Bench the champion to remove it.</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT12/TFT12_FaerieCrown_Radiant.TFT_Set12.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:Eternal Monarch's Crown:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Eternal Monarch's Crown:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
@@ -7,5 +14,102 @@
     { "name": "Item:Eternal Monarch's Crown:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Eternal Monarch's Crown:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RadiantDamageAmp",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:RadiantDamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RadiantOmnivamp",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:RadiantOmnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxNumStacks",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RadiantMaxHealth",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RadiantMaxStacks",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.5" }, { "name": "AP", "value": "50" }, { "name": "AS", "value": "0.25" }, { "name": "MaxNumStacks", "value": "12" }, { "name": "RadiantDamageAmp", "value": "0.5" }, { "name": "RadiantMaxHealth", "value": "0.2" }, { "name": "RadiantMaxStacks", "value": "25" }, { "name": "RadiantOmnivamp", "value": "0.3" }],
+  "importWarnings": ["Unmapped item variable: MaxNumStacks", "Unmapped item variable: RadiantMaxHealth", "Unmapped item variable: RadiantMaxStacks"]
 }

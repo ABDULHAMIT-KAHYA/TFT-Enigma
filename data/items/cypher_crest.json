@@ -1,7 +1,17 @@
 {
   "name": "Cypher Crest",
+  "displayName": "Cypher Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_CryptoCrest",
+  "description": "Gain a Cypher emblem.",
+  "tooltip": "Gain a Cypher emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CryptoCrest_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

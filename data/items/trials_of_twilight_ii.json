@@ -1,7 +1,51 @@
 {
   "name": "Trials of Twilight II",
+  "displayName": "Trials of Twilight II",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_XinZhaoCarryII",
+  "description": "Gain @NumberOfCopies@ Xin Zhao and a Bloodthirster. Xin Zhao becomes an Attack Fighter. After @RoundsBeforeTransformation@ player combats as a 3-star, unlock Zaahen. <br><br>At the start of the next @NumDuplicators@ stages, gain a Lesser Champion Duplicator.",
+  "tooltip": "Gain @NumberOfCopies@ Xin Zhao and a Bloodthirster. Xin Zhao becomes an Attack Fighter. After @RoundsBeforeTransformation@ player combats as a 3-star, unlock Zaahen. <br><br>At the start of the next @NumDuplicators@ stages, gain a Lesser Champion Duplicator.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TheDarkenGlaive_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDuplicators",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumberOfCopies",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundsBeforeTransformation",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumDuplicators", "value": "2" }, { "name": "NumberOfCopies", "value": "1" }, { "name": "RoundsBeforeTransformation", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumDuplicators", "Unmapped item variable: NumberOfCopies", "Unmapped item variable: RoundsBeforeTransformation", "Unsupported item effect metadata: NumDuplicators", "Unsupported item effect metadata: NumberOfCopies", "Unsupported item effect metadata: RoundsBeforeTransformation"]
 }

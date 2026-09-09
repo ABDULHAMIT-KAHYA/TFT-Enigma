@@ -1,7 +1,106 @@
 {
   "name": "New High Score",
+  "displayName": "New High Score",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Cyberboss_HighScore",
+  "description": "Cyberbosses increase their score when they deal damage. When they reach the next high score gain bonus loot. Gain a Veigar and&nbsp;a&nbsp;Poppy.<br><br>@TFTUnitProperty.item:TFT14_Augment_Cyberbosses_Highscore_Tooltip@",
+  "tooltip": "Cyberbosses increase their score when they deal damage. When they reach the next high score gain bonus loot. Gain a Veigar and&nbsp;a&nbsp;Poppy.<br><br>@TFTUnitProperty.item:TFT14_Augment_Cyberbosses_Highscore_Tooltip@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HighScore_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{be91a648}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{bf91a7db}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c091a96e}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c191ab01}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c391ae27}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c491afba}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c591b14d}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "null" }, { "name": "{be91a648}", "value": "null" }, { "name": "{bf91a7db}", "value": "null" }, { "name": "{c091a96e}", "value": "null" }, { "name": "{c191ab01}", "value": "null" }, { "name": "{c391ae27}", "value": "null" }, { "name": "{c491afba}", "value": "null" }, { "name": "{c591b14d}", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: AttackSpeed", "Unmapped non-numeric item variable: {be91a648}", "Unmapped non-numeric item variable: {bf91a7db}", "Unmapped non-numeric item variable: {c091a96e}", "Unmapped non-numeric item variable: {c191ab01}", "Unmapped non-numeric item variable: {c391ae27}", "Unmapped non-numeric item variable: {c491afba}", "Unmapped non-numeric item variable: {c591b14d}"]
 }

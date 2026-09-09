@@ -1,9 +1,111 @@
 {
   "name": "Barknuckles",
+  "displayName": "Barknuckles",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Item_Bilgewater_FreebootersFrock",
+  "description": "While above @HealthThreshold*100@% Health, double the Armor and Magic Resist bonuses from this item.<br><br>Every @Timer@ seconds, deal magic damage equal to @ResistPercent*100@% of current total Armor and Magic Resist to the @NumEnemies@ nearest enemies.<br><br><rules>Recommended holder: Nautilus</rules>",
+  "tooltip": "While above @HealthThreshold*100@% Health, double the Armor and Magic Resist bonuses from this item.<br><br>Every @Timer@ seconds, deal magic damage equal to @ResistPercent*100@% of current total Armor and Magic Resist to the @NumEnemies@ nearest enemies.<br><br><rules>Recommended holder: Nautilus</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Item_Bilgewater_FreebootersFrock.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Barknuckles:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Barknuckles:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Barknuckles:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumEnemies",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ResistPercent",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Timer",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a72ef028}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "35" }, { "name": "Health", "value": "300" }, { "name": "HealthThreshold", "value": "0.5" }, { "name": "MagicResist", "value": "35" }, { "name": "NumEnemies", "value": "2" }, { "name": "ResistPercent", "value": "0.5" }, { "name": "Timer", "value": "4" }, { "name": "{a72ef028}", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: HealthThreshold", "Unmapped item variable: NumEnemies", "Unmapped item variable: ResistPercent", "Unmapped item variable: Timer", "Unmapped item variable: {a72ef028}"]
 }

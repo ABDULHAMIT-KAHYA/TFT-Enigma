@@ -1,7 +1,17 @@
 {
   "name": "1-star Briar",
+  "displayName": "1-star Briar",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_ChampionItem_Briar",
+  "description": "Gain a 1-star Briar",
+  "tooltip": "Gain a 1-star Briar",
+  "iconPath": "ASSETS/Characters/TFT17_Briar/HUD/TFT17_Briar_Square.TFT_Set17.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

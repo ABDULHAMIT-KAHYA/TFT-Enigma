@@ -1,7 +1,30 @@
 {
   "name": "Firelight Emblem",
+  "displayName": "Firelight Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Item_HoverboardEmblemItem",
+  "description": "The holder gains the Firelight trait.",
+  "tooltip": "The holder gains the Firelight trait.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set13/TFT_Set13_Emblem_Firelight.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Firelight Emblem:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "20" }],
+  "importWarnings": []
 }

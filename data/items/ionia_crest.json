@@ -1,7 +1,17 @@
 {
   "name": "Ionia Crest",
+  "displayName": "Ionia Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_IoniaCrest",
+  "description": "Get an Ionia Emblem.",
+  "tooltip": "Get an Ionia Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

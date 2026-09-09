@@ -1,0 +1,40 @@
+{
+  "name": "TFT9_Augment_JustKeepRolling",
+  "displayName": "Frequent Flier",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_JustKeepRolling",
+  "description": "After you reroll your Shop @Tier1Rolls@ times, rerolls only cost @RefreshCost@ gold.<br><br>(Rerolls this game: @TFTUnitProperty.item:TFT9_JustKeepRollingRolls@)",
+  "tooltip": "After you reroll your Shop @Tier1Rolls@ times, rerolls only cost @RefreshCost@ gold.<br><br>(Rerolls this game: @TFTUnitProperty.item:TFT9_JustKeepRollingRolls@)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Pirates2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RefreshCost",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Tier1Rolls",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RefreshCost", "value": "1" }, { "name": "Tier1Rolls", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: RefreshCost", "Unmapped item variable: Tier1Rolls", "Unsupported item effect metadata: RefreshCost", "Unsupported item effect metadata: Tier1Rolls"]
+}

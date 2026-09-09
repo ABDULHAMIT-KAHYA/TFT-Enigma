@@ -1,7 +1,17 @@
 {
   "name": "Frontline Foundation",
+  "displayName": "Frontline Foundation",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_FrontlineFoundation",
+  "description": "Gain a 2-star 1-cost Tank champion and an Emblem that matches their last-listed trait.",
+  "tooltip": "Gain a 2-star 1-cost Tank champion and an Emblem that matches their last-listed trait.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FrontlineFoundation_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

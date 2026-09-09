@@ -1,9 +1,100 @@
 {
   "name": "Eternal Winter",
+  "displayName": "Eternal Winter",
+  "isPlaceholder": false,
+  "sourceId": "TFT4_Item_OrnnEternalWinter",
+  "description": "Enemies who damage the holder are @AttackSpeedSlowPercent@% <TFTKeyword>Chilled</TFTKeyword> for @SlowDuration@ seconds. After @NumApplications@ <TFTKeyword>Chills</TFTKeyword> from this item, the attacker is <TFTKeyword>Stunned</TFTKeyword> instead (Cooldown: @FreezeCooldown@ seconds).<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Chill</tftbold>: reduce Attack Speed<br><tftbold>Stun</tftbold>: cannot move, attack, or cast Abilities</tftitemrules>",
+  "tooltip": "Enemies who damage the holder are @AttackSpeedSlowPercent@% <TFTKeyword>Chilled</TFTKeyword> for @SlowDuration@ seconds. After @NumApplications@ <TFTKeyword>Chills</TFTKeyword> from this item, the attacker is <TFTKeyword>Stunned</TFTKeyword> instead (Cooldown: @FreezeCooldown@ seconds).<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Chill</tftbold>: reduce Attack Speed<br><tftbold>Stun</tftbold>: cannot move, attack, or cast Abilities</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT4_Item_OrnnEternalWinter.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Eternal Winter:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 200, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Eternal Winter:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Eternal Winter:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FreezeCooldown",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FreezeDuration",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumApplications",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SlowDuration",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeedSlowPercent",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeedSlowPercent", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 200, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "20" }, { "name": "AttackSpeedSlowPercent", "value": "20" }, { "name": "FreezeCooldown", "value": "15" }, { "name": "FreezeDuration", "value": "1.5" }, { "name": "Health", "value": "200" }, { "name": "NumApplications", "value": "7" }, { "name": "SlowDuration", "value": "1.5" }],
+  "importWarnings": ["Unmapped item variable: FreezeCooldown", "Unmapped item variable: FreezeDuration", "Unmapped item variable: NumApplications", "Unmapped item variable: SlowDuration"]
 }

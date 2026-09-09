@@ -1,7 +1,52 @@
 {
   "name": "Superstars I",
+  "displayName": "Superstars I",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SuperstarsSilver",
+  "description": "Your team deals @BaseBonusDamage*100@% more damage, increased by @BonusDamagePer3Star*100@% for every 3-star champion on your team. Gain @Rerolls@ rerolls.<br><br>Bonus: @TFTUnitProperty.item:TFT_Augment_SuperstarsTotalDamageBonus@%",
+  "tooltip": "Your team deals @BaseBonusDamage*100@% more damage, increased by @BonusDamagePer3Star*100@% for every 3-star champion on your team. Gain @Rerolls@ rerolls.<br><br>Bonus: @TFTUnitProperty.item:TFT_Augment_SuperstarsTotalDamageBonus@%",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SuperStars_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BaseBonusDamage",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.02,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusDamagePer3Star",
+      "rawSourceValue": "0.02",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Rerolls",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "BaseBonusDamage", "value": "0.05" }, { "name": "BonusDamagePer3Star", "value": "0.02" }, { "name": "Rerolls", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: BaseBonusDamage", "Unmapped item variable: BonusDamagePer3Star", "Unmapped item variable: Rerolls"]
 }

@@ -1,7 +1,41 @@
 {
   "name": "Huge-ification Potion I",
+  "displayName": "Huge-ification Potion I",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_HugificationPotion1",
+  "description": "Your Tier 1 and 2 units are larger and gain @BonusHealth@ Health.",
+  "tooltip": "Your Tier 1 and 2 units are larger and gain @BonusHealth@ Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Huge-ification Potion I:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealth",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealth", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SizeIncrease",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusHealth", "value": "300" }, { "name": "SizeIncrease", "value": "0.15" }],
+  "importWarnings": ["Unmapped item variable: SizeIncrease"]
 }

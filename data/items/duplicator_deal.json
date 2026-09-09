@@ -1,7 +1,29 @@
 {
   "name": "Duplicator Deal",
+  "displayName": "Duplicator Deal",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_2LesserDupes_Eve",
+  "description": "Gain 2 Lesser Champion Duplicators. You cannot use your shop for @ShopRoundLoss@ rounds.",
+  "tooltip": "Gain 2 Lesser Champion Duplicators. You cannot use your shop for @ShopRoundLoss@ rounds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Consumable_ChampionDuplicator_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShopRoundLoss",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ShopRoundLoss", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: ShopRoundLoss", "Unsupported item effect metadata: ShopRoundLoss"]
 }

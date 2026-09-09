@@ -1,7 +1,52 @@
 {
   "name": "TFT12_Doodad_ElusiveBroomstick_Name",
+  "displayName": "TFT12_Doodad_ElusiveBroomstick_Name",
+  "isPlaceholder": false,
+  "sourceId": "TFT12_Doodad_ElusiveBroomstick",
+  "description": "TFT12_Doodad_ElusiveBroomstick_Tooltip",
+  "tooltip": "TFT12_Doodad_ElusiveBroomstick_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:TFT12_Doodad_ElusiveBroomstick_Name:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ASDuration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ASDuration", "value": "10" }, { "name": "AttackSpeed", "value": "0.4" }, { "name": "HealthThreshold", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: ASDuration", "Unmapped item variable: HealthThreshold", "Unsupported item effect metadata: ASDuration"]
 }

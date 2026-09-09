@@ -1,7 +1,40 @@
 {
   "name": "Trash to Treasure",
+  "displayName": "Trash to Treasure",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_TrashToTreasure",
+  "description": "Reforging completed items turns them into a random Artifact and does not consume the reforger. Gain a Reforger and @ComponentAnvils@ Component Anvil(s).",
+  "tooltip": "Reforging completed items turns them into a random Artifact and does not consume the reforger. Gain a Reforger and @ComponentAnvils@ Component Anvil(s).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TrashToTreasure_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ComponentAnvils",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Reforgers",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ComponentAnvils", "value": "2" }, { "name": "Reforgers", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: ComponentAnvils", "Unmapped item variable: Reforgers", "Unsupported item effect metadata: ComponentAnvils", "Unsupported item effect metadata: Reforgers"]
 }

@@ -1,7 +1,51 @@
 {
   "name": "Reroll Transfer",
+  "displayName": "Reroll Transfer",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_RerollTransfer",
+  "description": "For every @AugmentRerollTracked@ unused Augment Reroll, gain @ShopRerollToGrant@ free shop rerolls. Gain @Gold@ gold.<br><br><tftitemrules>Does not include the round this augment is selected.</tftitemrules>",
+  "tooltip": "For every @AugmentRerollTracked@ unused Augment Reroll, gain @ShopRerollToGrant@ free shop rerolls. Gain @Gold@ gold.<br><br><tftitemrules>Does not include the round this augment is selected.</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Reroll-Transfer-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AugmentRerollTracked",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShopRerollToGrant",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AugmentRerollTracked", "value": "1" }, { "name": "Gold", "value": "1" }, { "name": "ShopRerollToGrant", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: AugmentRerollTracked", "Unmapped item variable: Gold", "Unmapped item variable: ShopRerollToGrant", "Unsupported item effect metadata: AugmentRerollTracked", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: ShopRerollToGrant"]
 }

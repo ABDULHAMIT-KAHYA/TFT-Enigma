@@ -1,7 +1,17 @@
 {
   "name": "Soraka",
+  "displayName": "Soraka",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Soraka",
+  "description": "Soraka",
+  "tooltip": "Soraka",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Soraka_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

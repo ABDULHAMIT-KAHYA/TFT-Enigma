@@ -1,7 +1,17 @@
 {
   "name": "Final Polish",
+  "displayName": "Final Polish",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_FinalPolish",
+  "description": "Gain a Support Anvil and a completed item anvil.",
+  "tooltip": "Gain a Support Anvil and a completed item anvil.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Final-Polish-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,43 @@
+{
+  "name": "TFT17_GravesTrait_Offense_LeechingImplants2",
+  "displayName": "Leeching Implants+",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_GravesTrait_Offense_LeechingImplants2",
+  "description": "+@BonusOmnivamp*100@% Omnivamp and @AttackDamage*100@% Attack Damage",
+  "tooltip": "+@BonusOmnivamp*100@% Omnivamp and @AttackDamage*100@% Attack Damage",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_LeechingImplants1.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+    { "name": "Item:TFT17_GravesTrait_Offense_LeechingImplants2:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT17_GravesTrait_Offense_LeechingImplants2:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackDamage",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusOmnivamp",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusOmnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttackDamage", "value": "0.2" }, { "name": "BonusOmnivamp", "value": "0.15" }],
+  "importWarnings": []
+}

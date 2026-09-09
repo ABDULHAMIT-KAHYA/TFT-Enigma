@@ -1,7 +1,76 @@
 {
   "name": "Greater Moonlight",
+  "displayName": "Greater Moonlight",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_GreaterMoonlight",
+  "description": "Combat start: @NumUnits@ random 1-cost champion is upgraded to 4-star for that round and gains @ADBonus*100@% Attack Damage and @APBONUS@% Ability Power.",
+  "tooltip": "Combat start: @NumUnits@ random 1-cost champion is upgraded to 4-star for that round and gains @ADBonus*100@% Attack Damage and @APBONUS@% Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GreaterMoonlight_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ADBonus",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "APBonus",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 5, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ItemBonus",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{51b72188}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "ADBonus", "value": "0.05" }, { "name": "APBonus", "value": "5" }, { "name": "ItemBonus", "value": "null" }, { "name": "NumUnits", "value": "1" }, { "name": "{51b72188}", "value": "1" }],
+  "importWarnings": ["Metadata-only item effect: ADBonus -> DealDamage", "Metadata-only item effect: APBonus -> DealDamage", "Metadata-only item effect: ItemBonus -> DealDamage", "Metadata-only item effect: NumUnits -> DealDamage", "Metadata-only item effect: {51b72188} -> DealDamage", "Unmapped item variable: ADBonus", "Unmapped item variable: APBonus", "Unmapped item variable: NumUnits", "Unmapped item variable: {51b72188}", "Unmapped non-numeric item variable: ItemBonus"]
 }

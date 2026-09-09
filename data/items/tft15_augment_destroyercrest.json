@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_DestroyerCrest",
+  "displayName": "Executioner Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_DestroyerCrest",
+  "description": "Gain an Executioner Emblem.",
+  "tooltip": "Gain an Executioner Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Executioner_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

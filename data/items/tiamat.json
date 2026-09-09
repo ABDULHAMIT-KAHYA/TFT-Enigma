@@ -1,7 +1,42 @@
 {
   "name": "Tiamat",
+  "displayName": "Tiamat",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_WarriorTiamat",
+  "description": "Warrior's enhanced attacks deal @SplashDmgPct*100@% of their damage to enemies in a @HexRange@-hex area around their target. Gain a Yone.",
+  "tooltip": "Warrior's enhanced attacks deal @SplashDmgPct*100@% of their damage to enemies in a @HexRange@-hex area around their target. Gain a Yone.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tiamat-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "HexRange",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "SplashDmgPct",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "HexRange", "value": "1" }, { "name": "SplashDmgPct", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: HexRange", "Unmapped item variable: SplashDmgPct"]
 }

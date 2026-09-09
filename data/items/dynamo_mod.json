@@ -1,7 +1,17 @@
 {
   "name": "Dynamo Mod",
+  "displayName": "Dynamo Mod",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Item_ThirstyNetGodItem",
+  "description": "Permanently mods a champion to benefit from the Dynamo trait (but does not contribute).<br><br><tftitemrules>Champions can only have one Trait Mod.</tftitemrules><br><tftitemrules>Consumable - This item disappears when used.</tftitemrules>",
+  "tooltip": "Permanently mods a champion to benefit from the Dynamo trait (but does not contribute).<br><br><tftitemrules>Champions can only have one Trait Mod.</tftitemrules><br><tftitemrules>Consumable - This item disappears when used.</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14_GOTN_Mods/TFT14_ModTrait_Dynamo.TFT_Set14.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

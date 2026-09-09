@@ -1,7 +1,30 @@
 {
   "name": "Your team gains @SmallQuestADAP@ Attack Damage and Ability Power.",
+  "displayName": "Your team gains @SmallQuestADAP@ Attack Damage and Ability Power.",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_AurelionSolGodAugment_SmallQuest",
+  "description": "Your team gains @SmallQuestADAP@ Attack Damage and Ability Power.",
+  "tooltip": "Your team gains @SmallQuestADAP@ Attack Damage and Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "SmallQuestADAP",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 15, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    }
+  ],
+  "rawVariables": [{ "name": "SmallQuestADAP", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: SmallQuestADAP"]
 }

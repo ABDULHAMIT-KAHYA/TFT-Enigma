@@ -1,7 +1,17 @@
 {
   "name": "Trasmutable Relic",
+  "displayName": "Trasmutable Relic",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Void_TransmutableRelic",
+  "description": "When equipped, this item transforms into the optimal item for the champion.",
+  "tooltip": "When equipped, this item transforms into the optimal item for the champion.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT11/TFT11_Item_Storyweaver_FinalChapter.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

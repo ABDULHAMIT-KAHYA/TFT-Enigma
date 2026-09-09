@@ -1,0 +1,65 @@
+{
+  "name": "TFT_Item_CorruptedSpearOfShojin",
+  "displayName": "Spear of Shojin",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_CorruptedSpearOfShojin",
+  "description": "Attacks grant @FlatManaRestore@ bonus Mana.",
+  "tooltip": "Attacks grant @FlatManaRestore@ bonus Mana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_SpearOfShojin.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT_Item_CorruptedSpearOfShojin:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT_Item_CorruptedSpearOfShojin:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnAttack",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnAttack",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "FlatManaRestore",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.15" }, { "name": "AP", "value": "15" }, { "name": "FlatManaRestore", "value": "5" }, { "name": "ManaRegen", "value": "1" }],
+  "importWarnings": ["Metadata-only item effect: AD -> GrantStats", "Metadata-only item effect: AP -> GrantStats", "Metadata-only item effect: FlatManaRestore -> ModifyMana", "Metadata-only item effect: ManaRegen -> Heal", "Unmapped item variable: FlatManaRestore", "Unmapped item variable: ManaRegen"]
+}

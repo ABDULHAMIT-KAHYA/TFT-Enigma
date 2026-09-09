@@ -1,7 +1,17 @@
 {
   "name": "Light Transformer",
+  "displayName": "Light Transformer",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Consumable_LightTransformer",
+  "description": "Turns all items on a champion into standard items when used.<br><br><tftitemrules>[CONSUMABLE - This item disappears when used.]</tftitemrules><br><tftitemrules>This Item cannot transform Force of Darkness, which is beyond redemption.</tftitemrules>",
+  "tooltip": "Turns all items on a champion into standard items when used.<br><br><tftitemrules>[CONSUMABLE - This item disappears when used.]</tftitemrules><br><tftitemrules>This Item cannot transform Force of Darkness, which is beyond redemption.</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_Consumable_LightTransformer.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

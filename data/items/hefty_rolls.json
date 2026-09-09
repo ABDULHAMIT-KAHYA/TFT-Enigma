@@ -1,7 +1,73 @@
 {
   "name": "Hefty Rolls",
+  "displayName": "Hefty Rolls",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_HeftyRolls",
+  "description": "Your team gains @Health@ Health and size for each time you've rolled this game. Gain @Gold@ gold. <br><br><rules>Rolls: @TFTUnitProperty.Item:TFT_Augment_HeftyRolls_NumRolls@ Health: @TFTUnitProperty.Item:TFT_Augment_HeftyRolls_HealthBonus@</rules>",
+  "tooltip": "Your team gains @Health@ Health and size for each time you've rolled this game. Gain @Gold@ gold. <br><br><rules>Rolls: @TFTUnitProperty.Item:TFT_Augment_HeftyRolls_NumRolls@ Health: @TFTUnitProperty.Item:TFT_Augment_HeftyRolls_HealthBonus@</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HeftyRolls_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRerolls",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.02,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Size",
+      "rawSourceValue": "0.02",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{3a4f45ba}",
+      "rawSourceValue": "0.8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "5" }, { "name": "Health", "value": "null" }, { "name": "NumRerolls", "value": "null" }, { "name": "Size", "value": "0.02" }, { "name": "{3a4f45ba}", "value": "0.8" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: Size", "Unmapped item variable: {3a4f45ba}", "Unmapped non-numeric item variable: Health", "Unmapped non-numeric item variable: NumRerolls"]
 }

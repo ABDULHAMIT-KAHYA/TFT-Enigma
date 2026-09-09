@@ -1,7 +1,17 @@
 {
   "name": "Vanquisher Crest",
+  "displayName": "Vanquisher Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_VanquisherCrest",
+  "description": "Get a Vanquisher Emblem.",
+  "tooltip": "Get a Vanquisher Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

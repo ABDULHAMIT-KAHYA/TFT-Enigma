@@ -1,7 +1,17 @@
 {
   "name": "5-cost champion",
+  "displayName": "5-cost champion",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_FiveCostChampion",
+  "description": "5-cost champion",
+  "tooltip": "5-cost champion",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_5c.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

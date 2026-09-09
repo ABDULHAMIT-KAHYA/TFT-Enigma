@@ -1,9 +1,56 @@
 {
   "name": "Tiny Power III",
+  "displayName": "Tiny Power III",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_Commander_TinyPower3",
+  "description": "Your team gains @ap@% Attack Damage, Ability Power, and Attack Speed.",
+  "tooltip": "Your team gains @ap@% Attack Damage, Ability Power, and Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tiny-Power-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Tiny Power III:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Tiny Power III:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Tiny Power III:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "15" }, { "name": "AP", "value": "15" }, { "name": "AS", "value": "15" }],
+  "importWarnings": []
 }

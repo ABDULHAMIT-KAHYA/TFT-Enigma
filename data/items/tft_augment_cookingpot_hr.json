@@ -1,0 +1,43 @@
+{
+  "name": "TFT_Augment_CookingPot_HR",
+  "displayName": "Cooking Pot",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_CookingPot_HR",
+  "description": "At the start of each turn, all allies holding a Frying Pan or Spatula item grant the nearest champion @Health@ permanent Health. Gain a Frying Pan.",
+  "tooltip": "At the start of each turn, all allies holding a Frying Pan or Spatula item grant the nearest champion @Health@ permanent Health. Gain a Frying Pan.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CookingPot_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT_Augment_CookingPot_HR:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 70, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT_Augment_CookingPot_HR:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AbilityPower",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 70,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "70",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 70, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AbilityPower", "value": "1" }, { "name": "Health", "value": "70" }],
+  "importWarnings": []
+}

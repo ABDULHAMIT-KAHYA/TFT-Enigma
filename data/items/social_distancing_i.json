@@ -1,7 +1,30 @@
 {
   "name": "Social Distancing I",
+  "displayName": "Social Distancing I",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_SocialDistancing",
+  "description": "Combat start: Allies with no adjacent teammates gain @Stats@% Attack Damage and @Stats@ Ability Power.",
+  "tooltip": "Combat start: Allies with no adjacent teammates gain @Stats@% Attack Damage and @Stats@ Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Social-Distance-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Stats",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 10, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "Stats", "value": "10" }],
+  "importWarnings": ["Metadata-only item effect: Stats -> DealDamage", "Unmapped item variable: Stats"]
 }

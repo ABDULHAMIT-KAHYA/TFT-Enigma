@@ -1,7 +1,17 @@
 {
   "name": "LaserCorps",
+  "displayName": "LaserCorps",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitLaserCorpsActivator",
+  "description": "Your team gains laser drones. When a unit attacks or is hit by an attack, their drone deals magic damage to the target (@TFTTrait.TFTEvent5YR_LaserCorps.1:ICD@ second cooldown). Drones are reassigned to another ally on death.<br><br><row>(@TFTTrait.TFTEvent5YR_LaserCorps.1:MinUnits@) @TFTTrait.TFTEvent5YR_LaserCorps.1:MagicDamage@ magic damage. </row><br><row>(@TFTTrait.TFTEvent5YR_LaserCorps.2:MinUnits@) @TFTTrait.TFTEvent5YR_LaserCorps.2:MagicDamage@ magic damage. All units gain an additional drone.</row><br>",
+  "tooltip": "Your team gains laser drones. When a unit attacks or is hit by an attack, their drone deals magic damage to the target (@TFTTrait.TFTEvent5YR_LaserCorps.1:ICD@ second cooldown). Drones are reassigned to another ally on death.<br><br><row>(@TFTTrait.TFTEvent5YR_LaserCorps.1:MinUnits@) @TFTTrait.TFTEvent5YR_LaserCorps.1:MagicDamage@ magic damage. </row><br><row>(@TFTTrait.TFTEvent5YR_LaserCorps.2:MinUnits@) @TFTTrait.TFTEvent5YR_LaserCorps.2:MagicDamage@ magic damage. All units gain an additional drone.</row><br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Lasercorps.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

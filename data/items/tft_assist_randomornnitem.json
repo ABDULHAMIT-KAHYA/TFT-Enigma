@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_RandomOrnnItem",
+  "displayName": "Artifact Item",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_RandomOrnnItem",
+  "description": "Artifact Item",
+  "tooltip": "Artifact Item",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_RandomItem_Ornn.tex",
+  "itemCategory": "Artifact",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

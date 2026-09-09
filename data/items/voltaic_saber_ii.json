@@ -1,9 +1,89 @@
 {
   "name": "Voltaic Saber II",
+  "displayName": "Voltaic Saber II",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Crime_Gold_VoltaicSaber",
+  "description": "After every @NumDamageInstances@ instances of damage, send jolts towards the @NumEnemies@ lowest health enemies, dealing <physicalDamage>@JoltDamage@</physicalDamage> physical damage.<br><rules>Recommended users: Sevika and Smeech</rules>",
+  "tooltip": "After every @NumDamageInstances@ instances of damage, send jolts towards the @NumEnemies@ lowest health enemies, dealing <physicalDamage>@JoltDamage@</physicalDamage> physical damage.<br><rules>Recommended users: Sevika and Smeech</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Gold_VoltaicSaber.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Voltaic Saber II:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Voltaic Saber II:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Voltaic Saber II:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StatOmnivamp",
+      "rawSourceValue": "0.35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:StatOmnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "JoltDamage",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDamageInstances",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumEnemies",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.25" }, { "name": "AP", "value": "25" }, { "name": "JoltDamage", "value": "250" }, { "name": "NumDamageInstances", "value": "6" }, { "name": "NumEnemies", "value": "2" }, { "name": "StatOmnivamp", "value": "0.35" }],
+  "importWarnings": ["Unmapped item variable: JoltDamage", "Unmapped item variable: NumDamageInstances", "Unmapped item variable: NumEnemies"]
 }

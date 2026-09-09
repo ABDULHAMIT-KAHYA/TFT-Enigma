@@ -1,7 +1,17 @@
 {
   "name": "Guild Heart",
+  "displayName": "Guild Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_GuildTrait",
+  "description": "Your team counts as having 1 additional Guild. Gain a Twitch.",
+  "tooltip": "Your team counts as having 1 additional Guild. Gain a Twitch.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Guild-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

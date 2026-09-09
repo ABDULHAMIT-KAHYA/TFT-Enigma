@@ -1,8 +1,54 @@
 {
   "name": "Big Ones",
+  "displayName": "Big Ones",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_BigOnes",
+  "description": "Combat start: Your 1-cost champions gain @Health@ max Health and @DamageAmp*100@% Damage Amp.",
+  "tooltip": "Combat start: Your 1-cost champions gain @Health@ max Health and @DamageAmp*100@% Damage Amp.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BigOnes_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Big Ones:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Big Ones:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{67a8f751}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "0.12" }, { "name": "Health", "value": "150" }, { "name": "{67a8f751}", "value": "1" }],
+  "importWarnings": ["Metadata-only item effect: DamageAmp -> GrantStats", "Metadata-only item effect: Health -> GrantStats", "Metadata-only item effect: {67a8f751} -> Heal", "Unmapped item variable: {67a8f751}"]
 }

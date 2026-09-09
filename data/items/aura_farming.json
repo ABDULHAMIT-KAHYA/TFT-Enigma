@@ -1,7 +1,62 @@
 {
   "name": "Aura Farming",
+  "displayName": "Aura Farming",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_AuraFarming",
+  "description": "Gain a @StarLevel@-star 5-cost champion holding a recommended item. You cannot field it until Stage @UnlockStage@-@UnlockRound@.",
+  "tooltip": "Gain a @StarLevel@-star 5-cost champion holding a recommended item. You cannot field it until Stage @UnlockStage@-@UnlockRound@.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AuraFarming_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UnlockRound",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UnlockStage",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumItems", "value": "1" }, { "name": "UnlockRound", "value": "3" }, { "name": "UnlockStage", "value": "4" }, { "name": "starLevel", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumItems", "Unmapped item variable: UnlockRound", "Unmapped item variable: UnlockStage", "Unmapped item variable: starLevel"]
 }

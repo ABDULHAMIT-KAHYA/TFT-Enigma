@@ -1,7 +1,17 @@
 {
   "name": "Bragging Rights",
+  "displayName": "Bragging Rights",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_BraggingRights",
+  "description": "If you get 1st, a fancy celebration plays. This augment has no other effect, and can be rerolled for free.",
+  "tooltip": "If you get 1st, a fancy celebration plays. This augment has no other effect, and can be rerolled for free.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BraggingRights_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

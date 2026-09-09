@@ -1,7 +1,17 @@
 {
   "name": "Space Camp",
+  "displayName": "Space Camp",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_TheCrew_SpaceCamp",
+  "description": "Whenever you upgrade a 1-cost Crew champion, gain a random 1-3 cost Crew champion. Gain a Malphite.",
+  "tooltip": "Whenever you upgrade a 1-cost Crew champion, gain a random 1-3 cost Crew champion. Gain a Malphite.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SpaceCamp_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

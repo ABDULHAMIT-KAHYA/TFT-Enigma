@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: Wits End",
+  "displayName": "Artifact Expert: Wits End",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_WitsEnd",
+  "description": "Get a 2* Viego, a Wits End, and a Needlessly Large Rod",
+  "tooltip": "Get a 2* Viego, a Wits End, and a Needlessly Large Rod",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

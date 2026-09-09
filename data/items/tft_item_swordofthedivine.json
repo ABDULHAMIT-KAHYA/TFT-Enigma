@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Item_SwordOfTheDivine",
+  "displayName": "tft_item_name_SwordOfTheDivine2",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_SwordOfTheDivine",
+  "description": "tft_item_description_SwordOfTheDivine2",
+  "tooltip": "tft_item_description_SwordOfTheDivine2",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_SwordOfTheDivine.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ChanceToProc",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{98ac43ce}",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ChanceToProc", "value": "7" }, { "name": "{98ac43ce}", "value": "50" }],
+  "importWarnings": ["Unmapped item variable: ChanceToProc", "Unmapped item variable: {98ac43ce}", "Unsupported item effect metadata: ChanceToProc", "Unsupported item effect metadata: {98ac43ce}"]
+}

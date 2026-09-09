@@ -1,7 +1,29 @@
 {
   "name": "2 star Gragas",
+  "displayName": "2 star Gragas",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_Gragas2Star",
+  "description": "2 star Gragas",
+  "tooltip": "2 star Gragas",
+  "iconPath": "ASSETS/Characters/TFT14_Gragas/HUD/TFT14_Gragas_Square.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
 }

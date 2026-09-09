@@ -1,0 +1,29 @@
+{
+  "name": "TFT14_Armory_40GoldSplit",
+  "displayName": "Split 30 Gold With Other Splitters",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Armory_40GoldSplit",
+  "description": "Gain @Gold@ gold, split evenly among all players that chose this option (rounded down).",
+  "tooltip": "Gain @Gold@ gold, split evenly among all players that chose this option (rounded down).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Gold.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
+}

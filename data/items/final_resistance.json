@@ -1,7 +1,62 @@
 {
   "name": "Final Resistance",
+  "displayName": "Final Resistance",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_FinalResistance",
+  "description": "Each time an allied champion dies, @SunderPercentage@% Shred and Sunder the nearest @NumUnits@ enemies for @Duration@ seconds.<br><br><rules>Shred: reduces Magic Resist, Sunder: reduces Armor</rules>",
+  "tooltip": "Each time an allied champion dies, @SunderPercentage@% Shred and Sunder the nearest @NumUnits@ enemies for @Duration@ seconds.<br><br><rules>Shred: reduces Magic Resist, Sunder: reduces Armor</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Final-Resistance-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShredPercentage",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SunderPercentage",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "6" }, { "name": "NumUnits", "value": "4" }, { "name": "ShredPercentage", "value": "30" }, { "name": "SunderPercentage", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: Duration", "Unmapped item variable: NumUnits", "Unmapped item variable: ShredPercentage", "Unmapped item variable: SunderPercentage", "Unsupported item effect metadata: Duration", "Unsupported item effect metadata: NumUnits", "Unsupported item effect metadata: ShredPercentage", "Unsupported item effect metadata: SunderPercentage"]
 }

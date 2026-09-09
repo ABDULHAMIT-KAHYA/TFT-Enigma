@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Augment_CavalierEmblem2",
+  "displayName": "Cavalier Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_CavalierEmblem2",
+  "description": "Gain a Cavalier Emblem, a Spirit Visage, and a Nunu.",
+  "tooltip": "Gain a Cavalier Emblem, a Spirit Visage, and a Nunu.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cavalier-Crown-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

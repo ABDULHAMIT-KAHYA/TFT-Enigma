@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_JuggernautCirclet",
+  "displayName": "Juggernaut Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_JuggernautCirclet",
+  "description": "Gain a Juggernaut Emblem, an Udyr, and a Giant's Belt.",
+  "tooltip": "Gain a Juggernaut Emblem, an Udyr, and a Giant's Belt.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Juggernaut_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

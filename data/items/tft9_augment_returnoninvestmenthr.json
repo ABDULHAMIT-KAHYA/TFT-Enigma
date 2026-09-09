@@ -1,0 +1,29 @@
+{
+  "name": "TFT9_Augment_ReturnOnInvestmentHR",
+  "displayName": "Return on Investment",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_ReturnOnInvestmentHR",
+  "description": "When you reroll your Shop @RollCount@ times, gain a Tactician's Crown.<br><br>(Refreshes this game: @TFTUnitProperty.item:TFT9_ReturnOnInvestmentRolls@)",
+  "tooltip": "When you reroll your Shop @RollCount@ times, gain a Tactician's Crown.<br><br>(Refreshes this game: @TFTUnitProperty.item:TFT9_ReturnOnInvestmentRolls@)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldReserves2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 28,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RollCount",
+      "rawSourceValue": "28",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RollCount", "value": "28" }],
+  "importWarnings": ["Unmapped item variable: RollCount", "Unsupported item effect metadata: RollCount"]
+}

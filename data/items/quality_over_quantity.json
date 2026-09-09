@@ -1,7 +1,52 @@
 {
   "name": "Quality Over Quantity",
+  "displayName": "Quality Over Quantity",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_QualityOverQuantity",
+  "description": "Champions holding exactly 1 item upgrade that item to Radiant. Champions holding Radiant items gain @BonusHealth*100@% Health. Gain @NumRemovers@ Magnetic Removers.<br><br><rules>Thief's Gloves counts as multiple items.</rules>",
+  "tooltip": "Champions holding exactly 1 item upgrade that item to Radiant. Champions holding Radiant items gain @BonusHealth*100@% Health. Gain @NumRemovers@ Magnetic Removers.<br><br><rules>Thief's Gloves counts as multiple items.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/QualityoverQuantity_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Quality Over Quantity:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.07, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.07,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealth",
+      "rawSourceValue": "0.07",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealth", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.07, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 99,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxUnits",
+      "rawSourceValue": "99",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRemovers",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusHealth", "value": "0.07" }, { "name": "MaxUnits", "value": "99" }, { "name": "NumRemovers", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: MaxUnits", "Unmapped item variable: NumRemovers"]
 }

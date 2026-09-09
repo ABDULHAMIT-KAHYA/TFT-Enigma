@@ -1,7 +1,30 @@
 {
   "name": "Guinsoo's Large Bead",
+  "displayName": "Guinsoo's Large Bead",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_GuinsoosLargeBead",
+  "description": "Your attacks cannot critically strike, but deal magic damage equal to @CritConversion*100@% of your critical strike chance on hit.",
+  "tooltip": "Your attacks cannot critically strike, but deal magic damage equal to @CritConversion*100@% of your critical strike chance on hit.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnHit",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "CritConversion",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "CritConversion", "value": "1.5" }],
+  "importWarnings": ["Metadata-only item effect: CritConversion -> DealDamage", "Unmapped item variable: CritConversion"]
 }

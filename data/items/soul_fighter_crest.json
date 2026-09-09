@@ -1,7 +1,17 @@
 {
   "name": "Soul Fighter Crest",
+  "displayName": "Soul Fighter Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SoulFighterCrest",
+  "description": "Gain a Soul Fighter Emblem.",
+  "tooltip": "Gain a Soul Fighter Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_SoulFighter_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

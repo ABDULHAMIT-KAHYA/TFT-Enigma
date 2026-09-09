@@ -1,0 +1,30 @@
+{
+  "name": "TFT_Item_FreeBFSword",
+  "displayName": "B.F. Sword",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_FreeBFSword",
+  "description": "%i:scaleAD% +@AD*100@% Attack Damage",
+  "tooltip": "%i:scaleAD% +@AD*100@% Attack Damage",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Icon_BFSword.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+    { "name": "Item:TFT_Item_FreeBFSword:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "15" }],
+  "importWarnings": []
+}

@@ -1,7 +1,40 @@
 {
   "name": "Acceleration Gate",
+  "displayName": "Acceleration Gate",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_AccelerationGate",
+  "description": "After casting, Piltover units restore @ManaRefill*100@% of their max Mana over @RefillDuration@ seconds.",
+  "tooltip": "After casting, Piltover units restore @ManaRefill*100@% of their max Mana over @RefillDuration@ seconds.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_AccelerationGate.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCast",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaRefill",
+      "rawSourceValue": "0.35",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCast",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "RefillDuration",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaRefill", "value": "0.35" }, { "name": "RefillDuration", "value": "2" }],
+  "importWarnings": ["Metadata-only item effect: ManaRefill -> ModifyMana", "Unmapped item variable: ManaRefill", "Unmapped item variable: RefillDuration", "Unsupported item effect metadata: RefillDuration"]
 }

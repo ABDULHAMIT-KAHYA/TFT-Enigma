@@ -1,7 +1,41 @@
 {
   "name": "Gilded Steel",
+  "displayName": "Gilded Steel",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_GildedSteel",
+  "description": "Gain @NumUnits@ non-Tank 5-cost champions. If you field at least one 5-cost champion, your 1 to 4-cost champions gain @Durability*100@% Durability.<br><br><tftitemrules>K.O. Coliseum Tactician's Crown, 2025</tftitemrules>",
+  "tooltip": "Gain @NumUnits@ non-Tank 5-cost champions. If you field at least one 5-cost champion, your 1 to 4-cost champions gain @Durability*100@% Durability.<br><br><tftitemrules>K.O. Coliseum Tactician's Crown, 2025</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GildedSteel_II.TFT_16_4.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Gilded Steel:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Durability",
+      "rawSourceValue": "0.08",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Durability", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Durability", "value": "0.08" }, { "name": "NumUnits", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumUnits", "Unsupported item effect metadata: NumUnits"]
 }

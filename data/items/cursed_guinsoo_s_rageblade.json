@@ -1,7 +1,41 @@
 {
   "name": "Cursed Guinsoo's Rageblade",
+  "displayName": "Cursed Guinsoo's Rageblade",
+  "isPlaceholder": false,
+  "sourceId": "TFT12_Item_MilioThreeStar_CursedGuinsoosRageblade",
+  "description": "The holder of this item sets their attack speed cap to @ASCap@ and cannot gain mana or cast. Every time they are attacked, the attacker gains <TFTBonus>@BonusAttackSpeed*100@%</TFTBonus> Attack Speed. ",
+  "tooltip": "The holder of this item sets their attack speed cap to @ASCap@ and cannot gain mana or cast. Every time they are attacked, the attacker gains <TFTBonus>@BonusAttackSpeed*100@%</TFTBonus> Attack Speed. ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Guinsoos_Rageblade.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Cursed Guinsoo's Rageblade:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAttackSpeed",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusAttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ASCap",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ASCap", "value": "0.1" }, { "name": "BonusAttackSpeed", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: ASCap", "Unsupported item effect metadata: ASCap"]
 }

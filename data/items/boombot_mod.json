@@ -1,7 +1,17 @@
 {
   "name": "BoomBot Mod",
+  "displayName": "BoomBot Mod",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Item_BallistekNetGodItem",
+  "description": "Permanently mods a champion to benefit from the BoomBot trait (but does not contribute).<br><br><tftitemrules>Champions can only have one Trait Mod.</tftitemrules><br><tftitemrules>Consumable - This item disappears when used.</tftitemrules>",
+  "tooltip": "Permanently mods a champion to benefit from the BoomBot trait (but does not contribute).<br><br><tftitemrules>Champions can only have one Trait Mod.</tftitemrules><br><tftitemrules>Consumable - This item disappears when used.</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14_GOTN_Mods/TFT14_ModTrait_BoomBots.TFT_Set14.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

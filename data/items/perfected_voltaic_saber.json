@@ -1,9 +1,100 @@
 {
   "name": "Perfected Voltaic Saber",
+  "displayName": "Perfected Voltaic Saber",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Crime_Prismatic_VoltaicSaber",
+  "description": "After every @NumDamageInstances@ instances of damage, send jolts towards the @NumEnemies@ lowest health enemies, dealing <physicalDamage>@JoltDamage@</physicalDamage> physical damage.<br><br><scaleShimmer>Perfected Bonus:</scaleShimmer> Every time the holder fires bolts, they gain @PrismaticASPerTrigger*100@% Attack Speed.<br><rules>Recommended users: Sevika and Smeech</rules>",
+  "tooltip": "After every @NumDamageInstances@ instances of damage, send jolts towards the @NumEnemies@ lowest health enemies, dealing <physicalDamage>@JoltDamage@</physicalDamage> physical damage.<br><br><scaleShimmer>Perfected Bonus:</scaleShimmer> Every time the holder fires bolts, they gain @PrismaticASPerTrigger*100@% Attack Speed.<br><rules>Recommended users: Sevika and Smeech</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Prismatic_VoltaicSaber.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Perfected Voltaic Saber:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Perfected Voltaic Saber:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Perfected Voltaic Saber:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.45",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "45",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StatOmnivamp",
+      "rawSourceValue": "0.45",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:StatOmnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "JoltDamage",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDamageInstances",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumEnemies",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PrismaticASPerTrigger",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.45" }, { "name": "AP", "value": "45" }, { "name": "JoltDamage", "value": "300" }, { "name": "NumDamageInstances", "value": "6" }, { "name": "NumEnemies", "value": "3" }, { "name": "PrismaticASPerTrigger", "value": "0.2" }, { "name": "StatOmnivamp", "value": "0.45" }],
+  "importWarnings": ["Unmapped item variable: JoltDamage", "Unmapped item variable: NumDamageInstances", "Unmapped item variable: NumEnemies", "Unmapped item variable: PrismaticASPerTrigger"]
 }

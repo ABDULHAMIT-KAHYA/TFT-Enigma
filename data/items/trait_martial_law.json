@@ -1,7 +1,40 @@
 {
   "name": "Trait: Martial Law",
+  "displayName": "Trait: Martial Law",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_TeamupAugment_Mentorship",
+  "description": "When Ambessa casts, Caitlyn fires an empowered attack at the target, dealing @TOOLTIPONLYCAITAD@% damage. Ambessa gains @TOOLTIPONLYADSHARE@% of Caitlyn's Attack Damage.<br><br>Gain a Caitlyn and Ambessa.",
+  "tooltip": "When Ambessa casts, Caitlyn fires an empowered attack at the target, dealing @TOOLTIPONLYCAITAD@% damage. Ambessa gains @TOOLTIPONLYADSHARE@% of Caitlyn's Attack Damage.<br><br>Gain a Caitlyn and Ambessa.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TeamUp_Mentorship_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPONLYADSHARE",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPONLYCAITAD",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "TOOLTIPONLYADSHARE", "value": "18" }, { "name": "TOOLTIPONLYCAITAD", "value": "200" }],
+  "importWarnings": ["Unmapped item variable: TOOLTIPONLYADSHARE", "Unmapped item variable: TOOLTIPONLYCAITAD"]
 }

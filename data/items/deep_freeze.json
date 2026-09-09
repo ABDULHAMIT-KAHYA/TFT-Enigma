@@ -1,9 +1,166 @@
 {
   "name": "Deep Freeze",
+  "displayName": "Deep Freeze",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_AnimaSquadItem_Tier3_IceblastArmor",
+  "description": "The first time you fall below @HealthThreshold1*100@%, @HealthThreshold2*100@%, <TFTRadiantItemBonus>@HealthThreshold3*100@%, and @HealthThreshold4*100@%</TFTRadiantItemBonus> health, gain a @ShieldPercent*100@% max health shield for @ShieldDuration@ seconds. When this happens, release a frost nova that stuns enemies within @HexRange@ hexes for @StunDuration@ seconds <TFTRadiantItemBonus>and deals magic damage equal to @MaxHealthDamage*100@% of their max Health.</TFTRadiantItemBonus><br><br><TFTRadiantItemBonus>The radius increases by @HexRangeIncreasePerProc@ each nova.</TFTRadiantItemBonus><br><br><rules>Recommended Roles: Attack or Magic Tank</rules>",
+  "tooltip": "The first time you fall below @HealthThreshold1*100@%, @HealthThreshold2*100@%, <TFTRadiantItemBonus>@HealthThreshold3*100@%, and @HealthThreshold4*100@%</TFTRadiantItemBonus> health, gain a @ShieldPercent*100@% max health shield for @ShieldDuration@ seconds. When this happens, release a frost nova that stuns enemies within @HexRange@ hexes for @StunDuration@ seconds <TFTRadiantItemBonus>and deals magic damage equal to @MaxHealthDamage*100@% of their max Health.</TFTRadiantItemBonus><br><br><TFTRadiantItemBonus>The radius increases by @HexRangeIncreasePerProc@ each nova.</TFTRadiantItemBonus><br><br><rules>Recommended Roles: Attack or Magic Tank</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_AnimaSquadItem_IceblastArmor_T3.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Deep Freeze:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Deep Freeze:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 550, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Deep Freeze:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 550,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "550",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 550, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold1",
+      "rawSourceValue": "0.9",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold2",
+      "rawSourceValue": "0.6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold3",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold4",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRange",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRangeIncreasePerProc",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealthDamage",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldPercent",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunDuration",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "30" }, { "name": "Health", "value": "550" }, { "name": "HealthThreshold1", "value": "0.9" }, { "name": "HealthThreshold2", "value": "0.6" }, { "name": "HealthThreshold3", "value": "0.4" }, { "name": "HealthThreshold4", "value": "0.2" }, { "name": "HexRange", "value": "2" }, { "name": "HexRangeIncreasePerProc", "value": "1" }, { "name": "MagicResist", "value": "30" }, { "name": "MaxHealthDamage", "value": "0.15" }, { "name": "ShieldDuration", "value": "4" }, { "name": "ShieldPercent", "value": "0.2" }, { "name": "StunDuration", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: HealthThreshold1", "Unmapped item variable: HealthThreshold2", "Unmapped item variable: HealthThreshold3", "Unmapped item variable: HealthThreshold4", "Unmapped item variable: HexRange", "Unmapped item variable: HexRangeIncreasePerProc", "Unmapped item variable: MaxHealthDamage", "Unmapped item variable: ShieldDuration", "Unmapped item variable: ShieldPercent", "Unmapped item variable: StunDuration"]
 }

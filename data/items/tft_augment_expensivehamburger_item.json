@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Augment_ExpensiveHamburger_Item",
+  "displayName": "Training Manual",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ExpensiveHamburger_Item",
+  "description": "Use this on a champion to spend @TFTUnitProperty.item:TFT_Augment_ExpensiveHamburger_GoldCostTooltip@ gold and permanently give your team @TFTUnitProperty.item:TFT_Augment_ExpensiveHamburger_HealthPerStack@ health and @TFTUnitProperty.item:TFT_Augment_ExpensiveHamburger_ASPerStack@% attack speed",
+  "tooltip": "Use this on a champion to spend @TFTUnitProperty.item:TFT_Augment_ExpensiveHamburger_GoldCostTooltip@ gold and permanently give your team @TFTUnitProperty.item:TFT_Augment_ExpensiveHamburger_HealthPerStack@ health and @TFTUnitProperty.item:TFT_Augment_ExpensiveHamburger_ASPerStack@% attack speed",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT12/TFT12_Ravenous_LightSnack.TFT_Set12.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

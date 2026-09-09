@@ -1,9 +1,90 @@
 {
   "name": "Radiant Kraken's Fury",
+  "displayName": "Radiant Kraken's Fury",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_RunaansHurricaneRadiant",
+  "description": "Attacks grant <TFTRadiantItemBonus>@ADOnAttack*100@%</TFTRadiantItemBonus> stacking Attack Damage, up to @MaxStacks@ attacks. After @MaxStacks@ attacks, gain <TFTRadiantItemBonus>@ASCapstone*100@%</TFTRadiantItemBonus> Attack Speed.",
+  "tooltip": "Attacks grant <TFTRadiantItemBonus>@ADOnAttack*100@%</TFTRadiantItemBonus> stacking Attack Damage, up to @MaxStacks@ attacks. After @MaxStacks@ attacks, gain <TFTRadiantItemBonus>@ASCapstone*100@%</TFTRadiantItemBonus> Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_KrakenSlayerRadiant.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Radiant Kraken's Fury:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Radiant Kraken's Fury:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Radiant Kraken's Fury:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 0.07,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ADOnAttack",
+      "rawSourceValue": "0.07",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ASCapstone",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MaxStacks",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 15, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.2" }, { "name": "ADOnAttack", "value": "0.07" }, { "name": "AS", "value": "20" }, { "name": "ASCapstone", "value": "0.3" }, { "name": "MagicResist", "value": "40" }, { "name": "MaxStacks", "value": "15" }],
+  "importWarnings": ["Metadata-only item effect: AD -> GrantStats", "Metadata-only item effect: ADOnAttack -> DealDamage", "Metadata-only item effect: AS -> GrantStats", "Metadata-only item effect: ASCapstone -> DealDamage", "Metadata-only item effect: MagicResist -> GrantStats", "Metadata-only item effect: MaxStacks -> DealDamage", "Unmapped item variable: ADOnAttack", "Unmapped item variable: ASCapstone", "Unmapped item variable: MaxStacks"]
 }

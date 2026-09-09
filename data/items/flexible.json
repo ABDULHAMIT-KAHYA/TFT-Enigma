@@ -1,7 +1,51 @@
 {
   "name": "Flexible",
+  "displayName": "Flexible",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Flexible",
+  "description": "Gain @StartingEmblems@ random Emblem. At the start of every Stage, gain a random Emblem. Your team gains @HPPerEmblem@ Health for each Emblem they are holding.",
+  "tooltip": "Gain @StartingEmblems@ random Emblem. At the start of every Stage, gain a random Emblem. Your team gains @HPPerEmblem@ Health for each Emblem they are holding.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Flexible_II.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 99,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusStages",
+      "rawSourceValue": "99",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPPerEmblem",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StartingEmblems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusStages", "value": "99" }, { "name": "HPPerEmblem", "value": "30" }, { "name": "StartingEmblems", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: BonusStages", "Unmapped item variable: HPPerEmblem", "Unmapped item variable: StartingEmblems"]
 }

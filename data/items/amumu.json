@@ -1,7 +1,17 @@
 {
   "name": "Amumu",
+  "displayName": "Amumu",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Amumu",
+  "description": "Amumu",
+  "tooltip": "Amumu",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Amumu_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

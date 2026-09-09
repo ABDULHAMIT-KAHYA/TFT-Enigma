@@ -1,7 +1,41 @@
 {
   "name": "U.R.F",
+  "displayName": "U.R.F",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Augment_UltraRapidFire",
+  "description": "Gain a Spatula. Champions holding Spatula or Frying Pan items gain @AttackSpeed*100@% Attack Speed and @ManaRegen@ Mana Regen.",
+  "tooltip": "Gain a Spatula. Champions holding Spatula or Frying Pan items gain @AttackSpeed*100@% Attack Speed and @ManaRegen@ Mana Regen.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/UltraRapidFire_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:U.R.F:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.15" }, { "name": "ManaRegen", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: ManaRegen"]
 }

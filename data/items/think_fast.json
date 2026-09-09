@@ -1,7 +1,29 @@
 {
   "name": "Think Fast",
+  "displayName": "Think Fast",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_ThinkFast",
+  "description": "Shop rerolls are free until the end of this round. Traits and other augments do not benefit from these free Shops. Gain @Gold@ gold.",
+  "tooltip": "Shop rerolls are free until the end of this round. Traits and other augments do not benefit from these free Shops. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Think-Fast-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold"]
 }

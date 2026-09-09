@@ -1,7 +1,17 @@
 {
   "name": "Dummy with 2 Lockets",
+  "displayName": "Dummy with 2 Lockets",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Dummy_2xLocked",
+  "description": "A training dummy with 2 Lockets of The Iron Solari, an item which shields allies on combat start.",
+  "tooltip": "A training dummy with 2 Lockets of The Iron Solari, an item which shields allies on combat start.",
+  "iconPath": "ASSETS/Characters/TFT_TrainingDummy/HUD/Icons2D/TFT_TrainingDummy_DoNothing.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

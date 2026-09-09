@@ -1,7 +1,40 @@
 {
   "name": "Job Well Done",
+  "displayName": "Job Well Done",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Commander_MediumForgePlus",
+  "description": "Gain a completed item anvil and @RandomComponents@ random component.",
+  "tooltip": "Gain a completed item anvil and @RandomComponents@ random component.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Job_s-Done-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumAnvils",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RandomComponents",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumAnvils", "value": "1" }, { "name": "RandomComponents", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumAnvils", "Unmapped item variable: RandomComponents", "Unsupported item effect metadata: NumAnvils", "Unsupported item effect metadata: RandomComponents"]
 }

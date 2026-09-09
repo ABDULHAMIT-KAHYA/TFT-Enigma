@@ -1,7 +1,63 @@
 {
   "name": "Care Package",
+  "displayName": "Care Package",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_HomeCooking",
+  "description": "Now and at the start of the next @NumStages@ Stages, receive a care package with loot and @Gold@ gold.",
+  "tooltip": "Now and at the start of the next @NumStages@ Stages, receive a care package with loot and @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CarePackage_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Care Package:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumStages",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "component",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "3" }, { "name": "Health", "value": "4" }, { "name": "NumStages", "value": "2" }, { "name": "component", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumStages", "Unmapped item variable: component", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumStages", "Unsupported item effect metadata: component"]
 }

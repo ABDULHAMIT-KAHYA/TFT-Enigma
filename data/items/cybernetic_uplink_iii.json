@@ -1,7 +1,41 @@
 {
   "name": "Cybernetic Uplink III",
+  "displayName": "Cybernetic Uplink III",
+  "isPlaceholder": false,
+  "sourceId": "TFT6_Augment_CyberneticUplink3",
+  "description": "Allies holding an item gain @Health@ Health and @ManaRegen@ Mana Regen. Gain a Tear of the Goddess.",
+  "tooltip": "Allies holding an item gain @Health@ Health and @ManaRegen@ Mana Regen. Gain a Tear of the Goddess.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cybernetic-Uplink-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Cybernetic Uplink III:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 275, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 275,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "275",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 275, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "275" }, { "name": "ManaRegen", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: ManaRegen"]
 }

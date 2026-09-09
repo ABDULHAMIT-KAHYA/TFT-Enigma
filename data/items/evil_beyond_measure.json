@@ -1,7 +1,29 @@
 {
   "name": "Evil Beyond Measure",
+  "displayName": "Evil Beyond Measure",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_EvilBeyondMeasure",
+  "description": "Your champions deal @BasePercentTrueDamage*100@% of their damage as True Damage for each Star level.",
+  "tooltip": "Your champions deal @BasePercentTrueDamage*100@% of their damage as True Damage for each Star level.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/EvilBeyondMeasure_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.045,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BasePercentTrueDamage",
+      "rawSourceValue": "0.045",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BasePercentTrueDamage", "value": "0.045" }],
+  "importWarnings": ["Unmapped item variable: BasePercentTrueDamage"]
 }

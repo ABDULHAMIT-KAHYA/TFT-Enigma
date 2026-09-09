@@ -1,7 +1,41 @@
 {
   "name": "Cybernetic Shell II",
+  "displayName": "Cybernetic Shell II",
+  "isPlaceholder": false,
+  "sourceId": "TFT6_Augment_CyberneticShell2",
+  "description": "Your champions holding an item gain @Health@ Health and @Resists@ Armor.",
+  "tooltip": "Your champions holding an item gain @Health@ Health and @Resists@ Armor.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cybernetic-Shell-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Cybernetic Shell II:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 120, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 120,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "120",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 120, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Resists",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "120" }, { "name": "Resists", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: Resists"]
 }

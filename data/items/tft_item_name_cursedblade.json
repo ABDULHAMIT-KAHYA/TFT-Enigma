@@ -1,8 +1,54 @@
 {
   "name": "tft_item_name_CursedBlade",
+  "displayName": "tft_item_name_CursedBlade",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_CursedBlade",
+  "description": "TFT_item_description_CursedBlade",
+  "tooltip": "TFT_item_description_CursedBlade",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_CursedBlade.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:tft_item_name_CursedBlade:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:tft_item_name_CursedBlade:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a56e0a21}",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "15" }, { "name": "MagicResist", "value": "25" }, { "name": "{a56e0a21}", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: {a56e0a21}", "Unsupported item effect metadata: {a56e0a21}"]
 }

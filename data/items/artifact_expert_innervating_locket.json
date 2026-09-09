@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: Innervating Locket",
+  "displayName": "Artifact Expert: Innervating Locket",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_InnvervatingLocket",
+  "description": "Get a 2* Illaoi, a Innervating Locket, and a Giant Belt",
+  "tooltip": "Get a 2* Illaoi, a Innervating Locket, and a Giant Belt",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

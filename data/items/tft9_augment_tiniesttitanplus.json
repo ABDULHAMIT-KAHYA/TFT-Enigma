@@ -1,0 +1,51 @@
+{
+  "name": "TFT9_Augment_TiniestTitanPlus",
+  "displayName": "Tiniest Titan",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_TiniestTitanPlus",
+  "description": "Gain @Heal@ player Health and @Gold@ gold after every player combat. Your Tactician also moves faster. Gain @InitialGold@ gold now.",
+  "tooltip": "Gain @Heal@ player Health and @Gold@ gold after every player combat. Your Tactician also moves faster. Gain @InitialGold@ gold now.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tiniest-TitanIII.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Heal",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InitialGold",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }, { "name": "Heal", "value": "2" }, { "name": "InitialGold", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: Heal", "Unmapped item variable: InitialGold"]
+}

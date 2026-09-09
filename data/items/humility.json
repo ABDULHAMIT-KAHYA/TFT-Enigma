@@ -1,7 +1,40 @@
 {
   "name": "Humility",
+  "displayName": "Humility",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Humility",
+  "description": "Set your loss streak to @Streak@ and gain @Health@ Tactician Health.",
+  "tooltip": "Set your loss streak to @Streak@ and gain @Health@ Tactician Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_Humility.TFT_17_2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Streak",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "null" }, { "name": "Streak", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: Streak", "Unmapped non-numeric item variable: Health"]
 }

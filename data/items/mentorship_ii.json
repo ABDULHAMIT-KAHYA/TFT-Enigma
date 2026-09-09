@@ -1,8 +1,43 @@
 {
   "name": "Mentorship II",
+  "displayName": "Mentorship II",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_Mentorship2",
+  "description": "If an ally starts combat next to a higher-cost ally, it gains @AS*100@% Attack Speed and @Health@ Health.",
+  "tooltip": "If an ally starts combat next to a higher-cost ally, it gains @AS*100@% Attack Speed and @Health@ Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mentorship-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Mentorship II:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 220, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Mentorship II:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.16, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.16,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "0.16",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.16, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 220,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "220",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 220, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "0.16" }, { "name": "Health", "value": "220" }],
+  "importWarnings": []
 }

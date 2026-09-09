@@ -1,0 +1,40 @@
+{
+  "name": "TFT17_Consumable_BlessingProsperityPlus",
+  "displayName": "Blessing: Prosperity +",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Consumable_BlessingProsperityPlus",
+  "description": "Permanently grant a champion @BaseHealth@ Health, which increases by @InterestHealth@ Health for each interest you earn.",
+  "tooltip": "Permanently grant a champion @BaseHealth@ Health, which increases by @InterestHealth@ Health for each interest you earn.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_BlessingProsperity.TFT_17_3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseHealth",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{30221825}",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseHealth", "value": "100" }, { "name": "{30221825}", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: BaseHealth", "Unmapped item variable: {30221825}"]
+}

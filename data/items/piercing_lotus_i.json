@@ -1,7 +1,52 @@
 {
   "name": "Piercing Lotus I",
+  "displayName": "Piercing Lotus I",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_PiercingLotus1",
+  "description": "Your team gains @critchance@% Critical Strike chance, and their Abilities can critically strike. Critical strikes @ShredSunderPerc*100@% Shred and Sunder the target for @Duration@ seconds.",
+  "tooltip": "Your team gains @critchance@% Critical Strike chance, and their Abilities can critically strike. Critical strikes @ShredSunderPerc*100@% Shred and Sunder the target for @Duration@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Piercing-Lotus-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Piercing Lotus I:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShredSunderPerc",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "5" }, { "name": "Duration", "value": "3" }, { "name": "ShredSunderPerc", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: Duration", "Unmapped item variable: ShredSunderPerc", "Unsupported item effect metadata: Duration", "Unsupported item effect metadata: ShredSunderPerc"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Reinforced Frame",
+  "displayName": "Reinforced Frame",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_FrameDefense",
+  "description": "!!DO NOT PICK - NOT YET IMPLEMENTED!!<br>1 Range, Attack Tank<br>Specialized in absorbing damage and protecting allies.",
+  "tooltip": "!!DO NOT PICK - NOT YET IMPLEMENTED!!<br>1 Range, Attack Tank<br>Specialized in absorbing damage and protecting allies.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_FrameDefense.TFT_Set17.tex",
+  "itemCategory": "LootObject",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

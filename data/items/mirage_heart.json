@@ -1,7 +1,17 @@
 {
   "name": "Mirage Heart",
+  "displayName": "Mirage Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_MirageTrait",
+  "description": "Your team counts as having 1 additional Mirage. Gain a Yone.",
+  "tooltip": "Your team counts as having 1 additional Mirage. Gain a Yone.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mirage-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

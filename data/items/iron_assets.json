@@ -1,7 +1,29 @@
 {
   "name": "Iron Assets",
+  "displayName": "Iron Assets",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_IronAssets",
+  "description": "Gain a component anvil and @Gold@ gold.",
+  "tooltip": "Gain a component anvil and @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Iron-Assets-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

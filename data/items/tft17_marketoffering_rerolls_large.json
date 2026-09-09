@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_Rerolls_Large",
+  "displayName": "@Rerolls@ free rerolls",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Rerolls_Large",
+  "description": "@Rerolls@ free rerolls",
+  "tooltip": "@Rerolls@ free rerolls",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_Rerolls.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Rerolls",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Rerolls", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: Rerolls", "Unsupported item effect metadata: Rerolls"]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "TFT11_Storyweaver7_Support",
+  "displayName": "Tome of Mending",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Storyweaver7_Support",
+  "description": "Every @Duration@ seconds, revive the strongest ally that hasn't been revived yet at @HPPercent*100@% of their maximum Health.",
+  "tooltip": "Every @Duration@ seconds, revive the strongest ally that hasn't been revived yet at @HPPercent*100@% of their maximum Health.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT11_StoryweaverItems/TFT11_Storyweaver_Support3.tex",
+  "itemCategory": "SupportItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPPercent",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d76b8ef7}",
+      "rawSourceValue": "2000",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "7" }, { "name": "HPPercent", "value": "0.5" }, { "name": "{d76b8ef7}", "value": "2000" }],
+  "importWarnings": ["Unmapped item variable: Duration", "Unmapped item variable: HPPercent", "Unmapped item variable: {d76b8ef7}"]
+}

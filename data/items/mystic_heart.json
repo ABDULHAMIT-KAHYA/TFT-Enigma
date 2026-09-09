@@ -1,7 +1,17 @@
 {
   "name": "Mystic Heart",
+  "displayName": "Mystic Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_MysticTrait",
+  "description": "Your team counts as having 1 additional Mystic. Gain a Rakan.",
+  "tooltip": "Your team counts as having 1 additional Mystic. Gain a Rakan.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mystic-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

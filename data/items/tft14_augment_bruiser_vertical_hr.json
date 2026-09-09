@@ -1,0 +1,29 @@
+{
+  "name": "TFT14_Augment_Bruiser_Vertical_HR",
+  "displayName": "Reinforcing Skeleture",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Bruiser_Vertical_HR",
+  "description": "Whenever a Bruiser dies, it permanently gains @HealthBonus@ Health.<br>Gain a Darius and Alistar.",
+  "tooltip": "Whenever a Bruiser dies, it permanently gains @HealthBonus@ Health.<br>Gain a Darius and Alistar.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ReinforcingSkeleture_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 70,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthBonus",
+      "rawSourceValue": "70",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthBonus", "value": "70" }],
+  "importWarnings": ["Unmapped item variable: HealthBonus"]
+}

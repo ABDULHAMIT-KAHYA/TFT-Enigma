@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_StrategistCirclet",
+  "displayName": "Strategist Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_StrategistCirclet",
+  "description": "Gain a Strategist Emblem, a Ziggs, and a Tear of the Goddess.",
+  "tooltip": "Gain a Strategist Emblem, a Ziggs, and a Tear of the Goddess.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/StrategistCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

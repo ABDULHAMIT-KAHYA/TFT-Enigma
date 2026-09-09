@@ -1,0 +1,51 @@
+{
+  "name": "TFT17_MarketOffering_SharedWealth_Stage4",
+  "displayName": "Shared Wealth +",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_SharedWealth_Stage4",
+  "description": "Gain @Gold@ gold. If at least @PlayersNeeded@ players choose this, gain an additional @BonusGold@ gold.",
+  "tooltip": "Gain @Gold@ gold. If at least @PlayersNeeded@ players choose this, gain an additional @BonusGold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_SharedWealth.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusGold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PlayersNeeded",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusGold", "value": "2" }, { "name": "Gold", "value": "10" }, { "name": "PlayersNeeded", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: BonusGold", "Unmapped item variable: Gold", "Unmapped item variable: PlayersNeeded", "Unsupported item effect metadata: BonusGold", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: PlayersNeeded"]
+}

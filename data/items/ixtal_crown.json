@@ -1,7 +1,17 @@
 {
   "name": "Ixtal Crown",
+  "displayName": "Ixtal Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_IxtalCrown",
+  "description": "Get an Ixtal Emblem, a Neeko, and a Gargoyle Stoneplate.",
+  "tooltip": "Get an Ixtal Emblem, a Neeko, and a Gargoyle Stoneplate.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,8 +1,76 @@
 {
   "name": "First Mate's Flintlock",
+  "displayName": "First Mate's Flintlock",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Item_Bilgewater_FirstMatesFlintlock",
+  "description": "Every second during combat, gain @ADPerStack*100@% Attack Damage and @ASPerStack*100@% Attack Speed.<br><br><rules>Recommended holder: Miss Fortune</rules>",
+  "tooltip": "Every second during combat, gain @ADPerStack*100@% Attack Damage and @ASPerStack*100@% Attack Speed.<br><br><rules>Recommended holder: Miss Fortune</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Item_Bilgewater_DreadwayCannon.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:First Mate's Flintlock:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:First Mate's Flintlock:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.03,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ADPerStack",
+      "rawSourceValue": "0.03",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.03,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ASPerStack",
+      "rawSourceValue": "0.03",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Timer",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.1" }, { "name": "ADPerStack", "value": "0.03" }, { "name": "ASPerStack", "value": "0.03" }, { "name": "CritChance", "value": "20" }, { "name": "Timer", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: ADPerStack", "Unmapped item variable: ASPerStack", "Unmapped item variable: Timer"]
 }

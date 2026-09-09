@@ -1,7 +1,30 @@
 {
   "name": "Spirit Emblem",
+  "displayName": "Spirit Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT4_Item_SpiritEmblemItem",
+  "description": "The holder gains the Spirit trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
+  "tooltip": "The holder gains the Spirit trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set4/TFT_SR4_5_Emblem_Spirit_128.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Spirit Emblem:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "15" }],
+  "importWarnings": []
 }

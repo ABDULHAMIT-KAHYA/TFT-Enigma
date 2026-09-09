@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_JuggernautCirclet",
+  "displayName": "Juggernaut Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_JuggernautCirclet",
+  "description": "Get a Juggernaut Emblem, a Negatron Cloak, and a Swain.",
+  "tooltip": "Get a Juggernaut Emblem, a Negatron Cloak, and a Swain.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

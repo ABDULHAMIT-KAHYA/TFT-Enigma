@@ -1,7 +1,62 @@
 {
   "name": "IRA",
+  "displayName": "IRA",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_IRA",
+  "description": "You have no max interest. Any interest above @MinInterest@ gold gets converted to @XPPerGold@ XP each. Get @Gold@ gold.",
+  "tooltip": "You have no max interest. Any interest above @MinInterest@ gold gets converted to @XPPerGold@ XP each. Get @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InterestCap",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MinInterest",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XPPerGold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "10" }, { "name": "InterestCap", "value": "20" }, { "name": "MinInterest", "value": "5" }, { "name": "XPPerGold", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: InterestCap", "Unmapped item variable: MinInterest", "Unmapped item variable: XPPerGold", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: InterestCap", "Unsupported item effect metadata: MinInterest", "Unsupported item effect metadata: XPPerGold"]
 }

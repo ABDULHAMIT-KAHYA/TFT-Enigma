@@ -1,7 +1,17 @@
 {
   "name": "Reach for the Stars",
+  "displayName": "Reach for the Stars",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_JaxCarry",
+  "description": "Gain a Jax. Your strongest Jax becomes a Magic Fighter that deal bonus magic damage on attack and gains stacking Attack Speed on cast.",
+  "tooltip": "Gain a Jax. Your strongest Jax becomes a Magic Fighter that deal bonus magic damage on attack and gains stacking Attack Speed on cast.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ReachForTheStars_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

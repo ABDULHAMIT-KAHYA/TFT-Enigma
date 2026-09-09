@@ -1,7 +1,51 @@
 {
   "name": "Delayed Start",
+  "displayName": "Delayed Start",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_HeadStart",
+  "description": "Sell your board and bench. Gain @NumUnits@ random 2-star @tier@-cost champions. Disable your Shop for the next @roundstoskip@ rounds.",
+  "tooltip": "Sell your board and bench. Gain @NumUnits@ random 2-star @tier@-cost champions. Disable your Shop for the next @roundstoskip@ rounds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HeadStart_I.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundsToSkip",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Tier",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumUnits", "value": "4" }, { "name": "RoundsToSkip", "value": "3" }, { "name": "Tier", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumUnits", "Unmapped item variable: RoundsToSkip", "Unmapped item variable: Tier", "Unsupported item effect metadata: NumUnits", "Unsupported item effect metadata: RoundsToSkip", "Unsupported item effect metadata: Tier"]
 }

@@ -1,7 +1,42 @@
 {
   "name": "Early Learnings",
+  "displayName": "Early Learnings",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_EarlyLearning",
+  "description": "Your team gains @NumADAP@% Attack Damage & Ability Power. This increases by @IncPerPlayerCombat@% after each player combat. 1-cost champions gain double.<br>@TFTUnitProperty.item:TFT_Augment_EarlyLearning_TRAKey@<br><tftitemrules>TFT Vegas Open, 2023</tftitemrules>",
+  "tooltip": "Your team gains @NumADAP@% Attack Damage & Ability Power. This increases by @IncPerPlayerCombat@% after each player combat. 1-cost champions gain double.<br>@TFTUnitProperty.item:TFT_Augment_EarlyLearning_TRAKey@<br><tftitemrules>TFT Vegas Open, 2023</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/EarlyLearning_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "IncPerPlayerCombat",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumADAP",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    }
+  ],
+  "rawVariables": [{ "name": "IncPerPlayerCombat", "value": "1" }, { "name": "NumADAP", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: IncPerPlayerCombat", "Unmapped item variable: NumADAP"]
 }

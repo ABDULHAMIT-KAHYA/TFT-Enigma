@@ -1,7 +1,17 @@
 {
   "name": "Supreme Cells Crown",
+  "displayName": "Supreme Cells Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SupremeCellsCrown",
+  "description": "Gain a Supreme Cells Emblem, a Last Whisper, and a Kai'sa.",
+  "tooltip": "Gain a Supreme Cells Emblem, a Last Whisper, and a Kai'sa.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_SupremeCells_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

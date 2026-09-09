@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_Tier5_Units",
+  "displayName": "3 5-cost champions",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Tier5_Units",
+  "description": "3 5-cost champions",
+  "tooltip": "3 5-cost champions",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_5c.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

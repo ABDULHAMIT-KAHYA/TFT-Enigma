@@ -1,0 +1,62 @@
+{
+  "name": "TFT_Augment_TacticiansKitchen_HR",
+  "displayName": "Tactician's Kitchen",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TacticiansKitchen_HR",
+  "description": "Gain a random Emblem. After @TurnDelay@ rounds, gain a Tactician's Cape.",
+  "tooltip": "Gain a random Emblem. After @TurnDelay@ rounds, gain a Tactician's Cape.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TacticiansKitchen_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumFryingPan",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItemAnvils",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumSpatula",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TurnDelay",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumFryingPan", "value": "1" }, { "name": "NumItemAnvils", "value": "1" }, { "name": "NumSpatula", "value": "1" }, { "name": "TurnDelay", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: NumFryingPan", "Unmapped item variable: NumItemAnvils", "Unmapped item variable: NumSpatula", "Unmapped item variable: TurnDelay"]
+}

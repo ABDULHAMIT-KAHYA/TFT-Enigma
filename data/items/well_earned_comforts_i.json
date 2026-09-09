@@ -1,7 +1,30 @@
 {
   "name": "Well-Earned Comforts I",
+  "displayName": "Well-Earned Comforts I",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_Commander_WellEarnedComforts",
+  "description": "Your units gain @Health@ Health for each item equipped.",
+  "tooltip": "Your units gain @Health@ Health for each item equipped.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Well-Earned-Comforts-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Well-Earned Comforts I:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 70, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 70,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "70",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 70, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "70" }],
+  "importWarnings": []
 }

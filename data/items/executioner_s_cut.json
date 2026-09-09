@@ -1,7 +1,40 @@
 {
   "name": "Executioner's Cut",
+  "displayName": "Executioner's Cut",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_Executioner",
+  "description": "Your Executioners execute enemies below @ExecuteThreshold*100@% health. Executions have a @GoldChance*100@% chance to drop 1 gold. Gain a Kindred.",
+  "tooltip": "Your Executioners execute enemies below @ExecuteThreshold*100@% health. Executions have a @GoldChance*100@% chance to drop 1 gold. Gain a Kindred.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Executioners-Cut_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ExecuteThreshold",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldChance",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ExecuteThreshold", "value": "0.1" }, { "name": "GoldChance", "value": "0.15" }],
+  "importWarnings": ["Unmapped item variable: ExecuteThreshold", "Unmapped item variable: GoldChance"]
 }

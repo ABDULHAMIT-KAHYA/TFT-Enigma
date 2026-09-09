@@ -1,10 +1,80 @@
 {
   "name": "Sacrificial Gauntlet",
+  "displayName": "Sacrificial Gauntlet",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_JeweledGauntletShadow",
+  "description": "The holder gains @CritDamageAmp@% Critical Strike Damage, and magic and true damage from their Ability can critically strike. <br><br><TFTShadowItemBonus>The first time they cast their Ability each combat, they gain an additional @BonusCritChance@% Critical Strike Chance for the remainder of combat (applies to that Ability cast).</TFTShadowItemBonus>",
+  "tooltip": "The holder gains @CritDamageAmp@% Critical Strike Damage, and magic and true damage from their Ability can critically strike. <br><br><TFTShadowItemBonus>The first time they cast their Ability each combat, they gain an additional @BonusCritChance@% Critical Strike Chance for the remainder of combat (applies to that Ability cast).</TFTShadowItemBonus>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT5_Item_Jeweled_Gauntlet_Shadow.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Sacrificial Gauntlet:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Sacrificial Gauntlet:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Sacrificial Gauntlet:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Sacrificial Gauntlet:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusCritChance",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusCritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritDamageAmp",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritDamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{8460b11d}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "10" }, { "name": "BonusCritChance", "value": "30" }, { "name": "CritChance", "value": "15" }, { "name": "CritDamageAmp", "value": "50" }, { "name": "{8460b11d}", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: {8460b11d}"]
 }

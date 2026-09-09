@@ -1,0 +1,40 @@
+{
+  "name": "TFT14_Augment_BlackMarketTitanicStrength",
+  "displayName": "Titanic Strength",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_BlackMarketTitanicStrength",
+  "description": "Your team gains @ADHealthPercent@% of their max Health as Attack Damage and @APHealthPercent@% of their max Health as Ability Power.",
+  "tooltip": "Your team gains @ADHealthPercent@% of their max Health as Attack Damage and @APHealthPercent@% of their max Health as Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TitanicForce3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ADHealthPercent",
+      "rawSourceValue": "1.25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "APHealthPercent",
+      "rawSourceValue": "1.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADHealthPercent", "value": "1.25" }, { "name": "APHealthPercent", "value": "1.25" }],
+  "importWarnings": ["Unmapped item variable: ADHealthPercent", "Unmapped item variable: APHealthPercent"]
+}

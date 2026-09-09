@@ -1,7 +1,41 @@
 {
   "name": "Upgrade!",
+  "displayName": "Upgrade!",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Item_Piltover_Upgrade",
+  "description": "Upgrade a random item on your strongest Piltover unit to Radiant. They also gain @AttackSpeed*100@% Attack Speed and @MaxHealth@ max Health.",
+  "tooltip": "Upgrade a random item on your strongest Piltover unit to Radiant. They also gain @AttackSpeed*100@% Attack Speed and @MaxHealth@ max Health.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_Upgrade.TFT_Set16.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:Upgrade!:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealth",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.25" }, { "name": "MaxHealth", "value": "300" }],
+  "importWarnings": ["Unmapped item variable: MaxHealth"]
 }

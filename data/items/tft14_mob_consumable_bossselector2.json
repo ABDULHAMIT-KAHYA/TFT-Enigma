@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Mob_Consumable_BossSelector2",
+  "displayName": "Kingpin Hat",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Mob_Consumable_BossSelector2",
+  "description": "Promotes a Syndicate champion to Kingpin and upgrades their&nbsp;ability.",
+  "tooltip": "Promotes a Syndicate champion to Kingpin and upgrades their&nbsp;ability.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set14/TFT14_Mob_BossHat2.TFT_Set14.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

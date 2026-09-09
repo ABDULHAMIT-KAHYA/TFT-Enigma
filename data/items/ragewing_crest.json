@@ -1,7 +1,17 @@
 {
   "name": "Ragewing Crest",
+  "displayName": "Ragewing Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_RagewingEmblem",
+  "description": "Gain a Ragewing Emblem and a Rakan.",
+  "tooltip": "Gain a Ragewing Emblem and a Rakan.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Ragewing-Crest-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

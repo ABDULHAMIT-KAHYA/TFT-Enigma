@@ -1,7 +1,41 @@
 {
   "name": "Continuum Cogs",
+  "displayName": "Continuum Cogs",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Item_Piltover_ContinuumCogs",
+  "description": "All allies gain @ManaGen@ Mana Regen and @AbilityPower@ Ability Power.",
+  "tooltip": "All allies gain @ManaGen@ Mana Regen and @AbilityPower@ Ability Power.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_ContinuumCogs.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Continuum Cogs:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AbilityPower",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaGen",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AbilityPower", "value": "15" }, { "name": "ManaGen", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: ManaGen"]
 }

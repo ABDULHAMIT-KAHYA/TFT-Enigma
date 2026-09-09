@@ -1,0 +1,17 @@
+{
+  "name": "TFT5_Augment_InvokerCrown",
+  "displayName": "Invoker Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_InvokerCrown",
+  "description": "Gain a Invoker Emblem, a Spear of Shojin, and a Syndra.",
+  "tooltip": "Gain a Invoker Emblem, a Spear of Shojin, and a Syndra.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Invoker_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,17 @@
 {
   "name": "Redeemed Crest",
+  "displayName": "Redeemed Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_RedeemedCrest",
+  "description": "Gain a Redeemed Emblem and a Syndra.",
+  "tooltip": "Gain a Redeemed Emblem and a Syndra.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Redeemed_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

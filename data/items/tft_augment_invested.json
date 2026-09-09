@@ -1,0 +1,62 @@
+{
+  "name": "TFT_Augment_Invested",
+  "displayName": "Invested",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Invested",
+  "description": "Gain @Gold@ gold. After every combat, gain 1 Shop reroll for every @GoldPerReroll@ gold above @GoldThreshold@ (max @MaxGold@ gold).",
+  "tooltip": "Gain @Gold@ gold. After every combat, gain 1 Shop reroll for every @GoldPerReroll@ gold above @GoldThreshold@ (max @MaxGold@ gold).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Invested-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 16,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "16",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldPerReroll",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldThreshold",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 80,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxGold",
+      "rawSourceValue": "80",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "16" }, { "name": "GoldPerReroll", "value": "10" }, { "name": "GoldThreshold", "value": "50" }, { "name": "MaxGold", "value": "80" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: GoldPerReroll", "Unmapped item variable: GoldThreshold", "Unmapped item variable: MaxGold", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: GoldPerReroll", "Unsupported item effect metadata: GoldThreshold", "Unsupported item effect metadata: MaxGold"]
+}

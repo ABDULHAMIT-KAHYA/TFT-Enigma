@@ -1,7 +1,17 @@
 {
   "name": "Sentinels of Light",
+  "displayName": "Sentinels of Light",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_TeamupAugment_LucianVayne",
+  "description": "Gain a Lucian & Senna and a 2-star Vayne. Vayne fires additional bolts at enemies afflicted with Black Mist and on takedown, grants Attack Speed to Lucian & Senna.<br><br>",
+  "tooltip": "Gain a Lucian & Senna and a 2-star Vayne. Vayne fires additional bolts at enemies afflicted with Black Mist and on takedown, grants Attack Speed to Lucian & Senna.<br><br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SentinelsOfLight_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

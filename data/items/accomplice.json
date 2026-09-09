@@ -1,7 +1,29 @@
 {
   "name": "Accomplice",
+  "displayName": "Accomplice",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_Accomplice",
+  "description": "Get a Support Thief's Gloves and&nbsp;@gold@&nbsp;gold.",
+  "tooltip": "Get a Support Thief's Gloves and&nbsp;@gold@&nbsp;gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Accomplice_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

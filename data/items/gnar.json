@@ -1,7 +1,17 @@
 {
   "name": "Gnar",
+  "displayName": "Gnar",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Gnar",
+  "description": "Gnar",
+  "tooltip": "Gnar",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_GnarSmall_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

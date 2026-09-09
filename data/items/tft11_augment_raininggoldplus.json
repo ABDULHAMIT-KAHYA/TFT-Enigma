@@ -1,0 +1,40 @@
+{
+  "name": "TFT11_Augment_RainingGoldPlus",
+  "displayName": "Raining Gold+",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_RainingGoldPlus",
+  "description": "Gain @InstantGold@ gold now and @RoundGold@ gold every&nbsp;round.",
+  "tooltip": "Gain @InstantGold@ gold now and @RoundGold@ gold every&nbsp;round.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RainingGold_II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InstantGold",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundGold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "InstantGold", "value": "18" }, { "name": "RoundGold", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: InstantGold", "Unmapped item variable: RoundGold", "Unsupported item effect metadata: InstantGold", "Unsupported item effect metadata: RoundGold"]
+}

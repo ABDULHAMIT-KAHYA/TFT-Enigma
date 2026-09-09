@@ -1,7 +1,40 @@
 {
   "name": "Time Skip",
+  "displayName": "Time Skip",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TimeSkip",
+  "description": "Disable your Shop for the next @PenaltyTurns@ rounds. Then gain @Experience@ XP.",
+  "tooltip": "Disable your Shop for the next @PenaltyTurns@ rounds. Then gain @Experience@ XP.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TimeSkip_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 32,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Experience",
+      "rawSourceValue": "32",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PenaltyTurns",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Experience", "value": "32" }, { "name": "PenaltyTurns", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Experience", "Unmapped item variable: PenaltyTurns", "Unsupported item effect metadata: Experience", "Unsupported item effect metadata: PenaltyTurns"]
 }

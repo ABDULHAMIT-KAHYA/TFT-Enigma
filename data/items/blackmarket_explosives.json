@@ -1,8 +1,87 @@
 {
   "name": "Blackmarket Explosives",
+  "displayName": "Blackmarket Explosives",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Item_Bilgewater_BlackmarketExplosives",
+  "description": "Every @Interval@ seconds, deal @BaseDamage@ + @DamageStored*100@% of damage dealt within the last @Interval@ seconds as magic damage to current target and @NumTargets@ nearest enemies.<br><br><rules>Recommended holder: Fizz</rules>",
+  "tooltip": "Every @Interval@ seconds, deal @BaseDamage@ + @DamageStored*100@% of damage dealt within the last @Interval@ seconds as magic damage to current target and @NumTargets@ nearest enemies.<br><br><rules>Recommended holder: Fizz</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Item_Bilgewater_BlackmarketExplosives.TFT_Set16.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
     { "name": "Item:Blackmarket Explosives:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Blackmarket Explosives:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseDamage",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageStored",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Interval",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumTargets",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "20" }, { "name": "AS", "value": "10" }, { "name": "BaseDamage", "value": "15" }, { "name": "DamageStored", "value": "0.12" }, { "name": "Interval", "value": "5" }, { "name": "NumTargets", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: BaseDamage", "Unmapped item variable: DamageStored", "Unmapped item variable: Interval", "Unmapped item variable: NumTargets"]
 }

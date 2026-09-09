@@ -1,0 +1,124 @@
+{
+  "name": "TFTEvent5YR_Item_ShimmerscaleDravensAxe",
+  "displayName": "Draven's Axe",
+  "isPlaceholder": false,
+  "sourceId": "TFTEvent5YR_Item_ShimmerscaleDravensAxe",
+  "description": "Gain %i:scaleAD% @AttackDamagePerGold@% Attack Damage per %i:goldCoins% gold in your bank (up to %i:goldCoins% @AttackDamageGoldLimit@ gold).<br><br>Attacks grant @StacksPerAttack@ stack, up to @CashoutStacks@ times. At full stacks, grant %i:goldCoins% @CashoutGold@ gold.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>",
+  "tooltip": "Gain %i:scaleAD% @AttackDamagePerGold@% Attack Damage per %i:goldCoins% gold in your bank (up to %i:goldCoins% @AttackDamageGoldLimit@ gold).<br><br>Attacks grant @StacksPerAttack@ stack, up to @CashoutStacks@ times. At full stacks, grant %i:goldCoins% @CashoutGold@ gold.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set7_Shimmerscale/Shimmerscale_DravensAxe_Base.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+    { "name": "Item:TFTEvent5YR_Item_ShimmerscaleDravensAxe:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFTEvent5YR_Item_ShimmerscaleDravensAxe:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFTEvent5YR_Item_ShimmerscaleDravensAxe:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFTEvent5YR_Item_ShimmerscaleDravensAxe:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackDamageGoldLimit",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackDamageGoldLimit", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackDamagePerGold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackDamagePerGold", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "OnAttack",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "CashoutComponents",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "OnAttack",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "CashoutGold",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "OnAttack",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "CashoutStacks",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "OnAttack",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "StacksPerAttack",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "OnAttack",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{fd493b8a}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.05" }, { "name": "AS", "value": "10" }, { "name": "AttackDamageGoldLimit", "value": "50" }, { "name": "AttackDamagePerGold", "value": "1" }, { "name": "CashoutComponents", "value": "null" }, { "name": "CashoutGold", "value": "7" }, { "name": "CashoutStacks", "value": "100" }, { "name": "StacksPerAttack", "value": "1" }, { "name": "{fd493b8a}", "value": "2" }],
+  "importWarnings": ["Metadata-only item effect: AD -> GrantStats", "Metadata-only item effect: AS -> GrantStats", "Metadata-only item effect: AttackDamageGoldLimit -> GrantStats", "Metadata-only item effect: AttackDamagePerGold -> GrantStats", "Metadata-only item effect: CashoutComponents -> GrantTrait", "Metadata-only item effect: CashoutGold -> GrantTrait", "Metadata-only item effect: CashoutStacks -> GrantTrait", "Metadata-only item effect: StacksPerAttack -> GrantTrait", "Metadata-only item effect: {fd493b8a} -> GrantTrait", "Unmapped item variable: CashoutGold", "Unmapped item variable: CashoutStacks", "Unmapped item variable: StacksPerAttack", "Unmapped item variable: {fd493b8a}", "Unmapped non-numeric item variable: CashoutComponents"]
+}

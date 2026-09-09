@@ -1,7 +1,41 @@
 {
   "name": "Early Education",
+  "displayName": "Early Education",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_EarlyEducation",
+  "description": "Your team permanently gains @AP@ Ability Power whenever they kill an enemy. Combat start: Your team gains @StartingAP@ bonus Ability Power.",
+  "tooltip": "Your team permanently gains @AP@ Ability Power whenever they kill an enemy. Combat start: Your team gains @StartingAP@ bonus Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Early-Education-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Early Education:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "StartingAP",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "1" }, { "name": "StartingAP", "value": "15" }],
+  "importWarnings": ["Metadata-only item effect: AP -> GrantStats", "Unmapped item variable: StartingAP", "Unsupported item effect metadata: StartingAP"]
 }

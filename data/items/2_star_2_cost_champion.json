@@ -1,7 +1,51 @@
 {
   "name": "2-star 2-cost champion",
+  "displayName": "2-star 2-cost champion",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_1x2star2cost",
+  "description": "2-star 2-cost champion",
+  "tooltip": "2-star 2-cost champion",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_2c.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{7e1ab625}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumUnits", "value": "1" }, { "name": "starLevel", "value": "2" }, { "name": "{7e1ab625}", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumUnits", "Unmapped item variable: starLevel", "Unmapped item variable: {7e1ab625}", "Unsupported item effect metadata: NumUnits", "Unsupported item effect metadata: starLevel", "Unsupported item effect metadata: {7e1ab625}"]
 }

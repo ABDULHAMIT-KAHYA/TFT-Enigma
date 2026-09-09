@@ -1,7 +1,29 @@
 {
   "name": "Marksman's Toolbox",
+  "displayName": "Marksman's Toolbox",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_MarksmansToolbox",
+  "description": "Gain a Sniper's Focus. in @combatnum@ rounds, gain a Fishbones.",
+  "tooltip": "Gain a Sniper's Focus. in @combatnum@ rounds, gain a Fishbones.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/MarksmansToolbox_III.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CombatNum",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CombatNum", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: CombatNum", "Unsupported item effect metadata: CombatNum"]
 }

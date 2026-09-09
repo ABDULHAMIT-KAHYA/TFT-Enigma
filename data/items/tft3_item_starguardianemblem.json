@@ -1,0 +1,29 @@
+{
+  "name": "TFT3_Item_StarGuardianEmblem",
+  "displayName": "Star Guardian Emblem",
+  "isPlaceholder": true,
+  "sourceId": "TFT3_Item_StarGuardianEmblem",
+  "description": "The holder gains the Star Guardian trait.",
+  "tooltip": "The holder gains the Star Guardian trait.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set3/StarGuardian.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Mana", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: Mana"]
+}

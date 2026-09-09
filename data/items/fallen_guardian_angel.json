@@ -1,8 +1,87 @@
 {
   "name": "Fallen Guardian Angel",
+  "displayName": "Fallen Guardian Angel",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_GuardianAngelShadow",
+  "description": "Prevents the holder's first death, placing them in stasis instead. After @StasisDuration@ seconds, they return with <TFTShadowItemBonus>@HealthRestorePercent@% Health</TFTShadowItemBonus> and shed all negative effects.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "tooltip": "Prevents the holder's first death, placing them in stasis instead. After @StasisDuration@ seconds, they return with <TFTShadowItemBonus>@HealthRestorePercent@% Health</TFTShadowItemBonus> and shed all negative effects.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Guardian_Angel.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Fallen Guardian Angel:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Fallen Guardian Angel:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthRestorePercent",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StasisDuration",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{44ff9822}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{e40a23df}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "10" }, { "name": "Armor", "value": "20" }, { "name": "HealthRestorePercent", "value": "100" }, { "name": "StasisDuration", "value": "2" }, { "name": "{44ff9822}", "value": "null" }, { "name": "{e40a23df}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: HealthRestorePercent", "Unmapped item variable: StasisDuration", "Unmapped item variable: {e40a23df}", "Unmapped non-numeric item variable: {44ff9822}"]
 }

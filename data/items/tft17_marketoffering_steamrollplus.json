@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_SteamrollPlus",
+  "displayName": "Steamroll+",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_SteamrollPlus",
+  "description": "Gain a random @Tier@-cost and 1 gold. Repeat after each player combat until you lose one.",
+  "tooltip": "Gain a random @Tier@-cost and 1 gold. Repeat after each player combat until you lose one.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_3c.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Tier",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Tier", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Tier", "Unsupported item effect metadata: Tier"]
+}

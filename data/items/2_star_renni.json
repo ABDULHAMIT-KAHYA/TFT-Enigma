@@ -1,7 +1,17 @@
 {
   "name": "2-star Renni",
+  "displayName": "2-star Renni",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_ChampionItem_Chainsaw_2Star",
+  "description": "Gain a 2-star Renni",
+  "tooltip": "Gain a 2-star Renni",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_ChampionItem_Chainsaw_2Star.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

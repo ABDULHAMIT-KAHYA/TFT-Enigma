@@ -1,7 +1,17 @@
 {
   "name": "Shadow Dash",
+  "displayName": "Shadow Dash",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ShenCarry",
+  "description": "Gain a Shen. Your strongest Shen becomes an Attack Fighter. His Ability is replaced with a dash that strikes low Health enemies. The number of dashes increases with each cast.",
+  "tooltip": "Gain a Shen. Your strongest Shen becomes an Attack Fighter. His Ability is replaced with a dash that strikes low Health enemies. The number of dashes increases with each cast.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ShadowDash_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

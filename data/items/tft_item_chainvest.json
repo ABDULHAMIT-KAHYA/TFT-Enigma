@@ -1,0 +1,30 @@
+{
+  "name": "TFT_Item_ChainVest",
+  "displayName": "Chain Vest",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_ChainVest",
+  "description": "%i:scaleArmor% +@Armor@ Armor",
+  "tooltip": "%i:scaleArmor% +@Armor@ Armor",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_ChainVest.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT_Item_ChainVest:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "20" }],
+  "importWarnings": []
+}

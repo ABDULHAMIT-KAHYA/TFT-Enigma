@@ -1,7 +1,17 @@
 {
   "name": "Golden Ox Circlet",
+  "displayName": "Golden Ox Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_GoldenOxCirclet",
+  "description": "Gain a Golden Ox Emblem and a Jarvan.",
+  "tooltip": "Gain a Golden Ox Emblem and a Jarvan.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldenOxCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

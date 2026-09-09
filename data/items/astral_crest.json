@@ -1,7 +1,17 @@
 {
   "name": "Astral Crest",
+  "displayName": "Astral Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_AstralEmblem",
+  "description": "Gain an Astral Emblem and a Lux.",
+  "tooltip": "Gain an Astral Emblem and a Lux.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Astral-Crest-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

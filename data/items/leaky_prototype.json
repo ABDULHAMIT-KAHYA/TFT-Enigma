@@ -1,7 +1,63 @@
 {
   "name": "Leaky Prototype",
+  "displayName": "Leaky Prototype",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_AnimaSquadItem_Tier0_LeakyPrototype",
+  "description": "Every @Interval@ seconds, this item loses @APLoss@ Ability Power and gains @ManaRegenPerLoss@ Mana Regen.",
+  "tooltip": "Every @Interval@ seconds, this item loses @APLoss@ Ability Power and gains @ManaRegenPerLoss@ Mana Regen.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_AnimaSquadItem_LeakyPrototype_T0.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Leaky Prototype:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegenPerLoss",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "APLoss",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Interval",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "15" }, { "name": "APLoss", "value": "3" }, { "name": "Interval", "value": "5" }, { "name": "ManaRegenPerLoss", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: APLoss", "Unmapped item variable: Interval", "Unmapped item variable: ManaRegenPerLoss", "Unsupported item effect metadata: APLoss", "Unsupported item effect metadata: Interval"]
 }

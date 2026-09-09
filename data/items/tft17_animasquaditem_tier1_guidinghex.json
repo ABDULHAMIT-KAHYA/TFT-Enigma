@@ -1,0 +1,76 @@
+{
+  "name": "TFT17_AnimaSquadItem_Tier1_GuidingHex",
+  "displayName": "Guiding Hex",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_AnimaSquadItem_Tier1_GuidingHex",
+  "description": "Every @Frequency@ seconds, fire a bolt at a random enemy in Attack Range, dealing @ProjectileDamage@ magic damage.<br><br><TFTGuildActive enabled=TFT17_AnimaSquad_Tier1Item_IsEnhanced alternate=TFTGuildInactive>Aurora Bonus: If this item is equipped on Aurora, she gains @AuroraAPOnHit@ Ability Power when the bolt hits.</TFTGuildActive><br><br><rules>Damage increases based on Stage.</rules>",
+  "tooltip": "Every @Frequency@ seconds, fire a bolt at a random enemy in Attack Range, dealing @ProjectileDamage@ magic damage.<br><br><TFTGuildActive enabled=TFT17_AnimaSquad_Tier1Item_IsEnhanced alternate=TFTGuildInactive>Aurora Bonus: If this item is equipped on Aurora, she gains @AuroraAPOnHit@ Ability Power when the bolt hits.</TFTGuildActive><br><br><rules>Damage increases based on Stage.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_AnimSquadItem_GuidingHex_T1.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT17_AnimaSquadItem_Tier1_GuidingHex:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnHit",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "AuroraAPOnHit",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 9, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnHit",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Frequency",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnHit",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ProjectileDamage",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnHit",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{1543aa48}",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnHit",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "15" }, { "name": "AuroraAPOnHit", "value": "9" }, { "name": "Frequency", "value": "3" }, { "name": "ProjectileDamage", "value": "null" }, { "name": "{1543aa48}", "value": "0.1" }],
+  "importWarnings": ["Metadata-only item effect: AP -> GrantStats", "Metadata-only item effect: AuroraAPOnHit -> DealDamage", "Metadata-only item effect: Frequency -> DealDamage", "Metadata-only item effect: ProjectileDamage -> DealDamage", "Metadata-only item effect: {1543aa48} -> DealDamage", "Unmapped item variable: AuroraAPOnHit", "Unmapped item variable: Frequency", "Unmapped item variable: {1543aa48}", "Unmapped non-numeric item variable: ProjectileDamage"]
+}

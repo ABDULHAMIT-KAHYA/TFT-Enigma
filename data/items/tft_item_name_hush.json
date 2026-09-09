@@ -1,7 +1,74 @@
 {
   "name": "tft_item_name_Hush",
+  "displayName": "tft_item_name_Hush",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_Hush",
+  "description": "TFT_item_description_Hush",
+  "tooltip": "TFT_item_description_Hush",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_Hush.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:tft_item_name_Hush:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaLockDuration",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SilenceDuration",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{2275757b}",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MagicResist", "value": "25" }, { "name": "Mana", "value": "20" }, { "name": "ManaLockDuration", "value": "4" }, { "name": "SilenceDuration", "value": "4" }, { "name": "{2275757b}", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: Mana", "Unmapped item variable: ManaLockDuration", "Unmapped item variable: SilenceDuration", "Unmapped item variable: {2275757b}", "Unsupported item effect metadata: SilenceDuration", "Unsupported item effect metadata: {2275757b}"]
 }

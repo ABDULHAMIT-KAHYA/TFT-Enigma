@@ -1,7 +1,30 @@
 {
   "name": "Overclocked Capacitors",
+  "displayName": "Overclocked Capacitors",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Item_Piltover_OverclockedCapacitors",
+  "description": "Grant your team @AttackSpeed*100@% Attack Speed.",
+  "tooltip": "Grant your team @AttackSpeed*100@% Attack Speed.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_OverclockedCapacitors.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Overclocked Capacitors:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.25" }],
+  "importWarnings": []
 }

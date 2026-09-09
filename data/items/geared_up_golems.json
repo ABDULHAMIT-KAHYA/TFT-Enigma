@@ -1,7 +1,17 @@
 {
   "name": "Geared-Up Golems",
+  "displayName": "Geared-Up Golems",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_GolemPower",
+  "description": "Your golems can equip items and gain consumables. Gain a golem.",
+  "tooltip": "Your golems can equip items and gain consumables. Gain a golem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

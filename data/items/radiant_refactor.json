@@ -1,7 +1,29 @@
 {
   "name": "Radiant Refactor",
+  "displayName": "Radiant Refactor",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_RadiantRefactor",
+  "description": "Gain a Masterwork Upgrade and @anvils@ component anvil.<br><br><rules>Masterwork Upgrade upgrades an item to Radiant!</rules>",
+  "tooltip": "Gain a Masterwork Upgrade and @anvils@ component anvil.<br><br><rules>Masterwork Upgrade upgrades an item to Radiant!</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RadiantRefactor_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "anvils",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "anvils", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: anvils", "Unsupported item effect metadata: anvils"]
 }

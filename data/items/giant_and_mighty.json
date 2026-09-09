@@ -1,7 +1,51 @@
 {
   "name": "Giant and Mighty",
+  "displayName": "Giant and Mighty",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_GiantAndMighty",
+  "description": "Your team becomes large, gaining @FlatHealth@ Health and @PercentHealth*100@% max Health.",
+  "tooltip": "Your team becomes large, gaining @FlatHealth@ Health and @PercentHealth*100@% max Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GiantandMighty_III.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FlatHealth",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentHealth",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{858a62b6}",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "FlatHealth", "value": "200" }, { "name": "PercentHealth", "value": "0.1" }, { "name": "{858a62b6}", "value": "0.12" }],
+  "importWarnings": ["Unmapped item variable: FlatHealth", "Unmapped item variable: PercentHealth", "Unmapped item variable: {858a62b6}"]
 }

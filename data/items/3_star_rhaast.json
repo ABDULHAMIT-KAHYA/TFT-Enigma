@@ -1,7 +1,29 @@
 {
   "name": "3 star Rhaast",
+  "displayName": "3 star Rhaast",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_Rhaast3Star",
+  "description": "3 star Rhaast",
+  "tooltip": "3 star Rhaast",
+  "iconPath": "ASSETS/Characters/TFT14_Rhaast/HUD/TFT14_Rhaast_Square.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Teemo",
+  "displayName": "Teemo",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Teemo",
+  "description": "Teemo",
+  "tooltip": "Teemo",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Teemo_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

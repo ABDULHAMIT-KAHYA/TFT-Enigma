@@ -1,7 +1,51 @@
 {
   "name": "The Tower",
+  "displayName": "The Tower",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TheTower",
+  "description": "Gain a giant Training Dummy with increased Health (increases with Stage). Every @ZapInterval@ seconds, it zaps the @ZapCount@ nearest enemies dealing @MaxHealthPct*100@% max Health true damage.",
+  "tooltip": "Gain a giant Training Dummy with increased Health (increases with Stage). Every @ZapInterval@ seconds, it zaps the @ZapCount@ nearest enemies dealing @MaxHealthPct*100@% max Health true damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TheTower_I.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealthPct",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ZapCount",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ZapInterval",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxHealthPct", "value": "0.05" }, { "name": "ZapCount", "value": "3" }, { "name": "ZapInterval", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: MaxHealthPct", "Unmapped item variable: ZapCount", "Unmapped item variable: ZapInterval"]
 }

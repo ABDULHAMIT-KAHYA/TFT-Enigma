@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_SpellslingerCrest",
+  "displayName": "Sorcerer Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SpellslingerCrest",
+  "description": "Gain an Sorcerer Emblem.",
+  "tooltip": "Gain an Sorcerer Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Sorcerer_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

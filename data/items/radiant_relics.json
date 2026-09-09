@@ -1,7 +1,29 @@
 {
   "name": "Radiant Relics",
+  "displayName": "Radiant Relics",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_RadiantRelics",
+  "description": "Choose 1 of @ArmoryChoiceCount@ Radiant items. Gain a Magnetic Remover.<br><br><rules>Radiant items are very powerful versions of completed items.</rules>",
+  "tooltip": "Choose 1 of @ArmoryChoiceCount@ Radiant items. Gain a Magnetic Remover.<br><br><rules>Radiant items are very powerful versions of completed items.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RadiantRelic-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmoryChoiceCount",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ArmoryChoiceCount", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: ArmoryChoiceCount", "Unsupported item effect metadata: ArmoryChoiceCount"]
 }

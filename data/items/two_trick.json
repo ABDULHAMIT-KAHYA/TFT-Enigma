@@ -1,7 +1,17 @@
 {
   "name": "Two Trick",
+  "displayName": "Two Trick",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TwoTrick",
+  "description": "Gain a random 2-star 2-cost and 2 random 2-star 1-cost champions.",
+  "tooltip": "Gain a random 2-star 2-cost and 2 random 2-star 1-cost champions.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Two-Trick-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

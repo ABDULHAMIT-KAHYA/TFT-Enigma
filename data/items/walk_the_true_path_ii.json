@@ -1,7 +1,29 @@
 {
   "name": "Walk The True Path II",
+  "displayName": "Walk The True Path II",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_WalkTheTruePathPlus",
+  "description": "Gain @LesserDuplicatorAmount@ Lesser Champion Duplicators, a Yasuo, and a B.F. Sword. Reach level 10 and field 10 unique Ionians to unlock a Prismatic Upgrade.",
+  "tooltip": "Gain @LesserDuplicatorAmount@ Lesser Champion Duplicators, a Yasuo, and a B.F. Sword. Reach level 10 and field 10 unique Ionians to unlock a Prismatic Upgrade.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WalkTheTruePathPlus_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LesserDuplicatorAmount",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "LesserDuplicatorAmount", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: LesserDuplicatorAmount", "Unsupported item effect metadata: LesserDuplicatorAmount"]
 }

@@ -1,7 +1,29 @@
 {
   "name": "Questing Hero",
+  "displayName": "Questing Hero",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_QuestingHero",
+  "description": "The first time you field @NumChampsNeeded@ distinct unlockable champions in a player combat, gain a massive reward!",
+  "tooltip": "The first time you field @NumChampsNeeded@ distinct unlockable champions in a player combat, gain a massive reward!",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/QuestingHero_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumChampsNeeded",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumChampsNeeded", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: NumChampsNeeded"]
 }

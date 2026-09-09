@@ -1,7 +1,17 @@
 {
   "name": "Backline Attacker",
+  "displayName": "Backline Attacker",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Armory_Sentinel_Carry",
+  "description": "Unleashes a barrage from the backline.<br><br><i>(Comes with Rapid Firecannon, Fishbones, and Guinsoo's Rageblade.</i>)",
+  "tooltip": "Unleashes a barrage from the backline.<br><br><i>(Comes with Rapid Firecannon, Fishbones, and Guinsoo's Rageblade.</i>)",
+  "iconPath": "ASSETS/Characters/TFT_BlueGolem/HUD/TFT_BlueGolem_Spell.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

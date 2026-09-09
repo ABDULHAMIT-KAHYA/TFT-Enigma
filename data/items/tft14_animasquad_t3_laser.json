@@ -1,0 +1,29 @@
+{
+  "name": "TFT14_AnimaSquad_T3_Laser",
+  "displayName": "The Annihilator",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_AnimaSquad_T3_Laser",
+  "description": "At @DelayTime@ seconds, The Annihilator deals percent max Health true damage once.",
+  "tooltip": "At @DelayTime@ seconds, The Annihilator deals percent max Health true damage once.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14_AnimaSquadItems/TooltipIcons/TFT14_Icon_AnimaSquad_Laser.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DelayTime",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DelayTime", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: DelayTime"]
+}

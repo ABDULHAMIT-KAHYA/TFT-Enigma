@@ -1,0 +1,74 @@
+{
+  "name": "TFT_Item_SeraphsEmbrace",
+  "displayName": "Blue Buff",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_SeraphsEmbrace",
+  "description": "Gain @ManaRefund@ Mana after casting. <br><br>When the holder gets a takedown, they deal @DamageAmp*100@% more damage for @TakedownTimer@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+  "tooltip": "Gain @ManaRefund@ Mana after casting. <br><br>When the holder gets a takedown, they deal @DamageAmp*100@% more damage for @TakedownTimer@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+    { "name": "Item:TFT_Item_SeraphsEmbrace:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCast",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "TakedownTimer",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCast",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCast",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCast",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaOnTakedown",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCast",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaReduction",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "10" }, { "name": "Mana", "value": "40" }, { "name": "ManaOnTakedown", "value": "10" }, { "name": "ManaReduction", "value": "10" }, { "name": "TakedownTimer", "value": "3" }],
+  "importWarnings": ["Metadata-only item effect: AP -> GrantStats", "Metadata-only item effect: Mana -> ModifyMana", "Metadata-only item effect: ManaOnTakedown -> ModifyMana", "Metadata-only item effect: ManaReduction -> ModifyMana", "Metadata-only item effect: TakedownTimer -> DealDamage", "Unmapped item variable: Mana", "Unmapped item variable: ManaOnTakedown", "Unmapped item variable: ManaReduction", "Unmapped item variable: TakedownTimer"]
+}

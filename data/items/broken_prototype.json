@@ -1,7 +1,42 @@
 {
   "name": "Broken Prototype",
+  "displayName": "Broken Prototype",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_AnimaSquadItem_Tier0_ClunkyPrototype",
+  "description": "Combat start: Gain a @Shield*100@% max Health shield.",
+  "tooltip": "Combat start: Gain a @Shield*100@% max Health shield.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_AnimaSquadItem_ClunkyPrototype_T0.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Broken Prototype:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Shield",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Shield", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "100" }, { "name": "Shield", "value": "0.15" }],
+  "importWarnings": ["Metadata-only item effect: Health -> GrantStats", "Metadata-only item effect: Shield -> Shield", "Unmapped item variable: Shield"]
 }

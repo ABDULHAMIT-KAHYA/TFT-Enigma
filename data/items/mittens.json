@@ -1,7 +1,53 @@
 {
   "name": "Mittens",
+  "displayName": "Mittens",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_Artifact_Mittens",
+  "description": "Shrinks the holder, granting them increased movement speed and immunity to <TFTKeyword>Slow</TFTKeyword>, <TFTKeyword>Burn</TFTKeyword>, and <TFTKeyword>Wound</TFTKeyword>.<br><br>{{TFT_Keyword_Chill}}<br>{{TFT_Keyword_Burn}}<br>{{TFT_Keyword_Wound}}",
+  "tooltip": "Shrinks the holder, granting them increased movement speed and immunity to <TFTKeyword>Slow</TFTKeyword>, <TFTKeyword>Burn</TFTKeyword>, and <TFTKeyword>Wound</TFTKeyword>.<br><br>{{TFT_Keyword_Chill}}<br>{{TFT_Keyword_Burn}}<br>{{TFT_Keyword_Wound}}",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_Artifact_Mittens.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Mittens:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.65, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "PercentDR",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 25, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{1543aa48}",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.65,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "65",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.65, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "65" }, { "name": "PercentDR", "value": "25" }, { "name": "{1543aa48}", "value": "0.15" }],
+  "importWarnings": ["Unmapped item variable: PercentDR", "Unmapped item variable: {1543aa48}"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Riven",
+  "displayName": "Riven",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Riven",
+  "description": "Riven",
+  "tooltip": "Riven",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Riven_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

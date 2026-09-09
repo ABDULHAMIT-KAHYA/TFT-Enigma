@@ -1,7 +1,53 @@
 {
   "name": "Sticks And Stones",
+  "displayName": "Sticks And Stones",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_SticksAndStones",
+  "description": "Champions that aren't holding items Shred and Sunder enemies for @Duration@ seconds. Physical damage Sunders for @SunderPercentage@%, and magic damage Shreds for @ShredPercentage@%.<br><rules>Shred: reduces Magic Resist, Sunder: reduces Armor</rules>",
+  "tooltip": "Champions that aren't holding items Shred and Sunder enemies for @Duration@ seconds. Physical damage Sunders for @SunderPercentage@%, and magic damage Shreds for @ShredPercentage@%.<br><rules>Shred: reduces Magic Resist, Sunder: reduces Armor</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Sticks-And-Stones-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ShredPercentage",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 30, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "SunderPercentage",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 30, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "3" }, { "name": "ShredPercentage", "value": "30" }, { "name": "SunderPercentage", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: Duration", "Unmapped item variable: ShredPercentage", "Unmapped item variable: SunderPercentage"]
 }

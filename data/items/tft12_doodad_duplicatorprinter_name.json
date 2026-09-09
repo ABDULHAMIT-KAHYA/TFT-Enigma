@@ -1,7 +1,29 @@
 {
   "name": "TFT12_Doodad_DuplicatorPrinter_Name",
+  "displayName": "TFT12_Doodad_DuplicatorPrinter_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_DuplicatorPrinter",
+  "description": "TFT12_Doodad_DuplicatorPrinter_Tooltip",
+  "tooltip": "TFT12_Doodad_DuplicatorPrinter_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{54b69474}",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{54b69474}", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: {54b69474}", "Unsupported item effect metadata: {54b69474}"]
 }

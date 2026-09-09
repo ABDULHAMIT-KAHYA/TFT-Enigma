@@ -1,7 +1,29 @@
 {
   "name": "Complete Collection",
+  "displayName": "Complete Collection",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_CompleteCollection",
+  "description": "After you unlock @ChampsToEmblem@ champions from an origin, gain that origin's Emblem.",
+  "tooltip": "After you unlock @ChampsToEmblem@ champions from an origin, gain that origin's Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ChampsToEmblem",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ChampsToEmblem", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: ChampsToEmblem"]
 }

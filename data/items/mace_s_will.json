@@ -1,7 +1,41 @@
 {
   "name": "Mace's Will",
+  "displayName": "Mace's Will",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_GuardbreakerSpirit",
+  "description": "Gain a Sparring Gloves. Your team gains @CritChance*100@% Critical Strike Chance.",
+  "tooltip": "Gain a Sparring Gloves. Your team gains @CritChance*100@% Critical Strike Chance.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Will-of-the-Flail-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Mace's Will:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "null" }, { "name": "CritChance", "value": "0.25" }],
+  "importWarnings": ["Unmapped non-numeric item variable: AS", "Unsupported item effect metadata: AS"]
 }

@@ -1,0 +1,41 @@
+{
+  "name": "TFT14_Item_StrongEmblemItem",
+  "displayName": "Slayer Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Item_StrongEmblemItem",
+  "description": "The holder gains the Slayer trait.<br>Healing received is increased by @HealAmp*100@%.",
+  "tooltip": "The holder gains the Slayer trait.<br>Healing received is increased by @HealAmp*100@%.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set14/TFT14_Emblem_Slayer.TFT_Set14.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+    { "name": "Item:TFT14_Item_StrongEmblemItem:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "healamp",
+      "rawSourceValue": "0.33",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MagicResist", "value": "20" }, { "name": "healamp", "value": "0.33" }],
+  "importWarnings": ["Unmapped item variable: healamp"]
+}

@@ -1,7 +1,41 @@
 {
   "name": "Berserkers I",
+  "displayName": "Berserkers I",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_BerserkI",
+  "description": "Your units gain @AttackSpeed*100@% Attack Speed per @MissingHealthPercent*100@% missing health.",
+  "tooltip": "Your units gain @AttackSpeed*100@% Attack Speed per @MissingHealthPercent*100@% missing health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Berserkers I:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.005, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.005,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.005",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.005, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MissingHealthPercent",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.005" }, { "name": "MissingHealthPercent", "value": "0.01" }],
+  "importWarnings": ["Unmapped item variable: MissingHealthPercent"]
 }

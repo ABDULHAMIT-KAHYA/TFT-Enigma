@@ -1,7 +1,17 @@
 {
   "name": "Lagoon Crown",
+  "displayName": "Lagoon Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_LagoonEmblem2",
+  "description": "Gain a Lagoon Emblem, a Spear of Shojin, and a Zeri.",
+  "tooltip": "Gain a Lagoon Emblem, a Spear of Shojin, and a Zeri.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LagoonCrown-3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

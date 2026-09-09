@@ -1,8 +1,43 @@
 {
   "name": "Glacial Mallet",
+  "displayName": "Glacial Mallet",
+  "isPlaceholder": false,
+  "sourceId": "TFTEvent5YR_Item_GlacialMallet",
+  "description": "Attacks have a @TFTUnitProperty.item:TFTEvent5YR_Glacial_StunChance@% chance to stun enemies for @TFTTrait.TFTEvent5YR_Glacial.1:StunDuration@ second and deal @TFTUnitProperty.item:TFTEvent5YR_Glacial_BonusDamage@ bonus magic damage.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+  "tooltip": "Attacks have a @TFTUnitProperty.item:TFTEvent5YR_Glacial_StunChance@% chance to stun enemies for @TFTTrait.TFTEvent5YR_Glacial.1:StunDuration@ second and deal @TFTUnitProperty.item:TFTEvent5YR_Glacial_BonusDamage@ bonus magic damage.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/5YR/TFTEvent5YR_Item_GlacialMallet.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Glacial Mallet:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Glacial Mallet:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "30" }, { "name": "Health", "value": "300" }],
+  "importWarnings": []
 }

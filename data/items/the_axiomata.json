@@ -1,7 +1,95 @@
 {
   "name": "The Axiomata",
+  "displayName": "The Axiomata",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_TheAxiomata",
+  "description": "Gain @NumAugments@ random elemental hex augments. Future augment rounds instead grant you items and gold based on the augment's tier.",
+  "tooltip": "Gain @NumAugments@ random elemental hex augments. Future augment rounds instead grant you items and gold based on the augment's tier.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TheAxiomata_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumAugments",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumHexes",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StatIncrease",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{4ff1d424}",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{e18090ad}",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{fc42732c}",
+      "rawSourceValue": "33",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "null" }, { "name": "NumAugments", "value": "3" }, { "name": "NumHexes", "value": "1" }, { "name": "StatIncrease", "value": "null" }, { "name": "{4ff1d424}", "value": "15" }, { "name": "{e18090ad}", "value": "4" }, { "name": "{fc42732c}", "value": "33" }],
+  "importWarnings": ["Unmapped item variable: NumAugments", "Unmapped item variable: NumHexes", "Unmapped item variable: {4ff1d424}", "Unmapped item variable: {e18090ad}", "Unmapped item variable: {fc42732c}", "Unmapped non-numeric item variable: Health", "Unmapped non-numeric item variable: StatIncrease", "Unsupported item effect metadata: NumAugments", "Unsupported item effect metadata: NumHexes", "Unsupported item effect metadata: StatIncrease", "Unsupported item effect metadata: {4ff1d424}", "Unsupported item effect metadata: {e18090ad}", "Unsupported item effect metadata: {fc42732c}"]
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Ship_Ship",
+  "displayName": "JACKPOT",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Ship_Ship",
+  "description": "2 5-cost champions are placed in your chest.",
+  "tooltip": "2 5-cost champions are placed in your chest.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "LootObject",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

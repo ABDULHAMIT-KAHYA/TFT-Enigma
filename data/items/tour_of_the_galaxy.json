@@ -1,8 +1,65 @@
 {
   "name": "Tour of the Galaxy",
+  "displayName": "Tour of the Galaxy",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Augment_TourOfTheGalaxy",
+  "description": "Voyagers gain @HP@ Health, @AD*100@% Attack Damage, and @AP@% Ability Power, increased by @IncPercent*100@% each time you fight a new player. You prefer to fight players you haven't fought recently. Gain a Pyke and a Meepsie.",
+  "tooltip": "Voyagers gain @HP@ Health, @AD*100@% Attack Damage, and @AP@% Ability Power, increased by @IncPercent*100@% each time you fight a new player. You prefer to fight players you haven't fought recently. Gain a Pyke and a Meepsie.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TourOfTheGalaxy_II.TFT_Set17_PostLaunchAugments.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Tour of the Galaxy:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 13, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Tour of the Galaxy:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.13, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.13,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.13",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.13, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 13,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "13",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 13, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 130,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HP",
+      "rawSourceValue": "130",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IncPercent",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.13" }, { "name": "AP", "value": "13" }, { "name": "HP", "value": "130" }, { "name": "IncPercent", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: HP", "Unmapped item variable: IncPercent"]
 }

@@ -1,7 +1,29 @@
 {
   "name": "After @LargeQuestRounds@ player combats, gain +1 to all non-unique traits.",
+  "displayName": "After @LargeQuestRounds@ player combats, gain +1 to all non-unique traits.",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_AurelionSolGodAugment_LargeQuest",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LargeQuestRounds",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "LargeQuestRounds", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: LargeQuestRounds"]
 }

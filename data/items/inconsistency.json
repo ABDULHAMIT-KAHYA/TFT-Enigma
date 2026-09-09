@@ -1,7 +1,40 @@
 {
   "name": "Inconsistency",
+  "displayName": "Inconsistency",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Inconsistency",
+  "description": "If your streak is less than 3, gain 2 gold.",
+  "tooltip": "If your streak is less than 3, gain 2 gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Inconsistency-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{379448fe}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }, { "name": "{379448fe}", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: {379448fe}", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: {379448fe}"]
 }

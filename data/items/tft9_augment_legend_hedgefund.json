@@ -1,0 +1,40 @@
+{
+  "name": "TFT9_Augment_Legend_HedgeFund",
+  "displayName": "Hedge Fund",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Legend_HedgeFund",
+  "description": "Gain @Gold@ gold. Your max interest is increased to @InterestCap@.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>",
+  "tooltip": "Gain @Gold@ gold. Your max interest is increased to @InterestCap@.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RichGetRicher3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 22,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "22",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InterestCap",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "22" }, { "name": "InterestCap", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: InterestCap", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: InterestCap"]
+}

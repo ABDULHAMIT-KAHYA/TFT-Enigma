@@ -1,7 +1,41 @@
 {
   "name": "Techie Emblem",
+  "displayName": "Techie Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Item_TechieEmblemItem",
+  "description": "The holder gains the Techie trait.<br>The holder gains @APIncrease*100@% more Ability Power from all sources.",
+  "tooltip": "The holder gains the Techie trait.<br>The holder gains @APIncrease*100@% more Ability Power from all sources.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set14/TFT14_Emblem_Techie.TFT_Set14.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Techie Emblem:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "APIncrease",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "10" }, { "name": "APIncrease", "value": "0.15" }],
+  "importWarnings": ["Unmapped item variable: APIncrease"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "2 star 1-cost champion",
+  "displayName": "2 star 1-cost champion",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Encounter_ChoiceItem_2star1cost",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

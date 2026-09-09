@@ -1,7 +1,41 @@
 {
   "name": "Exiles III",
+  "displayName": "Exiles III",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_Distancing3",
+  "description": "Your champions that start combat with no adjacent champions gain a @MaxHealthShield@% max Health shield for @ShieldDuration@ seconds.",
+  "tooltip": "Your champions that start combat with no adjacent champions gain a @MaxHealthShield@% max Health shield for @ShieldDuration@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Exiles3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealthShield",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MaxHealthShield", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxHealthShield", "value": "50" }, { "name": "ShieldDuration", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: MaxHealthShield", "Unmapped item variable: ShieldDuration"]
 }

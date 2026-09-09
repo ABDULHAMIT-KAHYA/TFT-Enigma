@@ -1,7 +1,40 @@
 {
   "name": "Pocket Recombobulator",
+  "displayName": "Pocket Recombobulator",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PocketRecombobulator",
+  "description": "Get @NumRecombobulator@ Pocket Recombobulators, a consumable that transforms a 1 or 2-cost champion into one of a higher cost. They keep their Star level. Also receive @NumReforgers@ Reforgers.",
+  "tooltip": "Get @NumRecombobulator@ Pocket Recombobulators, a consumable that transforms a 1 or 2-cost champion into one of a higher cost. They keep their Star level. Also receive @NumReforgers@ Reforgers.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PocketRecombulator_I.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRecombobulator",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumReforgers",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumRecombobulator", "value": "2" }, { "name": "NumReforgers", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumRecombobulator", "Unmapped item variable: NumReforgers", "Unsupported item effect metadata: NumRecombobulator", "Unsupported item effect metadata: NumReforgers"]
 }

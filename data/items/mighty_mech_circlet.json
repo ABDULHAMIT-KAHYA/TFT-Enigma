@@ -1,7 +1,17 @@
 {
   "name": "Mighty Mech Circlet",
+  "displayName": "Mighty Mech Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SentaiCirclet",
+  "description": "Gain a Mighty Mech Crest and a Lucian",
+  "tooltip": "Gain a Mighty Mech Crest and a Lucian",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

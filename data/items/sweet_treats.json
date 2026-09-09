@@ -1,7 +1,29 @@
 {
   "name": "Sweet Treats",
+  "displayName": "Sweet Treats",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SweetTreats",
+  "description": "Gain an Artifact anvil. Your team gains @HealthPerItem@ Health for each item equipped on champions.<br><br>Health Gained: @TFTUnitProperty.item:TFT_Augment_SweetTreats_TeamHealth@<br><br><tftitemrules>Magic N' Mayhem Tactician's Crown, 2024</tftitemrules>",
+  "tooltip": "Gain an Artifact anvil. Your team gains @HealthPerItem@ Health for each item equipped on champions.<br><br>Health Gained: @TFTUnitProperty.item:TFT_Augment_SweetTreats_TeamHealth@<br><br><tftitemrules>Magic N' Mayhem Tactician's Crown, 2024</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SweetTreats_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 16,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPerItem",
+      "rawSourceValue": "16",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthPerItem", "value": "16" }],
+  "importWarnings": ["Unmapped item variable: HealthPerItem"]
 }

@@ -1,0 +1,42 @@
+{
+  "name": "TFT7_Augment_ScalescornBaseCamp",
+  "displayName": "Base Camp",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_ScalescornBaseCamp",
+  "description": "Scalescorns gain @DamageAmp@% damage each time they start combat in the same hex as last round, stacking up to @MaxStacks@ times. Gain a Lillia.",
+  "tooltip": "Scalescorns gain @DamageAmp@% damage each time they start combat in the same hex as last round, stacking up to @MaxStacks@ times. Gain a Lillia.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Nomads-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT7_Augment_ScalescornBaseCamp:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.07, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MaxStacks",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.07,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.07, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "7" }, { "name": "MaxStacks", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: MaxStacks"]
+}

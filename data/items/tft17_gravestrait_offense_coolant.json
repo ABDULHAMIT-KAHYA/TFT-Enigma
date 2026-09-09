@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_GravesTrait_Offense_Coolant",
+  "displayName": "Coolant",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_Coolant",
+  "description": "Mana Cost reduced by @ManaReduction@",
+  "tooltip": "Mana Cost reduced by @ManaReduction@",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_Coolant.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaReduction",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaReduction", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: ManaReduction"]
+}

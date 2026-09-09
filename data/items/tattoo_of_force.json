@@ -1,8 +1,77 @@
 {
   "name": "Tattoo of Force",
+  "displayName": "Tattoo of Force",
+  "isPlaceholder": false,
+  "sourceId": "TFT11_Item_InkshadowHorse",
+  "description": "Whenever the holder acquires a new target they run quickly to and briefly stun them, dealing @Damage@ magic damage, and double the stats from this item for @BuffDuration@ seconds.",
+  "tooltip": "Whenever the holder acquires a new target they run quickly to and briefly stun them, dealing @Damage@ magic damage, and double the stats from this item for @BuffDuration@ seconds.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT11_InkShadowItems/TFT11_Inkshadow_Force.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Tattoo of Force:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Tattoo of Force:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BuffDuration",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Damage",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 250, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunDuration",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "35" }, { "name": "BuffDuration", "value": "4" }, { "name": "Damage", "value": "250" }, { "name": "MagicResist", "value": "35" }, { "name": "StunDuration", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: BuffDuration", "Unmapped item variable: Damage", "Unmapped item variable: StunDuration"]
 }

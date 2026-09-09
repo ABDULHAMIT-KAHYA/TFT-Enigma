@@ -1,0 +1,41 @@
+{
+  "name": "TFT15_Item_SpellslingerEmblemItem",
+  "displayName": "Sorcerer Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Item_SpellslingerEmblemItem",
+  "description": "The holder gains the Sorcerer trait.<br>The holder gains @APIncrease*100@% more Ability Power from all sources.",
+  "tooltip": "The holder gains the Sorcerer trait.<br>The holder gains @APIncrease*100@% more Ability Power from all sources.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set15/TFT15_Emblem_Sorceror.TFT_Set15.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+    { "name": "Item:TFT15_Item_SpellslingerEmblemItem:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "APIncrease",
+      "rawSourceValue": "0.18",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "10" }, { "name": "APIncrease", "value": "0.18" }],
+  "importWarnings": ["Unmapped item variable: APIncrease"]
+}

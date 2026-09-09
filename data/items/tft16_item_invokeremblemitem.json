@@ -1,0 +1,40 @@
+{
+  "name": "TFT16_Item_InvokerEmblemItem",
+  "displayName": "Invoker Emblem",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_InvokerEmblemItem",
+  "description": "The holder gains the Invoker trait. On cast, gain Ability Power equal to @APPercent*100@% of Mana spent.",
+  "tooltip": "The holder gains the Invoker trait. On cast, gain Ability Power equal to @APPercent*100@% of Mana spent.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set16/TFT16_Emblem_Invoker.TFT_Set16.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "OnCast",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "APPercent",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCast",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "APPercent", "value": "0.1" }, { "name": "ManaRegen", "value": "3" }],
+  "importWarnings": ["Metadata-only item effect: APPercent -> GrantTrait", "Metadata-only item effect: ManaRegen -> Heal", "Unmapped item variable: APPercent", "Unmapped item variable: ManaRegen"]
+}

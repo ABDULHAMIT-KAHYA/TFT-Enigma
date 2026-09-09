@@ -1,8 +1,76 @@
 {
   "name": "The Eternal Flame",
+  "displayName": "The Eternal Flame",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_EternalFlame",
+  "description": "While the holder is alive, all enemies are @TOOLTIPWoundAmount@% <TFTKeyword>Wounded</TFTKeyword> and all allies gain @DamageAmp*100@% Damage Amp. This effect refreshes every @WoundDuration@ seconds.<br><br><tftitemrules>​​[Support item]<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>",
+  "tooltip": "While the holder is alive, all enemies are @TOOLTIPWoundAmount@% <TFTKeyword>Wounded</TFTKeyword> and all allies gain @DamageAmp*100@% Damage Amp. This effect refreshes every @WoundDuration@ seconds.<br><br><tftitemrules>​​[Support item]<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_EternalFlame.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:The Eternal Flame:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:The Eternal Flame:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "0.08",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusDamage",
+      "rawSourceValue": "0.08",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPWoundAmount",
+      "rawSourceValue": "33",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "WoundDuration",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusDamage", "value": "0.08" }, { "name": "DamageAmp", "value": "0.08" }, { "name": "Health", "value": "150" }, { "name": "TOOLTIPWoundAmount", "value": "33" }, { "name": "WoundDuration", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: BonusDamage", "Unmapped item variable: TOOLTIPWoundAmount", "Unmapped item variable: WoundDuration"]
 }

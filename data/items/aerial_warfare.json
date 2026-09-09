@@ -1,7 +1,65 @@
 {
   "name": "Aerial Warfare",
+  "displayName": "Aerial Warfare",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Firelight",
+  "description": "Firelight champions gain @FirelightBonusAD*100@% Attack Damage and @FirelightBonusAP@ Ability Power when they start a Firelight dash. They gain another @Bonus@% for every hex traveled that combat. Gain a Scar and Zeri.",
+  "tooltip": "Firelight champions gain @FirelightBonusAD*100@% Attack Damage and @FirelightBonusAP@ Ability Power when they start a Firelight dash. They gain another @Bonus@% for every hex traveled that combat. Gain a Scar and Zeri.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GuerillaWarfare_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Bonus",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.09,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "FirelightBonusAD",
+      "rawSourceValue": "0.09",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "FirelightBonusAP",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 9, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 99,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{445a9cb6}",
+      "rawSourceValue": "99",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 99, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "Bonus", "value": "3" }, { "name": "FirelightBonusAD", "value": "0.09" }, { "name": "FirelightBonusAP", "value": "9" }, { "name": "{445a9cb6}", "value": "99" }],
+  "importWarnings": ["Unmapped item variable: Bonus", "Unmapped item variable: FirelightBonusAD", "Unmapped item variable: FirelightBonusAP", "Unmapped item variable: {445a9cb6}"]
 }

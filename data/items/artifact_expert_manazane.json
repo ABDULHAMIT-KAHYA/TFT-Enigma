@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: Manazane",
+  "displayName": "Artifact Expert: Manazane",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_Manazane",
+  "description": "Get a 2* Anivia, a Manazane , and a Tear Of The Goddess",
+  "tooltip": "Get a 2* Anivia, a Manazane , and a Tear Of The Goddess",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

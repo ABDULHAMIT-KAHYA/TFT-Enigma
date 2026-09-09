@@ -1,7 +1,40 @@
 {
   "name": "Underdogs",
+  "displayName": "Underdogs",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Underdogs",
+  "description": "Whenever your team has fewer allies alive than your opponent, regenerate @MissingHeal@% missing Health each second (Max: @HealCap@).",
+  "tooltip": "Whenever your team has fewer allies alive than your opponent, regenerate @MissingHeal@% missing Health each second (Max: @HealCap@).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Underdogs1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealCap",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MissingHeal",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealCap", "value": "150" }, { "name": "MissingHeal", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: HealCap", "Unmapped item variable: MissingHeal"]
 }

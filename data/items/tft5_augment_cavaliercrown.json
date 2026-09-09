@@ -1,0 +1,17 @@
+{
+  "name": "TFT5_Augment_CavalierCrown",
+  "displayName": "Cavalier Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_CavalierCrown",
+  "description": "Gain a Cavalier Emblem, a Sunfire Cape, and a Hecarim.",
+  "tooltip": "Gain a Cavalier Emblem, a Sunfire Cape, and a Hecarim.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Cavalier_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,42 @@
 {
   "name": "Hunter Killer Missile",
+  "displayName": "Hunter Killer Missile",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Boombots_BigBoom",
+  "description": "Every @NumRockets@ Boombot rockets, fire an HK Missile at the current target that deals @DamageRatio*100@% of the original rocket's damage. Gain a Kog'Maw and a Skarner.",
+  "tooltip": "Every @NumRockets@ Boombot rockets, fire an HK Missile at the current target that deals @DamageRatio*100@% of the original rocket's damage. Gain a Kog'Maw and a Skarner.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ExtraMegaExplodeyBoom_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "DamageRatio",
+      "rawSourceValue": "3.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumRockets",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 6, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageRatio", "value": "3.5" }, { "name": "NumRockets", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: DamageRatio", "Unmapped item variable: NumRockets"]
 }

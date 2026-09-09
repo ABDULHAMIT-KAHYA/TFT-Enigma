@@ -1,0 +1,17 @@
+{
+  "name": "TFT13_Augment_SorcererCrown",
+  "displayName": "Sorcerer Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_SorcererCrown",
+  "description": "Gain a Sorcerer Emblem, an Adaptive Helm, and a Vladimir.",
+  "tooltip": "Gain a Sorcerer Emblem, an Adaptive Helm, and a Vladimir.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Sorcerer_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

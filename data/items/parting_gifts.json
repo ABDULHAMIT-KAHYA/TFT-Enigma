@@ -1,7 +1,30 @@
 {
   "name": "Parting Gifts",
+  "displayName": "Parting Gifts",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_DangerousToGoAlone",
+  "description": "When a champion dies, the nearest ally with open slots receives a temporary copy of an item they were holding and a @shieldratio*100@% max Health Shield.",
+  "tooltip": "When a champion dies, the nearest ally with open slots receives a temporary copy of an item they were holding and a @shieldratio*100@% max Health Shield.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/It_s-Dangerous-to-Go-Alone-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldRatio",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldRatio", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "ShieldRatio", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: ShieldRatio"]
 }

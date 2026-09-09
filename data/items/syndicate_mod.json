@@ -1,9 +1,80 @@
 {
   "name": "Syndicate Mod",
+  "displayName": "Syndicate Mod",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Item_MobNetGodItem",
+  "description": "Permanently mods a champion to benefit from the Syndicate trait (but does not contribute).<br><br><br><scaleLevel enabled=TFT14_Mob_IsActive_T1 alternate=TFTGuildInactive>Kingpin bonus: <ShowIfNot.TFT14_Mob_IsActive_T3><TFTBonus>+@AttackSpeed_T1*100@%</TFTBonus> Attack Speed and gain <TFTBonus>@Shield_T1*100@%</TFTBonus> max Health Shield at combat start.</ShowIfNot.TFT14_Mob_IsActive_T3><ShowIf.TFT14_Mob_IsActive_T3><TFTBonus>+@AttackSpeed_T2*100@%</TFTBonus> Attack Speed and gain <TFTBonus>@Shield_T2*100@%</TFTBonus> max Health Shield at combat start.</ShowIf.TFT14_Mob_IsActive_T3></scaleLevel><br><br><tftitemrules>Champions can only have one Trait Mod.</tftitemrules><br><tftitemrules>Consumable - This item disappears when used.</tftitemrules>",
+  "tooltip": "Permanently mods a champion to benefit from the Syndicate trait (but does not contribute).<br><br><br><scaleLevel enabled=TFT14_Mob_IsActive_T1 alternate=TFTGuildInactive>Kingpin bonus: <ShowIfNot.TFT14_Mob_IsActive_T3><TFTBonus>+@AttackSpeed_T1*100@%</TFTBonus> Attack Speed and gain <TFTBonus>@Shield_T1*100@%</TFTBonus> max Health Shield at combat start.</ShowIfNot.TFT14_Mob_IsActive_T3><ShowIf.TFT14_Mob_IsActive_T3><TFTBonus>+@AttackSpeed_T2*100@%</TFTBonus> Attack Speed and gain <TFTBonus>@Shield_T2*100@%</TFTBonus> max Health Shield at combat start.</ShowIf.TFT14_Mob_IsActive_T3></scaleLevel><br><br><tftitemrules>Champions can only have one Trait Mod.</tftitemrules><br><tftitemrules>Consumable - This item disappears when used.</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14_GOTN_Mods/TFT14_ModTrait_Syndicate.TFT_Set14.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
     { "name": "Item:Syndicate Mod:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Syndicate Mod:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Syndicate Mod:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed_T1",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed_T1", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed_T2",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed_T2", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Shield_T1",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Shield_T1", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Shield_T2",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Shield_T2", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed_T1", "value": "0.3" }, { "name": "AttackSpeed_T2", "value": "0.5" }, { "name": "MagicResist", "value": "20" }, { "name": "Shield_T1", "value": "0.3" }, { "name": "Shield_T2", "value": "0.5" }],
+  "importWarnings": ["Metadata-only item effect: AttackSpeed_T1 -> GrantStats", "Metadata-only item effect: AttackSpeed_T2 -> GrantStats", "Metadata-only item effect: MagicResist -> GrantStats", "Metadata-only item effect: Shield_T1 -> Shield", "Metadata-only item effect: Shield_T2 -> Shield", "Unmapped item variable: Shield_T1", "Unmapped item variable: Shield_T2"]
 }

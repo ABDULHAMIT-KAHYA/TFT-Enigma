@@ -1,7 +1,74 @@
 {
   "name": "Keep Away",
+  "displayName": "Keep Away",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Augment_Longshot_KeepAway",
+  "description": "Longshots gain @AttackSpeed*100@% Attack Speed. If they cast while their target is within @HexDistanceFromTarget@ hexes, the target is knocked back @KnockbackDistanceInHexes@ hexes (cooldown: @CooldownDuration@s). Gain a Caitlyn and a Kog'Maw. ",
+  "tooltip": "Longshots gain @AttackSpeed*100@% Attack Speed. If they cast while their target is within @HexDistanceFromTarget@ hexes, the target is knocked back @KnockbackDistanceInHexes@ hexes (cooldown: @CooldownDuration@s). Gain a Caitlyn and a Kog'Maw. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/KeepAway_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Keep Away:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CooldownDuration",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexDistanceFromTarget",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "KnockbackDistanceInHexes",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunDuration",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.2" }, { "name": "CooldownDuration", "value": "1" }, { "name": "HexDistanceFromTarget", "value": "2" }, { "name": "KnockbackDistanceInHexes", "value": "2" }, { "name": "StunDuration", "value": "1.5" }],
+  "importWarnings": ["Unmapped item variable: CooldownDuration", "Unmapped item variable: HexDistanceFromTarget", "Unmapped item variable: KnockbackDistanceInHexes", "Unmapped item variable: StunDuration"]
 }

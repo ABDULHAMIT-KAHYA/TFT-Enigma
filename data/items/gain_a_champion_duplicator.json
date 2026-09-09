@@ -1,7 +1,29 @@
 {
   "name": "Gain a Champion Duplicator.",
+  "displayName": "Gain a Champion Duplicator.",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Encounter_ChoiceItem_ChampionDuplicator",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{cd5eb5cd}",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{cd5eb5cd}", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: {cd5eb5cd}", "Unsupported item effect metadata: {cd5eb5cd}"]
 }

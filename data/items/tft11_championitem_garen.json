@@ -1,0 +1,17 @@
+{
+  "name": "TFT11_ChampionItem_Garen",
+  "displayName": "Garen",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Garen",
+  "description": "Garen",
+  "tooltip": "Garen",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Garen_Square.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

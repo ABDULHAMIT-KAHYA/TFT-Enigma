@@ -1,0 +1,52 @@
+{
+  "name": "TFT15_Item_BastionEmblemItem",
+  "displayName": "Bastion Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Item_BastionEmblemItem",
+  "description": "The holder gains the Bastion trait.<br>Gain @ResistConversionToADRatio*100@% of Armor as Attack Damage.<br>Gain @ResistConversionToAPRatio*100@% of Magic Resistance as Ability Power.",
+  "tooltip": "The holder gains the Bastion trait.<br>Gain @ResistConversionToADRatio*100@% of Armor as Attack Damage.<br>Gain @ResistConversionToAPRatio*100@% of Magic Resistance as Ability Power.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set15/TFT15_Emblem_Bastion.TFT_Set15.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+    { "name": "Item:TFT15_Item_BastionEmblemItem:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ResistConversionToADRatio",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ResistConversionToAPRatio",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "20" }, { "name": "ResistConversionToADRatio", "value": "0.15" }, { "name": "ResistConversionToAPRatio", "value": "0.15" }],
+  "importWarnings": ["Unmapped item variable: ResistConversionToADRatio", "Unmapped item variable: ResistConversionToAPRatio"]
+}

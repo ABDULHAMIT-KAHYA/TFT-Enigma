@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_ExecutionerCirclet",
+  "displayName": "Executioner Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_ExecutionerCirclet",
+  "description": "Gain an Executioner Emblem, a Vex, and a Sparring Gloves.",
+  "tooltip": "Gain an Executioner Emblem, a Vex, and a Sparring Gloves.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ExecutionerCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

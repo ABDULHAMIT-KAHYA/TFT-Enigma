@@ -1,7 +1,17 @@
 {
   "name": "Cho'Gath",
+  "displayName": "Cho'Gath",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_ChoGath",
+  "description": "Cho'Gath",
+  "tooltip": "Cho'Gath",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_ChoGath_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

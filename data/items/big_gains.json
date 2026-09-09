@@ -1,7 +1,52 @@
 {
   "name": "Big Gains",
+  "displayName": "Big Gains",
+  "isPlaceholder": false,
+  "sourceId": "TFT10_Augment_BigGains",
+  "description": "Your team gains @StartingHealth@ bonus Health, and permanently gains @Health@ Health every @NumTakedowns@ takedowns.",
+  "tooltip": "Your team gains @StartingHealth@ bonus Health, and permanently gains @Health@ Health every @NumTakedowns@ takedowns.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Big-Gains-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Big Gains:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumTakedowns",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StartingHealth",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "12" }, { "name": "NumTakedowns", "value": "2" }, { "name": "StartingHealth", "value": "100" }],
+  "importWarnings": ["Unmapped item variable: NumTakedowns", "Unmapped item variable: StartingHealth"]
 }

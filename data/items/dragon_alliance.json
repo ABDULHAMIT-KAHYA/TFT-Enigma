@@ -1,7 +1,29 @@
 {
   "name": "Dragon Alliance",
+  "displayName": "Dragon Alliance",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DragonAlliance",
+  "description": "The Dragon trait remains active regardless of how many Dragons you have. Dragons gain @Resists@ Armor and Magic Resist. Gain a Tier 4 Dragon.",
+  "tooltip": "The Dragon trait remains active regardless of how many Dragons you have. Dragons gain @Resists@ Armor and Magic Resist. Gain a Tier 4 Dragon.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dragon-Brood-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Resists",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Resists", "value": "25" }],
+  "importWarnings": ["Unmapped item variable: Resists"]
 }

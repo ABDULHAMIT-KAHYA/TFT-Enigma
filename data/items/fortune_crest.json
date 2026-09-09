@@ -1,7 +1,17 @@
 {
   "name": "Fortune Crest",
+  "displayName": "Fortune Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_FortuneCrest",
+  "description": "Gain a Fortune Emblem and an Annie.",
+  "tooltip": "Gain a Fortune Emblem and an Annie.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Fortune_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

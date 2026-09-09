@@ -1,7 +1,30 @@
 {
   "name": "Battlecast Emblem",
+  "displayName": "Battlecast Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT3_Item_BattlecastEmblem",
+  "description": "The holder gains the Battlecast trait.",
+  "tooltip": "The holder gains the Battlecast trait.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set3/Battlecast.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Battlecast Emblem:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "10" }],
+  "importWarnings": []
 }

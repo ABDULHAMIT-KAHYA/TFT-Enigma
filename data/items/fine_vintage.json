@@ -1,7 +1,29 @@
 {
   "name": "Fine Vintage",
+  "displayName": "Fine Vintage",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_FineVintage",
+  "description": "Completed items left on your bench for @Rounds@ rounds transform into Support&nbsp;Anvils.",
+  "tooltip": "Completed items left on your bench for @Rounds@ rounds transform into Support&nbsp;Anvils.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FineVintage_I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "rounds",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "rounds", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: rounds", "Unsupported item effect metadata: rounds"]
 }

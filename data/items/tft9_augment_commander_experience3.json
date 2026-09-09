@@ -1,0 +1,29 @@
+{
+  "name": "TFT9_Augment_Commander_Experience3",
+  "displayName": "Knowledge Download III",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Commander_Experience3",
+  "description": "Gain @Experience@ XP.",
+  "tooltip": "Gain @Experience@ XP.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Knowledge-Download-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 36,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Experience",
+      "rawSourceValue": "36",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Experience", "value": "36" }],
+  "importWarnings": ["Unmapped item variable: Experience", "Unsupported item effect metadata: Experience"]
+}

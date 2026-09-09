@@ -1,0 +1,53 @@
+{
+  "name": "TFT13_Augment_Artillerist",
+  "displayName": "Rocket Collection",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Artillerist",
+  "description": "Artillerist rockets deal @IncreasedRocketDamage*100@% increased damage. Every @RocketDamageThreshold@ rockets your Artillerists fire, gain a Collector (max @MaxItems@). Gain a Tristana and Urgot. (Rockets Fired: @TFTUnitProperty.item:TFT13_Augment_Artillerist_TotalDamage@)",
+  "tooltip": "Artillerist rockets deal @IncreasedRocketDamage*100@% increased damage. Every @RocketDamageThreshold@ rockets your Artillerists fire, gain a Collector (max @MaxItems@). Gain a Tristana and Urgot. (Rockets Fired: @TFTUnitProperty.item:TFT13_Augment_Artillerist_TotalDamage@)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RocketCollection_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "IncreasedRocketDamage",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MaxItems",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 65,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "RocketDamageThreshold",
+      "rawSourceValue": "65",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 65, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "IncreasedRocketDamage", "value": "0.15" }, { "name": "MaxItems", "value": "2" }, { "name": "RocketDamageThreshold", "value": "65" }],
+  "importWarnings": ["Unmapped item variable: IncreasedRocketDamage", "Unmapped item variable: MaxItems", "Unmapped item variable: RocketDamageThreshold"]
+}

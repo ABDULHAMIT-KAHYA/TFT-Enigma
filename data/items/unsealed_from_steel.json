@@ -1,7 +1,17 @@
 {
   "name": "Unsealed From Steel",
+  "displayName": "Unsealed From Steel",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_TheDarkinForge",
+  "description": "Choose 1 of 4 Darkin Weapons. Darkin Weapons are Artifacts that grant the Darkin trait.",
+  "tooltip": "Choose 1 of 4 Darkin Weapons. Darkin Weapons are Artifacts that grant the Darkin trait.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/UnsealedFromSteel_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

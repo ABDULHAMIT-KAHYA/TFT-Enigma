@@ -1,7 +1,51 @@
 {
   "name": "Overclocked",
+  "displayName": "Overclocked",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Supercharge_Vertical",
+  "description": "Your A.M.P. champions with @ItemAmount@ items gain @AmpBonus@&nbsp;Amp. Gain @Rerolls@ rerolls, a Naafiri, and&nbsp;a&nbsp;Nidalee.",
+  "tooltip": "Your A.M.P. champions with @ItemAmount@ items gain @AmpBonus@&nbsp;Amp. Gain @Rerolls@ rerolls, a Naafiri, and&nbsp;a&nbsp;Nidalee.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Overclocked_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AmpBonus",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ItemAmount",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Rerolls",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AmpBonus", "value": "1" }, { "name": "ItemAmount", "value": "3" }, { "name": "Rerolls", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: AmpBonus", "Unmapped item variable: ItemAmount", "Unmapped item variable: Rerolls", "Unsupported item effect metadata: AmpBonus", "Unsupported item effect metadata: ItemAmount", "Unsupported item effect metadata: Rerolls"]
 }

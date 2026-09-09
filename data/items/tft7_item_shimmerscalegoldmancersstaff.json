@@ -1,0 +1,89 @@
+{
+  "name": "TFT7_Item_ShimmerscaleGoldmancersStaff",
+  "displayName": "Goldmancer's Staff",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Item_ShimmerscaleGoldmancersStaff",
+  "description": "Grant %i:scaleAP% @AbilityPowerPerGold@ Ability Power per %i:goldCoins% gold in your bank (up to %i:goldCoins% @AbilityPowerGoldMax@ gold) and a @OnKillProcChance*100@% chance to drop %i:goldCoins% @OnKillProcGold@ gold on enemy kill.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>",
+  "tooltip": "Grant %i:scaleAP% @AbilityPowerPerGold@ Ability Power per %i:goldCoins% gold in your bank (up to %i:goldCoins% @AbilityPowerGoldMax@ gold) and a @OnKillProcChance*100@% chance to drop %i:goldCoins% @OnKillProcGold@ gold on enemy kill.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Ornn_Items/GoldmancersStaff.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+    { "name": "Item:TFT7_Item_ShimmerscaleGoldmancersStaff:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT7_Item_ShimmerscaleGoldmancersStaff:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT7_Item_ShimmerscaleGoldmancersStaff:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "45",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AbilityPowerGoldMax",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AbilityPowerGoldMax", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AbilityPowerPerGold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AbilityPowerPerGold", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "OnKillProcChance",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "OnKillProcGold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "45" }, { "name": "AbilityPowerGoldMax", "value": "30" }, { "name": "AbilityPowerPerGold", "value": "1" }, { "name": "Mana", "value": "15" }, { "name": "OnKillProcChance", "value": "0.4" }, { "name": "OnKillProcGold", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Mana", "Unmapped item variable: OnKillProcChance", "Unmapped item variable: OnKillProcGold", "Unsupported item effect metadata: OnKillProcChance", "Unsupported item effect metadata: OnKillProcGold"]
+}

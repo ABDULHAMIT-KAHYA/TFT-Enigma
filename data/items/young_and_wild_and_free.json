@@ -1,7 +1,29 @@
 {
   "name": "Young and Wild and Free",
+  "displayName": "Young and Wild and Free",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_YoungAndWildAndFree",
+  "description": "You can always move freely on Carousel rounds. Gain @Gold@ gold.",
+  "tooltip": "You can always move freely on Carousel rounds. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Young-and-wild-and-free-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

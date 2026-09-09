@@ -1,0 +1,40 @@
+{
+  "name": "TFT17_MarketOffering_LoversPlusPlus",
+  "displayName": "Lovers ++",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_LoversPlusPlus",
+  "description": "Gain a @MajorUnitCost@-cost and a @MinorUnitCost@-cost that share a trait.",
+  "tooltip": "Gain a @MajorUnitCost@-cost and a @MinorUnitCost@-cost that share a trait.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_Lovers.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MajorUnitCost",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MinorUnitCost",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MajorUnitCost", "value": "5" }, { "name": "MinorUnitCost", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: MajorUnitCost", "Unmapped item variable: MinorUnitCost"]
+}

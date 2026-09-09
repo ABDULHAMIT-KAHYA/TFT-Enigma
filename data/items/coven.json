@@ -1,7 +1,17 @@
 {
   "name": "Coven",
+  "displayName": "Coven",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitCovenActivator",
+  "description": "The unit nearest to the center of your team is chosen as the Coven Leader, gaining bonus Ability Power.<br><br>Whenever your team casts an Ability, the Coven Leader gains Mana.<br><br><row>(@TFTTrait.TFTEvent5YR_Coven.1:MinUnits@) @TFTTrait.TFTEvent5YR_Coven.1:AbilityPower@ %i:scaleAP%,  @TFTTrait.TFTEvent5YR_Coven.1:ManaToGive@ %i:scaleMana% </row><br><row>(@TFTTrait.TFTEvent5YR_Coven.2:MinUnits@) @TFTTrait.TFTEvent5YR_Coven.2:AbilityPower@ %i:scaleAP%,  @TFTTrait.TFTEvent5YR_Coven.2:ManaToGive@ %i:scaleMana% </row>",
+  "tooltip": "The unit nearest to the center of your team is chosen as the Coven Leader, gaining bonus Ability Power.<br><br>Whenever your team casts an Ability, the Coven Leader gains Mana.<br><br><row>(@TFTTrait.TFTEvent5YR_Coven.1:MinUnits@) @TFTTrait.TFTEvent5YR_Coven.1:AbilityPower@ %i:scaleAP%,  @TFTTrait.TFTEvent5YR_Coven.1:ManaToGive@ %i:scaleMana% </row><br><row>(@TFTTrait.TFTEvent5YR_Coven.2:MinUnits@) @TFTTrait.TFTEvent5YR_Coven.2:AbilityPower@ %i:scaleAP%,  @TFTTrait.TFTEvent5YR_Coven.2:ManaToGive@ %i:scaleMana% </row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Coven.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

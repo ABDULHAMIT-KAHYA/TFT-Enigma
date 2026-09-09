@@ -1,7 +1,128 @@
 {
   "name": "A Light Snack",
+  "displayName": "A Light Snack",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Item_Bound_LightSnack",
+  "description": "Use this on a Briar to grant her <scaleHealth>@TFTUnitProperty.item:TFT12_BoundHealthGain@ %i:scaleHealth%</scaleHealth> in exchange for @TFTUnitProperty.item:TFT12_BoundHealthCost@ of your player health.<ShowIfCustom.Set=TFTSetEventCT><br><br>In Choncc's Treasure, this item is improved at Stage 3-1 and 4-1.</ShowIfCustom.Set=TFTSetEventCT><br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Use this on a Briar to grant her <scaleHealth>@TFTUnitProperty.item:TFT12_BoundHealthGain@ %i:scaleHealth%</scaleHealth> in exchange for @TFTUnitProperty.item:TFT12_BoundHealthCost@ of your player health.<ShowIfCustom.Set=TFTSetEventCT><br><br>In Choncc's Treasure, this item is improved at Stage 3-1 and 4-1.</ShowIfCustom.Set=TFTSetEventCT><br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT12/TFT12_Ravenous_LightSnack.TFT_Set12.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 180,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BriarHealthGain",
+      "rawSourceValue": "180",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BriarHealthGainDU",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BriarHealthGainHR",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthToFeed",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 120,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{53386ed2}",
+      "rawSourceValue": "120",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{54387065}",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{b7e859b5}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c8f301d4}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{fb5496ea}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{fc54987d}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BriarHealthGain", "value": "180" }, { "name": "BriarHealthGainDU", "value": "250" }, { "name": "BriarHealthGainHR", "value": "250" }, { "name": "HealthToFeed", "value": "3" }, { "name": "{53386ed2}", "value": "120" }, { "name": "{54387065}", "value": "60" }, { "name": "{b7e859b5}", "value": "2" }, { "name": "{c8f301d4}", "value": "1" }, { "name": "{fb5496ea}", "value": "2" }, { "name": "{fc54987d}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: BriarHealthGain", "Unmapped item variable: BriarHealthGainDU", "Unmapped item variable: BriarHealthGainHR", "Unmapped item variable: HealthToFeed", "Unmapped item variable: {53386ed2}", "Unmapped item variable: {54387065}", "Unmapped item variable: {b7e859b5}", "Unmapped item variable: {c8f301d4}", "Unmapped item variable: {fb5496ea}", "Unmapped item variable: {fc54987d}"]
 }

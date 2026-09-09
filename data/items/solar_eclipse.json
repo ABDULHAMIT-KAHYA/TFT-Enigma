@@ -1,7 +1,96 @@
 {
   "name": "Solar Eclipse",
+  "displayName": "Solar Eclipse",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_AnimaSquadItem_Tier3_RadiantField",
+  "description": "Gain <TFTRadiantItemBonus>@HealthPercent*100@%</TFTRadiantItemBonus> max Health. Every second, deal magic damage in a <TFTRadiantItemBonus>@HexRadiusBase@</TFTRadiantItemBonus>&nbsp;hex radius equal to @HealthRatio*100@% of the holder's max Health, <TFTRadiantItemBonus>and gain max Health equal to @DamageToHealthConversion*100@% of damage dealt.</TFTRadiantItemBonus> Radius increases every @Period@ seconds.<br><br><rules>Recommended Roles: Attack or Magic Tank</rules>",
+  "tooltip": "Gain <TFTRadiantItemBonus>@HealthPercent*100@%</TFTRadiantItemBonus> max Health. Every second, deal magic damage in a <TFTRadiantItemBonus>@HexRadiusBase@</TFTRadiantItemBonus>&nbsp;hex radius equal to @HealthRatio*100@% of the holder's max Health, <TFTRadiantItemBonus>and gain max Health equal to @DamageToHealthConversion*100@% of damage dealt.</TFTRadiantItemBonus> Radius increases every @Period@ seconds.<br><br><rules>Recommended Roles: Attack or Magic Tank</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_AnimaSquadItem_RadiantField_T3.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Solar Eclipse:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 800, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 800,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "800",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 800, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageToHealthConversion",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPercent",
+      "rawSourceValue": "0.18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthRatio",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRadiusBase",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Period",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{52d3e690}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageToHealthConversion", "value": "0.2" }, { "name": "Health", "value": "800" }, { "name": "HealthPercent", "value": "0.18" }, { "name": "HealthRatio", "value": "0.05" }, { "name": "HexRadiusBase", "value": "2" }, { "name": "Period", "value": "6" }, { "name": "{52d3e690}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: DamageToHealthConversion", "Unmapped item variable: HealthPercent", "Unmapped item variable: HealthRatio", "Unmapped item variable: HexRadiusBase", "Unmapped item variable: Period", "Unmapped item variable: {52d3e690}"]
 }

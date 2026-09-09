@@ -1,7 +1,30 @@
 {
   "name": "Cybernetic Bulk II",
+  "displayName": "Cybernetic Bulk II",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_CyberneticBulk2",
+  "description": "Your champions holding an item gain @health@ health.",
+  "tooltip": "Your champions holding an item gain @health@ health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cybernetic-Bulk-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Cybernetic Bulk II:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "300" }],
+  "importWarnings": []
 }

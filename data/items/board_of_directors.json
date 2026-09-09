@@ -1,7 +1,51 @@
 {
   "name": "Board of Directors",
+  "displayName": "Board of Directors",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Divinicorp_Splash",
+  "description": "If you have @NumDivinicorp@ or fewer Divinicorp champions, their bonuses are increased by @BaseBonus*100@% + @BonusPerStage*100@% for each Stage. Gain a Rhaast and a Morgana.",
+  "tooltip": "If you have @NumDivinicorp@ or fewer Divinicorp champions, their bonuses are increased by @BaseBonus*100@% + @BonusPerStage*100@% for each Stage. Gain a Rhaast and a Morgana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BoardOfDirectors_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseBonus",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusPerStage",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDivinicorp",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseBonus", "value": "0.5" }, { "name": "BonusPerStage", "value": "null" }, { "name": "NumDivinicorp", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: BaseBonus", "Unmapped item variable: NumDivinicorp", "Unmapped non-numeric item variable: BonusPerStage", "Unsupported item effect metadata: BaseBonus", "Unsupported item effect metadata: BonusPerStage", "Unsupported item effect metadata: NumDivinicorp"]
 }

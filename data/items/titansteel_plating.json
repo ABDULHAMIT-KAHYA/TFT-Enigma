@@ -1,8 +1,67 @@
 {
   "name": "Titansteel Plating",
+  "displayName": "Titansteel Plating",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_CypherItem_Golem_TitansteelPlating",
+  "description": "Reduce all incoming damage by @FlatDR@.",
+  "tooltip": "Reduce all incoming damage by @FlatDR@.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT14/TFT14_CypherItem_TitansteelPlating.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Titansteel Plating:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 9999, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Titansteel Plating:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 99, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 99,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "FlatDR",
+      "rawSourceValue": "99",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 99, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.99,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{cd951938}",
+      "rawSourceValue": "0.99",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 99,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "99",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 99, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 9999,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "9999",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 9999, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "99" }, { "name": "FlatDR", "value": "99" }, { "name": "Health", "value": "9999" }, { "name": "{cd951938}", "value": "0.99" }],
+  "importWarnings": ["Unmapped item variable: FlatDR", "Unmapped item variable: {cd951938}"]
 }

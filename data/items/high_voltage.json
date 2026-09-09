@@ -1,7 +1,53 @@
 {
   "name": "High Voltage",
+  "displayName": "High Voltage",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_HighVoltage",
+  "description": "Gain an Ionic Spark. Your Ionic Sparks have +@hexincreasetooltip@ hex radius and do @effectincrease*100@% more damage.",
+  "tooltip": "Gain an Ionic Spark. Your Ionic Sparks have +@hexincreasetooltip@ hex radius and do @effectincrease*100@% more damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HighVoltage_II.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "effectincrease",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "hexincreasetooltip",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 680,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{f5a91c3a}",
+      "rawSourceValue": "680",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 680, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "effectincrease", "value": "0.2" }, { "name": "hexincreasetooltip", "value": "3" }, { "name": "{f5a91c3a}", "value": "680" }],
+  "importWarnings": ["Unmapped item variable: effectincrease", "Unmapped item variable: hexincreasetooltip", "Unmapped item variable: {f5a91c3a}"]
 }

@@ -1,7 +1,129 @@
 {
   "name": "Hero of the Placidium",
+  "displayName": "Hero of the Placidium",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_HeroOfThePlacidium",
+  "description": "Strike enemies with telekinetic blades during combat, dealing damage and 30% Shredding and Sundering. Blade damage increases based on your total star level of Ionian champions.",
+  "tooltip": "Strike enemies with telekinetic blades during combat, dealing damage and 30% Shredding and Sundering. Blade damage increases based on your total star level of Ionian champions.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "EnemyCount",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{cf297c30}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d1297f56}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d22980e9}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d329827c}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d429840f}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d52985a2}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d6298735}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d8298a5b}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{efb94df3}",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "EnemyCount", "value": "4" }, { "name": "{cf297c30}", "value": "null" }, { "name": "{d1297f56}", "value": "null" }, { "name": "{d22980e9}", "value": "null" }, { "name": "{d329827c}", "value": "null" }, { "name": "{d429840f}", "value": "null" }, { "name": "{d52985a2}", "value": "null" }, { "name": "{d6298735}", "value": "null" }, { "name": "{d8298a5b}", "value": "null" }, { "name": "{efb94df3}", "value": "0.25" }],
+  "importWarnings": ["Unmapped item variable: EnemyCount", "Unmapped item variable: {efb94df3}", "Unmapped non-numeric item variable: {cf297c30}", "Unmapped non-numeric item variable: {d1297f56}", "Unmapped non-numeric item variable: {d22980e9}", "Unmapped non-numeric item variable: {d329827c}", "Unmapped non-numeric item variable: {d429840f}", "Unmapped non-numeric item variable: {d52985a2}", "Unmapped non-numeric item variable: {d6298735}", "Unmapped non-numeric item variable: {d8298a5b}"]
 }

@@ -1,7 +1,51 @@
 {
   "name": "Side Effects",
+  "displayName": "Side Effects",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SideEffects",
+  "description": "When an ally is healed, they deal @HealConversionPct*100@% of the healing to their target as magic damage. Every @HealInterval@ seconds, allies heal for @HealPct*100@% of their max Health.",
+  "tooltip": "When an ally is healed, they deal @HealConversionPct*100@% of the healing to their target as magic damage. Every @HealInterval@ seconds, allies heal for @HealPct*100@% of their max Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SideEffects_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealConversionPct",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealInterval",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.04,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealPct",
+      "rawSourceValue": "0.04",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealConversionPct", "value": "0.5" }, { "name": "HealInterval", "value": "5" }, { "name": "HealPct", "value": "0.04" }],
+  "importWarnings": ["Unmapped item variable: HealConversionPct", "Unmapped item variable: HealInterval", "Unmapped item variable: HealPct"]
 }

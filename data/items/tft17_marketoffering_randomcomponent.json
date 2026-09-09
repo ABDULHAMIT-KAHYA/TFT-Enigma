@@ -1,0 +1,17 @@
+{
+  "name": "TFT17_MarketOffering_RandomComponent",
+  "displayName": "Random Component",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_RandomComponent",
+  "description": "Random Component",
+  "tooltip": "Random Component",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,9 +1,56 @@
 {
   "name": "Kinetic Launcher Rockets",
+  "displayName": "Kinetic Launcher Rockets",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_CypherItem_Golem_KineticLauncherRockets",
+  "description": "On attack, knock up enemies.",
+  "tooltip": "On attack, knock up enemies.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT14/TFT14_CypherItem_KineticLauncherRockets.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Kinetic Launcher Rockets:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.89, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Kinetic Launcher Rockets:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 5.67, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Kinetic Launcher Rockets:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1234, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 0.1234,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "12.34",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1234, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 5.67,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "567",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 5.67, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 0.89,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StatOmnivamp",
+      "rawSourceValue": "0.89",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:StatOmnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.89, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "12.34" }, { "name": "AS", "value": "567" }, { "name": "StatOmnivamp", "value": "0.89" }],
+  "importWarnings": ["Metadata-only item effect: AD -> GrantStats", "Metadata-only item effect: AS -> GrantStats", "Metadata-only item effect: StatOmnivamp -> GrantStats"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "Level Quest",
+  "displayName": "Level Quest",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_AurelionSol_LevelQuest_Stage4",
+  "description": "When you reach level @Level@, gain @GoldReward@ gold.",
+  "tooltip": "When you reach level @Level@, gain @GoldReward@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_LevelQuest.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldReward",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Level",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldReward", "value": "20" }, { "name": "Level", "value": "9" }],
+  "importWarnings": ["Unmapped item variable: GoldReward", "Unmapped item variable: Level", "Unsupported item effect metadata: GoldReward", "Unsupported item effect metadata: Level"]
 }

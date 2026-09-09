@@ -1,7 +1,95 @@
 {
   "name": "A Magic Roll",
+  "displayName": "A Magic Roll",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_MagicRoll",
+  "description": "Roll 3 dice. Gain rewards based on their total.<br><br>Reward: @TFTUnitProperty.item:TFT_Augment_MagicRoll@",
+  "tooltip": "Roll 3 dice. Gain rewards based on their total.<br><br>Reward: @TFTUnitProperty.item:TFT_Augment_MagicRoll@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/A-Magical-Roll-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "EggTurns",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{3b0ef232}",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{95ed8271}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{9a58ced6}",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{b0892e64}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c726cd82}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "EggTurns", "value": "3" }, { "name": "NumComponents", "value": "2" }, { "name": "{3b0ef232}", "value": "250" }, { "name": "{95ed8271}", "value": "3" }, { "name": "{9a58ced6}", "value": "4" }, { "name": "{b0892e64}", "value": "2" }, { "name": "{c726cd82}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: EggTurns", "Unmapped item variable: NumComponents", "Unmapped item variable: {3b0ef232}", "Unmapped item variable: {95ed8271}", "Unmapped item variable: {9a58ced6}", "Unmapped item variable: {b0892e64}", "Unmapped item variable: {c726cd82}", "Unsupported item effect metadata: EggTurns", "Unsupported item effect metadata: NumComponents", "Unsupported item effect metadata: {3b0ef232}", "Unsupported item effect metadata: {95ed8271}", "Unsupported item effect metadata: {9a58ced6}", "Unsupported item effect metadata: {b0892e64}", "Unsupported item effect metadata: {c726cd82}"]
 }

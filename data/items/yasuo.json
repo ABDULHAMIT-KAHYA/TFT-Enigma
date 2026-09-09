@@ -1,7 +1,17 @@
 {
   "name": "Yasuo",
+  "displayName": "Yasuo",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Yasuo",
+  "description": "Yasuo",
+  "tooltip": "Yasuo",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Yasuo_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

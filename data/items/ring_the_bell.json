@@ -1,7 +1,52 @@
 {
   "name": "Ring The Bell",
+  "displayName": "Ring The Bell",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Augment_Heavyweight_RingTheBell",
+  "description": "After @Timer@ seconds, your Heavyweight champions gain @MaxHealth*100@% max Health and @DamageAmp*100@% Damage Amp. Gain a Kobuko and a Zac.",
+  "tooltip": "After @Timer@ seconds, your Heavyweight champions gain @MaxHealth*100@% max Health and @DamageAmp*100@% Damage Amp. Gain a Kobuko and a Zac.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RingTheBellHeavyweight_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Ring The Bell:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealth",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Timer",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "0.2" }, { "name": "MaxHealth", "value": "0.3" }, { "name": "Timer", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: MaxHealth", "Unmapped item variable: Timer"]
 }

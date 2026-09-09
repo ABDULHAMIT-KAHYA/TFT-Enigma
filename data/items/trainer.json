@@ -1,7 +1,17 @@
 {
   "name": "Trainer",
+  "displayName": "Trainer",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitTrainerActivator",
+  "description": "After combat, the 3 champions closest to Nomsy feed her 1 Snax per star level, adding Health and Ability Power. Nomsy's star level increases every 25 Snax!<br><br><row>(@TFTTrait.TFTEvent5YR_Trainer.1:MinUnits@) Summon Nomsy!</row><br><row>(@TFTTrait.TFTEvent5YR_Trainer.2:MinUnits@) Nomsy's Ability deals @TFTTrait.TFTEvent5YR_Trainer.2:DamageInc*100@% bonus damage</row>",
+  "tooltip": "After combat, the 3 champions closest to Nomsy feed her 1 Snax per star level, adding Health and Ability Power. Nomsy's star level increases every 25 Snax!<br><br><row>(@TFTTrait.TFTEvent5YR_Trainer.1:MinUnits@) Summon Nomsy!</row><br><row>(@TFTTrait.TFTEvent5YR_Trainer.2:MinUnits@) Nomsy's Ability deals @TFTTrait.TFTEvent5YR_Trainer.2:DamageInc*100@% bonus damage</row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Trainers.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,62 @@
 {
   "name": "Repairing Microbots",
+  "displayName": "Repairing Microbots",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_JunkerKing_RepairingMicrobots",
+  "description": "<spellPassive>Repairing Microbots:</spellPassive> Every @RepairingMicrobots_RefreshDuration@ seconds, restore @ReparingMicrobots_MaxHealthHeal_Level1*100@%&nbsp;/&nbsp;@ReparingMicrobots_MaxHealthHeal_Level2*100@%&nbsp;/&nbsp;@ReparingMicrobots_MaxHealthHeal_Level3*100@%&nbsp;max&nbsp;%i:scaleHealth%.<br>",
+  "tooltip": "<spellPassive>Repairing Microbots:</spellPassive> Every @RepairingMicrobots_RefreshDuration@ seconds, restore @ReparingMicrobots_MaxHealthHeal_Level1*100@%&nbsp;/&nbsp;@ReparingMicrobots_MaxHealthHeal_Level2*100@%&nbsp;/&nbsp;@ReparingMicrobots_MaxHealthHeal_Level3*100@%&nbsp;max&nbsp;%i:scaleHealth%.<br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT13/TFT13_JunkerKing_RepairingMicrobots_Icon.TFT_Set13.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RepairingMicrobots_RefreshDuration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.06,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ReparingMicrobots_MaxHealthHeal_Level1",
+      "rawSourceValue": "0.06",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.06,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ReparingMicrobots_MaxHealthHeal_Level2",
+      "rawSourceValue": "0.06",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ReparingMicrobots_MaxHealthHeal_Level3",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RepairingMicrobots_RefreshDuration", "value": "3" }, { "name": "ReparingMicrobots_MaxHealthHeal_Level1", "value": "0.06" }, { "name": "ReparingMicrobots_MaxHealthHeal_Level2", "value": "0.06" }, { "name": "ReparingMicrobots_MaxHealthHeal_Level3", "value": "0.25" }],
+  "importWarnings": ["Unmapped item variable: RepairingMicrobots_RefreshDuration", "Unmapped item variable: ReparingMicrobots_MaxHealthHeal_Level1", "Unmapped item variable: ReparingMicrobots_MaxHealthHeal_Level2", "Unmapped item variable: ReparingMicrobots_MaxHealthHeal_Level3"]
 }

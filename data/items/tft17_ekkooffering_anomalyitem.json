@@ -1,0 +1,161 @@
+{
+  "name": "TFT17_EkkoOffering_AnomalyItem",
+  "displayName": "Anomaly",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_EkkoOffering_AnomalyItem",
+  "description": "Evolve the holder, granting an effect based on their role.<br><br><TFTGuildActive enabled=TFT17_Anomaly_Tank alternate=TFTGuildInactive>Tank: Gain @TankHP_TOOLTIPONLY@ health and grow in size.</TFTGuildActive><br><br><TFTGuildActive enabled=TFT17_Anomaly_Marksman alternate=TFTGuildInactive>Marksman: Gain @MarksmanBonusAS_TOOLTIPONLY*100@% Attack Speed. On cast, knock back their target if within @MarksmanKnockbackRange_TOOLTIPONLY@ hexes of them.</TFTGuildActive><br><br><TFTGuildActive enabled=TFT17_Anomaly_Fighter alternate=TFTGuildInactive>Fighter/Assassin: Gain @FighterAP_TOOLTIPONLY@ Ability Power & @FighterAD_TOOLTIPONLY@% Attack Damage. Triple it when below @FighterHealthThreshold_TOOLTIPONLY@% Health.</TFTGuildActive><br><br><TFTGuildActive enabled=TFT17_Anomaly_Caster alternate=TFTGuildInactive>Caster: For every @CasterManaSpent_TOOLTIPONLY@ Mana spent, throw a @CasterHexRadius_TOOLTIPONLY@-hex fireball that deals @CasterHPRatio_TOOLTIPONLY*100@% max Health true damage, 33% <TFTKeyword>Wounds</TFTKeyword>, and 1% <TFTKeyword>Burns</TFTKeyword> for @CasterDuration_TOOLTIPONLY@ seconds.</TFTGuildActive><br><br><TFTGuildActive enabled=TFT17_Anomaly_Specialist alternate=TFTGuildInactive>Specialist: Gain @SpecialistNumStars_TOOLTIPONLY@ stars that orbit this champion. Each star deals @SpecialistMissileDamage_TOOLTIPONLY@ magic damage and the orbit expands to hit the champion's current target.</TFTGuildActive>",
+  "tooltip": "Evolve the holder, granting an effect based on their role.<br><br><TFTGuildActive enabled=TFT17_Anomaly_Tank alternate=TFTGuildInactive>Tank: Gain @TankHP_TOOLTIPONLY@ health and grow in size.</TFTGuildActive><br><br><TFTGuildActive enabled=TFT17_Anomaly_Marksman alternate=TFTGuildInactive>Marksman: Gain @MarksmanBonusAS_TOOLTIPONLY*100@% Attack Speed. On cast, knock back their target if within @MarksmanKnockbackRange_TOOLTIPONLY@ hexes of them.</TFTGuildActive><br><br><TFTGuildActive enabled=TFT17_Anomaly_Fighter alternate=TFTGuildInactive>Fighter/Assassin: Gain @FighterAP_TOOLTIPONLY@ Ability Power & @FighterAD_TOOLTIPONLY@% Attack Damage. Triple it when below @FighterHealthThreshold_TOOLTIPONLY@% Health.</TFTGuildActive><br><br><TFTGuildActive enabled=TFT17_Anomaly_Caster alternate=TFTGuildInactive>Caster: For every @CasterManaSpent_TOOLTIPONLY@ Mana spent, throw a @CasterHexRadius_TOOLTIPONLY@-hex fireball that deals @CasterHPRatio_TOOLTIPONLY*100@% max Health true damage, 33% <TFTKeyword>Wounds</TFTKeyword>, and 1% <TFTKeyword>Burns</TFTKeyword> for @CasterDuration_TOOLTIPONLY@ seconds.</TFTGuildActive><br><br><TFTGuildActive enabled=TFT17_Anomaly_Specialist alternate=TFTGuildInactive>Specialist: Gain @SpecialistNumStars_TOOLTIPONLY@ stars that orbit this champion. Each star deals @SpecialistMissileDamage_TOOLTIPONLY@ magic damage and the orbit expands to hit the champion's current target.</TFTGuildActive>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT13/TFT13_GoopItem_Icon.TFT_Set13.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCast",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "CasterDuration_TOOLTIPONLY",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCast",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "CasterHPRatio_TOOLTIPONLY",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCast",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "CasterHexRadius_TOOLTIPONLY",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCast",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "CasterManaSpent_TOOLTIPONLY",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCast",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "FighterAD_TOOLTIPONLY",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCast",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "FighterAP_TOOLTIPONLY",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCast",
+      "value": 85,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "FighterHealthThreshold_TOOLTIPONLY",
+      "rawSourceValue": "85",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCast",
+      "value": 0.75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "MarksmanBonusAS_TOOLTIPONLY",
+      "rawSourceValue": "0.75",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCast",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "MarksmanKnockbackRange_TOOLTIPONLY",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCast",
+      "value": 70,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "SpecialistMissileDamage_TOOLTIPONLY",
+      "rawSourceValue": "70",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCast",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "SpecialistNumStars_TOOLTIPONLY",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCast",
+      "value": 1100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "TankHP_TOOLTIPONLY",
+      "rawSourceValue": "1100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCast",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{d8328e60}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CasterDuration_TOOLTIPONLY", "value": "5" }, { "name": "CasterHPRatio_TOOLTIPONLY", "value": "0.05" }, { "name": "CasterHexRadius_TOOLTIPONLY", "value": "2" }, { "name": "CasterManaSpent_TOOLTIPONLY", "value": "50" }, { "name": "FighterAD_TOOLTIPONLY", "value": "35" }, { "name": "FighterAP_TOOLTIPONLY", "value": "35" }, { "name": "FighterHealthThreshold_TOOLTIPONLY", "value": "85" }, { "name": "MarksmanBonusAS_TOOLTIPONLY", "value": "0.75" }, { "name": "MarksmanKnockbackRange_TOOLTIPONLY", "value": "3" }, { "name": "SpecialistMissileDamage_TOOLTIPONLY", "value": "70" }, { "name": "SpecialistNumStars_TOOLTIPONLY", "value": "6" }, { "name": "TankHP_TOOLTIPONLY", "value": "1100" }, { "name": "{d8328e60}", "value": "3" }],
+  "importWarnings": ["Metadata-only item effect: CasterDuration_TOOLTIPONLY -> Aura", "Metadata-only item effect: CasterHPRatio_TOOLTIPONLY -> Aura", "Metadata-only item effect: CasterHexRadius_TOOLTIPONLY -> Aura", "Metadata-only item effect: CasterManaSpent_TOOLTIPONLY -> Aura", "Metadata-only item effect: FighterAD_TOOLTIPONLY -> Aura", "Metadata-only item effect: FighterAP_TOOLTIPONLY -> Aura", "Metadata-only item effect: FighterHealthThreshold_TOOLTIPONLY -> Aura", "Metadata-only item effect: MarksmanBonusAS_TOOLTIPONLY -> Aura", "Metadata-only item effect: MarksmanKnockbackRange_TOOLTIPONLY -> Aura", "Metadata-only item effect: SpecialistMissileDamage_TOOLTIPONLY -> Aura", "Metadata-only item effect: SpecialistNumStars_TOOLTIPONLY -> Aura", "Metadata-only item effect: TankHP_TOOLTIPONLY -> Aura", "Metadata-only item effect: {d8328e60} -> Aura", "Unmapped item variable: CasterDuration_TOOLTIPONLY", "Unmapped item variable: CasterHPRatio_TOOLTIPONLY", "Unmapped item variable: CasterHexRadius_TOOLTIPONLY", "Unmapped item variable: CasterManaSpent_TOOLTIPONLY", "Unmapped item variable: FighterAD_TOOLTIPONLY", "Unmapped item variable: FighterAP_TOOLTIPONLY", "Unmapped item variable: FighterHealthThreshold_TOOLTIPONLY", "Unmapped item variable: MarksmanBonusAS_TOOLTIPONLY", "Unmapped item variable: MarksmanKnockbackRange_TOOLTIPONLY", "Unmapped item variable: SpecialistMissileDamage_TOOLTIPONLY", "Unmapped item variable: SpecialistNumStars_TOOLTIPONLY", "Unmapped item variable: TankHP_TOOLTIPONLY", "Unmapped item variable: {d8328e60}"]
+}

@@ -1,7 +1,17 @@
 {
   "name": "Wolf Unchained",
+  "displayName": "Wolf Unchained",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_SylasCarry",
+  "description": "Gain a Sylas. Your strongest Sylas's ability deals more damage and recasts on kill, but his Health gain no longer scales with Ability Power.",
+  "tooltip": "Gain a Sylas. Your strongest Sylas's ability deals more damage and recasts on kill, but his Health gain no longer scales with Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AlphaWolf_I.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

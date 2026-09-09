@@ -1,7 +1,29 @@
 {
   "name": "Dedication",
+  "displayName": "Dedication",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Dedication",
+  "description": "The first time you field at least @NumUnits@ distinct units of the same trait in player combat, gain an Emblem for that trait.",
+  "tooltip": "The first time you field at least @NumUnits@ distinct units of the same trait in player combat, gain an Emblem for that trait.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dedication-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumUnits", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: NumUnits"]
 }

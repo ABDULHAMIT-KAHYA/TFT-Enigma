@@ -1,7 +1,40 @@
 {
   "name": "High-End Shopping I",
+  "displayName": "High-End Shopping I",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_MediumEndShopping",
+  "description": "Champions appear in the first @NumLeveledUpShops@ slots of your shop as if you were 1 level higher. Gain @Gold@ gold.",
+  "tooltip": "Champions appear in the first @NumLeveledUpShops@ slots of your shop as if you were 1 level higher. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HighEnd1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumLeveledUpShops",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "1" }, { "name": "NumLeveledUpShops", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumLeveledUpShops", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumLeveledUpShops"]
 }

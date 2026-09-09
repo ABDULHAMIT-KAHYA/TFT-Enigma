@@ -1,7 +1,17 @@
 {
   "name": "Ashe",
+  "displayName": "Ashe",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Ashe",
+  "description": "Ashe",
+  "tooltip": "Ashe",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Ashe_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

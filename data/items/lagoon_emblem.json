@@ -1,7 +1,30 @@
 {
   "name": "Lagoon Emblem",
+  "displayName": "Lagoon Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Item_LagoonEmblemItem",
+  "description": "The holder gains the Lagoon trait.",
+  "tooltip": "The holder gains the Lagoon trait.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set7/Lagoon.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Lagoon Emblem:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "10" }],
+  "importWarnings": []
 }

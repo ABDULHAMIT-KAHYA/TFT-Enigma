@@ -1,7 +1,29 @@
 {
   "name": "A Hungry Snack",
+  "displayName": "A Hungry Snack",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_MechanicTrait_BloodFury_Consumable",
+  "description": "Consume @HealthToFeed@ player health for Health&nbsp;%i:scaleHealth%, Attack Damage&nbsp;%i:scaleAD% and Ability Power&nbsp;%i:scaleAP%.",
+  "tooltip": "Consume @HealthToFeed@ player health for Health&nbsp;%i:scaleHealth%, Attack Damage&nbsp;%i:scaleAD% and Ability Power&nbsp;%i:scaleAP%.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT15_Ravenous_LightSnack.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthToFeed",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthToFeed", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: HealthToFeed"]
 }

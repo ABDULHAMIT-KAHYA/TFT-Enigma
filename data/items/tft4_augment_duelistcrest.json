@@ -1,0 +1,17 @@
+{
+  "name": "TFT4_Augment_DuelistCrest",
+  "displayName": "Duelist Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_DuelistCrest",
+  "description": "Gain a Duelist Emblem and a Jax.",
+  "tooltip": "Gain a Duelist Emblem and a Jax.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Duelist_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,4 +1,4 @@
-// Unit.cpp
+﻿// Unit.cpp
 #include "core/Unit.hpp"
 #include "combat/MovementSystem.hpp"
 #include "combat/DamageSystem.hpp"
@@ -21,6 +21,7 @@ Unit::Unit(std::string name,
            Position position,
            TeamId teamId)
     : name_(std::move(name)),
+      id_{},
       team_id_(teamId),
       ad_(ad),
       ability_power_(0.0f),
@@ -73,6 +74,7 @@ Unit::Unit(std::string name,
            std::int32_t manaGainOnAttack,
            Ability ability)
     : name_(std::move(name)),
+      id_{},
       team_id_(teamId),
       ad_(ad),
       ability_power_(0.0f),
@@ -112,6 +114,19 @@ Unit::Unit(std::string name,
 {
 }
 
+
+UnitId Unit::id() const
+{
+    return id_;
+}
+
+void Unit::assignId(UnitId id)
+{
+    if (!isValid(id_))
+    {
+        id_ = id;
+    }
+}
 
 bool Unit::isInRange(const Unit& target) const
 {
@@ -898,3 +913,6 @@ std::int32_t Unit::getAttackTimerMs() const
 {
     return attack_timer_ms_;
 }
+
+
+

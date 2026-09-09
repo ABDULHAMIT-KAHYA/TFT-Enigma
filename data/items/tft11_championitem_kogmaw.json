@@ -1,0 +1,17 @@
+{
+  "name": "TFT11_ChampionItem_KogMaw",
+  "displayName": "Kog'Maw",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_KogMaw",
+  "description": "Kog'Maw",
+  "tooltip": "Kog'Maw",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_KogMaw_Square.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

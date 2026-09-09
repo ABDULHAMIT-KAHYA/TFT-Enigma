@@ -1,7 +1,51 @@
 {
   "name": "Dominance",
+  "displayName": "Dominance",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Dominance3",
+  "description": "For every @PerSurvivingUnit@ surviving champions after winning a player combat, gain @Gold@ gold. Gain @Experience@ XP.",
+  "tooltip": "For every @PerSurvivingUnit@ surviving champions after winning a player combat, gain @Gold@ gold. Gain @Experience@ XP.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dominance_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 16,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Experience",
+      "rawSourceValue": "16",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PerSurvivingUnit",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Experience", "value": "16" }, { "name": "Gold", "value": "1" }, { "name": "PerSurvivingUnit", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Experience", "Unmapped item variable: Gold", "Unmapped item variable: PerSurvivingUnit", "Unsupported item effect metadata: Experience", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: PerSurvivingUnit"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Conqueror",
+  "displayName": "Conqueror",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitConquerorActivator",
+  "description": "Your team's takedowns grant stacks of Conquest. After gaining enough Conquest, open War Chests full of loot!<br><br>Your team gains Attack Damage and Ability Power, increased by @TFTTrait.TFTEvent5YR_Conqueror:PercentIncreasePerChest*100@% for each War Chest opened.<br><br><row>(@TFTTrait.TFTEvent5YR_Conqueror.1:MinUnits@) @TFTTrait.TFTEvent5YR_Conqueror.1:ADAPBase*100@%&nbsp;%i:scaleAD%%i:scaleAP%; @TFTTrait.TFTEvent5YR_Conqueror.1:StacksPerKill@x&nbsp;Conquest</row><br><row>(@TFTTrait.TFTEvent5YR_Conqueror.2:MinUnits@) @TFTTrait.TFTEvent5YR_Conqueror.2:ADAPBase*100@%&nbsp;%i:scaleAD%%i:scaleAP%; @TFTTrait.TFTEvent5YR_Conqueror.2:StacksPerKill@x&nbsp;Conquest</row><br><br><rules>War Chests Opened: @TFTUnitProperty.trait:TFTEvent5YR_Conqueror_ChestsCompleted@</rules><br><rules>Current Stats: @TFTUnitProperty.trait:TFTEvent5YR_Conqueror_CurrentADAP@%&nbsp;%i:scaleAD%%i:scaleAP%</rules><br>",
+  "tooltip": "Your team's takedowns grant stacks of Conquest. After gaining enough Conquest, open War Chests full of loot!<br><br>Your team gains Attack Damage and Ability Power, increased by @TFTTrait.TFTEvent5YR_Conqueror:PercentIncreasePerChest*100@% for each War Chest opened.<br><br><row>(@TFTTrait.TFTEvent5YR_Conqueror.1:MinUnits@) @TFTTrait.TFTEvent5YR_Conqueror.1:ADAPBase*100@%&nbsp;%i:scaleAD%%i:scaleAP%; @TFTTrait.TFTEvent5YR_Conqueror.1:StacksPerKill@x&nbsp;Conquest</row><br><row>(@TFTTrait.TFTEvent5YR_Conqueror.2:MinUnits@) @TFTTrait.TFTEvent5YR_Conqueror.2:ADAPBase*100@%&nbsp;%i:scaleAD%%i:scaleAP%; @TFTTrait.TFTEvent5YR_Conqueror.2:StacksPerKill@x&nbsp;Conquest</row><br><br><rules>War Chests Opened: @TFTUnitProperty.trait:TFTEvent5YR_Conqueror_ChestsCompleted@</rules><br><rules>Current Stats: @TFTUnitProperty.trait:TFTEvent5YR_Conqueror_CurrentADAP@%&nbsp;%i:scaleAD%%i:scaleAP%</rules><br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5YR_Set14_Conqueror.tex",
+  "itemCategory": "LootObject",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

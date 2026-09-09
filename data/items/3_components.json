@@ -1,7 +1,17 @@
 {
   "name": "3 Components",
+  "displayName": "3 Components",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_RandomComponent_3",
+  "description": "3 Components",
+  "tooltip": "3 Components",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

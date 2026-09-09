@@ -1,0 +1,40 @@
+{
+  "name": "TFT17_MarketOffering_Gold_Stage4_Eve",
+  "displayName": "@Gold@ gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Gold_Stage4_Eve",
+  "description": "Gain @Gold@ gold. You cannot buy champions for @ShopRoundLoss@ rounds.",
+  "tooltip": "Gain @Gold@ gold. You cannot buy champions for @ShopRoundLoss@ rounds.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistGiveGold.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShopRoundLoss",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "18" }, { "name": "ShopRoundLoss", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: ShopRoundLoss", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: ShopRoundLoss"]
+}

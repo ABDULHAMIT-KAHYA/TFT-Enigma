@@ -1,7 +1,40 @@
 {
   "name": "Contested",
+  "displayName": "Contested",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Contested",
+  "description": "After each player combat, gain @GoldPerInstance@ gold for every @PlayerPerInstance@ other players who have fielded the leftmost champion on your bench this game.",
+  "tooltip": "After each player combat, gain @GoldPerInstance@ gold for every @PlayerPerInstance@ other players who have fielded the leftmost champion on your bench this game.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Contested_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldPerInstance",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PlayerPerInstance",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldPerInstance", "value": "2" }, { "name": "PlayerPerInstance", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: GoldPerInstance", "Unmapped item variable: PlayerPerInstance", "Unsupported item effect metadata: GoldPerInstance", "Unsupported item effect metadata: PlayerPerInstance"]
 }

@@ -1,7 +1,29 @@
 {
   "name": "The One Who Knocks",
+  "displayName": "The One Who Knocks",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TheOneWhoKnocks",
+  "description": "Gain a Silvermere Dawn. In @combatnum@ rounds, gain a Horizon Focus.<br><br><rules>One causes Stuns, and in 3 rounds, the other makes those Stuns hurt...a lot.</rules>",
+  "tooltip": "Gain a Silvermere Dawn. In @combatnum@ rounds, gain a Horizon Focus.<br><br><rules>One causes Stuns, and in 3 rounds, the other makes those Stuns hurt...a lot.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CombatNum",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CombatNum", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: CombatNum", "Unsupported item effect metadata: CombatNum"]
 }

@@ -1,0 +1,65 @@
+{
+  "name": "TFT_Augment_ChemtechOverdrive",
+  "displayName": "Chemtech Overdrive",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_ChemtechOverdrive",
+  "description": "Open @NumHexes@ portals to Zaun on random hexes in the second row. Any unit that starts combat in a portal gains @Health@ Health and @AttackSpeed*100@% Attack Speed, and drops @Gold@ gold on death.",
+  "tooltip": "Open @NumHexes@ portals to Zaun on random hexes in the second row. Any unit that starts combat in a portal gains @Health@ Health and @AttackSpeed*100@% Attack Speed, and drops @Gold@ gold on death.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ChemtechOverdrive_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT_Augment_ChemtechOverdrive:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 450, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT_Augment_ChemtechOverdrive:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 450,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "450",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 450, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumHexes",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.35" }, { "name": "Gold", "value": "1" }, { "name": "Health", "value": "450" }, { "name": "NumHexes", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumHexes"]
+}

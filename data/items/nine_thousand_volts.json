@@ -1,7 +1,17 @@
 {
   "name": "Nine Thousand Volts",
+  "displayName": "Nine Thousand Volts",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_KennenCarry",
+  "description": "Gain a Kennen. Your strongest Kennen becomes a ranged Marksman. He throws piercing Shurikens that can stun and deal magic damage.",
+  "tooltip": "Gain a Kennen. Your strongest Kennen becomes a ranged Marksman. He throws piercing Shurikens that can stun and deal magic damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/NineThousandVolts_I.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

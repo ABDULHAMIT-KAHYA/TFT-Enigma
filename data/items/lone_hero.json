@@ -1,7 +1,41 @@
 {
   "name": "Lone Hero",
+  "displayName": "Lone Hero",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_LoneHero",
+  "description": "Your last surviving champion  gains @ASBonus*100@% Attack Speed and @DurabilityBonus*100@% Durability",
+  "tooltip": "Your last surviving champion  gains @ASBonus*100@% Attack Speed and @DurabilityBonus*100@% Durability",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LoneSurvivor_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Lone Hero:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DurabilityBonus",
+      "rawSourceValue": "0.35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DurabilityBonus", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ASBonus",
+      "rawSourceValue": "1.4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ASBonus", "value": "1.4" }, { "name": "DurabilityBonus", "value": "0.35" }],
+  "importWarnings": ["Unmapped item variable: ASBonus", "Unsupported item effect metadata: ASBonus"]
 }

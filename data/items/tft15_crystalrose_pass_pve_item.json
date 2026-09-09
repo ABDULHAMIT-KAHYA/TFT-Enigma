@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_CrystalRose_Pass_PVE_Item",
+  "displayName": "Double Down",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_CrystalRose_Pass_PVE_Item",
+  "description": "Increase Gem Power gains for the next 3 player combats. If you lose, lose a large amount of your Gem Power<showIfNot.TFT15_CrystalGambit_HasDiamondHands> and immediately cash out</showIfNot.TFT15_CrystalGambit_HasDiamondHands>.",
+  "tooltip": "Increase Gem Power gains for the next 3 player combats. If you lose, lose a large amount of your Gem Power<showIfNot.TFT15_CrystalGambit_HasDiamondHands> and immediately cash out</showIfNot.TFT15_CrystalGambit_HasDiamondHands>.",
+  "iconPath": "ASSETS/UX/TraitIcons/Trait_Icon_15_GemForce.TFT_Set15.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

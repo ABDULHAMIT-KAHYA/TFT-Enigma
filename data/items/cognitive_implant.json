@@ -1,8 +1,54 @@
 {
   "name": "Cognitive Implant",
+  "displayName": "Cognitive Implant",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Augment_Techie_Vertical",
+  "description": "Your Techies gain @InitialAbilityPower@ Ability Power, increased by @AbilityPower@ for every @NumTakedowns@ takedowns. Gain a Veigar and a Zyra.",
+  "tooltip": "Your Techies gain @InitialAbilityPower@ Ability Power, increased by @AbilityPower@ for every @NumTakedowns@ takedowns. Gain a Veigar and a Zyra.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CognitiveImplant_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Cognitive Implant:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Cognitive Implant:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AbilityPower",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InitialAbilityPower",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:InitialAbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumTakedowns",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AbilityPower", "value": "1" }, { "name": "InitialAbilityPower", "value": "5" }, { "name": "NumTakedowns", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumTakedowns", "Unsupported item effect metadata: NumTakedowns"]
 }

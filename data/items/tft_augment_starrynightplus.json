@@ -1,0 +1,128 @@
+{
+  "name": "TFT_Augment_StarryNightPlus",
+  "displayName": "Starry Night+",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_StarryNightPlus",
+  "description": "1-cost and 2-cost champions in your shop have a chance to be 2-star. Gain @Gold@ gold.<br><br>Current Chances: @TFTUnitProperty.item:TFT_Augment_StarryNight_Odds@%<br><rules>Chances increase with player level.</rules>",
+  "tooltip": "1-cost and 2-cost champions in your shop have a chance to be 2-star. Gain @Gold@ gold.<br><br>Current Chances: @TFTUnitProperty.item:TFT_Augment_StarryNight_Odds@%<br><rules>Chances increase with player level.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/StarryNight_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{019b80fe}",
+      "rawSourceValue": "0.9",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{020fb2eb}",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{0d14760d}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{4885b8ce}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{49c43705}",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{4abd7204}",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{7083c200}",
+      "rawSourceValue": "0.35",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{99dcb7a2}",
+      "rawSourceValue": "0.18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{ca771d21}",
+      "rawSourceValue": "0.6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "8" }, { "name": "{019b80fe}", "value": "0.9" }, { "name": "{020fb2eb}", "value": "0.25" }, { "name": "{0d14760d}", "value": "2" }, { "name": "{4885b8ce}", "value": "1" }, { "name": "{49c43705}", "value": "0.15" }, { "name": "{4abd7204}", "value": "0.15" }, { "name": "{7083c200}", "value": "0.35" }, { "name": "{99dcb7a2}", "value": "0.18" }, { "name": "{ca771d21}", "value": "0.6" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: {019b80fe}", "Unmapped item variable: {020fb2eb}", "Unmapped item variable: {0d14760d}", "Unmapped item variable: {4885b8ce}", "Unmapped item variable: {49c43705}", "Unmapped item variable: {4abd7204}", "Unmapped item variable: {7083c200}", "Unmapped item variable: {99dcb7a2}", "Unmapped item variable: {ca771d21}", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: {019b80fe}", "Unsupported item effect metadata: {020fb2eb}", "Unsupported item effect metadata: {0d14760d}", "Unsupported item effect metadata: {4885b8ce}", "Unsupported item effect metadata: {49c43705}", "Unsupported item effect metadata: {4abd7204}", "Unsupported item effect metadata: {7083c200}", "Unsupported item effect metadata: {99dcb7a2}", "Unsupported item effect metadata: {ca771d21}"]
+}

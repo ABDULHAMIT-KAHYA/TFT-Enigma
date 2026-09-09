@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_ItemArmoryComponent",
+  "displayName": "Component Anvil",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_ItemArmoryComponent",
+  "description": "Component Anvil",
+  "tooltip": "Component Anvil",
+  "iconPath": "ASSETS/Characters/TFT_ArmoryKeyComponent/HUD/Icons2D/TFT_ArmoryKeyComponent_Square.tex",
+  "itemCategory": "Anvil",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

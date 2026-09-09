@@ -1,7 +1,40 @@
 {
   "name": "Gold For Dummies",
+  "displayName": "Gold For Dummies",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_GoldForDummies",
+  "description": "Gain a Training Dummy. Every @GoldDuration@ seconds, all Training Dummies grant @GoldAmount@ gold.",
+  "tooltip": "Gain a Training Dummy. Every @GoldDuration@ seconds, all Training Dummies grant @GoldAmount@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldforDummies_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldAmount",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldDuration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldAmount", "value": "1" }, { "name": "GoldDuration", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: GoldAmount", "Unmapped item variable: GoldDuration"]
 }

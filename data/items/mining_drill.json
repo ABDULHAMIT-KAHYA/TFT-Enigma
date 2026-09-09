@@ -1,7 +1,73 @@
 {
   "name": "Mining Drill",
+  "displayName": "Mining Drill",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_MiningDrill",
+  "description": "Gain @RollsPerCastBreakpoint@ Gold or @RollsPerCastBreakpoint@ Boot, randomly. <i>(Repeats for every Piltover cast!)</i> ",
+  "tooltip": "Gain @RollsPerCastBreakpoint@ Gold or @RollsPerCastBreakpoint@ Boot, randomly. <i>(Repeats for every Piltover cast!)</i> ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_MiningDrill.TFT_Set16.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CastBreakpoint",
+      "rawSourceValue": "0.8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldChance",
+      "rawSourceValue": "0.7",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RollsPerCastBreakpoint",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{8063e2fe}",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d8e7dc5e}",
+      "rawSourceValue": "1.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CastBreakpoint", "value": "0.8" }, { "name": "GoldChance", "value": "0.7" }, { "name": "RollsPerCastBreakpoint", "value": "1" }, { "name": "{8063e2fe}", "value": "0.5" }, { "name": "{d8e7dc5e}", "value": "1.25" }],
+  "importWarnings": ["Unmapped item variable: CastBreakpoint", "Unmapped item variable: GoldChance", "Unmapped item variable: RollsPerCastBreakpoint", "Unmapped item variable: {8063e2fe}", "Unmapped item variable: {d8e7dc5e}", "Unsupported item effect metadata: CastBreakpoint", "Unsupported item effect metadata: GoldChance", "Unsupported item effect metadata: RollsPerCastBreakpoint", "Unsupported item effect metadata: {8063e2fe}", "Unsupported item effect metadata: {d8e7dc5e}"]
 }

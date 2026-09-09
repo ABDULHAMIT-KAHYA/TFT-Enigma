@@ -1,7 +1,17 @@
 {
   "name": "Renewer Crest",
+  "displayName": "Renewer Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_RenewerCrest",
+  "description": "Gain a Renewer Emblem and a Soraka.",
+  "tooltip": "Gain a Renewer Emblem and a Soraka.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Renewer_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

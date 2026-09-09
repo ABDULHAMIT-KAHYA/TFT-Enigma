@@ -1,7 +1,51 @@
 {
   "name": "One, Two, Five!",
+  "displayName": "One, Two, Five!",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_OneTwoFive",
+  "description": "Gain @NumComponents@ random component, @Gold@ gold, and @NumChamps@ random 5-cost champion.",
+  "tooltip": "Gain @NumComponents@ random component, @Gold@ gold, and @NumChamps@ random 5-cost champion.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/One-Two-Five-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumChamps",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }, { "name": "NumChamps", "value": "1" }, { "name": "NumComponents", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumChamps", "Unmapped item variable: NumComponents", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumChamps", "Unsupported item effect metadata: NumComponents"]
 }

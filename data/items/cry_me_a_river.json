@@ -1,7 +1,62 @@
 {
   "name": "Cry Me A River",
+  "displayName": "Cry Me A River",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_CryMeARiver",
+  "description": "Gain a Tear of the Goddess. Your team gains @RegenBonus@ Mana Regen. After @DelayTime@ seconds in combat, increase this to @UpgradedRegenBonus@.",
+  "tooltip": "Gain a Tear of the Goddess. Your team gains @RegenBonus@ Mana Regen. After @DelayTime@ seconds in combat, increase this to @UpgradedRegenBonus@.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CryMeARiver_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RegenBonus",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UpgradedRegenBonus",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DelayTime",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{45ca499e}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DelayTime", "value": "12" }, { "name": "RegenBonus", "value": "1" }, { "name": "UpgradedRegenBonus", "value": "3" }, { "name": "{45ca499e}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: DelayTime", "Unmapped item variable: RegenBonus", "Unmapped item variable: UpgradedRegenBonus", "Unmapped non-numeric item variable: {45ca499e}", "Unsupported item effect metadata: DelayTime", "Unsupported item effect metadata: {45ca499e}"]
 }

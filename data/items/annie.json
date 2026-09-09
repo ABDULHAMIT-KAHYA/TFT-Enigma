@@ -1,7 +1,17 @@
 {
   "name": "Annie",
+  "displayName": "Annie",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Annie",
+  "description": "Annie",
+  "tooltip": "Annie",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Annie_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

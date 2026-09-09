@@ -1,0 +1,52 @@
+{
+  "name": "TFT15_Item_DestroyerEmblemItem",
+  "displayName": "Executioner Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Item_DestroyerEmblemItem",
+  "description": "The holder gains the Executioner trait.<br>Attacks and Abilities that critically strike deal @BleedDamage*100@% bonus true damage over @BleedDuration@ seconds.",
+  "tooltip": "The holder gains the Executioner trait.<br>Attacks and Abilities that critically strike deal @BleedDamage*100@% bonus true damage over @BleedDuration@ seconds.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set15/TFT15_Emblem_Executioner.TFT_Set15.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+    { "name": "Item:TFT15_Item_DestroyerEmblemItem:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BleedDamage",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BleedDuration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BleedDamage", "value": "0.2" }, { "name": "BleedDuration", "value": "3" }, { "name": "CritChance", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: BleedDamage", "Unmapped item variable: BleedDuration"]
+}

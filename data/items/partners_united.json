@@ -1,7 +1,29 @@
 {
   "name": "Partners United",
+  "displayName": "Partners United",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_PartnersUnited",
+  "description": "Your units gain @resists@ Attack Damage and Ability Power per trait active across your team and your partner's team.",
+  "tooltip": "Your units gain @resists@ Attack Damage and Ability Power per trait active across your team and your partner's team.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_PartnersUnited.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Resists",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Resists", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Resists"]
 }

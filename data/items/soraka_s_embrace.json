@@ -1,7 +1,53 @@
 {
   "name": "Soraka's Embrace",
+  "displayName": "Soraka's Embrace",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_SorakasEmbrace",
+  "description": "At combat start, grant the ally who died first the previous combat @ShieldFloor@ to @ShieldCeiling@ Shield, based on the current Stage.",
+  "tooltip": "At combat start, grant the ally who died first the previous combat @ShieldFloor@ to @ShieldCeiling@ Shield, based on the current Stage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_SorakasEmbrace.TFT_17_2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Shield",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 800,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldCeiling",
+      "rawSourceValue": "800",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldCeiling", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 800, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 450,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldFloor",
+      "rawSourceValue": "450",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldFloor", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 450, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Shield", "value": "null" }, { "name": "ShieldCeiling", "value": "800" }, { "name": "ShieldFloor", "value": "450" }],
+  "importWarnings": ["Metadata-only item effect: Shield -> Shield", "Metadata-only item effect: ShieldCeiling -> Shield", "Metadata-only item effect: ShieldFloor -> Shield", "Unmapped item variable: ShieldCeiling", "Unmapped item variable: ShieldFloor", "Unmapped non-numeric item variable: Shield"]
 }

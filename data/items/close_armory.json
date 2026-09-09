@@ -1,7 +1,17 @@
 {
   "name": "Close Armory",
+  "displayName": "Close Armory",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Item_CloseGarenArmory",
+  "description": "Closes the Armory. Will reopen next round with new traits.",
+  "tooltip": "Closes the Armory. Will reopen next round with new traits.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14_GOTN_Mods/TFT14_ModTrait_Virus.TFT_Set14.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

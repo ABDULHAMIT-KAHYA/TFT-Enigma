@@ -1,7 +1,17 @@
 {
   "name": "Dragonsoul Crest",
+  "displayName": "Dragonsoul Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_DragonsoulCrest",
+  "description": "Gain a Dragonsoul Emblem and a Braum.",
+  "tooltip": "Gain a Dragonsoul Emblem and a Braum.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dragonsoul_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

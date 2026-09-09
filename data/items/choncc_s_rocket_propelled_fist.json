@@ -1,8 +1,84 @@
 {
   "name": "Choncc's Rocket-Propelled Fist",
+  "displayName": "Choncc's Rocket-Propelled Fist",
+  "isPlaceholder": false,
+  "sourceId": "TFT4_Item_OrnnRocketPropelledFist",
+  "description": "Combat start: The farthest enemy is pulled into melee range and <TFTKeyword>Stunned</TFTKeyword> for @StunDuration@ seconds. Allies within range will prioritize attacking that enemy.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Stun</tftbold>: cannot move, attack, or cast Abilities</tftitemrules>",
+  "tooltip": "Combat start: The farthest enemy is pulled into melee range and <TFTKeyword>Stunned</TFTKeyword> for @StunDuration@ seconds. Allies within range will prioritize attacking that enemy.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Stun</tftbold>: cannot move, attack, or cast Abilities</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Ornn_Items/TFT4_OrnnItem_RocketPropelledFist.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Choncc's Rocket-Propelled Fist:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Choncc's Rocket-Propelled Fist:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [
+    {
+      "name": "Item:Choncc's Rocket-Propelled Fist:Armor",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Choncc's Rocket-Propelled Fist:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "name": "Item:Choncc's Rocket-Propelled Fist:Health",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Choncc's Rocket-Propelled Fist:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "StunDuration",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "25",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "25" }, { "name": "Health", "value": "150" }, { "name": "Mana", "value": "15" }, { "name": "StunDuration", "value": "1.5" }],
+  "importWarnings": ["Metadata-only item effect: Mana -> Aura", "Metadata-only item effect: StunDuration -> Aura", "Unmapped item variable: Mana", "Unmapped item variable: StunDuration"]
 }

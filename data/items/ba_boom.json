@@ -1,7 +1,41 @@
 {
   "name": "Ba-BOOM!",
+  "displayName": "Ba-BOOM!",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_BaBoom",
+  "description": "Your champions deal @BonusDamage*100@% more damage for @Duration@ seconds on every other cast.",
+  "tooltip": "Your champions deal @BonusDamage*100@% more damage for @Duration@ seconds on every other cast.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BaBoom_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusDamage",
+      "rawSourceValue": "0.9",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusDamage", "value": "0.9" }, { "name": "Duration", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: BonusDamage", "Unmapped item variable: Duration"]
 }

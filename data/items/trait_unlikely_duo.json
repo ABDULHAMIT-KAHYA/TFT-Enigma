@@ -1,8 +1,65 @@
 {
   "name": "Trait: Unlikely Duo",
+  "displayName": "Trait: Unlikely Duo",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_TeamupAugment_UnlikelyDuo",
+  "description": "Jinx and Sevika gain @AD*100@% Attack Damage and @Health@ Health. Whenever one casts, they grant the other @Mana@ mana. Sevika's arm is luckier.<br><br>Gain a Jinx and Sevika.",
+  "tooltip": "Jinx and Sevika gain @AD*100@% Attack Damage and @Health@ Health. Whenever one casts, they grant the other @Mana@ mana. Sevika's arm is luckier.<br><br>Gain a Jinx and Sevika.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TeamUp_UnlikelyDuo_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Trait: Unlikely Duo:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Trait: Unlikely Duo:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{1e90fa01}",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.1" }, { "name": "Health", "value": "100" }, { "name": "Mana", "value": "10" }, { "name": "{1e90fa01}", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: Mana", "Unmapped item variable: {1e90fa01}"]
 }

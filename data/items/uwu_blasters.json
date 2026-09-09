@@ -1,7 +1,30 @@
 {
   "name": "UwU Blasters",
+  "displayName": "UwU Blasters",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_AnimaSquad_Weapon_UwUBlasters",
+  "description": "Every @CastPeriod@ seconds, a random Anima Squad champion rapidfires UwU Blasters, dealing physical damage to the first enemy hit.",
+  "tooltip": "Every @CastPeriod@ seconds, a random Anima Squad champion rapidfires UwU Blasters, dealing physical damage to the first enemy hit.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14_AnimaSquadItems/TooltipIcons/TFT14_Icon_AnimaSquad_UwUBlaster.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "CastPeriod",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "CastPeriod", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: CastPeriod"]
 }

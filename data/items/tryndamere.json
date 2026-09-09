@@ -1,7 +1,17 @@
 {
   "name": "Tryndamere",
+  "displayName": "Tryndamere",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Tryndamere",
+  "description": "Tryndamere",
+  "tooltip": "Tryndamere",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Tryndamere_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

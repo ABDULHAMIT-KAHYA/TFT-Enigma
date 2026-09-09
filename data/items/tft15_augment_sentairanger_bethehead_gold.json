@@ -1,0 +1,52 @@
+{
+  "name": "TFT15_Augment_SentaiRanger_BeTheHead_Gold",
+  "displayName": "I'll Be The Head",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Augment_SentaiRanger_BeTheHead_Gold",
+  "description": "The Mighty Mech gains @AttackSpeed*100@% Attack Speed. Gain a Gangplank.<br><br>Field 7 Mighty Mech with a total of @TOOLTIPStarLevelReq@ Star Levels and reach level 10 to activate MECHA-MERGE PROTOCOL.",
+  "tooltip": "The Mighty Mech gains @AttackSpeed*100@% Attack Speed. Gain a Gangplank.<br><br>Field 7 Mighty Mech with a total of @TOOLTIPStarLevelReq@ Star Levels and reach level 10 to activate MECHA-MERGE PROTOCOL.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AndIllbethehead_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT15_Augment_SentaiRanger_BeTheHead_Gold:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 14,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPStarLevelReq",
+      "rawSourceValue": "14",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.25" }, { "name": "Health", "value": "null" }, { "name": "TOOLTIPStarLevelReq", "value": "14" }],
+  "importWarnings": ["Unmapped item variable: TOOLTIPStarLevelReq", "Unmapped non-numeric item variable: Health", "Unsupported item effect metadata: TOOLTIPStarLevelReq"]
+}

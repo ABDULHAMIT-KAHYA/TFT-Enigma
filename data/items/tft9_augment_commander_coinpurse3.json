@@ -1,0 +1,29 @@
+{
+  "name": "TFT9_Augment_Commander_Coinpurse3",
+  "displayName": "Coinpurse III",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Commander_Coinpurse3",
+  "description": "Gain @AugmentGold@ gold.",
+  "tooltip": "Gain @AugmentGold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AugmentGold",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AugmentGold", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: AugmentGold", "Unsupported item effect metadata: AugmentGold"]
+}

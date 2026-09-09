@@ -1,0 +1,40 @@
+{
+  "name": "TFT7_Augment_MageEssenceTheft",
+  "displayName": "Essence Theft",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_MageEssenceTheft",
+  "description": "Mage's attacks drain @ManaDrainBurn@ Mana from their target and gain 4 Mana. Gain a Lux.",
+  "tooltip": "Mage's attacks drain @ManaDrainBurn@ Mana from their target and gain 4 Mana. Gain a Lux.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Essence-Theft-Mage-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaDrainBurn",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaDrainDrain",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaDrainBurn", "value": "8" }, { "name": "ManaDrainDrain", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: ManaDrainBurn", "Unmapped item variable: ManaDrainDrain"]
+}

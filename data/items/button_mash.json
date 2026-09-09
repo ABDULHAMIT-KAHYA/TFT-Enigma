@@ -1,7 +1,41 @@
 {
   "name": "Button Mash",
+  "displayName": "Button Mash",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_PoppyCarry",
+  "description": "Gain a Poppy. Your strongest Poppy's ability is replaced with a 3-hit Wallop.",
+  "tooltip": "Gain a Poppy. Your strongest Poppy's ability is replaced with a 3-hit Wallop.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ButtonMash_I.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 80,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "TOOLTIPReducedDamage",
+      "rawSourceValue": "80",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 80, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPStrikes",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "TOOLTIPReducedDamage", "value": "80" }, { "name": "TOOLTIPStrikes", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: TOOLTIPReducedDamage", "Unmapped item variable: TOOLTIPStrikes", "Unsupported item effect metadata: TOOLTIPStrikes"]
 }

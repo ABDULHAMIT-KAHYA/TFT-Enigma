@@ -1,7 +1,29 @@
 {
   "name": "tft15_General_itemname_Debuff",
+  "displayName": "tft15_General_itemname_Debuff",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_General_Consumable_Debuff",
+  "description": "tft15_General_itemdescription_Debuff",
+  "tooltip": "tft15_General_itemdescription_Debuff",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT15_CommandModItems/TFT15_Item_Icon_CommandMod_Debuff.TFT_Set15.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Duration", "Unsupported item effect metadata: Duration"]
 }

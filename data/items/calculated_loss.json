@@ -1,7 +1,29 @@
 {
   "name": "Calculated Loss",
+  "displayName": "Calculated Loss",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_CalculatedLoss",
+  "description": "After losing your combat, gain @Gold@ gold and a free Shop reroll.",
+  "tooltip": "After losing your combat, gain @Gold@ gold and a free Shop reroll.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CalculatedLoss2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

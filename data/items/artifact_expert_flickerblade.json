@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: Flickerblade",
+  "displayName": "Artifact Expert: Flickerblade",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_NavoriFlickerblades",
+  "description": "Get an Aphelios, a Flickerblade, and a Recurve Bow",
+  "tooltip": "Get an Aphelios, a Flickerblade, and a Recurve Bow",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

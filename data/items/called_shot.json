@@ -1,7 +1,40 @@
 {
   "name": "Called Shot",
+  "displayName": "Called Shot",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_CalledShot",
+  "description": "Set your win streak to @Streak@. Gain @Gold@ gold.",
+  "tooltip": "Set your win streak to @Streak@. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CalledShot_I.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Streak",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "4" }, { "name": "Streak", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: Streak", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: Streak"]
 }

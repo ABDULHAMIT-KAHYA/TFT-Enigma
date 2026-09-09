@@ -1,7 +1,40 @@
 {
   "name": "tft_item_name_UpgradeModule",
+  "displayName": "tft_item_name_UpgradeModule",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Mecha_UpgradeModule",
+  "description": "tft_item_description_UpgradeModule",
+  "tooltip": "tft_item_description_UpgradeModule",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT15/TFT15_UpgradeModule.TFT_Set15.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRounds",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{56aa2787}",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumRounds", "value": "2" }, { "name": "{56aa2787}", "value": "0.25" }],
+  "importWarnings": ["Unmapped item variable: NumRounds", "Unmapped item variable: {56aa2787}", "Unsupported item effect metadata: NumRounds", "Unsupported item effect metadata: {56aa2787}"]
 }

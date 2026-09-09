@@ -1,7 +1,30 @@
 {
   "name": "Preemptive Protection",
+  "displayName": "Preemptive Protection",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_Protector_PreemptiveProtection",
+  "description": "Combat start: Protectors shield themselves and their closest ally for @ShieldPercentAmount*100@% of their maximum health. Shields stack. Gain a Rakan.",
+  "tooltip": "Combat start: Protectors shield themselves and their closest ally for @ShieldPercentAmount*100@% of their maximum health. Shields stack. Gain a Rakan.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PreemptiveProtection_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldPercentAmount",
+      "rawSourceValue": "0.18",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldPercentAmount", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "ShieldPercentAmount", "value": "0.18" }],
+  "importWarnings": ["Metadata-only item effect: ShieldPercentAmount -> Shield", "Unmapped item variable: ShieldPercentAmount"]
 }

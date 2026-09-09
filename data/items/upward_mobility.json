@@ -1,7 +1,41 @@
 {
   "name": "Upward Mobility",
+  "displayName": "Upward Mobility",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_UpwardMobility",
+  "description": "Buying XP costs 1 less. Gain @Health@ Health and @Rerolls@ free rerolls whenever you level up.",
+  "tooltip": "Buying XP costs 1 less. Gain @Health@ Health and @Rerolls@ free rerolls whenever you level up.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/UpwardMobility_III.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Upward Mobility:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Rerolls",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "2" }, { "name": "Rerolls", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Rerolls"]
 }

@@ -1,7 +1,74 @@
 {
   "name": "Silco's Revenge",
+  "displayName": "Silco's Revenge",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Augment_Zaun_SilcosRevenge",
+  "description": "Zaunites explode into Shimmer on death, dealing @PercentMaxHealthDamage*100@% of their max Health to @EnemiesToDamage@ nearby enemies as magic damage. Gain a Blitzcrank, an Ekko, and a Vi.",
+  "tooltip": "Zaunites explode into Shimmer on death, dealing @PercentMaxHealthDamage*100@% of their max Health to @EnemiesToDamage@ nearby enemies as magic damage. Gain a Blitzcrank, an Ekko, and a Vi.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SilcosRevenge_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Silco's Revenge:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ASDuration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "EnemiesToDamage",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentMaxHealthDamage",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{7048378f}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "0.2" }, { "name": "ASDuration", "value": "3" }, { "name": "EnemiesToDamage", "value": "2" }, { "name": "PercentMaxHealthDamage", "value": "0.3" }, { "name": "{7048378f}", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: ASDuration", "Unmapped item variable: EnemiesToDamage", "Unmapped item variable: PercentMaxHealthDamage", "Unmapped item variable: {7048378f}"]
 }

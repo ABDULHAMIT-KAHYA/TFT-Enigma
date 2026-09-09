@@ -1,7 +1,51 @@
 {
   "name": "Indecision I",
+  "displayName": "Indecision I",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Indecision1",
+  "description": "In @RoundDelay@ rounds, choose a new augment of the same tier. Gain @Gold@ gold now.",
+  "tooltip": "In @RoundDelay@ rounds, choose a new augment of the same tier. Gain @Gold@ gold now.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/IndecisionI_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundDelay",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{0a1e010e}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "4" }, { "name": "RoundDelay", "value": "3" }, { "name": "{0a1e010e}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: RoundDelay", "Unmapped non-numeric item variable: {0a1e010e}", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: RoundDelay", "Unsupported item effect metadata: {0a1e010e}"]
 }

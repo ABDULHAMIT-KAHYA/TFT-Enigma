@@ -1,7 +1,29 @@
 {
   "name": "Five-Pointed Star",
+  "displayName": "Five-Pointed Star",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_FivePointedStar",
+  "description": "Now and at the start of each stage, the first champion you buy with a cost equal to the stage number is 2-star. Gain @Gold@ gold and a 2-star 1-cost champion now.<br>",
+  "tooltip": "Now and at the start of each stage, the first champion you buy with a cost equal to the stage number is 2-star. Gain @Gold@ gold and a 2-star 1-cost champion now.<br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FivePointedStar_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

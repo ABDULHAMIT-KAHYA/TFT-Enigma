@@ -1,0 +1,40 @@
+{
+  "name": "TFTEvent5YR_Storyweaver3_AS",
+  "displayName": "Talisman of Speed",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent5YR_Storyweaver3_AS",
+  "description": "Grant Kayle and adjacent allies in the same row @ASAmt*100@% Attack Speed at the start of combat.",
+  "tooltip": "Grant Kayle and adjacent allies in the same row @ASAmt*100@% Attack Speed at the start of combat.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/5YR/TFTEvent5YR_Storyweaver_AttackSpeed1.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ASAmt",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HexRange",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ASAmt", "value": "0.12" }, { "name": "HexRange", "value": "1" }],
+  "importWarnings": ["Metadata-only item effect: ASAmt -> Aura", "Metadata-only item effect: HexRange -> Aura", "Unmapped item variable: ASAmt", "Unmapped item variable: HexRange"]
+}

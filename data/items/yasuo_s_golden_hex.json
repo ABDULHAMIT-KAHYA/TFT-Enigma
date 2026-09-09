@@ -1,8 +1,54 @@
 {
   "name": "Yasuo's Golden Hex",
+  "displayName": "Yasuo's Golden Hex",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Augment_YasuoGodAugment_GoldenHex",
+  "description": "Paint a Golden Hex. The unit in the hex gains @BonusHealth@ health, @AttackSpeed*100@% attack speed, and drops @Gold@ gold on kill.",
+  "tooltip": "Paint a Golden Hex. The unit in the hex gains @BonusHealth@ health, @AttackSpeed*100@% attack speed, and drops @Gold@ gold on kill.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FindYourCenter_I.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Yasuo's Golden Hex:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 250, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Yasuo's Golden Hex:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealth",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealth", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 250, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.25" }, { "name": "BonusHealth", "value": "250" }, { "name": "Gold", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold"]
 }

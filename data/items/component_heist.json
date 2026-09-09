@@ -1,7 +1,29 @@
 {
   "name": "Component Heist",
+  "displayName": "Component Heist",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_MuseumHeist",
+  "description": "After @NumberOfCombats@ player combats, gain 1 of every item component. Gain a random component now.<br><br>@TFTUnitProperty.item:TFT_Augment_MuseumHeist_TooltipTRAKey@ @TFTUnitProperty.item:TFT_Augment_MuseumHeist_CompleteTRAKey@",
+  "tooltip": "After @NumberOfCombats@ player combats, gain 1 of every item component. Gain a random component now.<br><br>@TFTUnitProperty.item:TFT_Augment_MuseumHeist_TooltipTRAKey@ @TFTUnitProperty.item:TFT_Augment_MuseumHeist_CompleteTRAKey@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/MuseumHeist_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Numberofcombats",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Numberofcombats", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: Numberofcombats", "Unsupported item effect metadata: Numberofcombats"]
 }

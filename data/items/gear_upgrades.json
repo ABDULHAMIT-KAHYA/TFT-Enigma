@@ -1,7 +1,40 @@
 {
   "name": "Gear Upgrades",
+  "displayName": "Gear Upgrades",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_GuildGearUpgrades",
+  "description": "Guild champions holding an item gain @Resists@ Armor and an additional @GuildBonusPct@% of their base Guild Bonus. Gain a Twitch.",
+  "tooltip": "Guild champions holding an item gain @Resists@ Armor and an additional @GuildBonusPct@% of their base Guild Bonus. Gain a Twitch.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Guild-Invitation-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GuildBonusPct",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Resists",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GuildBonusPct", "value": "250" }, { "name": "Resists", "value": "35" }],
+  "importWarnings": ["Unmapped item variable: GuildBonusPct", "Unmapped item variable: Resists", "Unsupported item effect metadata: GuildBonusPct", "Unsupported item effect metadata: Resists"]
 }

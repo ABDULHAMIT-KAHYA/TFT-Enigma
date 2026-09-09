@@ -1,7 +1,40 @@
 {
   "name": "Guess Ahead",
+  "displayName": "Guess Ahead",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PIckEms",
+  "description": "In @NumRounds@ rounds, get up to @Gold@ gold based on how close you are to your current ranking in the lobby.",
+  "tooltip": "In @NumRounds@ rounds, get up to @Gold@ gold based on how close you are to your current ranking in the lobby.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRounds",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "18" }, { "name": "NumRounds", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumRounds", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumRounds"]
 }

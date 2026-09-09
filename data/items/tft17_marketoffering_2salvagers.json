@@ -1,0 +1,17 @@
+{
+  "name": "TFT17_MarketOffering_2Salvagers",
+  "displayName": "2 Salvagers",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_2Salvagers",
+  "description": "Use on a champion to remove all their items and break them down into components.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Use on a champion to remove all their items and break them down into components.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT14_Consumable_Salvager.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

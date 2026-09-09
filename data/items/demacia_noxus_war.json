@@ -1,7 +1,73 @@
 {
   "name": "Demacia-Noxus War",
+  "displayName": "Demacia-Noxus War",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_DemaciaVsNoxus",
+  "description": "@TFTUnitProperty.item:TFT16_Augment_DemaciaVsNoxus_DescriptionTRA@",
+  "tooltip": "@TFTUnitProperty.item:TFT16_Augment_DemaciaVsNoxus_DescriptionTRA@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AtakhanFrequency",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "KillsRequired",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "KillsToGive",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RallyPercent",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "goldtogive",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AtakhanFrequency", "value": "4" }, { "name": "KillsRequired", "value": "30" }, { "name": "KillsToGive", "value": "1" }, { "name": "RallyPercent", "value": "1" }, { "name": "goldtogive", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: AtakhanFrequency", "Unmapped item variable: KillsRequired", "Unmapped item variable: KillsToGive", "Unmapped item variable: RallyPercent", "Unmapped item variable: goldtogive", "Unsupported item effect metadata: AtakhanFrequency", "Unsupported item effect metadata: KillsRequired", "Unsupported item effect metadata: KillsToGive", "Unsupported item effect metadata: RallyPercent", "Unsupported item effect metadata: goldtogive"]
 }

@@ -1,0 +1,52 @@
+{
+  "name": "TFT15_Item_ChallengerEmblemItem",
+  "displayName": "Duelist Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Item_ChallengerEmblemItem",
+  "description": "The holder gains the Duelist trait.<br><br>Attacks deal @BaseTrueDamage@ bonus true damage, plus @BonusTrueDamage@ bonus true damage for each time the target was damaged by this effect.",
+  "tooltip": "The holder gains the Duelist trait.<br><br>Attacks deal @BaseTrueDamage@ bonus true damage, plus @BonusTrueDamage@ bonus true damage for each time the target was damaged by this effect.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set15/TFT15_Emblem_Duelist.TFT_Set15.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+    { "name": "Item:TFT15_Item_ChallengerEmblemItem:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseTrueDamage",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusTrueDamage",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "10" }, { "name": "BaseTrueDamage", "value": "12" }, { "name": "BonusTrueDamage", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: BaseTrueDamage", "Unmapped item variable: BonusTrueDamage"]
+}

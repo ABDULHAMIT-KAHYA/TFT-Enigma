@@ -1,7 +1,42 @@
 {
   "name": "The Sentinels of Light",
+  "displayName": "The Sentinels of Light",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Augment_Sentinel",
+  "description": "Whenever the Sentinel shield is passed to a new target, all Sentinel units gain @AttackSpeedPercent*100@% Attack Speed, stacking up to @MaxStack@ times. Gain an Olaf and a Senna.",
+  "tooltip": "Whenever the Sentinel shield is passed to a new target, all Sentinel units gain @AttackSpeedPercent*100@% Attack Speed, stacking up to @MaxStack@ times. Gain an Olaf and a Senna.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/The-Sentinels-Of-Light_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:The Sentinels of Light:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.11, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.11,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeedPercent",
+      "rawSourceValue": "0.11",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeedPercent", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.11, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxStack",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MaxStack", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeedPercent", "value": "0.11" }, { "name": "MaxStack", "value": "12" }],
+  "importWarnings": ["Unmapped item variable: MaxStack"]
 }

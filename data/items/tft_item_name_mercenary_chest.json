@@ -1,7 +1,17 @@
 {
   "name": "tft_item_name_Mercenary_Chest",
+  "displayName": "tft_item_name_Mercenary_Chest",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Chest",
+  "description": "tft_item_description_Mercenary_Dice",
+  "tooltip": "tft_item_description_Mercenary_Dice",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/Mercenary_Chest.tex",
+  "itemCategory": "LootObject",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

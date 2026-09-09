@@ -1,0 +1,17 @@
+{
+  "name": "TFT11_Encounter_ChoiceItem_Gain8Gold",
+  "displayName": "8 gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Encounter_ChoiceItem_Gain8Gold",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

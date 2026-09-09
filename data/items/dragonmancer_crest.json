@@ -1,7 +1,17 @@
 {
   "name": "Dragonmancer Crest",
+  "displayName": "Dragonmancer Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DragonmancerEmblem",
+  "description": "Gain a Dragonmancer Emblem and a Kai'Sa.",
+  "tooltip": "Gain a Dragonmancer Emblem and a Kai'Sa.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dragonmancer-Crest-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

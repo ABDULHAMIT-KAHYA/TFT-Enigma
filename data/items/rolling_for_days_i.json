@@ -1,7 +1,29 @@
 {
   "name": "Rolling For Days I",
+  "displayName": "Rolling For Days I",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Commander_RollingForDays",
+  "description": "Gain @Numrolls@ free Shop rerolls.",
+  "tooltip": "Gain @Numrolls@ free Shop rerolls.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Rolling-For-Days-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Numrolls",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Numrolls", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: Numrolls", "Unsupported item effect metadata: Numrolls"]
 }

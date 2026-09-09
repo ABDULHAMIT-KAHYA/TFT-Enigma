@@ -1,7 +1,41 @@
 {
   "name": "Raid Boss",
+  "displayName": "Raid Boss",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Augment_Bastion_RaidBoss",
+  "description": "Your strongest Bastion champion gains @Health*100@% max Health. When other Bastions die, they transfer @DefenseRatio*100@% of their Armor and Magic Resist to it. Gain a Shen and Rell.",
+  "tooltip": "Your strongest Bastion champion gains @Health*100@% max Health. When other Bastions die, they transfer @DefenseRatio*100@% of their Armor and Magic Resist to it. Gain a Shen and Rell.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RaidBoss_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Raid Boss:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DefenseRatio",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DefenseRatio", "value": "0.2" }, { "name": "Health", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: DefenseRatio"]
 }

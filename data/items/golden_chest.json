@@ -1,7 +1,17 @@
 {
   "name": "Golden Chest",
+  "displayName": "Golden Chest",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_5MercChest",
+  "description": "Gain a Spatula and an Item. ",
+  "tooltip": "Gain a Spatula and an Item. ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_ArmorcladCrest",
+  "displayName": "Bastion Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_ArmorcladCrest",
+  "description": "Gain an Bastion emblem.",
+  "tooltip": "Gain an Bastion emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ArmorcladCrest_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

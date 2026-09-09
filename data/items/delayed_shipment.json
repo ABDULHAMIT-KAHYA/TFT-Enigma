@@ -1,7 +1,29 @@
 {
   "name": "Delayed Shipment",
+  "displayName": "Delayed Shipment",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_DelayedShipment",
+  "description": "After @Combats@ player combats, choose one of the following Artifacts: Manazane, Sniper's Focus, Hullcrusher.<br><br><rules>Rounds remaining: @TFTUnitProperty.item:TFT_Augment_DelayedShipment_Counter@</rules>",
+  "tooltip": "After @Combats@ player combats, choose one of the following Artifacts: Manazane, Sniper's Focus, Hullcrusher.<br><br><rules>Rounds remaining: @TFTUnitProperty.item:TFT_Augment_DelayedShipment_Counter@</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DelayedShipment_I.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Combats",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Combats", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: Combats", "Unsupported item effect metadata: Combats"]
 }

@@ -1,0 +1,62 @@
+{
+  "name": "TFT_Augment_RestartMission",
+  "displayName": "Restart Mission",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_RestartMission",
+  "description": "Remove all champions on your board and bench. Gain @3Cost@ random 2-star 3-costs, @2Cost@ 2-star 2-costs, and @1Cost@ 2-star 1-cost champion.",
+  "tooltip": "Remove all champions on your board and bench. Gain @3Cost@ random 2-star 3-costs, @2Cost@ 2-star 2-costs, and @1Cost@ 2-star 1-cost champion.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RestartMission_I.TFT_Set12.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "1Cost",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "2Cost",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "3Cost",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "1Cost", "value": "1" }, { "name": "2Cost", "value": "3" }, { "name": "3Cost", "value": "2" }, { "name": "NumUnits", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: 1Cost", "Unmapped item variable: 2Cost", "Unmapped item variable: 3Cost", "Unmapped item variable: NumUnits", "Unsupported item effect metadata: 1Cost", "Unsupported item effect metadata: 2Cost", "Unsupported item effect metadata: 3Cost", "Unsupported item effect metadata: NumUnits"]
+}

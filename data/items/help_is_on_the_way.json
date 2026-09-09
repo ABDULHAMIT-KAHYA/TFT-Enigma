@@ -1,7 +1,29 @@
 {
   "name": "Help Is On The Way",
+  "displayName": "Help Is On The Way",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_HelpIsOnTheWay",
+  "description": "After @NumberOfCombats@ player combats, choose 1 of 4 Support items.",
+  "tooltip": "After @NumberOfCombats@ player combats, choose 1 of 4 Support items.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Help-Is-On-The-Way-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Numberofcombats",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Numberofcombats", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: Numberofcombats", "Unsupported item effect metadata: Numberofcombats"]
 }

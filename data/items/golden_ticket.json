@@ -1,7 +1,40 @@
 {
   "name": "Golden Ticket",
+  "displayName": "Golden Ticket",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_SilverTicket",
+  "description": "Each time your Shop is rerolled, you have a @RerollPercent@% chance to gain a free reroll. Gain @Gold@ gold.",
+  "tooltip": "Each time your Shop is rerolled, you have a @RerollPercent@% chance to gain a free reroll. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldenTicket2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RerollPercent",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "3" }, { "name": "RerollPercent", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: RerollPercent", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: RerollPercent"]
 }

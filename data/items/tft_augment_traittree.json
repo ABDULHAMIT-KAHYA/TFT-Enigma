@@ -1,0 +1,51 @@
+{
+  "name": "TFT_Augment_TraitTree",
+  "displayName": "The Trait Tree",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TraitTree",
+  "description": "Gain @NumOfEmblems@ random Emblems, a Reforger, and @Gold@ gold.",
+  "tooltip": "Gain @NumOfEmblems@ random Emblems, a Reforger, and @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TheTraitTree_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumOfEmblems",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumReforgers",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }, { "name": "NumOfEmblems", "value": "3" }, { "name": "NumReforgers", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumOfEmblems", "Unmapped item variable: NumReforgers"]
+}

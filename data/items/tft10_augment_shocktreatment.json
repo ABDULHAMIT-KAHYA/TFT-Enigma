@@ -1,0 +1,79 @@
+{
+  "name": "TFT10_Augment_ShockTreatment",
+  "displayName": "Shock Treatment",
+  "isPlaceholder": false,
+  "sourceId": "TFT10_Augment_ShockTreatment",
+  "description": "Gain a Statikk Shiv. Your Statikk Shivs' chain lightning effects deal @tooltipincreaseddamage1*100@-@tooltipincreaseddamage2*100@% more damage (based on stage level).",
+  "tooltip": "Gain a Statikk Shiv. Your Statikk Shivs' chain lightning effects deal @tooltipincreaseddamage1*100@-@tooltipincreaseddamage2*100@% more damage (based on stage level).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Shock-Treatment-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT10_Augment_ShockTreatment:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 2.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT10_Augment_ShockTreatment:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 1.8, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT10_Augment_ShockTreatment:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 1.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "tooltipincreaseddamage1",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "tooltipincreaseddamage2",
+      "rawSourceValue": "1.25",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 1.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp1",
+      "rawSourceValue": "1.4",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp1", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 1.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 1.8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp2",
+      "rawSourceValue": "1.8",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp2", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 1.8, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 2.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp3",
+      "rawSourceValue": "2.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp3", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 2.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp1", "value": "1.4" }, { "name": "DamageAmp2", "value": "1.8" }, { "name": "DamageAmp3", "value": "2.25" }, { "name": "tooltipincreaseddamage1", "value": "0.4" }, { "name": "tooltipincreaseddamage2", "value": "1.25" }],
+  "importWarnings": ["Unmapped item variable: tooltipincreaseddamage1", "Unmapped item variable: tooltipincreaseddamage2"]
+}

@@ -1,7 +1,40 @@
 {
   "name": "Climb the Mountain",
+  "displayName": "Climb the Mountain",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_Targon_ClimbtheMountain",
+  "description": "Your Targonians gain @MaxHealth@ max Health and @ADAP@% Attack Damage and Ability Power for every Targonian fielded. Gain an Aphelios.",
+  "tooltip": "Your Targonians gain @MaxHealth@ max Health and @ADAP@% Attack Damage and Ability Power for every Targonian fielded. Gain an Aphelios.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ADAP",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealth",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADAP", "value": "5" }, { "name": "MaxHealth", "value": "50" }],
+  "importWarnings": ["Unmapped item variable: ADAP", "Unmapped item variable: MaxHealth"]
 }

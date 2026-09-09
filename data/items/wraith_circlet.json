@@ -1,7 +1,17 @@
 {
   "name": "Wraith Circlet",
+  "displayName": "Wraith Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_EmpyreanCirclet",
+  "description": "Gain a Wraith Emblem and a K'Sante.",
+  "tooltip": "Gain a Wraith Emblem and a K'Sante.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Wraith_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

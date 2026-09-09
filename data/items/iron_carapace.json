@@ -1,7 +1,40 @@
 {
   "name": "Iron Carapace",
+  "displayName": "Iron Carapace",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Consumable_Void_IronCarapace",
+  "description": "Gain <scaleLevel>@TFTUnitProperty.item:TFT16_Void_IronCarapaceHealth@</scaleLevel> max Health. Gain Armor and Magic Resist equal to <scaleLevel>@TFTUnitProperty.item:TFT16_Void_IronCarapaceArmorMR@%</scaleLevel> of max&nbsp;Health.<br><br><rules>Recommended users: Cho'Gath and Rift Herald</rules><br><br>",
+  "tooltip": "Gain <scaleLevel>@TFTUnitProperty.item:TFT16_Void_IronCarapaceHealth@</scaleLevel> max Health. Gain Armor and Magic Resist equal to <scaleLevel>@TFTUnitProperty.item:TFT16_Void_IronCarapaceArmorMR@%</scaleLevel> of max&nbsp;Health.<br><br><rules>Recommended users: Cho'Gath and Rift Herald</rules><br><br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT16_VoidMutation_IronCarapace.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealth",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.006,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{efe25fc3}",
+      "rawSourceValue": "0.006",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxHealth", "value": "200" }, { "name": "{efe25fc3}", "value": "0.006" }],
+  "importWarnings": ["Unmapped item variable: MaxHealth", "Unmapped item variable: {efe25fc3}"]
 }

@@ -1,7 +1,29 @@
 {
   "name": "Component Grab Bag",
+  "displayName": "Component Grab Bag",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_ComponentGrabBag",
+  "description": "Gain @NumComponents@ random item components.",
+  "tooltip": "Gain @NumComponents@ random item components.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ComponentGrabBag-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumComponents", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: NumComponents", "Unsupported item effect metadata: NumComponents"]
 }

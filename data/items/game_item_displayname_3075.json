@@ -1,7 +1,41 @@
 {
   "name": "game_item_displayname_3075",
+  "displayName": "game_item_displayname_3075",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_Thornmail",
+  "description": "tft_item_description_Thornmail",
+  "tooltip": "tft_item_description_Thornmail",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_Thornmail.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:game_item_displayname_3075:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{6688a0d5}",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "50" }, { "name": "{6688a0d5}", "value": "100" }],
+  "importWarnings": ["Unmapped item variable: {6688a0d5}", "Unsupported item effect metadata: {6688a0d5}"]
 }

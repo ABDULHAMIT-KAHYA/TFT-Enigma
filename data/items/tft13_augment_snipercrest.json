@@ -1,0 +1,17 @@
+{
+  "name": "TFT13_Augment_SniperCrest",
+  "displayName": "Sniper Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_SniperCrest",
+  "description": "Gain a Sniper Emblem and a Zeri.",
+  "tooltip": "Gain a Sniper Emblem and a Zeri.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Sniper_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,40 @@
 {
   "name": "Rainbow Shops",
+  "displayName": "Rainbow Shops",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_RainbowShops",
+  "description": "Your next @NumShops@ shops will each contain one unit of each tier. Gain @NumRerolls@ free reroll.",
+  "tooltip": "Your next @NumShops@ shops will each contain one unit of each tier. Gain @NumRerolls@ free reroll.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_5c.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRerolls",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumShops",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumRerolls", "value": "1" }, { "name": "NumShops", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: NumRerolls", "Unmapped item variable: NumShops", "Unsupported item effect metadata: NumRerolls", "Unsupported item effect metadata: NumShops"]
 }

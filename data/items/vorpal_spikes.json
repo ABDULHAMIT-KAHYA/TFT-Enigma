@@ -1,7 +1,17 @@
 {
   "name": "Vorpal Spikes",
+  "displayName": "Vorpal Spikes",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ChoGathCarry",
+  "description": "Gain a Cho'Gath. Your strongest Cho'Gath gains +1 Attack Range and his attacks launch spikes that deal magic damage based on his max Health.",
+  "tooltip": "Gain a Cho'Gath. Your strongest Cho'Gath gains +1 Attack Range and his attacks launch spikes that deal magic damage based on his max Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Feast_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

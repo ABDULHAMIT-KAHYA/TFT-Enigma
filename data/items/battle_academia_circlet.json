@@ -1,7 +1,17 @@
 {
   "name": "Battle Academia Circlet",
+  "displayName": "Battle Academia Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_BattleAcademiaCirclet",
+  "description": "Gain a Battle Academia Emblem and a Rakan.",
+  "tooltip": "Gain a Battle Academia Emblem and a Rakan.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_BattleAcademia_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

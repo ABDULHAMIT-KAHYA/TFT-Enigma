@@ -1,7 +1,41 @@
 {
   "name": "Belt Overflow",
+  "displayName": "Belt Overflow",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_BeltOverflow",
+  "description": "Gain @NumItems@ Giant's Belts. Your Giant's Belts grant +@BonusHealth@ bonus Health.",
+  "tooltip": "Gain @NumItems@ Giant's Belts. Your Giant's Belts grant +@BonusHealth@ bonus Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BeltOverflow_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Belt Overflow:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 85, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 85,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealth",
+      "rawSourceValue": "85",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealth", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 85, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusHealth", "value": "85" }, { "name": "NumItems", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: NumItems"]
 }

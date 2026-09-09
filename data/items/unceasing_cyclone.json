@@ -1,10 +1,102 @@
 {
   "name": "Unceasing Cyclone",
+  "displayName": "Unceasing Cyclone",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_AnimaSquadItem_Tier3_CyclonicSlicers",
+  "description": "Gain <TFTRadiantItemBonus>6</TFTRadiantItemBonus> orbiting razors. Razors deal <trueDamage>@Damage@</trueDamage> <TFTRadiantItemBonus>true damage</TFTRadiantItemBonus>, and 30% Shred and Sunder enemies for <TFTRadiantItemBonus>the rest of combat</TFTRadiantItemBonus>. Deal <TFTRadiantItemBonus>@DamageIncrease*100@%</TFTRadiantItemBonus> increased damage to Shredded or Sundered enemies.<br><br><rules>Damage increases based on Stage.</rules><br><rules>Recommended Roles: Attack or Magic Fighter</rules>",
+  "tooltip": "Gain <TFTRadiantItemBonus>6</TFTRadiantItemBonus> orbiting razors. Razors deal <trueDamage>@Damage@</trueDamage> <TFTRadiantItemBonus>true damage</TFTRadiantItemBonus>, and 30% Shred and Sunder enemies for <TFTRadiantItemBonus>the rest of combat</TFTRadiantItemBonus>. Deal <TFTRadiantItemBonus>@DamageIncrease*100@%</TFTRadiantItemBonus> increased damage to Shredded or Sundered enemies.<br><br><rules>Damage increases based on Stage.</rules><br><rules>Recommended Roles: Attack or Magic Fighter</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_AnimaSquadItem_CyclonicSlicers_T3.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Unceasing Cyclone:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Unceasing Cyclone:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Unceasing Cyclone:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Unceasing Cyclone:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Damage",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageIncrease",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShredDuration",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.3" }, { "name": "AP", "value": "30" }, { "name": "Armor", "value": "40" }, { "name": "Damage", "value": "null" }, { "name": "DamageIncrease", "value": "0.3" }, { "name": "MagicResist", "value": "40" }, { "name": "ShredDuration", "value": "60" }],
+  "importWarnings": ["Unmapped item variable: DamageIncrease", "Unmapped item variable: ShredDuration", "Unmapped non-numeric item variable: Damage"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Keeper Crest",
+  "displayName": "Keeper Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_KeeperCrest",
+  "description": "Gain a Keeper Emblem and a Jarvan IV.",
+  "tooltip": "Gain a Keeper Emblem and a Jarvan IV.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Keeper_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

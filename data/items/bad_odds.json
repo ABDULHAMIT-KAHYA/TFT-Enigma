@@ -1,7 +1,29 @@
 {
   "name": "Bad Odds",
+  "displayName": "Bad Odds",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_BadOdds",
+  "description": "You can only reach even levels, but the XP cost to each level is reduced. Gain @StartingXP@ XP.",
+  "tooltip": "You can only reach even levels, but the XP cost to each level is reduced. Gain @StartingXP@ XP.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StartingXP",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "StartingXP", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: StartingXP", "Unsupported item effect metadata: StartingXP"]
 }

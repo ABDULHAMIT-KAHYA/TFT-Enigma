@@ -1,7 +1,51 @@
 {
   "name": "On The House",
+  "displayName": "On The House",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_OnTheHouse",
+  "description": "Whenever you star up a champion, gain @gold@ gold. Gain @augmentselectbonusgold@ gold now.",
+  "tooltip": "Whenever you star up a champion, gain @gold@ gold. Gain @augmentselectbonusgold@ gold now.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/OnTheHouse_I.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 99,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TurnLimit",
+      "rawSourceValue": "99",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "augmentselectbonusgold",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "1" }, { "name": "TurnLimit", "value": "99" }, { "name": "augmentselectbonusgold", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: TurnLimit", "Unmapped item variable: augmentselectbonusgold", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: TurnLimit", "Unsupported item effect metadata: augmentselectbonusgold"]
 }

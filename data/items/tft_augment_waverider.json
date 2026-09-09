@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Augment_Waverider",
+  "displayName": "On a Roll",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Waverider",
+  "description": "Whenever you star up a champion that you fielded last combat, gain @NumRolls@ free Shop rerolls. Gain @Gold@ gold.",
+  "tooltip": "Whenever you star up a champion that you fielded last combat, gain @NumRolls@ free Shop rerolls. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/OnARoll_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Numrolls",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "6" }, { "name": "Numrolls", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: Numrolls", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: Numrolls"]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Augment_AnotherOnePlus",
+  "displayName": "Another One!+",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_AnotherOnePlus",
+  "description": "The next completed item you make grants another copy of it. Gain @NumComponents@ component anvil.",
+  "tooltip": "The next completed item you make grants another copy of it. Gain @NumComponents@ component anvil.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AnotherOne_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumComponents", "value": "1" }, { "name": "NumItems", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumComponents", "Unmapped item variable: NumItems", "Unsupported item effect metadata: NumComponents", "Unsupported item effect metadata: NumItems"]
+}

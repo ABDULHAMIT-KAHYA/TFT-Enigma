@@ -693,6 +693,340 @@ static bool tryMapVariableToStatEffect(std::string_view varName,
     return false;
 }
 
+static void appendStatusEffectJson(std::ostringstream& ss,
+                                  std::string_view effectName,
+                                  std::string_view affectedStat,
+                                  std::string_view modifierType,
+                                  double value);
+
+struct ItemEffectMetadata
+{
+    std::string effectType = "UnknownUnsupported";
+    std::string trigger = "Passive";
+    double value = 0.0;
+    int durationMs = 0;
+    int cooldownMs = 0;
+    std::string targetHint = "Unknown";
+    std::string rawSourceName{};
+    std::string rawSourceValue{};
+    bool supportedForRuntime = false;
+    bool hasStatusEffect = false;
+    std::string statusAffectedStat{};
+    std::string statusModifierType = "Flat";
+    double statusValue = 0.0;
+    bool hasDamageFormula = false;
+    int baseDamage = 0;
+    std::string damageType = "Physical";
+};
+
+static bool isCombatRuntimeItemCategory(std::string_view category)
+{
+    return category == "CombatItem" ||
+           category == "RadiantItem" ||
+           category == "Artifact" ||
+           category == "SupportItem" ||
+           category == "Emblem";
+}
+
+static bool looksLikeGateText(const std::string& lower)
+{
+    return containsAny(lower, {
+        "cooldown",
+        "second cooldown",
+        "seconds cooldown",
+        "once per combat",
+        "once each combat",
+        "first time",
+        "only once"
+    });
+}
+
+static bool looksLikeDurationVariable(std::string_view varName)
+{
+    const std::string v = toSnakeLower(std::string(varName));
+    return v.find("duration") != std::string::npos ||
+           v.find("time") != std::string::npos ||
+           v.find("delay") != std::string::npos ||
+           v.find("interval") != std::string::npos ||
+           v.find("cooldown") != std::string::npos ||
+           v == "icd";
+}
+
+static std::string classifyItemTrigger(const std::string& lowerSource, std::string_view varName)
+{
+    const std::string v = toSnakeLower(std::string(varName));
+    if (containsAny(lowerSource, { "start of combat", "combat start", "when combat starts", "at the start of combat", "at combat start" }) ||
+        v.find("combatstart") != std::string::npos)
+    {
+        return "OnCombatStart";
+    }
+    if (containsAny(lowerSource, { "on-hit", "on hit", "onhit", "after attacking", "after every attack" }) ||
+        v.find("onhit") != std::string::npos)
+    {
+        return "OnHit";
+    }
+    if (containsAny(lowerSource, { "on attack", "when attacking", "when this unit attacks", "attacks grant" }) ||
+        v.find("onattack") != std::string::npos)
+    {
+        return "OnAttack";
+    }
+    if (containsAny(lowerSource, { "on cast", "when casting", "when this unit casts", "after casting", "casts their ability" }) ||
+        v.find("oncast") != std::string::npos)
+    {
+        return "OnCast";
+    }
+    return "Passive";
+}
+
+static std::string classifyItemEffectType(const std::string& lowerSource, std::string_view varName)
+{
+    const std::string v = toSnakeLower(std::string(varName));
+    if (v.find("cooldown") != std::string::npos || v == "icd" || containsAny(lowerSource, { "cooldown" }))
+    {
+        return "CooldownGate";
+    }
+    if (containsAny(lowerSource, { "once per combat", "once each combat", "first time" }))
+    {
+        return "OncePerCombatGate";
+    }
+    if (v.find("aura") != std::string::npos || containsAny(lowerSource, { "aura", "adjacent allies", "within " }))
+    {
+        return "Aura";
+    }
+    if (v.find("shield") != std::string::npos || containsAny(lowerSource, { "shield" }))
+    {
+        return "Shield";
+    }
+    if (v.find("heal") != std::string::npos || v.find("regen") != std::string::npos || containsAny(lowerSource, { "heal", "healing" }))
+    {
+        return "Heal";
+    }
+    if (v.find("execute") != std::string::npos || containsAny(lowerSource, { "execute" }))
+    {
+        return "Execute";
+    }
+    if (v.find("summon") != std::string::npos || containsAny(lowerSource, { "summon", "spawn", "clone", "training dummy" }))
+    {
+        return "SummonUnit";
+    }
+    if (v.find("mana") != std::string::npos)
+    {
+        return "ModifyMana";
+    }
+    if (v.find("trait") != std::string::npos || containsAny(lowerSource, { "trait", "emblem" }))
+    {
+        return "GrantTrait";
+    }
+    if (v.find("damage") != std::string::npos || v.find("burn") != std::string::npos || containsAny(lowerSource, { "damage", "burn" }))
+    {
+        return "DealDamage";
+    }
+    return "UnknownUnsupported";
+}
+
+static std::string buildItemSourceText(const JsonValue& itemObj, const std::string& name)
+{
+    std::string text;
+    text += getString(itemObj, "apiName", "");
+    text += " ";
+    text += getString(itemObj, "icon", "");
+    text += " ";
+    text += getString(itemObj, "desc", "");
+    text += " ";
+    text += getString(itemObj, "description", "");
+    text += " ";
+    text += name;
+    appendArrayStringsForClassification(text, itemObj, "tags");
+    appendArrayStringsForClassification(text, itemObj, "associatedTraits");
+    appendArrayStringsForClassification(text, itemObj, "incompatibleTraits");
+    return toLowerText(std::move(text));
+}
+
+static void appendShieldStatusEffectJson(std::ostringstream& ss,
+                                        std::string_view effectName,
+                                        double value)
+{
+    ss << "{ "
+       << "\"name\": " << jsonString(effectName) << ", "
+       << "\"effectType\": \"Shield\", "
+       << "\"crowdControlType\": \"None\", "
+       << "\"affectedStat\": \"None\", "
+       << "\"modifierType\": \"Flat\", "
+       << "\"value\": " << value << ", "
+       << "\"durationMs\": " << CombatConstants::MaxCombatDurationMs << ", "
+       << "\"remainingMs\": " << CombatConstants::MaxCombatDurationMs << ", "
+       << "\"tickIntervalMs\": 0, "
+       << "\"tickTimerMs\": 0, "
+       << "\"damageType\": \"True\""
+       << " }";
+}
+
+static void appendGenericItemEffectJson(std::ostringstream& ss, const ItemEffectMetadata& e)
+{
+    ss << "    {\n";
+    ss << "      \"effectType\": " << jsonString(e.effectType) << ",\n";
+    ss << "      \"trigger\": " << jsonString(e.trigger) << ",\n";
+    ss << "      \"value\": " << e.value << ",\n";
+    ss << "      \"durationMs\": " << e.durationMs << ",\n";
+    ss << "      \"cooldownMs\": " << e.cooldownMs << ",\n";
+    ss << "      \"targetHint\": " << jsonString(e.targetHint) << ",\n";
+    ss << "      \"rawSourceName\": " << jsonString(e.rawSourceName) << ",\n";
+    ss << "      \"rawSourceValue\": " << jsonString(e.rawSourceValue) << ",\n";
+    ss << "      \"supportedForRuntime\": " << (e.supportedForRuntime ? "true" : "false");
+    if (e.hasStatusEffect)
+    {
+        ss << ",\n";
+        ss << "      \"statusEffect\": ";
+        if (e.effectType == "Shield")
+        {
+            appendShieldStatusEffectJson(ss, std::string("ItemGeneric:") + e.rawSourceName, e.statusValue);
+        }
+        else
+        {
+            appendStatusEffectJson(ss, std::string("ItemGeneric:") + e.rawSourceName,
+                                  e.statusAffectedStat, e.statusModifierType, e.statusValue);
+        }
+    }
+    if (e.hasDamageFormula)
+    {
+        ss << ",\n";
+        ss << "      \"damageFormula\": { \"baseDamage\": " << e.baseDamage
+           << ", \"adRatio\": 0, \"apRatio\": 0, \"damageType\": " << jsonString(e.damageType) << " }";
+    }
+    ss << "\n";
+    ss << "    }";
+}
+
+static bool canEmitRuntimeItemEffect(const ItemEffectMetadata& e,
+                                     std::string_view category,
+                                     const std::string& lowerSource)
+{
+    if (!isCombatRuntimeItemCategory(category) || looksLikeGateText(lowerSource))
+    {
+        return false;
+    }
+    if (e.trigger == "OnCombatStart" && (e.effectType == "GrantStats" || e.effectType == "Shield"))
+    {
+        return true;
+    }
+    if ((e.trigger == "OnHit" || e.trigger == "OnAttack") && e.effectType == "DealDamage")
+    {
+        return true;
+    }
+    return false;
+}
+
+static void appendRuntimeItemEffectJson(std::ostringstream& ss,
+                                       const std::string& itemName,
+                                       const ItemEffectMetadata& e)
+{
+    ss << "    {\n";
+    ss << "      \"name\": " << jsonString(std::string("Item:") + itemName + ":" + e.rawSourceName) << ",\n";
+    ss << "      \"trigger\": " << jsonString(e.trigger) << ",\n";
+    if (e.effectType == "DealDamage")
+    {
+        ss << "      \"damageFormula\": { \"baseDamage\": " << e.baseDamage
+           << ", \"adRatio\": 0, \"apRatio\": 0, \"damageType\": " << jsonString(e.damageType) << " },\n";
+        ss << "      \"areaShape\": \"SingleTarget\",\n";
+        ss << "      \"radius\": 0,\n";
+        ss << "      \"delayMs\": 0,\n";
+        ss << "      \"canCrit\": false\n";
+    }
+    else
+    {
+        ss << "      \"areaShape\": \"Self\",\n";
+        ss << "      \"radius\": 0,\n";
+        ss << "      \"delayMs\": 0,\n";
+        ss << "      \"appliesStatusEffect\": true,\n";
+        ss << "      \"appliedStatusEffect\": ";
+        if (e.effectType == "Shield")
+        {
+            appendShieldStatusEffectJson(ss, std::string("Item:") + itemName + ":" + e.rawSourceName, e.statusValue);
+        }
+        else
+        {
+            appendStatusEffectJson(ss, std::string("Item:") + itemName + ":" + e.rawSourceName,
+                                  e.statusAffectedStat, e.statusModifierType, e.statusValue);
+        }
+        ss << "\n";
+    }
+    ss << "    }";
+}
+
+static std::vector<ItemEffectMetadata> extractItemEffectMetadata(const JsonValue& itemObj,
+                                                                 const std::string& name,
+                                                                 const std::string& itemCategory,
+                                                                 std::vector<std::string>& importWarnings)
+{
+    std::vector<ItemEffectMetadata> effects;
+    const std::string lowerSource = buildItemSourceText(itemObj, name);
+
+    if (!hasKeyObj(itemObj, "effects") || !itemObj.at("effects").isObject())
+    {
+        return effects;
+    }
+
+    for (const auto& [k, v] : itemObj.at("effects").asObject())
+    {
+        ItemEffectMetadata e{};
+        e.rawSourceName = k;
+        e.rawSourceValue = jsonValueSummary(v);
+        e.trigger = classifyItemTrigger(lowerSource, k);
+        e.effectType = classifyItemEffectType(lowerSource, k);
+        e.targetHint = e.trigger == "Passive" ? "Self" : "SourceContext";
+        if (v.isNumber())
+        {
+            e.value = v.asNumber();
+        }
+
+        std::string stat;
+        std::string mod;
+        double outVal = 0.0;
+        if (v.isNumber() && tryMapVariableToStatEffect(k, v.asNumber(), stat, mod, outVal))
+        {
+            e.effectType = "GrantStats";
+            e.value = outVal;
+            e.statusAffectedStat = stat;
+            e.statusModifierType = mod;
+            e.statusValue = outVal;
+            e.hasStatusEffect = true;
+            e.targetHint = "Self";
+        }
+        else if (v.isNumber() && e.effectType == "Shield" && !looksLikeDurationVariable(k))
+        {
+            e.statusValue = v.asNumber();
+            e.hasStatusEffect = true;
+            e.targetHint = "Self";
+        }
+        else if (v.isNumber() && e.effectType == "DealDamage" && !looksLikeDurationVariable(k))
+        {
+            e.baseDamage = static_cast<int>(std::lround(v.asNumber()));
+            e.damageType = containsAny(toSnakeLower(k), { "true" }) ? "True" :
+                           containsAny(toSnakeLower(k), { "magic", "ap" }) ? "Magic" : "Physical";
+            e.hasDamageFormula = e.baseDamage > 0;
+            e.targetHint = "CurrentEnemy";
+        }
+
+        e.supportedForRuntime = canEmitRuntimeItemEffect(e, itemCategory, lowerSource);
+        if (e.effectType == "UnknownUnsupported")
+        {
+            importWarnings.push_back("Unsupported item effect metadata: " + k);
+        }
+        else if (!e.supportedForRuntime && e.trigger != "Passive")
+        {
+            importWarnings.push_back("Metadata-only item effect: " + k + " -> " + e.effectType);
+        }
+        effects.push_back(std::move(e));
+    }
+
+    std::sort(effects.begin(), effects.end(), [](const ItemEffectMetadata& a, const ItemEffectMetadata& b) {
+        if (a.trigger != b.trigger) return a.trigger < b.trigger;
+        if (a.effectType != b.effectType) return a.effectType < b.effectType;
+        return a.rawSourceName < b.rawSourceName;
+    });
+    return effects;
+}
+
 struct TraitStatVariableMapping
 {
     std::string affectedStat;
@@ -1076,7 +1410,9 @@ static std::string writeTraitNormalizedFromCdragon(const JsonValue& traitObj,
     return out;
 }
 
-static std::string writeItemNormalizedFromCdragon(const JsonValue& itemObj, const std::string& name)
+static std::string writeItemNormalizedFromCdragon(const JsonValue& itemObj,
+                                                  const std::string& name,
+                                                  const std::string& displayName)
 {
     std::ostringstream ss;
     const std::string sourceId = getString(itemObj, "apiName", name);
@@ -1085,9 +1421,11 @@ static std::string writeItemNormalizedFromCdragon(const JsonValue& itemObj, cons
     const std::string itemCategory = classifyItemCategory(itemObj, name);
     std::vector<std::pair<std::string, std::string>> rawVariables;
     std::vector<std::string> importWarnings;
+    std::vector<ItemEffectMetadata> genericEffects = extractItemEffectMetadata(itemObj, name, itemCategory, importWarnings);
 
     ss << "{\n";
     ss << "  \"name\": " << jsonString(name) << ",\n";
+    ss << "  \"displayName\": " << jsonString(displayName) << ",\n";
     ss << "  \"isPlaceholder\": true,\n";
     ss << "  \"sourceId\": " << jsonString(sourceId) << ",\n";
     ss << "  \"description\": " << jsonString(description) << ",\n";
@@ -1139,7 +1477,40 @@ static std::string writeItemNormalizedFromCdragon(const JsonValue& itemObj, cons
     importWarnings.erase(std::unique(importWarnings.begin(), importWarnings.end()), importWarnings.end());
 
     ss << "\n  ],\n";
-    ss << "  \"triggeredEffects\": [],\n";
+    ss << "  \"triggeredEffects\": [";
+    bool firstTriggered = true;
+    for (const ItemEffectMetadata& e : genericEffects)
+    {
+        if (!e.supportedForRuntime)
+        {
+            continue;
+        }
+        if (e.effectType == "GrantStats" && e.trigger == "Passive")
+        {
+            continue;
+        }
+        if (!firstTriggered) ss << ",";
+        ss << "\n";
+        appendRuntimeItemEffectJson(ss, name, e);
+        firstTriggered = false;
+    }
+    if (!firstTriggered)
+    {
+        ss << "\n  ";
+    }
+    ss << "],\n";
+    ss << "  \"genericEffects\": [";
+    for (std::size_t i = 0; i < genericEffects.size(); ++i)
+    {
+        if (i) ss << ",";
+        ss << "\n";
+        appendGenericItemEffectJson(ss, genericEffects[i]);
+    }
+    if (!genericEffects.empty())
+    {
+        ss << "\n  ";
+    }
+    ss << "],\n";
     ss << "  \"rawVariables\": ";
     appendRawVariablesJson(ss, rawVariables);
     ss << ",\n";
@@ -1147,7 +1518,17 @@ static std::string writeItemNormalizedFromCdragon(const JsonValue& itemObj, cons
     appendStringArrayJson(ss, importWarnings);
     ss << "\n";
     ss << "}\n";
-    return ss.str();
+    std::string out = ss.str();
+    if (!first || !firstTriggered)
+    {
+        const std::string placeholderTrue = "\"isPlaceholder\": true";
+        const std::size_t pos = out.find(placeholderTrue);
+        if (pos != std::string::npos)
+        {
+            out.replace(pos, placeholderTrue.size(), "\"isPlaceholder\": false");
+        }
+    }
+    return out;
 }
 
 static int pickDamageFromVariables(const JsonValue& spell, int& warnings)
@@ -1426,6 +1807,92 @@ static int writeNormalizedTraits(const JsonValue& traits,
     return count;
 }
 
+static int writeNormalizedItems(const JsonValue& items,
+                                const std::filesystem::path& itemsDir,
+                                std::ostream& out)
+{
+    std::filesystem::create_directories(itemsDir);
+    for (const auto& entry : std::filesystem::directory_iterator(itemsDir))
+    {
+        if (entry.is_regular_file() && entry.path().extension() == ".json")
+        {
+            std::filesystem::remove(entry.path());
+        }
+    }
+
+    int count = 0;
+    if (!items.isArray())
+    {
+        return count;
+    }
+
+    std::map<std::string, int> displayNameCounts;
+    for (const JsonValue& item : items.asArray())
+    {
+        if (!item.isObject())
+        {
+            continue;
+        }
+        const std::string displayName = getString(item, "name", getString(item, "displayName", ""));
+        if (!displayName.empty())
+        {
+            displayNameCounts[toSnakeLower(displayName)] += 1;
+        }
+    }
+
+    std::map<std::string, int> usedRuntimeNames;
+    std::map<std::string, int> usedFileStems;
+    auto runtimeItemName = [&](const JsonValue& item, const std::string& displayName) {
+        const std::string displayKey = toSnakeLower(displayName);
+        const std::string sourceId = getString(item, "apiName", displayName);
+        std::string runtimeName = displayNameCounts[displayKey] <= 1 ? displayName : sourceId;
+        if (runtimeName.empty())
+        {
+            runtimeName = displayName;
+        }
+        const int seen = usedRuntimeNames[runtimeName]++;
+        if (seen > 0)
+        {
+            runtimeName += "_" + std::to_string(seen + 1);
+        }
+        return runtimeName;
+    };
+
+    for (const JsonValue& item : items.asArray())
+    {
+        if (!item.isObject())
+        {
+            continue;
+        }
+        const std::string displayName = getString(item, "name", getString(item, "displayName", ""));
+        if (displayName.empty())
+        {
+            continue;
+        }
+        const std::string runtimeName = runtimeItemName(item, displayName);
+        std::string outputName = runtimeName;
+        const std::string baseFileStem = safeFileName(toSnakeLower(outputName));
+        std::string fileStem = baseFileStem;
+        const int fileSeen = usedFileStems[baseFileStem]++;
+        if (fileSeen > 0)
+        {
+            const std::string suffix = "_" + std::to_string(fileSeen + 1);
+            const std::size_t keep = baseFileStem.size() > suffix.size()
+                ? baseFileStem.size() - suffix.size()
+                : 0;
+            fileStem = baseFileStem.substr(0, keep) + suffix;
+            outputName = runtimeName + suffix;
+        }
+        writeStringToFile(
+            itemsDir / (fileStem + ".json"),
+            writeItemNormalizedFromCdragon(item, outputName, displayName));
+        count += 1;
+    }
+
+    out << "Items Imported: " << count << "\n";
+    return count;
+}
+
 TFTDataImporter::ImportResult TFTDataImporter::importTraitsFromCachedTft(const std::string& outputDataRoot, std::ostream& out)
 {
     ImportResult result{};
@@ -1455,6 +1922,35 @@ TFTDataImporter::ImportResult TFTDataImporter::importTraitsFromCachedTft(const s
 
     result.traits = writeNormalizedTraits(*traits, std::filesystem::path(outputDataRoot) / "traits", out);
     out << "PASS: Trait parsing\n\n";
+    return result;
+}
+
+TFTDataImporter::ImportResult TFTDataImporter::importItemsFromCachedTft(const std::string& outputDataRoot, std::ostream& out)
+{
+    ImportResult result{};
+    const std::filesystem::path cachePath =
+        std::filesystem::path(outputDataRoot) / "_import_cache" / "cdragon_tft_en_us.json";
+
+    if (!std::filesystem::exists(cachePath))
+    {
+        out << "ERROR: cached CommunityDragon TFT dataset not found: " << cachePath.string() << "\n";
+        return result;
+    }
+
+    const JsonValue root = parseJson(readFileToString(cachePath));
+    result.detectedSet = detectCurrentSet(root);
+    if (!hasKeyObj(root, "items") || !root.at("items").isArray())
+    {
+        out << "ERROR: cached CommunityDragon TFT dataset has no root item array.\n";
+        return result;
+    }
+
+    out << "\n=== TFT CACHED ITEM IMPORT REPORT ===\n\n";
+    out << "Current Set Detected: Set " << result.detectedSet << "\n";
+    out << "Cache: " << cachePath.string() << "\n";
+
+    result.items = writeNormalizedItems(root.at("items"), std::filesystem::path(outputDataRoot) / "items", out);
+    out << "PASS: Item parsing\n\n";
     return result;
 }
 
@@ -1537,17 +2033,7 @@ TFTDataImporter::ImportResult TFTDataImporter::importLiveTft(const std::string& 
 
     if (items && items->isArray())
     {
-        for (const JsonValue& it : items->asArray())
-        {
-            if (!it.isObject()) continue;
-            const std::string name = getString(it, "name", getString(it, "displayName", ""));
-            if (name.empty()) continue;
-            writeStringToFile(
-    std::filesystem::path(outputDataRoot) / "items" /
-    (safeFileName(toSnakeLower(name)) + ".json"),
-                              writeItemNormalizedFromCdragon(it, name));
-            result.items += 1;
-        }
+        result.items = writeNormalizedItems(*items, std::filesystem::path(outputDataRoot) / "items", out);
     }
 
     if (champions && champions->isArray())

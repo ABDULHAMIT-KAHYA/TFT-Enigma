@@ -1,0 +1,40 @@
+{
+  "name": "TFT11_Augment_EpochPlus",
+  "displayName": "Epoch+",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_EpochPlus",
+  "description": "Now, and at the start of every stage, gain @XP@ XP and @Rerolls@ free rerolls.",
+  "tooltip": "Now, and at the start of every stage, gain @XP@ XP and @Rerolls@ free rerolls.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Epoch_II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Rerolls",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Rerolls", "value": "2" }, { "name": "XP", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: Rerolls", "Unmapped item variable: XP", "Unsupported item effect metadata: Rerolls", "Unsupported item effect metadata: XP"]
+}

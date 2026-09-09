@@ -1,9 +1,126 @@
 {
   "name": "Syndicate Emblem",
+  "displayName": "Syndicate Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Item_MobEmblemItem",
+  "description": "The holder gains the Syndicate trait.<br><br><scaleLevel enabled=TFT14_Mob_IsActive_T1 alternate=TFTGuildInactive>Kingpin bonus: <ShowIfNot.TFT14_Mob_IsActive_T3><TFTBonus>+@AttackSpeed_T1*100@%</TFTBonus> Attack Speed and gain <TFTBonus>@Shield_T1*100@%</TFTBonus> max Health Shield at combat start.</ShowIfNot.TFT14_Mob_IsActive_T3><ShowIf.TFT14_Mob_IsActive_T3><TFTBonus>+@AttackSpeed_T2*100@%</TFTBonus> Attack Speed and gain <TFTBonus>@Shield_T2*100@%</TFTBonus> max Health Shield at combat start.</ShowIf.TFT14_Mob_IsActive_T3></scaleLevel>",
+  "tooltip": "The holder gains the Syndicate trait.<br><br><scaleLevel enabled=TFT14_Mob_IsActive_T1 alternate=TFTGuildInactive>Kingpin bonus: <ShowIfNot.TFT14_Mob_IsActive_T3><TFTBonus>+@AttackSpeed_T1*100@%</TFTBonus> Attack Speed and gain <TFTBonus>@Shield_T1*100@%</TFTBonus> max Health Shield at combat start.</ShowIfNot.TFT14_Mob_IsActive_T3><ShowIf.TFT14_Mob_IsActive_T3><TFTBonus>+@AttackSpeed_T2*100@%</TFTBonus> Attack Speed and gain <TFTBonus>@Shield_T2*100@%</TFTBonus> max Health Shield at combat start.</ShowIf.TFT14_Mob_IsActive_T3></scaleLevel>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set14/TFT14_Emblem_Syndicate.TFT_Set14.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Syndicate Emblem:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Syndicate Emblem:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Syndicate Emblem:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [
+    {
+      "name": "Item:Syndicate Emblem:AttackSpeed_T1",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Syndicate Emblem:AttackSpeed_T1", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "name": "Item:Syndicate Emblem:AttackSpeed_T2",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Syndicate Emblem:AttackSpeed_T2", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "name": "Item:Syndicate Emblem:MagicResist",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Syndicate Emblem:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "name": "Item:Syndicate Emblem:Shield_T1",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Syndicate Emblem:Shield_T1", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "name": "Item:Syndicate Emblem:Shield_T2",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Syndicate Emblem:Shield_T2", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed_T1",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed_T1", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed_T2",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed_T2", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "20",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Shield_T1",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:Shield_T1", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Shield_T2",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:Shield_T2", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed_T1", "value": "0.3" }, { "name": "AttackSpeed_T2", "value": "0.5" }, { "name": "MagicResist", "value": "20" }, { "name": "Shield_T1", "value": "0.3" }, { "name": "Shield_T2", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: Shield_T1", "Unmapped item variable: Shield_T2"]
 }

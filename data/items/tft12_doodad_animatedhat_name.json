@@ -1,7 +1,17 @@
 {
   "name": "TFT12_Doodad_AnimatedHat_Name",
+  "displayName": "TFT12_Doodad_AnimatedHat_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_AnimatedHat",
+  "description": "TFT12_Doodad_AnimatedHat_Tooltip",
+  "tooltip": "TFT12_Doodad_AnimatedHat_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

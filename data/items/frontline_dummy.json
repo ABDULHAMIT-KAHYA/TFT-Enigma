@@ -1,7 +1,17 @@
 {
   "name": "Frontline Dummy",
+  "displayName": "Frontline Dummy",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Dummy_Evelynn",
+  "description": "Gain a training dummy with a Brawler Emblem, a Bastion Emblem, and a Vanguard emblem.",
+  "tooltip": "Gain a training dummy with a Brawler Emblem, a Bastion Emblem, and a Vanguard emblem.",
+  "iconPath": "ASSETS/Characters/TFT_TrainingDummy/HUD/Icons2D/TFT_TrainingDummy_DoNothing.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

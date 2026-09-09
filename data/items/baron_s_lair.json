@@ -1,7 +1,53 @@
 {
   "name": "Baron's Lair",
+  "displayName": "Baron's Lair",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TheBaronsLair",
+  "description": "Gain a random Tank item. After @StartSeconds@ seconds of combat, your team gains @Stats@% bonus Attack Damage and Ability Power every second for the rest of combat.<br><br><tftitemrules>TFT Paris Open, 2025</tftitemrules>",
+  "tooltip": "Gain a random Tank item. After @StartSeconds@ seconds of combat, your team gains @Stats@% bonus Attack Damage and Ability Power every second for the rest of combat.<br><br><tftitemrules>TFT Paris Open, 2025</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TheBaronsLair_III.TFT_16_4.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IntervalSeconds",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "StartSeconds",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 8, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Stats",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 5, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "IntervalSeconds", "value": "1" }, { "name": "StartSeconds", "value": "8" }, { "name": "Stats", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: IntervalSeconds", "Unmapped item variable: StartSeconds", "Unmapped item variable: Stats"]
 }

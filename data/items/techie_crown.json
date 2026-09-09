@@ -1,7 +1,17 @@
 {
   "name": "Techie Crown",
+  "displayName": "Techie Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_TechieCrown",
+  "description": "Gain a Techie Emblem, a Jeweled Gauntlet, and a Shyvana.",
+  "tooltip": "Gain a Techie Emblem, a Jeweled Gauntlet, and a Shyvana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TechieCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

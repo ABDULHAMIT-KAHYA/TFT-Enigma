@@ -1,7 +1,42 @@
 {
   "name": "Ahri's Boon",
+  "displayName": "Ahri's Boon",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_AhriGodAugment",
+  "description": "Your team gains @ADAPPerLevel@% Attack Damage and Ability Power per level. Gain @XP@ XP each round for the rest of the game.",
+  "tooltip": "Your team gains @ADAPPerLevel@% Attack Damage and Ability Power per level. Gain @XP@ XP each round for the rest of the game.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GodAugmentAhri_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ADAPPerLevel",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "XP",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "ADAPPerLevel", "value": "2" }, { "name": "XP", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: ADAPPerLevel", "Unmapped item variable: XP"]
 }

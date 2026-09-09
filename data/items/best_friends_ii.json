@@ -1,8 +1,43 @@
 {
   "name": "Best Friends II",
+  "displayName": "Best Friends II",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_BestFriends2",
+  "description": "Allies isolated in pairs gain @AS*100@% Attack Speed and @Armor@ Armor at the start of combat.",
+  "tooltip": "Allies isolated in pairs gain @AS*100@% Attack Speed and @Armor@ Armor at the start of combat.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Best-Friends-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Best Friends II:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 22, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Best Friends II:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 22,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "22",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 22, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "0.15" }, { "name": "Armor", "value": "22" }],
+  "importWarnings": ["Metadata-only item effect: AS -> GrantStats", "Metadata-only item effect: Armor -> GrantStats"]
 }

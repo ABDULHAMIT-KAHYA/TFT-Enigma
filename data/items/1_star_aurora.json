@@ -1,7 +1,17 @@
 {
   "name": "1-star Aurora",
+  "displayName": "1-star Aurora",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_ChampionItem_Aurora",
+  "description": "Gain a 1-star Aurora",
+  "tooltip": "Gain a 1-star Aurora",
+  "iconPath": "ASSETS/Characters/TFT17_Aurora/HUD/TFT17_Aurora_Square.TFT_Set17.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

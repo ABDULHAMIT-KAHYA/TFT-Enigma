@@ -1,7 +1,54 @@
 {
   "name": "Prodigy Emblem",
+  "displayName": "Prodigy Emblem",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Item_ProdigyEmblemItem",
+  "description": "The holder gains the Prodigy trait.<br>On cast, shield the lowest percent Health ally for @ManaConversion*100@% of mana spent.",
+  "tooltip": "The holder gains the Prodigy trait.<br>On cast, shield the lowest percent Health ally for @ManaConversion*100@% of mana spent.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set15/TFT15_Emblem_Prodigy.TFT_Set15.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "OnCast",
+      "value": 2.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaConversion",
+      "rawSourceValue": "2.5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ManaConversion", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 2.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCast",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ManaRegen", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCast",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{3777fe40}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:{3777fe40}", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "ManaConversion", "value": "2.5" }, { "name": "ManaRegen", "value": "1" }, { "name": "{3777fe40}", "value": "1" }],
+  "importWarnings": ["Metadata-only item effect: ManaConversion -> Shield", "Metadata-only item effect: ManaRegen -> Shield", "Metadata-only item effect: {3777fe40} -> Shield", "Unmapped item variable: ManaConversion", "Unmapped item variable: ManaRegen", "Unmapped item variable: {3777fe40}"]
 }

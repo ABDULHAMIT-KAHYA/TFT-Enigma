@@ -1,7 +1,29 @@
 {
   "name": "Shadow Spatula",
+  "displayName": "Shadow Spatula",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Item_SpatulaShadow",
+  "description": "It must do <i>something <TFTShadowItemBonus>evil</TFTShadowItemBonus></i>...",
+  "tooltip": "It must do <i>something <TFTShadowItemBonus>evil</TFTShadowItemBonus></i>...",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Spatula.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{fe9818ef}",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{fe9818ef}", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: {fe9818ef}", "Unsupported item effect metadata: {fe9818ef}"]
 }

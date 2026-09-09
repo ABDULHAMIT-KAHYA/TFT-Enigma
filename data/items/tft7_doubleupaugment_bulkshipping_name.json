@@ -1,7 +1,17 @@
 {
   "name": "TFT7_DoubleUpAugment_BulkShipping_Name",
+  "displayName": "TFT7_DoubleUpAugment_BulkShipping_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_BulkShipping",
+  "description": "TFT7_DoubleUpAugment_BulkShipping_Description",
+  "tooltip": "TFT7_DoubleUpAugment_BulkShipping_Description",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_BulkShipping.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

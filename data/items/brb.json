@@ -1,7 +1,40 @@
 {
   "name": "BRB",
+  "displayName": "BRB",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_BRB",
+  "description": "You cannot perform actions for the next @RoundsToSkip@ rounds. Afterwards, gain @Anvils@ completed item anvils.",
+  "tooltip": "You cannot perform actions for the next @RoundsToSkip@ rounds. Afterwards, gain @Anvils@ completed item anvils.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BRB-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundsToSkip",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "anvils",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RoundsToSkip", "value": "3" }, { "name": "anvils", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: RoundsToSkip", "Unmapped item variable: anvils", "Unsupported item effect metadata: RoundsToSkip", "Unsupported item effect metadata: anvils"]
 }

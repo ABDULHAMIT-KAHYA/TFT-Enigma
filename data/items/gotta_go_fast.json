@@ -1,7 +1,51 @@
 {
   "name": "Gotta Go Fast!",
+  "displayName": "Gotta Go Fast!",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_GottaGoFast",
+  "description": "Your team creates @PercentMana@% more Mana and moves @BonusMovementSpeed@% faster.",
+  "tooltip": "Your team creates @PercentMana@% more Mana and moves @BonusMovementSpeed@% faster.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Gotta-Go-Fast-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentMana",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusMovementSpeed",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c90c2591}",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusMovementSpeed", "value": "35" }, { "name": "PercentMana", "value": "10" }, { "name": "{c90c2591}", "value": "300" }],
+  "importWarnings": ["Unmapped item variable: BonusMovementSpeed", "Unmapped item variable: PercentMana", "Unmapped item variable: {c90c2591}", "Unsupported item effect metadata: BonusMovementSpeed", "Unsupported item effect metadata: {c90c2591}"]
 }

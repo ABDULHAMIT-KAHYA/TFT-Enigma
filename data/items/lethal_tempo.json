@@ -1,7 +1,41 @@
 {
   "name": "Lethal Tempo",
+  "displayName": "Lethal Tempo",
+  "isPlaceholder": false,
+  "sourceId": "TFT11_Augment_LethalTempo",
+  "description": "When your team attacks, they gain @AttackSpeed*100@% Attack Speed, up to @AttackSpeed*100*MaxStacks@%.<br><br>Your team gains @AttackSpeed*100@% stacking Attack Speed every time they attack, up to 10 stacks.",
+  "tooltip": "When your team attacks, they gain @AttackSpeed*100@% Attack Speed, up to @AttackSpeed*100*MaxStacks@%.<br><br>Your team gains @AttackSpeed*100@% stacking Attack Speed every time they attack, up to 10 stacks.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Lethal Tempo:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.04, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.04,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.04",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.04, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxStacks",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.04" }, { "name": "MaxStacks", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: MaxStacks", "Unsupported item effect metadata: MaxStacks"]
 }

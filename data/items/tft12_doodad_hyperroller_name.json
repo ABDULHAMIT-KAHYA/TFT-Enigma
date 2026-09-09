@@ -1,7 +1,51 @@
 {
   "name": "TFT12_Doodad_HyperRoller_Name",
+  "displayName": "TFT12_Doodad_HyperRoller_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_HyperRoller",
+  "description": "TFT12_Doodad_HyperRoller_Tooltip",
+  "tooltip": "TFT12_Doodad_HyperRoller_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Cooldown",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TotalTime",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{df311dd6}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Cooldown", "value": "2" }, { "name": "TotalTime", "value": "3" }, { "name": "{df311dd6}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Cooldown", "Unmapped item variable: TotalTime", "Unmapped item variable: {df311dd6}", "Unsupported item effect metadata: TotalTime", "Unsupported item effect metadata: {df311dd6}"]
 }

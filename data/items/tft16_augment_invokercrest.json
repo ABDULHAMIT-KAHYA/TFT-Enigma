@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_InvokerCrest",
+  "displayName": "Invoker Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_InvokerCrest",
+  "description": "Get an Invoker Emblem,",
+  "tooltip": "Get an Invoker Emblem,",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

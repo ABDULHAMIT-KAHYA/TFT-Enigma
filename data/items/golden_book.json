@@ -1,7 +1,17 @@
 {
   "name": "Golden Book",
+  "displayName": "Golden Book",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_5MercBook",
+  "description": "Gain a Thieve's Gloves.",
+  "tooltip": "Gain a Thieve's Gloves.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

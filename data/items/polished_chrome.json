@@ -1,7 +1,53 @@
 {
   "name": "Polished Chrome",
+  "displayName": "Polished Chrome",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Nitro_PolishedChrome",
+  "description": "When you 3-star Nitro champions, they gain @BonusAD*100@% Attack Damage, @BonusAP@ Ability Power, and grant @Gold@ Gold. Gain a Kindred and a Nidalee.",
+  "tooltip": "When you 3-star Nitro champions, they gain @BonusAD*100@% Attack Damage, @BonusAP@ Ability Power, and grant @Gold@ Gold. Gain a Kindred and a Nidalee.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PolishedChrome_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusAD",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusAP",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 20, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 10, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAD", "value": "0.15" }, { "name": "BonusAP", "value": "20" }, { "name": "Gold", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: BonusAD", "Unmapped item variable: BonusAP", "Unmapped item variable: Gold"]
 }

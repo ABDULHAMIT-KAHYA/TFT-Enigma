@@ -1,7 +1,17 @@
 {
   "name": "Zyra",
+  "displayName": "Zyra",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Zyra",
+  "description": "Zyra",
+  "tooltip": "Zyra",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Zyra_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

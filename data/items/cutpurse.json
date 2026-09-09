@@ -1,7 +1,29 @@
 {
   "name": "Cutpurse",
+  "displayName": "Cutpurse",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Cutter_Splash",
+  "description": "Executioners have a @GoldDropChance*100@% chance to drop a gold when their attacks critically strike. Gain&nbsp;a&nbsp;Graves&nbsp;and&nbsp;Rengar.<br><br>Gold Gained: @TFTUnitProperty.item:TFT14_Augment_CutpurseGold@",
+  "tooltip": "Executioners have a @GoldDropChance*100@% chance to drop a gold when their attacks critically strike. Gain&nbsp;a&nbsp;Graves&nbsp;and&nbsp;Rengar.<br><br>Gold Gained: @TFTUnitProperty.item:TFT14_Augment_CutpurseGold@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cutpurse_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.04,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldDropChance",
+      "rawSourceValue": "0.04",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldDropChance", "value": "0.04" }],
+  "importWarnings": ["Unmapped item variable: GoldDropChance", "Unsupported item effect metadata: GoldDropChance"]
 }

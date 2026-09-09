@@ -1,7 +1,17 @@
 {
   "name": "12 radiant items",
+  "displayName": "12 radiant items",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_SpecificRadiantItems",
+  "description": "Covalent Spark, Jak'sho the Protean, Bulwark's Oath, Spear of Hirana, Rabadon's Ascended Deathcap, Glamorous Gauntlet, Guinsoo's Reckoning, Runaan's Tempest, Luminous Deathblade, Zenith Edge, Fist of Fairness, Eternal Whisper",
+  "tooltip": "Covalent Spark, Jak'sho the Protean, Bulwark's Oath, Spear of Hirana, Rabadon's Ascended Deathcap, Glamorous Gauntlet, Guinsoo's Reckoning, Runaan's Tempest, Luminous Deathblade, Zenith Edge, Fist of Fairness, Eternal Whisper",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_RandomItem_Radiant.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

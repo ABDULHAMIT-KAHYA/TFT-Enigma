@@ -1,7 +1,51 @@
 {
   "name": "Malicious Monetization",
+  "displayName": "Malicious Monetization",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_MirroredMonetization",
+  "description": "Gain @GoldContained@ gold. For the next @Rounds@ rounds, enemy champions drop @PercCost@ gold when killed.<br><br>@TFTUnitProperty.item:TFT_Augment_MirroredMonetization_TotalGoldTooltip@",
+  "tooltip": "Gain @GoldContained@ gold. For the next @Rounds@ rounds, enemy champions drop @PercCost@ gold when killed.<br><br>@TFTUnitProperty.item:TFT_Augment_MirroredMonetization_TotalGoldTooltip@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/MirroredMonetization_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldContained",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercCost",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "rounds",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldContained", "value": "4" }, { "name": "PercCost", "value": "2" }, { "name": "rounds", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: GoldContained", "Unmapped item variable: PercCost", "Unmapped item variable: rounds", "Unsupported item effect metadata: GoldContained", "Unsupported item effect metadata: PercCost", "Unsupported item effect metadata: rounds"]
 }

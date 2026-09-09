@@ -1,0 +1,40 @@
+{
+  "name": "TFT17_MarketOffering_BloodPactPlusPlus",
+  "displayName": "Blood Pact ++",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_BloodPactPlusPlus",
+  "description": "Gain @Gold@ gold. For each other player that picks this, lose @HealthLossPerPlayer@ Tactician Health.",
+  "tooltip": "Gain @Gold@ gold. For each other player that picks this, lose @HealthLossPerPlayer@ Tactician Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_BloodPact.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 13,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "13",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthLossPerPlayer",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "13" }, { "name": "HealthLossPerPlayer", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: HealthLossPerPlayer"]
+}

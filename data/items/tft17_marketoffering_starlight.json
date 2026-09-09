@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_Starlight",
+  "displayName": "Starcrossed Upgrade",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Starlight",
+  "description": "Your next shop contains all @Tier@-cost units. The first one you buy is free and upgraded to 2-star.",
+  "tooltip": "Your next shop contains all @Tier@-cost units. The first one you buy is free and upgraded to 2-star.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_Starlight.TFT_17_2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Cost",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Cost", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Cost", "Unsupported item effect metadata: Cost"]
+}

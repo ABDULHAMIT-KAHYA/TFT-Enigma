@@ -1,7 +1,30 @@
 {
   "name": "tft_item_name_Set5Forgotten_RadiantSpat",
+  "displayName": "tft_item_name_Set5Forgotten_RadiantSpat",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_ForgottenSpatulaItem_Radiant",
+  "description": "tft_item_description_Set5Forgotten_RadiantSpat",
+  "tooltip": "tft_item_description_Set5Forgotten_RadiantSpat",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set5/Forgotten_Radiant.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:tft_item_name_Set5Forgotten_RadiantSpat:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "10" }],
+  "importWarnings": []
 }

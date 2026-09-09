@@ -1,7 +1,17 @@
 {
   "name": "Galio",
+  "displayName": "Galio",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Galio",
+  "description": "Galio",
+  "tooltip": "Galio",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Galio_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

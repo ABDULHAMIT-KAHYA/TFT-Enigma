@@ -1,7 +1,17 @@
 {
   "name": "Another Anomaly",
+  "displayName": "Another Anomaly",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_AnotherAnomaly",
+  "description": "After the Anomaly round on 4-6, gain an item that duplicates the chosen Anomaly Effect onto the equipped champion.",
+  "tooltip": "After the Anomaly round on 4-6, gain an item that duplicates the chosen Anomaly Effect onto the equipped champion.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Another-Anomaly-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

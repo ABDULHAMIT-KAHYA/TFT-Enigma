@@ -1,7 +1,40 @@
 {
   "name": "Training Reward III",
+  "displayName": "Training Reward III",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_TopDeckPlusPlus",
+  "description": "Gain @Gold@ gold and a Champion Duplicator. ",
+  "tooltip": "Gain @Gold@ gold and a Champion Duplicator. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Training-Reward-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 24,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "24",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{4a99a5b2}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "24" }, { "name": "{4a99a5b2}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: {4a99a5b2}", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: {4a99a5b2}"]
 }

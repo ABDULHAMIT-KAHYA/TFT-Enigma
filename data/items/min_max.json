@@ -1,7 +1,29 @@
 {
   "name": "Min-Max",
+  "displayName": "Min-Max",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_MinMaxer",
+  "description": "Gain a Golden Item Remover and @NumItems@ random components.<br><br><rules>Golden Item Remover is a Magnetic Remover with infinite uses.</rules>",
+  "tooltip": "Gain a Golden Item Remover and @NumItems@ random components.<br><br><rules>Golden Item Remover is a Magnetic Remover with infinite uses.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/MinMax_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumItems", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: NumItems", "Unsupported item effect metadata: NumItems"]
 }

@@ -1,0 +1,52 @@
+{
+  "name": "TFTTutorial_Item_BlueBuff",
+  "displayName": "Blue Buff",
+  "isPlaceholder": true,
+  "sourceId": "TFTTutorial_Item_BlueBuff",
+  "description": "Gain @ManaRefund@ Mana after casting. <br><br>When the holder gets a takedown, they deal @DamageAmp*100@% more damage for @TakedownTimer@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+  "tooltip": "Gain @ManaRefund@ Mana after casting. <br><br>When the holder gets a takedown, they deal @DamageAmp*100@% more damage for @TakedownTimer@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCast",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{71bc3700}",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 200, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCast",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCast",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaRestore",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Mana", "value": "30" }, { "name": "ManaRestore", "value": "50" }, { "name": "{71bc3700}", "value": "200" }],
+  "importWarnings": ["Metadata-only item effect: Mana -> ModifyMana", "Metadata-only item effect: ManaRestore -> ModifyMana", "Metadata-only item effect: {71bc3700} -> DealDamage", "Unmapped item variable: Mana", "Unmapped item variable: ManaRestore", "Unmapped item variable: {71bc3700}"]
+}

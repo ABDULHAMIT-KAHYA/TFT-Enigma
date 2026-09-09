@@ -1,0 +1,17 @@
+{
+  "name": "TFT13_Augment_SorcererCrest",
+  "displayName": "Sorcerer Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_SorcererCrest",
+  "description": "Gain a Sorcerer Emblem and a Vladimir.",
+  "tooltip": "Gain a Sorcerer Emblem and a Vladimir.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Sorcerer_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

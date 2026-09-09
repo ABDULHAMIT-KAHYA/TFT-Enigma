@@ -1,7 +1,17 @@
 {
   "name": "Dynamo Crest",
+  "displayName": "Dynamo Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_InvokerCrest",
+  "description": "Gain a Dynamo emblem.",
+  "tooltip": "Gain a Dynamo emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/InvokerCrest_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

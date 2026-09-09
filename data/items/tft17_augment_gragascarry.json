@@ -1,0 +1,17 @@
+{
+  "name": "TFT17_Augment_GragasCarry",
+  "displayName": "Self Destruct",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_GragasCarry",
+  "description": "Gain a Gragas. Your strongest Gragas becomes a Magic Fighter with a massive explosion, but also damages himself.",
+  "tooltip": "Gain a Gragas. Your strongest Gragas becomes a Magic Fighter with a massive explosion, but also damages himself.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SelfDestruct_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

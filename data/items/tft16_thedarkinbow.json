@@ -1,0 +1,76 @@
+{
+  "name": "TFT16_TheDarkinBow",
+  "displayName": "The Darkin Bow",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_TheDarkinBow",
+  "description": "The holder gains the Darkin trait.<br><br>Every @NumAttacks@ attacks, fire an arrow that passes through the current target, dealing @ArrowBaseADDamage*100@% Basic Attack Damage as physical damage, reduced by @ArrowPercentFalloff*100@% per enemy hit.",
+  "tooltip": "The holder gains the Darkin trait.<br><br>Every @NumAttacks@ attacks, fire an arrow that passes through the current target, dealing @ArrowBaseADDamage*100@% Basic Attack Damage as physical damage, reduced by @ArrowPercentFalloff*100@% per enemy hit.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT16_TheDarkinBow.TFT_Set16.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT16_TheDarkinBow:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT16_TheDarkinBow:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArrowBaseADDamage",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArrowPercentFalloff",
+      "rawSourceValue": "0.33",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumAttacks",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.1" }, { "name": "AS", "value": "25" }, { "name": "ArrowBaseADDamage", "value": "5" }, { "name": "ArrowPercentFalloff", "value": "0.33" }, { "name": "NumAttacks", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: ArrowBaseADDamage", "Unmapped item variable: ArrowPercentFalloff", "Unmapped item variable: NumAttacks"]
+}

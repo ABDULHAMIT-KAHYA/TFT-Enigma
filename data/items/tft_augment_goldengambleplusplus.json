@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Augment_GoldenGamblePlusPlus",
+  "displayName": "Golden Gamble++",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_GoldenGamblePlusPlus",
+  "description": "Gain @gold@ gold and flip a coin. If heads, gain a Radiant Lucky Item Chest. If tails, gain @CompletedAnvils@ Completed item anvils.<br><br>@TFTUnitProperty.item:TFT_Augment_GoldenGamble_Tooltip@",
+  "tooltip": "Gain @gold@ gold and flip a coin. If heads, gain a Radiant Lucky Item Chest. If tails, gain @CompletedAnvils@ Completed item anvils.<br><br>@TFTUnitProperty.item:TFT_Augment_GoldenGamble_Tooltip@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldenGamble_III.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CompletedAnvils",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CompletedAnvils", "value": "2" }, { "name": "Gold", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: CompletedAnvils", "Unmapped item variable: Gold", "Unsupported item effect metadata: CompletedAnvils", "Unsupported item effect metadata: Gold"]
+}

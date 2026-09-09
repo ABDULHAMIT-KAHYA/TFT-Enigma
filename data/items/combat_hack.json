@@ -1,7 +1,29 @@
 {
   "name": "Combat Hack",
+  "displayName": "Combat Hack",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_CategoryHack_Combat",
+  "description": "Your next augment selection will display all combat augments in the first slot, and that slot has @NumExtraRolls_TOOLTIPONLY@ extra rerolls.",
+  "tooltip": "Your next augment selection will display all combat augments in the first slot, and that slot has @NumExtraRolls_TOOLTIPONLY@ extra rerolls.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_CombatAugmentHack.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumExtraRolls_TOOLTIPONLY",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumExtraRolls_TOOLTIPONLY", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumExtraRolls_TOOLTIPONLY", "Unsupported item effect metadata: NumExtraRolls_TOOLTIPONLY"]
 }

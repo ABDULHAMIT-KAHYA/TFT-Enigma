@@ -1,0 +1,51 @@
+{
+  "name": "TFT_Augment_EyeForAnEyePlus",
+  "displayName": "Eye For An Eye+",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_EyeForAnEyePlus",
+  "description": "Gain a random component. For every @AllyDeaths@ ally champions that die, gain another component (max @NumComponents@).<br><br>Deaths Remaining: @TFTUnitProperty.item:TFT_Augment_EyeForAnEyeDeaths@",
+  "tooltip": "Gain a random component. For every @AllyDeaths@ ally champions that die, gain another component (max @NumComponents@).<br><br>Deaths Remaining: @TFTUnitProperty.item:TFT_Augment_EyeForAnEyeDeaths@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/EyeforanEye_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AllyDeaths",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a6cb80ca}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AllyDeaths", "value": "18" }, { "name": "NumComponents", "value": "2" }, { "name": "{a6cb80ca}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: AllyDeaths", "Unmapped item variable: NumComponents", "Unmapped item variable: {a6cb80ca}", "Unsupported item effect metadata: AllyDeaths", "Unsupported item effect metadata: NumComponents", "Unsupported item effect metadata: {a6cb80ca}"]
+}

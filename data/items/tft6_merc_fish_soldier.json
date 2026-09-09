@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Fish_Soldier",
+  "displayName": "Small Prize",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Fish_Soldier",
+  "description": "2 2-cost champions are placed in your chest. ",
+  "tooltip": "2 2-cost champions are placed in your chest. ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "LootObject",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

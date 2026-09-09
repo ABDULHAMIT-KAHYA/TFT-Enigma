@@ -1,7 +1,29 @@
 {
   "name": "Dreadway Cannon",
+  "displayName": "Dreadway Cannon",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Bilgewater_DreadwayCannon",
+  "description": "<danger>NYI</danger><br>Every 4 seconds, launch cannonballs at the bearer's target, dealing damage equal to 50% of the damage they took over the last 4 seconds.",
+  "tooltip": "<danger>NYI</danger><br>Every 4 seconds, launch cannonballs at the bearer's target, dealing damage equal to 50% of the damage they took over the last 4 seconds.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Item_Bilgewater_DreadwayCannon.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusAD",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAD", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: BonusAD"]
 }

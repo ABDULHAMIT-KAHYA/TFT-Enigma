@@ -1,7 +1,42 @@
 {
   "name": "Refracted Dragon's Claw",
+  "displayName": "Refracted Dragon's Claw",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_DragonsClawShadow",
+  "description": "Reduces incoming magic damage by @MagicReduction@%.<br><br><TFTShadowItemBonus>Negates bonus damage from incoming critical hits.</TFTShadowItemBonus>",
+  "tooltip": "Reduces incoming magic damage by @MagicReduction@%.<br><br><TFTShadowItemBonus>Negates bonus damage from incoming critical hits.</TFTShadowItemBonus>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Dragons_Claw.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Refracted Dragon's Claw:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MagicReduction",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 50, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "MagicReduction", "value": "50" }, { "name": "MagicResist", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: MagicReduction"]
 }

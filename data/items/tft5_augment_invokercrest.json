@@ -1,0 +1,17 @@
+{
+  "name": "TFT5_Augment_InvokerCrest",
+  "displayName": "Invoker Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_InvokerCrest",
+  "description": "Gain a Invoker Emblem and a Syndra.",
+  "tooltip": "Gain a Invoker Emblem and a Syndra.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Invoker_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

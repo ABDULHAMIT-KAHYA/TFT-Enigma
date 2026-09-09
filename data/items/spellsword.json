@@ -1,7 +1,41 @@
 {
   "name": "Spellsword",
+  "displayName": "Spellsword",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_Spellsword",
+  "description": "Every time an ally attacks @NumAttacks@ times, they gain @AbilityPower@ Ability Power.",
+  "tooltip": "Every time an ally attacks @NumAttacks@ times, they gain @AbilityPower@ Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Spellsword-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Spellsword:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AbilityPower",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumAttacks",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AbilityPower", "value": "5" }, { "name": "NumAttacks", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumAttacks", "Unsupported item effect metadata: NumAttacks"]
 }

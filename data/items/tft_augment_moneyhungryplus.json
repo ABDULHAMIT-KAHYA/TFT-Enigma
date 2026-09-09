@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Augment_MoneyHungryPlus",
+  "displayName": "Money Hungry+",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_MoneyHungryPlus",
+  "description": "Gain @InstantGold@ gold now, then @StageGold@ gold at the start of every stage. Picking up gold makes your Tactician larger.",
+  "tooltip": "Gain @InstantGold@ gold now, then @StageGold@ gold at the start of every stage. Picking up gold makes your Tactician larger.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/MoneyHungry2_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 16,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InstantGold",
+      "rawSourceValue": "16",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StageGold",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "InstantGold", "value": "16" }, { "name": "StageGold", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: InstantGold", "Unmapped item variable: StageGold", "Unsupported item effect metadata: InstantGold", "Unsupported item effect metadata: StageGold"]
+}

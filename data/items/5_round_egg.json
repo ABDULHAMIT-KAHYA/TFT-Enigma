@@ -1,7 +1,17 @@
 {
   "name": "5-Round Egg",
+  "displayName": "5-Round Egg",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Armory_Egg_Medium_HR",
+  "description": "Hatches in 5 rounds (losses count double), granting about 25 Gold worth of loot.",
+  "tooltip": "Hatches in 5 rounds (losses count double), granting about 25 Gold worth of loot.",
+  "iconPath": "ASSETS/Characters/TFT14_HackedEgg/HUD/Icons2D/TFT14_HackedEgg_Square.TFT_Set14.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

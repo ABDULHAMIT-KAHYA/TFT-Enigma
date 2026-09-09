@@ -1,0 +1,29 @@
+{
+  "name": "TFT_Augment_DoubleDown",
+  "displayName": "Double Down",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_DoubleDown",
+  "description": "After each player combat, gain gold equal to your win or loss streak (max @GoldMax@ gold). ",
+  "tooltip": "After each player combat, gain gold equal to your win or loss streak (max @GoldMax@ gold). ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DoubleDown_II.TFT_Set12.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldMax",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldMax", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: GoldMax", "Unsupported item effect metadata: GoldMax"]
+}

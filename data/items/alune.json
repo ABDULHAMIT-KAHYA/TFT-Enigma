@@ -1,7 +1,17 @@
 {
   "name": "Alune",
+  "displayName": "Alune",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Alune",
+  "description": "Alune",
+  "tooltip": "Alune",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Alune_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

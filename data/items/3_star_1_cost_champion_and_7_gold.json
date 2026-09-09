@@ -1,7 +1,17 @@
 {
   "name": "3-star 1-cost champion and 7 gold",
+  "displayName": "3-star 1-cost champion and 7 gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Tier1_3Star_And_Gold",
+  "description": "3-star 1-cost champion and 7 gold",
+  "tooltip": "3-star 1-cost champion and 7 gold",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_2c.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

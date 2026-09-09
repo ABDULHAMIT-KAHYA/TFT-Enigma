@@ -1,7 +1,17 @@
 {
   "name": "Pengu's Protection",
+  "displayName": "Pengu's Protection",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_DebugShield",
+  "description": "Grant a @TFTUnitProperty.:TFT_UnitProperty_Debug@ health shield.",
+  "tooltip": "Grant a @TFTUnitProperty.:TFT_UnitProperty_Debug@ health shield.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_DebugShield.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

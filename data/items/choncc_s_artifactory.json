@@ -1,7 +1,52 @@
 {
   "name": "Choncc's Artifactory",
+  "displayName": "Choncc's Artifactory",
+  "isPlaceholder": false,
+  "sourceId": "TFTEventCT_Augment_Artifactory",
+  "description": "At the start of each turn, your benched completed items transform into a random Artifact item. Gain @NumItems@ Artifact Anvil and a reforger.",
+  "tooltip": "At the start of each turn, your benched completed items transform into a random Artifact item. Gain @NumItems@ Artifact Anvil and a reforger.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Artifactory_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Choncc's Artifactory:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRemovers",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "50" }, { "name": "NumItems", "value": "1" }, { "name": "NumRemovers", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumItems", "Unmapped item variable: NumRemovers", "Unsupported item effect metadata: NumItems", "Unsupported item effect metadata: NumRemovers"]
 }

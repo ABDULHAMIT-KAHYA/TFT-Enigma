@@ -1,7 +1,40 @@
 {
   "name": "Patient Study III",
+  "displayName": "Patient Study III",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_LearningFromExperience3",
+  "description": "After player combat, gain @winxp@ XP if you won or @lossxp@ XP if you lost.",
+  "tooltip": "After player combat, gain @winxp@ XP if you won or @lossxp@ XP if you lost.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "lossxp",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "winxp",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "lossxp", "value": "6" }, { "name": "winxp", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: lossxp", "Unmapped item variable: winxp", "Unsupported item effect metadata: lossxp", "Unsupported item effect metadata: winxp"]
 }

@@ -1,7 +1,29 @@
 {
   "name": "Petricite Armor I",
+  "displayName": "Petricite Armor I",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PetriciteArmorI",
+  "description": "Your team takes @ReducedAbilityDamage*100@% reduced damage from champion abilities.",
+  "tooltip": "Your team takes @ReducedAbilityDamage*100@% reduced damage from champion abilities.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PetriciteArmor_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.09,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ReducedAbilityDamage",
+      "rawSourceValue": "0.09",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ReducedAbilityDamage", "value": "0.09" }],
+  "importWarnings": ["Unmapped item variable: ReducedAbilityDamage"]
 }

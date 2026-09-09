@@ -1,7 +1,52 @@
 {
   "name": "Share the Spotlight",
+  "displayName": "Share the Spotlight",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_ShareTheSpotlight",
+  "description": "Gain a spotlight in the back corner of your board. All units in the spotlight gain @DamagePercent*100@% Damage Amp, @OmnivampPercent*100@% Omnivamp, and @ManaPerSecond@ Mana per second.",
+  "tooltip": "Gain a spotlight in the back corner of your board. All units in the spotlight gain @DamagePercent*100@% Damage Amp, @OmnivampPercent*100@% Omnivamp, and @ManaPerSecond@ Mana per second.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ShareSpotlight3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Share the Spotlight:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.14,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "DamagePercent",
+      "rawSourceValue": "0.14",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "OmnivampPercent",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:OmnivampPercent", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaPerSecond",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamagePercent", "value": "0.14" }, { "name": "ManaPerSecond", "value": "2" }, { "name": "OmnivampPercent", "value": "0.12" }],
+  "importWarnings": ["Unmapped item variable: DamagePercent", "Unmapped item variable: ManaPerSecond"]
 }

@@ -1,7 +1,53 @@
 {
   "name": "Unceasing",
+  "displayName": "Unceasing",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Augment_Juggernaut_Indomitable",
+  "description": "Whenever an ally Juggernaut dies, all other Juggernauts gain a @MaxHealthHeal*100@% max Health shield for @ShieldDuration@ seconds and gain @AdditionalDurabilityRatio*100@% more Durability. Gain an Aatrox and Dr. Mundo.",
+  "tooltip": "Whenever an ally Juggernaut dies, all other Juggernauts gain a @MaxHealthHeal*100@% max Health shield for @ShieldDuration@ seconds and gain @AdditionalDurabilityRatio*100@% more Durability. Gain an Aatrox and Dr. Mundo.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Indomitable_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Unceasing:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.02, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.02,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AdditionalDurabilityRatio",
+      "rawSourceValue": "0.02",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AdditionalDurabilityRatio", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.02, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealthHeal",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MaxHealthHeal", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AdditionalDurabilityRatio", "value": "0.02" }, { "name": "MaxHealthHeal", "value": "0.1" }, { "name": "ShieldDuration", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: MaxHealthHeal", "Unmapped item variable: ShieldDuration"]
 }

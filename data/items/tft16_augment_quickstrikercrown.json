@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_QuickstrikerCrown",
+  "displayName": "Quickstriker Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_QuickstrikerCrown",
+  "description": "Get a Quickstriker Emblem, an Ashe, and a Kraken's Fury.",
+  "tooltip": "Get a Quickstriker Emblem, an Ashe, and a Kraken's Fury.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

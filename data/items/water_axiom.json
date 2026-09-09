@@ -1,7 +1,51 @@
 {
   "name": "Water Axiom",
+  "displayName": "Water Axiom",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_WaterAxiom",
+  "description": "Gain a Water Hex. Champions within gain @ManaRegen@ Mana Regen. Their damage @ShredPercent*100@% Shreds enemies for @Duration@ seconds.",
+  "tooltip": "Gain a Water Hex. Champions within gain @ManaRegen@ Mana Regen. Their damage @ShredPercent*100@% Shreds enemies for @Duration@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WaterAxiom_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShredPercent",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "5" }, { "name": "ManaRegen", "value": "3" }, { "name": "ShredPercent", "value": "0.3" }],
+  "importWarnings": ["Unmapped item variable: Duration", "Unmapped item variable: ManaRegen", "Unmapped item variable: ShredPercent"]
 }

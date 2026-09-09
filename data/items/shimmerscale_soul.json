@@ -1,7 +1,17 @@
 {
   "name": "Shimmerscale Soul",
+  "displayName": "Shimmerscale Soul",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_ShimmerscaleTrait2",
+  "description": "Your team counts as having 1 additional Shimmerscale. Gain a Titan's Resolve and a Volibear.",
+  "tooltip": "Your team counts as having 1 additional Shimmerscale. Gain a Titan's Resolve and a Volibear.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Shimmerscale-Crown-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

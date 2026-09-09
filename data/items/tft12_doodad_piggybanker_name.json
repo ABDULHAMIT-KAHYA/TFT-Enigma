@@ -1,7 +1,40 @@
 {
   "name": "TFT12_Doodad_PiggyBanker_Name",
+  "displayName": "TFT12_Doodad_PiggyBanker_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_PiggyBanker",
+  "description": "TFT12_Doodad_PiggyBanker_Tooltip",
+  "tooltip": "TFT12_Doodad_PiggyBanker_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseGold",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{96c61a11}",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseGold", "value": "12" }, { "name": "{96c61a11}", "value": "12" }],
+  "importWarnings": ["Unmapped item variable: BaseGold", "Unmapped item variable: {96c61a11}", "Unsupported item effect metadata: BaseGold", "Unsupported item effect metadata: {96c61a11}"]
 }

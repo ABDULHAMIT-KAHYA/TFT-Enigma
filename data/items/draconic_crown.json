@@ -1,7 +1,17 @@
 {
   "name": "Draconic Crown",
+  "displayName": "Draconic Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_DraconicCrown",
+  "description": "Gain a Draconic Emblem, an Archangel Staff, and a Zyra.",
+  "tooltip": "Gain a Draconic Emblem, an Archangel Staff, and a Zyra.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Draconic_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

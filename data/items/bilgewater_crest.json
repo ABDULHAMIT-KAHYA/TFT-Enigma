@@ -1,7 +1,17 @@
 {
   "name": "Bilgewater Crest",
+  "displayName": "Bilgewater Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_BilgewaterCrest",
+  "description": "Get a Bilgewater Emblem.",
+  "tooltip": "Get a Bilgewater Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,40 @@
 {
   "name": "Lightning Rod",
+  "displayName": "Lightning Rod",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_TempestLightningRod",
+  "description": "Every @Period@ second(s), the Tempest lightning alternates between striking a low health enemy and a strong Tempest champion with @Modifier*100@% effectiveness.",
+  "tooltip": "Every @Period@ second(s), the Tempest lightning alternates between striking a low health enemy and a strong Tempest champion with @Modifier*100@% effectiveness.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/Lightning-Rod.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Modifier",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Period",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Modifier", "value": "0.5" }, { "name": "Period", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Modifier", "Unmapped item variable: Period"]
 }

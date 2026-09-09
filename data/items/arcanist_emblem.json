@@ -1,7 +1,41 @@
 {
   "name": "Arcanist Emblem",
+  "displayName": "Arcanist Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Item_SorcererEmblemItem",
+  "description": "The holder gains the Arcanist trait. On kill, refund @ManaRefundRatio*100@% of the holder's max Mana.",
+  "tooltip": "The holder gains the Arcanist trait. On kill, refund @ManaRefundRatio*100@% of the holder's max Mana.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set16/TFT16_Emblem_Arcanist.TFT_Set16.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Arcanist Emblem:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRefundRatio",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "25" }, { "name": "ManaRefundRatio", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: ManaRefundRatio"]
 }

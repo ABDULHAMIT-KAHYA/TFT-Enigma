@@ -1,7 +1,73 @@
 {
   "name": "Royal Husk",
+  "displayName": "Royal Husk",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Consumable_Void_RoyalHusk",
+  "description": "Gain <scaleLevel>@TFTUnitProperty.item:TFT16_Void_RoyalHuskHealth@ + @TFTUnitProperty.item:TFT16_Void_RoyalHuskPercentHealth*100@%</scaleLevel> Health. After dropping below @FirstHealthThreshold*100@% max Health, spawn a Voidling with <scaleLevel>@TFTUnitProperty.item:TFT16_Void_RoyalHuskSummonMaxHealth@</scaleLevel>% of this unit's max Health.<br><br><rules>Recommended users: Cho'Gath and Rift Herald</rules>",
+  "tooltip": "Gain <scaleLevel>@TFTUnitProperty.item:TFT16_Void_RoyalHuskHealth@ + @TFTUnitProperty.item:TFT16_Void_RoyalHuskPercentHealth*100@%</scaleLevel> Health. After dropping below @FirstHealthThreshold*100@% max Health, spawn a Voidling with <scaleLevel>@TFTUnitProperty.item:TFT16_Void_RoyalHuskSummonMaxHealth@</scaleLevel>% of this unit's max Health.<br><br><rules>Recommended users: Cho'Gath and Rift Herald</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT16_VoidMutation_RoyalHusk.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusPercentHP",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FirstHealthThreshold",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHP",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{07c4cb4a}",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{64bdae41}",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusPercentHP", "value": "0.1" }, { "name": "FirstHealthThreshold", "value": "0.5" }, { "name": "MaxHP", "value": "200" }, { "name": "{07c4cb4a}", "value": "0.3" }, { "name": "{64bdae41}", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: BonusPercentHP", "Unmapped item variable: FirstHealthThreshold", "Unmapped item variable: MaxHP", "Unmapped item variable: {07c4cb4a}", "Unmapped item variable: {64bdae41}"]
 }

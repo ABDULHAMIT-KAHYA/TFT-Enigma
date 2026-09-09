@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_X_Ship",
+  "displayName": "Small Prize",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_X_Ship",
+  "description": "10 gold has been added to your chest.",
+  "tooltip": "10 gold has been added to your chest.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLootSilver.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,40 @@
 {
   "name": "Shipping Route",
+  "displayName": "Shipping Route",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ShippingRoute",
+  "description": "Every loot orb you open creates a copy in Treasure Portal, where they gain value each turn. Sell the Treasure Portal to open all the orbs inside.  Gain several bonus orbs now.<br> <tftitemrules>Portal Value: @TFTUnitProperty.item:TFT_Augment_ShippingRoute_Tracker@</tftitemrules>",
+  "tooltip": "Every loot orb you open creates a copy in Treasure Portal, where they gain value each turn. Sell the Treasure Portal to open all the orbs inside.  Gain several bonus orbs now.<br> <tftitemrules>Portal Value: @TFTUnitProperty.item:TFT_Augment_ShippingRoute_Tracker@</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{40e1dd78}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{8d2bb2bf}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{40e1dd78}", "value": "2" }, { "name": "{8d2bb2bf}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: {40e1dd78}", "Unmapped item variable: {8d2bb2bf}", "Unsupported item effect metadata: {40e1dd78}", "Unsupported item effect metadata: {8d2bb2bf}"]
 }

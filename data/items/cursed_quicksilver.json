@@ -1,7 +1,17 @@
 {
   "name": "Cursed Quicksilver",
+  "displayName": "Cursed Quicksilver",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Item_MilioThreeStar_CursedQuicksilver",
+  "description": "The holder of this item is stunned. This effect ends when they die. ",
+  "tooltip": "The holder of this item is stunned. This effect ends when they die. ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Quicksilver.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

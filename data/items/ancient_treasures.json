@@ -1,7 +1,17 @@
 {
   "name": "Ancient Treasures",
+  "displayName": "Ancient Treasures",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_XerathZap_AncientTreasures",
+  "description": "Gain a Lucky Item Chest.",
+  "tooltip": "Gain a Lucky Item Chest.",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_XerathWand_Self.TFT_Set12.tex",
+  "itemCategory": "LootObject",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

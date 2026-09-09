@@ -1,7 +1,63 @@
 {
   "name": "Caustic Quicksilver",
+  "displayName": "Caustic Quicksilver",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_QuicksilverShadow",
+  "description": "The holder gains immunity to crowd control <TFTShadowItemBonus>for the entirety of combat</TFTShadowItemBonus>.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "tooltip": "The holder gains immunity to crowd control <TFTShadowItemBonus>for the entirety of combat</TFTShadowItemBonus>.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Quicksilver.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Caustic Quicksilver:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SpellShieldDuration",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DodgeChance",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{446bf6cd}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DodgeChance", "value": "15" }, { "name": "MagicResist", "value": "20" }, { "name": "SpellShieldDuration", "value": "500" }, { "name": "{446bf6cd}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: DodgeChance", "Unmapped item variable: SpellShieldDuration", "Unmapped non-numeric item variable: {446bf6cd}", "Unsupported item effect metadata: DodgeChance", "Unsupported item effect metadata: {446bf6cd}"]
 }

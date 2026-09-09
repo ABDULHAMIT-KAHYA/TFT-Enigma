@@ -1,0 +1,40 @@
+{
+  "name": "TFT11_Augment_PickOfTheLitter",
+  "displayName": "Pick of the Litter",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_PickOfTheLitter",
+  "description": "Open a special Shop with 3 free @ChampionTier@-cost champions. You can only pick 1, but you get @NumCopies@ copies of it.",
+  "tooltip": "Open a special Shop with 3 free @ChampionTier@-cost champions. You can only pick 1, but you get @NumCopies@ copies of it.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PickOfTheLitter_I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ChampionTier",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumCopies",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ChampionTier", "value": "3" }, { "name": "NumCopies", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: ChampionTier", "Unmapped item variable: NumCopies", "Unsupported item effect metadata: ChampionTier", "Unsupported item effect metadata: NumCopies"]
+}

@@ -1,7 +1,41 @@
 {
   "name": "Growing Roots",
+  "displayName": "Growing Roots",
+  "isPlaceholder": false,
+  "sourceId": "TFT4_Augment_Elderwood",
+  "description": "Elderwood units gain @Health@ Maximum Health (caps at @MaxHealth@) for each round they have stayed in their initial hex. Gain a Maokai and a Lulu.",
+  "tooltip": "Elderwood units gain @Health@ Maximum Health (caps at @MaxHealth@) for each round they have stayed in their initial hex. Gain a Maokai and a Lulu.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Growing-Roots_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Growing Roots:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealth",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "100" }, { "name": "MaxHealth", "value": "500" }],
+  "importWarnings": ["Unmapped item variable: MaxHealth"]
 }

@@ -1,0 +1,29 @@
+{
+  "name": "TFT_Item_GrantComponent7",
+  "displayName": "@ItemsToGive@ components",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_GrantComponent7",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ItemsToGive",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ItemsToGive", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: ItemsToGive", "Unsupported item effect metadata: ItemsToGive"]
+}

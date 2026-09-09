@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_SlayerCrest",
+  "displayName": "Slayer Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_SlayerCrest",
+  "description": "Get a Slayer Emblem.",
+  "tooltip": "Get a Slayer Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

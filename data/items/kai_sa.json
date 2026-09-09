@@ -1,7 +1,17 @@
 {
   "name": "Kai'Sa",
+  "displayName": "Kai'Sa",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Kaisa",
+  "description": "Kai'Sa",
+  "tooltip": "Kai'Sa",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Kaisa_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,53 @@
+{
+  "name": "TFT17_GravesTrait_Offense_EmergencyShielding2",
+  "displayName": "Emergency Shielding+",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_EmergencyShielding2",
+  "description": "At @TriggerHealth*100@% Health, gain a @PercentMaxHealthShield*100@% max Health shield that decays over @Duration@ seconds.",
+  "tooltip": "At @TriggerHealth*100@% Health, gain a @PercentMaxHealthShield*100@% max Health shield that decays over @Duration@ seconds.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_EmergencyShielding1.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentMaxHealthShield",
+      "rawSourceValue": "0.75",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:PercentMaxHealthShield", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.75, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TriggerHealth",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:TriggerHealth", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "4" }, { "name": "PercentMaxHealthShield", "value": "0.75" }, { "name": "TriggerHealth", "value": "0.4" }],
+  "importWarnings": ["Unmapped item variable: Duration", "Unmapped item variable: PercentMaxHealthShield", "Unmapped item variable: TriggerHealth"]
+}

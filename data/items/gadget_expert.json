@@ -1,7 +1,29 @@
 {
   "name": "Gadget Expert",
+  "displayName": "Gadget Expert",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_GadgetExpert",
+  "description": "Direct damage items deal @DamageIncPercent*100@% more damage as true damage. Gain a Statikk Shiv.",
+  "tooltip": "Direct damage items deal @DamageIncPercent*100@% more damage as true damage. Gain a Statikk Shiv.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Gadget-Expert-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "DamageIncPercent",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageIncPercent", "value": "0.25" }],
+  "importWarnings": ["Unmapped item variable: DamageIncPercent"]
 }

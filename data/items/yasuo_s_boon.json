@@ -1,7 +1,40 @@
 {
   "name": "Yasuo's Boon",
+  "displayName": "Yasuo's Boon",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_YasuoGodAugment_PaintedPower",
+  "description": "Increase the power of Yasuo's hexes by @Effectiveness*100@%. If you only have 2 hexes, gain @GoldIfTwo@ gold.",
+  "tooltip": "Increase the power of Yasuo's hexes by @Effectiveness*100@%. If you only have 2 hexes, gain @GoldIfTwo@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GodAugmentYasuo_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Effectiveness",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldIfTwo",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Effectiveness", "value": "0.5" }, { "name": "GoldIfTwo", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: Effectiveness", "Unmapped item variable: GoldIfTwo", "Unsupported item effect metadata: Effectiveness", "Unsupported item effect metadata: GoldIfTwo"]
 }

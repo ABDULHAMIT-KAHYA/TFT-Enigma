@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Item_CarouselOfChaos_TimeUndilator",
+  "displayName": "Time Undilator",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_CarouselOfChaos_TimeUndilator",
+  "description": "Combat start: Unravel time within an X-pattern, destroying ALL units (including this one!)",
+  "tooltip": "Combat start: Unravel time within an X-pattern, destroying ALL units (including this one!)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT16_CarouselOfChaos_TimeUndiltor.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

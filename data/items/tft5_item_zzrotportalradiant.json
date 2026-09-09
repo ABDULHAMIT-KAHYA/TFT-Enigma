@@ -1,0 +1,63 @@
+{
+  "name": "TFT5_Item_ZzRotPortalRadiant",
+  "displayName": "Zz'Rot Portal",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_ZzRotPortalRadiant",
+  "description": "Summon a large Voidspawn. Its strength increases with each Stage.<br><br>​​<tftitemrules>[Support item]<br>[Unique - only 1 per champion]</tftitemrules>",
+  "tooltip": "Summon a large Voidspawn. Its strength increases with each Stage.<br><br>​​<tftitemrules>[Support item]<br>[Unique - only 1 per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT5_Item_ZzRotPortalRadiant.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT5_Item_ZzRotPortalRadiant:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SummonedStatReduction",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{50a0dbb5}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{ef0bb7c2}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "150" }, { "name": "SummonedStatReduction", "value": "25" }, { "name": "{50a0dbb5}", "value": "1" }, { "name": "{ef0bb7c2}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: SummonedStatReduction", "Unmapped item variable: {50a0dbb5}", "Unmapped item variable: {ef0bb7c2}"]
+}

@@ -1,7 +1,29 @@
 {
   "name": "3-star Graves",
+  "displayName": "3-star Graves",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_ChampionItem_Graves_3Star",
+  "description": "Gain a 3-star Graves",
+  "tooltip": "Gain a 3-star Graves",
+  "iconPath": "ASSETS/Characters/TFT16_Graves/HUD/TFT16_Graves_Square.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Amount",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Amount", "value": "9" }],
+  "importWarnings": ["Unmapped item variable: Amount", "Unsupported item effect metadata: Amount"]
 }

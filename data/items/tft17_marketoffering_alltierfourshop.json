@@ -1,0 +1,51 @@
+{
+  "name": "TFT17_MarketOffering_AllTierFourShop",
+  "displayName": "@Tier@-Cost Shop",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_AllTierFourShop",
+  "description": "Your next shop contains all @Tier@-cost units. The first one you buy is free.",
+  "tooltip": "Your next shop contains all @Tier@-cost units. The first one you buy is free.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_AllFourCostShop.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Numrolls",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Tier",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{bef45719}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Numrolls", "value": "1" }, { "name": "Tier", "value": "4" }, { "name": "{bef45719}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Numrolls", "Unmapped item variable: Tier", "Unmapped item variable: {bef45719}", "Unsupported item effect metadata: Numrolls", "Unsupported item effect metadata: Tier", "Unsupported item effect metadata: {bef45719}"]
+}

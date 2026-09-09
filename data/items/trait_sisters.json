@@ -1,7 +1,62 @@
 {
   "name": "Trait: Sisters",
+  "displayName": "Trait: Sisters",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_TeamupAugment_Sisters",
+  "description": "Gain the Sister Trait. When Vi scores a takedown, Jinx gains @ASBuff*100@% bonus Attack Speed for @JinxDuration@ seconds. When Jinx scores a takedown, Vi gains @ADBuff*100@% bonus Attack Damage for @ViDuration@ seconds.<br><br>Gain a Vi and Jinx.",
+  "tooltip": "Gain the Sister Trait. When Vi scores a takedown, Jinx gains @ASBuff*100@% bonus Attack Speed for @JinxDuration@ seconds. When Jinx scores a takedown, Vi gains @ADBuff*100@% bonus Attack Damage for @ViDuration@ seconds.<br><br>Gain a Vi and Jinx.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TeamUp_Sisters_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ADBuff",
+      "rawSourceValue": "0.8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ASBuff",
+      "rawSourceValue": "0.8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "JinxDuration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ViDuration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADBuff", "value": "0.8" }, { "name": "ASBuff", "value": "0.8" }, { "name": "JinxDuration", "value": "10" }, { "name": "ViDuration", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: ADBuff", "Unmapped item variable: ASBuff", "Unmapped item variable: JinxDuration", "Unmapped item variable: ViDuration"]
 }

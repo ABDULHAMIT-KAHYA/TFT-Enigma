@@ -1,8 +1,76 @@
 {
   "name": "Spectral Giantslayer",
+  "displayName": "Spectral Giantslayer",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_GiantSlayerShadow",
+  "description": "The holder's Abilities and attacks do @SmallBonusPct@% bonus damage. If the target has more than @HealthThreshold@ maximum Health, the bonus increases to @LargeBonusPct@%.",
+  "tooltip": "The holder's Abilities and attacks do @SmallBonusPct@% bonus damage. If the target has more than @HealthThreshold@ maximum Health, the bonus increases to @LargeBonusPct@%.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Giant_Slayer.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Spectral Giantslayer:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Spectral Giantslayer:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "1100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 80,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LargeBonusPct",
+      "rawSourceValue": "80",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SmallBonusPct",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "10" }, { "name": "AS", "value": "10" }, { "name": "HealthThreshold", "value": "1100" }, { "name": "LargeBonusPct", "value": "80" }, { "name": "SmallBonusPct", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: HealthThreshold", "Unmapped item variable: LargeBonusPct", "Unmapped item variable: SmallBonusPct"]
 }

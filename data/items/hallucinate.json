@@ -1,8 +1,43 @@
 {
   "name": "Hallucinate",
+  "displayName": "Hallucinate",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_MirageHallucinate",
+  "description": "Mirage champions take @DamageReduction@% less damage for the first @DamageReductionDuration@ seconds of combat. Gain a Yone.",
+  "tooltip": "Mirage champions take @DamageReduction@% less damage for the first @DamageReductionDuration@ seconds of combat. Gain a Yone.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Hallucinate-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Hallucinate:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.06, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Hallucinate:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.9, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageReduction",
+      "rawSourceValue": "90",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.9, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.06,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageReductionDuration",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageReductionDuration", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.06, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageReduction", "value": "90" }, { "name": "DamageReductionDuration", "value": "6" }],
+  "importWarnings": []
 }

@@ -1,7 +1,40 @@
 {
   "name": "Command Mod: Analyze",
+  "displayName": "Command Mod: Analyze",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_SonaUnique_Consumable_Experience",
+  "description": "Command a unit to grant you @Experience@ XP every @Interval@ seconds it is alive during player combat.<br><br><rules>(Good on backliners)</rules>",
+  "tooltip": "Command a unit to grant you @Experience@ XP every @Interval@ seconds it is alive during player combat.<br><br><rules>(Good on backliners)</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17_CommandModItems/TFT17_Item_Icon_CommandMod_Experience.TFT_Set17.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Experience",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Interval",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Experience", "value": "1" }, { "name": "Interval", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Experience", "Unmapped item variable: Interval", "Unsupported item effect metadata: Experience", "Unsupported item effect metadata: Interval"]
 }

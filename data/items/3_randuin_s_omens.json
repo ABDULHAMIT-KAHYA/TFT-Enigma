@@ -1,7 +1,17 @@
 {
   "name": "3 Randuin's Omens",
+  "displayName": "3 Randuin's Omens",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_3xRanduins",
+  "description": "3 Randuin's Omens",
+  "tooltip": "3 Randuin's Omens",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT4_Item_OrnnRanduinsSanctum.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

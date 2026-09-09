@@ -1,7 +1,73 @@
 {
   "name": "Loot Explosion",
+  "displayName": "Loot Explosion",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Ambusher",
+  "description": "Ambusher kills have a chance to drop loot, scaling with Critical Strike Chance. The value of the loot given can also critically strike, granting even more loot. Gain a Camille and a Powder.",
+  "tooltip": "Ambusher kills have a chance to drop loot, scaling with Critical Strike Chance. The value of the loot given can also critically strike, granting even more loot. Gain a Camille and a Powder.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LootExplosion_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{51972fee}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a59e2760}",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.11,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c209103c}",
+      "rawSourceValue": "0.11",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{ca332ec1}",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1.75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d89481f4}",
+      "rawSourceValue": "1.75",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{51972fee}", "value": "2" }, { "name": "{a59e2760}", "value": "0.5" }, { "name": "{c209103c}", "value": "0.11" }, { "name": "{ca332ec1}", "value": "0.5" }, { "name": "{d89481f4}", "value": "1.75" }],
+  "importWarnings": ["Unmapped item variable: {51972fee}", "Unmapped item variable: {a59e2760}", "Unmapped item variable: {c209103c}", "Unmapped item variable: {ca332ec1}", "Unmapped item variable: {d89481f4}", "Unsupported item effect metadata: {51972fee}", "Unsupported item effect metadata: {a59e2760}", "Unsupported item effect metadata: {c209103c}", "Unsupported item effect metadata: {ca332ec1}", "Unsupported item effect metadata: {d89481f4}"]
 }

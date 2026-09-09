@@ -1,7 +1,54 @@
 {
   "name": "Divine Paladins",
+  "displayName": "Divine Paladins",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_ShieldTank_DivinePaladins",
+  "description": "Vanguard shields are @PercentStronger*100@% stronger and explode when broken, dealing @Damage@ magic damage split between enemies in a @Hex@-hex radius.",
+  "tooltip": "Vanguard shields are @PercentStronger*100@% stronger and explode when broken, dealing @Damage@ magic damage split between enemies in a @Hex@-hex radius.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Divine-Paladins.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Damage",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Damage", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 500, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Hex",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Hex", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{78f210fe}",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:{78f210fe}", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Damage", "value": "500" }, { "name": "Hex", "value": "2" }, { "name": "{78f210fe}", "value": "0.25" }],
+  "importWarnings": ["Unmapped item variable: Damage", "Unmapped item variable: Hex", "Unmapped item variable: {78f210fe}"]
 }

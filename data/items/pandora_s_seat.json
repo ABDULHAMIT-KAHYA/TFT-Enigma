@@ -1,7 +1,29 @@
 {
   "name": "Pandora's Seat",
+  "displayName": "Pandora's Seat",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_PandorasSeat",
+  "description": "At the start of every round, champions on the @BenchSlotCount@ rightmost bench slots transform into random champions of the same cost.",
+  "tooltip": "At the start of every round, champions on the @BenchSlotCount@ rightmost bench slots transform into random champions of the same cost.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_PandorasSeat.TFT_17_2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{b763af5c}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{b763af5c}", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: {b763af5c}", "Unsupported item effect metadata: {b763af5c}"]
 }

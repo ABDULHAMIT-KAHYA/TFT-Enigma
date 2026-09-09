@@ -1,7 +1,40 @@
 {
   "name": "5 4-cost champions",
+  "displayName": "5 4-cost champions",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_5x4cost",
+  "description": "5 4-cost champions",
+  "tooltip": "5 4-cost champions",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_4c.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{7e1ab625}",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumUnits", "value": "5" }, { "name": "{7e1ab625}", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: NumUnits", "Unmapped item variable: {7e1ab625}", "Unsupported item effect metadata: NumUnits", "Unsupported item effect metadata: {7e1ab625}"]
 }

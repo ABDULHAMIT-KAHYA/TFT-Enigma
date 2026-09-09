@@ -1,7 +1,42 @@
 {
   "name": "Slayer's Resolve",
+  "displayName": "Slayer's Resolve",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_Slayer",
+  "description": "When your Slayers take or deal damage, they gain @BonusResistances@ stacking Armor and Magic Resistance for the rest of combat (max: @StackCap@ stacks). Gain a Pyke and a Zed.",
+  "tooltip": "When your Slayers take or deal damage, they gain @BonusResistances@ stacking Armor and Magic Resistance for the rest of combat (max: @StackCap@ stacks). Gain a Pyke and a Zed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Slayers-Resolve_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusResistances",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "StackCap",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 25, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusResistances", "value": "2" }, { "name": "StackCap", "value": "25" }],
+  "importWarnings": ["Unmapped item variable: BonusResistances", "Unmapped item variable: StackCap"]
 }

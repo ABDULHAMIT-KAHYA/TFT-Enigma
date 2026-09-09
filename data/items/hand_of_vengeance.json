@@ -1,7 +1,85 @@
 {
   "name": "Hand of Vengeance",
+  "displayName": "Hand of Vengeance",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_HandOfJusticeShadow",
+  "description": "<TFTShadowItemBonus>At the beginning of combat, the holder gains both of the following:</TFTShadowItemBonus><li>+@BonusAD@ Attack Damage and +@BonusSP@ Ability Power.</li> <li>Attacks and Abilities heal for @TraitMultiplier@% of damage dealt.</li><br><TFTShadowItemPenalty>These bonuses expire after each takedown, and renew on the next.</TFTShadowItemPenalty>",
+  "tooltip": "<TFTShadowItemBonus>At the beginning of combat, the holder gains both of the following:</TFTShadowItemBonus><li>+@BonusAD@ Attack Damage and +@BonusSP@ Ability Power.</li> <li>Attacks and Abilities heal for @TraitMultiplier@% of damage dealt.</li><br><TFTShadowItemPenalty>These bonuses expire after each takedown, and renew on the next.</TFTShadowItemPenalty>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Hand_of_Justice.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
     { "name": "Item:Hand of Vengeance:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAD",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusSP",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TraitMultiplier",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 66.667,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a60806db}",
+      "rawSourceValue": "66.667",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAD", "value": "60" }, { "name": "BonusSP", "value": "60" }, { "name": "CritChance", "value": "15" }, { "name": "Mana", "value": "15" }, { "name": "TraitMultiplier", "value": "60" }, { "name": "{a60806db}", "value": "66.667" }],
+  "importWarnings": ["Unmapped item variable: BonusAD", "Unmapped item variable: BonusSP", "Unmapped item variable: Mana", "Unmapped item variable: TraitMultiplier", "Unmapped item variable: {a60806db}"]
 }

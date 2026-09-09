@@ -1,7 +1,88 @@
 {
   "name": "Warpath",
+  "displayName": "Warpath",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Warpath",
+  "description": "Gain a 2-star 2-cost champion. After dealing @PlayerDamage@ player damage, gain a chest of high cost champions and items.<br>(Current: @TFTUnitProperty.item:TFT_Augment_Warpath_DamageCount@)",
+  "tooltip": "Gain a 2-star 2-cost champion. After dealing @PlayerDamage@ player damage, gain a chest of high cost champions and items.<br>(Current: @TFTUnitProperty.item:TFT_Augment_Warpath_DamageCount@)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Warpath_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 80,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "PlayerDamage",
+      "rawSourceValue": "80",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 80, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{16253d09}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{3dc22ab3}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{68c537b7}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{6cf88c79}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{7c96bf44}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "PlayerDamage", "value": "80" }, { "name": "{16253d09}", "value": "null" }, { "name": "{3dc22ab3}", "value": "3" }, { "name": "{68c537b7}", "value": "null" }, { "name": "{6cf88c79}", "value": "1" }, { "name": "{7c96bf44}", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: PlayerDamage", "Unmapped item variable: {3dc22ab3}", "Unmapped item variable: {6cf88c79}", "Unmapped item variable: {7c96bf44}", "Unmapped non-numeric item variable: {16253d09}", "Unmapped non-numeric item variable: {68c537b7}"]
 }

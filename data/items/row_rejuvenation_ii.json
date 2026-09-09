@@ -1,8 +1,43 @@
 {
   "name": "Row Rejuvenation II",
+  "displayName": "Row Rejuvenation II",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_ReinforcedRejuvenation2",
+  "description": "Your team has @StatOmnivamp*100@% Omnivamp, increased by @BonusVampPer*100@% for every champion that starts combat in that same row.",
+  "tooltip": "Your team has @StatOmnivamp*100@% Omnivamp, increased by @BonusVampPer*100@% for every champion that starts combat in that same row.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Row Rejuvenation II:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Row Rejuvenation II:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.015, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.015,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusVampPer",
+      "rawSourceValue": "0.015",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusVampPer", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.015, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StatOmnivamp",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:StatOmnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusVampPer", "value": "0.015" }, { "name": "StatOmnivamp", "value": "0.1" }],
+  "importWarnings": []
 }

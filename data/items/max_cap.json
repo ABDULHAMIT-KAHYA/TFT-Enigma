@@ -1,7 +1,42 @@
 {
   "name": "Max Cap",
+  "displayName": "Max Cap",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_MaxCap",
+  "description": "Your max level is 7. Gain @NumItems@ Tactician's Shield which increases your team size by +1, and @AugmentGold@ gold.",
+  "tooltip": "Your max level is 7. Gain @NumItems@ Tactician's Shield which increases your team size by +1, and @AugmentGold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/MaxCap_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AugmentGold",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AugmentGold", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:NumItems", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AugmentGold", "value": "50" }, { "name": "NumItems", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: AugmentGold", "Unmapped item variable: NumItems"]
 }

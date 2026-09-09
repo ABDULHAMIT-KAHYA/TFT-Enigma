@@ -1,7 +1,40 @@
 {
   "name": "What Doesn't Kill You",
+  "displayName": "What Doesn't Kill You",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_WhatDoesntKillYou",
+  "description": "Gain @Gold@ gold after losing a player combat. Gain a random component after every @RoundsPerComponent@ losses.<br><br><tftitemrules>Losses until next component: @TFTUnitProperty.item:TFT9_Augment_WhatDoesntKillYou_Counter@</tftitemrules>",
+  "tooltip": "Gain @Gold@ gold after losing a player combat. Gain a random component after every @RoundsPerComponent@ losses.<br><br><tftitemrules>Losses until next component: @TFTUnitProperty.item:TFT9_Augment_WhatDoesntKillYou_Counter@</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/What-Doesn_t-Kill-You-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundsPerComponent",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }, { "name": "RoundsPerComponent", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: RoundsPerComponent", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: RoundsPerComponent"]
 }

@@ -1,7 +1,41 @@
 {
   "name": "The Mutation Survives",
+  "displayName": "The Mutation Survives",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Augment_Experiment",
+  "description": "Experiments gain @Health*100@% Health and grant a special hex. The Experiment in the hex is killed on combat start, granting their Experiment bonus to other laboratory hexes. Gain 3 Experiment champions.",
+  "tooltip": "Experiments gain @Health*100@% Health and grant a special hex. The Experiment in the hex is killed on combat start, granting their Experiment bonus to other laboratory hexes. Gain 3 Experiment champions.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TheMutationMustSurvive_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:The Mutation Survives:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{1b889d1c}",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "0.12" }, { "name": "{1b889d1c}", "value": "100" }],
+  "importWarnings": ["Metadata-only item effect: Health -> GrantStats", "Metadata-only item effect: {1b889d1c} -> Heal", "Unmapped item variable: {1b889d1c}"]
 }

@@ -1,7 +1,51 @@
 {
   "name": "TFT12_Doodad_LuckyDice_Name",
+  "displayName": "TFT12_Doodad_LuckyDice_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_LuckyDice",
+  "description": "TFT12_Doodad_LuckyDice_Tooltip",
+  "tooltip": "TFT12_Doodad_LuckyDice_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Cooldown",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldOnWin",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{17f1046f}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Cooldown", "value": "2" }, { "name": "GoldOnWin", "value": "4" }, { "name": "{17f1046f}", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Cooldown", "Unmapped item variable: GoldOnWin", "Unmapped item variable: {17f1046f}", "Unsupported item effect metadata: GoldOnWin", "Unsupported item effect metadata: {17f1046f}"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "TFT15_SetMechanic_KeepCurrentOption_Name",
+  "displayName": "TFT15_SetMechanic_KeepCurrentOption_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_SetMechanic_KeepCurrentOption",
+  "description": "TFT15_SetMechanic_KeepCurrentOption_Desc",
+  "tooltip": "TFT15_SetMechanic_KeepCurrentOption_Desc",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

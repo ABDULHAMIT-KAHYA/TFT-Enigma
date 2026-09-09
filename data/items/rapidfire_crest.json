@@ -1,7 +1,17 @@
 {
   "name": "Rapidfire Crest",
+  "displayName": "Rapidfire Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_DuelistCrest",
+  "description": "Gain a Rapidfire emblem.",
+  "tooltip": "Gain a Rapidfire emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DuelistCrest_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

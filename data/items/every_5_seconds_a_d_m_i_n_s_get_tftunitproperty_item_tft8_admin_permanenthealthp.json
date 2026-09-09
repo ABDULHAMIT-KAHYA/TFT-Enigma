@@ -1,7 +1,17 @@
 {
   "name": "Every 5 seconds, A.D.M.I.N.s get @TFTUnitProperty.item:TFT8_Admin_PermanentHealthPerActivation@ permanent maximum Health",
+  "displayName": "Every 5 seconds, A.D.M.I.N.s get @TFTUnitProperty.item:TFT8_Admin_PermanentHealthPerActivation@ permanent maximum Health",
+  "isPlaceholder": true,
+  "sourceId": "TFT8_AdminCauseEffect_EveryXSeconds_PermanentHealth",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

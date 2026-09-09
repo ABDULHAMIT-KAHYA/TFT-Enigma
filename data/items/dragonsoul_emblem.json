@@ -1,7 +1,30 @@
 {
   "name": "Dragonsoul Emblem",
+  "displayName": "Dragonsoul Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT4_Item_DragonsoulEmblemItem",
+  "description": "The holder gains the Dragonsoul trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
+  "tooltip": "The holder gains the Dragonsoul trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set4/TFT_SR4_5_Emblem_Dragonsoul_128.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Dragonsoul Emblem:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "15" }],
+  "importWarnings": []
 }

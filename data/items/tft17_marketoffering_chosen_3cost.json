@@ -1,0 +1,51 @@
+{
+  "name": "TFT17_MarketOffering_Chosen_3Cost",
+  "displayName": "2 Salvagers",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Chosen_3Cost",
+  "description": "Use on a champion to remove all their items and break them down into components.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Use on a champion to remove all their items and break them down into components.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_ThreeCostChosen.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ChampCost",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumChampions",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{2e4acff3}",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ChampCost", "value": "3" }, { "name": "NumChampions", "value": "3" }, { "name": "{2e4acff3}", "value": "0.25" }],
+  "importWarnings": ["Unmapped item variable: ChampCost", "Unmapped item variable: NumChampions", "Unmapped item variable: {2e4acff3}", "Unsupported item effect metadata: ChampCost", "Unsupported item effect metadata: NumChampions", "Unsupported item effect metadata: {2e4acff3}"]
+}

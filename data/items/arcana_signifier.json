@@ -1,7 +1,17 @@
 {
   "name": "Arcana Signifier",
+  "displayName": "Arcana Signifier",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Item_Arcana_Signifier",
+  "description": "Use this on an Arcana champion to change Arcana's effect to theirs. <br><br><scaleLevel>Ahri:</scaleLevel> Gain Ability Power for each 3-star champion.<br><scaleLevel>Hecarim:</scaleLevel> Units holding items gain Damage Reduction and Attack Damage.<br><scaleLevel>Tahm Kench:</scaleLevel> Gain Health for each active trait.<br><scaleLevel>Xerath:</scaleLevel> Abilities deal bonus true damage for each Charm purchased.<br><scaleLevel>Emblem:</scaleLevel> Gain Damage Amp for each Spatula item equipped.<br><br>",
+  "tooltip": "Use this on an Arcana champion to change Arcana's effect to theirs. <br><br><scaleLevel>Ahri:</scaleLevel> Gain Ability Power for each 3-star champion.<br><scaleLevel>Hecarim:</scaleLevel> Units holding items gain Damage Reduction and Attack Damage.<br><scaleLevel>Tahm Kench:</scaleLevel> Gain Health for each active trait.<br><scaleLevel>Xerath:</scaleLevel> Abilities deal bonus true damage for each Charm purchased.<br><scaleLevel>Emblem:</scaleLevel> Gain Damage Amp for each Spatula item equipped.<br><br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT12/TFT12_ArcanaSignifier.TFT_Set12.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

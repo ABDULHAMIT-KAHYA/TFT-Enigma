@@ -1,7 +1,40 @@
 {
   "name": "Medium Forge",
+  "displayName": "Medium Forge",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Commander_MediumForge",
+  "description": "Gain a completed item anvil and @gold@ gold.",
+  "tooltip": "Gain a completed item anvil and @gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Forge-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "1" }, { "name": "NumItems", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumItems", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumItems"]
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_TacticiansCrown",
+  "displayName": "Tactician's Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_TacticiansCrown",
+  "description": "Tactician's Crown",
+  "tooltip": "Tactician's Crown",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Tacticians_Crown.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

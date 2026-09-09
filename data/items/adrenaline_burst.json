@@ -1,7 +1,52 @@
 {
   "name": "Adrenaline Burst",
+  "displayName": "Adrenaline Burst",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Augment_Quickstriker",
+  "description": "Combat start and every @TimeBetweenProcs@ seconds, all Quickstrikers attack @AttackSpeed*100@% faster for @BuffDuration@ seconds. Gain a Nocturne and Akali.",
+  "tooltip": "Combat start and every @TimeBetweenProcs@ seconds, all Quickstrikers attack @AttackSpeed*100@% faster for @BuffDuration@ seconds. Gain a Nocturne and Akali.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Rush_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Adrenaline Burst:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.85, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.85,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.85",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.85, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 2.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BuffDuration",
+      "rawSourceValue": "2.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "TimeBetweenProcs",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.85" }, { "name": "BuffDuration", "value": "2.5" }, { "name": "TimeBetweenProcs", "value": "6" }],
+  "importWarnings": ["Metadata-only item effect: AttackSpeed -> GrantStats", "Unmapped item variable: BuffDuration", "Unmapped item variable: TimeBetweenProcs", "Unsupported item effect metadata: BuffDuration", "Unsupported item effect metadata: TimeBetweenProcs"]
 }

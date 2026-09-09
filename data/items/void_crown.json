@@ -1,7 +1,17 @@
 {
   "name": "Void Crown",
+  "displayName": "Void Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_VoidCrown",
+  "description": "Get a Void Emblem, a Rek'Sai, and a Striker's Flail",
+  "tooltip": "Get a Void Emblem, a Rek'Sai, and a Striker's Flail",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

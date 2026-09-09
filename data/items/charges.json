@@ -1,7 +1,29 @@
 {
   "name": "Charges",
+  "displayName": "Charges",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Item_PiltoverCharges",
+  "description": "Start with @TooltipStartingCharge@ Charge. Gain Charges each time you lose. The larger your loss streak, the more Charges you gain per loss. When you win, all Charges are converted to Power for the T-Hex.<br><br>Current loss streak: <TFTBonus>@TFTUnitProperty.item:TFT9_Piltover_Charges@</TFTBonus> <rules>(doubled in Hyper Roll)</rules><br>Charges granted next loss: <TFTBonus>+@TFTUnitProperty.item:TFT9_Piltover_ChargesToGrant@</TFTBonus><br>Current loot value on victory: <TFTBonus>@TFTUnitProperty.item:TFT9_Piltover_ProgressGoldValue@ gold</TFTBonus><br><br><tftitemrules>[This does not count as an item.]</tftitemrules>",
+  "tooltip": "Start with @TooltipStartingCharge@ Charge. Gain Charges each time you lose. The larger your loss streak, the more Charges you gain per loss. When you win, all Charges are converted to Power for the T-Hex.<br><br>Current loss streak: <TFTBonus>@TFTUnitProperty.item:TFT9_Piltover_Charges@</TFTBonus> <rules>(doubled in Hyper Roll)</rules><br>Charges granted next loss: <TFTBonus>+@TFTUnitProperty.item:TFT9_Piltover_ChargesToGrant@</TFTBonus><br>Current loot value on victory: <TFTBonus>@TFTUnitProperty.item:TFT9_Piltover_ProgressGoldValue@ gold</TFTBonus><br><br><tftitemrules>[This does not count as an item.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set9_Inventor/TFT9_PiltoverCharges.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TooltipStartingCharge",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "TooltipStartingCharge", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: TooltipStartingCharge"]
 }

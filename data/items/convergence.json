@@ -1,7 +1,17 @@
 {
   "name": "Convergence",
+  "displayName": "Convergence",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_Convergence",
+  "description": "Reveals a convergence hex on each partner's board. Units in them share their highest stats at the start of combat.",
+  "tooltip": "Reveals a convergence hex on each partner's board. Units in them share their highest stats at the start of combat.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_Convergence.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

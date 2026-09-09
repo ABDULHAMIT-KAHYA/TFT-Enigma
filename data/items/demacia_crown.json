@@ -1,7 +1,17 @@
 {
   "name": "Demacia Crown",
+  "displayName": "Demacia Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_DemaciaCrown",
+  "description": "Get a Demacia Emblem, a Crownguard, and a Jarvan IV.",
+  "tooltip": "Get a Demacia Emblem, a Crownguard, and a Jarvan IV.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

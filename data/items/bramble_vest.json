@@ -1,8 +1,120 @@
 {
   "name": "Bramble Vest",
+  "displayName": "Bramble Vest",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_BrambleVest",
+  "description": "Gain @PercentMaxHP*100@% max health.<br><br>Take @AutoDamageReduction*100@% reduced damage from attacks. When struck by any attack, deal <magicDamage>@1StarAoEDamage@ magic damage</magicDamage> to all adjacent enemies.<br><br><tftitemrules>Cooldown: @ICD@ seconds</tftitemrules>",
+  "tooltip": "Gain @PercentMaxHP*100@% max health.<br><br>Take @AutoDamageReduction*100@% reduced damage from attacks. When struck by any attack, deal <magicDamage>@1StarAoEDamage@ magic damage</magicDamage> to all adjacent enemies.<br><br><tftitemrules>Cooldown: @ICD@ seconds</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_BrambleVest.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Bramble Vest:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Bramble Vest:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "1StarAoEDamage",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "2StarAoEDamage",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "3StarAoEDamage",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "4StarAoEDamage",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ICD",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 0.06,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentMaxHP",
+      "rawSourceValue": "0.06",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{6688a0d5}",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AutoDamageReduction",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AutoDamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "1StarAoEDamage", "value": "100" }, { "name": "2StarAoEDamage", "value": "100" }, { "name": "3StarAoEDamage", "value": "100" }, { "name": "4StarAoEDamage", "value": "100" }, { "name": "Armor", "value": "50" }, { "name": "AutoDamageReduction", "value": "0.05" }, { "name": "ICD", "value": "2" }, { "name": "PercentMaxHP", "value": "0.06" }, { "name": "{6688a0d5}", "value": "100" }],
+  "importWarnings": ["Unmapped item variable: 1StarAoEDamage", "Unmapped item variable: 2StarAoEDamage", "Unmapped item variable: 3StarAoEDamage", "Unmapped item variable: 4StarAoEDamage", "Unmapped item variable: ICD", "Unmapped item variable: PercentMaxHP", "Unmapped item variable: {6688a0d5}"]
 }

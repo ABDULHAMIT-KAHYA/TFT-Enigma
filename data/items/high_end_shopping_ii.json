@@ -1,7 +1,29 @@
 {
   "name": "High End Shopping II",
+  "displayName": "High End Shopping II",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_HighEndShopping",
+  "description": "Champions appear in your Shop as if you were 1 level higher. Gain @Gold@ gold.",
+  "tooltip": "Champions appear in your Shop as if you were 1 level higher. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HighEnd3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "12" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

@@ -1,7 +1,73 @@
 {
   "name": "Electrocharge III",
+  "displayName": "Electrocharge III",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_Electrocharge3",
+  "description": "Every @AttacksToProc@ attacks an ally takes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage to nearby enemies (@ICD@ second cooldown).",
+  "tooltip": "Every @AttacksToProc@ attacks an ally takes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage to nearby enemies (@ICD@ second cooldown).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Electrocharge-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 115,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Damage1",
+      "rawSourceValue": "115",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 155,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Damage2",
+      "rawSourceValue": "155",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 195,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Damage3",
+      "rawSourceValue": "195",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 235,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Damage4",
+      "rawSourceValue": "235",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ICD",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Damage1", "value": "115" }, { "name": "Damage2", "value": "155" }, { "name": "Damage3", "value": "195" }, { "name": "Damage4", "value": "235" }, { "name": "ICD", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Damage1", "Unmapped item variable: Damage2", "Unmapped item variable: Damage3", "Unmapped item variable: Damage4", "Unmapped item variable: ICD"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Golden Spatula",
+  "displayName": "Golden Spatula",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_5MercSpatula",
+  "description": "Gain a Tactician's Crown",
+  "tooltip": "Gain a Tactician's Crown",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

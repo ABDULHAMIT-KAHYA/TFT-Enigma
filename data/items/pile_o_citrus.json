@@ -1,7 +1,74 @@
 {
   "name": "Pile O' Citrus",
+  "displayName": "Pile O' Citrus",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Item_Bilgewater_PileOCitrus",
+  "description": "Every @HealthRegenInterval@ seconds, heal @HealingPercent@% max Health and shed all negative effects. After @SerpentTimer@ seconds, gain @BonusSerpents@ %i:scaleSerpents%.<br><br><rules>Recommended holder: Illaoi</rules>",
+  "tooltip": "Every @HealthRegenInterval@ seconds, heal @HealingPercent@% max Health and shed all negative effects. After @SerpentTimer@ seconds, gain @BonusSerpents@ %i:scaleSerpents%.<br><br><rules>Recommended holder: Illaoi</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Item_PileOfCitrus.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Pile O' Citrus:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 600, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 600,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "600",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 600, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusSerpents",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealingPercent",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthRegenInterval",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SerpentTimer",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusSerpents", "value": "10" }, { "name": "HealingPercent", "value": "15" }, { "name": "Health", "value": "600" }, { "name": "HealthRegenInterval", "value": "7" }, { "name": "SerpentTimer", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: BonusSerpents", "Unmapped item variable: HealingPercent", "Unmapped item variable: HealthRegenInterval", "Unmapped item variable: SerpentTimer"]
 }

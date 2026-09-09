@@ -1,7 +1,85 @@
 {
   "name": "Radiant Mogul's Mail",
+  "displayName": "Radiant Mogul's Mail",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Item_ShimmerscaleMogulsMail_Radiant",
+  "description": "Grants <TFTRadiantItemBonus>@BaseResistsPerStack@</TFTRadiantItemBonus> Armor, <TFTRadiantItemBonus>@BaseResistsPerStack@</TFTRadiantItemBonus> Magic Resist, and <TFTRadiantItemBonus>@BaseHealthPerStack@</TFTRadiantItemBonus> Health when taking damage, stacking up to @StackCap@ times.<br><br>At full stacks, grant %i:goldCoins% <TFTRadiantItemBonus>@GoldAtFullStacks@</TFTRadiantItemBonus> gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>",
+  "tooltip": "Grants <TFTRadiantItemBonus>@BaseResistsPerStack@</TFTRadiantItemBonus> Armor, <TFTRadiantItemBonus>@BaseResistsPerStack@</TFTRadiantItemBonus> Magic Resist, and <TFTRadiantItemBonus>@BaseHealthPerStack@</TFTRadiantItemBonus> Health when taking damage, stacking up to @StackCap@ times.<br><br>At full stacks, grant %i:goldCoins% <TFTRadiantItemBonus>@GoldAtFullStacks@</TFTRadiantItemBonus> gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set7_Shimmerscale/Shimmerscale_MogulsMail_Radiant.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:Radiant Mogul's Mail:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 600, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 600,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "600",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 600, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseHealthPerStack",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseResistsPerStack",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldAtFullStacks",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldInterval",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StackCap",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseHealthPerStack", "value": "50" }, { "name": "BaseResistsPerStack", "value": "5" }, { "name": "GoldAtFullStacks", "value": "6" }, { "name": "GoldInterval", "value": "4" }, { "name": "Health", "value": "600" }, { "name": "StackCap", "value": "35" }],
+  "importWarnings": ["Unmapped item variable: BaseHealthPerStack", "Unmapped item variable: BaseResistsPerStack", "Unmapped item variable: GoldAtFullStacks", "Unmapped item variable: GoldInterval", "Unmapped item variable: StackCap"]
 }

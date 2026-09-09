@@ -1,7 +1,41 @@
 {
   "name": "Timewinders",
+  "displayName": "Timewinders",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_TeamupAugment_EkkoZilean",
+  "description": "Gain 2 Ekkos. Gain @XP@XP every combat Ekko participates in. Gain an Ekko every time you level up. At 3-Star, gain a Zilean.<br><br>Ekko's empowered attacks echo to all enemies being damaged by Zilean's spell, dealing @DamageShare*100@% of the original damage.",
+  "tooltip": "Gain 2 Ekkos. Gain @XP@XP every combat Ekko participates in. Gain an Ekko every time you level up. At 3-Star, gain a Zilean.<br><br>Ekko's empowered attacks echo to all enemies being damaged by Zilean's spell, dealing @DamageShare*100@% of the original damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Timewinders_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "DamageShare",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "XP",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageShare", "value": "0.1" }, { "name": "XP", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: DamageShare", "Unmapped item variable: XP"]
 }

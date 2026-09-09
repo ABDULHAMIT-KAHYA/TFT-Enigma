@@ -1,7 +1,17 @@
 {
   "name": "Bard",
+  "displayName": "Bard",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Bard",
+  "description": "Bard",
+  "tooltip": "Bard",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Bard_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

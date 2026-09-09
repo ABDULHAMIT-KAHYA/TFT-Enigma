@@ -1,7 +1,17 @@
 {
   "name": "Kindred",
+  "displayName": "Kindred",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Kindred",
+  "description": "Kindred",
+  "tooltip": "Kindred",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Kindred_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

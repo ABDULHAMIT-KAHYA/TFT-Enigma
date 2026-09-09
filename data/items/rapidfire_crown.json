@@ -1,7 +1,17 @@
 {
   "name": "Rapidfire Crown",
+  "displayName": "Rapidfire Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_RapidfireCrown",
+  "description": "Gain a Rapidfire Emblem, a Giant Slayer, and a Twisted Fate.",
+  "tooltip": "Gain a Rapidfire Emblem, a Giant Slayer, and a Twisted Fate.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RapidfireCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

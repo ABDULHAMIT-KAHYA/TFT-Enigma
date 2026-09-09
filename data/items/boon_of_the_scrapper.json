@@ -1,7 +1,40 @@
 {
   "name": "Boon of the Scrapper",
+  "displayName": "Boon of the Scrapper",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_KayleGodAugment_Scrapper",
+  "description": "Combat start: Up to @NumComponents@ components temporarily turn into completed items. Gain @NumRemovers@ removers and a salvager.<br><br><rules>Salvagers allow you to break completed items into components</rules>",
+  "tooltip": "Combat start: Up to @NumComponents@ components temporarily turn into completed items. Gain @NumRemovers@ removers and a salvager.<br><br><rules>Salvagers allow you to break completed items into components</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "NumRemovers",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumComponents", "value": "3" }, { "name": "NumRemovers", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: NumComponents", "Unmapped item variable: NumRemovers", "Unsupported item effect metadata: NumComponents", "Unsupported item effect metadata: NumRemovers"]
 }

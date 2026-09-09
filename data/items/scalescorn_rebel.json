@@ -1,7 +1,29 @@
 {
   "name": "Scalescorn Rebel",
+  "displayName": "Scalescorn Rebel",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_ScalescornRebel",
+  "description": "If you have exactly 1 Dragon it loses the effects of the Dragon trait and gains Scalescorn. It gains an additional @BonusRatio*100@% of the effects of Scalescorn. Gain a Lillia.",
+  "tooltip": "If you have exactly 1 Dragon it loses the effects of the Dragon trait and gains Scalescorn. It gains an additional @BonusRatio*100@% of the effects of Scalescorn. Gain a Lillia.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Nomads-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusRatio",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusRatio", "value": "0.15" }],
+  "importWarnings": ["Unmapped item variable: BonusRatio"]
 }

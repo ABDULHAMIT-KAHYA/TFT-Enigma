@@ -1,7 +1,17 @@
 {
   "name": "Kayn",
+  "displayName": "Kayn",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Kayn",
+  "description": "Kayn",
+  "tooltip": "Kayn",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Kayn_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

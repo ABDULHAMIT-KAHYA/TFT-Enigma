@@ -1,7 +1,40 @@
 {
   "name": "Comeback Story",
+  "displayName": "Comeback Story",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ComebackStory",
+  "description": "Your team gains @HPPerMissingHP@ Health and @ASPerMissingHP@% Attack Speed per missing player Health.<br><br>@TFTUnitProperty.item:TFT_Augment_ComebackStory_Tooltip@",
+  "tooltip": "Your team gains @HPPerMissingHP@ Health and @ASPerMissingHP@% Attack Speed per missing player Health.<br><br>@TFTUnitProperty.item:TFT_Augment_ComebackStory_Tooltip@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ComebackStory_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ASPerMissingHP",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPPerMissingHP",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ASPerMissingHP", "value": "0.4" }, { "name": "HPPerMissingHP", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: ASPerMissingHP", "Unmapped item variable: HPPerMissingHP"]
 }

@@ -1,0 +1,29 @@
+{
+  "name": "TFT_Augment_AdvancedLoanPlus",
+  "displayName": "Advanced Loan+",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_AdvancedLoanPlus",
+  "description": "Gain @Gold@ Gold. Your next augment is one tier lower.",
+  "tooltip": "Gain @Gold@ Gold. Your next augment is one tier lower.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AdvancedLoan_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "33",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "33" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
+}

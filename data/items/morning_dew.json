@@ -1,7 +1,62 @@
 {
   "name": "Morning Dew",
+  "displayName": "Morning Dew",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_Dawnbringer",
+  "description": "Once per combat at @HealthThresholdPercent*100@% Health, Dawnbringers gain @ManaRestore@ Mana over @ManaDuration@ seconds. Gain a Nidalee.",
+  "tooltip": "Once per combat at @HealthThresholdPercent*100@% Health, Dawnbringers gain @ManaRestore@ Mana over @ManaDuration@ seconds. Gain a Nidalee.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Morning-Dew_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThresholdPercent",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaDuration",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRestore",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthThresholdPercent", "value": "0.5" }, { "name": "Mana", "value": "15" }, { "name": "ManaDuration", "value": "5" }, { "name": "ManaRestore", "value": "60" }],
+  "importWarnings": ["Unmapped item variable: HealthThresholdPercent", "Unmapped item variable: Mana", "Unmapped item variable: ManaDuration", "Unmapped item variable: ManaRestore"]
 }

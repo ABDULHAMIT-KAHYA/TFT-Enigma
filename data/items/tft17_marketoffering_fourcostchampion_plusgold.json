@@ -1,0 +1,17 @@
+{
+  "name": "TFT17_MarketOffering_FourCostChampion_PlusGold",
+  "displayName": "4-cost",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_FourCostChampion_PlusGold",
+  "description": "4-cost",
+  "tooltip": "4-cost",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_4c.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

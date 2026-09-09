@@ -1,7 +1,17 @@
 {
   "name": "Bench Backup",
+  "displayName": "Bench Backup",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_BenchBackup",
+  "description": "8 seconds into combat a 2-star copy of your left-most benched unit teleports to your partner's board and starts fighting.",
+  "tooltip": "8 seconds into combat a 2-star copy of your left-most benched unit teleports to your partner's board and starts fighting.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_BenchBackup.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

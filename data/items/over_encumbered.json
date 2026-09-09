@@ -1,7 +1,51 @@
 {
   "name": "Over Encumbered",
+  "displayName": "Over Encumbered",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_OverEncumbered",
+  "description": "For the next stage, you only get @BenchSlots@ bench slots. After, get @Components@ item&nbsp;components.",
+  "tooltip": "For the next stage, you only get @BenchSlots@ bench slots. After, get @Components@ item&nbsp;components.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/OverEncumbered_I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BenchSlots",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "components",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BenchSlots", "value": "2" }, { "name": "Gold", "value": "null" }, { "name": "components", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: BenchSlots", "Unmapped item variable: components", "Unmapped non-numeric item variable: Gold", "Unsupported item effect metadata: BenchSlots", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: components"]
 }

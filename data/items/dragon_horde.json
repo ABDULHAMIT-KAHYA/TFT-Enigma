@@ -1,7 +1,29 @@
 {
   "name": "Dragon Horde",
+  "displayName": "Dragon Horde",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DragonHorde",
+  "description": "The Dragon trait remains active regardless of how many Dragons you have. Dragons gain @Stats@ Attack Damage and Ability Power. Gain a random Tier 4 Dragon.",
+  "tooltip": "The Dragon trait remains active regardless of how many Dragons you have. Dragons gain @Stats@ Attack Damage and Ability Power. Gain a random Tier 4 Dragon.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dragon-Sanctuary-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Stats",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Stats", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: Stats"]
 }

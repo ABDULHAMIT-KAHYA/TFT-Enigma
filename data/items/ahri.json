@@ -1,7 +1,17 @@
 {
   "name": "Ahri",
+  "displayName": "Ahri",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Ahri",
+  "description": "Ahri",
+  "tooltip": "Ahri",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Ahri_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,101 @@
 {
   "name": "Moonstone Renewer",
+  "displayName": "Moonstone Renewer",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_Moonstone",
+  "description": "Every @ShieldRate@ seconds, grant a @BaseShieldAmount@-@MaxShield@ Shield (based on Stage) to the @ShieldTargets@ lowest percent health allies for @ShieldDuration@ seconds.<br><br>​​<tftitemrules>[Support item]</tftitemrules>",
+  "tooltip": "Every @ShieldRate@ seconds, grant a @BaseShieldAmount@-@MaxShield@ Shield (based on Stage) to the @ShieldTargets@ lowest percent health allies for @ShieldDuration@ seconds.<br><br>​​<tftitemrules>[Support item]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_Moonstone.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Moonstone Renewer:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 55,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseShieldAmount",
+      "rawSourceValue": "55",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BaseShieldAmount", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 325,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxShield",
+      "rawSourceValue": "325",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MaxShield", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 325, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldRate",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldRate", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldTargets",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldTargets", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{f4f7ff53}",
+      "rawSourceValue": "45",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:{f4f7ff53}", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BaseShieldAmount", "value": "55" }, { "name": "Health", "value": "150" }, { "name": "MaxShield", "value": "325" }, { "name": "ShieldDuration", "value": "4" }, { "name": "ShieldRate", "value": "4" }, { "name": "ShieldTargets", "value": "2" }, { "name": "{f4f7ff53}", "value": "45" }],
+  "importWarnings": ["Unmapped item variable: BaseShieldAmount", "Unmapped item variable: MaxShield", "Unmapped item variable: ShieldDuration", "Unmapped item variable: ShieldRate", "Unmapped item variable: ShieldTargets", "Unmapped item variable: {f4f7ff53}"]
 }

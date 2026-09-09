@@ -1,7 +1,113 @@
 {
   "name": "Eternal Pact",
+  "displayName": "Eternal Pact",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_Artifact_EternalPact",
+  "description": "Combat start: Form a pact with the highest Health allied champion, if they die, gain @ManaRegenToGrant@ Mana regen and @APToGrant@% Ability Power.<br><br>When the ally uses their ability, gain @ManaToGrant@ Mana. Every @ShieldCadence@ seconds, shield your ally for @PercentAPShield*100@% of the holder's Ability Power.",
+  "tooltip": "Combat start: Form a pact with the highest Health allied champion, if they die, gain @ManaRegenToGrant@ Mana regen and @APToGrant@% Ability Power.<br><br>When the ally uses their ability, gain @ManaToGrant@ Mana. Every @ShieldCadence@ seconds, shield your ally for @PercentAPShield*100@% of the holder's Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT16_Artifact_EternalPact.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Eternal Pact:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "APToGrant",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:APToGrant", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ManaRegen", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegenToGrant",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ManaRegenToGrant", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaToGrant",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ManaToGrant", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentAPShield",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:PercentAPShield", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldCadence",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldCadence", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 6, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "40" }, { "name": "APToGrant", "value": "40" }, { "name": "ManaRegen", "value": "1" }, { "name": "ManaRegenToGrant", "value": "10" }, { "name": "ManaToGrant", "value": "15" }, { "name": "PercentAPShield", "value": "2" }, { "name": "ShieldCadence", "value": "6" }, { "name": "ShieldDuration", "value": "10" }],
+  "importWarnings": ["Metadata-only item effect: AP -> GrantStats", "Metadata-only item effect: APToGrant -> Shield", "Metadata-only item effect: ManaRegen -> Shield", "Metadata-only item effect: ManaRegenToGrant -> Shield", "Metadata-only item effect: ManaToGrant -> Shield", "Metadata-only item effect: PercentAPShield -> Shield", "Metadata-only item effect: ShieldCadence -> Shield", "Metadata-only item effect: ShieldDuration -> Shield", "Unmapped item variable: APToGrant", "Unmapped item variable: ManaRegen", "Unmapped item variable: ManaRegenToGrant", "Unmapped item variable: ManaToGrant", "Unmapped item variable: PercentAPShield", "Unmapped item variable: ShieldCadence", "Unmapped item variable: ShieldDuration"]
 }

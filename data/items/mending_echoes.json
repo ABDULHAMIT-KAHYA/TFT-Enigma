@@ -1,7 +1,63 @@
 {
   "name": "Mending Echoes",
+  "displayName": "Mending Echoes",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_Artifact_MendingEchoes",
+  "description": "Increase healing on the holder by @IncreasedHealing*100@%. When the holder gives or receives a heal, grant @HealPercentToGrant*100@% of the heals value to the lowest health ally as well.",
+  "tooltip": "Increase healing on the holder by @IncreasedHealing*100@%. When the holder gives or receives a heal, grant @HealPercentToGrant*100@% of the heals value to the lowest health ally as well.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT16_Artifact_MendingEchoes.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Mending Echoes:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 200, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 200, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealPercentToGrant",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IncreasedHealing",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealPercentToGrant", "value": "0.4" }, { "name": "Health", "value": "200" }, { "name": "IncreasedHealing", "value": "0.25" }, { "name": "ManaRegen", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: HealPercentToGrant", "Unmapped item variable: IncreasedHealing", "Unmapped item variable: ManaRegen"]
 }

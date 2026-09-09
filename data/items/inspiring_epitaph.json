@@ -1,7 +1,42 @@
 {
   "name": "Inspiring Epitaph",
+  "displayName": "Inspiring Epitaph",
+  "isPlaceholder": false,
+  "sourceId": "TFT10_Augment_InspiringEpitaph",
+  "description": "When an champion dies, the nearest ally gains a @ShieldRatio*100@% max Health Shield and @AttackSpeed*100@% stacking Attack Speed.",
+  "tooltip": "When an champion dies, the nearest ally gains a @ShieldRatio*100@% max Health Shield and @AttackSpeed*100@% stacking Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Inspiring-Epitaph-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Inspiring Epitaph:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.08",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldRatio",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldRatio", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.08" }, { "name": "ShieldRatio", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: ShieldRatio"]
 }

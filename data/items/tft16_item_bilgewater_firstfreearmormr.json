@@ -1,0 +1,30 @@
+{
+  "name": "TFT16_Item_Bilgewater_FirstFreeArmorMR",
+  "displayName": "First One's Free!",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Item_Bilgewater_FirstFreeArmorMR",
+  "description": "Bilgewater champions gain @BonusArmorMR@ Armor and @BonusArmorMR@ Magic Resist.",
+  "tooltip": "Bilgewater champions gain @BonusArmorMR@ Armor and @BonusArmorMR@ Magic Resist.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/FreeArmorMR.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+    { "name": "Item:TFT16_Item_Bilgewater_FirstFreeArmorMR:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusArmorMR",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusArmorMR", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusArmorMR", "value": "25" }],
+  "importWarnings": []
+}

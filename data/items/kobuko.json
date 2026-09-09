@@ -1,7 +1,17 @@
 {
   "name": "Kobuko",
+  "displayName": "Kobuko",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_FortuneYord",
+  "description": "Kobuko",
+  "tooltip": "Kobuko",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_FortuneYord_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

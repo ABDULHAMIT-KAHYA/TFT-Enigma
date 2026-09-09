@@ -1,0 +1,29 @@
+{
+  "name": "TFT16_Item_Bilgewater_ASTier2",
+  "displayName": "+@BonusAS*100@% Attack Speed",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Bilgewater_ASTier2",
+  "description": "Bilgewater champions gain @BonusAS*100@% Attack Speed.",
+  "tooltip": "Bilgewater champions gain @BonusAS*100@% Attack Speed.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Bilgewater/TFT16_Bilgewater_AS_Tier2.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.06,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAS",
+      "rawSourceValue": "0.06",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAS", "value": "0.06" }],
+  "importWarnings": ["Unmapped item variable: BonusAS", "Unsupported item effect metadata: BonusAS"]
+}

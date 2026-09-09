@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_BastionCrown",
+  "displayName": "Bastion Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_BastionCrown",
+  "description": "Gain a Bastion Emblem, a Steadfast Heart, and an Illaoi.",
+  "tooltip": "Gain a Bastion Emblem, a Steadfast Heart, and an Illaoi.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BastionCirclet_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,40 @@
 {
   "name": "Solar Hex",
+  "displayName": "Solar Hex",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_EmpoweredHex_Fire",
+  "description": "Place the hex on a champion. Allies in the hex deal @FireDamagePercent*100@% bonus magic damage over @Duration@ seconds. This damage 33% <TFTKeyword>Wounds</TFTKeyword>, and 1% <TFTKeyword>Burns</TFTKeyword> over the duration.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules><br><tftitemrules><tftbold>Burn</tftbold>: Deals a percent of the target's max Health as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>",
+  "tooltip": "Place the hex on a champion. Allies in the hex deal @FireDamagePercent*100@% bonus magic damage over @Duration@ seconds. This damage 33% <TFTKeyword>Wounds</TFTKeyword>, and 1% <TFTKeyword>Burns</TFTKeyword> over the duration.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules><br><tftitemrules><tftbold>Burn</tftbold>: Deals a percent of the target's max Health as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_HexPaintbrush.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FireDamagePercent",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "5" }, { "name": "FireDamagePercent", "value": "0.15" }],
+  "importWarnings": ["Unmapped item variable: Duration", "Unmapped item variable: FireDamagePercent"]
 }

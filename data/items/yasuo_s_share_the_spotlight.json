@@ -1,7 +1,29 @@
 {
   "name": "Yasuo's Share The Spotlight",
+  "displayName": "Yasuo's Share The Spotlight",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_YasuoGodAugment_MoreHexes",
+  "description": "Yasuo's hexes also affect adjacent units at @Effectiveness*100@% effectiveness.",
+  "tooltip": "Yasuo's hexes also affect adjacent units at @Effectiveness*100@% effectiveness.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ShareSpotlight2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Effectiveness",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Effectiveness", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Effectiveness", "Unsupported item effect metadata: Effectiveness"]
 }

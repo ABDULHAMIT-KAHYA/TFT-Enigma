@@ -1,7 +1,85 @@
 {
   "name": "tft_item_name_FluxEngine",
+  "displayName": "tft_item_name_FluxEngine",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Mecha_FluxEngine",
+  "description": "tft_item_description_FluxEngine",
+  "tooltip": "tft_item_description_FluxEngine",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT15/TFT15_FluxEngine.TFT_Set15.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:tft_item_name_FluxEngine:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "APPerCast",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumCasts",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumEnemies",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{45761774}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "20" }, { "name": "APPerCast", "value": "20" }, { "name": "Mana", "value": "15" }, { "name": "NumCasts", "value": "3" }, { "name": "NumEnemies", "value": "3" }, { "name": "{45761774}", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: APPerCast", "Unmapped item variable: Mana", "Unmapped item variable: NumCasts", "Unmapped item variable: NumEnemies", "Unmapped item variable: {45761774}", "Unsupported item effect metadata: APPerCast", "Unsupported item effect metadata: NumCasts", "Unsupported item effect metadata: NumEnemies", "Unsupported item effect metadata: {45761774}"]
 }

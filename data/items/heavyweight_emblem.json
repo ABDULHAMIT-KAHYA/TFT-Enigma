@@ -1,7 +1,52 @@
 {
   "name": "Heavyweight Emblem",
+  "displayName": "Heavyweight Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Item_HeavyweightEmblemItem",
+  "description": "The holder gains the Heavyweight trait, and gains @HealthPerTakedown@ max Health on takedown.",
+  "tooltip": "The holder gains the Heavyweight trait, and gains @HealthPerTakedown@ max Health on takedown.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set15/TFT15_Emblem_Heavyweight.TFT_Set15.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Heavyweight Emblem:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPerTakedown",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{9b864d6c}",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "150" }, { "name": "HealthPerTakedown", "value": "150" }, { "name": "{9b864d6c}", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: HealthPerTakedown", "Unmapped item variable: {9b864d6c}"]
 }

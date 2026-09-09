@@ -1,0 +1,40 @@
+{
+  "name": "TFT7_Augment_EvokerEssenceTheft",
+  "displayName": "Essence Theft",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_EvokerEssenceTheft",
+  "description": "Evoker's attacks steal @ManaDrainDrain@ Mana from their target. Gain a Seraphine.",
+  "tooltip": "Evoker's attacks steal @ManaDrainDrain@ Mana from their target. Gain a Seraphine.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Essence-Theft-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaDrainBurn",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaDrainDrain",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaDrainBurn", "value": "5" }, { "name": "ManaDrainDrain", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: ManaDrainBurn", "Unmapped item variable: ManaDrainDrain"]
+}

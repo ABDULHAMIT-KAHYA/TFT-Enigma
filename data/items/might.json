@@ -1,7 +1,62 @@
 {
   "name": "Might",
+  "displayName": "Might",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_TenetMight",
+  "description": "Your team gains @BaseTeamAD*100@% Attack Damage and @BaseTeamHealth@ Health. Gain an additional @TeamADPerDefeat*100@% Attack Damage and @TeamHealthPerDefeat@ Health per unique defeated or eliminated Tactician&nbsp;(@TFTUnitProperty.trait:TFT16_Augment_TenetMight_DefeatedOpponents@/7).",
+  "tooltip": "Your team gains @BaseTeamAD*100@% Attack Damage and @BaseTeamHealth@ Health. Gain an additional @TeamADPerDefeat*100@% Attack Damage and @TeamHealthPerDefeat@ Health per unique defeated or eliminated Tactician&nbsp;(@TFTUnitProperty.trait:TFT16_Augment_TenetMight_DefeatedOpponents@/7).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Might_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.06,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseTeamAD",
+      "rawSourceValue": "0.06",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseTeamHealth",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.02,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TeamADPerDefeat",
+      "rawSourceValue": "0.02",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TeamHealthPerDefeat",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseTeamAD", "value": "0.06" }, { "name": "BaseTeamHealth", "value": "60" }, { "name": "TeamADPerDefeat", "value": "0.02" }, { "name": "TeamHealthPerDefeat", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: BaseTeamAD", "Unmapped item variable: BaseTeamHealth", "Unmapped item variable: TeamADPerDefeat", "Unmapped item variable: TeamHealthPerDefeat"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "Component Expert",
+  "displayName": "Component Expert",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ComponentExpert",
+  "description": "Break apart all current completed items into components. You can no longer build completed items but champions can equip multiple components, and components grant @StatMultiplier@x their usual stats. Gain @NumAnvil@ component anvils.",
+  "tooltip": "Break apart all current completed items into components. You can no longer build completed items but champions can equip multiple components, and components grant @StatMultiplier@x their usual stats. Gain @NumAnvil@ component anvils.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ComponentExpert_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumAnvil",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StatMultiplier",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumAnvil", "value": "2" }, { "name": "StatMultiplier", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: NumAnvil", "Unmapped item variable: StatMultiplier", "Unsupported item effect metadata: NumAnvil", "Unsupported item effect metadata: StatMultiplier"]
 }

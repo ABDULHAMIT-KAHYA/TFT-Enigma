@@ -1,7 +1,42 @@
 {
   "name": "Devastating Charge",
+  "displayName": "Devastating Charge",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_CavalierDevastatingCharge",
+  "description": "Cavalier's first attack after charging deals @BaseDamage@ magic damage, increased by @ResistPercentInc@% for each Armor and Magic Resist they have. Gain a Rell.",
+  "tooltip": "Cavalier's first attack after charging deals @BaseDamage@ magic damage, increased by @ResistPercentInc@% for each Armor and Magic Resist they have. Gain a Rell.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Devastating-Charge-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 80,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BaseDamage",
+      "rawSourceValue": "80",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 80, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ResistPercentInc",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "BaseDamage", "value": "80" }, { "name": "ResistPercentInc", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: BaseDamage", "Unmapped item variable: ResistPercentInc"]
 }

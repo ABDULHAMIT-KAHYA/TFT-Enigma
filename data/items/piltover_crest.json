@@ -1,7 +1,17 @@
 {
   "name": "Piltover Crest",
+  "displayName": "Piltover Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_PiltoverCrest",
+  "description": "Get a Piltover Emblem.",
+  "tooltip": "Get a Piltover Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

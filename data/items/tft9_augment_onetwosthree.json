@@ -1,0 +1,40 @@
+{
+  "name": "TFT9_Augment_OneTwosThree",
+  "displayName": "One Two Three",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_OneTwosThree",
+  "description": "Gain @tier1champs@ 1-cost champion, @numchamps@ 2-cost champion, and 1 3-cost champion.",
+  "tooltip": "Gain @tier1champs@ 1-cost champion, @numchamps@ 2-cost champion, and 1 3-cost champion.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Threes-Company-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumChamps",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "tier1champs",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumChamps", "value": "1" }, { "name": "tier1champs", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumChamps", "Unmapped item variable: tier1champs", "Unsupported item effect metadata: NumChamps", "Unsupported item effect metadata: tier1champs"]
+}

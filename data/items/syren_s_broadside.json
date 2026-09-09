@@ -1,7 +1,17 @@
 {
   "name": "Syren's Broadside",
+  "displayName": "Syren's Broadside",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Bilgewater_SyrensBroadside",
+  "description": "At combat start, call in a cannon barrage dealing massive damage to all enemies.",
+  "tooltip": "At combat start, call in a cannon barrage dealing massive damage to all enemies.",
+  "iconPath": "ASSETS/Characters/TFT14_MissFortune/HUD/Icons2D/TFT14_MissFortuneSpell.TFT_Set14.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

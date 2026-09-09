@@ -1,7 +1,17 @@
 {
   "name": "Frying Pan",
+  "displayName": "Frying Pan",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_FryingPan",
+  "description": "<tftitemrules>...why else would it be here?</tftitemrules>",
+  "tooltip": "<tftitemrules>...why else would it be here?</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_FryingPan.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

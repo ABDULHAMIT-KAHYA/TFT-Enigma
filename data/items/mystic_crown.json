@@ -1,7 +1,17 @@
 {
   "name": "Mystic Crown",
+  "displayName": "Mystic Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_MysticCrown",
+  "description": "Gain a Mystic Emblem, an Ionic Spark, and a Lulu.",
+  "tooltip": "Gain a Mystic Emblem, an Ionic Spark, and a Lulu.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Mystic_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

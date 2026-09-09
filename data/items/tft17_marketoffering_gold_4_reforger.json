@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_Gold_4_Reforger",
+  "displayName": "4 gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Gold_4_Reforger",
+  "description": "4 gold",
+  "tooltip": "4 gold",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistGiveGold.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
+}

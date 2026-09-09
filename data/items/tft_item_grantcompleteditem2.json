@@ -1,0 +1,29 @@
+{
+  "name": "TFT_Item_GrantCompletedItem2",
+  "displayName": "@ItemsToGive@ completed items",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_GrantCompletedItem2",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ItemsToGive",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ItemsToGive", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: ItemsToGive", "Unsupported item effect metadata: ItemsToGive"]
+}

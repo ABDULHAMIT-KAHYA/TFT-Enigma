@@ -1,7 +1,29 @@
 {
   "name": "Gain 8 Gold",
+  "displayName": "Gain 8 Gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Armory_08Gold",
+  "description": "Gain @Gold@ gold. <i>(Awarded after all players make their decision.)</i>",
+  "tooltip": "Gain @Gold@ gold. <i>(Awarded after all players make their decision.)</i>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Gold.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

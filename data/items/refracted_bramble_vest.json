@@ -1,8 +1,65 @@
 {
   "name": "Refracted Bramble Vest",
+  "displayName": "Refracted Bramble Vest",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_BrambleVestShadow",
+  "description": "Grants %i:scaleArmor% @TooltipDisplayArmor@ bonus Armor (including components).",
+  "tooltip": "Grants %i:scaleArmor% @TooltipDisplayArmor@ bonus Armor (including components).",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Bramble_Vest.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Refracted Bramble Vest:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 460, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Refracted Bramble Vest:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 460,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusArmor",
+      "rawSourceValue": "460",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusArmor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 460, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TooltipDisplayArmor",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{1ae1b8b1}",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "40" }, { "name": "BonusArmor", "value": "460" }, { "name": "TooltipDisplayArmor", "value": "500" }, { "name": "{1ae1b8b1}", "value": "50" }],
+  "importWarnings": ["Unmapped item variable: TooltipDisplayArmor", "Unmapped item variable: {1ae1b8b1}", "Unsupported item effect metadata: TooltipDisplayArmor", "Unsupported item effect metadata: {1ae1b8b1}"]
 }

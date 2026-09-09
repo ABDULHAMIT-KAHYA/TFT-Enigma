@@ -1,7 +1,41 @@
 {
   "name": "Crown Guarded",
+  "displayName": "Crown Guarded",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_CrownGuarded",
+  "description": "Gain a Crownguard. Your Crownguards' start of combat effect is @effectincrease*100@% stronger and the shield lasts @DurationIncrease@ seconds longer.",
+  "tooltip": "Gain a Crownguard. Your Crownguards' start of combat effect is @effectincrease*100@% stronger and the shield lasts @DurationIncrease@ seconds longer.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown-Guarded-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "DurationIncrease",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0.85,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "effectincrease",
+      "rawSourceValue": "0.85",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:effectincrease", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.85, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DurationIncrease", "value": "5" }, { "name": "effectincrease", "value": "0.85" }],
+  "importWarnings": ["Metadata-only item effect: DurationIncrease -> Shield", "Metadata-only item effect: effectincrease -> Shield", "Unmapped item variable: DurationIncrease", "Unmapped item variable: effectincrease"]
 }

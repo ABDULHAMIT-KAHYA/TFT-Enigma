@@ -1,7 +1,63 @@
 {
   "name": "Banshee's Claw",
+  "displayName": "Banshee's Claw",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_TrapClawShadow",
+  "description": "When combat begins, the holder and all allies within @HexRange@ hexes in the same row gain a shield that blocks the first enemy Ability.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "tooltip": "When combat begins, the holder and all allies within @HexRange@ hexes in the same row gain a shield that blocks the first enemy Ability.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Trap_Claw.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Banshee's Claw:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusPercentDamage",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DodgeChance",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRange",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusPercentDamage", "value": "25" }, { "name": "DodgeChance", "value": "15" }, { "name": "Health", "value": "150" }, { "name": "HexRange", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: BonusPercentDamage", "Unmapped item variable: DodgeChance", "Unmapped item variable: HexRange"]
 }

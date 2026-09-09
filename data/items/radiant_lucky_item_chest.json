@@ -1,7 +1,29 @@
 {
   "name": "Radiant Lucky Item Chest",
+  "displayName": "Radiant Lucky Item Chest",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Consumable_RecommendedArmoryRadiant",
+  "description": "Use on a champion to open an armory of <TFTRadiantItemBonus>Radiant</TFTRadiantItemBonus> items especially suited for them.<br><br><rules>These items are based on the champion's recommended items.</rules>",
+  "tooltip": "Use on a champion to open an armory of <TFTRadiantItemBonus>Radiant</TFTRadiantItemBonus> items especially suited for them.<br><br><rules>These items are based on the champion's recommended items.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Consumable_LuckyItemChest.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumChoices",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumChoices", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: NumChoices", "Unsupported item effect metadata: NumChoices"]
 }

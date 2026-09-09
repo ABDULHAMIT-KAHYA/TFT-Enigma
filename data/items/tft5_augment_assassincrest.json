@@ -1,0 +1,17 @@
+{
+  "name": "TFT5_Augment_AssassinCrest",
+  "displayName": "Assassin Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_AssassinCrest",
+  "description": "Gain an Assassin Emblem and a Khazix.",
+  "tooltip": "Gain an Assassin Emblem and a Khazix.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Assassin_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

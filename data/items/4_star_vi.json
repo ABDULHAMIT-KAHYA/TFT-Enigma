@@ -1,7 +1,29 @@
 {
   "name": "4 star Vi",
+  "displayName": "4 star Vi",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_Vi4Star",
+  "description": "4 star Vi",
+  "tooltip": "4 star Vi",
+  "iconPath": "ASSETS/Characters/TFT14_Vi/HUD/TFT14_Vi_Square.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
 }

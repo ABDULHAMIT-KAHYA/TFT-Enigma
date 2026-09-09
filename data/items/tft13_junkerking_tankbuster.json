@@ -1,0 +1,65 @@
+{
+  "name": "TFT13_JunkerKing_Tankbuster",
+  "displayName": "Tankbuster",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_JunkerKing_Tankbuster",
+  "description": "<spellPassive>Tankbuster:</spellPassive> Every @Tankbuster_RefreshDuration@ seconds, deal @Tankbuster_APDamage_Level1@%&nbsp;/&nbsp;@Tankbuster_APDamage_Level2@%&nbsp;/&nbsp;@Tankbuster_APDamage_Level3@%&nbsp;%i:scaleAP% as true damage to the enemy with the most Armor and Magic&nbsp;Resist.<br><br>",
+  "tooltip": "<spellPassive>Tankbuster:</spellPassive> Every @Tankbuster_RefreshDuration@ seconds, deal @Tankbuster_APDamage_Level1@%&nbsp;/&nbsp;@Tankbuster_APDamage_Level2@%&nbsp;/&nbsp;@Tankbuster_APDamage_Level3@%&nbsp;%i:scaleAP% as true damage to the enemy with the most Armor and Magic&nbsp;Resist.<br><br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT13/TFT13_JunkerKing_Tankbuster_Icon.TFT_Set13.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 120,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Tankbuster_APDamage_Level1",
+      "rawSourceValue": "120",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 120, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 180,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Tankbuster_APDamage_Level2",
+      "rawSourceValue": "180",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 180, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1600,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Tankbuster_APDamage_Level3",
+      "rawSourceValue": "1600",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1600, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Tankbuster_RefreshDuration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Tankbuster_APDamage_Level1", "value": "120" }, { "name": "Tankbuster_APDamage_Level2", "value": "180" }, { "name": "Tankbuster_APDamage_Level3", "value": "1600" }, { "name": "Tankbuster_RefreshDuration", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Tankbuster_APDamage_Level1", "Unmapped item variable: Tankbuster_APDamage_Level2", "Unmapped item variable: Tankbuster_APDamage_Level3", "Unmapped item variable: Tankbuster_RefreshDuration"]
+}

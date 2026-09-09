@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Sword_Spatula",
+  "displayName": "JACKPOT",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Sword_Spatula",
+  "description": "2 Thief's Gloves and 10 gold are placed in your chest.",
+  "tooltip": "2 Thief's Gloves and 10 gold are placed in your chest.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

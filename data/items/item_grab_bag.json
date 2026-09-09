@@ -1,7 +1,29 @@
 {
   "name": "Item Grab Bag",
+  "displayName": "Item Grab Bag",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_ItemGrabBag1",
+  "description": "Gain @NumItems@ random completed item.",
+  "tooltip": "Gain @NumItems@ random completed item.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ItemGrabBag1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumItems", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumItems", "Unsupported item effect metadata: NumItems"]
 }

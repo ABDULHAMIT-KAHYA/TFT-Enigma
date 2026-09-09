@@ -1,7 +1,17 @@
 {
   "name": "Challenger Mode",
+  "displayName": "Challenger Mode",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Item_MissFortuneUniqueASTraitStance",
+  "description": "Miss Fortune gains the Challenger trait.",
+  "tooltip": "Miss Fortune gains the Challenger trait.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set17/TFT17_MissFortuneUnique_ASTraitIcon.TFT_Set17.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

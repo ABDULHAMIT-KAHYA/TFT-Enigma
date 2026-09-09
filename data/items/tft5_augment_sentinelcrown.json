@@ -1,0 +1,17 @@
+{
+  "name": "TFT5_Augment_SentinelCrown",
+  "displayName": "Sentinel Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_SentinelCrown",
+  "description": "Gain a Sentinel Emblem, a Giant Slayer, and a Senna.",
+  "tooltip": "Gain a Sentinel Emblem, a Giant Slayer, and a Senna.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Sentinel_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

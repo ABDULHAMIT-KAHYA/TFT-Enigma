@@ -1,7 +1,29 @@
 {
   "name": "A Golden Quest",
+  "displayName": "A Golden Quest",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_GoldenQuest",
+  "description": "The first time you have @GoldRequired@ or more gold, gain a 2-star 5-cost champion and 2 items tailored to them.",
+  "tooltip": "The first time you have @GoldRequired@ or more gold, gain a 2-star 5-cost champion and 2 items tailored to them.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AGoldenQuest_II.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 165,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "goldrequired",
+      "rawSourceValue": "165",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "goldrequired", "value": "165" }],
+  "importWarnings": ["Unmapped item variable: goldrequired"]
 }

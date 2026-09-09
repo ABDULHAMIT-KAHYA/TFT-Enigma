@@ -1,0 +1,29 @@
+{
+  "name": "TFT9_Augment_Legend_CuttingCorners",
+  "displayName": "Cutting Corners",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Legend_CuttingCorners",
+  "description": "Leveling up costs @Experience@ XP less.",
+  "tooltip": "Leveling up costs @Experience@ XP less.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cutting-Corners-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Experience",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Experience", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Experience", "Unsupported item effect metadata: Experience"]
+}

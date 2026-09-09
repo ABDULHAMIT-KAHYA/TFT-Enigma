@@ -1,7 +1,17 @@
 {
   "name": "Noxus Crest",
+  "displayName": "Noxus Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_NoxusCrest",
+  "description": "Get an Noxus Emblem.",
+  "tooltip": "Get an Noxus Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

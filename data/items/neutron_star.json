@@ -1,7 +1,29 @@
 {
   "name": "Neutron Star",
+  "displayName": "Neutron Star",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_DarkStar_NeutronStar",
+  "description": "Every star level of unique Dark Star units you field increases the execute threshold by @PercentPerLevel*100@%. Gain a Cho'gath and Lissandra.<br><br>Bonus Execute Percent: @TFTUnitProperty.item:TFT17_Augment_DarkStar_NeutronStar_BonusExecutePercent*100@%",
+  "tooltip": "Every star level of unique Dark Star units you field increases the execute threshold by @PercentPerLevel*100@%. Gain a Cho'gath and Lissandra.<br><br>Bonus Execute Percent: @TFTUnitProperty.item:TFT17_Augment_DarkStar_NeutronStar_BonusExecutePercent*100@%",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Execute",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{b7707881}",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{b7707881}", "value": "0.01" }],
+  "importWarnings": ["Unmapped item variable: {b7707881}"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Shen",
+  "displayName": "Shen",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Shen",
+  "description": "Shen",
+  "tooltip": "Shen",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Shen_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

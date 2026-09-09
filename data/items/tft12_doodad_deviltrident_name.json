@@ -1,7 +1,52 @@
 {
   "name": "TFT12_Doodad_DevilTrident_Name",
+  "displayName": "TFT12_Doodad_DevilTrident_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_DevilTrident",
+  "description": "TFT12_Doodad_DevilTrident_Tooltip",
+  "tooltip": "TFT12_Doodad_DevilTrident_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MagicDamage",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 200, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 666,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaThreshold",
+      "rawSourceValue": "666",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "WoundDuration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MagicDamage", "value": "200" }, { "name": "ManaThreshold", "value": "666" }, { "name": "WoundDuration", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: MagicDamage", "Unmapped item variable: ManaThreshold", "Unmapped item variable: WoundDuration", "Unsupported item effect metadata: WoundDuration"]
 }

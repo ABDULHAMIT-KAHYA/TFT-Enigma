@@ -1,7 +1,41 @@
 {
   "name": "Blossoming Lotus I",
+  "displayName": "Blossoming Lotus I",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_BlossomingLotus1",
+  "description": "Your team's Abilities can critically strike. Every @Interval@ seconds, your team gains @IntervalCritChance*100@% Critical Strike Chance.",
+  "tooltip": "Your team's Abilities can critically strike. Every @Interval@ seconds, your team gains @IntervalCritChance*100@% Critical Strike Chance.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Blossoming-Lotus-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Blossoming Lotus I:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IntervalCritChance",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:IntervalCritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Interval",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Interval", "value": "3" }, { "name": "IntervalCritChance", "value": "0.05" }],
+  "importWarnings": ["Unmapped item variable: Interval", "Unsupported item effect metadata: Interval"]
 }

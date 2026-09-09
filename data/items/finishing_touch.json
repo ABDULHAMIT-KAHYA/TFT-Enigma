@@ -1,7 +1,40 @@
 {
   "name": "Finishing Touch!",
+  "displayName": "Finishing Touch!",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_JunkerKing_SuperPass",
+  "description": "Your mech is complete! Rumble permanently gains @SuperPass_AP@ Ability Power and @SuperPass_Health@&nbsp;Health.",
+  "tooltip": "Your mech is complete! Rumble permanently gains @SuperPass_AP@ Ability Power and @SuperPass_Health@&nbsp;Health.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT13/TFT13_JunkerKing_Pass_Icon.TFT_Set13.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SuperPass_AP",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SuperPass_Health",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "SuperPass_AP", "value": "25" }, { "name": "SuperPass_Health", "value": "300" }],
+  "importWarnings": ["Unmapped item variable: SuperPass_AP", "Unmapped item variable: SuperPass_Health"]
 }

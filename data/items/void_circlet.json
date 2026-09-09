@@ -1,7 +1,17 @@
 {
   "name": "Void Circlet",
+  "displayName": "Void Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_VoidCirclet",
+  "description": "Get a Void Emblem, a Bel'veth, and a Recurve Bow.",
+  "tooltip": "Get a Void Emblem, a Bel'veth, and a Recurve Bow.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,40 @@
 {
   "name": "Cluttered Mind",
+  "displayName": "Cluttered Mind",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_ClutteredMind",
+  "description": "Gain @Units@ random 1-cost champions now. If your bench is full at the end of player combat, gain @XP@ XP. ",
+  "tooltip": "Gain @Units@ random 1-cost champions now. If your bench is full at the end of player combat, gain @XP@ XP. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dizzy-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Units",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Units", "value": "4" }, { "name": "XP", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Units", "Unmapped item variable: XP", "Unsupported item effect metadata: Units", "Unsupported item effect metadata: XP"]
 }

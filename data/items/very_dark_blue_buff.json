@@ -1,7 +1,73 @@
 {
   "name": "Very Dark Blue Buff",
+  "displayName": "Very Dark Blue Buff",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Item_BlueBuffShadow",
+  "description": "After casting their Ability, the holder gains %i:scaleMana% <TFTShadowItemBonus>@PostCastMana@</TFTShadowItemBonus> Mana.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "tooltip": "After casting their Ability, the holder gains %i:scaleMana% <TFTShadowItemBonus>@PostCastMana@</TFTShadowItemBonus> Mana.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Blue_Buff.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "OnCast",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCast",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCast",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaRestore",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCast",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "PostCastMana",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCast",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{7f7f2c03}",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthThreshold", "value": "60" }, { "name": "Mana", "value": "30" }, { "name": "ManaRestore", "value": "20" }, { "name": "PostCastMana", "value": "40" }, { "name": "{7f7f2c03}", "value": "50" }],
+  "importWarnings": ["Metadata-only item effect: HealthThreshold -> Heal", "Metadata-only item effect: Mana -> ModifyMana", "Metadata-only item effect: ManaRestore -> ModifyMana", "Metadata-only item effect: PostCastMana -> ModifyMana", "Unmapped item variable: HealthThreshold", "Unmapped item variable: Mana", "Unmapped item variable: ManaRestore", "Unmapped item variable: PostCastMana", "Unmapped item variable: {7f7f2c03}", "Unsupported item effect metadata: {7f7f2c03}"]
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Fish_Kraken",
+  "displayName": "Large Prize",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Fish_Kraken",
+  "description": "1 Neeko's Help has been added to your chest.",
+  "tooltip": "1 Neeko's Help has been added to your chest.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "LootObject",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,17 @@
 {
   "name": "Caitlyn",
+  "displayName": "Caitlyn",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Caitlyn",
+  "description": "Caitlyn",
+  "tooltip": "Caitlyn",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Caitlyn_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

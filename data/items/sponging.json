@@ -1,7 +1,40 @@
 {
   "name": "Sponging",
+  "displayName": "Sponging",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Sponging",
+  "description": "Combat start: Up to @MaxUnits@ champions with @MaxItemsToBeEligible@ or fewer items gain a copy of a random completed item from the nearest itemized ally.",
+  "tooltip": "Combat start: Up to @MaxUnits@ champions with @MaxItemsToBeEligible@ or fewer items gain a copy of a random completed item from the nearest itemized ally.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Sponging_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "MaxItemsToBeEligible",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "MaxUnits",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxItemsToBeEligible", "value": "1" }, { "name": "MaxUnits", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: MaxItemsToBeEligible", "Unmapped item variable: MaxUnits", "Unsupported item effect metadata: MaxItemsToBeEligible", "Unsupported item effect metadata: MaxUnits"]
 }

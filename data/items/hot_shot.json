@@ -1,7 +1,51 @@
 {
   "name": "Hot Shot",
+  "displayName": "Hot Shot",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_CannoneerHotShot",
+  "description": "Cannoneer's cannon shots burn their targets, dealing @BurnPct@% of the target's maximum Health as true damage over @BurnDuration@ seconds, and reducing healing by @GrievousWoundsPct@% for the duration of the burn. Gain an Aphelios.",
+  "tooltip": "Cannoneer's cannon shots burn their targets, dealing @BurnPct@% of the target's maximum Health as true damage over @BurnDuration@ seconds, and reducing healing by @GrievousWoundsPct@% for the duration of the burn. Gain an Aphelios.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Hot-Shot-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BurnDuration",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BurnPct",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GrievousWoundsPct",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BurnDuration", "value": "2" }, { "name": "BurnPct", "value": "6" }, { "name": "GrievousWoundsPct", "value": "50" }],
+  "importWarnings": ["Unmapped item variable: BurnDuration", "Unmapped item variable: BurnPct", "Unmapped item variable: GrievousWoundsPct"]
 }

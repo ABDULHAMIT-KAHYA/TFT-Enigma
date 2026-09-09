@@ -1,7 +1,41 @@
 {
   "name": "Unleash The Beast",
+  "displayName": "Unleash The Beast",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_UnleashTheBeast",
+  "description": "Gain a Sterak's Gage. When its effect triggers, the holder gains @AttackSpeed*100@% Attack Speed for the rest of combat and immunity to crowd control for @CCImmunityDuration@ seconds.",
+  "tooltip": "Gain a Sterak's Gage. When its effect triggers, the holder gains @AttackSpeed*100@% Attack Speed for the rest of combat and immunity to crowd control for @CCImmunityDuration@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/UnleashtheBeast_II.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Unleash The Beast:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CCImmunityDuration",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.35" }, { "name": "CCImmunityDuration", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: CCImmunityDuration", "Unsupported item effect metadata: CCImmunityDuration"]
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_SlayerCrest",
+  "displayName": "Slayer Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_SlayerCrest",
+  "description": "Gain a Slayer emblem.",
+  "tooltip": "Gain a Slayer emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SlayerCrest_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

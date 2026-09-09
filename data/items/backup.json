@@ -1,7 +1,41 @@
 {
   "name": "Backup",
+  "displayName": "Backup",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_Backup",
+  "description": "Your team gains @AttackSpeed*100@% Attack Speed if at least @MinUnits@ allies start combat in the back two rows.",
+  "tooltip": "Your team gains @AttackSpeed*100@% Attack Speed if at least @MinUnits@ allies start combat in the back two rows.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Backup-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Backup:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MinUnits",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.12" }, { "name": "MinUnits", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: MinUnits", "Unsupported item effect metadata: MinUnits"]
 }

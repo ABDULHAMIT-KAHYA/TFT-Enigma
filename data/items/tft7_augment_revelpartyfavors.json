@@ -1,0 +1,51 @@
+{
+  "name": "TFT7_Augment_RevelPartyFavors",
+  "displayName": "Party Favors",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_RevelPartyFavors",
+  "description": "Gain @Gold@ gold for every @GoldReq@ firecrackers launched by Revel champions each combat. Additionally, gain a special prize the first time @SpecialPrizeReq@ total firecrackers are launched. Gain a Jinx.",
+  "tooltip": "Gain @Gold@ gold for every @GoldReq@ firecrackers launched by Revel champions each combat. Additionally, gain a special prize the first time @SpecialPrizeReq@ total firecrackers are launched. Gain a Jinx.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Party-Favors-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldReq",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SpecialPrizeReq",
+      "rawSourceValue": "75",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "1" }, { "name": "GoldReq", "value": "6" }, { "name": "SpecialPrizeReq", "value": "75" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: GoldReq", "Unmapped item variable: SpecialPrizeReq"]
+}

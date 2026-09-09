@@ -1,7 +1,29 @@
 {
   "name": "Gold Every Turn",
+  "displayName": "Gold Every Turn",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_GoldPerTurn_Stage3",
+  "description": "Gain @Gold@ gold each round for the rest of the game.",
+  "tooltip": "Gain @Gold@ gold each round for the rest of the game.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistGiveGold.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

@@ -1,7 +1,51 @@
 {
   "name": "Growing Up",
+  "displayName": "Growing Up",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_GrowingUp",
+  "description": "Gain a 2-star @StartingCost@-cost champion, and an item they can use. Each stage, you can choose to Grow Up into a higher-cost champion or to keep the current one.<br><tftitemrules>While Growing Up, the unit cannot be sold or combined.</tftitemrules>",
+  "tooltip": "Gain a 2-star @StartingCost@-cost champion, and an item they can use. Each stage, you can choose to Grow Up into a higher-cost champion or to keep the current one.<br><tftitemrules>While Growing Up, the unit cannot be sold or combined.</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StartingCost",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{474c9a73}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{e721bc88}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "StartingCost", "value": "1" }, { "name": "{474c9a73}", "value": "2" }, { "name": "{e721bc88}", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: StartingCost", "Unmapped item variable: {474c9a73}", "Unmapped item variable: {e721bc88}", "Unsupported item effect metadata: StartingCost", "Unsupported item effect metadata: {474c9a73}", "Unsupported item effect metadata: {e721bc88}"]
 }

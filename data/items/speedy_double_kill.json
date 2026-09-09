@@ -1,7 +1,29 @@
 {
   "name": "Speedy Double Kill",
+  "displayName": "Speedy Double Kill",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SpeedyDoubleKill",
+  "description": "Gain a Guinsoo's Rageblade. When 2 players are eliminated, gain @GoldAmount@ gold.<br><br><tftitemrules>Fates Championship, 2021</tftitemrules>",
+  "tooltip": "Gain a Guinsoo's Rageblade. When 2 players are eliminated, gain @GoldAmount@ gold.<br><br><tftitemrules>Fates Championship, 2021</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SpeedyDoubleKill_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldAmount",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldAmount", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: GoldAmount", "Unsupported item effect metadata: GoldAmount"]
 }

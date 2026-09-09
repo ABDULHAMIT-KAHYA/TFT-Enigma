@@ -1,7 +1,17 @@
 {
   "name": "Defender Circlet",
+  "displayName": "Defender Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_DefenderCirclet",
+  "description": "Get a Defender Emblem, a Garen, and a Chain Vest.",
+  "tooltip": "Get a Defender Emblem, a Garen, and a Chain Vest.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

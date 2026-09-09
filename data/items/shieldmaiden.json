@@ -1,7 +1,17 @@
 {
   "name": "Shieldmaiden",
+  "displayName": "Shieldmaiden",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_LeonaCarry",
+  "description": "Gain a Leona. Your strongest Leona becomes an Attack Fighter that dashes through enemies to deal physical damage, stunning the first target hit.",
+  "tooltip": "Gain a Leona. Your strongest Leona becomes an Attack Fighter that dashes through enemies to deal physical damage, stunning the first target hit.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LeonaHero_I.TFT_Set17_PostLaunchAugments.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

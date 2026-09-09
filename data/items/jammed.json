@@ -1,7 +1,17 @@
 {
   "name": "Jammed!",
+  "displayName": "Jammed!",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_JammedSlot",
+  "description": "Item temporarily disabled",
+  "tooltip": "Item temporarily disabled",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_Jammed.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

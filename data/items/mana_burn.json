@@ -1,7 +1,29 @@
 {
   "name": "Mana Burn",
+  "displayName": "Mana Burn",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_EnshroudingStillness",
+  "description": "All enemies take @MaxHealthPerSecond@% of their max Health as true damage each second until they cast their Ability.<br>Gain a Shroud of Stillness.",
+  "tooltip": "All enemies take @MaxHealthPerSecond@% of their max Health as true damage each second until they cast their Ability.<br>Gain a Shroud of Stillness.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mana-Burn-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealthPerSecond",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxHealthPerSecond", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: MaxHealthPerSecond"]
 }

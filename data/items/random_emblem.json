@@ -1,7 +1,29 @@
 {
   "name": "Random Emblem",
+  "displayName": "Random Emblem",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_RandomEmblem",
+  "description": "Gain a random Emblem. Lose @HealthLoss@ Tactician Health.",
+  "tooltip": "Gain a random Emblem. Lose @HealthLoss@ Tactician Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_Sacrifice.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthLoss",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthLoss", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: HealthLoss"]
 }

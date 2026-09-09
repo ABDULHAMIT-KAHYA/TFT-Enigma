@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Augment_BranchingOut",
+  "displayName": "Branching Out",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_BranchingOut",
+  "description": "Gain a random Emblem.",
+  "tooltip": "Gain a random Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Branching-Out-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumReforgers",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Numberofcombats",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumReforgers", "value": "null" }, { "name": "Numberofcombats", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: NumReforgers", "Unmapped non-numeric item variable: Numberofcombats"]
+}

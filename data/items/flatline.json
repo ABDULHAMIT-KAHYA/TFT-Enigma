@@ -1,7 +1,40 @@
 {
   "name": "Flatline",
+  "displayName": "Flatline",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Marksman_Vertical",
+  "description": "Marksmen execute enemies under @ExecutionPercent*100@% Health. Every time a Marksman executes, all Marksman gain @ASBonus*100@% Attack Speed. Gain a Jhin and a Kindred.",
+  "tooltip": "Marksmen execute enemies under @ExecutionPercent*100@% Health. Every time a Marksman executes, all Marksman gain @ASBonus*100@% Attack Speed. Gain a Jhin and a Kindred.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Flatline_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.04,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ASBonus",
+      "rawSourceValue": "0.04",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ExecutionPercent",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ASBonus", "value": "0.04" }, { "name": "ExecutionPercent", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: ASBonus", "Unmapped item variable: ExecutionPercent"]
 }

@@ -1,7 +1,52 @@
 {
   "name": "Water Lotus I",
+  "displayName": "Water Lotus I",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_WaterLotus1",
+  "description": "Your team gains @CritChance*100@% Critical Strike chance, and their Abilities can critically strike. If an Ability critically strikes, restore @ManaOnCrit@% of your Mana over @ManaDuration@ seconds.",
+  "tooltip": "Your team gains @CritChance*100@% Critical Strike chance, and their Abilities can critically strike. If an Ability critically strikes, restore @ManaOnCrit@% of your Mana over @ManaDuration@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WaterLotus_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Water Lotus I:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaDuration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaOnCrit",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "0.05" }, { "name": "ManaDuration", "value": "3" }, { "name": "ManaOnCrit", "value": "9" }],
+  "importWarnings": ["Unmapped item variable: ManaDuration", "Unmapped item variable: ManaOnCrit"]
 }

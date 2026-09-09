@@ -1,0 +1,17 @@
+{
+  "name": "TFT17_GravesTrait_FrameOffense",
+  "displayName": "Assault Frame",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_FrameOffense",
+  "description": "4 Range, Attack Marksman<br>Specialized in dealing damage to foes.",
+  "tooltip": "4 Range, Attack Marksman<br>Specialized in dealing damage to foes.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_FrameOffense.TFT_Set17.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

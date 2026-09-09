@@ -1,7 +1,17 @@
 {
   "name": "Bilgewater",
+  "displayName": "Bilgewater",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitBilgewaterActivator",
+  "description": "Your team's attacks and Abilities mark enemies. The mark stores a percentage of damage dealt to the enemy.<br><br>Marked enemies are struck by a cannonball after @TFTTrait.TFTEvent5YR_Bilgewater.1:BarrageInterval@ seconds, dealing the stored damage plus a flat value as <physicalDamage>physical damage</physicalDamage>.<br><br><row>(@TFTTrait.TFTEvent5YR_Bilgewater.1:MinUnits@) @TFTTrait.TFTEvent5YR_Bilgewater.1:Damage@ + @TFTTrait.TFTEvent5YR_Bilgewater.1:DamagePercent@% damage dealt</row><br><row>(@TFTTrait.TFTEvent5YR_Bilgewater.2:MinUnits@) @TFTTrait.TFTEvent5YR_Bilgewater.2:Damage@ + @TFTTrait.TFTEvent5YR_Bilgewater.2:DamagePercent@% damage dealt. Every @TFTTrait.TFTEvent5YR_Bilgewater.2:ShotsUntilTreasure@th cannonball is replaced with a treasure chest that drops gold!</row>",
+  "tooltip": "Your team's attacks and Abilities mark enemies. The mark stores a percentage of damage dealt to the enemy.<br><br>Marked enemies are struck by a cannonball after @TFTTrait.TFTEvent5YR_Bilgewater.1:BarrageInterval@ seconds, dealing the stored damage plus a flat value as <physicalDamage>physical damage</physicalDamage>.<br><br><row>(@TFTTrait.TFTEvent5YR_Bilgewater.1:MinUnits@) @TFTTrait.TFTEvent5YR_Bilgewater.1:Damage@ + @TFTTrait.TFTEvent5YR_Bilgewater.1:DamagePercent@% damage dealt</row><br><row>(@TFTTrait.TFTEvent5YR_Bilgewater.2:MinUnits@) @TFTTrait.TFTEvent5YR_Bilgewater.2:Damage@ + @TFTTrait.TFTEvent5YR_Bilgewater.2:DamagePercent@% damage dealt. Every @TFTTrait.TFTEvent5YR_Bilgewater.2:ShotsUntilTreasure@th cannonball is replaced with a treasure chest that drops gold!</row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Bilgewater.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

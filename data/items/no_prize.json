@@ -1,7 +1,17 @@
 {
   "name": "No Prize",
+  "displayName": "No Prize",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_X_X",
+  "description": "Yarr!!! You got nothing. Try again next round. ",
+  "tooltip": "Yarr!!! You got nothing. Try again next round. ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/Mercenary_Scratch.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

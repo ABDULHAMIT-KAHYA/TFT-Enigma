@@ -1,7 +1,51 @@
 {
   "name": "At What Cost",
+  "displayName": "At What Cost",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_AtWhatCost",
+  "description": "Immediately go to level @Level@ and gain @XP@ XP. You don't get to choose your future augments.",
+  "tooltip": "Immediately go to level @Level@ and gain @XP@ XP. You don't get to choose your future augments.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AtWhatCost_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Level",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "null" }, { "name": "Level", "value": "6" }, { "name": "XP", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: Level", "Unmapped item variable: XP", "Unmapped non-numeric item variable: Gold", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: Level", "Unsupported item effect metadata: XP"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Apotheotic Forge",
+  "displayName": "Apotheotic Forge",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_ApotheoticForge",
+  "description": "Choose 1 of 4 Divine Artifacts.<br><br><rules>Artifacts are more powerful items with a unique effect.</rules>",
+  "tooltip": "Choose 1 of 4 Divine Artifacts.<br><br><rules>Artifacts are more powerful items with a unique effect.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Job_s-Done-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

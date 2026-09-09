@@ -1,8 +1,43 @@
 {
   "name": "Defense of the Placidium",
+  "displayName": "Defense of the Placidium",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Augment_DefenseOfIonia",
+  "description": "Your team gains @Durability*100@% Durability, increased to @EnhancedDurability*100@% if the Ionia trait is active.",
+  "tooltip": "Your team gains @Durability*100@% Durability, increased to @EnhancedDurability*100@% if the Ionia trait is active.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DefenseofIonia_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Defense of the Placidium:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Defense of the Placidium:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Durability",
+      "rawSourceValue": "0.08",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Durability", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "EnhancedDurability",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:EnhancedDurability", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Durability", "value": "0.08" }, { "name": "EnhancedDurability", "value": "0.12" }],
+  "importWarnings": []
 }

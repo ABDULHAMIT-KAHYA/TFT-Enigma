@@ -1,7 +1,41 @@
 {
   "name": "All Natural III",
+  "displayName": "All Natural III",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_AllNatural3",
+  "description": "Champions that aren't holding items gain @health@ Health and heal for @Healing*100@% of their max Health each second.",
+  "tooltip": "Champions that aren't holding items gain @health@ Health and heal for @Healing*100@% of their max Health each second.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:All Natural III:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 250, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 250, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.09,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Healing",
+      "rawSourceValue": "0.09",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Healing", "value": "0.09" }, { "name": "Health", "value": "250" }],
+  "importWarnings": ["Unmapped item variable: Healing"]
 }

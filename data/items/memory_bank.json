@@ -1,7 +1,41 @@
 {
   "name": "Memory Bank",
+  "displayName": "Memory Bank",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Augment_Thirsty_Vertical",
+  "description": "Gain a Jhin and Morgana. Dynamos gain @DamageAmp*100@% Damage Amp. After they spend @ManaNeeded@ Mana, gain a Zhonya's Paradox and an&nbsp;Aurora. <br><br>@TFTUnitProperty.item:TFT14_Augment_Thirsty_ManaStored_Tooltip@",
+  "tooltip": "Gain a Jhin and Morgana. Dynamos gain @DamageAmp*100@% Damage Amp. After they spend @ManaNeeded@ Mana, gain a Zhonya's Paradox and an&nbsp;Aurora. <br><br>@TFTUnitProperty.item:TFT14_Augment_Thirsty_ManaStored_Tooltip@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/MemoryBank_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Memory Bank:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.04, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.04,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "0.04",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.04, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 7000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaNeeded",
+      "rawSourceValue": "7000",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "0.04" }, { "name": "ManaNeeded", "value": "7000" }],
+  "importWarnings": ["Unmapped item variable: ManaNeeded"]
 }

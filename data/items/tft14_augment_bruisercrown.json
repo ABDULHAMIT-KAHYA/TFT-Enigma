@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_BruiserCrown",
+  "displayName": "Bruiser Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_BruiserCrown",
+  "description": "Gain a Bruiser Emblem, a Crownguard, and a Darius.",
+  "tooltip": "Gain a Bruiser Emblem, a Crownguard, and a Darius.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BruiserCirclet_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

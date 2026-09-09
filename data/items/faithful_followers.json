@@ -1,7 +1,17 @@
 {
   "name": "Faithful Followers",
+  "displayName": "Faithful Followers",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_XerathZap_TheWorld",
+  "description": "Gain a copy of every unlocked 4-cost champion.",
+  "tooltip": "Gain a copy of every unlocked 4-cost champion.",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_XerathWand_Self.TFT_Set12.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

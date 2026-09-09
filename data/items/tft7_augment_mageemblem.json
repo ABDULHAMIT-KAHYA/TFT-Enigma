@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Augment_MageEmblem",
+  "displayName": "Mage Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_MageEmblem",
+  "description": "Gain a Mage Emblem and a Vladimir.",
+  "tooltip": "Gain a Mage Emblem and a Vladimir.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mage-Crest-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

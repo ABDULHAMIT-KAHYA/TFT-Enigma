@@ -1,7 +1,17 @@
 {
   "name": "2 Completed Items and Reforger",
+  "displayName": "2 Completed Items and Reforger",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_RandomCompletedItems_And_Reforger",
+  "description": "2 Completed Items and Reforger",
+  "tooltip": "2 Completed Items and Reforger",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

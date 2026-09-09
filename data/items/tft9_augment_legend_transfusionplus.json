@@ -1,0 +1,40 @@
+{
+  "name": "TFT9_Augment_Legend_TransfusionPlus",
+  "displayName": "Transfusion II",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Legend_TransfusionPlus",
+  "description": "Your units gain @BaseHP@ Health, plus @BonusHPPerMissingHealth@ Health per missing Tactician Health.",
+  "tooltip": "Your units gain @BaseHP@ Health, plus @BonusHPPerMissingHealth@ Health per missing Tactician Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Transfusion-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseHP",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHPPerMissingHealth",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseHP", "value": "40" }, { "name": "BonusHPPerMissingHealth", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: BaseHP", "Unmapped item variable: BonusHPPerMissingHealth"]
+}

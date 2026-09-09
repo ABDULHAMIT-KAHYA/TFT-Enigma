@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Soldier_Spatula",
+  "displayName": "JACKPOT",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Soldier_Spatula",
+  "description": "2 Loaded Dice and a 2-star 4-cost are placed in your chest.",
+  "tooltip": "2 Loaded Dice and a 2-star 4-cost are placed in your chest.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "LootObject",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

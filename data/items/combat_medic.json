@@ -1,7 +1,52 @@
 {
   "name": "Combat Medic",
+  "displayName": "Combat Medic",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Augment_FishCarry",
+  "description": "Gain a Steb. Your strongest Steb's Ability's Mana cost is reduced by @ManaReduction@, but no longer heals. Steb's spell grants @TOOLTIPONLYOmnivamp@% Omnivamp and strikes 3 times, each dealing @TOOLTIPONLYModifiedDamage*100@%.",
+  "tooltip": "Gain a Steb. Your strongest Steb's Ability's Mana cost is reduced by @ManaReduction@, but no longer heals. Steb's spell grants @TOOLTIPONLYOmnivamp@% Omnivamp and strikes 3 times, each dealing @TOOLTIPONLYModifiedDamage*100@%.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FishHero_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Combat Medic:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPONLYOmnivamp",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:TOOLTIPONLYOmnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaReduction",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.65,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPONLYModifiedDamage",
+      "rawSourceValue": "0.65",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaReduction", "value": "10" }, { "name": "TOOLTIPONLYModifiedDamage", "value": "0.65" }, { "name": "TOOLTIPONLYOmnivamp", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: ManaReduction", "Unmapped item variable: TOOLTIPONLYModifiedDamage"]
 }

@@ -1,7 +1,30 @@
 {
   "name": "Luchador Emblem",
+  "displayName": "Luchador Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Item_RingKingsEmblemItem",
+  "description": "The holder gains the Luchador trait.",
+  "tooltip": "The holder gains the Luchador trait.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set15/TFT15_Emblem_Luchador.TFT_Set15.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Luchador Emblem:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "20" }],
+  "importWarnings": []
 }

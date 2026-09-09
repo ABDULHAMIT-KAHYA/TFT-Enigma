@@ -1,0 +1,29 @@
+{
+  "name": "TFTTutorial_Augment_Mana",
+  "displayName": "Tons of Stats!",
+  "isPlaceholder": true,
+  "sourceId": "TFTTutorial_Augment_Mana",
+  "description": "Your team gains @Health@ Health, @AttackDamage@% Attack Damage, @AbilityPower@% Ability Power, @Armor@ Armor, @MR@ Magic Resist, @AttackSpeed@% Attack Speed, and @Mana@ Mana.",
+  "tooltip": "Your team gains @Health@ Health, @AttackDamage@% Attack Damage, @AbilityPower@% Ability Power, @Armor@ Armor, @MR@ Magic Resist, @AttackSpeed@% Attack Speed, and @Mana@ Mana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tons-of-Stats-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Mana", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: Mana"]
+}

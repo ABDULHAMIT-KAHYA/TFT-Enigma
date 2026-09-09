@@ -1,8 +1,65 @@
 {
   "name": "Hijacked Cybercoil",
+  "displayName": "Hijacked Cybercoil",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_SejuaniCyberneticItem_Radiant",
+  "description": "Abilities and Attacks mark enemies for <TFTRadiantItemBonus>@MarkDuration@</TFTRadiantItemBonus> seconds. Heal for <TFTRadiantItemBonus>@HealingPercent*100@%</TFTRadiantItemBonus> of damage dealt to marked enemies.<br><br><TFTPassive>Total Healing This Round: @TFTUnitProperty.item:TFT14_Trait_Cybernetic_SejuaniItem_TotalHealing@</TFTPassive><br><br><rules>Recommended users: Sejuani, Jax, and Mordekaiser</rules>",
+  "tooltip": "Abilities and Attacks mark enemies for <TFTRadiantItemBonus>@MarkDuration@</TFTRadiantItemBonus> seconds. Heal for <TFTRadiantItemBonus>@HealingPercent*100@%</TFTRadiantItemBonus> of damage dealt to marked enemies.<br><br><TFTPassive>Total Healing This Round: @TFTUnitProperty.item:TFT14_Trait_Cybernetic_SejuaniItem_TotalHealing@</TFTPassive><br><br><rules>Recommended users: Sejuani, Jax, and Mordekaiser</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14/TFT14_Item_SejuaniCyberneticItem_Radiant.TFT_Set14.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:Hijacked Cybercoil:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Hijacked Cybercoil:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealingPercent",
+      "rawSourceValue": "0.75",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MarkDuration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "100" }, { "name": "HealingPercent", "value": "0.75" }, { "name": "MagicResist", "value": "100" }, { "name": "MarkDuration", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: HealingPercent", "Unmapped item variable: MarkDuration"]
 }

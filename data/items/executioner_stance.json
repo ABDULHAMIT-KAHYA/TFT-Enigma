@@ -1,7 +1,95 @@
 {
   "name": "Executioner Stance",
+  "displayName": "Executioner Stance",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Item_DragonFistReaperStance",
+  "description": "Deal <physicalDamage>@ModifiedStrikeDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to the lowest Health enemy within @HexRange@ hexes and <TFTKeyword>Stun</TFTKeyword> them for @StunDuration@ seconds. Other enemies in a 1-hex radius take <physicalDamage>@ModifiedAOEDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage. <br><br>After @NumKills@ kills with this ability all enemies instantly take <physicalDamage>@ModifiedShockwaveDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage and are <TFTKeyword>Stunned</TFTKeyword> for @KillStunDuration@ seconds.",
+  "tooltip": "Deal <physicalDamage>@ModifiedStrikeDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to the lowest Health enemy within @HexRange@ hexes and <TFTKeyword>Stun</TFTKeyword> them for @StunDuration@ seconds. Other enemies in a 1-hex radius take <physicalDamage>@ModifiedAOEDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage. <br><br>After @NumKills@ kills with this ability all enemies instantly take <physicalDamage>@ModifiedShockwaveDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage and are <TFTKeyword>Stunned</TFTKeyword> for @KillStunDuration@ seconds.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set15_DragonFist/TFT15_TraitArmory_DF_Executioner.TFT_Set15.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRange",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "KillStunDuration",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 130,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ModifiedAOEDamage",
+      "rawSourceValue": "130",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 180,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ModifiedShockwaveDamage",
+      "rawSourceValue": "180",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 330,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ModifiedStrikeDamage",
+      "rawSourceValue": "330",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumKills",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunDuration",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HexRange", "value": "3" }, { "name": "KillStunDuration", "value": "1.5" }, { "name": "ModifiedAOEDamage", "value": "130" }, { "name": "ModifiedShockwaveDamage", "value": "180" }, { "name": "ModifiedStrikeDamage", "value": "330" }, { "name": "NumKills", "value": "3" }, { "name": "StunDuration", "value": "1.5" }],
+  "importWarnings": ["Unmapped item variable: HexRange", "Unmapped item variable: KillStunDuration", "Unmapped item variable: ModifiedAOEDamage", "Unmapped item variable: ModifiedShockwaveDamage", "Unmapped item variable: ModifiedStrikeDamage", "Unmapped item variable: NumKills", "Unmapped item variable: StunDuration"]
 }

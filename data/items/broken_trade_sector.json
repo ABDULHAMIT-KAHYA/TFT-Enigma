@@ -1,7 +1,29 @@
 {
   "name": "Broken Trade Sector",
+  "displayName": "Broken Trade Sector",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_BrokenTradeSector",
+  "description": "Gain a free Shop reroll now, and every @RoundsPerRefresh@ player combats.",
+  "tooltip": "Gain a free Shop reroll now, and every @RoundsPerRefresh@ player combats.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundsPerRefresh",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RoundsPerRefresh", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: RoundsPerRefresh", "Unsupported item effect metadata: RoundsPerRefresh"]
 }

@@ -1,7 +1,95 @@
 {
   "name": "Crest Of Cinders",
+  "displayName": "Crest Of Cinders",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_CrestOfCinders",
+  "description": "Combat start: the holder and allies within @HexRange@ hexes in the same row gain the Crest of Cinders.<br><br>Champions holding the Crest of Cinders empower their attacks to Burn their target for @BurnAmount*100@% of their max Health as true damage and apply 33% <TFTKeyword>Wound</TFTKeyword>.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "tooltip": "Combat start: the holder and allies within @HexRange@ hexes in the same row gain the Crest of Cinders.<br><br>Champions holding the Crest of Cinders empower their attacks to Burn their target for @BurnAmount*100@% of their max Health as true damage and apply 33% <TFTKeyword>Wound</TFTKeyword>.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT9_SupportItems/Crest_Of_Cinders.tex",
+  "itemCategory": "SupportItem",
   "passiveStats": [
     { "name": "Item:Crest Of Cinders:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 250, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [
+    {
+      "name": "Item:Crest Of Cinders:Health",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Crest Of Cinders:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 250, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BurnAmount",
+      "rawSourceValue": "0.08",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BurnDuration",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HealInterval",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HexRange",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "MaxHPHeal",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "250",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 250, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BurnAmount", "value": "0.08" }, { "name": "BurnDuration", "value": "8" }, { "name": "HealInterval", "value": "2" }, { "name": "Health", "value": "250" }, { "name": "HexRange", "value": "1" }, { "name": "MaxHPHeal", "value": "2" }],
+  "importWarnings": ["Metadata-only item effect: BurnAmount -> Aura", "Metadata-only item effect: BurnDuration -> Aura", "Metadata-only item effect: HealInterval -> Aura", "Metadata-only item effect: HexRange -> Aura", "Metadata-only item effect: MaxHPHeal -> Aura", "Unmapped item variable: BurnAmount", "Unmapped item variable: BurnDuration", "Unmapped item variable: HealInterval", "Unmapped item variable: HexRange", "Unmapped item variable: MaxHPHeal"]
 }

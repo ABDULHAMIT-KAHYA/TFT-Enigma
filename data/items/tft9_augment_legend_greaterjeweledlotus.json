@@ -1,0 +1,43 @@
+{
+  "name": "TFT9_Augment_Legend_GreaterJeweledLotus",
+  "displayName": "Jeweled Lotus II",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_Legend_GreaterJeweledLotus",
+  "description": "Your team gains @CritChance@% Critical Strike Chance, @CritDamage*100@% Critical Strike Damage, and <TFTKeyword>Precision</TFTKeyword>.<br><br>{{TFT_Keyword_Precision}}",
+  "tooltip": "Your team gains @CritChance@% Critical Strike Chance, @CritDamage*100@% Critical Strike Damage, and <TFTKeyword>Precision</TFTKeyword>.<br><br>{{TFT_Keyword_Precision}}",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Jeweled-Lotus-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT9_Augment_Legend_GreaterJeweledLotus:CritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT9_Augment_Legend_GreaterJeweledLotus:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritDamage",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "25" }, { "name": "CritDamage", "value": "0.1" }],
+  "importWarnings": []
+}

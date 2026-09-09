@@ -1,7 +1,29 @@
 {
   "name": "Freestyling",
+  "displayName": "Freestyling",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_StreetDemon_Freestyling",
+  "description": "Clear all painted hexes. When Street Demons start combat on a non-tagged hex, tag it. After all hexes are tagged, gain @GoldAmt@ gold. Gain 3 Street Demons.",
+  "tooltip": "Clear all painted hexes. When Street Demons start combat on a non-tagged hex, tag it. After all hexes are tagged, gain @GoldAmt@ gold. Gain 3 Street Demons.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Freestyling_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldAmt",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldAmt", "value": "25" }],
+  "importWarnings": ["Unmapped item variable: GoldAmt", "Unsupported item effect metadata: GoldAmt"]
 }

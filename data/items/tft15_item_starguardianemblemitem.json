@@ -1,0 +1,41 @@
+{
+  "name": "TFT15_Item_StarGuardianEmblemItem",
+  "displayName": "Star Guardian Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Item_StarGuardianEmblemItem",
+  "description": "The holder gains the Star Guardian trait.<br><br><TFTBonus>Teamwork: </TFTBonus> Non-emblem Star Guardian bonuses are increased by @Percent@%. This effect stacks.<br><br><tftitemrules>[Unique - only 1 per champion.]</tftitemrules>",
+  "tooltip": "The holder gains the Star Guardian trait.<br><br><TFTBonus>Teamwork: </TFTBonus> Non-emblem Star Guardian bonuses are increased by @Percent@%. This effect stacks.<br><br><tftitemrules>[Unique - only 1 per champion.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set15/TFT15_Emblem_StarGuardian.TFT_Set15.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+    { "name": "Item:TFT15_Item_StarGuardianEmblemItem:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "percent",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "10" }, { "name": "percent", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: percent"]
+}

@@ -1,7 +1,29 @@
 {
   "name": "Guild of Thieves",
+  "displayName": "Guild of Thieves",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_GuildOfThieves",
+  "description": "Your champions always have Thieves' Gloves. Your current items are removed, and whenever you would gain an item, you instead gain @GoldAmount@ gold. ",
+  "tooltip": "Your champions always have Thieves' Gloves. Your current items are removed, and whenever you would gain an item, you instead gain @GoldAmount@ gold. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldAmount",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldAmount", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: GoldAmount", "Unsupported item effect metadata: GoldAmount"]
 }

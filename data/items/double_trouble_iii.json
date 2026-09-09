@@ -1,7 +1,30 @@
 {
   "name": "Double Trouble III",
+  "displayName": "Double Trouble III",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_Twins3",
+  "description": "When you field exactly 2 copies of a champion, they both gain @BonusStats@% Attack Damage and @BonusStats@% Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
+  "tooltip": "When you field exactly 2 copies of a champion, they both gain @BonusStats@% Attack Damage and @BonusStats@% Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Double-Trouble-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusStats",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 40, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusStats", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: BonusStats"]
 }

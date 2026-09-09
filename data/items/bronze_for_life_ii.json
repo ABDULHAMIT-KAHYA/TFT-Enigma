@@ -1,7 +1,41 @@
 {
   "name": "Bronze For Life II",
+  "displayName": "Bronze For Life II",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_BronzeForLife2",
+  "description": "Your team gains @DamageAmpBonus*100@% Damage Amp and @Resists@ Armor and Magic Resist for each Bronze-tier trait.<br><br>Damage Amp: @TFTUnitProperty.item:TFT_Augment_BronzeForLife_CurrentDamageAmp@%<br>Armor and Magic Resist: @TFTUnitProperty.item:TFT_Augment_BronzeForLife_CurrentDurability@",
+  "tooltip": "Your team gains @DamageAmpBonus*100@% Damage Amp and @Resists@ Armor and Magic Resist for each Bronze-tier trait.<br><br>Damage Amp: @TFTUnitProperty.item:TFT_Augment_BronzeForLife_CurrentDamageAmp@%<br>Armor and Magic Resist: @TFTUnitProperty.item:TFT_Augment_BronzeForLife_CurrentDurability@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BronzeForLife_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Bronze For Life II:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.02, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.02,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmpBonus",
+      "rawSourceValue": "0.02",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmpBonus", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.02, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Resists",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmpBonus", "value": "0.02" }, { "name": "Resists", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Resists"]
 }

@@ -473,6 +473,8 @@ static AbilityEffect parseAbilityEffect(const JsonValue& obj)
     e.areaShape = parseAreaShape(hasKey(obj, "areaShape") ? requiredString(obj, "areaShape") : "SingleTarget");
     e.radius = optionalInt(obj, "radius", 0);
     e.delayMs = optionalInt(obj, "delayMs", 0);
+    e.cooldownMs = optionalInt(obj, "cooldownMs", 0);
+    e.oncePerCombat = optionalBool(obj, "oncePerCombat", false);
 
     e.appliesStatusEffect = optionalBool(obj, "appliesStatusEffect", false);
     if (e.appliesStatusEffect && hasKey(obj, "appliedStatusEffect"))
@@ -483,6 +485,49 @@ static AbilityEffect parseAbilityEffect(const JsonValue& obj)
     e.canCrit = optionalBool(obj, "canCrit", false);
     e.critChanceOverride = optionalFloat(obj, "critChanceOverride", CombatConstants::NoOverrideFloat);
     e.critDamageOverride = optionalFloat(obj, "critDamageOverride", CombatConstants::NoOverrideFloat);
+    return e;
+}
+
+static GenericItemEffectType parseGenericItemEffectType(std::string_view s)
+{
+    if (s == "GrantStats") return GenericItemEffectType::GrantStats;
+    if (s == "DealDamage") return GenericItemEffectType::DealDamage;
+    if (s == "Heal") return GenericItemEffectType::Heal;
+    if (s == "Shield") return GenericItemEffectType::Shield;
+    if (s == "ApplyStatus") return GenericItemEffectType::ApplyStatus;
+    if (s == "Aura") return GenericItemEffectType::Aura;
+    if (s == "CooldownGate") return GenericItemEffectType::CooldownGate;
+    if (s == "OncePerCombatGate") return GenericItemEffectType::OncePerCombatGate;
+    if (s == "ModifyMana") return GenericItemEffectType::ModifyMana;
+    if (s == "Execute") return GenericItemEffectType::Execute;
+    if (s == "SummonUnit") return GenericItemEffectType::SummonUnit;
+    if (s == "GrantTrait") return GenericItemEffectType::GrantTrait;
+    if (s == "UnknownUnsupported") return GenericItemEffectType::UnknownUnsupported;
+    throw std::runtime_error("Unknown GenericItemEffectType: " + std::string(s));
+}
+
+static GenericItemEffect parseGenericItemEffect(const JsonValue& obj)
+{
+    GenericItemEffect e{};
+    e.effectType = parseGenericItemEffectType(requiredString(obj, "effectType"));
+    e.trigger = parseAbilityTrigger(hasKey(obj, "trigger") ? requiredString(obj, "trigger") : "Passive");
+    e.value = optionalFloat(obj, "value", 0.0f);
+    e.durationMs = optionalInt(obj, "durationMs", 0);
+    e.cooldownMs = optionalInt(obj, "cooldownMs", 0);
+    e.targetHint = optionalString(obj, "targetHint", "");
+    e.rawSourceName = optionalString(obj, "rawSourceName", "");
+    e.rawSourceValue = optionalString(obj, "rawSourceValue", "");
+    e.supportedForRuntime = optionalBool(obj, "supportedForRuntime", false);
+    if (hasKey(obj, "statusEffect"))
+    {
+        e.statusEffect = parseStatusEffect(obj.at("statusEffect"));
+        e.hasStatusEffect = true;
+    }
+    if (hasKey(obj, "damageFormula"))
+    {
+        e.damageFormula = parseDamageFormula(obj.at("damageFormula"));
+        e.hasDamageFormula = true;
+    }
     return e;
 }
 
@@ -542,6 +587,18 @@ static Item parseItem(const JsonValue& root)
         for (const JsonValue& e : arr.asArray())
         {
             item.triggeredEffects.push_back(parseAbilityEffect(e));
+        }
+    }
+    if (hasKey(root, "genericEffects"))
+    {
+        const JsonValue& arr = root.at("genericEffects");
+        if (!arr.isArray())
+        {
+            throw std::runtime_error("Item.genericEffects must be array");
+        }
+        for (const JsonValue& e : arr.asArray())
+        {
+            item.genericEffects.push_back(parseGenericItemEffect(e));
         }
     }
     if (!hasKey(root, "isPlaceholder"))

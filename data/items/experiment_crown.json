@@ -1,7 +1,17 @@
 {
   "name": "Experiment Crown",
+  "displayName": "Experiment Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_ExperimentCrown",
+  "description": "Gain an Experiment Emblem, a Bloodthirster, and an Urgot.",
+  "tooltip": "Gain an Experiment Emblem, a Bloodthirster, and an Urgot.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Experiment_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

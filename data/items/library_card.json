@@ -1,7 +1,40 @@
 {
   "name": "Library Card",
+  "displayName": "Library Card",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_KnowledgeIsPower",
+  "description": "Gain a Tome of Traits and a component anvil.",
+  "tooltip": "Gain a Tome of Traits and a component anvil.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Knowledge-is-Power-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumTomes",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "anvils",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumTomes", "value": "1" }, { "name": "anvils", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumTomes", "Unmapped item variable: anvils"]
 }

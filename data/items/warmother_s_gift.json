@@ -1,7 +1,17 @@
 {
   "name": "Warmother's Gift",
+  "displayName": "Warmother's Gift",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_FreljordSelector",
+  "description": "<rules>This item tracks the Damage Amp provided by this Wryding Stone</rules>",
+  "tooltip": "<rules>This item tracks the Damage Amp provided by this Wryding Stone</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Item_FreljordSelector.TFT_Set16.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

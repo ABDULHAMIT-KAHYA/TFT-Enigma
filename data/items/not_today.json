@@ -1,7 +1,30 @@
 {
   "name": "Not Today",
+  "displayName": "Not Today",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_NotToday",
+  "description": "Gain an Edge of Night. Champions holding this item gain @AS@% Attack Speed.",
+  "tooltip": "Gain an Edge of Night. Champions holding this item gain @AS@% Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Not-Today-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Not Today:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "35" }],
+  "importWarnings": []
 }

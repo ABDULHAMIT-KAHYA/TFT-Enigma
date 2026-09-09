@@ -1,0 +1,51 @@
+{
+  "name": "TFT_Augment_ComponentQuestBow_PAIRS",
+  "displayName": "Backup Bows",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ComponentQuestBow_PAIRS",
+  "description": "Gain a Recurve Bow. After your team attacks @StacksForReward@ times, gain @NumDelayed@ more.<br><br><tftitemrules>Attacks: @TFTUnitProperty.item:TFT_Augment_ComponentQuest_Tracker@</tftitemrules>",
+  "tooltip": "Gain a Recurve Bow. After your team attacks @StacksForReward@ times, gain @NumDelayed@ more.<br><br><tftitemrules>Attacks: @TFTUnitProperty.item:TFT_Augment_ComponentQuest_Tracker@</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RecurveWrecker_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDelayed",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StacksForReward",
+      "rawSourceValue": "1200",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{1ed24481}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumDelayed", "value": "2" }, { "name": "StacksForReward", "value": "1200" }, { "name": "{1ed24481}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumDelayed", "Unmapped item variable: StacksForReward", "Unmapped item variable: {1ed24481}", "Unsupported item effect metadata: NumDelayed", "Unsupported item effect metadata: StacksForReward", "Unsupported item effect metadata: {1ed24481}"]
+}

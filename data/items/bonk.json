@@ -1,7 +1,17 @@
 {
   "name": "Bonk!",
+  "displayName": "Bonk!",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_NasusCarry",
+  "description": "Gain a Nasus. Your strongest Nasus becomes an Attack Fighter with a single target Ability that gets stronger with each kill.",
+  "tooltip": "Gain a Nasus. Your strongest Nasus becomes an Attack Fighter with a single target Ability that gets stronger with each kill.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Bonk_I.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

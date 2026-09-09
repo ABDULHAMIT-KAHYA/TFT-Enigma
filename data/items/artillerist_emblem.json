@@ -1,7 +1,30 @@
 {
   "name": "Artillerist Emblem",
+  "displayName": "Artillerist Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Item_DemolitionistEmblemItem",
+  "description": "The holder gains the Artillerist trait.",
+  "tooltip": "The holder gains the Artillerist trait.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set13/TFT_Set13_Emblem_Artillerist.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Artillerist Emblem:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.1" }],
+  "importWarnings": []
 }

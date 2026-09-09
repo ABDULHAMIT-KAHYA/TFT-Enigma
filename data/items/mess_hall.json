@@ -1,7 +1,101 @@
 {
   "name": "Mess Hall",
+  "displayName": "Mess Hall",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_FoodfightTactics",
+  "description": "After @EndSeconds@ seconds of combat, your champions gain @AttackSpeed*100@% Attack Speed and attacks also hurl @ProjectileCount@ delicious projectiles that deal @BaseDamage@ (%i:scaleAD%%i:scaleAP%) magic damage.",
+  "tooltip": "After @EndSeconds@ seconds of combat, your champions gain @AttackSpeed*100@% Attack Speed and attacks also hurl @ProjectileCount@ delicious projectiles that deal @BaseDamage@ (%i:scaleAD%%i:scaleAP%) magic damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FoodfightTactics_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Mess Hall:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ADRatio",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "APRatio",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BaseDamage",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 25, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "EndSeconds",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 10, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ProjectileCount",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StartSeconds",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.08",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "ADRatio", "value": "1" }, { "name": "APRatio", "value": "1" }, { "name": "AttackSpeed", "value": "0.08" }, { "name": "BaseDamage", "value": "25" }, { "name": "EndSeconds", "value": "10" }, { "name": "ProjectileCount", "value": "2" }, { "name": "StartSeconds", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: ADRatio", "Unmapped item variable: APRatio", "Unmapped item variable: BaseDamage", "Unmapped item variable: EndSeconds", "Unmapped item variable: ProjectileCount", "Unmapped non-numeric item variable: StartSeconds"]
 }

@@ -1,0 +1,52 @@
+{
+  "name": "TFT_Augment_VoidborneHR",
+  "displayName": "Void Swarm",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_VoidborneHR",
+  "description": "Gain a Zz'Rot Portal and another after every @NumberOfCombats@ player combats. Zz'Rot Portal Voidlings gain @BonusAS*100@% Attack Speed and @BonusOmnivamp*100@% Omnivamp.",
+  "tooltip": "Gain a Zz'Rot Portal and another after every @NumberOfCombats@ player combats. Zz'Rot Portal Voidlings gain @BonusAS*100@% Attack Speed and @BonusOmnivamp*100@% Omnivamp.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Void-Swarm-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT_Augment_VoidborneHR:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusOmnivamp",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusOmnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAS",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Numberofcombats",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAS", "value": "0.4" }, { "name": "BonusOmnivamp", "value": "0.25" }, { "name": "Numberofcombats", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: BonusAS", "Unmapped item variable: Numberofcombats", "Unsupported item effect metadata: BonusAS", "Unsupported item effect metadata: Numberofcombats"]
+}

@@ -1,7 +1,17 @@
 {
   "name": "Warrior Crest",
+  "displayName": "Warrior Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_WarriorEmblem",
+  "description": "Gain a Warrior Emblem and a Yone.",
+  "tooltip": "Gain a Warrior Emblem and a Yone.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Warrior-Crest-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

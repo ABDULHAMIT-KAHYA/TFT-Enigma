@@ -1,7 +1,40 @@
 {
   "name": "Dynamo Emblem",
+  "displayName": "Dynamo Emblem",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Item_ThirstyEmblemItem",
+  "description": "The holder gains the Dynamo trait.<br>On cast, gain @AmpPer10*100@% Damage Amp per 10 Mana spent.",
+  "tooltip": "The holder gains the Dynamo trait.<br>On cast, gain @AmpPer10*100@% Damage Amp per 10 Mana spent.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set14/TFT14_Emblem_Dynamo.TFT_Set14.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "OnCast",
+      "value": 0.015,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{7d0d4c91}",
+      "rawSourceValue": "0.015",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCast",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Mana", "value": "15" }, { "name": "{7d0d4c91}", "value": "0.015" }],
+  "importWarnings": ["Metadata-only item effect: Mana -> ModifyMana", "Metadata-only item effect: {7d0d4c91} -> GrantTrait", "Unmapped item variable: Mana", "Unmapped item variable: {7d0d4c91}"]
 }

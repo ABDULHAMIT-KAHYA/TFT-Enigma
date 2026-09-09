@@ -1,7 +1,29 @@
 {
   "name": "Coven Emblem",
+  "displayName": "Coven Emblem",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Item_CovenEmblemItem",
+  "description": "The holder gains the Coven trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "tooltip": "The holder gains the Coven trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set5/Coven.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Mana", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: Mana"]
 }

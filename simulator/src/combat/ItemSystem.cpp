@@ -325,13 +325,20 @@ static void executeItemEffects(GameState& state,
                               Unit& owner,
                               Unit& target,
                               const Item& item,
+                              std::size_t ownerIndex,
+                              std::size_t itemIndex,
                               AbilityTrigger trigger,
                               std::int32_t damageDealt,
                               bool wasCrit)
 {
-    for (const AbilityEffect& effect : item.triggeredEffects)
+    for (std::size_t effectIndex = 0; effectIndex < item.triggeredEffects.size(); ++effectIndex)
     {
+        const AbilityEffect& effect = item.triggeredEffects[effectIndex];
         if (effect.trigger != trigger)
+        {
+            continue;
+        }
+        if (!state.canTriggerItemEffect(ownerIndex, itemIndex, effectIndex, effect.cooldownMs, effect.oncePerCombat))
         {
             continue;
         }
@@ -339,6 +346,7 @@ static void executeItemEffects(GameState& state,
         const std::vector<Unit*> targets =
             resolveTargets(state, owner, target, effect);
 
+        bool triggered = false;
         for (Unit* t : targets)
         {
             if (!t || !t->isAlive())
@@ -352,19 +360,36 @@ static void executeItemEffects(GameState& state,
                 effect.targetMaxHpPercentDamage > 0.0f)
             {
                 applyDamageEffect(state, owner, *t, effect, item.name, effect.canCrit);
+                triggered = true;
             }
 
             applyStatusWithStacking(state, owner, *t, effect, item.name);
+            if (effect.appliesStatusEffect)
+            {
+                triggered = true;
+            }
 
             if (trigger == AbilityTrigger::OnHit)
             {
                 applyHealFromDamage(state, owner, effect, item.name, damageDealt);
+                if (effect.healPercentOfDamage > 0.0f && damageDealt > 0)
+                {
+                    triggered = true;
+                }
             }
 
             if (trigger == AbilityTrigger::OnCrit && wasCrit)
             {
                 applyStatusWithStacking(state, owner, *t, effect, item.name);
+                if (effect.appliesStatusEffect)
+                {
+                    triggered = true;
+                }
             }
+        }
+        if (triggered)
+        {
+            state.recordItemEffectTrigger(ownerIndex, itemIndex, effectIndex);
         }
     }
 }
@@ -375,34 +400,40 @@ namespace ItemSystem
     {
         ItemEffectSystem::onCombatStart(state);
 
-        for (Unit& unit : state.units())
+        std::vector<Unit>& units = state.units();
+        for (std::size_t unitIndex = 0; unitIndex < units.size(); ++unitIndex)
         {
+            Unit& unit = units[unitIndex];
             if (!unit.isAlive())
             {
                 continue;
             }
 
-            for (const Item& item : unit.items())
+            const std::vector<Item>& items = unit.items();
+            for (std::size_t itemIndex = 0; itemIndex < items.size(); ++itemIndex)
             {
-                for (const AbilityEffect& effect : item.triggeredEffects)
-                {
-                    if (effect.trigger != AbilityTrigger::OnCombatStart)
-                    {
-                        continue;
-                    }
-
-                    Unit& dummyTarget = unit;
-                    executeItemEffects(state, unit, dummyTarget, item, AbilityTrigger::OnCombatStart, 0, false);
-                }
+                const Item& item = items[itemIndex];
+                Unit& dummyTarget = unit;
+                executeItemEffects(state, unit, dummyTarget, item, unitIndex, itemIndex, AbilityTrigger::OnCombatStart, 0, false);
             }
         }
     }
 
     void onAttack(GameState& state, Unit& attacker, Unit& target)
     {
-        for (const Item& item : attacker.items())
+        std::size_t ownerIndex = 0;
+        std::vector<Unit>& units = state.units();
+        for (; ownerIndex < units.size(); ++ownerIndex)
         {
-            executeItemEffects(state, attacker, target, item, AbilityTrigger::OnAttack, 0, false);
+            if (&units[ownerIndex] == &attacker)
+            {
+                break;
+            }
+        }
+        const std::vector<Item>& items = attacker.items();
+        for (std::size_t itemIndex = 0; itemIndex < items.size(); ++itemIndex)
+        {
+            executeItemEffects(state, attacker, target, items[itemIndex], ownerIndex, itemIndex, AbilityTrigger::OnAttack, 0, false);
         }
     }
 
@@ -413,17 +444,37 @@ namespace ItemSystem
                DamageType,
                bool wasCrit)
     {
-        for (const Item& item : attacker.items())
+        std::size_t ownerIndex = 0;
+        std::vector<Unit>& units = state.units();
+        for (; ownerIndex < units.size(); ++ownerIndex)
         {
-            executeItemEffects(state, attacker, target, item, AbilityTrigger::OnHit, finalDamage, wasCrit);
+            if (&units[ownerIndex] == &attacker)
+            {
+                break;
+            }
+        }
+        const std::vector<Item>& items = attacker.items();
+        for (std::size_t itemIndex = 0; itemIndex < items.size(); ++itemIndex)
+        {
+            executeItemEffects(state, attacker, target, items[itemIndex], ownerIndex, itemIndex, AbilityTrigger::OnHit, finalDamage, wasCrit);
         }
     }
 
     void onCrit(GameState& state, Unit& attacker, Unit& target)
     {
-        for (const Item& item : attacker.items())
+        std::size_t ownerIndex = 0;
+        std::vector<Unit>& units = state.units();
+        for (; ownerIndex < units.size(); ++ownerIndex)
         {
-            executeItemEffects(state, attacker, target, item, AbilityTrigger::OnCrit, 0, true);
+            if (&units[ownerIndex] == &attacker)
+            {
+                break;
+            }
+        }
+        const std::vector<Item>& items = attacker.items();
+        for (std::size_t itemIndex = 0; itemIndex < items.size(); ++itemIndex)
+        {
+            executeItemEffects(state, attacker, target, items[itemIndex], ownerIndex, itemIndex, AbilityTrigger::OnCrit, 0, true);
         }
     }
 
@@ -433,27 +484,57 @@ namespace ItemSystem
         {
             return;
         }
-        for (const Item& item : caster.items())
+        std::size_t ownerIndex = 0;
+        std::vector<Unit>& units = state.units();
+        for (; ownerIndex < units.size(); ++ownerIndex)
         {
-            executeItemEffects(state, caster, *target, item, AbilityTrigger::OnCast, 0, false);
+            if (&units[ownerIndex] == &caster)
+            {
+                break;
+            }
+        }
+        const std::vector<Item>& items = caster.items();
+        for (std::size_t itemIndex = 0; itemIndex < items.size(); ++itemIndex)
+        {
+            executeItemEffects(state, caster, *target, items[itemIndex], ownerIndex, itemIndex, AbilityTrigger::OnCast, 0, false);
         }
     }
 
     void onLowHealth(GameState& state, Unit& unit)
     {
         Unit& dummyTarget = unit;
-        for (const Item& item : unit.items())
+        std::size_t ownerIndex = 0;
+        std::vector<Unit>& units = state.units();
+        for (; ownerIndex < units.size(); ++ownerIndex)
         {
-            executeItemEffects(state, unit, dummyTarget, item, AbilityTrigger::OnLowHealth, 0, false);
+            if (&units[ownerIndex] == &unit)
+            {
+                break;
+            }
+        }
+        const std::vector<Item>& items = unit.items();
+        for (std::size_t itemIndex = 0; itemIndex < items.size(); ++itemIndex)
+        {
+            executeItemEffects(state, unit, dummyTarget, items[itemIndex], ownerIndex, itemIndex, AbilityTrigger::OnLowHealth, 0, false);
         }
     }
 
     void onDeath(GameState& state, Unit& unit)
     {
         Unit& dummyTarget = unit;
-        for (const Item& item : unit.items())
+        std::size_t ownerIndex = 0;
+        std::vector<Unit>& units = state.units();
+        for (; ownerIndex < units.size(); ++ownerIndex)
         {
-            executeItemEffects(state, unit, dummyTarget, item, AbilityTrigger::OnDeath, 0, false);
+            if (&units[ownerIndex] == &unit)
+            {
+                break;
+            }
+        }
+        const std::vector<Item>& items = unit.items();
+        for (std::size_t itemIndex = 0; itemIndex < items.size(); ++itemIndex)
+        {
+            executeItemEffects(state, unit, dummyTarget, items[itemIndex], ownerIndex, itemIndex, AbilityTrigger::OnDeath, 0, false);
         }
     }
 }

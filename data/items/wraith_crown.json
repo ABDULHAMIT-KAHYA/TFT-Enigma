@@ -1,7 +1,17 @@
 {
   "name": "Wraith Crown",
+  "displayName": "Wraith Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_EmpyreanCrown",
+  "description": "Gain a Wraith Emblem, a Hextech Gunblade, and a Malzahar.",
+  "tooltip": "Gain a Wraith Emblem, a Hextech Gunblade, and a Malzahar.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Wraith_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

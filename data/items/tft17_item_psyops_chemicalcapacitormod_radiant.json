@@ -1,0 +1,109 @@
+{
+  "name": "TFT17_Item_PsyOps_ChemicalCapacitorMod_Radiant",
+  "displayName": "Malware Matrix",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Item_PsyOps_ChemicalCapacitorMod_Radiant",
+  "description": "<spellPassive>Attack Champion:</spellPassive> Dealing physical damage to an enemy reduces the target's Armor by @ResistReduce@.<br><spellPassive>Magic Champion:</spellPassive> Dealing magic damage to an enemy reduces the target's Magic Resist by @MRReduction@. <br><br><TFTRadiantItemBonus>At (4): If the holder is Psionic, every @NumAttacks@rd attack cleaves, dealing <physicalDamage>@CleaveDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to nearby enemies.</TFTRadiantItemBonus><br><br><rules>Recommended users: Master Yi and Pyke.<br>Ability Damage Cooldown: @Cooldown@ seconds.</rules>",
+  "tooltip": "<spellPassive>Attack Champion:</spellPassive> Dealing physical damage to an enemy reduces the target's Armor by @ResistReduce@.<br><spellPassive>Magic Champion:</spellPassive> Dealing magic damage to an enemy reduces the target's Magic Resist by @MRReduction@. <br><br><TFTRadiantItemBonus>At (4): If the holder is Psionic, every @NumAttacks@rd attack cleaves, dealing <physicalDamage>@CleaveDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to nearby enemies.</TFTRadiantItemBonus><br><br><rules>Recommended users: Master Yi and Pyke.<br>Ability Damage Cooldown: @Cooldown@ seconds.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_PsyOps_Mod_ChemicalCapacitorMod.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT17_Item_PsyOps_ChemicalCapacitorMod_Radiant:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT17_Item_PsyOps_ChemicalCapacitorMod_Radiant:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CleaveDamage",
+      "rawSourceValue": "75",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 0.75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Cooldown",
+      "rawSourceValue": "0.75",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MRReduction",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumAttacks",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ResistReduce",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{1543aa48}",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StatOmnivamp",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:StatOmnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "15" }, { "name": "CleaveDamage", "value": "75" }, { "name": "Cooldown", "value": "0.75" }, { "name": "MRReduction", "value": "2" }, { "name": "NumAttacks", "value": "3" }, { "name": "ResistReduce", "value": "2" }, { "name": "StatOmnivamp", "value": "0.1" }, { "name": "{1543aa48}", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: CleaveDamage", "Unmapped item variable: Cooldown", "Unmapped item variable: MRReduction", "Unmapped item variable: NumAttacks", "Unmapped item variable: ResistReduce", "Unmapped item variable: {1543aa48}"]
+}

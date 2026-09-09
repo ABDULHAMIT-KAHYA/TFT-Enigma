@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Augment_MageConference",
+  "displayName": "Mage Conference",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_MageConference",
+  "description": "After combat with a player, a random Mage portals onto your bench. Gain a Taliyah.",
+  "tooltip": "After combat with a player, a random Mage portals onto your bench. Gain a Taliyah.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mage-Conference-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

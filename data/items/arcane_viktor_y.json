@@ -1,7 +1,51 @@
 {
   "name": "Arcane Viktor-y",
+  "displayName": "Arcane Viktor-y",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ArcaneViktory",
+  "description": "After @FirstStunSeconds@ seconds of combat, stun the enemy team for @StunDuration@ seconds. Repeat this after @SecondStunSeconds@ seconds of combat.<br><br><tftitemrules>TFT Macao Open, 2024</tftitemrules>",
+  "tooltip": "After @FirstStunSeconds@ seconds of combat, stun the enemy team for @StunDuration@ seconds. Repeat this after @SecondStunSeconds@ seconds of combat.<br><br><tftitemrules>TFT Macao Open, 2024</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ArcaneViktory_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FirstStunSeconds",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SecondStunSeconds",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunDuration",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "FirstStunSeconds", "value": "8" }, { "name": "SecondStunSeconds", "value": "18" }, { "name": "StunDuration", "value": "1.5" }],
+  "importWarnings": ["Unmapped item variable: FirstStunSeconds", "Unmapped item variable: SecondStunSeconds", "Unmapped item variable: StunDuration", "Unsupported item effect metadata: FirstStunSeconds", "Unsupported item effect metadata: SecondStunSeconds", "Unsupported item effect metadata: StunDuration"]
 }

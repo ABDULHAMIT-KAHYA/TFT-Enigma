@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_VanguardCrest",
+  "displayName": "Vanguard Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_VanguardCrest",
+  "description": "Gain a Vanguard Emblem.",
+  "tooltip": "Gain a Vanguard Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Vanguard_II.TFT_Set12.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

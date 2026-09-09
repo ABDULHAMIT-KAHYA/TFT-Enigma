@@ -1,7 +1,52 @@
 {
   "name": "Tattoo of Protection",
+  "displayName": "Tattoo of Protection",
+  "isPlaceholder": false,
+  "sourceId": "TFT11_Item_InkshadowPig",
+  "description": "Gain a @HealthShieldRatio*100@% Shield after casting the first time each combat. When it breaks, grant @AllyShieldRatio*100@% of this shield amount to the 2 nearest allies.",
+  "tooltip": "Gain a @HealthShieldRatio*100@% Shield after casting the first time each combat. When it breaks, grant @AllyShieldRatio*100@% of this shield amount to the 2 nearest allies.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT11_InkShadowItems/TFT11_Inkshadow_Protection.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Tattoo of Protection:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 250, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCast",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 250, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "OnCast",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "AllyShieldRatio",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "OnCast",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HealthShieldRatio",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AllyShieldRatio", "value": "0.5" }, { "name": "Health", "value": "250" }, { "name": "HealthShieldRatio", "value": "0.4" }],
+  "importWarnings": ["Metadata-only item effect: AllyShieldRatio -> OncePerCombatGate", "Metadata-only item effect: Health -> GrantStats", "Metadata-only item effect: HealthShieldRatio -> OncePerCombatGate", "Unmapped item variable: AllyShieldRatio", "Unmapped item variable: HealthShieldRatio"]
 }

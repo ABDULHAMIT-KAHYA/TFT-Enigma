@@ -1,7 +1,41 @@
 {
   "name": "Harmacist III",
+  "displayName": "Harmacist III",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_Harmacist3",
+  "description": "Your team has @Omnivamp@% Omnivamp and converts @Conversion@% of excess healing to true damage on their next attack.<br><br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>",
+  "tooltip": "Your team has @Omnivamp@% Omnivamp and converts @Conversion@% of excess healing to true damage on their next attack.<br><br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Harmacist-1-2-3-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Harmacist III:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Omnivamp",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Conversion",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Conversion", "value": "30" }, { "name": "Omnivamp", "value": "25" }],
+  "importWarnings": ["Unmapped item variable: Conversion"]
 }

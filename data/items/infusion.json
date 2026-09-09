@@ -1,7 +1,40 @@
 {
   "name": "Infusion",
+  "displayName": "Infusion",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Infusion",
+  "description": "Your team restores @Mana@ Mana every @Interval@ seconds.",
+  "tooltip": "Your team restores @Mana@ Mana every @Interval@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Infusion-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Interval",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Interval", "value": "5" }, { "name": "Mana", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: Interval", "Unmapped item variable: Mana", "Unsupported item effect metadata: Interval"]
 }

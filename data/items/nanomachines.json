@@ -1,7 +1,29 @@
 {
   "name": "Nanomachines",
+  "displayName": "Nanomachines",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_Nanomachines",
+  "description": "Restore @PercentMaxHealthRegenPerSecond*100@% max Health each second.",
+  "tooltip": "Restore @PercentMaxHealthRegenPerSecond*100@% max Health each second.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_Nanomachines.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.03,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentMaxHealthRegenPerSecond",
+      "rawSourceValue": "0.03",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PercentMaxHealthRegenPerSecond", "value": "0.03" }],
+  "importWarnings": ["Unmapped item variable: PercentMaxHealthRegenPerSecond"]
 }

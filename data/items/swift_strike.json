@@ -1,7 +1,41 @@
 {
   "name": "Swift Strike",
+  "displayName": "Swift Strike",
+  "isPlaceholder": false,
+  "sourceId": "TFTTutorial_Augment_BackRowAS1",
+  "description": "Combat start: Your champions in the back 2 rows gain @AS*100@ Attack Speed.",
+  "tooltip": "Combat start: Your champions in the back 2 rows gain @AS*100@ Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tutorial-Swift-Strike-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Swift Strike:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HexRangeIncrease",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "0.2" }, { "name": "HexRangeIncrease", "value": "null" }],
+  "importWarnings": ["Metadata-only item effect: AS -> GrantStats", "Unmapped non-numeric item variable: HexRangeIncrease", "Unsupported item effect metadata: HexRangeIncrease"]
 }

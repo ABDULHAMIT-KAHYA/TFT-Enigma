@@ -1,7 +1,17 @@
 {
   "name": "Yordle",
+  "displayName": "Yordle",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitYordleActivator",
+  "description": "After each player combat, a random 1, 2 or 3 cost champion that usually fits your team is added to your bench for free.<br><br><row>(@TFTTrait.TFTEvent5YR_Yordle.1:MinUnits@) Gain champions!</row><br><row>(@TFTTrait.TFTEvent5YR_Yordle.2:MinUnits@) If you have @TFTTrait.TFTEvent5YR_Yordle.2:NumOfThreeStarsNeeded@ or more 3 star champions, you instead gain a Yordle-Lord.</row>",
+  "tooltip": "After each player combat, a random 1, 2 or 3 cost champion that usually fits your team is added to your bench for free.<br><br><row>(@TFTTrait.TFTEvent5YR_Yordle.1:MinUnits@) Gain champions!</row><br><row>(@TFTTrait.TFTEvent5YR_Yordle.2:MinUnits@) If you have @TFTTrait.TFTEvent5YR_Yordle.2:NumOfThreeStarsNeeded@ or more 3 star champions, you instead gain a Yordle-Lord.</row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Yordle.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

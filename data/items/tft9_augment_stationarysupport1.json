@@ -1,0 +1,51 @@
+{
+  "name": "TFT9_Augment_StationarySupport1",
+  "displayName": "Stationary Support I",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_StationarySupport1",
+  "description": "After @PlayerCombatRounds@ player combats, gain @NumOfDummies@ Training Dummy(s) with @NumOfItems@ permanently attached Support item(s).",
+  "tooltip": "After @PlayerCombatRounds@ player combats, gain @NumOfDummies@ Training Dummy(s) with @NumOfItems@ permanently attached Support item(s).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Stationary-Support-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumOfDummies",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumOfItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PlayerCombatRounds",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumOfDummies", "value": "1" }, { "name": "NumOfItems", "value": "1" }, { "name": "PlayerCombatRounds", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: NumOfDummies", "Unmapped item variable: NumOfItems", "Unmapped item variable: PlayerCombatRounds"]
+}

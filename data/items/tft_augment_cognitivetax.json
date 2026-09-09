@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Augment_CognitiveTax",
+  "displayName": "Cognitive Tax",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_CognitiveTax",
+  "description": "Gain @Gold@ gold and @XP@ XP.",
+  "tooltip": "Gain @Gold@ gold and @XP@ XP.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CognitiveTax_I.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "8" }, { "name": "XP", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: XP", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: XP"]
+}

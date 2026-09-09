@@ -1,7 +1,29 @@
 {
   "name": "Axiom Arc I",
+  "displayName": "Axiom Arc I",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_AxiomArc1",
+  "description": "Your team gains @ManaGain@ Mana on kill.",
+  "tooltip": "Your team gains @ManaGain@ Mana on kill.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Axiom-Arc-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaGain",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaGain", "value": "25" }],
+  "importWarnings": ["Unmapped item variable: ManaGain"]
 }

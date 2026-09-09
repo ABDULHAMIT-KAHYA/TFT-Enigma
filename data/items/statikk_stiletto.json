@@ -1,7 +1,135 @@
 {
   "name": "Statikk Stiletto",
+  "displayName": "Statikk Stiletto",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_StatikkShivShadow",
+  "description": "<TFTShadowItemBonus>Every other</TFTShadowItemBonus> attack from the holder unleashes chain lightning that strikes @1StarBounces@ enemies, dealing @Damage@ magic damage and reducing their Magic Resist by @MRShred@% for @MRShredDuration@ seconds. ",
+  "tooltip": "<TFTShadowItemBonus>Every other</TFTShadowItemBonus> attack from the holder unleashes chain lightning that strikes @1StarBounces@ enemies, dealing @Damage@ magic damage and reducing their Magic Resist by @MRShred@% for @MRShredDuration@ seconds. ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Statikk_Shiv.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Statikk Stiletto:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "1StarBounces",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "2StarBounces",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "3StarBounces",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "4StarBounces",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 70,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Damage",
+      "rawSourceValue": "70",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 70, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MRShred",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 50, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MRShredDuration",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{84a41a6e}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "1StarBounces", "value": "4" }, { "name": "2StarBounces", "value": "4" }, { "name": "3StarBounces", "value": "4" }, { "name": "4StarBounces", "value": "4" }, { "name": "AS", "value": "10" }, { "name": "Damage", "value": "70" }, { "name": "MRShred", "value": "50" }, { "name": "MRShredDuration", "value": "5" }, { "name": "Mana", "value": "15" }, { "name": "{84a41a6e}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: 1StarBounces", "Unmapped item variable: 2StarBounces", "Unmapped item variable: 3StarBounces", "Unmapped item variable: 4StarBounces", "Unmapped item variable: Damage", "Unmapped item variable: MRShred", "Unmapped item variable: MRShredDuration", "Unmapped item variable: Mana", "Unmapped non-numeric item variable: {84a41a6e}"]
 }

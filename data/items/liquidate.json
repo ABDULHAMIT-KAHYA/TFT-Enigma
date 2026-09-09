@@ -1,7 +1,40 @@
 {
   "name": "Liquidate",
+  "displayName": "Liquidate",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Suits_Liquidate",
+  "description": "When you trade Cypher Intel, your board and bench is sold for @ValueMultiplier*100@% value and you gain @ReforgerCount@ Reforgers. Gain&nbsp;a&nbsp;Draven.",
+  "tooltip": "When you trade Cypher Intel, your board and bench is sold for @ValueMultiplier*100@% value and you gain @ReforgerCount@ Reforgers. Gain&nbsp;a&nbsp;Draven.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Liquidate_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ReforgerCount",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ValueMultiplier",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ReforgerCount", "value": "4" }, { "name": "ValueMultiplier", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: ReforgerCount", "Unmapped item variable: ValueMultiplier", "Unsupported item effect metadata: ReforgerCount", "Unsupported item effect metadata: ValueMultiplier"]
 }

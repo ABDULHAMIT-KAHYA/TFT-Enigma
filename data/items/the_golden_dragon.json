@@ -1,8 +1,43 @@
 {
   "name": "The Golden Dragon",
+  "displayName": "The Golden Dragon",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_TheGoldenDragon",
+  "description": "Gain a Mogul's Mail. Champions holding Mogul's Mail take up 2 team slots but gain @BonusHealth@ Health and @DurabilityPct*100@% Durability.<br><br><rules>Mogul's Mail gives gold as well as combat power.</rules><br><tftitemrules>Dragonlands Championship, 2022</tftitemrules>",
+  "tooltip": "Gain a Mogul's Mail. Champions holding Mogul's Mail take up 2 team slots but gain @BonusHealth@ Health and @DurabilityPct*100@% Durability.<br><br><rules>Mogul's Mail gives gold as well as combat power.</rules><br><tftitemrules>Dragonlands Championship, 2022</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TheGoldenDragon_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:The Golden Dragon:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:The Golden Dragon:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 700, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 700,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealth",
+      "rawSourceValue": "700",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealth", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 700, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DurabilityPct",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DurabilityPct", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusHealth", "value": "700" }, { "name": "DurabilityPct", "value": "0.2" }],
+  "importWarnings": []
 }

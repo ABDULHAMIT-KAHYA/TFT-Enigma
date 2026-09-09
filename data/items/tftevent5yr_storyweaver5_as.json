@@ -1,0 +1,40 @@
+{
+  "name": "TFTEvent5YR_Storyweaver5_AS",
+  "displayName": "Scroll of Haste",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent5YR_Storyweaver5_AS",
+  "description": "Attacks grant Kayle @ASAmt*100@% stacking Attack Speed.",
+  "tooltip": "Attacks grant Kayle @ASAmt*100@% stacking Attack Speed.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT11_StoryweaverItems/TFT11_Storyweaver_AttackSpeed2.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnAttack",
+      "value": 0.06,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ASAmt",
+      "rawSourceValue": "0.06",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnAttack",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{937db108}",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ASAmt", "value": "0.06" }, { "name": "{937db108}", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: ASAmt", "Unmapped item variable: {937db108}", "Unsupported item effect metadata: ASAmt", "Unsupported item effect metadata: {937db108}"]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "TFT4_Augment_MageCrown",
+  "displayName": "Mage Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_MageCrown",
+  "description": "Gain a Mage Emblem, a Jeweled Gauntlet, and a Lulu.",
+  "tooltip": "Gain a Mage Emblem, a Jeweled Gauntlet, and a Lulu.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mage_III.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

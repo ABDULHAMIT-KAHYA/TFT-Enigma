@@ -1,7 +1,102 @@
 {
   "name": "Tournament Favorites",
+  "displayName": "Tournament Favorites",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SoulFighter_TournamentFavorites",
+  "description": "Soul Fighters gain Fame when they deal damage. Each Fame breakpoint grants loot. Gain a Naafiri and Kalista.<br><br>Fame: @TFTUnitProperty.:TFT15_Augment_SoulFighter_TournamentFavorites_Damage@/@TFTUnitProperty.:TFT15_Augment_SoulFighter_TournamentFavorites_Breakpoint@",
+  "tooltip": "Soul Fighters gain Fame when they deal damage. Each Fame breakpoint grants loot. Gain a Naafiri and Kalista.<br><br>Fame: @TFTUnitProperty.:TFT15_Augment_SoulFighter_TournamentFavorites_Damage@/@TFTUnitProperty.:TFT15_Augment_SoulFighter_TournamentFavorites_Breakpoint@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TournamentFavorites_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Breakpoint1",
+      "rawSourceValue": "1000",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1000, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 5000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Breakpoint2",
+      "rawSourceValue": "5000",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 5000, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 10000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Breakpoint3",
+      "rawSourceValue": "10000",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 10000, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 25000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Breakpoint4",
+      "rawSourceValue": "25000",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 25000, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 60000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Breakpoint5",
+      "rawSourceValue": "60000",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 60000, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 100000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Breakpoint6",
+      "rawSourceValue": "100000",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 100000, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 130000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Breakpoint7",
+      "rawSourceValue": "130000",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 130000, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "Breakpoint1", "value": "1000" }, { "name": "Breakpoint2", "value": "5000" }, { "name": "Breakpoint3", "value": "10000" }, { "name": "Breakpoint4", "value": "25000" }, { "name": "Breakpoint5", "value": "60000" }, { "name": "Breakpoint6", "value": "100000" }, { "name": "Breakpoint7", "value": "130000" }],
+  "importWarnings": ["Unmapped item variable: Breakpoint1", "Unmapped item variable: Breakpoint2", "Unmapped item variable: Breakpoint3", "Unmapped item variable: Breakpoint4", "Unmapped item variable: Breakpoint5", "Unmapped item variable: Breakpoint6", "Unmapped item variable: Breakpoint7"]
 }

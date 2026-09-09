@@ -1,7 +1,40 @@
 {
   "name": "Tomb Raider II",
+  "displayName": "Tomb Raider II",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TombRaider2",
+  "description": "Gain @NumInitialItems@ completed item anvil. Every time a player is eliminated, choose one of their completed items to keep.",
+  "tooltip": "Gain @NumInitialItems@ completed item anvil. Every time a player is eliminated, choose one of their completed items to keep.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TombRaider_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDead",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumInitialItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumDead", "value": "9" }, { "name": "NumInitialItems", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumDead", "Unmapped item variable: NumInitialItems", "Unsupported item effect metadata: NumDead", "Unsupported item effect metadata: NumInitialItems"]
 }

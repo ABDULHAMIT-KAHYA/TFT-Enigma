@@ -1,0 +1,42 @@
+{
+  "name": "TFT13_Augment_Sniper",
+  "displayName": "Sniper's Nest",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Augment_Sniper",
+  "description": "Snipers gain +@DamageAmp@% Damage Amp for each round fought from the same starting hex (Maximum +@MaxAmp@%). Gain a Zeri.",
+  "tooltip": "Snipers gain +@DamageAmp@% Damage Amp for each round fought from the same starting hex (Maximum +@MaxAmp@%). Gain a Zeri.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SniperNest_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT13_Augment_Sniper:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 32,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MaxAmp",
+      "rawSourceValue": "32",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 32, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "8" }, { "name": "MaxAmp", "value": "32" }],
+  "importWarnings": ["Unmapped item variable: MaxAmp"]
+}

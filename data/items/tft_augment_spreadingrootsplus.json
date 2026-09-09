@@ -1,0 +1,51 @@
+{
+  "name": "TFT_Augment_SpreadingRootsPlus",
+  "displayName": "Spreading Roots+",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SpreadingRootsPlus",
+  "description": "Gain @NumOfEmblems@ random Emblems, a Reforger, and @Gold@ gold.",
+  "tooltip": "Gain @NumOfEmblems@ random Emblems, a Reforger, and @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SpreadingRoots_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumOfEmblems",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumReforgers",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }, { "name": "NumOfEmblems", "value": "2" }, { "name": "NumReforgers", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumOfEmblems", "Unmapped item variable: NumReforgers"]
+}

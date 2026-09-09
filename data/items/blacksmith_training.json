@@ -1,7 +1,40 @@
 {
   "name": "Blacksmith Training",
+  "displayName": "Blacksmith Training",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_BlacksmithTraining",
+  "description": "Whenever you build an item, gain a completed item anvil instead. That anvil always offers the item built + @NumOptions@ other options. Gain a random component.",
+  "tooltip": "Whenever you build an item, gain a completed item anvil instead. That anvil always offers the item built + @NumOptions@ other options. Gain a random component.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BlacksmithTraining_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumOptions",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumItems", "value": "2" }, { "name": "NumOptions", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumItems", "Unmapped item variable: NumOptions", "Unsupported item effect metadata: NumItems", "Unsupported item effect metadata: NumOptions"]
 }

@@ -1,8 +1,89 @@
 {
   "name": "Flickerblades",
+  "displayName": "Flickerblades",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_Artifact_NavoriFlickerblades",
+  "description": "Attacks grant @ASPerStack*100@% stacking Attack Speed. Every @StacksPerBonus@ attacks also grant @ADPerBonus*100@% Attack Damage and @APPerBonus@% Ability Power.",
+  "tooltip": "Attacks grant @ASPerStack*100@% stacking Attack Speed. Every @StacksPerBonus@ attacks also grant @ADPerBonus*100@% Attack Damage and @APPerBonus@% Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_Artifact_NavoriFlickerplade.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Flickerblades:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Flickerblades:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 0.02,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ADPerBonus",
+      "rawSourceValue": "0.02",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "APPerBonus",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ASPerStack",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "StacksPerBonus",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "ADPerBonus", "value": "0.02" }, { "name": "AP", "value": "10" }, { "name": "APPerBonus", "value": "2" }, { "name": "AS", "value": "20" }, { "name": "ASPerStack", "value": "0.05" }, { "name": "StacksPerBonus", "value": "3" }],
+  "importWarnings": ["Metadata-only item effect: ADPerBonus -> DealDamage", "Metadata-only item effect: AP -> GrantStats", "Metadata-only item effect: APPerBonus -> DealDamage", "Metadata-only item effect: AS -> GrantStats", "Metadata-only item effect: ASPerStack -> DealDamage", "Metadata-only item effect: StacksPerBonus -> DealDamage", "Unmapped item variable: ADPerBonus", "Unmapped item variable: APPerBonus", "Unmapped item variable: ASPerStack", "Unmapped item variable: StacksPerBonus"]
 }

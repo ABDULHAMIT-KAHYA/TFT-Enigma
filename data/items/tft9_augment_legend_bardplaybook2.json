@@ -1,0 +1,62 @@
+{
+  "name": "TFT9_Augment_Legend_BardPlaybook2",
+  "displayName": "Caretaker's Favor",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Legend_BardPlaybook2",
+  "description": "Gain a component anvil when you reach level @levelreqa@, @levelreqb@, @levelreqc@, and @levelreqd@.<br><br><rules>The anvil offers 4 choices.</rules>",
+  "tooltip": "Gain a component anvil when you reach level @levelreqa@, @levelreqb@, @levelreqc@, and @levelreqd@.<br><br><rules>The anvil offers 4 choices.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Caretaker_s-Chosen-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "levelreqa",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "levelreqb",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "levelreqc",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "levelreqd",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "levelreqa", "value": "5" }, { "name": "levelreqb", "value": "6" }, { "name": "levelreqc", "value": "7" }, { "name": "levelreqd", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: levelreqa", "Unmapped item variable: levelreqb", "Unmapped item variable: levelreqc", "Unmapped item variable: levelreqd", "Unsupported item effect metadata: levelreqa", "Unsupported item effect metadata: levelreqb", "Unsupported item effect metadata: levelreqc", "Unsupported item effect metadata: levelreqd"]
+}

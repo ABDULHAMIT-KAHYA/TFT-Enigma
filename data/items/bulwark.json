@@ -1,7 +1,30 @@
 {
   "name": "Bulwark",
+  "displayName": "Bulwark",
+  "isPlaceholder": false,
+  "sourceId": "TFTTutorial_Augment_FrontRowHealth1",
+  "description": "Combat start: Your champions in the front 2 rows gain @Health@ Health.",
+  "tooltip": "Combat start: Your champions in the front 2 rows gain @Health@ Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tutorial-Bulwark-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Bulwark:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "100" }],
+  "importWarnings": ["Metadata-only item effect: Health -> GrantStats"]
 }

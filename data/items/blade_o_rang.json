@@ -1,7 +1,30 @@
 {
   "name": "Blade-o-rang",
+  "displayName": "Blade-o-rang",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_AnimaSquad_Weapon_Boomerang",
+  "description": "Every @CastPeriod@ seconds, a random Anima Squad champion throws a returning Blade-o-rang that deals physical damage, increased for the first target hit.",
+  "tooltip": "Every @CastPeriod@ seconds, a random Anima Squad champion throws a returning Blade-o-rang that deals physical damage, increased for the first target hit.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14_AnimaSquadItems/TooltipIcons/TFT14_Icon_AnimaSquad_Boomerang.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "CastPeriod",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "CastPeriod", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: CastPeriod"]
 }

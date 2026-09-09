@@ -1,7 +1,17 @@
 {
   "name": "Contract Killer",
+  "displayName": "Contract Killer",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_PykeCarry",
+  "description": "Gain a Pyke. Your strongest Pyke becomes an Attack Fighter, generates gold on team takedown, and gains a reset on-kill Ability.",
+  "tooltip": "Gain a Pyke. Your strongest Pyke becomes an Attack Fighter, generates gold on team takedown, and gains a reset on-kill Ability.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ContractKiller_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

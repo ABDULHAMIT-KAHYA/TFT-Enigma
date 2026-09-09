@@ -1,7 +1,29 @@
 {
   "name": "tft_item_name_RadiantSpatula",
+  "displayName": "tft_item_name_RadiantSpatula",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Item_SpatulaRadiant",
+  "description": "tft_item_description_RadiantSpatula",
+  "tooltip": "tft_item_description_RadiantSpatula",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Spatula_Radiant.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{fe9818ef}",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{fe9818ef}", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: {fe9818ef}"]
 }

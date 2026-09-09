@@ -1,7 +1,17 @@
 {
   "name": "Assassin Heart",
+  "displayName": "Assassin Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_AssassinTrait",
+  "description": "Your team counts as having 1 additional Assassin. Gain a Qiyana.",
+  "tooltip": "Your team counts as having 1 additional Assassin. Gain a Qiyana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AssassinHeart1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

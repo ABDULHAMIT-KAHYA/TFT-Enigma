@@ -1,7 +1,30 @@
 {
   "name": "Blade Dance",
+  "displayName": "Blade Dance",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_IreliaCarry",
+  "description": "Gain an Irelia. Your strongest Irelia gains @TOOLTIPBonusAS*100@% Attack Speed and gains a brand new Ability that dashes her between two targets, dealing physical damage to both.",
+  "tooltip": "Gain an Irelia. Your strongest Irelia gains @TOOLTIPBonusAS*100@% Attack Speed and gains a brand new Ability that dashes her between two targets, dealing physical damage to both.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Irelia-Hero-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "TOOLTIPBonusAS",
+      "rawSourceValue": "0.6",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "TOOLTIPBonusAS", "value": "0.6" }],
+  "importWarnings": ["Unmapped item variable: TOOLTIPBonusAS"]
 }

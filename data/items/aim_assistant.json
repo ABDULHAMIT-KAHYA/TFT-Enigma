@@ -1,7 +1,29 @@
 {
   "name": "Aim-Assistant",
+  "displayName": "Aim-Assistant",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_AimAssistant",
+  "description": "Deal @BonusDamagePerHex*100@% bonus damage per hex distance from the target.",
+  "tooltip": "Deal @BonusDamagePerHex*100@% bonus damage per hex distance from the target.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_AimAssistant.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusDamagePerHex",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusDamagePerHex", "value": "0.05" }],
+  "importWarnings": ["Unmapped item variable: BonusDamagePerHex"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "tft15_itemname_BattleQueenCrown",
+  "displayName": "tft15_itemname_BattleQueenCrown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Item_BattleQueen_Crown",
+  "description": "tft15_itemdescription_BattleQueenCrown",
+  "tooltip": "tft15_itemdescription_BattleQueenCrown",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT12/TFT12_FaerieCrown.TFT_Set12.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

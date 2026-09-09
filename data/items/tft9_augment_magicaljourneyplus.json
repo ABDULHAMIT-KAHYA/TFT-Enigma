@@ -1,0 +1,40 @@
+{
+  "name": "TFT9_Augment_MagicalJourneyPlus",
+  "displayName": "Magical Journey+",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_MagicalJourneyPlus",
+  "description": "After each carousel, randomly gain @XP@ XP or @Rerolls@ free rerolls. Then, randomly gain one of these effects again.",
+  "tooltip": "After each carousel, randomly gain @XP@ XP or @Rerolls@ free rerolls. Then, randomly gain one of these effects again.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Rerolls",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Rerolls", "value": "3" }, { "name": "XP", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Rerolls", "Unmapped item variable: XP", "Unsupported item effect metadata: Rerolls", "Unsupported item effect metadata: XP"]
+}

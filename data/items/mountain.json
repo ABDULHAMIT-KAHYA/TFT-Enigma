@@ -1,7 +1,17 @@
 {
   "name": "Mountain",
+  "displayName": "Mountain",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitMountainActivator",
+  "description": "Gain 2 Mountain hexes in the front row.<br>Combat start: units standing on a Mountain hex gain a Shield and permanent bonus Health.<br><br><row>(@TFTTrait.TFTEvent5YR_Mountain.1:MinUnits@) @TFTTrait.TFTEvent5YR_Mountain.1:ShieldValue@ Shield, @TFTTrait.TFTEvent5YR_Mountain.1:PermBonusHealth@ %i:scaleHealth%. </row><br><row>(@TFTTrait.TFTEvent5YR_Mountain.2:MinUnits@) @TFTTrait.TFTEvent5YR_Mountain.2:ShieldValue@ Shield, @TFTTrait.TFTEvent5YR_Mountain.2:PermBonusHealth@ %i:scaleHealth%. The entire front row becomes Mountain hexes.</row>",
+  "tooltip": "Gain 2 Mountain hexes in the front row.<br>Combat start: units standing on a Mountain hex gain a Shield and permanent bonus Health.<br><br><row>(@TFTTrait.TFTEvent5YR_Mountain.1:MinUnits@) @TFTTrait.TFTEvent5YR_Mountain.1:ShieldValue@ Shield, @TFTTrait.TFTEvent5YR_Mountain.1:PermBonusHealth@ %i:scaleHealth%. </row><br><row>(@TFTTrait.TFTEvent5YR_Mountain.2:MinUnits@) @TFTTrait.TFTEvent5YR_Mountain.2:ShieldValue@ Shield, @TFTTrait.TFTEvent5YR_Mountain.2:PermBonusHealth@ %i:scaleHealth%. The entire front row becomes Mountain hexes.</row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Mountain.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

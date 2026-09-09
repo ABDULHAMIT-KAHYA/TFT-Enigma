@@ -1,7 +1,17 @@
 {
   "name": "God Willow's Grove",
+  "displayName": "God Willow's Grove",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_GodWillowsGrove",
+  "description": "The champion in your right-most bench slot contributes its non-unique traits as though it was on your team.",
+  "tooltip": "The champion in your right-most bench slot contributes its non-unique traits as though it was on your team.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

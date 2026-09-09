@@ -1,7 +1,17 @@
 {
   "name": "Prodigy Circlet",
+  "displayName": "Prodigy Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_ProdigyCirclet",
+  "description": "Gain a Prodigy Emblem, a Malzahar, and a Needlessly Large Rod.",
+  "tooltip": "Gain a Prodigy Emblem, a Malzahar, and a Needlessly Large Rod.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Prodigy_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

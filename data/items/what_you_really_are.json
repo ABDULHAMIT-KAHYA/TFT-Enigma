@@ -1,7 +1,29 @@
 {
   "name": "What You Really Are",
+  "displayName": "What You Really Are",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Grant6Cost_Warwick",
+  "description": "Gain a Bloodthirster. After you deal @PlayerDamage@ damage to other players, gain a Warwick and a Sterak's Gage.<br>(Current: @TFTUnitProperty.item:TFT13_Augment_WarwickDamageCount@)<br>",
+  "tooltip": "Gain a Bloodthirster. After you deal @PlayerDamage@ damage to other players, gain a Warwick and a Sterak's Gage.<br>(Current: @TFTUnitProperty.item:TFT13_Augment_WarwickDamageCount@)<br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WhatYouTrulyAre_Evolved_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PlayerDamage",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PlayerDamage", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: PlayerDamage"]
 }

@@ -1,0 +1,30 @@
+{
+  "name": "TFT16_XerathZap_EmperorsProsperity",
+  "displayName": "Rite Of Negation",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_XerathZap_EmperorsProsperity",
+  "description": "Next combat: Shurimans gain @DamageAmp*100@% Damage Amp and crowd control immunity.",
+  "tooltip": "Next combat: Shurimans gain @DamageAmp*100@% Damage Amp and crowd control immunity.",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_XerathWand_Self.TFT_Set12.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "AttacksRequired",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttacksRequired", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: AttacksRequired"]
+}

@@ -1,7 +1,128 @@
 {
   "name": "Fiendish Farewell",
+  "displayName": "Fiendish Farewell",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_Hellion",
+  "description": "Whenever a Hellion dies, the portal casts a fireball dealing @ZiggsBombDamageStage1@-@ZiggsBombDamageStage7@ magic damage (based on stage). At @HealthThreshold@ Health, heal @heal@ at the end of combat. Gain a Kennen.",
+  "tooltip": "Whenever a Hellion dies, the portal casts a fireball dealing @ZiggsBombDamageStage1@-@ZiggsBombDamageStage7@ magic damage (based on stage). At @HealthThreshold@ Health, heal @heal@ at the end of combat. Gain a Kennen.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Fiendish-Farewell_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Heal",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 66,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ZiggsBombDamageStage1",
+      "rawSourceValue": "66",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 166,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ZiggsBombDamageStage2",
+      "rawSourceValue": "166",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 266,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ZiggsBombDamageStage3",
+      "rawSourceValue": "266",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 366,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ZiggsBombDamageStage4",
+      "rawSourceValue": "366",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 466,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ZiggsBombDamageStage5",
+      "rawSourceValue": "466",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 566,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ZiggsBombDamageStage6",
+      "rawSourceValue": "566",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 666,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ZiggsBombDamageStage7",
+      "rawSourceValue": "666",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{8dda82aa}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Heal", "value": "6" }, { "name": "HealthThreshold", "value": "6" }, { "name": "ZiggsBombDamageStage1", "value": "66" }, { "name": "ZiggsBombDamageStage2", "value": "166" }, { "name": "ZiggsBombDamageStage3", "value": "266" }, { "name": "ZiggsBombDamageStage4", "value": "366" }, { "name": "ZiggsBombDamageStage5", "value": "466" }, { "name": "ZiggsBombDamageStage6", "value": "566" }, { "name": "ZiggsBombDamageStage7", "value": "666" }, { "name": "{8dda82aa}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Heal", "Unmapped item variable: HealthThreshold", "Unmapped item variable: ZiggsBombDamageStage1", "Unmapped item variable: ZiggsBombDamageStage2", "Unmapped item variable: ZiggsBombDamageStage3", "Unmapped item variable: ZiggsBombDamageStage4", "Unmapped item variable: ZiggsBombDamageStage5", "Unmapped item variable: ZiggsBombDamageStage6", "Unmapped item variable: ZiggsBombDamageStage7", "Unmapped item variable: {8dda82aa}"]
 }

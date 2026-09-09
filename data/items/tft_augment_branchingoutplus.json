@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Augment_BranchingOutPlus",
+  "displayName": "Branching Out+",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_BranchingOutPlus",
+  "description": "Gain a random Emblem and a Reforger.<br><br><rules>Reforgers allow you to remake any item.</rules>",
+  "tooltip": "Gain a random Emblem and a Reforger.<br><br><rules>Reforgers allow you to remake any item.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Branching-Out-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumReforgers",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Numberofcombats",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumReforgers", "value": "1" }, { "name": "Numberofcombats", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: NumReforgers", "Unmapped non-numeric item variable: Numberofcombats"]
+}

@@ -1,7 +1,29 @@
 {
   "name": "Multi-Mech",
+  "displayName": "Multi-Mech",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_MightyMech_MultiMech",
+  "description": "You no longer gain the Mighty Mech. Instead, all Mighty Mech champions gain @MechStatPercentage*100@% of the Health, Ability Power, and Attack Damage the Mech would have.<br><br>Gain an Aatrox.",
+  "tooltip": "You no longer gain the Mighty Mech. Instead, all Mighty Mech champions gain @MechStatPercentage*100@% of the Health, Ability Power, and Attack Damage the Mech would have.<br><br>Gain an Aatrox.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/MultiMech_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MechStatPercentage",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MechStatPercentage", "value": "0.4" }],
+  "importWarnings": ["Unmapped item variable: MechStatPercentage"]
 }

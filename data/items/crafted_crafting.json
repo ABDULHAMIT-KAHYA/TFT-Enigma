@@ -1,7 +1,29 @@
 {
   "name": "Crafted Crafting",
+  "displayName": "Crafted Crafting",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_CraftedCrafting",
+  "description": "Whenever you craft a completed item, gain @Rerolls@ rerolls.",
+  "tooltip": "Whenever you craft a completed item, gain @Rerolls@ rerolls.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CraftedCrafting_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Rerolls",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Rerolls", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Rerolls", "Unsupported item effect metadata: Rerolls"]
 }

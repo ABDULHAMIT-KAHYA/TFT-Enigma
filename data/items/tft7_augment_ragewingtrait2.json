@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Augment_RagewingTrait2",
+  "displayName": "Ragewing Soul",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_RagewingTrait2",
+  "description": "Your team counts as having 1 additional Ragewing. Gain a Guinsoo's Rageblade and a Rakan.",
+  "tooltip": "Your team counts as having 1 additional Ragewing. Gain a Guinsoo's Rageblade and a Rakan.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Ragewing-Crown-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

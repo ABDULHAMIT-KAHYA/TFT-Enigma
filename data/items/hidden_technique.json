@@ -1,7 +1,17 @@
 {
   "name": "Hidden Technique",
+  "displayName": "Hidden Technique",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_HiddenTech_ItemData",
+  "description": "TFT15_HiddenTech_ShopData_Description",
+  "tooltip": "TFT15_HiddenTech_ShopData_Description",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_EconWand_Self.TFT_Set12.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

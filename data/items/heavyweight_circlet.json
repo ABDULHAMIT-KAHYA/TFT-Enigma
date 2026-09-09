@@ -1,7 +1,17 @@
 {
   "name": "Heavyweight Circlet",
+  "displayName": "Heavyweight Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_HeavyweightCirclet",
+  "description": "Gain a Heavyweight Emblem, a Poppy, and a Giant's Belt.",
+  "tooltip": "Gain a Heavyweight Emblem, a Poppy, and a Giant's Belt.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Heavyweight_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

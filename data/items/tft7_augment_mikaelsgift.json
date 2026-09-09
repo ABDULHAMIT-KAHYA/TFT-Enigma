@@ -1,0 +1,29 @@
+{
+  "name": "TFT7_Augment_MikaelsGift",
+  "displayName": "Better Together",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_MikaelsGift",
+  "description": "Aura items that buff your team have their effects increased by @AuraIncreasePercent*100@%. Gain a Locket of the Iron Solari.",
+  "tooltip": "Aura items that buff your team have their effects increased by @AuraIncreasePercent*100@%. Gain a Locket of the Iron Solari.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Better-Together-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AuraIncreasePercent",
+      "rawSourceValue": "0.33",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AuraIncreasePercent", "value": "0.33" }],
+  "importWarnings": ["Unmapped item variable: AuraIncreasePercent"]
+}

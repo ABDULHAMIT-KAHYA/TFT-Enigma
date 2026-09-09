@@ -1,8 +1,54 @@
 {
   "name": "Divine Ascension",
+  "displayName": "Divine Ascension",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Augment_Divinicorp_Vertical",
+  "description": "After @Delay@ seconds your Divinicorp champions ascend, gaining @BonusHealthPerc*100@% Health and @BonusAttackSpeed*100@% Attack Speed. Gain a Rhaast and a Morgana.",
+  "tooltip": "After @Delay@ seconds your Divinicorp champions ascend, gaining @BonusHealthPerc*100@% Health and @BonusAttackSpeed*100@% Attack Speed. Gain a Rhaast and a Morgana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Ascension_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Divine Ascension:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Divine Ascension:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAttackSpeed",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusAttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealthPerc",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealthPerc", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAttackSpeed", "value": "0.3" }, { "name": "BonusHealthPerc", "value": "0.2" }, { "name": "Delay", "value": "12" }],
+  "importWarnings": ["Unmapped item variable: Delay"]
 }

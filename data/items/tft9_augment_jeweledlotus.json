@@ -1,0 +1,41 @@
+{
+  "name": "TFT9_Augment_JeweledLotus",
+  "displayName": "Jeweled Lotus I",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_JeweledLotus",
+  "description": "Your team gains @CritChance@% Critical Strike Chance and <TFTKeyword>Precision</TFTKeyword>.<br><br>{{TFT_Keyword_Precision}}",
+  "tooltip": "Your team gains @CritChance@% Critical Strike Chance and <TFTKeyword>Precision</TFTKeyword>.<br><br>{{TFT_Keyword_Precision}}",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Jeweled-Lotus-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT9_Augment_JeweledLotus:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritDamage",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "10" }, { "name": "CritDamage", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: CritDamage"]
+}

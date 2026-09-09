@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: Horizon Focus",
+  "displayName": "Artifact Expert: Horizon Focus",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_HorizonFocus",
+  "description": "Get a Cho'Gath, a Horizon Focus, and a Needlessly Large Rod",
+  "tooltip": "Get a Cho'Gath, a Horizon Focus, and a Needlessly Large Rod",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Item_TreasureDragonGold9",
+  "displayName": "9 gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Item_TreasureDragonGold9",
+  "description": "9 gold",
+  "tooltip": "9 gold",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistGiveGold.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

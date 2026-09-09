@@ -1,7 +1,53 @@
 {
   "name": "Gloves Off",
+  "displayName": "Gloves Off",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_PrimeCarry",
+  "description": "Gain a Vander. Your strongest Vander gains a brand new Ability that no longer grants resistances, but deals @TOOLTIPBonusDamage*100@% increased damage and punches the target backwards, dealing @TOOLTIPONLYSplashPerc*100@% of the original damage to all enemies hit.",
+  "tooltip": "Gain a Vander. Your strongest Vander gains a brand new Ability that no longer grants resistances, but deals @TOOLTIPBonusDamage*100@% increased damage and punches the target backwards, dealing @TOOLTIPONLYSplashPerc*100@% of the original damage to all enemies hit.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Prime-Hero-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "TOOLTIPONLYSplashPerc",
+      "rawSourceValue": "0.35",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "TooltipBonusDamage",
+      "rawSourceValue": "0.7",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{8cfa39af}",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 60, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "TOOLTIPONLYSplashPerc", "value": "0.35" }, { "name": "TooltipBonusDamage", "value": "0.7" }, { "name": "{8cfa39af}", "value": "60" }],
+  "importWarnings": ["Unmapped item variable: TOOLTIPONLYSplashPerc", "Unmapped item variable: TooltipBonusDamage", "Unmapped item variable: {8cfa39af}"]
 }

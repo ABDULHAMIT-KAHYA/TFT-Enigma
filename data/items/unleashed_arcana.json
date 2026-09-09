@@ -1,7 +1,17 @@
 {
   "name": "Unleashed Arcana",
+  "displayName": "Unleashed Arcana",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_UnleashedArcana",
+  "description": "Gain a Jeweled Gauntlet, a Rabadon's Deathcap, a Needlessly Large Rod, and a Magnetic Remover.<br><br><rules>Useful for Magic Carries or Magic Casters!</rules>",
+  "tooltip": "Gain a Jeweled Gauntlet, a Rabadon's Deathcap, a Needlessly Large Rod, and a Magnetic Remover.<br><br><rules>Useful for Magic Carries or Magic Casters!</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LifelongLearner3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

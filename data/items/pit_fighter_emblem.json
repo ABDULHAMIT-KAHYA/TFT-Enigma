@@ -1,7 +1,30 @@
 {
   "name": "Pit Fighter Emblem",
+  "displayName": "Pit Fighter Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Item_PitFighterEmblemItem",
+  "description": "The holder gains the Pit Fighter trait.",
+  "tooltip": "The holder gains the Pit Fighter trait.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set13/TFT_Set13_Emblem_PitFighter.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Pit Fighter Emblem:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "MagicResist", "value": "20" }],
+  "importWarnings": []
 }

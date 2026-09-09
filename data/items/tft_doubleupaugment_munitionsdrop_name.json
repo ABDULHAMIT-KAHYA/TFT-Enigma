@@ -1,7 +1,17 @@
 {
   "name": "TFT_DoubleUpAugment_MunitionsDrop_Name",
+  "displayName": "TFT_DoubleUpAugment_MunitionsDrop_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_MunitionsDrop",
+  "description": "TFT_DoubleUpAugment_MunitionsDrop_Description",
+  "tooltip": "TFT_DoubleUpAugment_MunitionsDrop_Description",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,30 @@
+{
+  "name": "TFT16_Item_Bilgewater_HealthTier2",
+  "displayName": "+@BonusHealthPercent*100@% Max Health",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Item_Bilgewater_HealthTier2",
+  "description": "Bilgewater champions gain @BonusHealthPercent*100@% max Health.",
+  "tooltip": "Bilgewater champions gain @BonusHealthPercent*100@% max Health.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Bilgewater/TFT16_Bilgewater_Health_Tier2.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+    { "name": "Item:TFT16_Item_Bilgewater_HealthTier2:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.06, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.06,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealthPercent",
+      "rawSourceValue": "0.06",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealthPercent", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.06, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusHealthPercent", "value": "0.06" }],
+  "importWarnings": []
+}

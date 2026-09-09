@@ -1,7 +1,17 @@
 {
   "name": "True Twos",
+  "displayName": "True Twos",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_TrueTwos",
+  "description": "Gain a random 2-star Tier 1 champion and a random 2-star Tier 2 champion.",
+  "tooltip": "Gain a random 2-star Tier 1 champion and a random 2-star Tier 2 champion.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/True-Twos-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

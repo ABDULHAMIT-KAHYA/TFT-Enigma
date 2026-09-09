@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_ExecutionerCrown",
+  "displayName": "Executioner Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_ExecutionerCrown",
+  "description": "Gain an Executioner Emblem, a Guardbreaker, and a Graves.",
+  "tooltip": "Gain an Executioner Emblem, a Guardbreaker, and a Graves.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ExecutionerCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

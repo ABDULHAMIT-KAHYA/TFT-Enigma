@@ -1,7 +1,29 @@
 {
   "name": "2-cost: Jax",
+  "displayName": "2-cost: Jax",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_ChampionItem_Chosen_Jax",
+  "description": "Stargazer<br>Bastion",
+  "tooltip": "Stargazer<br>Bastion",
+  "iconPath": "ASSETS/Characters/TFT17_Jax/HUD/TFT17_Jax_Square.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Amount",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Amount", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Amount", "Unsupported item effect metadata: Amount"]
 }

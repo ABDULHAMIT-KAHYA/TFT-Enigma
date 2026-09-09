@@ -1,7 +1,42 @@
 {
   "name": "Kahunahuna",
+  "displayName": "Kahunahuna",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_FuriousBlows",
+  "description": "Every @NumAttacks@th attack deals bonus true damage equal to @PercentAD*100@% Basic Attack Damage. ",
+  "tooltip": "Every @NumAttacks@th attack deals bonus true damage equal to @PercentAD*100@% Basic Attack Damage. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FuriousBlows_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumAttacks",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 5, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "PercentAD",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "NumAttacks", "value": "5" }, { "name": "PercentAD", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumAttacks", "Unmapped item variable: PercentAD"]
 }

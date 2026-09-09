@@ -1,7 +1,30 @@
 {
   "name": "tft_item_name_DemolitionistSpatulaItem",
+  "displayName": "tft_item_name_DemolitionistSpatulaItem",
+  "isPlaceholder": false,
+  "sourceId": "TFT3_Item_DemolitionistSpatulaItem",
+  "description": "tft_item_description_DemolitionistSpatulaItem",
+  "tooltip": "tft_item_description_DemolitionistSpatulaItem",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT3_Item_Demolitionist.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:tft_item_name_DemolitionistSpatulaItem:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "20" }],
+  "importWarnings": []
 }

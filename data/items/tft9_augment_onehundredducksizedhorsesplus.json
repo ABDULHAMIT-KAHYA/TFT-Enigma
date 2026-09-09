@@ -1,0 +1,51 @@
+{
+  "name": "TFT9_Augment_OneHundredDuckSizedHorsesPlus",
+  "displayName": "Endless Hordes +",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_OneHundredDuckSizedHorsesPlus",
+  "description": "Gain +@TeamSize@ maximum team size, but your units can only hold 1 item and their total health is reduced by @HealthReduction*100@%. Gain @Gold@ gold.",
+  "tooltip": "Gain +@TeamSize@ maximum team size, but your units can only hold 1 item and their total health is reduced by @HealthReduction*100@%. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/100-Duck-Sized-Horses-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthReduction",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TeamSize",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "18" }, { "name": "HealthReduction", "value": "0.12" }, { "name": "TeamSize", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: HealthReduction", "Unmapped item variable: TeamSize"]
+}

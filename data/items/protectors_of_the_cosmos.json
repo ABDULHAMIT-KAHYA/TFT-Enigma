@@ -1,7 +1,30 @@
 {
   "name": "Protectors of the Cosmos",
+  "displayName": "Protectors of the Cosmos",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_AstralIntercosmicProtection",
+  "description": "Combat start: Your team gains a @ShieldAmount@ Health shield for every item component equipped on an Astral champion, including those that are part of a full item. Gain a Lux.",
+  "tooltip": "Combat start: Your team gains a @ShieldAmount@ Health shield for every item component equipped on an Astral champion, including those that are part of a full item. Gain a Lux.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Arcane-Comet-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldAmount",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldAmount", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "ShieldAmount", "value": "35" }],
+  "importWarnings": ["Metadata-only item effect: ShieldAmount -> Shield", "Unmapped item variable: ShieldAmount"]
 }

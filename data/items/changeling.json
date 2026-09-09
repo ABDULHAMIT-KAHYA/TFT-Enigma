@@ -1,7 +1,73 @@
 {
   "name": "Changeling",
+  "displayName": "Changeling",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Changeling",
+  "description": "Get a @StarLevel@-star Changeling, which benefits from all active traits. Each round, gain a consumable which turns the Changeling into a random champion. The unit's tier goes up each stage. Gain a golden remover.",
+  "tooltip": "Get a @StarLevel@-star Changeling, which benefits from all active traits. Each round, gain a consumable which turns the Changeling into a random champion. The unit's tier goes up each stage. Gain a golden remover.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{081bec06}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{72450bf4}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a88b5e0a}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{da8b25d6}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "2" }, { "name": "{081bec06}", "value": "null" }, { "name": "{72450bf4}", "value": "null" }, { "name": "{a88b5e0a}", "value": "null" }, { "name": "{da8b25d6}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unmapped non-numeric item variable: {081bec06}", "Unmapped non-numeric item variable: {72450bf4}", "Unmapped non-numeric item variable: {a88b5e0a}", "Unmapped non-numeric item variable: {da8b25d6}"]
 }

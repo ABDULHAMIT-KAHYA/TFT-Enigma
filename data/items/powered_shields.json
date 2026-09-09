@@ -1,7 +1,95 @@
 {
   "name": "Powered Shields",
+  "displayName": "Powered Shields",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_DefenseCall",
+  "description": "While Shielded, your allies gain @ReducedDamage*100@% Durability. The first time allies fall below @HealthThreshold*100@% Health, they gain @ShieldAmount1@-@ShieldAmount4@ Shield (based on Stage) for @ShieldDuration@ seconds.<br>",
+  "tooltip": "While Shielded, your allies gain @ReducedDamage*100@% Durability. The first time allies fall below @HealthThreshold*100@% Health, they gain @ShieldAmount1@-@ShieldAmount4@ Shield (based on Stage) for @ShieldDuration@ seconds.<br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Defensive-Call-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ReducedDamage",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldAmount1",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldAmount2",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldAmount3",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 225,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldAmount4",
+      "rawSourceValue": "225",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthThreshold", "value": "0.5" }, { "name": "ReducedDamage", "value": "0.1" }, { "name": "ShieldAmount1", "value": "100" }, { "name": "ShieldAmount2", "value": "150" }, { "name": "ShieldAmount3", "value": "200" }, { "name": "ShieldAmount4", "value": "225" }, { "name": "ShieldDuration", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: HealthThreshold", "Unmapped item variable: ReducedDamage", "Unmapped item variable: ShieldAmount1", "Unmapped item variable: ShieldAmount2", "Unmapped item variable: ShieldAmount3", "Unmapped item variable: ShieldAmount4", "Unmapped item variable: ShieldDuration"]
 }

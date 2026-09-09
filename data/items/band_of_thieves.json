@@ -1,7 +1,29 @@
 {
   "name": "Band of Thieves",
+  "displayName": "Band of Thieves",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_BandOfThieves1",
+  "description": "Gain @NumGloves@ Thief's Gloves.",
+  "tooltip": "Gain @NumGloves@ Thief's Gloves.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BandThieves1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumGloves",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumGloves", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumGloves", "Unsupported item effect metadata: NumGloves"]
 }

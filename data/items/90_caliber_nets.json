@@ -1,7 +1,41 @@
 {
   "name": "90 Caliber Nets",
+  "displayName": "90 Caliber Nets",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_90CaliberNets",
+  "description": "Stun the @NumEnemies@ enemies who have dealt the most damage for @Duration@ seconds.",
+  "tooltip": "Stun the @NumEnemies@ enemies who have dealt the most damage for @Duration@ seconds.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_90CaliberNets.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumEnemies",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "2" }, { "name": "NumEnemies", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Duration", "Unmapped item variable: NumEnemies"]
 }

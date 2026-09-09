@@ -1,7 +1,17 @@
 {
   "name": "Idas Touch",
+  "displayName": "Idas Touch",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DragonGoldCarry",
+  "description": "Gain an Idas. Your strongest Idas becomes a Fighter. She now deals magic damage in a cone and can create gold.",
+  "tooltip": "Gain an Idas. Your strongest Idas becomes a Fighter. She now deals magic damage in a cone and can create gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Idas-Hero-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

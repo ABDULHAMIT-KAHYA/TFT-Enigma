@@ -1,7 +1,54 @@
 {
   "name": "Coronation",
+  "displayName": "Coronation",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Coronation",
+  "description": "Gain a Tactician's Crown. Tactician's Crown, Shield, and Cape grant the holder an additional @BonusAS*100@% Attack Speed, @BonusAD*100@% Attack Damage, and @BonusAP@% Ability Power.",
+  "tooltip": "Gain a Tactician's Crown. Tactician's Crown, Shield, and Cape grant the holder an additional @BonusAS*100@% Attack Speed, @BonusAD*100@% Attack Damage, and @BonusAP@% Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Coronation_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAD",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusAD", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAP",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusAP", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAS",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusAS", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAD", "value": "0.25" }, { "name": "BonusAP", "value": "30" }, { "name": "BonusAS", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: BonusAD", "Unmapped item variable: BonusAP", "Unmapped item variable: BonusAS"]
 }

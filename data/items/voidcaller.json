@@ -1,7 +1,106 @@
 {
   "name": "Voidcaller",
+  "displayName": "Voidcaller",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Visionary",
+  "description": "For every @Mana@ Mana Visionaries spend during combat, summon a Voidling, up to @MaxVoidlings@ Voidlings. Gain a Rell and Morgana.<br><br><rules>The Voidling has @Stage2Health@-@Stage6Health@ Health based on Stage.</rules>",
+  "tooltip": "For every @Mana@ Mana Visionaries spend during combat, summon a Voidling, up to @MaxVoidlings@ Voidlings. Gain a Rell and Morgana.<br><br><rules>The Voidling has @Stage2Health@-@Stage6Health@ Health based on Stage.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Planning-Ahead-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 275,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "275",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxVoidlings",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 400,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Stage2Health",
+      "rawSourceValue": "400",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 450,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Stage3Health",
+      "rawSourceValue": "450",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Stage4Health",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 550,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Stage5Health",
+      "rawSourceValue": "550",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 600,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Stage6Health",
+      "rawSourceValue": "600",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{3bc62dd2}",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Mana", "value": "275" }, { "name": "MaxVoidlings", "value": "5" }, { "name": "Stage2Health", "value": "400" }, { "name": "Stage3Health", "value": "450" }, { "name": "Stage4Health", "value": "500" }, { "name": "Stage5Health", "value": "550" }, { "name": "Stage6Health", "value": "600" }, { "name": "{3bc62dd2}", "value": "60" }],
+  "importWarnings": ["Unmapped item variable: Mana", "Unmapped item variable: MaxVoidlings", "Unmapped item variable: Stage2Health", "Unmapped item variable: Stage3Health", "Unmapped item variable: Stage4Health", "Unmapped item variable: Stage5Health", "Unmapped item variable: Stage6Health", "Unmapped item variable: {3bc62dd2}"]
 }

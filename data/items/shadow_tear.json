@@ -1,7 +1,29 @@
 {
   "name": "Shadow Tear",
+  "displayName": "Shadow Tear",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Item_TearOfTheGoddessShadow",
+  "description": "%i:TFTManaRegen% +@ManaRegen@ Mana Regen",
+  "tooltip": "%i:TFTManaRegen% +@ManaRegen@ Mana Regen",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Tear_of_the_Goddess.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaRegen", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: ManaRegen"]
 }

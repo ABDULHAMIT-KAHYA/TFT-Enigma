@@ -1,7 +1,52 @@
 {
   "name": "Contagion",
+  "displayName": "Contagion",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_Contagion",
+  "description": "Combat start: The highest Health enemy takes @DamageAmp*100@% more damage. Every @SpreadTimer@ seconds or on death, this effect spreads to @SpreadTargets@ nearby enemies.",
+  "tooltip": "Combat start: The highest Health enemy takes @DamageAmp*100@% more damage. Every @SpreadTimer@ seconds or on death, this effect spreads to @SpreadTargets@ nearby enemies.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Contagion-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Contagion:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "0.18",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "SpreadTargets",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "SpreadTimer",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "0.18" }, { "name": "SpreadTargets", "value": "2" }, { "name": "SpreadTimer", "value": "5" }],
+  "importWarnings": ["Metadata-only item effect: DamageAmp -> GrantStats", "Metadata-only item effect: SpreadTargets -> Heal", "Metadata-only item effect: SpreadTimer -> Heal", "Unmapped item variable: SpreadTargets", "Unmapped item variable: SpreadTimer"]
 }

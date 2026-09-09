@@ -1,8 +1,54 @@
 {
   "name": "Blood Rage",
+  "displayName": "Blood Rage",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_BloodRage",
+  "description": "Your allies gain @BaseDamageAmp*100@-@DamageAmpCap*100@% Damage Amp based on their missing Health. Maximum Damage Amp gained at @MissingHealthCap@% Health.",
+  "tooltip": "Your allies gain @BaseDamageAmp*100@-@DamageAmpCap*100@% Damage Amp based on their missing Health. Maximum Damage Amp gained at @MissingHealthCap@% Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BloodRage_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Blood Rage:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Blood Rage:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseDamageAmp",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BaseDamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmpCap",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmpCap", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MissingHealthCap",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseDamageAmp", "value": "0.12" }, { "name": "DamageAmpCap", "value": "0.25" }, { "name": "MissingHealthCap", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: MissingHealthCap"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "The Chariot",
+  "displayName": "The Chariot",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_XerathZap_TheChariot",
+  "description": "This round, rerolls cost you @RerollCost@ gold and buying XP costs you @XPCost@ gold.",
+  "tooltip": "This round, rerolls cost you @RerollCost@ gold and buying XP costs you @XPCost@ gold.",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_XerathWand_Self.TFT_Set12.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RerollCost",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XPCost",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RerollCost", "value": "1" }, { "name": "XPCost", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: RerollCost", "Unmapped item variable: XPCost", "Unsupported item effect metadata: RerollCost", "Unsupported item effect metadata: XPCost"]
 }

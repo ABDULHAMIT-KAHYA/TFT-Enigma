@@ -1,0 +1,17 @@
+{
+  "name": "TFT13_Augment_QuickstrikerCrest",
+  "displayName": "Quickstriker Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_QuickstrikerCrest",
+  "description": "Gain a Quickstriker Emblem and an Akali.",
+  "tooltip": "Gain a Quickstriker Emblem and an Akali.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Quickstriker_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

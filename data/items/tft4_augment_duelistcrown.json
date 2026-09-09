@@ -1,0 +1,17 @@
+{
+  "name": "TFT4_Augment_DuelistCrown",
+  "displayName": "Duelist Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_DuelistCrown",
+  "description": "Gain a Duelist Emblem, a Titan's Resolve, and a Jax.",
+  "tooltip": "Gain a Duelist Emblem, a Titan's Resolve, and a Jax.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Duelist_III.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

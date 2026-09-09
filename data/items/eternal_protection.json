@@ -1,7 +1,40 @@
 {
   "name": "Eternal Protection",
+  "displayName": "Eternal Protection",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_JadeEternalProtection",
+  "description": "When one of your Jade champions would die, the nearest Jade Statue protects them, sacrificing @StatueDamagePct@% of its max Health and transferring @PercentHP@% of the sacrificed Health to the champion. Gain a Gnar.",
+  "tooltip": "When one of your Jade champions would die, the nearest Jade Statue protects them, sacrificing @StatueDamagePct@% of its max Health and transferring @PercentHP@% of the sacrificed Health to the champion. Gain a Gnar.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Eternal-Protection-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentHP",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 70,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StatueDamagePct",
+      "rawSourceValue": "70",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PercentHP", "value": "150" }, { "name": "StatueDamagePct", "value": "70" }],
+  "importWarnings": ["Unmapped item variable: PercentHP", "Unmapped item variable: StatueDamagePct"]
 }

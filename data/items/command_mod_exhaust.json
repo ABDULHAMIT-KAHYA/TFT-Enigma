@@ -1,7 +1,40 @@
 {
   "name": "Command Mod: Exhaust",
+  "displayName": "Command Mod: Exhaust",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_SonaUnique_Consumable_Debuff",
+  "description": "Command a unit's attacks to Burn, Wound, and Chill. Gain @ASGain*100@% Attack Speed.<br><br><rules>(Good on anyone)</rules>",
+  "tooltip": "Command a unit's attacks to Burn, Wound, and Chill. Gain @ASGain*100@% Attack Speed.<br><br><rules>(Good on anyone)</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17_CommandModItems/TFT17_Item_Icon_CommandMod_Debuff.TFT_Set17.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ASGain",
+      "rawSourceValue": "0.08",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ASGain", "value": "0.08" }, { "name": "Duration", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: ASGain", "Unmapped item variable: Duration"]
 }

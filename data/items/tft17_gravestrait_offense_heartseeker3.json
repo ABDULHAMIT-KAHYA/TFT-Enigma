@@ -1,0 +1,43 @@
+{
+  "name": "TFT17_GravesTrait_Offense_Heartseeker3",
+  "displayName": "Heartseeker++",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_GravesTrait_Offense_Heartseeker3",
+  "description": "+@BonusCritChance*100@% Crit Chance and +@BonusCritDamage*100@% Crit Damage",
+  "tooltip": "+@BonusCritChance*100@% Crit Chance and +@BonusCritDamage*100@% Crit Damage",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_Heartseeker2.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+    { "name": "Item:TFT17_GravesTrait_Offense_Heartseeker3:CritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT17_GravesTrait_Offense_Heartseeker3:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusCritChance",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusCritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusCritDamage",
+      "rawSourceValue": "0.18",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusCritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusCritChance", "value": "0.4" }, { "name": "BonusCritDamage", "value": "0.18" }],
+  "importWarnings": []
+}

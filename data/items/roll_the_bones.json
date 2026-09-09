@@ -1,7 +1,29 @@
 {
   "name": "Roll the Bones",
+  "displayName": "Roll the Bones",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_RollTheBones",
+  "description": "Roll @Dice@ dice. Gain gold equal to the total.",
+  "tooltip": "Roll @Dice@ dice. Gain gold equal to the total.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_RollTheBones.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Dice",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Dice", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Dice", "Unsupported item effect metadata: Dice"]
 }

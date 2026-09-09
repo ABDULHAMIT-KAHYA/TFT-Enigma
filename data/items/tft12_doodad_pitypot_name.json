@@ -1,7 +1,29 @@
 {
   "name": "TFT12_Doodad_PityPot_Name",
+  "displayName": "TFT12_Doodad_PityPot_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_PityPot",
+  "description": "TFT12_Doodad_PityPot_Tooltip",
+  "tooltip": "TFT12_Doodad_PityPot_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LossGold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "LossGold", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: LossGold", "Unsupported item effect metadata: LossGold"]
 }

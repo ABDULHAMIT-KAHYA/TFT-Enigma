@@ -1,7 +1,40 @@
 {
   "name": "Money Laundering",
+  "displayName": "Money Laundering",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_MoneyLaundering",
+  "description": "You earn no interest but at the start of every player combat round gain @Gold@ gold per @UnitsPerGold@ units on your bench.",
+  "tooltip": "You earn no interest but at the start of every player combat round gain @Gold@ gold per @UnitsPerGold@ units on your bench.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Money-Laundering--II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UnitsPerGold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "1" }, { "name": "UnitsPerGold", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: UnitsPerGold", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: UnitsPerGold"]
 }

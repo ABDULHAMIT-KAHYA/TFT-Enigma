@@ -1,7 +1,17 @@
 {
   "name": "Spray Can",
+  "displayName": "Spray Can",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Consumable_Augment_TaggingSpree_SprayCan",
+  "description": "Use on a champion to tag the hex below them turning it into a Street Demon hex.<br><br><rules>Cannot be used on a champion already on a Street Demon hex. Can only be used during planning phase.</rules>",
+  "tooltip": "Use on a champion to tag the hex below them turning it into a Street Demon hex.<br><br><rules>Cannot be used on a champion already on a Street Demon hex. Can only be used during planning phase.</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14/TFT14_Item_Consumable_Augment_TaggingSpree_SprayCan.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

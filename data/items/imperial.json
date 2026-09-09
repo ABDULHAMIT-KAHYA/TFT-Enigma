@@ -1,7 +1,17 @@
 {
   "name": "Imperial",
+  "displayName": "Imperial",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitImperialActivator",
+  "description": "Combat start: select champions gain @TFTTrait.TFTEvent5YR_Imperial.1:DamageAmp*100@% %i:scaleDA%.<br><br><row>(@TFTTrait.TFTEvent5YR_Imperial.1:MinUnits@) @TFTTrait.TFTEvent5YR_Imperial.1:NumOfUnits@ random champions.</row><br><row>(@TFTTrait.TFTEvent5YR_Imperial.2:MinUnits@) @TFTTrait.TFTEvent5YR_Imperial.2:NumOfUnits@ random champions.</row>",
+  "tooltip": "Combat start: select champions gain @TFTTrait.TFTEvent5YR_Imperial.1:DamageAmp*100@% %i:scaleDA%.<br><br><row>(@TFTTrait.TFTEvent5YR_Imperial.1:MinUnits@) @TFTTrait.TFTEvent5YR_Imperial.1:NumOfUnits@ random champions.</row><br><row>(@TFTTrait.TFTEvent5YR_Imperial.2:MinUnits@) @TFTTrait.TFTEvent5YR_Imperial.2:NumOfUnits@ random champions.</row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Imperial.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

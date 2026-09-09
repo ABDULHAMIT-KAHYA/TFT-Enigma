@@ -1,7 +1,17 @@
 {
   "name": "Treasure Armory",
+  "displayName": "Treasure Armory",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_TreasureArmory",
+  "description": "At the start of the next round, get an offering of loot you can reroll for 1 gold.",
+  "tooltip": "At the start of the next round, get an offering of loot you can reroll for 1 gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_TreasureArmory.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

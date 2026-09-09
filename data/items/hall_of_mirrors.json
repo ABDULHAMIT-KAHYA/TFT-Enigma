@@ -1,7 +1,40 @@
 {
   "name": "Hall of Mirrors",
+  "displayName": "Hall of Mirrors",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_HallOfMirrors",
+  "description": "Combat start: All champions in your front row become clones of the champion in the center of the row. Clones have @HealthRatio*100@% of their original health, and deal @DamagePenalty*100@% less damage.",
+  "tooltip": "Combat start: All champions in your front row become clones of the champion in the center of the row. Clones have @HealthRatio*100@% of their original health, and deal @DamagePenalty*100@% less damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HallofMirrors_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "DamagePenalty",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 1.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HealthRatio",
+      "rawSourceValue": "1.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamagePenalty", "value": "0.05" }, { "name": "HealthRatio", "value": "1.15" }],
+  "importWarnings": ["Metadata-only item effect: DamagePenalty -> Heal", "Metadata-only item effect: HealthRatio -> Heal", "Unmapped item variable: DamagePenalty", "Unmapped item variable: HealthRatio"]
 }

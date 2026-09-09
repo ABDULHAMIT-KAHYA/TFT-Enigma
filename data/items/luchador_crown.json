@@ -1,7 +1,17 @@
 {
   "name": "Luchador Crown",
+  "displayName": "Luchador Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_RingKingCrown",
+  "description": "Gain a Luchador Emblem, a Sterak's Gage, and a Dr Mundo.",
+  "tooltip": "Gain a Luchador Emblem, a Sterak's Gage, and a Dr Mundo.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Luchador_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

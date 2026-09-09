@@ -1,0 +1,40 @@
+{
+  "name": "TFT9_Augment_ACutAboveHR",
+  "displayName": "A Cut Above",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_ACutAboveHR",
+  "description": "Gain a Deathblade. Champions holding this item have a @ProcChance*100@% chance to drop @Gold@ gold on kill.",
+  "tooltip": "Gain a Deathblade. Champions holding this item have a @ProcChance*100@% chance to drop @Gold@ gold on kill.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/A-Cut-Above-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ProcChance",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }, { "name": "ProcChance", "value": "0.25" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: ProcChance", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: ProcChance"]
+}

@@ -1,7 +1,17 @@
 {
   "name": "Shadow Mic",
+  "displayName": "Shadow Mic",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Consumable_KaynBlue",
+  "description": "Place on Kayn to unlock his Shadow vocal power, permanently improving his Reaping Slash spell to deal bonus damage at the start of combat.<br><br><tftitemrules>[KAYN CONSUMABLE - This item disappears when used and DESTROYS the Fury Guitar]</tftitemrules><br><br><tftitemrules>[Can only be used during the Planning Phase]</tftitemrules>",
+  "tooltip": "Place on Kayn to unlock his Shadow vocal power, permanently improving his Reaping Slash spell to deal bonus damage at the start of combat.<br><br><tftitemrules>[KAYN CONSUMABLE - This item disappears when used and DESTROYS the Fury Guitar]</tftitemrules><br><br><tftitemrules>[Can only be used during the Planning Phase]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT4_Consumable_KaynBlue.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

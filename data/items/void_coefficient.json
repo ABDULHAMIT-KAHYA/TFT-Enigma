@@ -1,7 +1,29 @@
 {
   "name": "Void Coefficient",
+  "displayName": "Void Coefficient",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_VoidCoefficient",
+  "description": "Each cast reduces Mana Cost by @PercentManaReductionPerCast*100@% (to a minimum of 10)",
+  "tooltip": "Each cast reduces Mana Cost by @PercentManaReductionPerCast*100@% (to a minimum of 10)",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_VoidCoefficient.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentManaReductionPerCast",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PercentManaReductionPerCast", "value": "0.15" }],
+  "importWarnings": ["Unmapped item variable: PercentManaReductionPerCast"]
 }

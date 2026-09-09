@@ -1,7 +1,29 @@
 {
   "name": "Meditation III",
+  "displayName": "Meditation III",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_Meditation3",
+  "description": "Your units without items equipped restore @ManaRegen@ Mana per second.",
+  "tooltip": "Your units without items equipped restore @ManaRegen@ Mana per second.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Meditation-III-A.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaRegen", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: ManaRegen"]
 }

@@ -1,7 +1,73 @@
 {
   "name": "Trickster's Treat",
+  "displayName": "Trickster's Treat",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TrickstersGlassAugment",
+  "description": "Get a Trickster's Glass. Your Trickster's Glass summons clones every @Frequency@ seconds, but each additional clone has  @HealthReducedTooltip@% Max Health and @ManaIncreasedTooltip@% Max Mana.",
+  "tooltip": "Get a Trickster's Glass. Your Trickster's Glass summons clones every @Frequency@ seconds, but each additional clone has  @HealthReducedTooltip@% Max Health and @ManaIncreasedTooltip@% Max Mana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TrickstersTreat_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Frequency",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthReducedTooltip",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 120,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaIncreasedTooltip",
+      "rawSourceValue": "120",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{2ad8829f}",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 110,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d1f156ba}",
+      "rawSourceValue": "110",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Frequency", "value": "9" }, { "name": "HealthReducedTooltip", "value": "40" }, { "name": "ManaIncreasedTooltip", "value": "120" }, { "name": "{2ad8829f}", "value": "30" }, { "name": "{d1f156ba}", "value": "110" }],
+  "importWarnings": ["Unmapped item variable: Frequency", "Unmapped item variable: HealthReducedTooltip", "Unmapped item variable: ManaIncreasedTooltip", "Unmapped item variable: {2ad8829f}", "Unmapped item variable: {d1f156ba}"]
 }

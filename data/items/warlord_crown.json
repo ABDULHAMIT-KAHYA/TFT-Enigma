@@ -1,7 +1,17 @@
 {
   "name": "Warlord Crown",
+  "displayName": "Warlord Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_WarlordCrown",
+  "description": "Gain a Warlord Emblem, a Sterak's Gage, and a Vi.",
+  "tooltip": "Gain a Warlord Emblem, a Sterak's Gage, and a Vi.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Warlord_III.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

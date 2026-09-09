@@ -1,0 +1,17 @@
+{
+  "name": "TFT5_Augment_SentinelCrest",
+  "displayName": "Sentinel Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_SentinelCrest",
+  "description": "Gain a Sentinel Emblem and a Senna.",
+  "tooltip": "Gain a Sentinel Emblem and a Senna.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Sentinel_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

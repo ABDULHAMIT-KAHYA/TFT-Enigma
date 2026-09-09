@@ -1,7 +1,40 @@
 {
   "name": "Sacrifice",
+  "displayName": "Sacrifice",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Sacrifice",
+  "description": "Lose @HealthLoss@ Tactician Health and gain @gold@ gold.",
+  "tooltip": "Lose @HealthLoss@ Tactician Health and gain @gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_Sacrifice.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthLoss",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "20" }, { "name": "HealthLoss", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped non-numeric item variable: HealthLoss"]
 }

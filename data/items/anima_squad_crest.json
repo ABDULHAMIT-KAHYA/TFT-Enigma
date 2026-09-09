@@ -1,7 +1,17 @@
 {
   "name": "Anima Squad Crest",
+  "displayName": "Anima Squad Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_AnimaSquadCrest",
+  "description": "Gain an Anima Squad Emblem.",
+  "tooltip": "Gain an Anima Squad Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AnimaSquadCrest_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

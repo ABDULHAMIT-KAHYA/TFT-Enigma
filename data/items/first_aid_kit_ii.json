@@ -1,7 +1,30 @@
 {
   "name": "First Aid Kit II",
+  "displayName": "First Aid Kit II",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_FirstAidKit2",
+  "description": "All healing and shielding on your units is increased by @HealShieldIncrease*100@%.",
+  "tooltip": "All healing and shielding on your units is increased by @HealShieldIncrease*100@%.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FirstAidKit2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealShieldIncrease",
+      "rawSourceValue": "0.35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:HealShieldIncrease", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "HealShieldIncrease", "value": "0.35" }],
+  "importWarnings": ["Unmapped item variable: HealShieldIncrease"]
 }

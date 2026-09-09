@@ -1,7 +1,29 @@
 {
   "name": "Pandora's Pocket Lint",
+  "displayName": "Pandora's Pocket Lint",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PandorasPocketLint",
+  "description": "Alternate between gaining a Magnetic Remover and Reforger every @NumRounds@ rounds. Gain a random component after every carousel.",
+  "tooltip": "Alternate between gaining a Magnetic Remover and Reforger every @NumRounds@ rounds. Gain a random component after every carousel.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRounds",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumRounds", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumRounds", "Unsupported item effect metadata: NumRounds"]
 }

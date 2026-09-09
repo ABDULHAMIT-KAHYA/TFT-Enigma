@@ -1,8 +1,67 @@
 {
   "name": "Titan's Revenge",
+  "displayName": "Titan's Revenge",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_TitansResolveShadow",
+  "description": "@PercentDamage@% of incoming damage is stored. Every @SecondsBetweenProcs@ seconds, the holder's next attack unleashes this stored damage as true damage.",
+  "tooltip": "@PercentDamage@% of incoming damage is stored. Every @SecondsBetweenProcs@ seconds, the holder's next attack unleashes this stored damage as true damage.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Titans_Resolve.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Titan's Revenge:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Titan's Revenge:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "PercentDamage",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 50, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "SecondsBetweenProcs",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "10" }, { "name": "Armor", "value": "20" }, { "name": "PercentDamage", "value": "50" }, { "name": "SecondsBetweenProcs", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: PercentDamage", "Unmapped item variable: SecondsBetweenProcs"]
 }

@@ -1,0 +1,40 @@
+{
+  "name": "TFT17_MarketOffering_SplitGold_Stage2",
+  "displayName": "Chest of Greed",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_SplitGold_Stage2",
+  "description": "Gain @Gold@ gold, plus @SplitGold@ gold split between all players who pick this (rounded down.)",
+  "tooltip": "Gain @Gold@ gold, plus @SplitGold@ gold split between all players who pick this (rounded down.)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_SplitGold.TFT_17_2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{1b0ff491}",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }, { "name": "{1b0ff491}", "value": "12" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: {1b0ff491}", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: {1b0ff491}"]
+}

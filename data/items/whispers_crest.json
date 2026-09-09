@@ -1,7 +1,17 @@
 {
   "name": "Whispers Crest",
+  "displayName": "Whispers Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_WhispersEmblem",
+  "description": "Gain a Whispers Emblem and a Zyra.",
+  "tooltip": "Gain a Whispers Emblem and a Zyra.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Whispers-Crest-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

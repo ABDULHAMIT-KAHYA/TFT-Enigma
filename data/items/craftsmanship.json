@@ -1,7 +1,51 @@
 {
   "name": "Craftsmanship",
+  "displayName": "Craftsmanship",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Craftsmanship",
+  "description": "Gain @ReforgersUpfront@ Reforgers now and one at the start of each stage. Whenever you use a Reforger, gain @Gold@ gold.",
+  "tooltip": "Gain @ReforgersUpfront@ Reforgers now and one at the start of each stage. Whenever you use a Reforger, gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_Craftsmanship.TFT_17_2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ReforgersUpfront",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{5c86db47}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }, { "name": "ReforgersUpfront", "value": "1" }, { "name": "{5c86db47}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: ReforgersUpfront", "Unmapped item variable: {5c86db47}", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: ReforgersUpfront", "Unsupported item effect metadata: {5c86db47}"]
 }

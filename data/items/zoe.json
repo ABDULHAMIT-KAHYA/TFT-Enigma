@@ -1,7 +1,17 @@
 {
   "name": "Zoe",
+  "displayName": "Zoe",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Zoe",
+  "description": "Zoe",
+  "tooltip": "Zoe",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Zoe_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

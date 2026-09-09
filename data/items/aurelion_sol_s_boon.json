@@ -1,7 +1,73 @@
 {
   "name": "Aurelion Sol's Boon",
+  "displayName": "Aurelion Sol's Boon",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_AurelionSolGodAugment",
+  "description": "Choose 1 of @NumQuestOptions_TOOLTIPONLY@ quests to prove yourself to Aurelion Sol.<br><br>Chosen Quest: @TFTUnitProperty.item:TFT17_Augment_AurelionSolGodAugment@",
+  "tooltip": "Choose 1 of @NumQuestOptions_TOOLTIPONLY@ quests to prove yourself to Aurelion Sol.<br><br>Chosen Quest: @TFTUnitProperty.item:TFT17_Augment_AurelionSolGodAugment@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GodAugmentAurelionSol_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LargeQuestRounds",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 22,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MedQuestGold",
+      "rawSourceValue": "22",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MedQuestRounds",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumQuestOptions_TOOLTIPONLY",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SmallQuestADAP",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "LargeQuestRounds", "value": "8" }, { "name": "MedQuestGold", "value": "22" }, { "name": "MedQuestRounds", "value": "3" }, { "name": "NumQuestOptions_TOOLTIPONLY", "value": "3" }, { "name": "SmallQuestADAP", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: LargeQuestRounds", "Unmapped item variable: MedQuestGold", "Unmapped item variable: MedQuestRounds", "Unmapped item variable: NumQuestOptions_TOOLTIPONLY", "Unmapped item variable: SmallQuestADAP", "Unsupported item effect metadata: LargeQuestRounds", "Unsupported item effect metadata: MedQuestGold", "Unsupported item effect metadata: MedQuestRounds", "Unsupported item effect metadata: NumQuestOptions_TOOLTIPONLY", "Unsupported item effect metadata: SmallQuestADAP"]
 }

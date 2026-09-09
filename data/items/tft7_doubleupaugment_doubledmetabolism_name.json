@@ -1,7 +1,29 @@
 {
   "name": "TFT7_DoubleUpAugment_DoubledMetabolism_Name",
+  "displayName": "TFT7_DoubleUpAugment_DoubledMetabolism_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_DoubledMetabolism",
+  "description": "TFT7_DoubleUpAugment_DoubledMetabolism_Description",
+  "tooltip": "TFT7_DoubleUpAugment_DoubledMetabolism_Description",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_DoubledMetabolism.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Heal",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Heal", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Heal"]
 }

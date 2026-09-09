@@ -1,7 +1,40 @@
 {
   "name": "Precise Planning",
+  "displayName": "Precise Planning",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PerfectLoss",
+  "description": "When you win or lose combat by @UnitThreshold@ or fewer units, gain @GoldToGive@ gold next round.",
+  "tooltip": "When you win or lose combat by @UnitThreshold@ or fewer units, gain @GoldToGive@ gold next round.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PerfectLoss_I.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UnitThreshold",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "goldtogive",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "UnitThreshold", "value": "4" }, { "name": "goldtogive", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: UnitThreshold", "Unmapped item variable: goldtogive", "Unsupported item effect metadata: UnitThreshold", "Unsupported item effect metadata: goldtogive"]
 }

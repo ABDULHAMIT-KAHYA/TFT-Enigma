@@ -1,0 +1,51 @@
+{
+  "name": "TFT9_Augment_HighEndSector",
+  "displayName": "Shopping Spree",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_HighEndSector",
+  "description": "When you level up, gain a number of free shop refreshes equal to your level+@BonusRollPerLevel@. Gain @Gold@ gold.",
+  "tooltip": "When you level up, gain a number of free shop refreshes equal to your level+@BonusRollPerLevel@. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Silver-ticket-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusRollPerLevel",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a9ad6d1b}",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusRollPerLevel", "value": "1" }, { "name": "Gold", "value": "2" }, { "name": "{a9ad6d1b}", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: BonusRollPerLevel", "Unmapped item variable: Gold", "Unmapped item variable: {a9ad6d1b}", "Unsupported item effect metadata: BonusRollPerLevel", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: {a9ad6d1b}"]
+}

@@ -1,7 +1,17 @@
 {
   "name": "Redeemed Crown",
+  "displayName": "Redeemed Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_RedeemedCrown",
+  "description": "Gain a Redeemed Emblem, a Hand Of Justice, and a Syndra.",
+  "tooltip": "Gain a Redeemed Emblem, a Hand Of Justice, and a Syndra.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Redeemed_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

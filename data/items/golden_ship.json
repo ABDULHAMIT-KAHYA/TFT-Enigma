@@ -1,7 +1,17 @@
 {
   "name": "Golden Ship",
+  "displayName": "Golden Ship",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_5MercShip",
+  "description": "Gain 3 item components.",
+  "tooltip": "Gain 3 item components.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

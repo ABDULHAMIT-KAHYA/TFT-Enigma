@@ -1,7 +1,53 @@
 {
   "name": "Category Five",
+  "displayName": "Category Five",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_CategoryFive",
+  "description": "Gain a Runaan's Hurricane. Your Runaan's Hurricanes shoot @additionalbolts@ extra bolts, each dealing @TotalDamage*100@% of the original damage.",
+  "tooltip": "Gain a Runaan's Hurricane. Your Runaan's Hurricanes shoot @additionalbolts@ extra bolts, each dealing @TotalDamage*100@% of the original damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CategoryFive_II.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "TotalDamage",
+      "rawSourceValue": "0.75",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "additionalbolts",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "null" }, { "name": "TotalDamage", "value": "0.75" }, { "name": "additionalbolts", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: TotalDamage", "Unmapped item variable: additionalbolts", "Unmapped non-numeric item variable: AS"]
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_MonsterTrainerChoice_KogMaw",
+  "displayName": "Kog'Maw",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_MonsterTrainerChoice_KogMaw",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Characters/TFT15_KogMaw/HUD/TFT15_KogMaw_Square.TFT_Set15.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

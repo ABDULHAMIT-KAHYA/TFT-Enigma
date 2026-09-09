@@ -1,0 +1,17 @@
+{
+  "name": "TFT5_Augment_CavalierCrest",
+  "displayName": "Cavalier Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_CavalierCrest",
+  "description": "Gain a Cavalier Emblem and a Hecarim.",
+  "tooltip": "Gain a Cavalier Emblem and a Hecarim.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Cavalier_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

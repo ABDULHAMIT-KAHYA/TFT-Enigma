@@ -1,7 +1,51 @@
 {
   "name": "Leeching Nucleus",
+  "displayName": "Leeching Nucleus",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Consumable_Void_LeechingNucleus",
+  "description": "Heal the lowest Health ally for <scaleLevel>@TFTUnitProperty.item:TFT16_Void_LeechingHealPercent@%</scaleLevel> of damage dealt. After damaging an enemy, steal <scaleLevel>@TFTUnitProperty.item:TFT16_Void_LeechingADAP@%</scaleLevel> Attack Damage and Ability Power from them, up to @MaxADAPSteal@ stacks from all&nbsp;sources.<br><br><rules>Recommended users: Kog'Maw, Malzahar, and Kai'sa</rules>",
+  "tooltip": "Heal the lowest Health ally for <scaleLevel>@TFTUnitProperty.item:TFT16_Void_LeechingHealPercent@%</scaleLevel> of damage dealt. After damaging an enemy, steal <scaleLevel>@TFTUnitProperty.item:TFT16_Void_LeechingADAP@%</scaleLevel> Attack Damage and Ability Power from them, up to @MaxADAPSteal@ stacks from all&nbsp;sources.<br><br><rules>Recommended users: Kog'Maw, Malzahar, and Kai'sa</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT16_VoidMutation_LeechingNucleus.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealPercent",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxADAPSteal",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.02,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d1463442}",
+      "rawSourceValue": "0.02",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealPercent", "value": "0.15" }, { "name": "MaxADAPSteal", "value": "10" }, { "name": "{d1463442}", "value": "0.02" }],
+  "importWarnings": ["Unmapped item variable: HealPercent", "Unmapped item variable: MaxADAPSteal", "Unmapped item variable: {d1463442}"]
 }

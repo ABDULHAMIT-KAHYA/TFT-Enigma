@@ -1,7 +1,17 @@
 {
   "name": "Longshot Circlet",
+  "displayName": "Longshot Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_LongshotCirclet",
+  "description": "Get a Longshot Emblem, a Recurve Bow, and a Vayne.",
+  "tooltip": "Get a Longshot Emblem, a Recurve Bow, and a Vayne.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

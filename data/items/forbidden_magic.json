@@ -1,7 +1,51 @@
 {
   "name": "Forbidden Magic",
+  "displayName": "Forbidden Magic",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Cabal",
+  "description": "Every @NumTakedownsPerStack@ takedowns by Black Rose champions or Sion grant Sion permanent @SionADPercentPerStack*100@% Attack Damage and @SionHealthPerStack@ Max Health. Gain 3 Black Rose champions. (Stacks: @TFTUnitProperty.item:TFT13_Augment_Cabal_NumStacks@)",
+  "tooltip": "Every @NumTakedownsPerStack@ takedowns by Black Rose champions or Sion grant Sion permanent @SionADPercentPerStack*100@% Attack Damage and @SionHealthPerStack@ Max Health. Gain 3 Black Rose champions. (Stacks: @TFTUnitProperty.item:TFT13_Augment_Cabal_NumStacks@)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ForbiddenMagic_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumTakedownsPerStack",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.03,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SionADPercentPerStack",
+      "rawSourceValue": "0.03",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SionHealthPerStack",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumTakedownsPerStack", "value": "2" }, { "name": "SionADPercentPerStack", "value": "0.03" }, { "name": "SionHealthPerStack", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: NumTakedownsPerStack", "Unmapped item variable: SionADPercentPerStack", "Unmapped item variable: SionHealthPerStack"]
 }

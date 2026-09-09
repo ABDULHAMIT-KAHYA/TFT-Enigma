@@ -1,7 +1,17 @@
 {
   "name": "Aatrox",
+  "displayName": "Aatrox",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Aatrox",
+  "description": "Aatrox",
+  "tooltip": "Aatrox",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Aatrox_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

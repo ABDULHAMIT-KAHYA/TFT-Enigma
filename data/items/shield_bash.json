@@ -1,7 +1,53 @@
 {
   "name": "Shield Bash",
+  "displayName": "Shield Bash",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Sentinel",
+  "description": "Sentinels gain @PercGain*100@% bonus Armor and Magic Resist. Every @Interval@ seconds, their next attack deals @ResistToDamageRatio*100@% of their total resistances as magic damage. Gain a Loris.",
+  "tooltip": "Sentinels gain @PercGain*100@% bonus Armor and Magic Resist. Every @Interval@ seconds, their next attack deals @ResistToDamageRatio*100@% of their total resistances as magic damage. Gain a Loris.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SentinelAssembly_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Interval",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercGain",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:PercGain", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ResistToDamageRatio",
+      "rawSourceValue": "0.75",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ResistToDamageRatio", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.75, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Interval", "value": "4" }, { "name": "PercGain", "value": "0.05" }, { "name": "ResistToDamageRatio", "value": "0.75" }],
+  "importWarnings": ["Unmapped item variable: Interval", "Unmapped item variable: PercGain", "Unmapped item variable: ResistToDamageRatio"]
 }

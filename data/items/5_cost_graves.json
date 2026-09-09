@@ -1,7 +1,29 @@
 {
   "name": "5-cost: Graves",
+  "displayName": "5-cost: Graves",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_ChampionItem_Chosen_Graves",
+  "description": "Factory New",
+  "tooltip": "Factory New",
+  "iconPath": "ASSETS/Characters/TFT17_Graves/HUD/TFT17_Graves_Square.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Amount",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Amount", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Amount", "Unsupported item effect metadata: Amount"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "Learning Potential",
+  "displayName": "Learning Potential",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_LearningPotential",
+  "description": "After each player combat, gain @Experience@ XP per @NumTraitsPerExp@ inactive traits on your board.<br><br><tftitemrules>Inactive Traits: @TFTUnitProperty.item:TFT9_Augment_LearningPotential_TraitNum@</tftitemrules>",
+  "tooltip": "After each player combat, gain @Experience@ XP per @NumTraitsPerExp@ inactive traits on your board.<br><br><tftitemrules>Inactive Traits: @TFTUnitProperty.item:TFT9_Augment_LearningPotential_TraitNum@</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Experience",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumTraitsPerExp",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Experience", "value": "1" }, { "name": "NumTraitsPerExp", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Experience", "Unmapped item variable: NumTraitsPerExp"]
 }

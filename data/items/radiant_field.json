@@ -1,7 +1,85 @@
 {
   "name": "Radiant Field",
+  "displayName": "Radiant Field",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_AnimaSquadItem_Tier2_RadiantField",
+  "description": "Gain @HealthPercent*100@% max health. Every second, deal magic damage in a @HexRadiusBase@-hex radius equal to @HealthRatio*100@% of the holder's max Health. Radius increases every @Period@ seconds.<br><br><rules>Recommended Roles: Attack or Magic Tank</rules>",
+  "tooltip": "Gain @HealthPercent*100@% max health. Every second, deal magic damage in a @HexRadiusBase@-hex radius equal to @HealthRatio*100@% of the holder's max Health. Radius increases every @Period@ seconds.<br><br><rules>Recommended Roles: Attack or Magic Tank</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_AnimaSquadItem_RadiantField_T2.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Radiant Field:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 400, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 400,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "400",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 400, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPercent",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.03,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthRatio",
+      "rawSourceValue": "0.03",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRadiusBase",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Period",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{52d3e690}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "400" }, { "name": "HealthPercent", "value": "0.2" }, { "name": "HealthRatio", "value": "0.03" }, { "name": "HexRadiusBase", "value": "1" }, { "name": "Period", "value": "6" }, { "name": "{52d3e690}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: HealthPercent", "Unmapped item variable: HealthRatio", "Unmapped item variable: HexRadiusBase", "Unmapped item variable: Period", "Unmapped item variable: {52d3e690}"]
 }

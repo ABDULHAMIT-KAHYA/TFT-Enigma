@@ -1,7 +1,42 @@
 {
   "name": "Ricochet Shot",
+  "displayName": "Ricochet Shot",
+  "isPlaceholder": false,
+  "sourceId": "TFT4_Augment_Sharpshooter",
+  "description": "Sharpshooters' attacks and abilities bounce @ExtraBounces@ extra time for @DamageReduction*100@% of original damage. Gain a Tristana and Teemo.",
+  "tooltip": "Sharpshooters' attacks and abilities bounce @ExtraBounces@ extra time for @DamageReduction*100@% of original damage. Gain a Tristana and Teemo.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LuckyRicochet_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Ricochet Shot:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ExtraBounces",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageReduction",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageReduction", "value": "0.4" }, { "name": "ExtraBounces", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: ExtraBounces"]
 }

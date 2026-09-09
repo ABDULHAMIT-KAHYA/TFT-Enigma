@@ -1,7 +1,52 @@
 {
   "name": "Health is Wealth I",
+  "displayName": "Health is Wealth I",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_WealthyRehab1",
+  "description": "Your team gains @Omnivamp*100@% Omnivamp.  Get a bonus of @Gold@ gold when your team first accumulates @HealingThreshold@ total champion healing.<br><br>Total Healing: @TFTUnitProperty.item:TFT_Augment_WealthyRehabHealing@",
+  "tooltip": "Your team gains @Omnivamp*100@% Omnivamp.  Get a bonus of @Gold@ gold when your team first accumulates @HealingThreshold@ total champion healing.<br><br>Total Healing: @TFTUnitProperty.item:TFT_Augment_WealthyRehabHealing@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Health-is-Wealth-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Health is Wealth I:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Omnivamp",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealingThreshold",
+      "rawSourceValue": "10000",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "8" }, { "name": "HealingThreshold", "value": "10000" }, { "name": "Omnivamp", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: HealingThreshold"]
 }

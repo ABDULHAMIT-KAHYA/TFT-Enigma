@@ -17,8 +17,12 @@ namespace AbilitySystem
                         Unit* primaryTarget,
                         AbilityTrigger trigger);
 
+    void executeEffectEvent(GameState& state, const CombatEvent& event);
+
     bool tryCast(GameState& state,
                  Unit& caster,
                  Unit& primaryTarget);
 
 } 
+
+

@@ -1,7 +1,95 @@
 {
   "name": "Chalice of Malice",
+  "displayName": "Chalice of Malice",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_ChaliceOfPowerShadow",
+  "description": "Combat start: Grant %i:scaleAP% <TFTShadowItemBonus>@BonusAP@ Ability Power</TFTShadowItemBonus> to allies within @HexRange@ hex in the same row. <TFTShadowItemPenalty>The holder loses %i:scaleAP% @APLost@ Ability Power instead of gaining any.</TFTShadowItemPenalty>",
+  "tooltip": "Combat start: Grant %i:scaleAP% <TFTShadowItemBonus>@BonusAP@ Ability Power</TFTShadowItemBonus> to allies within @HexRange@ hex in the same row. <TFTShadowItemPenalty>The holder loses %i:scaleAP% @APLost@ Ability Power instead of gaining any.</TFTShadowItemPenalty>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Chalice_of_Power.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Chalice of Malice:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [
+    {
+      "name": "Item:Chalice of Malice:MagicResist",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Chalice of Malice:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "APLost",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BonusAP",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HexRange",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaRestore",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "20",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "APLost", "value": "20" }, { "name": "BonusAP", "value": "60" }, { "name": "HexRange", "value": "1" }, { "name": "MagicResist", "value": "20" }, { "name": "Mana", "value": "15" }, { "name": "ManaRestore", "value": "10" }],
+  "importWarnings": ["Metadata-only item effect: APLost -> Aura", "Metadata-only item effect: BonusAP -> Aura", "Metadata-only item effect: HexRange -> Aura", "Metadata-only item effect: Mana -> Aura", "Metadata-only item effect: ManaRestore -> Aura", "Unmapped item variable: APLost", "Unmapped item variable: BonusAP", "Unmapped item variable: HexRange", "Unmapped item variable: Mana", "Unmapped item variable: ManaRestore"]
 }

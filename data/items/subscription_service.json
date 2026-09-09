@@ -1,7 +1,40 @@
 {
   "name": "Subscription Service",
+  "displayName": "Subscription Service",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SubscriptionService",
+  "description": "Now and at the start of each Stage, open a Shop of 4 unique 4-cost champions and gain @GoldPerStage@ gold.",
+  "tooltip": "Now and at the start of each Stage, open a Shop of 4 unique 4-cost champions and gain @GoldPerStage@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SubscriptionService_III.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ChampionTier",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldPerStage",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ChampionTier", "value": "4" }, { "name": "GoldPerStage", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: ChampionTier", "Unmapped item variable: GoldPerStage", "Unsupported item effect metadata: ChampionTier", "Unsupported item effect metadata: GoldPerStage"]
 }

@@ -1,7 +1,51 @@
 {
   "name": "Howling Gale",
+  "displayName": "Howling Gale",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_HowlingGale",
+  "description": "For every @ManaPerWhirlwind@ Mana your team spends, summon a whirlwind that knocks up enemies.",
+  "tooltip": "For every @ManaPerWhirlwind@ Mana your team spends, summon a whirlwind that knocks up enemies.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HowlingGale_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 360,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "KnockupRadius",
+      "rawSourceValue": "360",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 550,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaPerWhirlwind",
+      "rawSourceValue": "550",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunDuration",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "KnockupRadius", "value": "360" }, { "name": "ManaPerWhirlwind", "value": "550" }, { "name": "StunDuration", "value": "1.5" }],
+  "importWarnings": ["Unmapped item variable: KnockupRadius", "Unmapped item variable: ManaPerWhirlwind", "Unmapped item variable: StunDuration"]
 }

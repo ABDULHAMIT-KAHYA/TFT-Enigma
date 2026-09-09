@@ -1,0 +1,17 @@
+{
+  "name": "TFT4_Augment_BrawlerCrest",
+  "displayName": "Brawler Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_BrawlerCrest",
+  "description": "Gain a Brawler Emblem and a Vi.",
+  "tooltip": "Gain a Brawler Emblem and a Vi.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Brawler_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

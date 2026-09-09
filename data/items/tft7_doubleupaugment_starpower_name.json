@@ -1,7 +1,17 @@
 {
   "name": "TFT7_DoubleUpAugment_StarPower_Name",
+  "displayName": "TFT7_DoubleUpAugment_StarPower_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_StarPower",
+  "description": "TFT7_DoubleUpAugment_StarPower_Description",
+  "tooltip": "TFT7_DoubleUpAugment_StarPower_Description",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_StarPower.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

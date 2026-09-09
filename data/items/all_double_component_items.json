@@ -1,7 +1,17 @@
 {
   "name": "All double component items",
+  "displayName": "All double component items",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_AllDoubleNonSpatItems",
+  "description": "Deathblade, Rabadon's Deathcap, Red Buff, Bramble Vest, Dragon's Claw, Warmog's Armor, Blue Buff, Thief's Gloves.",
+  "tooltip": "Deathblade, Rabadon's Deathcap, Red Buff, Bramble Vest, Dragon's Claw, Warmog's Armor, Blue Buff, Thief's Gloves.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

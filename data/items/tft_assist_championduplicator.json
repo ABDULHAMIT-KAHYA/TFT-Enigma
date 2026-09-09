@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_ChampionDuplicator",
+  "displayName": "Champion Duplicator",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_ChampionDuplicator",
+  "description": "Champion Duplicator",
+  "tooltip": "Champion Duplicator",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Consumables/ChampionDuplicator_V.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

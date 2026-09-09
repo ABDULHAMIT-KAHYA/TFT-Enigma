@@ -1,0 +1,29 @@
+{
+  "name": "TFT_Item_GrantOrbs5",
+  "displayName": "@OrbsToGive@ loot orbs",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_GrantOrbs5",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "LootObject",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "OrbsToGive",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "OrbsToGive", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: OrbsToGive", "Unsupported item effect metadata: OrbsToGive"]
+}

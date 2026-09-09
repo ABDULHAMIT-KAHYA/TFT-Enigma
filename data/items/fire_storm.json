@@ -1,7 +1,51 @@
 {
   "name": "Fire Storm",
+  "displayName": "Fire Storm",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_HiddenTech_FireStorm",
+  "description": "<spellPassive>Combat Start:</spellPassive> <TFTKeyword>Wound</TFTKeyword> all enemies for @Duration@ seconds.<br><br><tftitemrules>Wound: Reduce healing received by 50%</tftitemrules>",
+  "tooltip": "<spellPassive>Combat Start:</spellPassive> <TFTKeyword>Wound</TFTKeyword> all enemies for @Duration@ seconds.<br><br><tftitemrules>Wound: Reduce healing received by 50%</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT15/TFT15_HiddenTech_FireStorm.TFT_Set15.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Fire Storm:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 250, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [
+    {
+      "name": "Item:Fire Storm:Health",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Fire Storm:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 250, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "250",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 250, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "10" }, { "name": "Health", "value": "250" }],
+  "importWarnings": ["Metadata-only item effect: Duration -> Heal", "Unmapped item variable: Duration"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Two 3-star 1-cost Champions",
+  "displayName": "Two 3-star 1-cost Champions",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_OneCostChampion_ThreeStar",
+  "description": "Two 3-star 1-cost Champions",
+  "tooltip": "Two 3-star 1-cost Champions",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_ThreeStarOneCost.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

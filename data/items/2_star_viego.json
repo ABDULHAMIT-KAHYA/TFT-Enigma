@@ -1,7 +1,29 @@
 {
   "name": "2 star Viego",
+  "displayName": "2 star Viego",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_Viego2Star",
+  "description": "2 star Viego",
+  "tooltip": "2 star Viego",
+  "iconPath": "ASSETS/Characters/TFT14_Viego/HUD/TFT14_Viego_Square.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
 }

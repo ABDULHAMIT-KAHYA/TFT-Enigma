@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_SetMechanic_Remover",
+  "displayName": "Power Remover",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_SetMechanic_Remover",
+  "description": "Use on a champion to remove their Power Up and regain a Power Snax.",
+  "tooltip": "Use on a champion to remove their Power Up and regain a Power Snax.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFTM_ST_IconRemover.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,17 @@
 {
   "name": "Bilgewater Crown",
+  "displayName": "Bilgewater Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_BilgewaterCrown",
+  "description": "Get a Bilgewater Emblem, a Twisted Fate, and a Guinsoo's Rageblade.",
+  "tooltip": "Get a Bilgewater Emblem, a Twisted Fate, and a Guinsoo's Rageblade.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

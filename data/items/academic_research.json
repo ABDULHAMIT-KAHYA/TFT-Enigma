@@ -1,7 +1,40 @@
 {
   "name": "Academic Research",
+  "displayName": "Academic Research",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Academy",
+  "description": "Whenever you build an item, gain a completed item anvil instead. That anvil always offers an Academy item and the item built. Gain @NumItems@ random components. Gain a Lux and an Ezreal.",
+  "tooltip": "Whenever you build an item, gain a completed item anvil instead. That anvil always offers an Academy item and the item built. Gain @NumItems@ random components. Gain a Lux and an Ezreal.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AcademicCitation_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumOptions",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumItems", "value": "1" }, { "name": "NumOptions", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumItems", "Unmapped item variable: NumOptions", "Unsupported item effect metadata: NumItems", "Unsupported item effect metadata: NumOptions"]
 }

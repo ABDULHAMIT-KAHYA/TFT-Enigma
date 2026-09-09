@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Explorer_LoseBigStreakQuest",
+  "displayName": "Lose @TFTUnitProperty.:TFT16_Explorer_QuestVariable1@ player combats in a row.",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Explorer_LoseBigStreakQuest",
+  "description": "Reward: @TFTUnitProperty.:TFT16_Explorer_QuestExplorerPoints@ %i:Set16Ixtal%",
+  "tooltip": "Reward: @TFTUnitProperty.:TFT16_Explorer_QuestExplorerPoints@ %i:Set16Ixtal%",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,17 @@
 {
   "name": "Golden Item Remover",
+  "displayName": "Golden Item Remover",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Consumable_GoldenItemRemover",
+  "description": "Use on a champion to unequip all items as many times as you want. Converts all future Magnetic Removers to Reforgers. ",
+  "tooltip": "Use on a champion to unequip all items as many times as you want. Converts all future Magnetic Removers to Reforgers. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT9_Consumable_GoldenItemRemover.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_BastionCrown",
+  "displayName": "Bastion Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_BastionCrown",
+  "description": "Gain a Bastion Emblem, a Crownguard, and a Swain.",
+  "tooltip": "Gain a Bastion Emblem, a Crownguard, and a Swain.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Bastion_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

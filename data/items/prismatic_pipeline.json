@@ -1,7 +1,29 @@
 {
   "name": "Prismatic Pipeline",
+  "displayName": "Prismatic Pipeline",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PrismaticPipeline",
+  "description": "The next non-player combat round will drop an additional Prismatic Orb full of amazing loot.",
+  "tooltip": "The next non-player combat round will drop an additional Prismatic Orb full of amazing loot.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PrismaticPipeline_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRounds",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumRounds", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumRounds", "Unsupported item effect metadata: NumRounds"]
 }

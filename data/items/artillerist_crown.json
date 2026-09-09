@@ -1,7 +1,17 @@
 {
   "name": "Artillerist Crown",
+  "displayName": "Artillerist Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_ArtilleristCrown",
+  "description": "Gain an Artillerist Emblem, a Runaan's Hurricane, and a Tristana.",
+  "tooltip": "Gain an Artillerist Emblem, a Runaan's Hurricane, and a Tristana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Artillerist_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

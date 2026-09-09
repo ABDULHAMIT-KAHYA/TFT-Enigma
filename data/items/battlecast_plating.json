@@ -1,7 +1,30 @@
 {
   "name": "Battlecast Plating",
+  "displayName": "Battlecast Plating",
+  "isPlaceholder": false,
+  "sourceId": "TFT3_Item_BattlecastSpatulaItem",
+  "description": "The wearer gains the Battlecast trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
+  "tooltip": "The wearer gains the Battlecast trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_Battlecast.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Battlecast Plating:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "20" }],
+  "importWarnings": []
 }

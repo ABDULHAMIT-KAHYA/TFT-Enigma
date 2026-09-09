@@ -1,0 +1,29 @@
+{
+  "name": "TFT7_Augment_BruiserTitanicStrength",
+  "displayName": "Titanic Strength",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_BruiserTitanicStrength",
+  "description": "Bruisers gain @HealthPercent*100@% of their Health as Attack Damage. Gain a Jax.",
+  "tooltip": "Bruisers gain @HealthPercent*100@% of their Health as Attack Damage. Gain a Jax.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Titanic-Strength-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.015,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPercent",
+      "rawSourceValue": "0.015",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthPercent", "value": "0.015" }],
+  "importWarnings": ["Unmapped item variable: HealthPercent"]
+}

@@ -1,7 +1,29 @@
 {
   "name": "Thrill of the Hunt I",
+  "displayName": "Thrill of the Hunt I",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_ThrillOfTheHunt1",
+  "description": "Your champions heal @MissingHPHeal@ Health on kill.",
+  "tooltip": "Your champions heal @MissingHPHeal@ Health on kill.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ThrillHunt1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MissingHPHeal",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MissingHPHeal", "value": "300" }],
+  "importWarnings": ["Unmapped item variable: MissingHPHeal"]
 }

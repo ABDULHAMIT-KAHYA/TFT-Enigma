@@ -1,7 +1,40 @@
 {
   "name": "Shop Glitch",
+  "displayName": "Shop Glitch",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ShopGlitch",
+  "description": "During non-player combat rounds, your shop refreshes for free every @RefreshTimer@ seconds for @TotalTimer@ seconds.",
+  "tooltip": "During non-player combat rounds, your shop refreshes for free every @RefreshTimer@ seconds for @TotalTimer@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ShopGlitch_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RefreshTimer",
+      "rawSourceValue": "2.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 28,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TotalTimer",
+      "rawSourceValue": "28",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RefreshTimer", "value": "2.5" }, { "name": "TotalTimer", "value": "28" }],
+  "importWarnings": ["Unmapped item variable: RefreshTimer", "Unmapped item variable: TotalTimer", "Unsupported item effect metadata: RefreshTimer", "Unsupported item effect metadata: TotalTimer"]
 }

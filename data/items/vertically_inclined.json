@@ -1,8 +1,43 @@
 {
   "name": "Vertically Inclined",
+  "displayName": "Vertically Inclined",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_VerticallyInclined",
+  "description": "Your team gains @BaseDamageAmp@% Damage Amp.<br><br>Gain @FullDamageAmp@% Damage Amp instead if you have fewer active non-unique traits than your opponent.",
+  "tooltip": "Your team gains @BaseDamageAmp@% Damage Amp.<br><br>Gain @FullDamageAmp@% Damage Amp instead if you have fewer active non-unique traits than your opponent.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vertically-Inclined-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Vertically Inclined:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Vertically Inclined:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.09, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.09,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseDamageAmp",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BaseDamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.09, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FullDamageAmp",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:FullDamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BaseDamageAmp", "value": "9" }, { "name": "FullDamageAmp", "value": "18" }],
+  "importWarnings": []
 }

@@ -1,7 +1,17 @@
 {
   "name": "Phantom",
+  "displayName": "Phantom",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitPhantomActivator",
+  "description": "Combat start: random enemies have their Health reduced.<br><br><row>(@TFTTrait.TFTEvent5YR_Phantom.1:MinUnits@) Set @TFTTrait.TFTEvent5YR_Phantom.1:NumUnitsToReduce@ enemy's Health to @TFTTrait.TFTEvent5YR_Phantom.1:PercentHealth*100@% maximum Health.</row><br><row>(@TFTTrait.TFTEvent5YR_Phantom.2:MinUnits@) Set @TFTTrait.TFTEvent5YR_Phantom.2:NumUnitsToReduce@ enemies' Health to @TFTTrait.TFTEvent5YR_Phantom.2:FlatHealth@.</row>",
+  "tooltip": "Combat start: random enemies have their Health reduced.<br><br><row>(@TFTTrait.TFTEvent5YR_Phantom.1:MinUnits@) Set @TFTTrait.TFTEvent5YR_Phantom.1:NumUnitsToReduce@ enemy's Health to @TFTTrait.TFTEvent5YR_Phantom.1:PercentHealth*100@% maximum Health.</row><br><row>(@TFTTrait.TFTEvent5YR_Phantom.2:MinUnits@) Set @TFTTrait.TFTEvent5YR_Phantom.2:NumUnitsToReduce@ enemies' Health to @TFTTrait.TFTEvent5YR_Phantom.2:FlatHealth@.</row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Phantom.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

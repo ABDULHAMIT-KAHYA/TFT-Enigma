@@ -1,0 +1,17 @@
+{
+  "name": "TFT4_Augment_SlayerCrest",
+  "displayName": "Slayer Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_SlayerCrest",
+  "description": "Gain a Slayer Emblem and a Zed.",
+  "tooltip": "Gain a Slayer Emblem and a Zed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Slayer_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

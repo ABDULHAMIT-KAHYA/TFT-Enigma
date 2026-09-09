@@ -1,7 +1,29 @@
 {
   "name": "Two for One",
+  "displayName": "Two for One",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_TwoforOne",
+  "description": "Each round, get a copy of the first champion you buy that costs 3 or less.",
+  "tooltip": "Each round, get a copy of the first champion you buy that costs 3 or less.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TwoForOne_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

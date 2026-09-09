@@ -1,7 +1,17 @@
 {
   "name": "Armored Dummy",
+  "displayName": "Armored Dummy",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Dummy_Kayle",
+  "description": "Gain a training dummy with a Warmog's Armor, Bramble Vest, and Dragon's Claw.",
+  "tooltip": "Gain a training dummy with a Warmog's Armor, Bramble Vest, and Dragon's Claw.",
+  "iconPath": "ASSETS/Characters/TFT_TrainingDummy/HUD/Icons2D/TFT_TrainingDummy_DoNothing.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

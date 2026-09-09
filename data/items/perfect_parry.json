@@ -1,7 +1,29 @@
 {
   "name": "Perfect Parry",
+  "displayName": "Perfect Parry",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_Vanquisher_PerfectParry",
+  "description": "Vanquishers have a chance to Parry equal to their Critical Strike Chance. When Parrying, they reduce their damage taken by @ParryDR*100@%. Gain a Rek'Sai.",
+  "tooltip": "Vanquishers have a chance to Parry equal to their Critical Strike Chance. When Parrying, they reduce their damage taken by @ParryDR*100@%. Gain a Rek'Sai.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ParryDR",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ParryDR", "value": "0.25" }],
+  "importWarnings": ["Unmapped item variable: ParryDR"]
 }

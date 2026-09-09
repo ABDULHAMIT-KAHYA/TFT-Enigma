@@ -1,7 +1,51 @@
 {
   "name": "Pandora's Bench",
+  "displayName": "Pandora's Bench",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_PandorasBench",
+  "description": "At the start of every round, champions on the @BenchSlots@ rightmost bench slots transform into random champions of the same cost. Gain @Gold@ gold.",
+  "tooltip": "At the start of every round, champions on the @BenchSlots@ rightmost bench slots transform into random champions of the same cost. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Pandoras-Bench-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BenchSlots",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LesserDuplicatorAmount",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BenchSlots", "value": "3" }, { "name": "Gold", "value": "6" }, { "name": "LesserDuplicatorAmount", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: BenchSlots", "Unmapped item variable: Gold", "Unmapped non-numeric item variable: LesserDuplicatorAmount", "Unsupported item effect metadata: BenchSlots", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: LesserDuplicatorAmount"]
 }

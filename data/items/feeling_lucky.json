@@ -1,7 +1,40 @@
 {
   "name": "Feeling Lucky",
+  "displayName": "Feeling Lucky",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_FeelingLucky",
+  "description": "Gain @BaseGold@ gold, then flip a coin. If heads, gain @GoldForHeads@ more gold.<br><br>@TFTUnitProperty.item:TFT_Augment_FeelingLucky_Tooltip@",
+  "tooltip": "Gain @BaseGold@ gold, then flip a coin. If heads, gain @GoldForHeads@ more gold.<br><br>@TFTUnitProperty.item:TFT_Augment_FeelingLucky_Tooltip@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FeelingLucky_I.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseGold",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldForHeads",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseGold", "value": "12" }, { "name": "GoldForHeads", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: BaseGold", "Unmapped item variable: GoldForHeads", "Unsupported item effect metadata: BaseGold", "Unsupported item effect metadata: GoldForHeads"]
 }

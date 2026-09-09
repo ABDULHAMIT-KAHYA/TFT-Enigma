@@ -1,7 +1,40 @@
 {
   "name": "Concentration",
+  "displayName": "Concentration",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_Concentration",
+  "description": "Conduit Abilities last @PowerMin@% to @PowerMax@% longer, depending on the Ability. Gain a Zoe and a Mordekaiser.",
+  "tooltip": "Conduit Abilities last @PowerMin@% to @PowerMax@% longer, depending on the Ability. Gain a Zoe and a Mordekaiser.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Concentration_II.TFT_17_3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{5ec99892}",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{68b48d98}",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{5ec99892}", "value": "25" }, { "name": "{68b48d98}", "value": "50" }],
+  "importWarnings": ["Unmapped item variable: {5ec99892}", "Unmapped item variable: {68b48d98}"]
 }

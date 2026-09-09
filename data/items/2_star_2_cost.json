@@ -1,7 +1,29 @@
 {
   "name": "2-star 2-cost",
+  "displayName": "2-star 2-cost",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_TwoCostChampion_TwoStar",
+  "description": "Gain a 2-star 2-cost champion. Lose @HealthLoss@ Tactician Health.",
+  "tooltip": "Gain a 2-star 2-cost champion. Lose @HealthLoss@ Tactician Health.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_2c.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthLoss",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthLoss", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: HealthLoss"]
 }

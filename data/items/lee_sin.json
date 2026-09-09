@@ -1,7 +1,17 @@
 {
   "name": "Lee Sin",
+  "displayName": "Lee Sin",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_LeeSin",
+  "description": "Lee Sin",
+  "tooltip": "Lee Sin",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_LeeSin_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

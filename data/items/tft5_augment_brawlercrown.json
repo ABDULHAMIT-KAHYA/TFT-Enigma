@@ -1,0 +1,17 @@
+{
+  "name": "TFT5_Augment_BrawlerCrown",
+  "displayName": "Brawler Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_BrawlerCrown",
+  "description": "Gain an Brawler Emblem, a Bramble Vest, and a Sett.",
+  "tooltip": "Gain an Brawler Emblem, a Bramble Vest, and a Sett.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Brawler_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

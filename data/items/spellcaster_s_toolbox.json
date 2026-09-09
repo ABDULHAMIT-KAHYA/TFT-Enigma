@@ -1,7 +1,29 @@
 {
   "name": "Spellcaster's Toolbox",
+  "displayName": "Spellcaster's Toolbox",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SpellcastersToolbox",
+  "description": "Gain a Manazane. In @combatnum@ rounds, gain a Zhonya's Paradox.",
+  "tooltip": "Gain a Manazane. In @combatnum@ rounds, gain a Zhonya's Paradox.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SpellcastersToolbox_III.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CombatNum",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CombatNum", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: CombatNum", "Unsupported item effect metadata: CombatNum"]
 }

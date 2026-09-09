@@ -1,7 +1,17 @@
 {
   "name": "Schoolyard Justice",
+  "displayName": "Schoolyard Justice",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_GarenCarry",
+  "description": "Gain a Garen. Your strongest Garen becomes a Fighter. He no longer Heals, but deals more damage and executes weak enemies.",
+  "tooltip": "Gain a Garen. Your strongest Garen becomes a Fighter. He no longer Heals, but deals more damage and executes weak enemies.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HerosJourney_I.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

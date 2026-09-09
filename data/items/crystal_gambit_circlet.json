@@ -1,7 +1,17 @@
 {
   "name": "Crystal Gambit Circlet",
+  "displayName": "Crystal Gambit Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_CrystalRoseCirclet",
+  "description": "Gain a Crystal Gambit Emblem and a Janna.",
+  "tooltip": "Gain a Crystal Gambit Emblem and a Janna.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_CrystalGambit_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

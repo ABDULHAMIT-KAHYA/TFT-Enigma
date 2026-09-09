@@ -1,0 +1,62 @@
+{
+  "name": "TFT11_Augment_Slammin_Plus",
+  "displayName": "Slammin'+",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_Slammin_Plus",
+  "description": "Gain @Gold@ gold and @XPNow@ XP now. After each player combat, if there are no items on your bench (other than consumables), gain @XP@ XP.",
+  "tooltip": "Gain @Gold@ gold and @XPNow@ XP now. After each player combat, if there are no items on your bench (other than consumables), gain @XP@ XP.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Slammin_II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XPNow",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "components",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "8" }, { "name": "XP", "value": "2" }, { "name": "XPNow", "value": "10" }, { "name": "components", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: XP", "Unmapped item variable: XPNow", "Unmapped non-numeric item variable: components", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: XP", "Unsupported item effect metadata: XPNow", "Unsupported item effect metadata: components"]
+}

@@ -1,7 +1,117 @@
 {
   "name": "Slice of Life",
+  "displayName": "Slice of Life",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SliceOfLife",
+  "description": "Twice per stage, gain a random champion. Its cost increases by Stage. This effect ends after receiving @Max5Costs@ 5-cost champion.",
+  "tooltip": "Twice per stage, gain a random champion. Its cost increases by Stage. This effect ends after receiving @Max5Costs@ 5-cost champion.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Slice_of_Life_I.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Max5Costs",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{5ca21683}",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{8422d0b8}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{8c017039}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a562cde4}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{ab8c0482}",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{b0e84f56}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d867370f}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{e46f7955}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Max5Costs", "value": "1" }, { "name": "{5ca21683}", "value": "4" }, { "name": "{8422d0b8}", "value": "3" }, { "name": "{8c017039}", "value": "2" }, { "name": "{a562cde4}", "value": "1" }, { "name": "{ab8c0482}", "value": "5" }, { "name": "{b0e84f56}", "value": "1" }, { "name": "{d867370f}", "value": "1" }, { "name": "{e46f7955}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Max5Costs", "Unmapped item variable: {5ca21683}", "Unmapped item variable: {8422d0b8}", "Unmapped item variable: {8c017039}", "Unmapped item variable: {a562cde4}", "Unmapped item variable: {ab8c0482}", "Unmapped item variable: {b0e84f56}", "Unmapped item variable: {d867370f}", "Unmapped item variable: {e46f7955}", "Unsupported item effect metadata: Max5Costs", "Unsupported item effect metadata: {5ca21683}", "Unsupported item effect metadata: {8422d0b8}", "Unsupported item effect metadata: {8c017039}", "Unsupported item effect metadata: {a562cde4}", "Unsupported item effect metadata: {ab8c0482}", "Unsupported item effect metadata: {b0e84f56}", "Unsupported item effect metadata: {d867370f}", "Unsupported item effect metadata: {e46f7955}"]
 }

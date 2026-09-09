@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_DestroyerCirclet",
+  "displayName": "Executioner Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_DestroyerCirclet",
+  "description": "Gain an Executioner Emblem, an Akali, and a Sparring Gloves.",
+  "tooltip": "Gain an Executioner Emblem, an Akali, and a Sparring Gloves.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Executioner_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

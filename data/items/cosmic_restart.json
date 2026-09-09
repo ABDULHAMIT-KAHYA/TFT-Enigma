@@ -1,7 +1,40 @@
 {
   "name": "Cosmic Restart",
+  "displayName": "Cosmic Restart",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_CosmicRestart",
+  "description": "Call upon the Gods to sell all units on your board and bench. Gain @Emblems@ random Emblems and @Rerolls@ free Shop rerolls.",
+  "tooltip": "Call upon the Gods to sell all units on your board and bench. Gain @Emblems@ random Emblems and @Rerolls@ free Shop rerolls.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CosmicRestart_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Emblems",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Rerolls",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Emblems", "value": "2" }, { "name": "Rerolls", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: Emblems", "Unmapped item variable: Rerolls"]
 }

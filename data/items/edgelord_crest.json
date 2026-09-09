@@ -1,7 +1,17 @@
 {
   "name": "Edgelord Crest",
+  "displayName": "Edgelord Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_EdgelordCrest",
+  "description": "Gain an Edgelord Emblem.",
+  "tooltip": "Gain an Edgelord Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Edgelord_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

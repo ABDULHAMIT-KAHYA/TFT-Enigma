@@ -1,7 +1,41 @@
 {
   "name": "Party Time!",
+  "displayName": "Party Time!",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_RevelPartyTime",
+  "description": "After Revels score a takedown, they gain @AttackSpeedPercent@% Attack Speed for @Duration@ seconds. Gain a Jinx.",
+  "tooltip": "After Revels score a takedown, they gain @AttackSpeedPercent@% Attack Speed for @Duration@ seconds. Gain a Jinx.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Party-Time-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Party Time!:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.8, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeedPercent",
+      "rawSourceValue": "80",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeedPercent", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.8, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeedPercent", "value": "80" }, { "name": "Duration", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Duration", "Unsupported item effect metadata: Duration"]
 }

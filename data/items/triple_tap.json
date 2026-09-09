@@ -1,7 +1,29 @@
 {
   "name": "Triple Tap",
+  "displayName": "Triple Tap",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_TripleTap",
+  "description": "@TripleAttackChance*100@% chance to attack thrice.",
+  "tooltip": "@TripleAttackChance*100@% chance to attack thrice.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_TripleTap.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TripleAttackChance",
+      "rawSourceValue": "0.18",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "TripleAttackChance", "value": "0.18" }],
+  "importWarnings": ["Unmapped item variable: TripleAttackChance"]
 }

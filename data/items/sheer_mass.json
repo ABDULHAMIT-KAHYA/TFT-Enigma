@@ -1,7 +1,40 @@
 {
   "name": "Sheer Mass",
+  "displayName": "Sheer Mass",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_SheerMass",
+  "description": "Gain @BonusPercentMaxHealth*100@% max Health and size.",
+  "tooltip": "Gain @BonusPercentMaxHealth*100@% max Health and size.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_SheerMass.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusPercentMaxHealth",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d153e0fd}",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusPercentMaxHealth", "value": "0.25" }, { "name": "{d153e0fd}", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: BonusPercentMaxHealth", "Unmapped item variable: {d153e0fd}"]
 }

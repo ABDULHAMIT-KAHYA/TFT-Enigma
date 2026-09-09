@@ -1,7 +1,17 @@
 {
   "name": "Wukong",
+  "displayName": "Wukong",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Wukong",
+  "description": "Wukong",
+  "tooltip": "Wukong",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_WuKong_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

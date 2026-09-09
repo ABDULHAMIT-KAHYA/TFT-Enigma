@@ -1,7 +1,17 @@
 {
   "name": "Heavyweight Crown",
+  "displayName": "Heavyweight Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_HeavyweightCrown",
+  "description": "Gain a Heavyweight Emblem, a Spirit Visage, and a Kobuko.",
+  "tooltip": "Gain a Heavyweight Emblem, a Spirit Visage, and a Kobuko.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Heavyweight_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

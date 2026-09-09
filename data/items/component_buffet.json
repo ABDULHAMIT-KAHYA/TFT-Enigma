@@ -1,7 +1,17 @@
 {
   "name": "Component Buffet",
+  "displayName": "Component Buffet",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_CustomerIsAlwaysRight",
+  "description": "Whenever you would get a component, gain a component anvil instead. Gain a random component now.<br><br><rules>The anvil offers 4 choices.</rules>",
+  "tooltip": "Whenever you would get a component, gain a component anvil instead. Gain a random component now.<br><br><rules>The anvil offers 4 choices.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/The-customer-is-always-right-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

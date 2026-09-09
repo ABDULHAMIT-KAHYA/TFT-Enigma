@@ -1,0 +1,51 @@
+{
+  "name": "TFT_Augment_EyeForAnEye",
+  "displayName": "Eye For An Eye",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_EyeForAnEye",
+  "description": "For every @AllyDeaths@ ally champions that die, gain a random component (max @NumComponents@).<br><br>Deaths Remaining: @TFTUnitProperty.item:TFT_Augment_EyeForAnEyeDeaths@",
+  "tooltip": "For every @AllyDeaths@ ally champions that die, gain a random component (max @NumComponents@).<br><br>Deaths Remaining: @TFTUnitProperty.item:TFT_Augment_EyeForAnEyeDeaths@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/EyeforanEye_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AllyDeaths",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a6cb80ca}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AllyDeaths", "value": "15" }, { "name": "NumComponents", "value": "3" }, { "name": "{a6cb80ca}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: AllyDeaths", "Unmapped item variable: NumComponents", "Unmapped non-numeric item variable: {a6cb80ca}", "Unsupported item effect metadata: AllyDeaths", "Unsupported item effect metadata: NumComponents", "Unsupported item effect metadata: {a6cb80ca}"]
+}

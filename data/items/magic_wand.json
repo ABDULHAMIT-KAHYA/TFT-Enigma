@@ -1,7 +1,30 @@
 {
   "name": "Magic Wand",
+  "displayName": "Magic Wand",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_OldMansWalkingStick",
+  "description": "Gain a Needlessly Large Rod. Your units gain @AP@ Ability Power.",
+  "tooltip": "Gain a Needlessly Large Rod. Your units gain @AP@ Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Old-Man_s-Walking-Stick-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Magic Wand:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "18" }],
+  "importWarnings": []
 }

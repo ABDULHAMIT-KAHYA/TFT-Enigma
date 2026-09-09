@@ -1,7 +1,17 @@
 {
   "name": "Ephemeral Rerolls",
+  "displayName": "Ephemeral Rerolls",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_EphemeralRerolls",
+  "description": "At the start of each round, if you don't have a free reroll, gain a free reroll.",
+  "tooltip": "At the start of each round, if you don't have a free reroll, gain a free reroll.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_EphemeralRerolls.TFT_17_2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

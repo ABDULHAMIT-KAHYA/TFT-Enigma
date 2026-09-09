@@ -1,0 +1,30 @@
+{
+  "name": "TFT16_Item_Bilgewater_ArmorMRTier3",
+  "displayName": "+@BonusArmorMR@ Armor & Magic Resist",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Item_Bilgewater_ArmorMRTier3",
+  "description": "Bilgewater champions gain @BonusArmorMR@ Armor and @BonusArmorMR@ Magic Resist.",
+  "tooltip": "Bilgewater champions gain @BonusArmorMR@ Armor and @BonusArmorMR@ Magic Resist.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Bilgewater/TFT16_Bilgewater_ArmorMR_Tier3.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+    { "name": "Item:TFT16_Item_Bilgewater_ArmorMRTier3:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 13, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 13,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusArmorMR",
+      "rawSourceValue": "13",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusArmorMR", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 13, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusArmorMR", "value": "13" }],
+  "importWarnings": []
+}

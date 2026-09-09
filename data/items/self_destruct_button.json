@@ -1,7 +1,73 @@
 {
   "name": "Self Destruct Button",
+  "displayName": "Self Destruct Button",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_JunkerKing_SelfDestructButton",
+  "description": "<spellPassive>Self Destruct Button:</spellPassive> Increase Armor and Magic Resist by&nbsp;@SelfDestruct_ResistGainIncrease*100@%. On death, deal @SelfDestruct_ResistDamage_Level1*100@%&nbsp;/&nbsp;@SelfDestruct_ResistDamage_Level2*100@%&nbsp;/&nbsp;@SelfDestruct_ResistDamage_Level3*100@%&nbsp;%i:scaleArmor%%i:scaleMR% as magic damage to enemies within @SelfDestruct_HexRadius@&nbsp;hexes.<br><br>",
+  "tooltip": "<spellPassive>Self Destruct Button:</spellPassive> Increase Armor and Magic Resist by&nbsp;@SelfDestruct_ResistGainIncrease*100@%. On death, deal @SelfDestruct_ResistDamage_Level1*100@%&nbsp;/&nbsp;@SelfDestruct_ResistDamage_Level2*100@%&nbsp;/&nbsp;@SelfDestruct_ResistDamage_Level3*100@%&nbsp;%i:scaleArmor%%i:scaleMR% as magic damage to enemies within @SelfDestruct_HexRadius@&nbsp;hexes.<br><br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT13/TFT13_JunkerKing_SelfDestructButton_Icon.TFT_Set13.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SelfDestruct_HexRadius",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SelfDestruct_ResistDamage_Level1",
+      "rawSourceValue": "1.6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 2.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SelfDestruct_ResistDamage_Level2",
+      "rawSourceValue": "2.4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SelfDestruct_ResistDamage_Level3",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SelfDestruct_ResistGainIncrease",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "SelfDestruct_HexRadius", "value": "2" }, { "name": "SelfDestruct_ResistDamage_Level1", "value": "1.6" }, { "name": "SelfDestruct_ResistDamage_Level2", "value": "2.4" }, { "name": "SelfDestruct_ResistDamage_Level3", "value": "20" }, { "name": "SelfDestruct_ResistGainIncrease", "value": "0.25" }],
+  "importWarnings": ["Unmapped item variable: SelfDestruct_HexRadius", "Unmapped item variable: SelfDestruct_ResistDamage_Level1", "Unmapped item variable: SelfDestruct_ResistDamage_Level2", "Unmapped item variable: SelfDestruct_ResistDamage_Level3", "Unmapped item variable: SelfDestruct_ResistGainIncrease"]
 }

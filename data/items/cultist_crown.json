@@ -1,7 +1,17 @@
 {
   "name": "Cultist Crown",
+  "displayName": "Cultist Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_CultistCrown",
+  "description": "Gain a Cultist Emblem, a Sunfire Cape, and a Pyke.",
+  "tooltip": "Gain a Cultist Emblem, a Sunfire Cape, and a Pyke.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cultist_III.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

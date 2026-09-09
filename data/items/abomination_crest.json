@@ -1,7 +1,17 @@
 {
   "name": "Abomination Crest",
+  "displayName": "Abomination Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_AbominationCrest",
+  "description": "Gain an Abomination Emblem and a Brand.",
+  "tooltip": "Gain an Abomination Emblem and a Brand.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Abomination_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

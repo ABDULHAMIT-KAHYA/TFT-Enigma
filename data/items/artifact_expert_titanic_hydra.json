@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: Titanic Hydra",
+  "displayName": "Artifact Expert: Titanic Hydra",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_TitanicHydra",
+  "description": "Get a 2* Briar, a Titanic Hydra , and a B.F. Sword",
+  "tooltip": "Get a 2* Briar, a Titanic Hydra , and a B.F. Sword",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

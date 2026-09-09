@@ -1,7 +1,62 @@
 {
   "name": "Tournament Titans",
+  "displayName": "Tournament Titans",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_Luchador_TournamentTitans",
+  "description": "Luchadors gain @BaselineAS*100@% Attack Speed. Whenever you win player combats, Luchadors grow in size and permanently gain @ADPerWin@% Attack Damage and @HealthPerWin@ Health.  Gain a Dr Mundo and Gnar.<br><br>(Total: @TFTUnitProperty.:TFT15_Augment_Luchador_TournamentTitan_AD@% AD; @TFTUnitProperty.:TFT15_Augment_Luchador_TournamentTitan_Health@ Health)",
+  "tooltip": "Luchadors gain @BaselineAS*100@% Attack Speed. Whenever you win player combats, Luchadors grow in size and permanently gain @ADPerWin@% Attack Damage and @HealthPerWin@ Health.  Gain a Dr Mundo and Gnar.<br><br>(Total: @TFTUnitProperty.:TFT15_Augment_Luchador_TournamentTitan_AD@% AD; @TFTUnitProperty.:TFT15_Augment_Luchador_TournamentTitan_Health@ Health)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TournamentTitans_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ADPerWin",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaselineAS",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPerWin",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SizeCap",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADPerWin", "value": "2" }, { "name": "BaselineAS", "value": "0.05" }, { "name": "HealthPerWin", "value": "20" }, { "name": "SizeCap", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: ADPerWin", "Unmapped item variable: BaselineAS", "Unmapped item variable: HealthPerWin", "Unmapped item variable: SizeCap"]
 }

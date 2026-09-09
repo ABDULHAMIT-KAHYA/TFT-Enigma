@@ -1,7 +1,17 @@
 {
   "name": "Qiyana",
+  "displayName": "Qiyana",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Qiyana",
+  "description": "Qiyana",
+  "tooltip": "Qiyana",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Qiyana_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

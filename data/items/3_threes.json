@@ -1,7 +1,40 @@
 {
   "name": "3 Threes",
+  "displayName": "3 Threes",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ThreeThrees",
+  "description": "Gain @NumChamps@ random 2-star 3-cost champions and @Gold@ gold.",
+  "tooltip": "Gain @NumChamps@ random 2-star 3-cost champions and @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ThreeThrees_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumChamps",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "3" }, { "name": "NumChamps", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumChamps", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumChamps"]
 }

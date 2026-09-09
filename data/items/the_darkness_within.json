@@ -1,7 +1,62 @@
 {
   "name": "The Darkness Within",
+  "displayName": "The Darkness Within",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_Wraith_ShadowHomunculous",
+  "description": "The first @NumWraiths@ Wraith champions to die each combat summon a monstrosity from the Shadow Realm. Gain a Jhin and Zac.",
+  "tooltip": "The first @NumWraiths@ Wraith champions to die each combat summon a monstrosity from the Shadow Realm. Gain a Jhin and Zac.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ShadowHomunculous_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumWraiths",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{4335ed7e}",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{43d33725}",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{8d35ce32}",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumWraiths", "value": "3" }, { "name": "{4335ed7e}", "value": "0.2" }, { "name": "{43d33725}", "value": "300" }, { "name": "{8d35ce32}", "value": "300" }],
+  "importWarnings": ["Unmapped item variable: NumWraiths", "Unmapped item variable: {4335ed7e}", "Unmapped item variable: {43d33725}", "Unmapped item variable: {8d35ce32}"]
 }

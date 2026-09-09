@@ -1,0 +1,41 @@
+{
+  "name": "TFT17_Augment_SnipersNest",
+  "displayName": "Sniper's Nest",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Augment_SnipersNest",
+  "description": "Snipers gain @DamageAmp@% Damage Amp for each combat fought from the same starting hex, up to @MaxAmp@%. Gain an Ezreal and a Gnar.",
+  "tooltip": "Snipers gain @DamageAmp@% Damage Amp for each combat fought from the same starting hex, up to @MaxAmp@%. Gain an Ezreal and a Gnar.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SnipersNest2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT17_Augment_SnipersNest:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 32,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxAmp",
+      "rawSourceValue": "32",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "8" }, { "name": "MaxAmp", "value": "32" }],
+  "importWarnings": ["Unmapped item variable: MaxAmp"]
+}

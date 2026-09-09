@@ -1,7 +1,17 @@
 {
   "name": "Dragonlord",
+  "displayName": "Dragonlord",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitDragonlordActivator",
+  "description": "After @TFTTrait.TFTEvent5YR_Dragonlord.1:FirstDelay@ seconds of combat, the Dragon strikes the board, dealing <trueDamage>true damage</trueDamage> and stunning all enemies. Allies gain Attack Speed for the rest of combat.<br><br><row>(@TFTTrait.TFTEvent5YR_Dragonlord.1:MinUnits@) @TFTTrait.TFTEvent5YR_Dragonlord.1:TrueDamageHPRatio*100@% %i:scaleHealth% damage, Stuns for @TFTTrait.TFTEvent5YR_Dragonlord.1:StunDuration@ seconds, @TFTTrait.TFTEvent5YR_Dragonlord.1:AttackSpeedBuff*100@% %i:scaleAS%.</row><br><row>(@TFTTrait.TFTEvent5YR_Dragonlord.2:MinUnits@) @TFTTrait.TFTEvent5YR_Dragonlord.2:TrueDamageHPRatio*100@% %i:scaleHealth% damage, Stuns for @TFTTrait.TFTEvent5YR_Dragonlord.2:StunDuration@ seconds, @TFTTrait.TFTEvent5YR_Dragonlord.2:AttackSpeedBuff*100@% %i:scaleAS%.<br>After an additional @TFTTrait.TFTEvent5YR_Dragonlord.2:SecondDelay@ seconds, the Dragon strikes again.</row><br><br>",
+  "tooltip": "After @TFTTrait.TFTEvent5YR_Dragonlord.1:FirstDelay@ seconds of combat, the Dragon strikes the board, dealing <trueDamage>true damage</trueDamage> and stunning all enemies. Allies gain Attack Speed for the rest of combat.<br><br><row>(@TFTTrait.TFTEvent5YR_Dragonlord.1:MinUnits@) @TFTTrait.TFTEvent5YR_Dragonlord.1:TrueDamageHPRatio*100@% %i:scaleHealth% damage, Stuns for @TFTTrait.TFTEvent5YR_Dragonlord.1:StunDuration@ seconds, @TFTTrait.TFTEvent5YR_Dragonlord.1:AttackSpeedBuff*100@% %i:scaleAS%.</row><br><row>(@TFTTrait.TFTEvent5YR_Dragonlord.2:MinUnits@) @TFTTrait.TFTEvent5YR_Dragonlord.2:TrueDamageHPRatio*100@% %i:scaleHealth% damage, Stuns for @TFTTrait.TFTEvent5YR_Dragonlord.2:StunDuration@ seconds, @TFTTrait.TFTEvent5YR_Dragonlord.2:AttackSpeedBuff*100@% %i:scaleAS%.<br>After an additional @TFTTrait.TFTEvent5YR_Dragonlord.2:SecondDelay@ seconds, the Dragon strikes again.</row><br><br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5YR_Set14_Dragonlord.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

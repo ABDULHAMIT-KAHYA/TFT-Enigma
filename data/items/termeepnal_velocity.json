@@ -1,7 +1,17 @@
 {
   "name": "Termeepnal Velocity",
+  "displayName": "Termeepnal Velocity",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_PoppyCarry",
+  "description": "Gain a Poppy. Your strongest Poppy becomes a ranged Attack Caster that flings a high-velocity Meep at her target.",
+  "tooltip": "Gain a Poppy. Your strongest Poppy becomes a ranged Attack Caster that flings a high-velocity Meep at her target.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PoppyHero_I.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

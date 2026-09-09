@@ -1,0 +1,76 @@
+{
+  "name": "TFT_Item_SupportKnightsVow",
+  "displayName": "Knight's Vow",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_SupportKnightsVow",
+  "description": "Combat start: Grant @AllyHealth@ Health and @Omnivamp*100@% Omnivamp to the holder and allies within 1 hex in the same row.<br><br>​​<tftitemrules>[Support item]</tftitemrules>",
+  "tooltip": "Combat start: Grant @AllyHealth@ Health and @Omnivamp*100@% Omnivamp to the holder and allies within 1 hex in the same row.<br><br>​​<tftitemrules>[Support item]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_SupportKnightsVow.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT_Item_SupportKnightsVow:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT_Item_SupportKnightsVow:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "AllyHealth",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HexRange",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Resists",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Omnivamp",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AllyHealth", "value": "200" }, { "name": "Health", "value": "50" }, { "name": "HexRange", "value": "1" }, { "name": "Omnivamp", "value": "0.15" }, { "name": "Resists", "value": "null" }],
+  "importWarnings": ["Metadata-only item effect: AllyHealth -> Aura", "Metadata-only item effect: Health -> GrantStats", "Metadata-only item effect: HexRange -> Aura", "Metadata-only item effect: Omnivamp -> GrantStats", "Metadata-only item effect: Resists -> Aura", "Unmapped item variable: AllyHealth", "Unmapped item variable: HexRange", "Unmapped non-numeric item variable: Resists"]
+}

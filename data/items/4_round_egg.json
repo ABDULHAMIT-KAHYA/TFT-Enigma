@@ -1,7 +1,17 @@
 {
   "name": "4-Round Egg",
+  "displayName": "4-Round Egg",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Armory_Egg_Small",
+  "description": "Hatches in 4 rounds (losses count double), granting about 15 Gold worth of loot.",
+  "tooltip": "Hatches in 4 rounds (losses count double), granting about 15 Gold worth of loot.",
+  "iconPath": "ASSETS/Characters/TFT14_HackedEgg/HUD/Icons2D/TFT14_HackedEgg_Square.TFT_Set14.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

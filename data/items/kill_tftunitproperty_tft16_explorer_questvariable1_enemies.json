@@ -1,7 +1,17 @@
 {
   "name": "Kill @TFTUnitProperty.:TFT16_Explorer_QuestVariable1@ enemies.",
+  "displayName": "Kill @TFTUnitProperty.:TFT16_Explorer_QuestVariable1@ enemies.",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Explorer_KillQuest",
+  "description": "Reward: @TFTUnitProperty.:TFT16_Explorer_QuestExplorerPoints@ %i:Set16Ixtal%",
+  "tooltip": "Reward: @TFTUnitProperty.:TFT16_Explorer_QuestExplorerPoints@ %i:Set16Ixtal%",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

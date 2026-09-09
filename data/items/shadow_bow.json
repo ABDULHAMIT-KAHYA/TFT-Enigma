@@ -1,7 +1,30 @@
 {
   "name": "Shadow Bow",
+  "displayName": "Shadow Bow",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_RecurveBowShadow",
+  "description": "%i:scaleAS% +@AS@% Attack Speed",
+  "tooltip": "%i:scaleAS% +@AS@% Attack Speed",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Recurve_Bow.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Shadow Bow:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "10" }],
+  "importWarnings": []
 }

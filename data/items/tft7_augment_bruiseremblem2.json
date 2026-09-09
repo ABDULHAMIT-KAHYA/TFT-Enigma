@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Augment_BruiserEmblem2",
+  "displayName": "Bruiser Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_BruiserEmblem2",
+  "description": "Gain a Bruiser Emblem, a Spirit Visage, and a Sylas.<br>",
+  "tooltip": "Gain a Bruiser Emblem, a Spirit Visage, and a Sylas.<br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BruiserSoul3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

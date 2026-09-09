@@ -1,7 +1,17 @@
 {
   "name": "Lose More",
+  "displayName": "Lose More",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Item_Strategist_LoseMore",
+  "description": "Bet that you'll lose 3 or more of the next 5 combats.",
+  "tooltip": "Bet that you'll lose 3 or more of the next 5 combats.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT9_HeimerUpgrades/TFT9_HeimerUpgrade_SelfDestruct.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

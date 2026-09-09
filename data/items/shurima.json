@@ -1,7 +1,17 @@
 {
   "name": "Shurima",
+  "displayName": "Shurima",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitShurimaActivator",
+  "description": "Combat start: select champions Ascend and gain @TFTTrait.TFTEvent5YR_Shurima.1:BonusHealthPercent*100@% maximum Health %i:scaleHealth% and @TFTTrait.TFTEvent5YR_Shurima.1:BonusASPercent*100@% Attack Speed %i:scaleAS%.<br><br><row>(@TFTTrait.TFTEvent5YR_Shurima.1:MinUnits@) The strongest champion Ascends after @TFTTrait.TFTEvent5YR_Shurima.1:SecondsToAscend@ seconds. </row><br><row>(@TFTTrait.TFTEvent5YR_Shurima.2:MinUnits@) The @TFTTrait.TFTEvent5YR_Shurima.2:NumUnitsToAscend@ strongest champions Ascend immediately.</row><br>",
+  "tooltip": "Combat start: select champions Ascend and gain @TFTTrait.TFTEvent5YR_Shurima.1:BonusHealthPercent*100@% maximum Health %i:scaleHealth% and @TFTTrait.TFTEvent5YR_Shurima.1:BonusASPercent*100@% Attack Speed %i:scaleAS%.<br><br><row>(@TFTTrait.TFTEvent5YR_Shurima.1:MinUnits@) The strongest champion Ascends after @TFTTrait.TFTEvent5YR_Shurima.1:SecondsToAscend@ seconds. </row><br><row>(@TFTTrait.TFTEvent5YR_Shurima.2:MinUnits@) The @TFTTrait.TFTEvent5YR_Shurima.2:NumUnitsToAscend@ strongest champions Ascend immediately.</row><br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Shurima.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

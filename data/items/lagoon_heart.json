@@ -1,7 +1,17 @@
 {
   "name": "Lagoon Heart",
+  "displayName": "Lagoon Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_LagoonTrait",
+  "description": "Your team counts as having 1 additional Lagoon. Gain a Kai'Sa.",
+  "tooltip": "Your team counts as having 1 additional Lagoon. Gain a Kai'Sa.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LagoonHeart-1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

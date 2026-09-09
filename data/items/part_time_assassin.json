@@ -1,7 +1,17 @@
 {
   "name": "Part-Time Assassin",
+  "displayName": "Part-Time Assassin",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_AssassinForAllUnits",
+  "description": "The Assassin Trait grants its bonuses to your champions that start combat in the middle 2 rows. This does not increase the number of Assassins. Gain a Qiyana.",
+  "tooltip": "The Assassin Trait grants its bonuses to your champions that start combat in the middle 2 rows. This does not increase the number of Assassins. Gain a Qiyana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Assassin-Unity-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

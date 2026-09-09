@@ -1,0 +1,41 @@
+{
+  "name": "TFT16_Item_Bilgewater_FirstFreeADAP",
+  "displayName": "First One's Free!",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Bilgewater_FirstFreeADAP",
+  "description": "Bilgewater champions gain @BonusAD*100@% Attack Damage and Ability Power.",
+  "tooltip": "Bilgewater champions gain @BonusAD*100@% Attack Damage and Ability Power.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/FreeADAP.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusAD",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusAP",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 15, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAD", "value": "0.15" }, { "name": "BonusAP", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: BonusAD", "Unmapped item variable: BonusAP"]
+}

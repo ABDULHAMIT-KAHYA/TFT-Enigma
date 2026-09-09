@@ -1,0 +1,29 @@
+{
+  "name": "TFT_Augment_SupportMiningPlus",
+  "displayName": "Support Mining+",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SupportMiningPlus",
+  "description": "Gain a Training Dummy. When it dies @NumDeaths@ times, gain a random Support Item and remove the Training Dummy.",
+  "tooltip": "Gain a Training Dummy. When it dies @NumDeaths@ times, gain a random Support Item and remove the Training Dummy.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Support-Mining-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDeaths",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumDeaths", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: NumDeaths"]
+}

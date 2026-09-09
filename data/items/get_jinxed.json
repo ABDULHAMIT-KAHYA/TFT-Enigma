@@ -1,7 +1,117 @@
 {
   "name": "Get Jinxed!",
+  "displayName": "Get Jinxed!",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_GetJinxed",
+  "description": "After @Delay@ seconds of combat, a Super Mega Death Rocket crashes into the largest clump of enemy units, dealing @Stage2Damage@-@Stage6Damage@ depending on the current stage. Enemies hit have their healing reduced by @GrievousWoundsPercent@% for @Duration@ seconds.",
+  "tooltip": "After @Delay@ seconds of combat, a Super Mega Death Rocket crashes into the largest clump of enemy units, dealing @Stage2Damage@-@Stage6Damage@ depending on the current stage. Enemies hit have their healing reduced by @GrievousWoundsPercent@% for @Duration@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GrievousWoundsPercent",
+      "rawSourceValue": "33",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRadius",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Stage2Damage",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Stage3Damage",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 350,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Stage4Damage",
+      "rawSourceValue": "350",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 425,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Stage5Damage",
+      "rawSourceValue": "425",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Stage6Damage",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Delay", "value": "8" }, { "name": "Duration", "value": "15" }, { "name": "GrievousWoundsPercent", "value": "33" }, { "name": "HexRadius", "value": "2" }, { "name": "Stage2Damage", "value": "250" }, { "name": "Stage3Damage", "value": "300" }, { "name": "Stage4Damage", "value": "350" }, { "name": "Stage5Damage", "value": "425" }, { "name": "Stage6Damage", "value": "500" }],
+  "importWarnings": ["Unmapped item variable: Delay", "Unmapped item variable: Duration", "Unmapped item variable: GrievousWoundsPercent", "Unmapped item variable: HexRadius", "Unmapped item variable: Stage2Damage", "Unmapped item variable: Stage3Damage", "Unmapped item variable: Stage4Damage", "Unmapped item variable: Stage5Damage", "Unmapped item variable: Stage6Damage"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Swiftshot Crest",
+  "displayName": "Swiftshot Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_SwiftshotEmblem",
+  "description": "Gain a Swiftshot Emblem and a Twitch.",
+  "tooltip": "Gain a Swiftshot Emblem and a Twitch.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Swiftshot-Crest-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

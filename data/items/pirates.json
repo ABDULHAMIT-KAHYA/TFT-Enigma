@@ -1,7 +1,17 @@
 {
   "name": "Pirates",
+  "displayName": "Pirates",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Pirates3",
+  "description": "Your allies have a rare chance to drop treasure chests when they kill enemy champions.",
+  "tooltip": "Your allies have a rare chance to drop treasure chests when they kill enemy champions.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Pirates3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

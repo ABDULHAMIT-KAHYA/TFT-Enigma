@@ -1,0 +1,17 @@
+{
+  "name": "TFT4_Augment_MageCrest",
+  "displayName": "Mage Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_MageCrest",
+  "description": "Gain a Mage Emblem and a Lulu.",
+  "tooltip": "Gain a Mage Emblem and a Lulu.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mage_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

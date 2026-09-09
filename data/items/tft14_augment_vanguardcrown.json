@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_VanguardCrown",
+  "displayName": "Vanguard Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_VanguardCrown",
+  "description": "Gain a Vanguard Emblem, a Protector's Vow, and a Skarner.",
+  "tooltip": "Gain a Vanguard Emblem, a Protector's Vow, and a Skarner.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Vanguard_III.TFT_Set12.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

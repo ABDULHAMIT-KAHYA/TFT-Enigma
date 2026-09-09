@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_DarkinWeapon_Scythe",
+  "displayName": "The Darkin Scythe",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_DarkinWeapon_Scythe",
+  "description": "Gain the Darkin Scythe, a powerful Artifact for Attack Fighters that grants the Darkin trait. Darkin heal the Tactician with takedowns.",
+  "tooltip": "Gain the Darkin Scythe, a powerful Artifact for Attack Fighters that grants the Darkin trait. Darkin heal the Tactician with takedowns.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

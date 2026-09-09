@@ -1,8 +1,78 @@
 {
   "name": "Radiant Sterak's Gage",
+  "displayName": "Radiant Sterak's Gage",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_SteraksGageRadiant",
+  "description": "At @HealthThreshold@% Health, gain a Shield equal to <TFTRadiantItemBonus>@PercentHealthShield*100@%</TFTRadiantItemBonus> of the wearer's maximum Health that rapidly decays over <TFTRadiantItemBonus>@ShieldDuration@</TFTRadiantItemBonus> seconds.",
+  "tooltip": "At @HealthThreshold@% Health, gain a Shield equal to <TFTRadiantItemBonus>@PercentHealthShield*100@%</TFTRadiantItemBonus> of the wearer's maximum Health that rapidly decays over <TFTRadiantItemBonus>@ShieldDuration@</TFTRadiantItemBonus> seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT5_Item_SteraksGageRadiant.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Radiant Sterak's Gage:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 600, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Radiant Sterak's Gage:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.9, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.9",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.9, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 600,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "600",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 600, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:HealthThreshold", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 60, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentHealthShield",
+      "rawSourceValue": "0.8",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:PercentHealthShield", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.8, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.9" }, { "name": "Health", "value": "600" }, { "name": "HealthThreshold", "value": "60" }, { "name": "PercentHealthShield", "value": "0.8" }, { "name": "ShieldDuration", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: HealthThreshold", "Unmapped item variable: PercentHealthShield", "Unmapped item variable: ShieldDuration"]
 }

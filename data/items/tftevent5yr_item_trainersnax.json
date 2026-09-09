@@ -1,0 +1,17 @@
+{
+  "name": "TFTEvent5YR_Item_TrainerSnax",
+  "displayName": "Delicious Snax",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent5YR_Item_TrainerSnax",
+  "description": "Nomsy needs to eat this many more Snax to level up!<br><br><tftitemrules>[This does not count as an item.]</tftitemrules>",
+  "tooltip": "Nomsy needs to eat this many more Snax to level up!<br><br><tftitemrules>[This does not count as an item.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/5YR/TFTEvent5YR_Item_TrainerSnax.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,42 @@
 {
   "name": "Powered By Pain",
+  "displayName": "Powered By Pain",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PoweredByPain",
+  "description": "When your champions get a kill, they get 5 bonus mana per 100 overkill damage; this bonus increases with significant excess damage.",
+  "tooltip": "When your champions get a kill, they get 5 bonus mana per 100 overkill damage; this bonus increases with significant excess damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{1c72b298}",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 5, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{6829e9a7}",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "{1c72b298}", "value": "5" }, { "name": "{6829e9a7}", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: {1c72b298}", "Unmapped item variable: {6829e9a7}"]
 }

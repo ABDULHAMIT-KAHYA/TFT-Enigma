@@ -1,7 +1,40 @@
 {
   "name": "Low Interest Rates",
+  "displayName": "Low Interest Rates",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_LowInterestRates",
+  "description": "Your max interest is capped at @InterestCap@ gold but you gain @Gold@ gold at the start of every player combat.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>",
+  "tooltip": "Your max interest is capped at @InterestCap@ gold but you gain @Gold@ gold at the start of every player combat.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Low-Interest-Rates-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InterestCap",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }, { "name": "InterestCap", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: InterestCap", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: InterestCap"]
 }

@@ -1,8 +1,54 @@
 {
   "name": "Blazing Soul I",
+  "displayName": "Blazing Soul I",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_BlazingSoul",
+  "description": "Combat start: Your highest Attack Speed champion gains @AbilityPower@% Ability Power and @AttackSpeed*100@% Attack Speed. Repeat on another ally every @TransferDuration@ seconds.",
+  "tooltip": "Combat start: Your highest Attack Speed champion gains @AbilityPower@% Ability Power and @AttackSpeed*100@% Attack Speed. Repeat on another ally every @TransferDuration@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Blazing-Soul-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Blazing Soul I:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Blazing Soul I:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AbilityPower",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "TransferDuration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AbilityPower", "value": "20" }, { "name": "AttackSpeed", "value": "0.2" }, { "name": "TransferDuration", "value": "3" }],
+  "importWarnings": ["Metadata-only item effect: AbilityPower -> GrantStats", "Metadata-only item effect: AttackSpeed -> GrantStats", "Unmapped item variable: TransferDuration", "Unsupported item effect metadata: TransferDuration"]
 }

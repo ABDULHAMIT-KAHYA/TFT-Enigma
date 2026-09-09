@@ -1,7 +1,17 @@
 {
   "name": "Leap of Faith",
+  "displayName": "Leap of Faith",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_IllaoiCarry",
+  "description": "Gain an Illaoi. Your strongest Illaoi becomes a Fighter. Her Ability is replaced with an airborne slam that's recast when she kills her target.",
+  "tooltip": "Gain an Illaoi. Your strongest Illaoi becomes a Fighter. Her Ability is replaced with an airborne slam that's recast when she kills her target.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LeapofFaith_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

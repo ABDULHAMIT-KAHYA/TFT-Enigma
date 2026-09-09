@@ -1,7 +1,73 @@
 {
   "name": "Unstable Evolution",
+  "displayName": "Unstable Evolution",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_BlackMarketUnstableEvolution",
+  "description": "Your champions randomly gain one of the following when they are starred up: @BonusHP@ Health, @BonusAS@% Attack Speed, @BonusAD@% Attack Damage, or @BonusAP@ Ability Power.",
+  "tooltip": "Your champions randomly gain one of the following when they are starred up: @BonusHP@ Health, @BonusAS@% Attack Speed, @BonusAD@% Attack Damage, or @BonusAP@ Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/UnstableEvolution3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 36,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAD",
+      "rawSourceValue": "36",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 36,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAP",
+      "rawSourceValue": "36",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 36,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAS",
+      "rawSourceValue": "36",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 360,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHP",
+      "rawSourceValue": "360",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{45d74e14}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAD", "value": "36" }, { "name": "BonusAP", "value": "36" }, { "name": "BonusAS", "value": "36" }, { "name": "BonusHP", "value": "360" }, { "name": "{45d74e14}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: BonusAD", "Unmapped item variable: BonusAP", "Unmapped item variable: BonusAS", "Unmapped item variable: BonusHP", "Unmapped non-numeric item variable: {45d74e14}"]
 }

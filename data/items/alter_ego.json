@@ -1,7 +1,29 @@
 {
   "name": "Alter Ego",
+  "displayName": "Alter Ego",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_RhaastCarry",
+  "description": "Gain a Rhaast. Your strongest Rhaast enters Shadow Assassin form and his ability is replaced with a dash and 1 hex spin. If it kills, he immediately casts&nbsp;again.",
+  "tooltip": "Gain a Rhaast. Your strongest Rhaast enters Shadow Assassin form and his ability is replaced with a dash and 1 hex spin. If it kills, he immediately casts&nbsp;again.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TotalRecall_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c6fb8424}",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{c6fb8424}", "value": "35" }],
+  "importWarnings": ["Unmapped item variable: {c6fb8424}", "Unsupported item effect metadata: {c6fb8424}"]
 }

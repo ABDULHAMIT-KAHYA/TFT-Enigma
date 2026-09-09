@@ -1,7 +1,29 @@
 {
   "name": "Ekko's Boon",
+  "displayName": "Ekko's Boon",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_EkkoGodAugment",
+  "description": "Gain the Anomaly, an item which grants units a powerful evolution depending on their role. Gain @NumRemovers_TOOLTIPONLY@ Magnetic Removers.",
+  "tooltip": "Gain the Anomaly, an item which grants units a powerful evolution depending on their role. Gain @NumRemovers_TOOLTIPONLY@ Magnetic Removers.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GodAugmentEkko_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRemovers_TOOLTIPONLY",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumRemovers_TOOLTIPONLY", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumRemovers_TOOLTIPONLY", "Unsupported item effect metadata: NumRemovers_TOOLTIPONLY"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "2 Deathblades",
+  "displayName": "2 Deathblades",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Deathblade_2",
+  "description": "2 Deathblades",
+  "tooltip": "2 Deathblades",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Death_Blade.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

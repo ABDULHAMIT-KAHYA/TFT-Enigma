@@ -1,7 +1,63 @@
 {
   "name": "Predator Instincts",
+  "displayName": "Predator Instincts",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Consumable_Void_PredatorInstincts",
+  "description": "Gain <scaleLevel>@TFTUnitProperty.item:TFT16_Void_PredatorADAP@%</scaleLevel> Attack Damage and Ability Power. Every @ShedRefresh@ seconds, cleanse crowd control effects and become untargetable for <scaleLevel>@TFTUnitProperty.item:TFT16_Void_PredatorUntargetableDuration@</scaleLevel>&nbsp;second(s).<br><br><rules>Recommended users: Rek'Sai and Bel'Veth</rules>",
+  "tooltip": "Gain <scaleLevel>@TFTUnitProperty.item:TFT16_Void_PredatorADAP@%</scaleLevel> Attack Damage and Ability Power. Every @ShedRefresh@ seconds, cleanse crowd control effects and become untargetable for <scaleLevel>@TFTUnitProperty.item:TFT16_Void_PredatorUntargetableDuration@</scaleLevel>&nbsp;second(s).<br><br><rules>Recommended users: Rek'Sai and Bel'Veth</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT16_VoidMutation_PredatorInstincts.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ADAP",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Omnivamp",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ShedRefresh",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 9, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UntargetableDuration",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADAP", "value": "0.2" }, { "name": "Omnivamp", "value": "null" }, { "name": "ShedRefresh", "value": "9" }, { "name": "UntargetableDuration", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: ADAP", "Unmapped item variable: ShedRefresh", "Unmapped item variable: UntargetableDuration", "Unmapped non-numeric item variable: Omnivamp"]
 }

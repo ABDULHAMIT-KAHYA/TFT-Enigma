@@ -1,0 +1,51 @@
+{
+  "name": "TFT9_Augment_BuildingACollectionPlusPlus32",
+  "displayName": "Buried Treasures+",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_BuildingACollectionPlusPlus32",
+  "description": "Gain @UpfrontItems@ random item components now, then 1 more at the start of the next @RoundsOfBonusItems@ rounds.",
+  "tooltip": "Gain @UpfrontItems@ random item components now, then 1 more at the start of the next @RoundsOfBonusItems@ rounds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Buried-Treasures-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UpfrontItems",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "roundsofbonusitems",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "null" }, { "name": "UpfrontItems", "value": "2" }, { "name": "roundsofbonusitems", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: UpfrontItems", "Unmapped item variable: roundsofbonusitems", "Unmapped non-numeric item variable: Gold", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: UpfrontItems", "Unsupported item effect metadata: roundsofbonusitems"]
+}

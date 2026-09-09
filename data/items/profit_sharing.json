@@ -1,7 +1,17 @@
 {
   "name": "Profit Sharing",
+  "displayName": "Profit Sharing",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_ProfitSharing",
+  "description": "Whenever your partner wins a combat, you gain 2 gold. Whenever you win a combat, give your partner 2 gold.",
+  "tooltip": "Whenever your partner wins a combat, you gain 2 gold. Whenever you win a combat, give your partner 2 gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

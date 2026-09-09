@@ -1,7 +1,17 @@
 {
   "name": "Brigand's Dice",
+  "displayName": "Brigand's Dice",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Bilgewater_BrigandsDice",
+  "description": "Immediately re-roll your shop and fill it with Bilgeater champions.",
+  "tooltip": "Immediately re-roll your shop and fill it with Bilgeater champions.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Placeholders/TFT_Item_Unknown.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

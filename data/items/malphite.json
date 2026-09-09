@@ -1,7 +1,17 @@
 {
   "name": "Malphite",
+  "displayName": "Malphite",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Malphite",
+  "description": "Malphite",
+  "tooltip": "Malphite",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Malphite_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

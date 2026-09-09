@@ -1,7 +1,40 @@
 {
   "name": "Judgment",
+  "displayName": "Judgment",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_XerathZap_Judgement",
+  "description": "Next combat: If you win, gain @GoldOnWin@ gold; if you lose, gain @XPOnLose@ XP. ",
+  "tooltip": "Next combat: If you win, gain @GoldOnWin@ gold; if you lose, gain @XPOnLose@ XP. ",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_XerathWand_Self.TFT_Set12.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldOnWin",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XPOnLose",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldOnWin", "value": "12" }, { "name": "XPOnLose", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: GoldOnWin", "Unmapped item variable: XPOnLose", "Unsupported item effect metadata: GoldOnWin", "Unsupported item effect metadata: XPOnLose"]
 }

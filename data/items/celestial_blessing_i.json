@@ -1,7 +1,42 @@
 {
   "name": "Celestial Blessing I",
+  "displayName": "Celestial Blessing I",
+  "isPlaceholder": false,
+  "sourceId": "TFT6_Augment_CelestialBlessing1",
+  "description": "Your team gains @Omnivamp@% Omnivamp. Excess healing is converted to a shield up to @MaxShield@ Health.",
+  "tooltip": "Your team gains @Omnivamp@% Omnivamp. Excess healing is converted to a shield up to @MaxShield@ Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CelestialBlessing1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Celestial Blessing I:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Omnivamp",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxShield",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MaxShield", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 200, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "MaxShield", "value": "200" }, { "name": "Omnivamp", "value": "12" }],
+  "importWarnings": ["Unmapped item variable: MaxShield"]
 }

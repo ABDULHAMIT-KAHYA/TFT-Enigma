@@ -1,7 +1,17 @@
 {
   "name": "Arcanist Crest",
+  "displayName": "Arcanist Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArcanistCrest",
+  "description": "Get an Arcanist Emblem.",
+  "tooltip": "Get an Arcanist Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

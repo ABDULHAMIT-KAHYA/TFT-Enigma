@@ -1,7 +1,29 @@
 {
   "name": "Support Cache",
+  "displayName": "Support Cache",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_SupportCache",
+  "description": "Choose 1 of @ArmoryChoiceCount@ Support items.",
+  "tooltip": "Choose 1 of @ArmoryChoiceCount@ Support items.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Support-Cache-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmoryChoiceCount",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ArmoryChoiceCount", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: ArmoryChoiceCount", "Unsupported item effect metadata: ArmoryChoiceCount"]
 }

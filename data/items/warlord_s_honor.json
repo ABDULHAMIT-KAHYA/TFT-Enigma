@@ -1,7 +1,54 @@
 {
   "name": "Warlord's Honor",
+  "displayName": "Warlord's Honor",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Unforgotten",
+  "description": "Every round, your team gain @Stats@% Attack Damage and Ability Power. Champions start with @StartingStacks@ stack of this effect, and can stack up to @MaxStacks@ times.",
+  "tooltip": "Every round, your team gain @Stats@% Attack Damage and Ability Power. Champions start with @StartingStacks@ stack of this effect, and can stack up to @MaxStacks@ times.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Unforgotten_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MaxStacks",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "StartingStacks",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Stats",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 5, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "MaxStacks", "value": "4" }, { "name": "StartingStacks", "value": "1" }, { "name": "Stats", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: MaxStacks", "Unmapped item variable: StartingStacks", "Unmapped item variable: Stats"]
 }

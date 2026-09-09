@@ -1,7 +1,95 @@
 {
   "name": "Thresh's Boon",
+  "displayName": "Thresh's Boon",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_ThreshGodAugment",
+  "description": "Each round, roll a die. Get a bonus based on that roll.<br><br><rules><br>Health: @TFTUnitProperty.item:TFT17_ThreshGodAugment_Health@<br>Attack Speed: @TFTUnitProperty.item:TFT17_ThreshGodAugment_AttackSpeed@%<br></rules>",
+  "tooltip": "Each round, roll a die. Get a bonus based on that roll.<br><br><rules><br>Health: @TFTUnitProperty.item:TFT17_ThreshGodAugment_Health@<br>Attack Speed: @TFTUnitProperty.item:TFT17_ThreshGodAugment_AttackSpeed@%<br></rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GodAugmentThresh_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{11153eb3}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{27026e4c}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{61f56708}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{6a4e6902}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.06,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{7eafa4c6}",
+      "rawSourceValue": "0.06",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a7d750a4}",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{b386f143}",
+      "rawSourceValue": "75",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{11153eb3}", "value": "null" }, { "name": "{27026e4c}", "value": "3" }, { "name": "{61f56708}", "value": "2" }, { "name": "{6a4e6902}", "value": "3" }, { "name": "{7eafa4c6}", "value": "0.06" }, { "name": "{a7d750a4}", "value": "6" }, { "name": "{b386f143}", "value": "75" }],
+  "importWarnings": ["Unmapped item variable: {27026e4c}", "Unmapped item variable: {61f56708}", "Unmapped item variable: {6a4e6902}", "Unmapped item variable: {7eafa4c6}", "Unmapped item variable: {a7d750a4}", "Unmapped item variable: {b386f143}", "Unmapped non-numeric item variable: {11153eb3}"]
 }

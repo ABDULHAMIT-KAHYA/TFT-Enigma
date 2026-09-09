@@ -1,0 +1,43 @@
+{
+  "name": "TFT7_Augment_BruiserPersonalTraining",
+  "displayName": "Personal Training",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_BruiserPersonalTraining",
+  "description": "At the end of combat, champions that started combat adjacent to Bruisers permanently gain @Health@ Health, increased by @BonusHealth@ if they survived. Gain a Jax.",
+  "tooltip": "At the end of combat, champions that started combat adjacent to Bruisers permanently gain @Health@ Health, increased by @BonusHealth@ if they survived. Gain a Jax.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Personal-Training-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT7_Augment_BruiserPersonalTraining:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT7_Augment_BruiserPersonalTraining:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealth",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealth", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusHealth", "value": "20" }, { "name": "Health", "value": "40" }],
+  "importWarnings": []
+}

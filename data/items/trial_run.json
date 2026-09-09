@@ -1,7 +1,40 @@
 {
   "name": "Trial Run",
+  "displayName": "Trial Run",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Exotech_TrialRun",
+  "description": "Gain an Exotech Golem with a copy of each of your Exotech items. Gain a Jhin and a&nbsp;Naafiri.",
+  "tooltip": "Gain an Exotech Golem with a copy of each of your Exotech items. Gain a Jhin and a&nbsp;Naafiri.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TrialRun_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{21436036}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{8c1da425}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{21436036}", "value": "null" }, { "name": "{8c1da425}", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: {21436036}", "Unmapped non-numeric item variable: {8c1da425}", "Unsupported item effect metadata: {21436036}", "Unsupported item effect metadata: {8c1da425}"]
 }

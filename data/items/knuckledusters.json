@@ -1,7 +1,17 @@
 {
   "name": "Knuckledusters",
+  "displayName": "Knuckledusters",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_ViCarry",
+  "description": "Gain a Vi. Your strongest Vi becomes an Attack Fighter and has a chance to drop loot on kill. She now deals heavy single target damage and gains Attack Damage for item components equipped on your team. ",
+  "tooltip": "Gain a Vi. Your strongest Vi becomes an Attack Fighter and has a chance to drop loot on kill. She now deals heavy single target damage and gains Attack Damage for item components equipped on your team. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Knuckleduster_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

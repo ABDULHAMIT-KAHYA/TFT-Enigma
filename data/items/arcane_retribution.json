@@ -1,7 +1,30 @@
 {
   "name": "Arcane Retribution",
+  "displayName": "Arcane Retribution",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Sorcerer",
+  "description": "When Sorcerers die, they deal @DeathPercentage*100@% of their Ability Power as magic damage to all adjacent units. Gain a Vladimir and Lux.",
+  "tooltip": "When Sorcerers die, they deal @DeathPercentage*100@% of their Ability Power as magic damage to all adjacent units. Gain a Vladimir and Lux.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Arcane-Retribution-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "DeathPercentage",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "DeathPercentage", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: DeathPercentage"]
 }

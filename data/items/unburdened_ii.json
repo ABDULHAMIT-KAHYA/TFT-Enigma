@@ -1,7 +1,30 @@
 {
   "name": "Unburdened II",
+  "displayName": "Unburdened II",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_AirspeedVelocity2",
+  "description": "Your units without items equipped gain @AttackSpeed*100@% Attack Speed.",
+  "tooltip": "Your units without items equipped gain @AttackSpeed*100@% Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Unladen-Airspeed-Velocity-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Unburdened II:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.55,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.55",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.55" }],
+  "importWarnings": []
 }

@@ -1,0 +1,29 @@
+{
+  "name": "TFT_Augment_GoldDestiny",
+  "displayName": "Gold Destiny",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_GoldDestiny",
+  "description": "Gain a random Gold Augment and @Gold@ gold.",
+  "tooltip": "Gain a random Gold Augment and @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldenDestiny_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
+}

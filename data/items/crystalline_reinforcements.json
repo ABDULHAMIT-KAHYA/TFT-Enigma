@@ -1,7 +1,30 @@
 {
   "name": "Crystalline Reinforcements",
+  "displayName": "Crystalline Reinforcements",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Item_CrystalRoseHellionItem",
+  "description": "Your team gains @Health@ health. Whenever a unit dies, a crystalline copy one star level lower joins the fight!",
+  "tooltip": "Your team gains @Health@ health. Whenever a unit dies, a crystalline copy one star level lower joins the fight!",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT15_CrystalRoseHellion_ItemIcon.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Crystalline Reinforcements:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 1000, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 1000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "1000",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 1000, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "1000" }],
+  "importWarnings": []
 }

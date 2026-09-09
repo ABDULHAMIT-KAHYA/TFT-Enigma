@@ -1,0 +1,40 @@
+{
+  "name": "TFT7_Augment_AFKHR",
+  "displayName": "AFK",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_AFKHR",
+  "description": "You cannot perform actions for the next @RoundsToSkip@ rounds. Afterwards, gain @Gold@ gold.",
+  "tooltip": "You cannot perform actions for the next @RoundsToSkip@ rounds. Afterwards, gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundsToSkip",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "15" }, { "name": "RoundsToSkip", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: RoundsToSkip", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: RoundsToSkip"]
+}

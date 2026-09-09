@@ -1,7 +1,73 @@
 {
   "name": "Souls or Serpents",
+  "displayName": "Souls or Serpents",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_BilgewaterVsShadowIsles",
+  "description": "@TFTUnitProperty.item:TFT16_Augment_BilgewaterVsShadowIsles_DescriptionTRA@",
+  "tooltip": "@TFTUnitProperty.item:TFT16_Augment_BilgewaterVsShadowIsles_DescriptionTRA@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "KillsRequired",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "KillsToGive",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SerpentsNeededPerSoul",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SerpentsToGivePerSoul",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "goldtogive",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "KillsRequired", "value": "30" }, { "name": "KillsToGive", "value": "1" }, { "name": "SerpentsNeededPerSoul", "value": "10" }, { "name": "SerpentsToGivePerSoul", "value": "2" }, { "name": "goldtogive", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: KillsRequired", "Unmapped item variable: KillsToGive", "Unmapped item variable: SerpentsNeededPerSoul", "Unmapped item variable: SerpentsToGivePerSoul", "Unmapped item variable: goldtogive", "Unsupported item effect metadata: KillsRequired", "Unsupported item effect metadata: KillsToGive", "Unsupported item effect metadata: SerpentsNeededPerSoul", "Unsupported item effect metadata: SerpentsToGivePerSoul", "Unsupported item effect metadata: goldtogive"]
 }

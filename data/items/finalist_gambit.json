@@ -1,7 +1,40 @@
 {
   "name": "Finalist Gambit",
+  "displayName": "Finalist Gambit",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_FinalistGambit",
+  "description": "Gain @Gold@ gold. If you make it to top 4, gain @FinalistGold@ more gold.",
+  "tooltip": "Gain @Gold@ gold. If you make it to top 4, gain @FinalistGold@ more gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_FinalistGambit.TFT_17_2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{06752cbb}",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "3" }, { "name": "{06752cbb}", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: {06752cbb}", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: {06752cbb}"]
 }

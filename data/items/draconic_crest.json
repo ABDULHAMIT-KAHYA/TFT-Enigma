@@ -1,7 +1,17 @@
 {
   "name": "Draconic Crest",
+  "displayName": "Draconic Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_DraconicCrest",
+  "description": "Gain a Draconic Emblem and a Zyra.",
+  "tooltip": "Gain a Draconic Emblem and a Zyra.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Draconic_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

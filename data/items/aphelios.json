@@ -1,7 +1,17 @@
 {
   "name": "Aphelios",
+  "displayName": "Aphelios",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Aphelios",
+  "description": "Aphelios",
+  "tooltip": "Aphelios",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Aphelios_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

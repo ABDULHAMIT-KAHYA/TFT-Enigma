@@ -1,7 +1,29 @@
 {
   "name": "Birthday Present",
+  "displayName": "Birthday Present",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_BirthdayPresents",
+  "description": "Gain a 2-star champion and @Gold@ gold every time you level up. The champion's cost tier is your level minus 4 (max: 5-cost).",
+  "tooltip": "Gain a 2-star champion and @Gold@ gold every time you level up. The champion's cost tier is your level minus 4 (max: 5-cost).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Golden-Gifts-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

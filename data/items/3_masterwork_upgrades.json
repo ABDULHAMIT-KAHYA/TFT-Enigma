@@ -1,7 +1,17 @@
 {
   "name": "3 Masterwork Upgrades",
+  "displayName": "3 Masterwork Upgrades",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_MasterworkUpgrade_3",
+  "description": "3 Masterwork Upgrades",
+  "tooltip": "3 Masterwork Upgrades",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Consumables/MasterworkUpgrade.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

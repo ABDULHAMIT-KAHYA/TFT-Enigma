@@ -1,7 +1,17 @@
 {
   "name": "Dragonguards",
+  "displayName": "Dragonguards",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_TeamupAugment_JarvanShyvana",
+  "description": "Gain a Shyvana and a 2-star Jarvan IV. When Jarvan casts, Shyvana gains Shield. When Shyvana casts, Jarvan jumps in and deals damage based on his Armor and Magic Resist. After every player combat, gain a Jarvan IV.<br><br>",
+  "tooltip": "Gain a Shyvana and a 2-star Jarvan IV. When Jarvan casts, Shyvana gains Shield. When Shyvana casts, Jarvan jumps in and deals damage based on his Armor and Magic Resist. After every player combat, gain a Jarvan IV.<br><br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/UncompromisingWill_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,40 @@
 {
   "name": "Expedition",
+  "displayName": "Expedition",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Expedition",
+  "description": "At the start of every round, lose the champion in the rightmost bench slot. After losing @CashoutCost@ gold of champions in this way, gain a powerful reward. Gain a 3-cost champion now. @TFTUnitProperty.item:TFT_Augment_Expedition_Tooltip@",
+  "tooltip": "At the start of every round, lose the champion in the rightmost bench slot. After losing @CashoutCost@ gold of champions in this way, gain a powerful reward. Gain a 3-cost champion now. @TFTUnitProperty.item:TFT_Augment_Expedition_Tooltip@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Expedition_I.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CashoutCost",
+      "rawSourceValue": "33",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{b763af5c}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CashoutCost", "value": "33" }, { "name": "{b763af5c}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: CashoutCost", "Unmapped item variable: {b763af5c}", "Unsupported item effect metadata: CashoutCost", "Unsupported item effect metadata: {b763af5c}"]
 }

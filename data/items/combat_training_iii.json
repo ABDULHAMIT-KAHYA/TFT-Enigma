@@ -1,7 +1,41 @@
 {
   "name": "Combat Training III",
+  "displayName": "Combat Training III",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_Bloodlust3",
+  "description": "Your champions permanently gain @AD*100@% Attack Damage every time they kill an enemy. Champions start with @StartingAD*100@% bonus Attack Damage.",
+  "tooltip": "Your champions permanently gain @AD*100@% Attack Damage every time they kill an enemy. Champions start with @StartingAD*100@% bonus Attack Damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Combat-Training-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Combat Training III:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.03, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.06,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "StartingAD",
+      "rawSourceValue": "0.06",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.03,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.03",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.03, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.03" }, { "name": "StartingAD", "value": "0.06" }],
+  "importWarnings": ["Unmapped item variable: StartingAD"]
 }

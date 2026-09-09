@@ -1,7 +1,53 @@
 {
   "name": "Bulky Buddies III",
+  "displayName": "Bulky Buddies III",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_BulkyBuddies3",
+  "description": "Allies that start combat next to exactly 1 other ally gain @HealthBonus@ Health. When that champion dies, the other gains a @ShieldAmount*100@% max Health Shield for @ShieldDuration@ seconds.",
+  "tooltip": "Allies that start combat next to exactly 1 other ally gain @HealthBonus@ Health. When that champion dies, the other gains a @ShieldAmount*100@% max Health Shield for @ShieldDuration@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BulkyBuddies_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthBonus",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:HealthBonus", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldAmount",
+      "rawSourceValue": "0.18",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldAmount", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthBonus", "value": "300" }, { "name": "ShieldAmount", "value": "0.18" }, { "name": "ShieldDuration", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: HealthBonus", "Unmapped item variable: ShieldAmount", "Unmapped item variable: ShieldDuration"]
 }

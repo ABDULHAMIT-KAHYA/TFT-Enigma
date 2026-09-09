@@ -1,0 +1,53 @@
+{
+  "name": "TFT14_Augment_Boombots_SelfDestruct",
+  "displayName": "Self-Destruct",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Boombots_SelfDestruct",
+  "description": "Before dying, BoomBots jump on the nearest enemy and deal @BaseDamage@ physical damage + @RocketDamage*100@% dealt by rockets to adjacent enemies. Gain a Kog'Maw and a Skarner.",
+  "tooltip": "Before dying, BoomBots jump on the nearest enemy and deal @BaseDamage@ physical damage + @RocketDamage*100@% dealt by rockets to adjacent enemies. Gain a Kog'Maw and a Skarner.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SelfDestruct_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 350,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BaseDamage",
+      "rawSourceValue": "350",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 350, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "RocketDamage",
+      "rawSourceValue": "0.35",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "radius",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "BaseDamage", "value": "350" }, { "name": "RocketDamage", "value": "0.35" }, { "name": "radius", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: BaseDamage", "Unmapped item variable: RocketDamage", "Unmapped item variable: radius"]
+}

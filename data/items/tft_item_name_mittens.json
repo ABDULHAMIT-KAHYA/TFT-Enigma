@@ -1,7 +1,17 @@
 {
   "name": "tft_item_name_Mittens",
+  "displayName": "tft_item_name_Mittens",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_IsYordle",
+  "description": "tft_item_description_IsYordle",
+  "tooltip": "tft_item_description_IsYordle",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_Mittens.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,40 @@
 {
   "name": "Three's a Crowd",
+  "displayName": "Three's a Crowd",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_ThreesACrowd",
+  "description": "Your team gains @HealthPerUnit@ Health for each unique @Tier@-cost champion on your board.",
+  "tooltip": "Your team gains @HealthPerUnit@ Health for each unique @Tier@-cost champion on your board.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Three_s-a-Crowd-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPerUnit",
+      "rawSourceValue": "75",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Tier",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthPerUnit", "value": "75" }, { "name": "Tier", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: HealthPerUnit", "Unmapped item variable: Tier"]
 }

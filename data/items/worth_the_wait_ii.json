@@ -1,7 +1,62 @@
 {
   "name": "Worth the Wait II",
+  "displayName": "Worth the Wait II",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_WorthTheWaitPrismatic",
+  "description": "Gain @InitialCopies@ copies of a random @unittier@-cost champion. Gain another copy of them at the start of each round for the rest of the game.<br><br>Champion: @TFTUnitProperty.item:TFT_Augment_WorthTheWait@",
+  "tooltip": "Gain @InitialCopies@ copies of a random @unittier@-cost champion. Gain another copy of them at the start of each round for the rest of the game.<br><br>Champion: @TFTUnitProperty.item:TFT_Augment_WorthTheWait@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WorthTheWait_III.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 99,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AdditionalCopies",
+      "rawSourceValue": "99",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InitialCopies",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UnitTier",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AdditionalCopies", "value": "99" }, { "name": "Delay", "value": "null" }, { "name": "InitialCopies", "value": "2" }, { "name": "UnitTier", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: AdditionalCopies", "Unmapped item variable: InitialCopies", "Unmapped item variable: UnitTier", "Unmapped non-numeric item variable: Delay", "Unsupported item effect metadata: AdditionalCopies", "Unsupported item effect metadata: Delay", "Unsupported item effect metadata: InitialCopies", "Unsupported item effect metadata: UnitTier"]
 }

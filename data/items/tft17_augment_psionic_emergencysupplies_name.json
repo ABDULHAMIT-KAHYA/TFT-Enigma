@@ -1,7 +1,30 @@
 {
   "name": "TFT17_Augment_Psionic_EmergencySupplies_Name",
+  "displayName": "TFT17_Augment_Psionic_EmergencySupplies_Name",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Augment_EmergencySupplies",
+  "description": "TFT17_Augment_Psionic_EmergencySupplies_Desc",
+  "tooltip": "TFT17_Augment_Psionic_EmergencySupplies_Desc",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/EmergencySupplies_II.TFT_17_3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:TFT17_Augment_Psionic_EmergencySupplies_Name:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "0.15" }],
+  "importWarnings": []
 }

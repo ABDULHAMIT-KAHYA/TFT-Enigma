@@ -1,7 +1,17 @@
 {
   "name": "Anima Squad Circlet",
+  "displayName": "Anima Squad Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_AnimaSquadCirclet",
+  "description": "Gain an Anima Squad Emblem and a Yuumi.",
+  "tooltip": "Gain an Anima Squad Emblem and a Yuumi.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AnimaSquadCirclet_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,106 @@
 {
   "name": "Built Different I",
+  "displayName": "Built Different I",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_Traitless1",
+  "description": "Your allies with no Traits active gain @HP1@-@HP4@ Health and @AS1@-@AS4@% Attack Speed (based on current Stage).",
+  "tooltip": "Your allies with no Traits active gain @HP1@-@HP4@ Health and @AS1@-@AS4@% Attack Speed (based on current Stage).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BuiltDifferent1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS1",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS2",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS3",
+      "rawSourceValue": "45",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 55,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS4",
+      "rawSourceValue": "55",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HP1",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 225,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HP2",
+      "rawSourceValue": "225",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HP3",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HP4",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS1", "value": "25" }, { "name": "AS2", "value": "35" }, { "name": "AS3", "value": "45" }, { "name": "AS4", "value": "55" }, { "name": "HP1", "value": "200" }, { "name": "HP2", "value": "225" }, { "name": "HP3", "value": "250" }, { "name": "HP4", "value": "300" }],
+  "importWarnings": ["Unmapped item variable: AS1", "Unmapped item variable: AS2", "Unmapped item variable: AS3", "Unmapped item variable: AS4", "Unmapped item variable: HP1", "Unmapped item variable: HP2", "Unmapped item variable: HP3", "Unmapped item variable: HP4"]
 }

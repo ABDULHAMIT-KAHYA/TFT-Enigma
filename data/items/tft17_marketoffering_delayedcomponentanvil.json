@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_DelayedComponentAnvil",
+  "displayName": "Component Anvil",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_DelayedComponentAnvil",
+  "description": "After @Delay@ rounds, gain a component anvil.",
+  "tooltip": "After @Delay@ rounds, gain a component anvil.",
+  "iconPath": "ASSETS/Characters/TFT_ArmoryKeyComponent/HUD/TFT_ArmoryKeyComponent_Square.tex",
+  "itemCategory": "Anvil",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Delay", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Delay", "Unsupported item effect metadata: Delay"]
+}

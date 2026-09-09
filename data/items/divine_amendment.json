@@ -1,7 +1,17 @@
 {
   "name": "Divine Amendment",
+  "displayName": "Divine Amendment",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_Arbiter_DivineAmendment",
+  "description": "Arbiters add a second effect to their law.<br>Gain a Leona and a Zoe.",
+  "tooltip": "Arbiters add a second effect to their law.<br>Gain a Leona and a Zoe.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DivineAmendment_II.TFT_Set17_PostLaunchAugments.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

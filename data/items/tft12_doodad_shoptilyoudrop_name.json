@@ -1,7 +1,40 @@
 {
   "name": "TFT12_Doodad_ShopTilYouDrop_Name",
+  "displayName": "TFT12_Doodad_ShopTilYouDrop_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_ShopTilYouDrop",
+  "description": "TFT12_Doodad_ShopTilYouDrop_Tooltip",
+  "tooltip": "TFT12_Doodad_ShopTilYouDrop_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthLoss",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Rerolls",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthLoss", "value": "1" }, { "name": "Rerolls", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: HealthLoss", "Unmapped item variable: Rerolls", "Unsupported item effect metadata: Rerolls"]
 }

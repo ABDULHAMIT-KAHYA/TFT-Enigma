@@ -1,7 +1,40 @@
 {
   "name": "Woven Magic",
+  "displayName": "Woven Magic",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TheVidalion",
+  "description": "Gain a random item component. Every @ManaPerComponent@ Mana your team spends grants an additional component (max @TFTUnitProperty.trait:TFT_Augment_TheVidalion_NumComponents@/@ComponentMax@).<br><br><rules>Mana spent: @TFTUnitProperty.trait:TFT_Augment_TheVidalion_TrackedMana@/@ManaPerComponent@</rules>",
+  "tooltip": "Gain a random item component. Every @ManaPerComponent@ Mana your team spends grants an additional component (max @TFTUnitProperty.trait:TFT_Augment_TheVidalion_NumComponents@/@ComponentMax@).<br><br><rules>Mana spent: @TFTUnitProperty.trait:TFT_Augment_TheVidalion_TrackedMana@/@ManaPerComponent@</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WovenMagic_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ComponentMax",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 2200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaPerComponent",
+      "rawSourceValue": "2200",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ComponentMax", "value": "3" }, { "name": "ManaPerComponent", "value": "2200" }],
+  "importWarnings": ["Unmapped item variable: ComponentMax", "Unmapped item variable: ManaPerComponent"]
 }

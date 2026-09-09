@@ -1,7 +1,40 @@
 {
   "name": "Shepherd's Song",
+  "displayName": "Shepherd's Song",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_ShepherdAugment",
+  "description": "On Stage @StageNum@-@RoundNum@, gain a Sona and a Shepherd Emblem. ",
+  "tooltip": "On Stage @StageNum@-@RoundNum@, gain a Sona and a Shepherd Emblem. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ShepherdsSong_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundNum",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StageNum",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RoundNum", "value": "5" }, { "name": "StageNum", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: RoundNum", "Unmapped item variable: StageNum"]
 }

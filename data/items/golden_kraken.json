@@ -1,7 +1,17 @@
 {
   "name": "Golden Kraken",
+  "displayName": "Golden Kraken",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_5MercMonster",
+  "description": "Gain 1 Neeko's Help and 12 gold.",
+  "tooltip": "Gain 1 Neeko's Help and 12 gold.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

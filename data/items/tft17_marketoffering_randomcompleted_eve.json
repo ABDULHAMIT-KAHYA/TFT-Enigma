@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_RandomCompleted_Eve",
+  "displayName": "Completed Item",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_RandomCompleted_Eve",
+  "description": "Gain a random completed item. Lose @HealthLoss@ Tactician Health.",
+  "tooltip": "Gain a random completed item. Lose @HealthLoss@ Tactician Health.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthLoss",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthLoss", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: HealthLoss"]
+}

@@ -1,7 +1,17 @@
 {
   "name": "Overwhelming Force",
+  "displayName": "Overwhelming Force",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_OverwhelmingForce",
+  "description": "Gain a Deathblade, an Infinity Edge, a BF Sword, and a Magnetic Remover.<br><br><rules>Useful for Attack Carries or Attack Fighters!</rules>",
+  "tooltip": "Gain a Deathblade, an Infinity Edge, a BF Sword, and a Magnetic Remover.<br><br><rules>Useful for Attack Carries or Attack Fighters!</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Eagle-Eye-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

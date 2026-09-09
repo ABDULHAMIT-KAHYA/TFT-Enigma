@@ -1,7 +1,17 @@
 {
   "name": "Revenant Crown",
+  "displayName": "Revenant Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_RevenantCrown",
+  "description": "Gain a Revenant Emblem, a Bloodthirster, and a Nocturne.",
+  "tooltip": "Gain a Revenant Emblem, a Bloodthirster, and a Nocturne.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Revenant_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

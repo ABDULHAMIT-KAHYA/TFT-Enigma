@@ -1,7 +1,51 @@
 {
   "name": "Too Much Candy",
+  "displayName": "Too Much Candy",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_TooMuchCandy",
+  "description": "Your rerolls cost @StartingCost@ gold. Every @NumUntilIncrease@ rerolls, the cost goes up by @IncreaseBy@ gold. At the start of each stage your reroll cost is reset to @StartingCost@.",
+  "tooltip": "Your rerolls cost @StartingCost@ gold. Every @NumUntilIncrease@ rerolls, the cost goes up by @IncreaseBy@ gold. At the start of each stage your reroll cost is reset to @StartingCost@.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TooMuchCandy_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IncreaseBy",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUntilIncrease",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StartingCost",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "IncreaseBy", "value": "1" }, { "name": "NumUntilIncrease", "value": "6" }, { "name": "StartingCost", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: IncreaseBy", "Unmapped item variable: NumUntilIncrease", "Unmapped non-numeric item variable: StartingCost", "Unsupported item effect metadata: IncreaseBy", "Unsupported item effect metadata: NumUntilIncrease", "Unsupported item effect metadata: StartingCost"]
 }

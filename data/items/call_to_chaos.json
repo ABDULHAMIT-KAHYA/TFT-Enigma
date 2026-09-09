@@ -1,7 +1,194 @@
 {
   "name": "Call to Chaos",
+  "displayName": "Call to Chaos",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_Calltochaos",
+  "description": "Gain a powerful and random reward.<br><br>Reward: @TFTUnitProperty.item:TFT11_Augment_CallToChaos@",
+  "tooltip": "Gain a powerful and random reward.<br><br>Reward: @TFTUnitProperty.item:TFT11_Augment_CallToChaos@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CallToChaos_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 11,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "EggTurns",
+      "rawSourceValue": "11",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 58,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "58",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumEmblems",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Rerolls",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ThreeStarGold",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 64,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "64",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "numtg",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{4ffe8c09}",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{8c58ac06}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{8f15cad2}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{917f9e2f}",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{927f9fc2}",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{96847027}",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{96f12d22}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{b0384f7a}",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c35cc688}",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "EggTurns", "value": "11" }, { "name": "Gold", "value": "58" }, { "name": "NumEmblems", "value": "5" }, { "name": "Rerolls", "value": "40" }, { "name": "ThreeStarGold", "value": "20" }, { "name": "XP", "value": "64" }, { "name": "numtg", "value": "3" }, { "name": "{4ffe8c09}", "value": "0.2" }, { "name": "{8c58ac06}", "value": "3" }, { "name": "{8f15cad2}", "value": "3" }, { "name": "{917f9e2f}", "value": "0.2" }, { "name": "{927f9fc2}", "value": "50" }, { "name": "{96847027}", "value": "40" }, { "name": "{96f12d22}", "value": "3" }, { "name": "{b0384f7a}", "value": "15" }, { "name": "{c35cc688}", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: EggTurns", "Unmapped item variable: Gold", "Unmapped item variable: NumEmblems", "Unmapped item variable: Rerolls", "Unmapped item variable: ThreeStarGold", "Unmapped item variable: XP", "Unmapped item variable: numtg", "Unmapped item variable: {4ffe8c09}", "Unmapped item variable: {8c58ac06}", "Unmapped item variable: {8f15cad2}", "Unmapped item variable: {917f9e2f}", "Unmapped item variable: {927f9fc2}", "Unmapped item variable: {96847027}", "Unmapped item variable: {96f12d22}", "Unmapped item variable: {b0384f7a}", "Unmapped item variable: {c35cc688}", "Unsupported item effect metadata: EggTurns", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumEmblems", "Unsupported item effect metadata: Rerolls", "Unsupported item effect metadata: ThreeStarGold", "Unsupported item effect metadata: XP", "Unsupported item effect metadata: numtg", "Unsupported item effect metadata: {4ffe8c09}", "Unsupported item effect metadata: {8c58ac06}", "Unsupported item effect metadata: {8f15cad2}", "Unsupported item effect metadata: {917f9e2f}", "Unsupported item effect metadata: {927f9fc2}", "Unsupported item effect metadata: {96847027}", "Unsupported item effect metadata: {96f12d22}", "Unsupported item effect metadata: {b0384f7a}", "Unsupported item effect metadata: {c35cc688}"]
 }

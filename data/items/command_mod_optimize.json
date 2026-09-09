@@ -1,7 +1,29 @@
 {
   "name": "Command Mod: Optimize",
+  "displayName": "Command Mod: Optimize",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_SonaUnique_Consumable_ReduceMana",
+  "description": "Command a unit to reduce their Mana cost by @ManaReducePct@%.<br><br><rules>(Good on anyone with Mana)</rules>",
+  "tooltip": "Command a unit to reduce their Mana cost by @ManaReducePct@%.<br><br><rules>(Good on anyone with Mana)</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17_CommandModItems/TFT17_Item_Icon_CommandMod_ReduceMana.TFT_Set17.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaReducePct",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaReducePct", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: ManaReducePct"]
 }

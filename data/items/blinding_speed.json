@@ -1,7 +1,17 @@
 {
   "name": "Blinding Speed",
+  "displayName": "Blinding Speed",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_BlindingSpeed",
+  "description": "Gain a Giant Slayer, Guinsoo's Rageblade, a Recurve Bow and a Magnetic Remover.<br><br><rules>Useful for Attack Carries!</rules>",
+  "tooltip": "Gain a Giant Slayer, Guinsoo's Rageblade, a Recurve Bow and a Magnetic Remover.<br><br><rules>Useful for Attack Carries!</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Berserk-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

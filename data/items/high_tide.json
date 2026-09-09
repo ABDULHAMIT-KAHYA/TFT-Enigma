@@ -1,7 +1,51 @@
 {
   "name": "High Tide",
+  "displayName": "High Tide",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_LagoonHighTide",
+  "description": "Until they cast @CastCount@ times, Lagoon champions attack @ASReductionPct@% slower but gain @Mana@ Mana per second. Gain a Kai'sa.",
+  "tooltip": "Until they cast @CastCount@ times, Lagoon champions attack @ASReductionPct@% slower but gain @Mana@ Mana per second. Gain a Kai'sa.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HighTide-2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ASReductionPct",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CastCount",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ASReductionPct", "value": "30" }, { "name": "CastCount", "value": "2" }, { "name": "Mana", "value": "12" }],
+  "importWarnings": ["Unmapped item variable: ASReductionPct", "Unmapped item variable: CastCount", "Unmapped item variable: Mana", "Unsupported item effect metadata: ASReductionPct", "Unsupported item effect metadata: CastCount"]
 }

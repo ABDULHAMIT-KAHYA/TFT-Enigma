@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_JuggernautCrest",
+  "displayName": "Juggernaut Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_JuggernautCrest",
+  "description": "Gain a Juggernaut Emblem.",
+  "tooltip": "Gain a Juggernaut Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Juggernaut_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

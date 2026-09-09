@@ -1,7 +1,17 @@
 {
   "name": "Prodigy Crown",
+  "displayName": "Prodigy Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_ProdigyCrown",
+  "description": "Gain a Prodigy Emblem, a Spear of Shojin, and an Ezreal.",
+  "tooltip": "Gain a Prodigy Emblem, a Spear of Shojin, and an Ezreal.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Prodigy_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

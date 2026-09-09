@@ -1,7 +1,17 @@
 {
   "name": "TFT7_DoubleUpAugment_MysteryGift_Name",
+  "displayName": "TFT7_DoubleUpAugment_MysteryGift_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_MysteryGift",
+  "description": "TFT7_DoubleUpAugment_MysteryGift_Description",
+  "tooltip": "TFT7_DoubleUpAugment_MysteryGift_Description",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_MysteryGift.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

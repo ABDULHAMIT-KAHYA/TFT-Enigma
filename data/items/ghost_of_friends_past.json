@@ -1,7 +1,51 @@
 {
   "name": "Ghost of Friends Past",
+  "displayName": "Ghost of Friends Past",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_GhostOfUnitsPast",
+  "description": "Whenever an allied champion dies, your current team and all future allies permanently gain @HealthPerStack@ health, @ADPerStack*100@% Attack Damage, or @APPerStack@ Ability Power, based on the dying champion's role.<br><br><rules>Health: @TFTUnitProperty.Item:TFT_Augment_GhostOfUnitsPast_Health@<br>Attack Damage: @TFTUnitProperty.Item:TFT_Augment_GhostOfUnitsPast_AD*100@% <br>Ability Power: @TFTUnitProperty.Item:TFT_Augment_GhostOfUnitsPast_AP@ </rules>",
+  "tooltip": "Whenever an allied champion dies, your current team and all future allies permanently gain @HealthPerStack@ health, @ADPerStack*100@% Attack Damage, or @APPerStack@ Ability Power, based on the dying champion's role.<br><br><rules>Health: @TFTUnitProperty.Item:TFT_Augment_GhostOfUnitsPast_Health@<br>Attack Damage: @TFTUnitProperty.Item:TFT_Augment_GhostOfUnitsPast_AD*100@% <br>Ability Power: @TFTUnitProperty.Item:TFT_Augment_GhostOfUnitsPast_AP@ </rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GhostofUnitsPast_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ADPerStack",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "APPerStack",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPerStack",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADPerStack", "value": "0.01" }, { "name": "APPerStack", "value": "1" }, { "name": "HealthPerStack", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: ADPerStack", "Unmapped item variable: APPerStack", "Unmapped item variable: HealthPerStack"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "TFT7_DoubleUpAugment_TwinTitans_Name",
+  "displayName": "TFT7_DoubleUpAugment_TwinTitans_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_TwinTitans",
+  "description": "TFT7_DoubleUpAugment_TwinTitans_Description",
+  "tooltip": "TFT7_DoubleUpAugment_TwinTitans_Description",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_TwinTitans.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Heal",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 130,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TooltipMaxHealth",
+      "rawSourceValue": "130",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Heal", "value": "30" }, { "name": "TooltipMaxHealth", "value": "130" }],
+  "importWarnings": ["Unmapped item variable: Heal", "Unmapped item variable: TooltipMaxHealth"]
 }

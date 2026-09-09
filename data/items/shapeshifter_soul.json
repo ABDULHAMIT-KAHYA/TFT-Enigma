@@ -1,7 +1,17 @@
 {
   "name": "Shapeshifter Soul",
+  "displayName": "Shapeshifter Soul",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_ShapeshifterTrait2",
+  "description": "Your team counts as having 1 additional Shapeshifter. Gain a Sunfire Cape and an Gnar.",
+  "tooltip": "Your team counts as having 1 additional Shapeshifter. Gain a Sunfire Cape and an Gnar.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Shapeshifter-Soul-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

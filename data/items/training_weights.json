@@ -1,8 +1,115 @@
 {
   "name": "Training Weights",
+  "displayName": "Training Weights",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_HiddenTech_TrainingWeights",
+  "description": "This champion receives a penalty for @NumRounds@ rounds losing -@DamagePenalty*100@% %i:scaleDA% and -@DurabilityPenalty*100@% %i:scaleDR% and capping their Attack Speed to @ASCapPenality@.<br><br>After @NumRounds@ rounds, remove the penalty and instead gain @ASReward*100@% %i:scaleAS% and @DamageReward*100@% %i:scaleDA%.<br><br><rules>Rounds are tracked per Champion.</rules>",
+  "tooltip": "This champion receives a penalty for @NumRounds@ rounds losing -@DamagePenalty*100@% %i:scaleDA% and -@DurabilityPenalty*100@% %i:scaleDR% and capping their Attack Speed to @ASCapPenality@.<br><br>After @NumRounds@ rounds, remove the penalty and instead gain @ASReward*100@% %i:scaleAS% and @DamageReward*100@% %i:scaleDA%.<br><br><rules>Rounds are tracked per Champion.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT15/TFT15_HiddenTech_TrainingWeights.TFT_Set15.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Training Weights:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Training Weights:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ASCapPenality",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ASReward",
+      "rawSourceValue": "0.9",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "DamagePenalty",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "DamageReward",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumRounds",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 5, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{adb8ce88}",
+      "rawSourceValue": "1000",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1000, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DurabilityPenalty",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DurabilityPenalty", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "ASCapPenality", "value": "0.5" }, { "name": "ASReward", "value": "0.9" }, { "name": "DamagePenalty", "value": "0.5" }, { "name": "DamageReward", "value": "0.5" }, { "name": "DurabilityPenalty", "value": "0.5" }, { "name": "Health", "value": "100" }, { "name": "NumRounds", "value": "5" }, { "name": "{adb8ce88}", "value": "1000" }],
+  "importWarnings": ["Unmapped item variable: ASCapPenality", "Unmapped item variable: ASReward", "Unmapped item variable: DamagePenalty", "Unmapped item variable: DamageReward", "Unmapped item variable: NumRounds", "Unmapped item variable: {adb8ce88}"]
 }

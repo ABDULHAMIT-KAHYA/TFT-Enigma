@@ -1,8 +1,65 @@
 {
   "name": "Cybercoil",
+  "displayName": "Cybercoil",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_SejuaniCyberneticItem",
+  "description": "Abilities and Attacks mark enemies for @MarkDuration@ seconds. Heal for <TFTBonus>@HealingPercent*100@%</TFTBonus> of damage dealt to marked enemies.<br><br><TFTPassive>Total Healing This Round: @TFTUnitProperty.item:TFT14_Trait_Cybernetic_SejuaniItem_TotalHealing@</TFTPassive><br><br><rules>Recommended users: Sejuani, Jax, and Mordekaiser</rules>",
+  "tooltip": "Abilities and Attacks mark enemies for @MarkDuration@ seconds. Heal for <TFTBonus>@HealingPercent*100@%</TFTBonus> of damage dealt to marked enemies.<br><br><TFTPassive>Total Healing This Round: @TFTUnitProperty.item:TFT14_Trait_Cybernetic_SejuaniItem_TotalHealing@</TFTPassive><br><br><rules>Recommended users: Sejuani, Jax, and Mordekaiser</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14/TFT14_Item_SejuaniCyberneticItem.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Cybercoil:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 65, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Cybercoil:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 65, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 65,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "65",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 65, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 65,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "65",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 65, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealingPercent",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MarkDuration",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "65" }, { "name": "HealingPercent", "value": "0.12" }, { "name": "MagicResist", "value": "65" }, { "name": "MarkDuration", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: HealingPercent", "Unmapped item variable: MarkDuration"]
 }

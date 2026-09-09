@@ -1,7 +1,17 @@
 {
   "name": "Divine Crown",
+  "displayName": "Divine Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_DivineCrown",
+  "description": "Gain a Divine Emblem, a Quicksilver and a Jax.",
+  "tooltip": "Gain a Divine Emblem, a Quicksilver and a Jax.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Divine_III.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

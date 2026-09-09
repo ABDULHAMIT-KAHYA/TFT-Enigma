@@ -1,7 +1,17 @@
 {
   "name": "Soul Fighter Crown",
+  "displayName": "Soul Fighter Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SoulFighterCrown",
+  "description": "Gain a Soul Fighter Emblem, a Spear of Shojin, and a Kalista.",
+  "tooltip": "Gain a Soul Fighter Emblem, a Spear of Shojin, and a Kalista.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_SoulFighter_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

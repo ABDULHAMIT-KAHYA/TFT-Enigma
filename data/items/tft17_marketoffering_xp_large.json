@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_XP_Large",
+  "displayName": "@XP@ XP.",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_XP_Large",
+  "description": "@XP@ XP.",
+  "tooltip": "@XP@ XP.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_XP.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 36,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "36",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "XP", "value": "36" }],
+  "importWarnings": ["Unmapped item variable: XP", "Unsupported item effect metadata: XP"]
+}

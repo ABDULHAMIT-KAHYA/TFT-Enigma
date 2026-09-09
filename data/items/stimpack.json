@@ -1,7 +1,40 @@
 {
   "name": "Stimpack",
+  "displayName": "Stimpack",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_Stimpack",
+  "description": "Gain @NumComponents@ components after you lose @HealthThreshold@ player health.<br><br>(Health lost this game: @TFTUnitProperty.item:TFT10_Augment_Stimpack_HealthLost@)",
+  "tooltip": "Gain @NumComponents@ components after you lose @HealthThreshold@ player health.<br><br>(Health lost this game: @TFTUnitProperty.item:TFT10_Augment_Stimpack_HealthLost@)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Stimpack-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthThreshold", "value": "50" }, { "name": "NumComponents", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: HealthThreshold", "Unmapped item variable: NumComponents"]
 }

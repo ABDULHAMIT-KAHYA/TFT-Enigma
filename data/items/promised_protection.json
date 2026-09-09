@@ -1,7 +1,29 @@
 {
   "name": "Promised Protection",
+  "displayName": "Promised Protection",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PromisedProtection",
+  "description": "Gain a Protector's Vow. Protector's Vow grants its holder @ManaPercent@% additional Mana from all sources. ",
+  "tooltip": "Gain a Protector's Vow. Protector's Vow grants its holder @ManaPercent@% additional Mana from all sources. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PromisedProtection_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaPercent",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaPercent", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: ManaPercent"]
 }

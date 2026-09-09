@@ -1,0 +1,17 @@
+{
+  "name": "TFT5_Augment_BrawlerCrest",
+  "displayName": "Brawler Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_BrawlerCrest",
+  "description": "Gain an Brawler Emblem and a Sett.",
+  "tooltip": "Gain an Brawler Emblem and a Sett.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Brawler_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

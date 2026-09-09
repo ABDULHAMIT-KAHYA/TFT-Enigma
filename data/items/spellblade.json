@@ -1,7 +1,41 @@
 {
   "name": "Spellblade",
+  "displayName": "Spellblade",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_AbilityAmplification",
+  "description": "Your team gains @AP@% stacking Ability Power every time they attack, up to @maxstacks@ stacks.",
+  "tooltip": "Your team gains @AP@% stacking Ability Power every time they attack, up to @maxstacks@ stacks.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Spellblade:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 99,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxStacks",
+      "rawSourceValue": "99",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "2" }, { "name": "MaxStacks", "value": "99" }],
+  "importWarnings": ["Unmapped item variable: MaxStacks", "Unsupported item effect metadata: MaxStacks"]
 }

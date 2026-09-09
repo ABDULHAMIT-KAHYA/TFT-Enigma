@@ -1,7 +1,73 @@
 {
   "name": "The World Runes",
+  "displayName": "The World Runes",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_TheWorldRunes",
+  "description": "Gain @NumEmblems@ Emblems from random Region traits. Gain @BaseXPPerRound@ XP every player combat, increased to @EnhancedXPPerRound@ XP if @MinRegionTraitsActive@ or more Region traits are active.",
+  "tooltip": "Gain @NumEmblems@ Emblems from random Region traits. Gain @BaseXPPerRound@ XP every player combat, increased to @EnhancedXPPerRound@ XP if @MinRegionTraitsActive@ or more Region traits are active.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TheWorldRunes_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseXPPerRound",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "EnhancedXPPerRound",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxWorldRunes",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MinRegionTraitsActive",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumEmblems",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseXPPerRound", "value": "2" }, { "name": "EnhancedXPPerRound", "value": "6" }, { "name": "MaxWorldRunes", "value": "4" }, { "name": "MinRegionTraitsActive", "value": "4" }, { "name": "NumEmblems", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: BaseXPPerRound", "Unmapped item variable: EnhancedXPPerRound", "Unmapped item variable: MaxWorldRunes", "Unmapped item variable: MinRegionTraitsActive", "Unmapped item variable: NumEmblems"]
 }

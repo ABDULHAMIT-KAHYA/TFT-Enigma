@@ -1,7 +1,17 @@
 {
   "name": "Shoplifting",
+  "displayName": "Shoplifting",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Shoplifting",
+  "description": "At the start of each turn, gain the highest Tier champion in your shop for free.",
+  "tooltip": "At the start of each turn, gain the highest Tier champion in your shop for free.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Shoplifting-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

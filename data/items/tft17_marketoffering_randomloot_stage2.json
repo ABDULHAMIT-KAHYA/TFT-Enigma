@@ -1,0 +1,84 @@
+{
+  "name": "TFT17_MarketOffering_RandomLoot_Stage2",
+  "displayName": "Mystery Loot",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_RandomLoot_Stage2",
+  "description": "You received: @TFTUnitProperty.item:TFT17_ThreshBoon_Stage2UnitPropRandomReward@",
+  "tooltip": "You received: @TFTUnitProperty.item:TFT17_ThreshBoon_Stage2UnitPropRandomReward@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_ThreshLoot.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AChampCost_TOOLTIPONLY",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AGold_TOOLTIPONLY",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BRolls_TOOLTIPONLY",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CCost_TOOLTIPONLY",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "EGold_TOOLTIPONLY",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FGold_TOOLTIPONLY",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AChampCost_TOOLTIPONLY", "value": "3" }, { "name": "AGold_TOOLTIPONLY", "value": "4" }, { "name": "BRolls_TOOLTIPONLY", "value": "4" }, { "name": "CCost_TOOLTIPONLY", "value": "2" }, { "name": "EGold_TOOLTIPONLY", "value": "4" }, { "name": "FGold_TOOLTIPONLY", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: AChampCost_TOOLTIPONLY", "Unmapped item variable: AGold_TOOLTIPONLY", "Unmapped item variable: BRolls_TOOLTIPONLY", "Unmapped item variable: CCost_TOOLTIPONLY", "Unmapped item variable: EGold_TOOLTIPONLY", "Unmapped item variable: FGold_TOOLTIPONLY", "Unsupported item effect metadata: AChampCost_TOOLTIPONLY", "Unsupported item effect metadata: AGold_TOOLTIPONLY", "Unsupported item effect metadata: BRolls_TOOLTIPONLY", "Unsupported item effect metadata: CCost_TOOLTIPONLY", "Unsupported item effect metadata: EGold_TOOLTIPONLY", "Unsupported item effect metadata: FGold_TOOLTIPONLY"]
+}

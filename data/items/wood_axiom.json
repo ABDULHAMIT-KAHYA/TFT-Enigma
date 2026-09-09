@@ -1,7 +1,51 @@
 {
   "name": "Wood Axiom",
+  "displayName": "Wood Axiom",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_WoodAxiom",
+  "description": "Gain a Wood Hex. Champions within gain @PercentHealth*100@% max Health. After combat, they permanently gain @PermanentHealth@ Health.",
+  "tooltip": "Gain a Wood Hex. Champions within gain @PercentHealth*100@% max Health. After combat, they permanently gain @PermanentHealth@ Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WoodAxiom_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentHealth",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 55,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PermanentHealth",
+      "rawSourceValue": "55",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{5bd1edae}",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PercentHealth", "value": "0.15" }, { "name": "PermanentHealth", "value": "55" }, { "name": "{5bd1edae}", "value": "12" }],
+  "importWarnings": ["Unmapped item variable: PercentHealth", "Unmapped item variable: PermanentHealth", "Unmapped item variable: {5bd1edae}"]
 }

@@ -1,7 +1,41 @@
 {
   "name": "Rapid Firecannon",
+  "displayName": "Rapid Firecannon",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_Artifact_RapidFirecannon",
+  "description": "Gain +1 Attack Range, increased by 1 whenever the holder kills an enemy.",
+  "tooltip": "Gain +1 Attack Range, increased by 1 whenever the holder kills an enemy.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_Artifact_RapidFirecannon.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Rapid Firecannon:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.65, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.65,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "65",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.65, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{1543aa48}",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "65" }, { "name": "{1543aa48}", "value": "0.05" }],
+  "importWarnings": ["Unmapped item variable: {1543aa48}", "Unsupported item effect metadata: {1543aa48}"]
 }

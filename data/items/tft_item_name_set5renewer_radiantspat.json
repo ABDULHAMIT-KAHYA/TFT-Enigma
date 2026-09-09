@@ -1,7 +1,29 @@
 {
   "name": "tft_item_name_Set5Renewer_RadiantSpat",
+  "displayName": "tft_item_name_Set5Renewer_RadiantSpat",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Item_RenewerSpatulaItem_Radiant",
+  "description": "tft_item_description_Set5Renewer_RadiantSpat",
+  "tooltip": "tft_item_description_Set5Renewer_RadiantSpat",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set5/Renewer_Radiant.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Mana", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: Mana"]
 }

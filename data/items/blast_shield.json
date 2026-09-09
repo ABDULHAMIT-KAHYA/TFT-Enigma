@@ -1,7 +1,30 @@
 {
   "name": "Blast Shield",
+  "displayName": "Blast Shield",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_BlastShield",
+  "description": "All allies gain a @PercentHealthShield*100@% max Health Shield.",
+  "tooltip": "All allies gain a @PercentHealthShield*100@% max Health Shield.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_BlastShield.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentHealthShield",
+      "rawSourceValue": "0.18",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:PercentHealthShield", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "PercentHealthShield", "value": "0.18" }],
+  "importWarnings": ["Unmapped item variable: PercentHealthShield"]
 }

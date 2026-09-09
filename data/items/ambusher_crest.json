@@ -1,7 +1,17 @@
 {
   "name": "Ambusher Crest",
+  "displayName": "Ambusher Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_AmbusherCrest",
+  "description": "Gain an Ambusher Emblem and a Camille.",
+  "tooltip": "Gain an Ambusher Emblem and a Camille.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Ambusher_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,73 @@
+{
+  "name": "TFT15_Item_ShotcallerEmblemItem",
+  "displayName": "Strategist Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Item_ShotcallerEmblemItem",
+  "description": "The holder gains the Strategist trait.<br><br>Combat Start: The holder and allies within @NumHexes@ hex in the same row gain bonuses.<br>Front 2 rows: @ResistBuff@ Armor and Magic Resist<br>Back 2 rows: @ASBuff*100@% Attack Speed<br>",
+  "tooltip": "The holder gains the Strategist trait.<br><br>Combat Start: The holder and allies within @NumHexes@ hex in the same row gain bonuses.<br>Front 2 rows: @ResistBuff@ Armor and Magic Resist<br>Back 2 rows: @ASBuff*100@% Attack Speed<br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set15/TFT15_Emblem_Strategist.TFT_Set15.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+    { "name": "Item:TFT15_Item_ShotcallerEmblemItem:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [
+    {
+      "name": "Item:TFT15_Item_ShotcallerEmblemItem:MagicResist",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:TFT15_Item_ShotcallerEmblemItem:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ASBuff",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "NumHexes",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ResistBuff",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "20",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "ASBuff", "value": "0.15" }, { "name": "MagicResist", "value": "20" }, { "name": "NumHexes", "value": "1" }, { "name": "ResistBuff", "value": "20" }],
+  "importWarnings": ["Metadata-only item effect: ASBuff -> Aura", "Metadata-only item effect: NumHexes -> Aura", "Metadata-only item effect: ResistBuff -> Aura", "Unmapped item variable: ASBuff", "Unmapped item variable: NumHexes", "Unmapped item variable: ResistBuff"]
+}

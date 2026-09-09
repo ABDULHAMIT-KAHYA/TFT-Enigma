@@ -1,0 +1,51 @@
+{
+  "name": "TFT14_Augment_Immortal_Splash",
+  "displayName": "Expensive Taste",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Immortal_Splash",
+  "description": "Golden Ox gain @TraitAS*100%@% Attack Speed. Every @Rerolls@ shops contains a @Tier@-cost, reduced by each unique Golden Ox fielded in combat. Gain a Graves and&nbsp;an&nbsp;Alistar.<br><br>@TFTUnitProperty.item:TFT14_Augment_GoldenOx_ShopCount@",
+  "tooltip": "Golden Ox gain @TraitAS*100%@% Attack Speed. Every @Rerolls@ shops contains a @Tier@-cost, reduced by each unique Golden Ox fielded in combat. Gain a Graves and&nbsp;an&nbsp;Alistar.<br><br>@TFTUnitProperty.item:TFT14_Augment_GoldenOx_ShopCount@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ExpensiveTaste_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Rerolls",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Tier",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TraitAS",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Rerolls", "value": "8" }, { "name": "Tier", "value": "4" }, { "name": "TraitAS", "value": "0.15" }],
+  "importWarnings": ["Unmapped item variable: Rerolls", "Unmapped item variable: Tier", "Unmapped item variable: TraitAS"]
+}

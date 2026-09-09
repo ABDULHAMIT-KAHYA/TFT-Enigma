@@ -1,7 +1,29 @@
 {
   "name": "Investment Strategy I",
+  "displayName": "Investment Strategy I",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_InvestmentStrategy1",
+  "description": "Your champions gain @HealthPerInterest@ permanent max Health per interest you earn.",
+  "tooltip": "Your champions gain @HealthPerInterest@ permanent max Health per interest you earn.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/InvestmentStrategy_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPerInterest",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthPerInterest", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: HealthPerInterest"]
 }

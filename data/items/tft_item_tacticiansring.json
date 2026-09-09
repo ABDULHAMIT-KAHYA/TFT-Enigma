@@ -1,0 +1,51 @@
+{
+  "name": "TFT_Item_TacticiansRing",
+  "displayName": "Tactician's Cape",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_TacticiansRing",
+  "description": "Your team gains +@MaxArmySizeIncrease@ max team size.<br><br>@PercentGoldChance@% chance to drop 1 gold after @Timer@ seconds of combat.<br><br><tftitemrules>\"...and a bit of Luck.\"</tftitemrules>",
+  "tooltip": "Your team gains +@MaxArmySizeIncrease@ max team size.<br><br>@PercentGoldChance@% chance to drop 1 gold after @Timer@ seconds of combat.<br><br><tftitemrules>\"...and a bit of Luck.\"</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_TacticiansRing.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxArmySizeIncrease",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentGoldChance",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Timer",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxArmySizeIncrease", "value": "1" }, { "name": "PercentGoldChance", "value": "10" }, { "name": "Timer", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: MaxArmySizeIncrease", "Unmapped item variable: PercentGoldChance", "Unmapped item variable: Timer", "Unsupported item effect metadata: MaxArmySizeIncrease", "Unsupported item effect metadata: PercentGoldChance", "Unsupported item effect metadata: Timer"]
+}

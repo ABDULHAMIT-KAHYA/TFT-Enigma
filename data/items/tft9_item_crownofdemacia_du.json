@@ -1,0 +1,76 @@
+{
+  "name": "TFT9_Item_CrownOfDemacia_DU",
+  "displayName": "Crown of Demacia",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Item_CrownOfDemacia_DU",
+  "description": "If the holder begins combat in the front 2 rows, regenerate @HealingPercentPerTickPerStage@-@HealingPercentPerTickPerStage*7@% maximum Health every @HealTickRate@ seconds (based on stage). If they start in the back 2 rows, gain @ADandAPPerTick@-@ADandAPPerTick*7@% %i:scaleAD% Attack Damage and %i:scaleAP% Ability Power every @HealTickRate@ seconds instead. <br><br>If the holder of this item dies, you instantly lose the fight.<br><br><tftitemrules>You can remove this item by benching the holder.</tftitemrules><br><br><tftitemrules>Double Up: This item no longer causes you to lose the fight that round if it's holder is part of a reinforcement.</tftitemrules><br>",
+  "tooltip": "If the holder begins combat in the front 2 rows, regenerate @HealingPercentPerTickPerStage@-@HealingPercentPerTickPerStage*7@% maximum Health every @HealTickRate@ seconds (based on stage). If they start in the back 2 rows, gain @ADandAPPerTick@-@ADandAPPerTick*7@% %i:scaleAD% Attack Damage and %i:scaleAP% Ability Power every @HealTickRate@ seconds instead. <br><br>If the holder of this item dies, you instantly lose the fight.<br><br><tftitemrules>You can remove this item by benching the holder.</tftitemrules><br><br><tftitemrules>Double Up: This item no longer causes you to lose the fight that round if it's holder is part of a reinforcement.</tftitemrules><br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT9_RegionItems/CrownOfDemacia.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+    { "name": "Item:TFT9_Item_CrownOfDemacia_DU:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT9_Item_CrownOfDemacia_DU:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ADandAPPerTick",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealTickRate",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealingPercentPerTickPerStage",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADandAPPerTick", "value": "10" }, { "name": "AS", "value": "30" }, { "name": "HealTickRate", "value": "2" }, { "name": "HealingPercentPerTickPerStage", "value": "3" }, { "name": "Health", "value": "300" }],
+  "importWarnings": ["Unmapped item variable: ADandAPPerTick", "Unmapped item variable: HealTickRate", "Unmapped item variable: HealingPercentPerTickPerStage"]
+}

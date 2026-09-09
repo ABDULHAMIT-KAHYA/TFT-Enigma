@@ -1,7 +1,40 @@
 {
   "name": "Heroic Eulogy",
+  "displayName": "Heroic Eulogy",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_HeroicEulogy",
+  "description": "When an allied champion dies, your remaining champions gain @Mana@ Mana and @Resists@ Armor and Magic Resist.",
+  "tooltip": "When an allied champion dies, your remaining champions gain @Mana@ Mana and @Resists@ Armor and Magic Resist.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HeroicEulogy_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Resists",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Mana", "value": "15" }, { "name": "Resists", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: Mana", "Unmapped item variable: Resists", "Unsupported item effect metadata: Resists"]
 }

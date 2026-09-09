@@ -10,6 +10,8 @@ public:
 
     void setSeed(std::uint32_t seed);
     std::uint32_t seed() const;
+    std::uint32_t state() const;
+    void setState(std::uint32_t state);
 
     float randomFloat01();
     int randomInt(int maxExclusive);
@@ -22,4 +24,6 @@ private:
     std::uint32_t seed_;
     Random rng_;
 };
+
+
 

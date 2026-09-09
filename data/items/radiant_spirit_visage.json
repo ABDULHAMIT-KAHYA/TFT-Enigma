@@ -1,7 +1,85 @@
 {
   "name": "Radiant Spirit Visage",
+  "displayName": "Radiant Spirit Visage",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_RedemptionRadiant",
+  "description": "Regenerate <TFTRadiantItemBonus>@MissingHealthHeal*100@%</TFTRadiantItemBonus> of missing Health each second.",
+  "tooltip": "Regenerate <TFTRadiantItemBonus>@MissingHealthHeal*100@%</TFTRadiantItemBonus> of missing Health each second.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_SpiritVisageRR.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Radiant Spirit Visage:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 700, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 700,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "700",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 700, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealTickRate",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHeal",
+      "rawSourceValue": "2000",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.04,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MissingHealthHeal",
+      "rawSourceValue": "0.04",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{cd951938}",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealTickRate", "value": "1" }, { "name": "Health", "value": "700" }, { "name": "ManaRegen", "value": "4" }, { "name": "MaxHeal", "value": "2000" }, { "name": "MissingHealthHeal", "value": "0.04" }, { "name": "{cd951938}", "value": "0.15" }],
+  "importWarnings": ["Unmapped item variable: HealTickRate", "Unmapped item variable: ManaRegen", "Unmapped item variable: MaxHeal", "Unmapped item variable: MissingHealthHeal", "Unmapped item variable: {cd951938}"]
 }

@@ -1,7 +1,62 @@
 {
   "name": "Tower Defense",
+  "displayName": "Tower Defense",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TowerDefense",
+  "description": "Gain a Training Dummy equipped with a random emblem that fires ranged attacks at enemies. It upgrades as the game goes on.",
+  "tooltip": "Gain a Training Dummy equipped with a random emblem that fires ranged attacks at enemies. It upgrades as the game goes on.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TowerDefense_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumOfEmblems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{103ddd87}",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{fd3dbf9e}",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "null" }, { "name": "NumOfEmblems", "value": "1" }, { "name": "{103ddd87}", "value": "0.4" }, { "name": "{fd3dbf9e}", "value": "60" }],
+  "importWarnings": ["Unmapped item variable: NumOfEmblems", "Unmapped item variable: {103ddd87}", "Unmapped item variable: {fd3dbf9e}", "Unmapped non-numeric item variable: Gold"]
 }

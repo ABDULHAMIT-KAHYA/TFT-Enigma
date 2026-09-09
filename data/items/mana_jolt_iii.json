@@ -1,7 +1,29 @@
 {
   "name": "Mana Jolt III",
+  "displayName": "Mana Jolt III",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Commander_ManaJolt3",
+  "description": "Combat start: Your team gains @startingmana@ Mana.",
+  "tooltip": "Combat start: Your team gains @startingmana@ Mana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCombatStart",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "startingmana",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "startingmana", "value": "40" }],
+  "importWarnings": ["Metadata-only item effect: startingmana -> ModifyMana", "Unmapped item variable: startingmana"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Tome of Traits and Reforger",
+  "displayName": "Tome of Traits and Reforger",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_TomeOfTraits",
+  "description": "Tome of Traits and Reforger",
+  "tooltip": "Tome of Traits and Reforger",
+  "iconPath": "ASSETS/Characters/TFT8_TeamUpProp/HUD/Icons2D/TFT5_EmblemArmoryKey_Square.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

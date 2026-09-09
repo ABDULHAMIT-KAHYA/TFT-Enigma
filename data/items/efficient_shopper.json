@@ -1,7 +1,40 @@
 {
   "name": "Efficient Shopper",
+  "displayName": "Efficient Shopper",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_EfficientShopper",
+  "description": "For the next @NumStages@ carousels, gain a second copy of the champion taken. Gain @Gold@ gold now.",
+  "tooltip": "For the next @NumStages@ carousels, gain a second copy of the champion taken. Gain @Gold@ gold now.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/EfficientShopper_I.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumStages",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "4" }, { "name": "NumStages", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumStages", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumStages"]
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT13_Augment_SentinelCrown",
+  "displayName": "Sentinel Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_SentinelCrown",
+  "description": "Gain a Sentinel Emblem, a Crownguard, and a Loris.",
+  "tooltip": "Gain a Sentinel Emblem, a Crownguard, and a Loris.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Sentinel_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

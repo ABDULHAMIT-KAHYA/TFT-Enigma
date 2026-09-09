@@ -1,7 +1,40 @@
 {
   "name": "Stationary Support III",
+  "displayName": "Stationary Support III",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_StationarySupport3",
+  "description": "Gain @NumOfDummies@ Training Dummy with @NumOfItems@ permanently attached Support item(s).",
+  "tooltip": "Gain @NumOfDummies@ Training Dummy with @NumOfItems@ permanently attached Support item(s).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Stationary-Support-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumOfDummies",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumOfItems",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumOfDummies", "value": "1" }, { "name": "NumOfItems", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumOfDummies", "Unmapped item variable: NumOfItems"]
 }

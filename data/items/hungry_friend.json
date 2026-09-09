@@ -1,7 +1,128 @@
 {
   "name": "Hungry Friend",
+  "displayName": "Hungry Friend",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_HungryFriend",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPerStage",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPercent",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ADPercent",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "APPercent",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{3401c2c7}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{481bfb2c}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{56c13429}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{5fd00a20}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{ccec48cb}",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{e8bc41b6}",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADPercent", "value": "25" }, { "name": "APPercent", "value": "25" }, { "name": "HealthPerStage", "value": "500" }, { "name": "HealthPercent", "value": "25" }, { "name": "{3401c2c7}", "value": "1" }, { "name": "{481bfb2c}", "value": "1" }, { "name": "{56c13429}", "value": "3" }, { "name": "{5fd00a20}", "value": "2" }, { "name": "{ccec48cb}", "value": "25" }, { "name": "{e8bc41b6}", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: ADPercent", "Unmapped item variable: APPercent", "Unmapped item variable: HealthPerStage", "Unmapped item variable: HealthPercent", "Unmapped item variable: {3401c2c7}", "Unmapped item variable: {481bfb2c}", "Unmapped item variable: {56c13429}", "Unmapped item variable: {5fd00a20}", "Unmapped item variable: {ccec48cb}", "Unmapped item variable: {e8bc41b6}", "Unsupported item effect metadata: ADPercent", "Unsupported item effect metadata: APPercent", "Unsupported item effect metadata: {3401c2c7}", "Unsupported item effect metadata: {481bfb2c}", "Unsupported item effect metadata: {56c13429}", "Unsupported item effect metadata: {5fd00a20}", "Unsupported item effect metadata: {ccec48cb}", "Unsupported item effect metadata: {e8bc41b6}"]
 }

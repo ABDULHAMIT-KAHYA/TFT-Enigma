@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_Tier4_Units_3",
+  "displayName": "3 4-cost champions",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Tier4_Units_3",
+  "description": "3 4-cost champions",
+  "tooltip": "3 4-cost champions",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_4c.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

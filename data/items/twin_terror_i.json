@@ -1,7 +1,29 @@
 {
   "name": "Twin Terror I",
+  "displayName": "Twin Terror I",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_TwinTerror1",
+  "description": "When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ Health and @BonusStats@% Attack Speed. Anytime you 3-star, gain a 2-star copy.",
+  "tooltip": "When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ Health and @BonusStats@% Attack Speed. Anytime you 3-star, gain a 2-star copy.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Twin-Terror-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusStats",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusStats", "value": "35" }],
+  "importWarnings": ["Unmapped item variable: BonusStats"]
 }

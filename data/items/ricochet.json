@@ -1,7 +1,30 @@
 {
   "name": "Ricochet",
+  "displayName": "Ricochet",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_CannoneerRicochet",
+  "description": "Cannoneer's cannon shots bounce once, dealing @BounceReduction@% less damage. Gain an Aphelios.",
+  "tooltip": "Cannoneer's cannon shots bounce once, dealing @BounceReduction@% less damage. Gain an Aphelios.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Ricochet-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BounceReduction",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 40, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "BounceReduction", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: BounceReduction"]
 }

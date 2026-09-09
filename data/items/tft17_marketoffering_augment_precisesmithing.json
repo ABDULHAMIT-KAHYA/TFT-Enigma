@@ -1,0 +1,51 @@
+{
+  "name": "TFT17_MarketOffering_Augment_PreciseSmithing",
+  "displayName": "Precise Smithing",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Augment_PreciseSmithing",
+  "description": "Reforging items and Artifacts grants an anvil of the same value instead.  Gain @NumComponents@ component and @NumReforger@ reforger now, and @StageReforger@ reforgers every stage.<br><br><tftitemrules>Includes components and Radiant Items, but does not affect Emblems or Tactician's Items.</tftitemrules><br>",
+  "tooltip": "Reforging items and Artifacts grants an anvil of the same value instead.  Gain @NumComponents@ component and @NumReforger@ reforger now, and @StageReforger@ reforgers every stage.<br><br><tftitemrules>Includes components and Radiant Items, but does not affect Emblems or Tactician's Items.</tftitemrules><br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Forge-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumReforger",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StageReforger",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumComponents", "value": "1" }, { "name": "NumReforger", "value": "2" }, { "name": "StageReforger", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumComponents", "Unmapped item variable: NumReforger", "Unmapped item variable: StageReforger"]
+}

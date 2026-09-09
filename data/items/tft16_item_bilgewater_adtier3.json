@@ -1,0 +1,29 @@
+{
+  "name": "TFT16_Item_Bilgewater_ADTier3",
+  "displayName": "+@BonusAD*100@% Attack Damage",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Bilgewater_ADTier3",
+  "description": "Bilgewater champions gain @BonusAD*100@% Attack Damage and Ability Power.",
+  "tooltip": "Bilgewater champions gain @BonusAD*100@% Attack Damage and Ability Power.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Bilgewater/TFT16_Bilgewater_AD_Tier3.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.13,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusAD",
+      "rawSourceValue": "0.13",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAD", "value": "0.13" }],
+  "importWarnings": ["Unmapped item variable: BonusAD"]
+}

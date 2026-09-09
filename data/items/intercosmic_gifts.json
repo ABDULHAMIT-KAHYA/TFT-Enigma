@@ -1,7 +1,51 @@
 {
   "name": "Intercosmic Gifts",
+  "displayName": "Intercosmic Gifts",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_AstralIntercosmicGifts",
+  "description": "Astral Orbs have a @BonusLootPct@% chance to spawn a small bonus orb that contains loot. Gain a Lux.",
+  "tooltip": "Astral Orbs have a @BonusLootPct@% chance to spawn a small bonus orb that contains loot. Gain a Lux.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Intercosmic-Treasure-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusLootPct",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{4ba38b68}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{96f662f6}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusLootPct", "value": "100" }, { "name": "{4ba38b68}", "value": "null" }, { "name": "{96f662f6}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: BonusLootPct", "Unmapped non-numeric item variable: {4ba38b68}", "Unmapped non-numeric item variable: {96f662f6}"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "TFT7_DoubleUpAugment_ExperiencedShopper",
+  "displayName": "TFT7_DoubleUpAugment_ExperiencedShopper",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_ExperiencedShopper",
+  "description": "TFT7_DoubleUpAugment_ExperiencedShopper_Description",
+  "tooltip": "TFT7_DoubleUpAugment_ExperiencedShopper_Description",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_Convergence.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

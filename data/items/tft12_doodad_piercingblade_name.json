@@ -1,7 +1,51 @@
 {
   "name": "TFT12_Doodad_PiercingBlade_Name",
+  "displayName": "TFT12_Doodad_PiercingBlade_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_PiercingBlade",
+  "description": "TFT12_Doodad_PiercingBlade_Tooltip",
+  "tooltip": "TFT12_Doodad_PiercingBlade_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Crit",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SunderAmount",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SunderDuration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Crit", "value": "0.15" }, { "name": "SunderAmount", "value": "0.5" }, { "name": "SunderDuration", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Crit", "Unmapped item variable: SunderAmount", "Unmapped item variable: SunderDuration", "Unsupported item effect metadata: Crit", "Unsupported item effect metadata: SunderAmount", "Unsupported item effect metadata: SunderDuration"]
 }

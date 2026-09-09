@@ -1,7 +1,40 @@
 {
   "name": "Meltthrough",
+  "displayName": "Meltthrough",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_Meltthrough",
+  "description": "Every second, reduce the Armor of enemies within 2-hexes by @ArmorMRReduction@, doubled for adjacent enemies.",
+  "tooltip": "Every second, reduce the Armor of enemies within 2-hexes by @ArmorMRReduction@, doubled for adjacent enemies.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_Meltthrough.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmorMRReduction",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c0dab986}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ArmorMRReduction", "value": "4" }, { "name": "{c0dab986}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: ArmorMRReduction", "Unmapped item variable: {c0dab986}"]
 }

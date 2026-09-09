@@ -1,7 +1,85 @@
 {
   "name": "Soraka's Miracle",
+  "displayName": "Soraka's Miracle",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Item_Artifact_SorakaArtifact",
+  "description": "The first @NumMiracles@ times the holder drops below @HPThreshold*100@% Health, a Miracle occurs, healing them for @TotalHealRatio@% of their max Health.<br><br>If the holder survives player combat, gain @PlayerHealth@ player Health for each Miracle this combat.",
+  "tooltip": "The first @NumMiracles@ times the holder drops below @HPThreshold*100@% Health, a Miracle occurs, healing them for @TotalHealRatio@% of their max Health.<br><br>If the holder survives player combat, gain @PlayerHealth@ player Health for each Miracle this combat.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_Item_Artifact_SorakaMiracle.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Soraka's Miracle:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPThreshold",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumMiracles",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PlayerHealth",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TotalHealRatio",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{cd951938}",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HPThreshold", "value": "0.5" }, { "name": "Health", "value": "100" }, { "name": "NumMiracles", "value": "2" }, { "name": "PlayerHealth", "value": "1" }, { "name": "TotalHealRatio", "value": "20" }, { "name": "{cd951938}", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: HPThreshold", "Unmapped item variable: NumMiracles", "Unmapped item variable: PlayerHealth", "Unmapped item variable: TotalHealRatio", "Unmapped item variable: {cd951938}"]
 }

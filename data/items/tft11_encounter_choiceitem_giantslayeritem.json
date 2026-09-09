@@ -1,0 +1,17 @@
+{
+  "name": "TFT11_Encounter_ChoiceItem_GiantSlayerItem",
+  "displayName": "Giant Slayer",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Encounter_ChoiceItem_GiantSlayerItem",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Giant_Slayer.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

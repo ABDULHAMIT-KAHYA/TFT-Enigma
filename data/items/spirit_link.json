@@ -1,7 +1,51 @@
 {
   "name": "Spirit Link",
+  "displayName": "Spirit Link",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SpiritLink1",
+  "description": "Champions restore @BaseRegenBonus*100@% of their max Health every @RegenPeriod@ seconds. Increase the healing by @RegenPerMissingHP@% for every 10 missing player Health.",
+  "tooltip": "Champions restore @BaseRegenBonus*100@% of their max Health every @RegenPeriod@ seconds. Increase the healing by @RegenPerMissingHP@% for every 10 missing player Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SpiritLink_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseRegenBonus",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RegenPerMissingHP",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RegenPeriod",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseRegenBonus", "value": "0.05" }, { "name": "RegenPerMissingHP", "value": "0.5" }, { "name": "RegenPeriod", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: BaseRegenBonus", "Unmapped item variable: RegenPerMissingHP", "Unmapped item variable: RegenPeriod"]
 }

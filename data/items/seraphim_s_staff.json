@@ -1,7 +1,51 @@
 {
   "name": "Seraphim's Staff",
+  "displayName": "Seraphim's Staff",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SeraphimsStaff",
+  "description": "Gain an Archangel's Staff. Archangel's Staff grants @IncreasedMana@ additional Mana Regen if its holder has @APThreshold@% or more Ability Power.",
+  "tooltip": "Gain an Archangel's Staff. Archangel's Staff grants @IncreasedMana@ additional Mana Regen if its holder has @APThreshold@% or more Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SeraphimsStaff_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IncreasedMana",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 90,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "APThreshold",
+      "rawSourceValue": "90",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{abceeef7}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "APThreshold", "value": "90" }, { "name": "IncreasedMana", "value": "2" }, { "name": "{abceeef7}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: APThreshold", "Unmapped item variable: IncreasedMana", "Unmapped non-numeric item variable: {abceeef7}", "Unsupported item effect metadata: APThreshold", "Unsupported item effect metadata: {abceeef7}"]
 }

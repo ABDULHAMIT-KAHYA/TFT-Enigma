@@ -1,7 +1,53 @@
 {
   "name": "Adaptive Style",
+  "displayName": "Adaptive Style",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_Duelist_AdaptiveStyle",
+  "description": "On attack, Duelists gain @OffensiveStats*100@% Attack Damage and Ability Power, stacking up to @MaxStacks@ times. Duelist Tanks instead gain @DefensiveStats@ Armor and Magic Resist. Gain a Kai'Sa and Kayle.",
+  "tooltip": "On attack, Duelists gain @OffensiveStats*100@% Attack Damage and Ability Power, stacking up to @MaxStacks@ times. Duelist Tanks instead gain @DefensiveStats@ Armor and Magic Resist. Gain a Kai'Sa and Kayle.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AdaptiveStyle_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "DefensiveStats",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MaxStacks",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 15, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 0.02,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "OffensiveStats",
+      "rawSourceValue": "0.02",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DefensiveStats", "value": "2" }, { "name": "MaxStacks", "value": "15" }, { "name": "OffensiveStats", "value": "0.02" }],
+  "importWarnings": ["Metadata-only item effect: DefensiveStats -> DealDamage", "Metadata-only item effect: MaxStacks -> DealDamage", "Metadata-only item effect: OffensiveStats -> DealDamage", "Unmapped item variable: DefensiveStats", "Unmapped item variable: MaxStacks", "Unmapped item variable: OffensiveStats"]
 }

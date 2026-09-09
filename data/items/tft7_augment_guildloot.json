@@ -1,0 +1,40 @@
+{
+  "name": "TFT7_Augment_GuildLoot",
+  "displayName": "Loot Master",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_GuildLoot",
+  "description": "Gain a random component every @Combats@ player combats when you have at least Guild (@TraitLevelReq@) active. Gain a Twitch.",
+  "tooltip": "Gain a random component every @Combats@ player combats when you have at least Guild (@TraitLevelReq@) active. Gain a Twitch.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Loot-Master-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Combats",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TraitLevelReq",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Combats", "value": "3" }, { "name": "TraitLevelReq", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Combats", "Unmapped item variable: TraitLevelReq"]
+}

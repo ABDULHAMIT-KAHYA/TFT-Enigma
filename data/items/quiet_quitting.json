@@ -1,7 +1,51 @@
 {
   "name": "Quiet Quitting",
+  "displayName": "Quiet Quitting",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_QuietQuitting",
+  "description": "For the next @NumRounds@ player combats, you cannot use your shop. After, gain @Gold@ gold and a Completed Item Anvil.",
+  "tooltip": "For the next @NumRounds@ player combats, you cannot use your shop. After, gain @Gold@ gold and a Completed Item Anvil.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/QuietQuitting_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 24,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "24",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRounds",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{f75fda1e}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "24" }, { "name": "NumRounds", "value": "3" }, { "name": "{f75fda1e}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumRounds", "Unmapped item variable: {f75fda1e}", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumRounds", "Unsupported item effect metadata: {f75fda1e}"]
 }

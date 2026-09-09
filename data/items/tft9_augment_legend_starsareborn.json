@@ -1,0 +1,29 @@
+{
+  "name": "TFT9_Augment_Legend_StarsAreBorn",
+  "displayName": "Stars Are Born",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Legend_StarsAreBorn",
+  "description": "The first 1-cost and 2-cost champions you buy are instantly upgraded to 2-star. Gain @Gold@ gold.",
+  "tooltip": "The first 1-cost and 2-cost champions you buy are instantly upgraded to 2-star. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Stars-are-born-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
+}

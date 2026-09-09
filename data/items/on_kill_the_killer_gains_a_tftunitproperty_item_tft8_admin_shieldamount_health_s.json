@@ -1,7 +1,17 @@
 {
   "name": "On kill, the killer gains a @TFTUnitProperty.item:TFT8_Admin_ShieldAmount@% Health shield",
+  "displayName": "On kill, the killer gains a @TFTUnitProperty.item:TFT8_Admin_ShieldAmount@% Health shield",
+  "isPlaceholder": true,
+  "sourceId": "TFT8_AdminCauseEffect_OnKill_Shield",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,17 @@
 {
   "name": "tft_item_name_TFT7_Item_Trainer_Heimerdinger",
+  "displayName": "tft_item_name_TFT7_Item_Trainer_Heimerdinger",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Item_Trainer_Heimerdinger",
+  "description": "tft_item_description_TFT7_Item_Trainer_Heimerdinger",
+  "tooltip": "tft_item_description_TFT7_Item_Trainer_Heimerdinger",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set7_Trainer/TFT7_DragonItems_AP.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

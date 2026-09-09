@@ -1,7 +1,51 @@
 {
   "name": "2-star 3-cost",
+  "displayName": "2-star 3-cost",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_2star3cost_Eve",
+  "description": "Gain a random @StarLevel_TOOLTIPONLY@-star @ChampCost_TOOLTIPONLY@ cost champion. Lose @HealthLoss@ Tactician Health.",
+  "tooltip": "Gain a random @StarLevel_TOOLTIPONLY@-star @ChampCost_TOOLTIPONLY@ cost champion. Lose @HealthLoss@ Tactician Health.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_3c.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ChampCost_TOOLTIPONLY",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthLoss",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StarLevel_TOOLTIPONLY",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ChampCost_TOOLTIPONLY", "value": "3" }, { "name": "HealthLoss", "value": "null" }, { "name": "StarLevel_TOOLTIPONLY", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: ChampCost_TOOLTIPONLY", "Unmapped item variable: StarLevel_TOOLTIPONLY", "Unmapped non-numeric item variable: HealthLoss"]
 }

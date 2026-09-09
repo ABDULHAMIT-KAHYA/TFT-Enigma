@@ -1,7 +1,29 @@
 {
   "name": "2 star Zac, Aurora, Urgot, and Samira",
+  "displayName": "2 star Zac, Aurora, Urgot, and Samira",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_Specific5Costs",
+  "description": "2 star Zac, Aurora, Urgot, and Samira",
+  "tooltip": "2 star Zac, Aurora, Urgot, and Samira",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_5c.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
 }

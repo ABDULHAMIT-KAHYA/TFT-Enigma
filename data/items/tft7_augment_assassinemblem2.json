@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Augment_AssassinEmblem2",
+  "displayName": "Assassin Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_AssassinEmblem2",
+  "description": "Gain an Assassin Emblem, a Hand of Justice, and a Rengar.",
+  "tooltip": "Gain an Assassin Emblem, a Hand of Justice, and a Rengar.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AssassinSoul3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,40 @@
 {
   "name": "Precision and Grace",
+  "displayName": "Precision and Grace",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ChallengerDash",
+  "description": "At the start of combat, allies gain @BonusAS*100@% Attack Speed for @BurstDuration@ seconds. On takedown, allies dash to their next target and gain this bonus again.",
+  "tooltip": "At the start of combat, allies gain @BonusAS*100@% Attack Speed for @BurstDuration@ seconds. On takedown, allies dash to their next target and gain this bonus again.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PrecisionGrace_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BonusAS",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BurstDuration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAS", "value": "0.25" }, { "name": "BurstDuration", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: BonusAS", "Unmapped item variable: BurstDuration", "Unsupported item effect metadata: BonusAS", "Unsupported item effect metadata: BurstDuration"]
 }

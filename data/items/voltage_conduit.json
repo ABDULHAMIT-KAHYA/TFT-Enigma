@@ -1,7 +1,29 @@
 {
   "name": "Voltage Conduit",
+  "displayName": "Voltage Conduit",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_VoltageConduit",
+  "description": "Reduce the max Mana of Piltover units by @ManaReduction*100@%.",
+  "tooltip": "Reduce the max Mana of Piltover units by @ManaReduction*100@%.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_VoltageConduit.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaReduction",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaReduction", "value": "0.3" }],
+  "importWarnings": ["Unmapped item variable: ManaReduction"]
 }

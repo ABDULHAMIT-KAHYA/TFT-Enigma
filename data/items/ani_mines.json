@@ -1,7 +1,30 @@
 {
   "name": "Ani-Mines",
+  "displayName": "Ani-Mines",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_AnimaSquad_T1_Mines",
+  "description": "Every @CastPeriod@ seconds, a random Anima Squad champion throws three Ani-Mines that explode, dealing physical damage in an area.",
+  "tooltip": "Every @CastPeriod@ seconds, a random Anima Squad champion throws three Ani-Mines that explode, dealing physical damage in an area.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14_AnimaSquadItems/TooltipIcons/TFT14_Icon_AnimaSquad_Mine.TFT_Set14.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "CastPeriod",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 5, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "CastPeriod", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: CastPeriod"]
 }

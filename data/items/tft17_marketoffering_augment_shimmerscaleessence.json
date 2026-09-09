@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_Augment_ShimmerscaleEssence",
+  "displayName": "Shimmerscale Essence",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Augment_ShimmerscaleEssence",
+  "description": "Gain a Mogul's Mail. In @combatnum@ rounds, gain a Gamblers Blade.<br><br><rules>These items give gold as well as combat power.</rules>",
+  "tooltip": "Gain a Mogul's Mail. In @combatnum@ rounds, gain a Gamblers Blade.<br><br><rules>These items give gold as well as combat power.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ShimmerscaleEssence_III.TFT_Set12.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CombatNum",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CombatNum", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: CombatNum", "Unsupported item effect metadata: CombatNum"]
+}

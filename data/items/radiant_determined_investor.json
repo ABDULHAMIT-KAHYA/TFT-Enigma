@@ -1,7 +1,52 @@
 {
   "name": "Radiant Determined Investor",
+  "displayName": "Radiant Determined Investor",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Item_ShimmerscaleDeterminedInvestor_Radiant",
+  "description": "After dying during combat @StackLimit@ times, this item is destroyed. Upon destruction, grant the item Radiant Diamond Hands, 1 Champion Duplicator, and %i:goldCoins% <TFTRadiantItemBonus>@GoldGranted@</TFTRadiantItemBonus> gold.",
+  "tooltip": "After dying during combat @StackLimit@ times, this item is destroyed. Upon destruction, grant the item Radiant Diamond Hands, 1 Champion Duplicator, and %i:goldCoins% <TFTRadiantItemBonus>@GoldGranted@</TFTRadiantItemBonus> gold.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set7_Shimmerscale/Shimmerscale_DeterminedInvestor_Radiant.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:Radiant Determined Investor:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 450, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 450,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "450",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 450, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldGranted",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StackLimit",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldGranted", "value": "30" }, { "name": "Health", "value": "450" }, { "name": "StackLimit", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: GoldGranted", "Unmapped item variable: StackLimit"]
 }

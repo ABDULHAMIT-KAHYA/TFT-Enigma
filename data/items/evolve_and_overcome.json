@@ -1,7 +1,40 @@
 {
   "name": "Evolve and Overcome",
+  "displayName": "Evolve and Overcome",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_Void_EvolveAndOvercome",
+  "description": "For every @NumTakedownsReq@ champions that Mutated Void allies takedown, gain @XP@ XP. Gain a Cho'Gath and a 2-star Kog'Maw. @TFTUnitProperty.item:TFT_Augment_EvolveAndOvercome_Tooltip@<br><br><rules>Void provides unique Mutations.</rules><br>",
+  "tooltip": "For every @NumTakedownsReq@ champions that Mutated Void allies takedown, gain @XP@ XP. Gain a Cho'Gath and a 2-star Kog'Maw. @TFTUnitProperty.item:TFT_Augment_EvolveAndOvercome_Tooltip@<br><br><rules>Void provides unique Mutations.</rules><br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/EvolveAndOvercome_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumTakedownsReq",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumTakedownsReq", "value": "6" }, { "name": "XP", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumTakedownsReq", "Unmapped item variable: XP", "Unsupported item effect metadata: NumTakedownsReq", "Unsupported item effect metadata: XP"]
 }

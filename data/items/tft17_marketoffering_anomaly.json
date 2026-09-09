@@ -1,0 +1,17 @@
+{
+  "name": "TFT17_MarketOffering_Anomaly",
+  "displayName": "Anomaly",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Anomaly",
+  "description": "Next planning phase, gain an Anomaly which lets you apply a powerful evolution to one champion. You can spend gold to reroll the offering.",
+  "tooltip": "Next planning phase, gain an Anomaly which lets you apply a powerful evolution to one champion. You can spend gold to reroll the offering.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT13/TFT13_GoopItem_Icon.TFT_Set13.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

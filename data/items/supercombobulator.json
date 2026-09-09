@@ -1,7 +1,17 @@
 {
   "name": "Supercombobulator",
+  "displayName": "Supercombobulator",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_Supercombobulator",
+  "description": "Transform champions on your board into random ones of ANY cost. Equipped items are returned to your bench.",
+  "tooltip": "Transform champions on your board into random ones of ANY cost. Equipped items are returned to your bench.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

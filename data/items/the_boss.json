@@ -1,7 +1,17 @@
 {
   "name": "The Boss",
+  "displayName": "The Boss",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitBossActivator",
+  "description": "Gain Boss Knuckles. When the holder first drops below @TFTTrait.TFTEvent5YR_Boss.1:HealthThreshold*100@% Health, they become The Boss and leave combat to start doing sit-ups. Each sit-up restores maximum Health and grants Attack Speed. <br><br><row>(@TFTTrait.TFTEvent5YR_Boss.1:MinUnits@) @TFTTrait.TFTEvent5YR_Boss.1:HealPercent*100@% %i:scaleHealth%, @TFTTrait.TFTEvent5YR_Boss.1:AttackSpeedPercent*100@% %i:scaleAS%.</row><br><row>(@TFTTrait.TFTEvent5YR_Boss.2:MinUnits@) @TFTTrait.TFTEvent5YR_Boss.2:HealPercent*100@% %i:scaleHealth%, @TFTTrait.TFTEvent5YR_Boss.2:AttackSpeedPercent*100@% %i:scaleAS%. If they reach full Health they return to combat Pumped Up: all of their attacks and abilities deal @TFTTrait.TFTEvent5YR_Boss.2:TrueDamagePercentage*100@% of damage as true damage.</row>",
+  "tooltip": "Gain Boss Knuckles. When the holder first drops below @TFTTrait.TFTEvent5YR_Boss.1:HealthThreshold*100@% Health, they become The Boss and leave combat to start doing sit-ups. Each sit-up restores maximum Health and grants Attack Speed. <br><br><row>(@TFTTrait.TFTEvent5YR_Boss.1:MinUnits@) @TFTTrait.TFTEvent5YR_Boss.1:HealPercent*100@% %i:scaleHealth%, @TFTTrait.TFTEvent5YR_Boss.1:AttackSpeedPercent*100@% %i:scaleAS%.</row><br><row>(@TFTTrait.TFTEvent5YR_Boss.2:MinUnits@) @TFTTrait.TFTEvent5YR_Boss.2:HealPercent*100@% %i:scaleHealth%, @TFTTrait.TFTEvent5YR_Boss.2:AttackSpeedPercent*100@% %i:scaleAS%. If they reach full Health they return to combat Pumped Up: all of their attacks and abilities deal @TFTTrait.TFTEvent5YR_Boss.2:TrueDamagePercentage*100@% of damage as true damage.</row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Boss.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

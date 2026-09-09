@@ -1,7 +1,17 @@
 {
   "name": "Fury Guitar",
+  "displayName": "Fury Guitar",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Consumable_KaynRed",
+  "description": "Place on Kayn to unleash his Fury Rapper energy, permanently improving his Reaping Slash Ability to heal him.<br><br><tftitemrules>[KAYN CONSUMABLE - This item disappears when used and DESTROYS the Shadow Mic]</tftitemrules><br><br><tftitemrules>[Can only be used during the Planning Phase]</tftitemrules>",
+  "tooltip": "Place on Kayn to unleash his Fury Rapper energy, permanently improving his Reaping Slash Ability to heal him.<br><br><tftitemrules>[KAYN CONSUMABLE - This item disappears when used and DESTROYS the Shadow Mic]</tftitemrules><br><br><tftitemrules>[Can only be used during the Planning Phase]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT4_Consumable_KaynRed.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

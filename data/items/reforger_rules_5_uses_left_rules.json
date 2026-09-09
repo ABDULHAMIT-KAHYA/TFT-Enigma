@@ -1,7 +1,29 @@
 {
   "name": "Reforger <rules>(5 uses left!)</rules>",
+  "displayName": "Reforger <rules>(5 uses left!)</rules>",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Consumable_ItemReroller_UsesLeft5",
+  "description": "Unequip all items and randomly transform them into new ones of a similar type and quality.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Unequip all items and randomly transform them into new ones of a similar type and quality.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Consumable_ItemReroller_UsesLeft5.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{27d80030}",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{27d80030}", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: {27d80030}", "Unsupported item effect metadata: {27d80030}"]
 }

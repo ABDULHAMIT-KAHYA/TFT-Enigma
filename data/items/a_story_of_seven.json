@@ -1,7 +1,29 @@
 {
   "name": "A Story of Seven",
+  "displayName": "A Story of Seven",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_StoryOfSeven",
+  "description": "Collect Golden Balls by defeating players in combat. Collect all @WinsPerReward@ for a reward, then restart the quest with more powerful rewards. <br><br>Gain a 2-star 1-cost champion to start your journey.<br>",
+  "tooltip": "Collect Golden Balls by defeating players in combat. Collect all @WinsPerReward@ for a reward, then restart the quest with more powerful rewards. <br><br>Gain a 2-star 1-cost champion to start your journey.<br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/QuestForTheSeven_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "WinsPerReward",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "WinsPerReward", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: WinsPerReward", "Unsupported item effect metadata: WinsPerReward"]
 }

@@ -1,0 +1,85 @@
+{
+  "name": "TFT17_Item_PsyOps_SemiconductorMod_Radiant",
+  "displayName": "Semiconductor",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Item_PsyOps_SemiconductorMod_Radiant",
+  "description": "Every @AttacksToLaunch@ attacks and every @AttacksToReceive@ times being attacked, zap the @NumEnemies@ nearest enemies, dealing <magicDamage>@PctHealthDamage*100@%</magicDamage> of enemy Health as magic damage.<br><br><rules>Recommended users: Gragas and Master Yi.</rules>",
+  "tooltip": "Every @AttacksToLaunch@ attacks and every @AttacksToReceive@ times being attacked, zap the @NumEnemies@ nearest enemies, dealing <magicDamage>@PctHealthDamage*100@%</magicDamage> of enemy Health as magic damage.<br><br><rules>Recommended users: Gragas and Master Yi.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_PsyOps_Mod_SemiconductorMod.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT17_Item_PsyOps_SemiconductorMod_Radiant:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttacksToLaunch",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttacksToReceive",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumEnemies",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.075,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PctHealthDamage",
+      "rawSourceValue": "0.075",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{cd951938}",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttacksToLaunch", "value": "4" }, { "name": "AttacksToReceive", "value": "12" }, { "name": "Health", "value": "300" }, { "name": "NumEnemies", "value": "3" }, { "name": "PctHealthDamage", "value": "0.075" }, { "name": "{cd951938}", "value": "0.3" }],
+  "importWarnings": ["Unmapped item variable: AttacksToLaunch", "Unmapped item variable: AttacksToReceive", "Unmapped item variable: NumEnemies", "Unmapped item variable: PctHealthDamage", "Unmapped item variable: {cd951938}"]
+}

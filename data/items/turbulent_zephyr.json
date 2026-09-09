@@ -1,8 +1,84 @@
 {
   "name": "Turbulent Zephyr",
+  "displayName": "Turbulent Zephyr",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_ZephyrShadow",
+  "description": "Combat start: Summon a whirlwind on the opposite side of the arena that removes the closest enemy from combat for <TFTShadowItemBonus>@BanishDuration@ seconds</TFTShadowItemBonus>. <TFTShadowItemPenalty>Once the enemy returns to combat, they gain 30 bonus attack damage and 30 ability power for the rest of combat.</TFTShadowItemPenalty> <br><br><tftitemrules>[Ignores CC immunity]</tftitemrules><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+  "tooltip": "Combat start: Summon a whirlwind on the opposite side of the arena that removes the closest enemy from combat for <TFTShadowItemBonus>@BanishDuration@ seconds</TFTShadowItemBonus>. <TFTShadowItemPenalty>Once the enemy returns to combat, they gain 30 bonus attack damage and 30 ability power for the rest of combat.</TFTShadowItemPenalty> <br><br><tftitemrules>[Ignores CC immunity]</tftitemrules><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Zephyr.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Turbulent Zephyr:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Turbulent Zephyr:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [
+    {
+      "name": "Item:Turbulent Zephyr:Health",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Turbulent Zephyr:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "name": "Item:Turbulent Zephyr:MagicResist",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Turbulent Zephyr:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "20",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "OnCombatStart",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BanishDuration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "OnCombatStart",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{8a44b335}",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BanishDuration", "value": "10" }, { "name": "Health", "value": "150" }, { "name": "MagicResist", "value": "20" }, { "name": "{8a44b335}", "value": "30" }],
+  "importWarnings": ["Metadata-only item effect: BanishDuration -> SummonUnit", "Metadata-only item effect: {8a44b335} -> SummonUnit", "Unmapped item variable: BanishDuration", "Unmapped item variable: {8a44b335}"]
 }

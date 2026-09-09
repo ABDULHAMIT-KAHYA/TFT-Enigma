@@ -1,0 +1,41 @@
+{
+  "name": "TFT5_Augment_ThreshCarry",
+  "displayName": "Death Approaches",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_ThreshCarry",
+  "description": "Gain a Thresh. Your strongest Thresh's Ability now pulls himself to his target, empowers his next attack to deal @BonusAPRatio*100@% Ability Power as bonus magic damage, and Mana cost is reduced by @ManaReduction@ (down from 120).",
+  "tooltip": "Gain a Thresh. Your strongest Thresh's Ability now pulls himself to his target, empowers his next attack to deal @BonusAPRatio*100@% Ability Power as bonus magic damage, and Mana cost is reduced by @ManaReduction@ (down from 120).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Death-Approaches_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusAPRatio",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaReduction",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAPRatio", "value": "3" }, { "name": "ManaReduction", "value": "60" }],
+  "importWarnings": ["Unmapped item variable: BonusAPRatio", "Unmapped item variable: ManaReduction"]
+}

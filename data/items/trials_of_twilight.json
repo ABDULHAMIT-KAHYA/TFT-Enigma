@@ -1,7 +1,40 @@
 {
   "name": "Trials of Twilight",
+  "displayName": "Trials of Twilight",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_XinZhaoCarry",
+  "description": "Gain @NumberOfCopies@ Xin Zhao. Your strongest Xin Zhao constantly strikes nearby enemies and executes enemies. After @RoundsBeforeTransformation@ player combats as a 3-star, unlock Zaahen. He replaces Xin Zhao and takes his items.",
+  "tooltip": "Gain @NumberOfCopies@ Xin Zhao. Your strongest Xin Zhao constantly strikes nearby enemies and executes enemies. After @RoundsBeforeTransformation@ player combats as a 3-star, unlock Zaahen. He replaces Xin Zhao and takes his items.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TheDarkenGlaive_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Execute",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumberOfCopies",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Execute",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundsBeforeTransformation",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumberOfCopies", "value": "2" }, { "name": "RoundsBeforeTransformation", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumberOfCopies", "Unmapped item variable: RoundsBeforeTransformation"]
 }

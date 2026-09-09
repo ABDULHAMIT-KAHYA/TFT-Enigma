@@ -1,7 +1,41 @@
 {
   "name": "Cower, Weaklings!",
+  "displayName": "Cower, Weaklings!",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Augment_Cyberboss_Cower",
+  "description": "Cyberboss abilities reduce the target's max Health by @HealthReduction*100@%. Cyberbosses take @DamageReduction*100@% less damage from enemies with less max Health. Gain a Poppy and a Veigar.",
+  "tooltip": "Cyberboss abilities reduce the target's max Health by @HealthReduction*100@%. Cyberbosses take @DamageReduction*100@% less damage from enemies with less max Health. Gain a Poppy and a Veigar.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CowerWeaklings_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Cower, Weaklings!:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageReduction",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthReduction",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageReduction", "value": "0.2" }, { "name": "HealthReduction", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: HealthReduction"]
 }

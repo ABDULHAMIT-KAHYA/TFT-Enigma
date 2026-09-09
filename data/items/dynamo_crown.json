@@ -1,7 +1,17 @@
 {
   "name": "Dynamo Crown",
+  "displayName": "Dynamo Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_DynamoCrown",
+  "description": "Gain a Dynamo Emblem, a Spear of Shojin, and an Elise.",
+  "tooltip": "Gain a Dynamo Emblem, a Spear of Shojin, and an Elise.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DynamoCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

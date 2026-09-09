@@ -1,7 +1,125 @@
 {
   "name": "The Phoenix and the Bear",
+  "displayName": "The Phoenix and the Bear",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_UdyrCarry",
+  "description": "Gain 2-star Udyr. When your strongest Udyr transforms, gain bonus effects:<br>Reduce Mana cost by @ManaReduction@.<br>Turtle: Deal Magic Damage in a cone.<br>Tiger: Stun the enemy.",
+  "tooltip": "Gain 2-star Udyr. When your strongest Udyr transforms, gain bonus effects:<br>Reduce Mana cost by @ManaReduction@.<br>Turtle: Deal Magic Damage in a cone.<br>Tiger: Stun the enemy.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/The-Phoenix-And-The-Bear_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{2fe0eb3b}",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{878a9a9b}",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 100, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{888a9c2e}",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 200, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 275,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{898a9dc1}",
+      "rawSourceValue": "275",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 275, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 350,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{8a8a9f54}",
+      "rawSourceValue": "350",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 350, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 400,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{8b8aa0e7}",
+      "rawSourceValue": "400",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 400, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 450,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{8c8aa27a}",
+      "rawSourceValue": "450",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 450, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{8d8aa40d}",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 500, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaReduction",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaReduction", "value": "10" }, { "name": "{2fe0eb3b}", "value": "1.5" }, { "name": "{878a9a9b}", "value": "100" }, { "name": "{888a9c2e}", "value": "200" }, { "name": "{898a9dc1}", "value": "275" }, { "name": "{8a8a9f54}", "value": "350" }, { "name": "{8b8aa0e7}", "value": "400" }, { "name": "{8c8aa27a}", "value": "450" }, { "name": "{8d8aa40d}", "value": "500" }],
+  "importWarnings": ["Unmapped item variable: ManaReduction", "Unmapped item variable: {2fe0eb3b}", "Unmapped item variable: {878a9a9b}", "Unmapped item variable: {888a9c2e}", "Unmapped item variable: {898a9dc1}", "Unmapped item variable: {8a8a9f54}", "Unmapped item variable: {8b8aa0e7}", "Unmapped item variable: {8c8aa27a}", "Unmapped item variable: {8d8aa40d}"]
 }

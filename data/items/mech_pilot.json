@@ -1,7 +1,17 @@
 {
   "name": "Mech-Pilot",
+  "displayName": "Mech-Pilot",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitMechPilotActivator",
+  "description": "Use the Pilot Selector to choose a Pilot. Combat start: the Pilot jumps into a Mech.<br><br>The Mech has the Traits and items of its Pilot, and gains a percent of the pilot's Attack Damage and max Health. When the Mech dies, the Pilot(s) are ejected with @TFTTrait.TFTEvent5YR_MechPilot.1:EjectedPilotHealthPercent@% of their max Health.<br><br><row>(@TFTTrait.TFTEvent5YR_MechPilot.1:MinUnits@) Mini-Mech: @TFTTrait.TFTEvent5YR_MechPilot.1:MechCombinedADRatio*100@% %i:scaleAD%%i:scaleHealth%</row> <br><row>(@TFTTrait.TFTEvent5YR_MechPilot.2:MinUnits@) Super-Mech: @TFTTrait.TFTEvent5YR_MechPilot.2:MechCombinedADRatio*100@% %i:scaleAD%%i:scaleHealth%. The 2 nearest units to the Pilot also jump into the Mech. </row>",
+  "tooltip": "Use the Pilot Selector to choose a Pilot. Combat start: the Pilot jumps into a Mech.<br><br>The Mech has the Traits and items of its Pilot, and gains a percent of the pilot's Attack Damage and max Health. When the Mech dies, the Pilot(s) are ejected with @TFTTrait.TFTEvent5YR_MechPilot.1:EjectedPilotHealthPercent@% of their max Health.<br><br><row>(@TFTTrait.TFTEvent5YR_MechPilot.1:MinUnits@) Mini-Mech: @TFTTrait.TFTEvent5YR_MechPilot.1:MechCombinedADRatio*100@% %i:scaleAD%%i:scaleHealth%</row> <br><row>(@TFTTrait.TFTEvent5YR_MechPilot.2:MinUnits@) Super-Mech: @TFTTrait.TFTEvent5YR_MechPilot.2:MechCombinedADRatio*100@% %i:scaleAD%%i:scaleHealth%. The 2 nearest units to the Pilot also jump into the Mech. </row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_MechPilot.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

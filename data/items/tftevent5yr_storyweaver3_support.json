@@ -1,0 +1,40 @@
+{
+  "name": "TFTEvent5YR_Storyweaver3_Support",
+  "displayName": "Talisman of Aid",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent5YR_Storyweaver3_Support",
+  "description": "Kayle's damaging attacks and abilities @ResistPercent*100@% <TFTKeyword>Shred</TFTKeyword> and <TFTKeyword>Sunder</TFTKeyword> enemies hit for @Duration@ seconds.",
+  "tooltip": "Kayle's damaging attacks and abilities @ResistPercent*100@% <TFTKeyword>Shred</TFTKeyword> and <TFTKeyword>Sunder</TFTKeyword> enemies hit for @Duration@ seconds.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/5YR/TFTEvent5YR_Storyweaver_Support1.tex",
+  "itemCategory": "SupportItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ResistPercent",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "3" }, { "name": "ResistPercent", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: Duration", "Unmapped item variable: ResistPercent", "Unsupported item effect metadata: Duration", "Unsupported item effect metadata: ResistPercent"]
+}

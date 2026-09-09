@@ -1,7 +1,51 @@
 {
   "name": "Hustler",
+  "displayName": "Hustler",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_HyperRoll",
+  "description": "You no longer gain interest but gain @Gold@ gold at the start of every player combat round. Gain @InitialGold@ gold now.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>",
+  "tooltip": "You no longer gain interest but gain @Gold@ gold at the start of every player combat round. Gain @InitialGold@ gold now.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Hyperroll2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InitialGold",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "3" }, { "name": "InitialGold", "value": "3" }, { "name": "XP", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: InitialGold", "Unmapped non-numeric item variable: XP", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: InitialGold", "Unsupported item effect metadata: XP"]
 }

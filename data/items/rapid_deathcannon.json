@@ -1,7 +1,63 @@
 {
   "name": "Rapid Deathcannon",
+  "displayName": "Rapid Deathcannon",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_RapidFirecannonShadow",
+  "description": "Increases the holder's Attack Range by @HexRangeIncrease@ hex. Additionally, the holder gains %i:scaleAS% <TFTShadowItemBonus>+@BonusAS@% bonus Attack Speed</TFTShadowItemBonus> <TFTShadowItemPenalty>when there are no enemies within @HexRequirement@ hex.</TFTShadowItemPenalty><br><br>The holder's attacks can no longer miss.<br><br>",
+  "tooltip": "Increases the holder's Attack Range by @HexRangeIncrease@ hex. Additionally, the holder gains %i:scaleAS% <TFTShadowItemBonus>+@BonusAS@% bonus Attack Speed</TFTShadowItemBonus> <TFTShadowItemPenalty>when there are no enemies within @HexRequirement@ hex.</TFTShadowItemPenalty><br><br>The holder's attacks can no longer miss.<br><br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Rapid_Fire_Cannon.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Rapid Deathcannon:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAS",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRangeIncrease",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRequirement",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "20" }, { "name": "BonusAS", "value": "60" }, { "name": "HexRangeIncrease", "value": "1" }, { "name": "HexRequirement", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: BonusAS", "Unmapped item variable: HexRangeIncrease", "Unmapped item variable: HexRequirement"]
 }

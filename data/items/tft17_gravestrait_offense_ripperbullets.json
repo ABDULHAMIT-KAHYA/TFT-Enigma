@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_GravesTrait_Offense_RipperBullets",
+  "displayName": "Ripper Bullets",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_RipperBullets",
+  "description": "Attacks reduce enemy Armor and Magic Resistance by @ArmorMRReduction@.",
+  "tooltip": "Attacks reduce enemy Armor and Magic Resistance by @ArmorMRReduction@.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_RipperBullets.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmorMRReduction",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ArmorMRReduction", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: ArmorMRReduction"]
+}

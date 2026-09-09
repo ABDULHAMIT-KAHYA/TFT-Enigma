@@ -1,7 +1,40 @@
 {
   "name": "Tornadoes",
+  "displayName": "Tornadoes",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_AnimaSquad_T3_YasuoQ",
+  "description": "Every @CastPeriod@ seconds, a random Anima Squad champion spawns a whirl of Tornadoes, dealing magic damage.",
+  "tooltip": "Every @CastPeriod@ seconds, a random Anima Squad champion spawns a whirl of Tornadoes, dealing magic damage.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14_AnimaSquadItems/TooltipIcons/TFT14_Icon_AnimaSquad_YasuoQ.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CastPeriod",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": -1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{0f1ca064}",
+      "rawSourceValue": "-1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CastPeriod", "value": "6" }, { "name": "{0f1ca064}", "value": "-1" }],
+  "importWarnings": ["Unmapped item variable: CastPeriod", "Unmapped item variable: {0f1ca064}"]
 }

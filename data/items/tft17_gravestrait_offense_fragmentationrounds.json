@@ -1,0 +1,40 @@
+{
+  "name": "TFT17_GravesTrait_Offense_FragmentationRounds",
+  "displayName": "Fragmentation Rounds",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_FragmentationRounds",
+  "description": "Attacks send @FragmentProjectiles@ fragments to nearby enemies on hit that deal @FragmentDamage*100@% damage.",
+  "tooltip": "Attacks send @FragmentProjectiles@ fragments to nearby enemies on hit that deal @FragmentDamage*100@% damage.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_FragmentationRounds.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "OnHit",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "FragmentDamage",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "OnHit",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "FragmentProjectiles",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "FragmentDamage", "value": "0.15" }, { "name": "FragmentProjectiles", "value": "2" }],
+  "importWarnings": ["Metadata-only item effect: FragmentDamage -> GrantTrait", "Metadata-only item effect: FragmentProjectiles -> GrantTrait", "Unmapped item variable: FragmentDamage", "Unmapped item variable: FragmentProjectiles"]
+}

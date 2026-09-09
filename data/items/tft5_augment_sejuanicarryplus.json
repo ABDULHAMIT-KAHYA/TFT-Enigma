@@ -1,0 +1,30 @@
+{
+  "name": "TFT5_Augment_SejuaniCarryPlus",
+  "displayName": "Night's Wrath+",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_SejuaniCarryPlus",
+  "description": "Gain a 2-star Sejuani. While Frost Armor is active, your strongest Sejuani's attacks deal an additional @ArmorDamageRatio*100@% of Sejuani's Armor as magic damage.",
+  "tooltip": "Gain a 2-star Sejuani. While Frost Armor is active, your strongest Sejuani's attacks deal an additional @ArmorDamageRatio*100@% of Sejuani's Armor as magic damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Nights-Wrath_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1.8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ArmorDamageRatio",
+      "rawSourceValue": "1.8",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "ArmorDamageRatio", "value": "1.8" }],
+  "importWarnings": ["Unmapped item variable: ArmorDamageRatio"]
+}

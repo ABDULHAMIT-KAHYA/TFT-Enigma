@@ -1,7 +1,76 @@
 {
   "name": "Unleashed Toxins II",
+  "displayName": "Unleashed Toxins II",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Crime_Gold_UnleashedToxins",
+  "description": "Attacks grant @ExtraManaOnAttack@ bonus Mana. After casting, launch @NumMissiles@ missiles at the current target that deal @FlatDamage@ magic damage.<br><rules>Recommended users: Silco and Renata Glasc</rules>",
+  "tooltip": "Attacks grant @ExtraManaOnAttack@ bonus Mana. After casting, launch @NumMissiles@ missiles at the current target that deal @FlatDamage@ magic damage.<br><rules>Recommended users: Silco and Renata Glasc</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Gold_UnleashedToxins.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Unleashed Toxins II:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 175,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "FlatDamage",
+      "rawSourceValue": "175",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 175, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumMissiles",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnAttack",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ExtraManaOnAttack",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnAttack",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "25" }, { "name": "ExtraManaOnAttack", "value": "5" }, { "name": "FlatDamage", "value": "175" }, { "name": "Mana", "value": "15" }, { "name": "NumMissiles", "value": "3" }],
+  "importWarnings": ["Metadata-only item effect: AP -> GrantStats", "Metadata-only item effect: ExtraManaOnAttack -> ModifyMana", "Metadata-only item effect: FlatDamage -> DealDamage", "Metadata-only item effect: Mana -> ModifyMana", "Metadata-only item effect: NumMissiles -> DealDamage", "Unmapped item variable: ExtraManaOnAttack", "Unmapped item variable: FlatDamage", "Unmapped item variable: Mana", "Unmapped item variable: NumMissiles"]
 }

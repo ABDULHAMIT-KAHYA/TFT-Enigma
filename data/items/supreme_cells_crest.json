@@ -1,7 +1,17 @@
 {
   "name": "Supreme Cells Crest",
+  "displayName": "Supreme Cells Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SupremeCellsCrest",
+  "description": "Gain a Supreme Cells Emblem.",
+  "tooltip": "Gain a Supreme Cells Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_SupremeCells_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,17 @@
 {
   "name": "Skirmisher Crown",
+  "displayName": "Skirmisher Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_SkirmisherCrown",
+  "description": "Gain a Skirmisher Emblem, a Bloodthirster, and a Olaf.",
+  "tooltip": "Gain a Skirmisher Emblem, a Bloodthirster, and a Olaf.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Skirmisher_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

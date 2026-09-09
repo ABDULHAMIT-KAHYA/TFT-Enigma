@@ -1,7 +1,17 @@
 {
   "name": "Rebel",
+  "displayName": "Rebel",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitRebelActivator",
+  "description": "Your team gains a Shield and Damage Amp for each adjacent ally.<br><br><row>(@TFTTrait.TFTEvent5YR_Rebel.1:MinUnits@) @TFTTrait.TFTEvent5YR_Rebel.1:ShieldAmount@ Shield for @TFTTrait.TFTEvent5YR_Rebel.1:ShieldDuration@ seconds, @TFTTrait.TFTEvent5YR_Rebel.1:DamageAmp@% %i:scaleDA%</row><br><row>(@TFTTrait.TFTEvent5YR_Rebel.2:MinUnits@) @TFTTrait.TFTEvent5YR_Rebel.2:ShieldAmount@ Shield for @TFTTrait.TFTEvent5YR_Rebel.2:ShieldDuration@ seconds, @TFTTrait.TFTEvent5YR_Rebel.2:DamageAmp@% %i:scaleDA%</row>",
+  "tooltip": "Your team gains a Shield and Damage Amp for each adjacent ally.<br><br><row>(@TFTTrait.TFTEvent5YR_Rebel.1:MinUnits@) @TFTTrait.TFTEvent5YR_Rebel.1:ShieldAmount@ Shield for @TFTTrait.TFTEvent5YR_Rebel.1:ShieldDuration@ seconds, @TFTTrait.TFTEvent5YR_Rebel.1:DamageAmp@% %i:scaleDA%</row><br><row>(@TFTTrait.TFTEvent5YR_Rebel.2:MinUnits@) @TFTTrait.TFTEvent5YR_Rebel.2:ShieldAmount@ Shield for @TFTTrait.TFTEvent5YR_Rebel.2:ShieldDuration@ seconds, @TFTTrait.TFTEvent5YR_Rebel.2:DamageAmp@% %i:scaleDA%</row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Rebel.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

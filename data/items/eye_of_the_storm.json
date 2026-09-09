@@ -1,7 +1,40 @@
 {
   "name": "Eye of the Storm",
+  "displayName": "Eye of the Storm",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_TempestEyeOfTheStorm",
+  "description": "The unit in the center of the front row board gains @BonusAP@ Ability Power, increased to @FinalAP@ after Tempest's lightning strikes. Gain a Qiyana.",
+  "tooltip": "The unit in the center of the front row board gains @BonusAP@ Ability Power, increased to @FinalAP@ after Tempest's lightning strikes. Gain a Qiyana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Eye-of-the-Storm-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAP",
+      "rawSourceValue": "45",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 135,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FinalAP",
+      "rawSourceValue": "135",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAP", "value": "45" }, { "name": "FinalAP", "value": "135" }],
+  "importWarnings": ["Unmapped item variable: BonusAP", "Unmapped item variable: FinalAP", "Unsupported item effect metadata: BonusAP", "Unsupported item effect metadata: FinalAP"]
 }

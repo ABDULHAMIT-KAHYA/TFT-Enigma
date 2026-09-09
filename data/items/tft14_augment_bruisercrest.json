@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_BruiserCrest",
+  "displayName": "Bruiser Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_BruiserCrest",
+  "description": "Gain a Bruiser emblem.",
+  "tooltip": "Gain a Bruiser emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BruiserCrest_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

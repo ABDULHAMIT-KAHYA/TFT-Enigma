@@ -1,7 +1,40 @@
 {
   "name": "Reactive Armor",
+  "displayName": "Reactive Armor",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_ReactiveArmor",
+  "description": "Taking damage from enemies grants @ReactiveArmorAndMR@ bonus Armor and Magic Resistances, up to @MaxReactiveArmorAndMR@.",
+  "tooltip": "Taking damage from enemies grants @ReactiveArmorAndMR@ bonus Armor and Magic Resistances, up to @MaxReactiveArmorAndMR@.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_ReactiveArmor.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxReactiveArmorAndMR",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ReactiveArmorAndMR",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxReactiveArmorAndMR", "value": "50" }, { "name": "ReactiveArmorAndMR", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: MaxReactiveArmorAndMR", "Unmapped item variable: ReactiveArmorAndMR"]
 }

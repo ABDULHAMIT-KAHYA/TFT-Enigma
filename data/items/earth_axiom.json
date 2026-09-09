@@ -1,7 +1,62 @@
 {
   "name": "Earth Axiom",
+  "displayName": "Earth Axiom",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_EarthAxiom",
+  "description": "Gain an Earth Hex. Champions within gain @Resistances@ Armor and Magic Resist. At @HealthThreshold*100@% Health, they Stun enemies within @HexRadius@ hexes for @StunDuration@ seconds.",
+  "tooltip": "Gain an Earth Hex. Champions within gain @Resistances@ Armor and Magic Resist. At @HealthThreshold*100@% Health, they Stun enemies within @HexRadius@ hexes for @StunDuration@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/EarthAxiom_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRadius",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Resistances",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunDuration",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthThreshold", "value": "0.5" }, { "name": "HexRadius", "value": "2" }, { "name": "Resistances", "value": "40" }, { "name": "StunDuration", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: HealthThreshold", "Unmapped item variable: HexRadius", "Unmapped item variable: Resistances", "Unmapped item variable: StunDuration"]
 }

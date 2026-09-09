@@ -1,7 +1,40 @@
 {
   "name": "Two Healthy",
+  "displayName": "Two Healthy",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_TwoHealthy",
+  "description": "Your team gains @HealthPerUnit@ Health for each unique @Tier@-cost champion on your board.",
+  "tooltip": "Your team gains @HealthPerUnit@ Health for each unique @Tier@-cost champion on your board.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Two-Healthy-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 80,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPerUnit",
+      "rawSourceValue": "80",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Tier",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthPerUnit", "value": "80" }, { "name": "Tier", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: HealthPerUnit", "Unmapped item variable: Tier"]
 }

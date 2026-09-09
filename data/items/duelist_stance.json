@@ -1,7 +1,73 @@
 {
   "name": "Duelist Stance",
+  "displayName": "Duelist Stance",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Item_DragonFistFighterStance",
+  "description": "<spellPassive>Passive:</spellPassive> On attack, deal <physicalDamage>@ModifiedPassiveCloneDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to a nearby enemy.<br><br><spellActive>Active: </spellActive> Strike swiftly, sending <TFTBonus>@ModifiedNumClones@&nbsp;(%i:scaleAS%)</TFTBonus> afterimages to the nearest @NumEnemies@ enemies. Each deals <physicalDamage>@ModifiedCloneDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage and reduces armor by <TFTBonus>@ModifiedArmorShred@&nbsp;(%i:scaleAP%)</TFTBonus>.",
+  "tooltip": "<spellPassive>Passive:</spellPassive> On attack, deal <physicalDamage>@ModifiedPassiveCloneDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to a nearby enemy.<br><br><spellActive>Active: </spellActive> Strike swiftly, sending <TFTBonus>@ModifiedNumClones@&nbsp;(%i:scaleAS%)</TFTBonus> afterimages to the nearest @NumEnemies@ enemies. Each deals <physicalDamage>@ModifiedCloneDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage and reduces armor by <TFTBonus>@ModifiedArmorShred@&nbsp;(%i:scaleAP%)</TFTBonus>.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set15_DragonFist/TFT15_TraitArmory_DF_Duelist.TFT_Set15.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "OnAttack",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ModifiedArmorShred",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "OnAttack",
+      "value": 65,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ModifiedCloneDamage",
+      "rawSourceValue": "65",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "OnAttack",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ModifiedNumClones",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "OnAttack",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ModifiedPassiveCloneDamage",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "OnAttack",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "NumEnemies",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ModifiedArmorShred", "value": "5" }, { "name": "ModifiedCloneDamage", "value": "65" }, { "name": "ModifiedNumClones", "value": "10" }, { "name": "ModifiedPassiveCloneDamage", "value": "40" }, { "name": "NumEnemies", "value": "2" }],
+  "importWarnings": ["Metadata-only item effect: ModifiedArmorShred -> SummonUnit", "Metadata-only item effect: ModifiedCloneDamage -> SummonUnit", "Metadata-only item effect: ModifiedNumClones -> SummonUnit", "Metadata-only item effect: ModifiedPassiveCloneDamage -> SummonUnit", "Metadata-only item effect: NumEnemies -> SummonUnit", "Unmapped item variable: ModifiedArmorShred", "Unmapped item variable: ModifiedCloneDamage", "Unmapped item variable: ModifiedNumClones", "Unmapped item variable: ModifiedPassiveCloneDamage", "Unmapped item variable: NumEnemies"]
 }

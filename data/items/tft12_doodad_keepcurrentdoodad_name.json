@@ -1,7 +1,51 @@
 {
   "name": "TFT12_Doodad_KeepCurrentDoodad_Name",
+  "displayName": "TFT12_Doodad_KeepCurrentDoodad_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_KeepCurrentDoodad",
+  "description": "TFT12_Doodad_KeepCurrentDoodad_Name",
+  "tooltip": "TFT12_Doodad_KeepCurrentDoodad_Name",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealPercent",
+      "rawSourceValue": "0.6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d91d8ad2}",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealPercent", "value": "0.6" }, { "name": "HealthThreshold", "value": "0.5" }, { "name": "{d91d8ad2}", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: HealPercent", "Unmapped item variable: HealthThreshold", "Unmapped item variable: {d91d8ad2}", "Unsupported item effect metadata: {d91d8ad2}"]
 }

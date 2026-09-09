@@ -1,7 +1,17 @@
 {
   "name": "Supreme Cells Circlet",
+  "displayName": "Supreme Cells Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SupremeCellsCirclet",
+  "description": "Gain a Supreme Cells Emblem and an Akali.",
+  "tooltip": "Gain a Supreme Cells Emblem and an Akali.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_SupremeCells_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

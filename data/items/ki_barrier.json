@@ -1,7 +1,42 @@
 {
   "name": "Ki Barrier",
+  "displayName": "Ki Barrier",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_HiddenTech_KiBarrier",
+  "description": "The holder takes @FlatReducedDamage@ less damage from all sources.",
+  "tooltip": "The holder takes @FlatReducedDamage@ less damage from all sources.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT15/TFT15_HiddenTech_KiBarrier.TFT_Set15.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Ki Barrier:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "FlatReducedDamage",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 25, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "FlatReducedDamage", "value": "25" }, { "name": "Health", "value": "300" }],
+  "importWarnings": ["Unmapped item variable: FlatReducedDamage"]
 }

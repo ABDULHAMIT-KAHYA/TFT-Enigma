@@ -1,7 +1,17 @@
 {
   "name": "Ironclad Crown",
+  "displayName": "Ironclad Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_IroncladCrown",
+  "description": "Gain a Ironclad Emblem, a Gargoyle Stoneplate, and a Nautilus.",
+  "tooltip": "Gain a Ironclad Emblem, a Gargoyle Stoneplate, and a Nautilus.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Ironclad_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

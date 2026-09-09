@@ -1,7 +1,17 @@
 {
   "name": "2 Item Removers",
+  "displayName": "2 Item Removers",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Remover_2",
+  "description": "2 Item Removers",
+  "tooltip": "2 Item Removers",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Consumables/TFT_Item_Consumable_ItemRemover.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

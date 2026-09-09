@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_DarkinWeapon_Aegis",
+  "displayName": "The Darkin Aegis",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_DarkinWeapon_Aegis",
+  "description": "Gain the Darkin Aegis, a powerful Artifact for Tanks that grants the Darkin trait. Darkin heal the Tactician with takedowns.",
+  "tooltip": "Gain the Darkin Aegis, a powerful Artifact for Tanks that grants the Darkin trait. Darkin heal the Tactician with takedowns.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

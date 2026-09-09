@@ -1,7 +1,29 @@
 {
   "name": "Endless Conflagration",
+  "displayName": "Endless Conflagration",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_EndlessConflagration",
+  "description": "Choose a Burn item. Your Burns now stack, increasing the original Burn's damage by @BurnIncreasePerStack*100@%.",
+  "tooltip": "Choose a Burn item. Your Burns now stack, increasing the original Burn's damage by @BurnIncreasePerStack*100@%.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/EndlessConflagration_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BurnIncreasePerStack",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BurnIncreasePerStack", "value": "0.12" }],
+  "importWarnings": ["Unmapped item variable: BurnIncreasePerStack"]
 }

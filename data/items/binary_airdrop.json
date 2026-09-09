@@ -1,7 +1,40 @@
 {
   "name": "Binary Airdrop",
+  "displayName": "Binary Airdrop",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_BinaryAirdrop",
+  "description": "Combat start: Champions holding 2 items gain a random 3rd completed item. Gain @ComponentCount@ random component now.",
+  "tooltip": "Combat start: Champions holding 2 items gain a random 3rd completed item. Gain @ComponentCount@ random component now.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BinaryAirdrop3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ComponentCount",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 99,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "MaxUnits",
+      "rawSourceValue": "99",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ComponentCount", "value": "2" }, { "name": "MaxUnits", "value": "99" }],
+  "importWarnings": ["Unmapped item variable: ComponentCount", "Unmapped item variable: MaxUnits", "Unsupported item effect metadata: ComponentCount", "Unsupported item effect metadata: MaxUnits"]
 }

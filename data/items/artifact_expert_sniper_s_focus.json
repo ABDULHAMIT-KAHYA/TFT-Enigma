@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: Sniper's Focus",
+  "displayName": "Artifact Expert: Sniper's Focus",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_SnipersFocus",
+  "description": "Get a 2* Tristana , a Sniper's Focus, and a B.F. Sword",
+  "tooltip": "Get a 2* Tristana , a Sniper's Focus, and a B.F. Sword",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

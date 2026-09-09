@@ -1,7 +1,17 @@
 {
   "name": "Whispers Crown",
+  "displayName": "Whispers Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_WhispersEmblem2",
+  "description": "Gain a Whispers Emblem, a Titan's Resolve, and a Sylas.",
+  "tooltip": "Gain a Whispers Emblem, a Titan's Resolve, and a Sylas.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Whispers-Crown-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,17 @@
 {
   "name": "Mirage Crest",
+  "displayName": "Mirage Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_MirageEmblem",
+  "description": "Gain a Mirage Emblem and a Nunu.",
+  "tooltip": "Gain a Mirage Emblem and a Nunu.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mirage-Crest-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

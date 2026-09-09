@@ -1,7 +1,17 @@
 {
   "name": "Exotech Crown",
+  "displayName": "Exotech Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_ExotechCrown",
+  "description": "Gain an Exotech Emblem, a Guinsoo's Rageblade, and a Naafiri.",
+  "tooltip": "Gain an Exotech Emblem, a Guinsoo's Rageblade, and a Naafiri.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ExotechCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

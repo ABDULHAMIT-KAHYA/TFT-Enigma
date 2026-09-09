@@ -1,7 +1,51 @@
 {
   "name": "Cruel Pact",
+  "displayName": "Cruel Pact",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_SacrificialPact",
+  "description": "Buying XP costs @HealthCost@ player health instead of 4 gold. Heal @Heal@ player health before each player combat. Gain @Gold@ now.",
+  "tooltip": "Buying XP costs @HealthCost@ player health instead of 4 gold. Heal @Heal@ player health before each player combat. Gain @Gold@ now.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Sacrificial-Pact-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Heal",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthCost",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "6" }, { "name": "Heal", "value": "3" }, { "name": "HealthCost", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: Heal", "Unmapped item variable: HealthCost"]
 }

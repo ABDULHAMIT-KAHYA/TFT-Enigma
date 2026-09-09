@@ -1,9 +1,122 @@
 {
   "name": "Perfected Flesh Ripper",
+  "displayName": "Perfected Flesh Ripper",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Crime_Prismatic_FleshRipper",
+  "description": "After dropping below @HealthThreshold*100@% Health, become briefly Untargetable, restore @PercentHeal*100@% max Health, and gain @EnhancedAD*100@% Attack Damage and @EnhancedOmnivamp*100@% Omnivamp.<br><br><scaleShimmer>Perfected Bonus:</scaleShimmer> Upon dying for the first time, revive with @PrismaticReviveHeal*100@% max Health!<br><br>{{TFT13_ChemBaronOnlyItem}}<br><rules>Recommended users: Smeech and Sevika</rules>",
+  "tooltip": "After dropping below @HealthThreshold*100@% Health, become briefly Untargetable, restore @PercentHeal*100@% max Health, and gain @EnhancedAD*100@% Attack Damage and @EnhancedOmnivamp*100@% Omnivamp.<br><br><scaleShimmer>Perfected Bonus:</scaleShimmer> Upon dying for the first time, revive with @PrismaticReviveHeal*100@% max Health!<br><br>{{TFT13_ChemBaronOnlyItem}}<br><rules>Recommended users: Smeech and Sevika</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Prismatic_FleshRipper.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Perfected Flesh Ripper:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Perfected Flesh Ripper:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.6, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Perfected Flesh Ripper:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.6, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.6",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.6, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.6, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "EnhancedOmnivamp",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:EnhancedOmnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "EnhancedAD",
+      "rawSourceValue": "0.6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentHeal",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PrismaticReviveHeal",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{02712a6d}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{e6cef574}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.6" }, { "name": "CritChance", "value": "60" }, { "name": "EnhancedAD", "value": "0.6" }, { "name": "EnhancedOmnivamp", "value": "0.25" }, { "name": "HealthThreshold", "value": "0.4" }, { "name": "PercentHeal", "value": "1" }, { "name": "PrismaticReviveHeal", "value": "1" }, { "name": "{02712a6d}", "value": "2" }, { "name": "{e6cef574}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: EnhancedAD", "Unmapped item variable: HealthThreshold", "Unmapped item variable: PercentHeal", "Unmapped item variable: PrismaticReviveHeal", "Unmapped item variable: {02712a6d}", "Unmapped item variable: {e6cef574}"]
 }

@@ -4,10 +4,12 @@
 #include <string>
 #include "combat/DamageType.hpp"
 #include "core/GameState.hpp"
+#include "core/UnitId.hpp"
+
 struct ProjectileSpec
 {
-    std::int32_t attackerIndex = -1;
-    std::int32_t targetIndex = -1;
+    UnitId attackerId{};
+    UnitId targetId{};
     DamageType damageType = DamageType::Physical;
     std::int32_t rawDamage = 0;
     bool didCrit = false;
@@ -23,5 +25,5 @@ class ProjectileSystem
 {
 public:
     static void spawnAutoAttackProjectile(GameState& state, const ProjectileSpec& spec);
+    static void resolveAutoAttackHit(GameState& state, const ProjectileSpec& spec);
 };
-

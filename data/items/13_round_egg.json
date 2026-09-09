@@ -1,7 +1,17 @@
 {
   "name": "13-Round Egg",
+  "displayName": "13-Round Egg",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Armory_Egg_Large",
+  "description": "Hatches in 13 rounds (losses count double), granting about 40 Gold worth of loot. ",
+  "tooltip": "Hatches in 13 rounds (losses count double), granting about 40 Gold worth of loot. ",
+  "iconPath": "ASSETS/Characters/TFT14_HackedEgg/HUD/Icons2D/TFT14_HackedEgg_Square.TFT_Set14.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,41 @@
 {
   "name": "Grand Slam",
+  "displayName": "Grand Slam",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_Luchador_GrandSlam",
+  "description": "Luchadors gain @BonusAS*100@% Attack Speed. When Luchador is active, Luchadors leap into battle at combat start. Luchador leaps deal @PercentBaseAD*100@% of their Basic Attack Damage. Gain a Dr. Mundo.",
+  "tooltip": "Luchadors gain @BonusAS*100@% Attack Speed. When Luchador is active, Luchadors leap into battle at combat start. Luchador leaps deal @PercentBaseAD*100@% of their Basic Attack Damage. Gain a Dr. Mundo.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GrandSlam_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusAS",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "PercentBaseAD",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAS", "value": "0.1" }, { "name": "PercentBaseAD", "value": "3" }],
+  "importWarnings": ["Metadata-only item effect: BonusAS -> DealDamage", "Metadata-only item effect: PercentBaseAD -> DealDamage", "Unmapped item variable: BonusAS", "Unmapped item variable: PercentBaseAD"]
 }

@@ -1,7 +1,29 @@
 {
   "name": "Crumbling Sands",
+  "displayName": "Crumbling Sands",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_XerathZap_CrumblingSands",
+  "description": "Next combat: Stun all enemies for @StunDuration@ seconds.",
+  "tooltip": "Next combat: Stun all enemies for @StunDuration@ seconds.",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_XerathWand_Self.TFT_Set12.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunDuration",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "StunDuration", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: StunDuration", "Unsupported item effect metadata: StunDuration"]
 }

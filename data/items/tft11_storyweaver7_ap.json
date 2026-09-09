@@ -1,0 +1,30 @@
+{
+  "name": "TFT11_Storyweaver7_AP",
+  "displayName": "Tome of Power",
+  "isPlaceholder": false,
+  "sourceId": "TFT11_Storyweaver7_AP",
+  "description": "Kayle deals @DamageAmpPercent*100@% more damage. When she casts, she fires two waves.",
+  "tooltip": "Kayle deals @DamageAmpPercent*100@% more damage. When she casts, she fires two waves.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT11_StoryweaverItems/TFT11_Storyweaver_AbilityPower3.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+    { "name": "Item:TFT11_Storyweaver7_AP:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmpPercent",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmpPercent", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmpPercent", "value": "0.15" }],
+  "importWarnings": []
+}

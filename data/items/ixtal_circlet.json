@@ -1,7 +1,17 @@
 {
   "name": "Ixtal Circlet",
+  "displayName": "Ixtal Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_IxtalCirclet",
+  "description": "Get an Ixtal Emblem, a Giant's Belt, and...a Lesser Duplicator!?",
+  "tooltip": "Get an Ixtal Emblem, a Giant's Belt, and...a Lesser Duplicator!?",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

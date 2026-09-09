@@ -1,7 +1,52 @@
 {
   "name": "Beast's Den",
+  "displayName": "Beast's Den",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_ShapeshifterBeastsDen",
+  "description": "Units that start combat next to Shapeshifters gain @AttackSpeed*100@% Attack Speed and Movement Speed. Shapeshifters always gain this bonus. Gain a Gnar.",
+  "tooltip": "Units that start combat next to Shapeshifters gain @AttackSpeed*100@% Attack Speed and Movement Speed. Shapeshifters always gain this bonus. Gain a Gnar.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Beasts-Den-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Beast's Den:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 400,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MoveSpeed",
+      "rawSourceValue": "400",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{53af684f}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.25" }, { "name": "MoveSpeed", "value": "400" }, { "name": "{53af684f}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: MoveSpeed", "Unmapped item variable: {53af684f}", "Unsupported item effect metadata: MoveSpeed", "Unsupported item effect metadata: {53af684f}"]
 }

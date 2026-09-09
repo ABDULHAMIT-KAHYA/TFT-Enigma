@@ -1,7 +1,17 @@
 {
   "name": "Cannoneer Heart",
+  "displayName": "Cannoneer Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_CannoneerTrait",
+  "description": "Your team counts as having 1 additional Cannoneer. Gain an Aphelios.",
+  "tooltip": "Your team counts as having 1 additional Cannoneer. Gain an Aphelios.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Canoneer-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

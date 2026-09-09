@@ -1,7 +1,52 @@
 {
   "name": "Wild Growth",
+  "displayName": "Wild Growth",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Augment_Yordle_WildGrowth",
+  "description": "3-star Yordles become massive, moving slower but gaining @Health*100@% Health and @ADAP@% Attack Damage and Ability Power. Gain a Rumble and Lulu.",
+  "tooltip": "3-star Yordles become massive, moving slower but gaining @Health*100@% Health and @ADAP@% Attack Damage and Ability Power. Gain a Rumble and Lulu.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WildGrowth_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Wild Growth:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ADAP",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{ee60605d}",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADAP", "value": "35" }, { "name": "Health", "value": "0.15" }, { "name": "{ee60605d}", "value": "0.4" }],
+  "importWarnings": ["Unmapped item variable: ADAP", "Unmapped item variable: {ee60605d}"]
 }

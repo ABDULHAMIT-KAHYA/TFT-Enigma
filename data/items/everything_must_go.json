@@ -1,7 +1,40 @@
 {
   "name": "Everything Must Go!",
+  "displayName": "Everything Must Go!",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_Common_EverythingMustGo",
+  "description": "Your champions buy and sell for @cost@ gold. Gain @gold@ gold.",
+  "tooltip": "Your champions buy and sell for @cost@ gold. Gain @gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/EverythingMustGo_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Cost",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Cost", "value": "null" }, { "name": "Gold", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped non-numeric item variable: Cost", "Unsupported item effect metadata: Cost", "Unsupported item effect metadata: Gold"]
 }

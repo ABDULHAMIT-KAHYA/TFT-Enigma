@@ -1,9 +1,67 @@
 {
   "name": "Pulse Stabilizer",
+  "displayName": "Pulse Stabilizer",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_JhinCyberneticItem",
+  "description": "Execute enemies below <TFTBonus>@ExecuteThresholdPercent*100@%</TFTBonus> Health. Abilities can critically strike. If the holder's abilities can already critically strike, gain @RedundantCritDamage*100@% Critical Strike Damage instead.<br><br><TFTPassive>Total Executions This Round: @TFTUnitProperty.item:TFT14_Trait_Cybernetic_JhinItem_TotalExecutions@</TFTPassive><br><br><rules>Recommended users: Jhin and Zeri</rules>",
+  "tooltip": "Execute enemies below <TFTBonus>@ExecuteThresholdPercent*100@%</TFTBonus> Health. Abilities can critically strike. If the holder's abilities can already critically strike, gain @RedundantCritDamage*100@% Critical Strike Damage instead.<br><br><TFTPassive>Total Executions This Round: @TFTUnitProperty.item:TFT14_Trait_Cybernetic_JhinItem_TotalExecutions@</TFTPassive><br><br><rules>Recommended users: Jhin and Zeri</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14/TFT14_Item_JhinCyberneticItem.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Pulse Stabilizer:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Pulse Stabilizer:CritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Pulse Stabilizer:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RedundantCritDamage",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:RedundantCritDamage", "effectType": "CritDamageBonus", "crowdControlType": "None", "affectedStat": "CritDamage", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ExecuteThresholdPercent",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.3" }, { "name": "CritChance", "value": "30" }, { "name": "ExecuteThresholdPercent", "value": "0.12" }, { "name": "RedundantCritDamage", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: ExecuteThresholdPercent"]
 }

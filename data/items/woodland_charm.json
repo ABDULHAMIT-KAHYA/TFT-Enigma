@@ -1,7 +1,41 @@
 {
   "name": "Woodland Charm",
+  "displayName": "Woodland Charm",
+  "isPlaceholder": false,
+  "sourceId": "TFT6_Augment_WoodlandCharm",
+  "description": "Your highest Health champion is cloned. The clone has @CloneHealth*100@% bonus Health and @AttackSpeed*100@% bonus Attack Speed but cannot equip items.",
+  "tooltip": "Your highest Health champion is cloned. The clone has @CloneHealth*100@% bonus Health and @AttackSpeed*100@% bonus Attack Speed but cannot equip items.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WoodlandCharm3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Woodland Charm:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CloneHealth",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.3" }, { "name": "CloneHealth", "value": "0.25" }],
+  "importWarnings": ["Unmapped item variable: CloneHealth"]
 }

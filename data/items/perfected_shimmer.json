@@ -1,7 +1,29 @@
 {
   "name": "Perfected Shimmer",
+  "displayName": "Perfected Shimmer",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Crime_Consumable_PerfectedShimmer",
+  "description": "Use on a Chem-Baron to restore @PlayerHeal@ player health.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Use on a Chem-Baron to restore @PlayerHeal@ player health.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Consumable_PerfectedShimmer.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PlayerHeal",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PlayerHeal", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: PlayerHeal"]
 }

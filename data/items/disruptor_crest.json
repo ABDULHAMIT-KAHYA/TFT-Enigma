@@ -1,7 +1,17 @@
 {
   "name": "Disruptor Crest",
+  "displayName": "Disruptor Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_DisruptorCrest",
+  "description": "Get a DIsruptor Emblem.",
+  "tooltip": "Get a DIsruptor Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,96 @@
+{
+  "name": "TFT17_Item_PsyOps_SympatheticImplantMod",
+  "displayName": "Sympathetic Implant",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Item_PsyOps_SympatheticImplantMod",
+  "description": "Every @Interval@ seconds, gain:<br><br><spellPassive>Magic Champions:</spellPassive> @ManaRegenOverTime@ Mana Regen.<br><spellPassive>Attack Champions:</spellPassive> @ASOverTime*100@% Attack Speed.<br><br><rules>Recommended users: Sona and Viktor.</rules>",
+  "tooltip": "Every @Interval@ seconds, gain:<br><br><spellPassive>Magic Champions:</spellPassive> @ManaRegenOverTime@ Mana Regen.<br><spellPassive>Attack Champions:</spellPassive> @ASOverTime*100@% Attack Speed.<br><br><rules>Recommended users: Sona and Viktor.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_PsyOps_Mod_SympatheticImplantMod.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT17_Item_PsyOps_SympatheticImplantMod:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TrueDamageConversion",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegenOverTime",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Interval",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{1543aa48}",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a92d4a76}",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "15" }, { "name": "Interval", "value": "5" }, { "name": "ManaRegen", "value": "2" }, { "name": "ManaRegenOverTime", "value": "1" }, { "name": "TrueDamageConversion", "value": "null" }, { "name": "{1543aa48}", "value": "0.1" }, { "name": "{a92d4a76}", "value": "0.15" }],
+  "importWarnings": ["Unmapped item variable: Interval", "Unmapped item variable: ManaRegen", "Unmapped item variable: ManaRegenOverTime", "Unmapped item variable: {1543aa48}", "Unmapped item variable: {a92d4a76}", "Unmapped non-numeric item variable: TrueDamageConversion", "Unsupported item effect metadata: Interval", "Unsupported item effect metadata: {1543aa48}", "Unsupported item effect metadata: {a92d4a76}"]
+}

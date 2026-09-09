@@ -1,7 +1,17 @@
 {
   "name": "Arcanist Circlet",
+  "displayName": "Arcanist Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArcanistCirclet",
+  "description": "Get an Arcanist Emblem, a Tear of the Goddess, and a Lux.",
+  "tooltip": "Get an Arcanist Emblem, a Tear of the Goddess, and a Lux.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

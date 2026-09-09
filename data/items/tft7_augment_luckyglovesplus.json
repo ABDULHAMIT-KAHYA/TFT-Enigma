@@ -1,0 +1,40 @@
+{
+  "name": "TFT7_Augment_LuckyGlovesPlus",
+  "displayName": "Lucky Gloves+",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_LuckyGlovesPlus",
+  "description": "Thief's Gloves will always give your champions recommended items. Gain @NumGloves@ Sparring Gloves now, then another after @DelayTurns@ player combats.",
+  "tooltip": "Thief's Gloves will always give your champions recommended items. Gain @NumGloves@ Sparring Gloves now, then another after @DelayTurns@ player combats.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Lucky-Gloves-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DelayTurns",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumGloves",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DelayTurns", "value": "4" }, { "name": "NumGloves", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: DelayTurns", "Unmapped item variable: NumGloves", "Unsupported item effect metadata: DelayTurns", "Unsupported item effect metadata: NumGloves"]
+}

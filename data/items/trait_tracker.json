@@ -1,7 +1,40 @@
 {
   "name": "Trait Tracker",
+  "displayName": "Trait Tracker",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TraitTracker",
+  "description": "The first time you activate @NumTraits@ non-unique traits for 1 combat, gain @NumEmblems@ random emblems.",
+  "tooltip": "The first time you activate @NumTraits@ non-unique traits for 1 combat, gain @NumEmblems@ random emblems.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TraitTracker_II.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumEmblems",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumTraits",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumEmblems", "value": "5" }, { "name": "NumTraits", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: NumEmblems", "Unmapped item variable: NumTraits"]
 }

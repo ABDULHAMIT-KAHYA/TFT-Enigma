@@ -1,7 +1,29 @@
 {
   "name": "Magnetic Remover <rules>(4 uses left!)</rules>",
+  "displayName": "Magnetic Remover <rules>(4 uses left!)</rules>",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Consumable_ItemRemover_UsesLeft4",
+  "description": "Use on a champion to unequip all items. <br><br><tftitemrules> [Cannot be used on champions in combat.]<br>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Use on a champion to unequip all items. <br><br><tftitemrules> [Cannot be used on champions in combat.]<br>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Consumable_ItemRemover_UsesLeft4.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{27d80030}",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{27d80030}", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: {27d80030}", "Unsupported item effect metadata: {27d80030}"]
 }

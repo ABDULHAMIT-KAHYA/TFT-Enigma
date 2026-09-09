@@ -1,7 +1,17 @@
 {
   "name": "Street Demon Crown",
+  "displayName": "Street Demon Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_StreetDemonCrown",
+  "description": "Gain a Street Demon Emblem, a Guardbreaker, and an Ekko.",
+  "tooltip": "Gain a Street Demon Emblem, a Guardbreaker, and an Ekko.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/StreetDemonCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

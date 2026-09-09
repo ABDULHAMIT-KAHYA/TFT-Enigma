@@ -1,0 +1,17 @@
+{
+  "name": "TFT5_Augment_CannoneerCrest",
+  "displayName": "Cannoneer Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_CannoneerCrest",
+  "description": "Gain a Cannoneer Emblem and a Tristana.",
+  "tooltip": "Gain a Cannoneer Emblem and a Tristana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Cannoneer_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,29 @@
 {
   "name": "Clear Mind",
+  "displayName": "Clear Mind",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_ClearMind",
+  "description": "If there are no champions on your bench at the end of player combat, gain @XP@ XP.",
+  "tooltip": "If there are no champions on your bench at the end of player combat, gain @XP@ XP.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ClearMind2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "XP", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: XP", "Unsupported item effect metadata: XP"]
 }

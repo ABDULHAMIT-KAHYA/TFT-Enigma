@@ -1,7 +1,17 @@
 {
   "name": "Darkflight Heart",
+  "displayName": "Darkflight Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DarkflightTrait",
+  "description": "Your team counts as having 1 additional Darkflight. Gain an Aphelios.",
+  "tooltip": "Your team counts as having 1 additional Darkflight. Gain an Aphelios.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DarkflightHeart-1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

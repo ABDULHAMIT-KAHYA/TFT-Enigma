@@ -1,7 +1,17 @@
 {
   "name": "4 components",
+  "displayName": "4 components",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_RandomComponent_4",
+  "description": "4 components",
+  "tooltip": "4 components",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

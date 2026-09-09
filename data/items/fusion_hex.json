@@ -1,7 +1,40 @@
 {
   "name": "Fusion Hex",
+  "displayName": "Fusion Hex",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_HiddenTech_FusionHex",
+  "description": "<spellPassive>Combat Start:</spellPassive> Merge with the nearest ally gaining @StatPercent*100@% of their Health, Attack Damage, Ability Power.",
+  "tooltip": "<spellPassive>Combat Start:</spellPassive> Merge with the nearest ally gaining @StatPercent*100@% of their Health, Attack Damage, Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT15/TFT15_HiddenTech_FusionDance.TFT_Set15.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Health",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "StatPercent",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "null" }, { "name": "StatPercent", "value": "0.5" }],
+  "importWarnings": ["Metadata-only item effect: Health -> Heal", "Metadata-only item effect: StatPercent -> Heal", "Unmapped item variable: StatPercent", "Unmapped non-numeric item variable: Health"]
 }

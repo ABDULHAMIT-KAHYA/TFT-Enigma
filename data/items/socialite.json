@@ -1,7 +1,17 @@
 {
   "name": "Socialite",
+  "displayName": "Socialite",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitSocialiteActivator",
+  "description": "Gain a spotlight hex.<br>Combat start: the unit standing in the spotlight gains bonus stats.<br><br><row>(@TFTTrait.TFTEvent5YR_Socialite.1:MinUnits@) @TFTTrait.TFTEvent5YR_Socialite.1:DamagePercent*100@% %i:scaleDA% and @TFTTrait.TFTEvent5YR_Socialite.1:ManaPerSecond@&nbsp;%i:scaleMana% per second.</row><br><row>(@TFTTrait.TFTEvent5YR_Socialite.2:MinUnits@) @TFTTrait.TFTEvent5YR_Socialite.2:DamagePercent*100@% %i:scaleDA%, @TFTTrait.TFTEvent5YR_Socialite.2:ManaPerSecond@&nbsp;%i:scaleMana% per second, and @TFTTrait.TFTEvent5YR_Socialite.2:OmnivampPercent*100@% %i:scaleSV%. Gain another spotlight hex.</row>",
+  "tooltip": "Gain a spotlight hex.<br>Combat start: the unit standing in the spotlight gains bonus stats.<br><br><row>(@TFTTrait.TFTEvent5YR_Socialite.1:MinUnits@) @TFTTrait.TFTEvent5YR_Socialite.1:DamagePercent*100@% %i:scaleDA% and @TFTTrait.TFTEvent5YR_Socialite.1:ManaPerSecond@&nbsp;%i:scaleMana% per second.</row><br><row>(@TFTTrait.TFTEvent5YR_Socialite.2:MinUnits@) @TFTTrait.TFTEvent5YR_Socialite.2:DamagePercent*100@% %i:scaleDA%, @TFTTrait.TFTEvent5YR_Socialite.2:ManaPerSecond@&nbsp;%i:scaleMana% per second, and @TFTTrait.TFTEvent5YR_Socialite.2:OmnivampPercent*100@% %i:scaleSV%. Gain another spotlight hex.</row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Socialite.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

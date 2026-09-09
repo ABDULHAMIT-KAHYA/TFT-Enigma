@@ -1,7 +1,51 @@
 {
   "name": "Forward Thinking",
+  "displayName": "Forward Thinking",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ForwardThinking",
+  "description": "Lose all your gold. After @Rounds@ player combats, gain back the original amount and another @BaseGold@ gold.<br><br>Incoming Gold: @TFTUnitProperty.item:TFT_Augment_ForwardThinkingGold@",
+  "tooltip": "Lose all your gold. After @Rounds@ player combats, gain back the original amount and another @BaseGold@ gold.<br><br>Incoming Gold: @TFTUnitProperty.item:TFT_Augment_ForwardThinkingGold@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ForwardThinking_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 70,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseGold",
+      "rawSourceValue": "70",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "rounds",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{8f9a1368}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseGold", "value": "70" }, { "name": "rounds", "value": "5" }, { "name": "{8f9a1368}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: BaseGold", "Unmapped item variable: rounds", "Unmapped item variable: {8f9a1368}", "Unsupported item effect metadata: BaseGold", "Unsupported item effect metadata: rounds", "Unsupported item effect metadata: {8f9a1368}"]
 }

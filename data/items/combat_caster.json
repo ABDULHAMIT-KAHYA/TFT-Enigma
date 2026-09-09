@@ -1,7 +1,77 @@
 {
   "name": "Combat Caster",
+  "displayName": "Combat Caster",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_CombatCaster",
+  "description": "Your team gains @shieldamount1@-@shieldamount4@ Shield for @Duration@ seconds after casting their Ability. The Shield amount scales with round of the game.",
+  "tooltip": "Your team gains @shieldamount1@-@shieldamount4@ Shield for @Duration@ seconds after casting their Ability. The Shield amount scales with round of the game.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Combat-Caster-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "OnCast",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCast",
+      "value": 80,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldAmount1",
+      "rawSourceValue": "80",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldAmount1", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 80, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCast",
+      "value": 105,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldAmount2",
+      "rawSourceValue": "105",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldAmount2", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 105, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCast",
+      "value": 135,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldAmount3",
+      "rawSourceValue": "135",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldAmount3", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 135, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCast",
+      "value": 160,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldAmount4",
+      "rawSourceValue": "160",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldAmount4", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 160, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "3" }, { "name": "ShieldAmount1", "value": "80" }, { "name": "ShieldAmount2", "value": "105" }, { "name": "ShieldAmount3", "value": "135" }, { "name": "ShieldAmount4", "value": "160" }],
+  "importWarnings": ["Metadata-only item effect: Duration -> Shield", "Metadata-only item effect: ShieldAmount1 -> Shield", "Metadata-only item effect: ShieldAmount2 -> Shield", "Metadata-only item effect: ShieldAmount3 -> Shield", "Metadata-only item effect: ShieldAmount4 -> Shield", "Unmapped item variable: Duration", "Unmapped item variable: ShieldAmount1", "Unmapped item variable: ShieldAmount2", "Unmapped item variable: ShieldAmount3", "Unmapped item variable: ShieldAmount4"]
 }

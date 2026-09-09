@@ -1,8 +1,139 @@
 {
   "name": "Lich Bane",
+  "displayName": "Lich Bane",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_Artifact_LichBane",
+  "description": "The holder's first attack after each Ability cast deals @TFTUnitProperty.item:TFT_Item_Artifact_LichBane_Damage@ bonus magic damage.<br><br><tftitemrules>Damage increases based on Stage.</tftitemrules>",
+  "tooltip": "The holder's first attack after each Ability cast deals @TFTUnitProperty.item:TFT_Item_Artifact_LichBane_Damage@ bonus magic damage.<br><br><tftitemrules>Damage increases based on Stage.</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Ornn_Items/TFT_Item_Artifact_LichBane.tex",
+  "itemCategory": "Artifact",
   "passiveStats": [
     { "name": "Item:Lich Bane:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Lich Bane:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 700,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{9b6d43b2}",
+      "rawSourceValue": "700",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 700, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 700,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{9d6d46d8}",
+      "rawSourceValue": "700",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 700, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 700,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{9e6d486b}",
+      "rawSourceValue": "700",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 700, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{9f6d49fe}",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 500, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 600,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{a06d4b91}",
+      "rawSourceValue": "600",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 600, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{a16d4d24}",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 250, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 350,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{a26d4eb7}",
+      "rawSourceValue": "350",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 350, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{a46d51dd}",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 250, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 55,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "55",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "55" }, { "name": "AS", "value": "10" }, { "name": "{9b6d43b2}", "value": "700" }, { "name": "{9d6d46d8}", "value": "700" }, { "name": "{9e6d486b}", "value": "700" }, { "name": "{9f6d49fe}", "value": "500" }, { "name": "{a06d4b91}", "value": "600" }, { "name": "{a16d4d24}", "value": "250" }, { "name": "{a26d4eb7}", "value": "350" }, { "name": "{a46d51dd}", "value": "250" }],
+  "importWarnings": ["Unmapped item variable: {9b6d43b2}", "Unmapped item variable: {9d6d46d8}", "Unmapped item variable: {9e6d486b}", "Unmapped item variable: {9f6d49fe}", "Unmapped item variable: {a06d4b91}", "Unmapped item variable: {a16d4d24}", "Unmapped item variable: {a26d4eb7}", "Unmapped item variable: {a46d51dd}"]
 }

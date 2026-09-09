@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_InvokerCrown",
+  "displayName": "Invoker Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_InvokerCrown",
+  "description": "Get an Invoker Emblem, a Milio, and an Archangel's Staff.",
+  "tooltip": "Get an Invoker Emblem, a Milio, and an Archangel's Staff.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

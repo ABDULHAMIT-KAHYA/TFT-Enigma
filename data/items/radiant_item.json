@@ -1,7 +1,17 @@
 {
   "name": "Radiant Item",
+  "displayName": "Radiant Item",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_RandomRadiantItem",
+  "description": "Radiant Item",
+  "tooltip": "Radiant Item",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_RandomItem_Radiant.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

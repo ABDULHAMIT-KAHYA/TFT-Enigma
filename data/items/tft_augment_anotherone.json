@@ -1,0 +1,51 @@
+{
+  "name": "TFT_Augment_AnotherOne",
+  "displayName": "Another One!",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_AnotherOne",
+  "description": "The next completed item you make grants an additional copy of it. Gain @Gold@ gold now.",
+  "tooltip": "The next completed item you make grants an additional copy of it. Gain @Gold@ gold now.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AnotherOne_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "5" }, { "name": "NumComponents", "value": "null" }, { "name": "NumItems", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumItems", "Unmapped non-numeric item variable: NumComponents", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumComponents", "Unsupported item effect metadata: NumItems"]
+}

@@ -1,7 +1,29 @@
 {
   "name": "Bandle Bounty II",
+  "displayName": "Bandle Bounty II",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_BandleBountyPlus",
+  "description": "For every Yordle you've unlocked or unlock, gain @Gold@ gold. Reach level 10 and field 10 unique Yordles to reveal the Bandle Path's secret. Gain a Tristana and Teemo.",
+  "tooltip": "For every Yordle you've unlocked or unlock, gain @Gold@ gold. Reach level 10 and field 10 unique Yordles to reveal the Bandle Path's secret. Gain a Tristana and Teemo.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BandleBountyPlus_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

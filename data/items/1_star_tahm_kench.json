@@ -1,7 +1,29 @@
 {
   "name": "1-star Tahm Kench",
+  "displayName": "1-star Tahm Kench",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_ChampionItem_TahmKench",
+  "description": "Gain a 1-star Tahm Kench",
+  "tooltip": "Gain a 1-star Tahm Kench",
+  "iconPath": "ASSETS/Characters/TFT16_TahmKench/HUD/TFT16_TahmKench_Square.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Amount",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Amount", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Amount", "Unsupported item effect metadata: Amount"]
 }

@@ -1,7 +1,63 @@
 {
   "name": "tft_item_name_Railgun",
+  "displayName": "tft_item_name_Railgun",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Mecha_Railgun",
+  "description": "tft_item_description_Railgun",
+  "tooltip": "tft_item_description_Railgun",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT15/TFT15_Railgun.TFT_Set15.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:tft_item_name_Railgun:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.45",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRadius",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{2ef1b400}",
+      "rawSourceValue": "1.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{f483ae27}",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.45" }, { "name": "HexRadius", "value": "2" }, { "name": "{2ef1b400}", "value": "1.2" }, { "name": "{f483ae27}", "value": "0.25" }],
+  "importWarnings": ["Unmapped item variable: HexRadius", "Unmapped item variable: {2ef1b400}", "Unmapped item variable: {f483ae27}", "Unsupported item effect metadata: HexRadius", "Unsupported item effect metadata: {2ef1b400}", "Unsupported item effect metadata: {f483ae27}"]
 }

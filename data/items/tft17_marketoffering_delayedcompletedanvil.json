@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_DelayedCompletedAnvil",
+  "displayName": "Completed Item Anvil",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_DelayedCompletedAnvil",
+  "description": "In @Delay@ rounds, gain a Completed Item Anvil.",
+  "tooltip": "In @Delay@ rounds, gain a Completed Item Anvil.",
+  "iconPath": "ASSETS/Characters/TFT_ArmoryKeyCompleted/HUD/Icons2D/TFT_ArmoryKeyCompleted_Square.tex",
+  "itemCategory": "Anvil",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Delay", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: Delay", "Unsupported item effect metadata: Delay"]
+}

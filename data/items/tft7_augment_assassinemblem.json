@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Augment_AssassinEmblem",
+  "displayName": "Assassin Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_AssassinEmblem",
+  "description": "Gain an Assassin Emblem and a Qiyana.",
+  "tooltip": "Gain an Assassin Emblem and a Qiyana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AssassinEmblem2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

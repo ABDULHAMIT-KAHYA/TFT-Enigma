@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_XerathZap_TheLovers",
+  "displayName": "The Lovers",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_XerathZap_TheLovers",
+  "description": "Gain a 5-cost champion and a 2* 2-cost champion that share traits.",
+  "tooltip": "Gain a 5-cost champion and a 2* 2-cost champion that share traits.",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_XerathWand_Self.TFT_Set12.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

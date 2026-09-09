@@ -9,6 +9,7 @@
 #include "combat/StatSystem.hpp"
 #include "combat/TraitSystem.hpp"
 #include "combat/ItemSystem.hpp"
+#include "combat/CombatEvent.hpp"
 #include <algorithm>
 #include <cmath>
 #include <cstdint>
@@ -388,42 +389,17 @@ namespace AbilitySystem
 
             if (effect.delayMs > 0)
             {
-                const std::int32_t executeAt = state.timeMs() + effect.delayMs;
-                const AbilityEffect effectCopy = effect;
-
-                Unit* ownerPtr = &owner;
-                Unit* primaryPtr = primaryTarget;
-
-                std::string eventName;
-                if (!effect.name.empty())
-                {
-                    eventName = effect.name;
-                }
-                else
-                {
-                    eventName = ability.name;
-                }
-
-                state.scheduleCombatEvent(
-                    executeAt,
-                    [ownerPtr, primaryPtr, &state, effectCopy]()
-                    {
-                        if (!ownerPtr || !ownerPtr->isAlive())
-                        {
-                            return;
-                        }
-                        const Ability& abilityAtExecution = ownerPtr->getAbility();
-                        executeEffectNow(
-                            state,
-                            *ownerPtr,
-                            primaryPtr,
-                            effectCopy.trigger,
-                            abilityAtExecution,
-                            effectCopy
-                        );
-                    },
-                    eventName
-                );
+                CombatEvent event{};
+                event.type = CombatEventType::AbilityEffect;
+                event.executeAtMs = state.timeMs() + effect.delayMs;
+                event.sourceId = owner.id();
+                event.targetId = primaryTarget ? primaryTarget->id() : UnitId{};
+                event.trigger = trigger;
+                event.targetType = ability.targetType;
+                event.abilityEffect = effect;
+                event.policy = CombatEventTargetPolicy::RequireAliveSource;
+                event.debugName = effect.name.empty() ? ability.name : effect.name;
+                state.scheduleCombatEvent(event);
             }
             else
             {
@@ -432,6 +408,35 @@ namespace AbilitySystem
         }
     }
 
+    void executeEffectEvent(GameState& state, const CombatEvent& event)
+    {
+        Unit* owner = state.findUnit(event.sourceId);
+        if (!owner || !owner->isAlive())
+        {
+            state.logger().combat("AbilityEffect fizzle: source missing or dead");
+            return;
+        }
+
+        Unit* primary = nullptr;
+        if (isValid(event.targetId))
+        {
+            primary = state.findUnit(event.targetId);
+            if (!primary && event.targetType != TargetType::Self)
+            {
+                state.logger().combat("AbilityEffect fizzle: target missing");
+                return;
+            }
+        }
+
+        if (primary && !primary->isAlive() && event.targetType != TargetType::Self)
+        {
+            state.logger().combat("AbilityEffect fizzle: target dead");
+            return;
+        }
+
+        const Ability& abilityAtExecution = owner->getAbility();
+        executeEffectNow(state, *owner, primary, event.trigger, abilityAtExecution, event.abilityEffect);
+    }
     bool tryCast(GameState& state,
                  Unit& caster,
                  Unit& primaryTarget)
@@ -465,3 +470,4 @@ namespace AbilitySystem
         return true;
     }
 }
+

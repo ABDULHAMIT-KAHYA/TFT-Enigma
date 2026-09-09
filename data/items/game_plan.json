@@ -1,7 +1,51 @@
 {
   "name": "Game Plan",
+  "displayName": "Game Plan",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_Strategist_GamePlan",
+  "description": "Mark 1 hex per Strategist fielded. Allies standing in marked hexes gain @FlatHealth@ Health and @BonusDamage*100@% Damage Amp, Strategists gain @PercentIncrease*100@% more. Gain a Janna and Ziggs.",
+  "tooltip": "Mark 1 hex per Strategist fielded. Allies standing in marked hexes gain @FlatHealth@ Health and @BonusDamage*100@% Damage Amp, Strategists gain @PercentIncrease*100@% more. Gain a Janna and Ziggs.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GamePlan_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusDamage",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FlatHealth",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentIncrease",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusDamage", "value": "0.1" }, { "name": "FlatHealth", "value": "150" }, { "name": "PercentIncrease", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: BonusDamage", "Unmapped item variable: FlatHealth", "Unmapped item variable: PercentIncrease"]
 }

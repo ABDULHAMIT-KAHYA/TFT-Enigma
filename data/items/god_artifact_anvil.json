@@ -1,7 +1,17 @@
 {
   "name": "God Artifact Anvil",
+  "displayName": "God Artifact Anvil",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_ArtifactAnvil",
+  "description": "Drag this to the Shop to open an Armory full of God Artifact items! You will have 30 seconds to choose.",
+  "tooltip": "Drag this to the Shop to open an Armory full of God Artifact items! You will have 30 seconds to choose.",
+  "iconPath": "ASSETS/Characters/TFT_ArmoryKeyOrnn/HUD/TFT_ArmoryKeyOrnn_Square.tex",
+  "itemCategory": "Anvil",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

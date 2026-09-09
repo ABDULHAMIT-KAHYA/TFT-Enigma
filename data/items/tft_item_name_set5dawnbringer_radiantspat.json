@@ -1,7 +1,30 @@
 {
   "name": "tft_item_name_Set5Dawnbringer_RadiantSpat",
+  "displayName": "tft_item_name_Set5Dawnbringer_RadiantSpat",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_DawnbringerSpatulaItem_Radiant",
+  "description": "tft_item_description_Set5Dawnbringer_RadiantSpat",
+  "tooltip": "tft_item_description_Set5Dawnbringer_RadiantSpat",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set5/Dawnbringer_Radiant.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:tft_item_name_Set5Dawnbringer_RadiantSpat:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "150" }],
+  "importWarnings": []
 }

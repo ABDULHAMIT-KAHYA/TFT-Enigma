@@ -1,7 +1,30 @@
 {
   "name": "Pyromaniac",
+  "displayName": "Pyromaniac",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Pyromaniac",
+  "description": "Gain a Red Buff. Your Burns deal @BurnIncrease*100@% increased damage.",
+  "tooltip": "Gain a Red Buff. Your Burns deal @BurnIncrease*100@% increased damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Pyromaniac_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BurnIncrease",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "BurnIncrease", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: BurnIncrease"]
 }

@@ -1,7 +1,77 @@
 {
   "name": "Overheal",
+  "displayName": "Overheal",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Overheal",
+  "description": "Every third attack deals @BonusDamage*100@% damage and heals @PercentHeal*100@% of the damage. Excess healing is converted to a shield up to @MaxShield@ Health.",
+  "tooltip": "Every third attack deals @BonusDamage*100@% damage and heals @PercentHeal*100@% of the damage. Excess healing is converted to a shield up to @MaxShield@ Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Overheal_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 1.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusDamage",
+      "rawSourceValue": "1.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusDamage", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 1.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 400,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxShield",
+      "rawSourceValue": "400",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MaxShield", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 400, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumAttacks",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:NumAttacks", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentHeal",
+      "rawSourceValue": "0.6",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:PercentHeal", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.6, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusDamage", "value": "1.1" }, { "name": "Duration", "value": "3" }, { "name": "MaxShield", "value": "400" }, { "name": "NumAttacks", "value": "3" }, { "name": "PercentHeal", "value": "0.6" }],
+  "importWarnings": ["Unmapped item variable: BonusDamage", "Unmapped item variable: Duration", "Unmapped item variable: MaxShield", "Unmapped item variable: NumAttacks", "Unmapped item variable: PercentHeal"]
 }

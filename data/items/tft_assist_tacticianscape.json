@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_TacticiansCape",
+  "displayName": "Tactician's Cape",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_TacticiansCape",
+  "description": "Tactician's Cape",
+  "tooltip": "Tactician's Cape",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Tacticians_Ring.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

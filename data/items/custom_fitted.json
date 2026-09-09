@@ -1,7 +1,29 @@
 {
   "name": "Custom Fitted",
+  "displayName": "Custom Fitted",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_CustomFitted",
+  "description": "The first 6-cost you obtain comes with @NumItems@ tailored items equipped.",
+  "tooltip": "The first 6-cost you obtain comes with @NumItems@ tailored items equipped.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CustomFitted_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumItems", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: NumItems", "Unsupported item effect metadata: NumItems"]
 }

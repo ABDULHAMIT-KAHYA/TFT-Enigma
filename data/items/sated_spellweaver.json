@@ -1,7 +1,53 @@
 {
   "name": "Sated Spellweaver",
+  "displayName": "Sated Spellweaver",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_SatedSpellweaver",
+  "description": "After casting an Ability, champions gain @Omnivamp*100@% Omnivamp for @Duration@ seconds. Excess healing is converted to a shield up to @MaxShield@ Health.",
+  "tooltip": "After casting an Ability, champions gain @Omnivamp*100@% Omnivamp for @Duration@ seconds. Excess healing is converted to a shield up to @MaxShield@ Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SatedSpellweaver_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Sated Spellweaver:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCast",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Omnivamp",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCast",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCast",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxShield",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MaxShield", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 500, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "3" }, { "name": "MaxShield", "value": "500" }, { "name": "Omnivamp", "value": "0.15" }],
+  "importWarnings": ["Metadata-only item effect: Duration -> Shield", "Metadata-only item effect: MaxShield -> Shield", "Metadata-only item effect: Omnivamp -> GrantStats", "Unmapped item variable: Duration", "Unmapped item variable: MaxShield"]
 }

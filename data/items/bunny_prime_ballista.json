@@ -1,9 +1,116 @@
 {
   "name": "Bunny Prime Ballista",
+  "displayName": "Bunny Prime Ballista",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_AnimaSquadItem_Tier3_BattleBunnyCrossbow",
+  "description": "Gain <TFTKeyword>Precision</TFTKeyword>.<br><br>Every <TFTRadiantItemBonus>@NumCritsNeeded@</TFTRadiantItemBonus> critical strikes, fire <TFTRadiantItemBonus>@NumArrows@</TFTRadiantItemBonus> piercing arrows that can critically strike towards the target. Each deals @ArrowDamagePercent*100@% %i:TFTBaseAD% physical damage.<br><br><TFTRadiantItemBonus>On takedown, fire a burst of @ArrowsOnTakedown@ arrows from the target.</TFTRadiantItemBonus><br><br>{{TFT_Keyword_Precision}}<br><rules>Max @MaxPerSpell@ stacks per Ability cast.</rules><br><rules>Recommended Roles: Attack Marksman or Fighter</rules>",
+  "tooltip": "Gain <TFTKeyword>Precision</TFTKeyword>.<br><br>Every <TFTRadiantItemBonus>@NumCritsNeeded@</TFTRadiantItemBonus> critical strikes, fire <TFTRadiantItemBonus>@NumArrows@</TFTRadiantItemBonus> piercing arrows that can critically strike towards the target. Each deals @ArrowDamagePercent*100@% %i:TFTBaseAD% physical damage.<br><br><TFTRadiantItemBonus>On takedown, fire a burst of @ArrowsOnTakedown@ arrows from the target.</TFTRadiantItemBonus><br><br>{{TFT_Keyword_Precision}}<br><rules>Max @MaxPerSpell@ stacks per Ability cast.</rules><br><rules>Recommended Roles: Attack Marksman or Fighter</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_AnimaSquadItem_BattleBunnyCrossbow_T2.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Bunny Prime Ballista:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Bunny Prime Ballista:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Bunny Prime Ballista:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ArrowDamagePercent",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ArrowsOnTakedown",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 12, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MaxPerSpell",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumArrows",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 6, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumCritsNeeded",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.3" }, { "name": "AS", "value": "50" }, { "name": "ArrowDamagePercent", "value": "1" }, { "name": "ArrowsOnTakedown", "value": "12" }, { "name": "CritChance", "value": "50" }, { "name": "MaxPerSpell", "value": "3" }, { "name": "NumArrows", "value": "6" }, { "name": "NumCritsNeeded", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: ArrowDamagePercent", "Unmapped item variable: ArrowsOnTakedown", "Unmapped item variable: MaxPerSpell", "Unmapped item variable: NumArrows", "Unmapped item variable: NumCritsNeeded"]
 }

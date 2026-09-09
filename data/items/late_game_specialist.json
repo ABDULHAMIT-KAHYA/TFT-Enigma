@@ -1,7 +1,40 @@
 {
   "name": "Late Game Specialist",
+  "displayName": "Late Game Specialist",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_LategameSpecialist",
+  "description": "When you reach Level @LevelReq@, gain @Gold@ gold.",
+  "tooltip": "When you reach Level @LevelReq@, gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Late-Game-Specialist-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 36,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "36",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LevelReq",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "36" }, { "name": "LevelReq", "value": "9" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: LevelReq", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: LevelReq"]
 }

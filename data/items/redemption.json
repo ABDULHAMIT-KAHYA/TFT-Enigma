@@ -1,7 +1,17 @@
 {
   "name": "Redemption",
+  "displayName": "Redemption",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Encounter_ChoiceItem_RedemptionItem",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Redemption.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

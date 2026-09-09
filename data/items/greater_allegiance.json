@@ -1,7 +1,17 @@
 {
   "name": "Greater Allegiance",
+  "displayName": "Greater Allegiance",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_GreaterAllegiance",
+  "description": "You and your partner both immediately gain a Rune of Allegiance.",
+  "tooltip": "You and your partner both immediately gain a Rune of Allegiance.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_GreaterAllegiance.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

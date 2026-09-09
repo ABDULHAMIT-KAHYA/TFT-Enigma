@@ -1,8 +1,98 @@
 {
   "name": "Radiant Hand of Justice",
+  "displayName": "Radiant Hand of Justice",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_HandOfJusticeRadiant",
+  "description": "Gain 2 effects:<li><TFTRadiantItemBonus>@AD_NotStatBar*100@%</TFTRadiantItemBonus> Attack Damage and <TFTRadiantItemBonus>@AP_NotStatBar@%</TFTRadiantItemBonus> Ability Power.<li><TFTRadiantItemBonus>@StatOmnivamp_NotStatBar*100@%</TFTRadiantItemBonus> Omnivamp.<br><br>While above @HealthThreshold*100@% health, double the Attack Damage and Ability Power. While below @HealthThreshold*100@% Health, double the Omnivamp.",
+  "tooltip": "Gain 2 effects:<li><TFTRadiantItemBonus>@AD_NotStatBar*100@%</TFTRadiantItemBonus> Attack Damage and <TFTRadiantItemBonus>@AP_NotStatBar@%</TFTRadiantItemBonus> Ability Power.<li><TFTRadiantItemBonus>@StatOmnivamp_NotStatBar*100@%</TFTRadiantItemBonus> Omnivamp.<br><br>While above @HealthThreshold*100@% health, double the Attack Damage and Ability Power. While below @HealthThreshold*100@% Health, double the Omnivamp.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT5_Item_HandOfJusticeRadiant.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Radiant Hand of Justice:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.24, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Radiant Hand of Justice:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.24,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StatOmnivamp_NotStatBar",
+      "rawSourceValue": "0.24",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:StatOmnivamp_NotStatBar", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.24, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD_NotStatBar",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP_NotStatBar",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{f23e83fc}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD_NotStatBar", "value": "0.3" }, { "name": "AP_NotStatBar", "value": "30" }, { "name": "CritChance", "value": "40" }, { "name": "HealthThreshold", "value": "0.5" }, { "name": "ManaRegen", "value": "2" }, { "name": "StatOmnivamp_NotStatBar", "value": "0.24" }, { "name": "{f23e83fc}", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: AD_NotStatBar", "Unmapped item variable: AP_NotStatBar", "Unmapped item variable: HealthThreshold", "Unmapped item variable: ManaRegen", "Unmapped item variable: {f23e83fc}"]
 }

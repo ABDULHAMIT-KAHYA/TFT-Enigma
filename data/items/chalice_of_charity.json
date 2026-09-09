@@ -1,8 +1,95 @@
 {
   "name": "Chalice of Charity",
+  "displayName": "Chalice of Charity",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_ChaliceOfPowerRadiant",
+  "description": "Combat start: Grant %i:scaleAP% <TFTRadiantItemBonus>@ChaliceAP@</TFTRadiantItemBonus> Ability Power <TFTRadiantItemBonus>and @Spellvamp@% <TFTKeyword>Omnivamp</TFTKeyword></TFTRadiantItemBonus> to the holder and allies within 1 hex in the same row.<br><br>​​<tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>",
+  "tooltip": "Combat start: Grant %i:scaleAP% <TFTRadiantItemBonus>@ChaliceAP@</TFTRadiantItemBonus> Ability Power <TFTRadiantItemBonus>and @Spellvamp@% <TFTKeyword>Omnivamp</TFTKeyword></TFTRadiantItemBonus> to the holder and allies within 1 hex in the same row.<br><br>​​<tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Radiant/Chalice_of_Power_Radiant.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:Chalice of Charity:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Chalice of Charity:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [
+    {
+      "name": "Item:Chalice of Charity:MagicResist",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Chalice of Charity:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "name": "Item:Chalice of Charity:Spellvamp",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Chalice of Charity:Spellvamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ChaliceAP",
+      "rawSourceValue": "45",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HexRange",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "45",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "45",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Spellvamp",
+      "rawSourceValue": "10",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:Spellvamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "ChaliceAP", "value": "45" }, { "name": "HexRange", "value": "1" }, { "name": "MagicResist", "value": "45" }, { "name": "Mana", "value": "45" }, { "name": "Spellvamp", "value": "10" }],
+  "importWarnings": ["Metadata-only item effect: ChaliceAP -> Aura", "Metadata-only item effect: HexRange -> Aura", "Metadata-only item effect: Mana -> Aura", "Unmapped item variable: ChaliceAP", "Unmapped item variable: HexRange", "Unmapped item variable: Mana"]
 }

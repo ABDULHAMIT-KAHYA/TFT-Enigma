@@ -1,7 +1,17 @@
 {
   "name": "Zaun Crest",
+  "displayName": "Zaun Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ZaunCrest",
+  "description": "Get a Zaun Emblem.",
+  "tooltip": "Get a Zaun Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

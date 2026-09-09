@@ -1,7 +1,17 @@
 {
   "name": "2 Reforgers",
+  "displayName": "2 Reforgers",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Reforger_2",
+  "description": "2 Reforgers",
+  "tooltip": "2 Reforgers",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Consumables/TFT_Item_Consumable_ItemReroller.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,40 @@
 {
   "name": "Replication",
+  "displayName": "Replication",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Replication",
+  "description": "Choose 1 of 3 components. For the next @RoundsOfBonusItems@ rounds, gain a copy of that component.",
+  "tooltip": "Choose 1 of 3 components. For the next @RoundsOfBonusItems@ rounds, gain a copy of that component.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Replication-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "roundsofbonusitems",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "null" }, { "name": "roundsofbonusitems", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: roundsofbonusitems", "Unmapped non-numeric item variable: Gold", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: roundsofbonusitems"]
 }

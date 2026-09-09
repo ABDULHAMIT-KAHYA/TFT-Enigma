@@ -1,9 +1,133 @@
 {
   "name": "Perfected Piltoven Hexarmor",
+  "displayName": "Perfected Piltoven Hexarmor",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Crime_Prismatic_PiltovenHexplating",
+  "description": "Gain @ArmorPerStack@ Armor and Magic Resist when taking damage, stacking up to @MaxStacks@ times.<br><br><scaleShimmer>Perfected Bonus:</scaleShimmer> At max stacks, deal @ResistancePercentageDamage*100@% %i:scaleArmor%%i:scaleMR% as <TFTRadiantItemBonus>true damage</TFTRadiantItemBonus> to enemies in a <TFTRadiantItemBonus>@HexRange@-hex radius</TFTRadiantItemBonus> after being attacked. (Cooldown: @Cooldown@ seconds)<br><rules>Recommended users: Renni and Singed</rules>",
+  "tooltip": "Gain @ArmorPerStack@ Armor and Magic Resist when taking damage, stacking up to @MaxStacks@ times.<br><br><scaleShimmer>Perfected Bonus:</scaleShimmer> At max stacks, deal @ResistancePercentageDamage*100@% %i:scaleArmor%%i:scaleMR% as <TFTRadiantItemBonus>true damage</TFTRadiantItemBonus> to enemies in a <TFTRadiantItemBonus>@HexRange@-hex radius</TFTRadiantItemBonus> after being attacked. (Cooldown: @Cooldown@ seconds)<br><rules>Recommended users: Renni and Singed</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Prismatic_PiltovenHexplating.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Perfected Piltoven Hexarmor:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Perfected Piltoven Hexarmor:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Perfected Piltoven Hexarmor:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmorPerStack",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Cooldown",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRange",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxStacks",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ResistancePercentageDamage",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{11af8281}",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{992e2747}",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 50, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "50" }, { "name": "ArmorPerStack", "value": "5" }, { "name": "Cooldown", "value": "3" }, { "name": "Health", "value": "300" }, { "name": "HexRange", "value": "4" }, { "name": "MagicResist", "value": "50" }, { "name": "MaxStacks", "value": "15" }, { "name": "ResistancePercentageDamage", "value": "0.5" }, { "name": "{11af8281}", "value": "0.5" }, { "name": "{992e2747}", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: ArmorPerStack", "Unmapped item variable: Cooldown", "Unmapped item variable: HexRange", "Unmapped item variable: MaxStacks", "Unmapped item variable: ResistancePercentageDamage", "Unmapped item variable: {11af8281}", "Unmapped item variable: {992e2747}"]
 }

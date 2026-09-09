@@ -1,0 +1,29 @@
+{
+  "name": "TFT_Augment_PrismaticDestinyPlus",
+  "displayName": "Prismatic Destiny+",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PrismaticDestinyPlus",
+  "description": "Gain a random Prismatic Augment and @Gold@ gold.",
+  "tooltip": "Gain a random Prismatic Augment and @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PrismaticDestiny_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "TFT4_Item_AssassinEmblemItem",
+  "displayName": "Assassin Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT4_Item_AssassinEmblemItem",
+  "description": "The holder gains the Assassin trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
+  "tooltip": "The holder gains the Assassin trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set4/TFT_SR4_5_Emblem_Assassin_128.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+    { "name": "Item:TFT4_Item_AssassinEmblemItem:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "20" }],
+  "importWarnings": []
+}

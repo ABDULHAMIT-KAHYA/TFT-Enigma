@@ -1,0 +1,41 @@
+{
+  "name": "TFT16_Item_RapidfireEmblemItem",
+  "displayName": "Quickstriker Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Item_RapidfireEmblemItem",
+  "description": "The holder gains the Quickstriker trait. On takedown, dash to the nearest target and heal for @HealPercent*100@% maximum Health.",
+  "tooltip": "The holder gains the Quickstriker trait. On takedown, dash to the nearest target and heal for @HealPercent*100@% maximum Health.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set16/TFT16_Emblem_Quickstriker.TFT_Set16.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+    { "name": "Item:TFT16_Item_RapidfireEmblemItem:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealPercent",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "25" }, { "name": "HealPercent", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: HealPercent"]
+}

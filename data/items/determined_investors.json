@@ -1,7 +1,40 @@
 {
   "name": "Determined Investors",
+  "displayName": "Determined Investors",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_Determinedinvestors",
+  "description": "The first time you have @goldrequired@ gold at the end of combat, gain Diamond Hands and @numcomponents@ random component(s).<br><br><rules>This defensive item helps you gain more gold.</rules>",
+  "tooltip": "The first time you have @goldrequired@ gold at the end of combat, gain Diamond Hands and @numcomponents@ random component(s).<br><br><rules>This defensive item helps you gain more gold.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/A-Determined-Investor-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "goldrequired",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumComponents", "value": "2" }, { "name": "goldrequired", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: NumComponents", "Unmapped item variable: goldrequired"]
 }

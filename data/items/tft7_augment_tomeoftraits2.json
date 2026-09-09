@@ -1,0 +1,40 @@
+{
+  "name": "TFT7_Augment_TomeOfTraits2",
+  "displayName": "Ancient Archives II",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_TomeOfTraits2",
+  "description": "Gain @NumTomes@ Tome of Traits and @Gold@ gold.",
+  "tooltip": "Gain @NumTomes@ Tome of Traits and @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AncientArchives3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumTomes",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "5" }, { "name": "NumTomes", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumTomes"]
+}

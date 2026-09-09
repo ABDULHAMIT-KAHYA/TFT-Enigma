@@ -1,7 +1,29 @@
 {
   "name": "tft15_General_itemname_IncreaseThreat",
+  "displayName": "tft15_General_itemname_IncreaseThreat",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_General_Consumable_IncreaseThreat",
+  "description": "tft15_General_itemdescription_IncreaseThreat",
+  "tooltip": "tft15_General_itemdescription_IncreaseThreat",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT15_CommandModItems/TFT15_Item_Icon_CommandMod_IncreaseThreat.TFT_Set15.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunDuration",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "StunDuration", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: StunDuration", "Unsupported item effect metadata: StunDuration"]
 }

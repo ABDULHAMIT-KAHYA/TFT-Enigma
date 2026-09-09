@@ -1,0 +1,29 @@
+{
+  "name": "TFT6_Augment_PortableForgePlusPlus",
+  "displayName": "Portable Forge++",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_PortableForgePlusPlus",
+  "description": "Choose 1 of @ArmoryChoiceCount@ Artifacts.<br><br><rules>Artifacts are more powerful items with a unique effect.</rules>",
+  "tooltip": "Choose 1 of @ArmoryChoiceCount@ Artifacts.<br><br><rules>Artifacts are more powerful items with a unique effect.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PortableForge2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmoryChoiceCount",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ArmoryChoiceCount", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: ArmoryChoiceCount", "Unsupported item effect metadata: ArmoryChoiceCount"]
+}

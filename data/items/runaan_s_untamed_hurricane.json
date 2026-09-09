@@ -1,8 +1,106 @@
 {
   "name": "Runaan's Untamed Hurricane ",
+  "displayName": "Runaan's Untamed Hurricane ",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_RunaansHurricaneShadow",
+  "description": "The holder's attacks fire bolts at <TFTShadowItemBonus>@AdditionalTargets@ nearby enemies</TFTShadowItemBonus>, dealing <TFTShadowItemPenalty>@MultiplierForDamage@% of the holder's Attack Damage.</TFTShadowItemPenalty> These bolts can critically strike but do not apply on-hit effects. ",
+  "tooltip": "The holder's attacks fire bolts at <TFTShadowItemBonus>@AdditionalTargets@ nearby enemies</TFTShadowItemBonus>, dealing <TFTShadowItemPenalty>@MultiplierForDamage@% of the holder's Attack Damage.</TFTShadowItemPenalty> These bolts can critically strike but do not apply on-hit effects. ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Runaans_Hurricane.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Runaan's Untamed Hurricane :MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Runaan's Untamed Hurricane :AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [
+    {
+      "name": "Item:Runaan's Untamed Hurricane :AdditionalTargets",
+      "trigger": "OnHit",
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    },
+    {
+      "name": "Item:Runaan's Untamed Hurricane :MultiplierForDamage",
+      "trigger": "OnHit",
+      "damageFormula": { "baseDamage": 50, "adRatio": 0, "apRatio": 0, "damageType": "Physical" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    },
+    {
+      "name": "Item:Runaan's Untamed Hurricane :{84a41a6e}",
+      "trigger": "OnHit",
+      "damageFormula": { "baseDamage": 0, "adRatio": 0, "apRatio": 0, "damageType": "Physical" },
+      "areaShape": "SingleTarget",
+      "radius": 0,
+      "delayMs": 0,
+      "canCrit": false
+    }
+  ],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnHit",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "AdditionalTargets",
+      "rawSourceValue": "3",
+      "supportedForRuntime": true,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnHit",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MultiplierForDamage",
+      "rawSourceValue": "50",
+      "supportedForRuntime": true,
+      "damageFormula": { "baseDamage": 50, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnHit",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{84a41a6e}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": true
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnHit",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnHit",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "10" }, { "name": "AdditionalTargets", "value": "3" }, { "name": "MagicResist", "value": "20" }, { "name": "MultiplierForDamage", "value": "50" }, { "name": "{84a41a6e}", "value": "null" }],
+  "importWarnings": ["Metadata-only item effect: AS -> GrantStats", "Metadata-only item effect: MagicResist -> GrantStats", "Unmapped item variable: AdditionalTargets", "Unmapped item variable: MultiplierForDamage", "Unmapped non-numeric item variable: {84a41a6e}"]
 }

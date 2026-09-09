@@ -1,7 +1,29 @@
 {
   "name": "2 star Dr. Mundo",
+  "displayName": "2 star Dr. Mundo",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_DrMundo2Star",
+  "description": "2 star Dr. Mundo",
+  "tooltip": "2 star Dr. Mundo",
+  "iconPath": "ASSETS/Characters/TFT14_DrMundo/HUD/TFT14_DrMundo_Square.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
 }

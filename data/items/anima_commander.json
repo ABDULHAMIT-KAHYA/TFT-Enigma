@@ -1,7 +1,29 @@
 {
   "name": "Anima Commander",
+  "displayName": "Anima Commander",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_AnimaSquad_Commander",
+  "description": "Gain a Briar, a Jinx, and an Illaoi. Increase your current and max player Health by @PlayerHealth@.",
+  "tooltip": "Gain a Briar, a Jinx, and an Illaoi. Increase your current and max player Health by @PlayerHealth@.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AnimaCommander_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PlayerHealth",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PlayerHealth", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: PlayerHealth"]
 }

@@ -1,7 +1,53 @@
 {
   "name": "Two Tanky",
+  "displayName": "Two Tanky",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_TwoTanky",
+  "description": "When you field exactly 2 copies of a champion, they both gain @BonusHealth@ Health. When one copy dies, the other gains a @OnDeathPercHeal*100@% max Health Shield for @HealDuration@ seconds. When you 3-star, gain a 2-star copy.",
+  "tooltip": "When you field exactly 2 copies of a champion, they both gain @BonusHealth@ Health. When one copy dies, the other gains a @OnDeathPercHeal*100@% max Health Shield for @HealDuration@ seconds. When you 3-star, gain a 2-star copy.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Two-Tanky-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Two Tanky:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 500, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealth",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealth", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 500, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealDuration",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "OnDeathPercHeal",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:OnDeathPercHeal", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusHealth", "value": "500" }, { "name": "HealDuration", "value": "12" }, { "name": "OnDeathPercHeal", "value": "0.4" }],
+  "importWarnings": ["Unmapped item variable: HealDuration", "Unmapped item variable: OnDeathPercHeal"]
 }

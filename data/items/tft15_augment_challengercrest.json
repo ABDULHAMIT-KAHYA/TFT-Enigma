@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_ChallengerCrest",
+  "displayName": "Duelist Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_ChallengerCrest",
+  "description": "Gain a Duelist Emblem.",
+  "tooltip": "Gain a Duelist Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Duelist_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

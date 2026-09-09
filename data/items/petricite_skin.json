@@ -1,7 +1,30 @@
 {
   "name": "Petricite Skin",
+  "displayName": "Petricite Skin",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_HiddenTech_PetriciteSkin",
+  "description": "Gain @MagicResist@ Magic Resist.",
+  "tooltip": "Gain @MagicResist@ Magic Resist.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT15/TFT15_HiddenTech_PetriciteSkin.TFT_Set15.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Petricite Skin:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "MagicResist", "value": "150" }],
+  "importWarnings": []
 }

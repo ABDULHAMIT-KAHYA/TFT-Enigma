@@ -1,7 +1,40 @@
 {
   "name": "Tiny Team",
+  "displayName": "Tiny Team",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_StarGuardian_TinyTeam",
+  "description": "When you field @MaxStarGuardians@ or less Star Guardians, increase Star Guardian bonuses by an additional @BonusIncrease*100@%. Gain a Syndra and Rell.",
+  "tooltip": "When you field @MaxStarGuardians@ or less Star Guardians, increase Star Guardian bonuses by an additional @BonusIncrease*100@%. Gain a Syndra and Rell.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TinyTeam_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusIncrease",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxStarGuardians",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusIncrease", "value": "1" }, { "name": "MaxStarGuardians", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: BonusIncrease", "Unmapped item variable: MaxStarGuardians", "Unsupported item effect metadata: BonusIncrease", "Unsupported item effect metadata: MaxStarGuardians"]
 }

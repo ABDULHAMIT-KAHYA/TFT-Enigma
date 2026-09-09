@@ -1,0 +1,17 @@
+{
+  "name": "TFT10_Augment_LuckyStreak_HR",
+  "displayName": "Lucky Streak",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_LuckyStreak_HR",
+  "description": "Gain a Gambler's Blade and a Magnetic Remover.<br><br><rules>Gambler's Blade helps you gain gold.</rules>",
+  "tooltip": "Gain a Gambler's Blade and a Magnetic Remover.<br><br><rules>Gambler's Blade helps you gain gold.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Lucky-Streak-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

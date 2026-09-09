@@ -1,7 +1,40 @@
 {
   "name": "Max Build",
+  "displayName": "Max Build",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_MaxBuild",
+  "description": "Gain a Champion Duplicator, @Gold@ gold, and your next shop contains 5 unique four-cost champions.<br><br><tftitemrules>Galaxies Championship, 2020</tftitemrules>",
+  "tooltip": "Gain a Champion Duplicator, @Gold@ gold, and your next shop contains 5 unique four-cost champions.<br><br><tftitemrules>Galaxies Championship, 2020</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/MaxBuild_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{831bb748}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "4" }, { "name": "{831bb748}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: {831bb748}", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: {831bb748}"]
 }

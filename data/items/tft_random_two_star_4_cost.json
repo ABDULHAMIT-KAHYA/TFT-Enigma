@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Random_Two_Star_4_Cost",
+  "displayName": "tft_item_name_PrisonBreak",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Random_Two_Star_4_Cost",
+  "description": "tft_item_description_PrisonBreak_RandomTwoStar4Cost",
+  "tooltip": "tft_item_description_PrisonBreak_RandomTwoStar4Cost",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/RuneOfAllegiance_Lesser.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Consumable_TrashToTreasure_Reforger",
+  "displayName": "Reforger",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Consumable_TrashToTreasure_Reforger",
+  "description": "Unequip all items and randomly transform them into new ones of a similar type and quality.<br><TFTRadiantItemBonus>Trash to Treasure: Completed items transform into Artifacts and do not consume the Reforger</TFTRadiantItemBonus><br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Unequip all items and randomly transform them into new ones of a similar type and quality.<br><TFTRadiantItemBonus>Trash to Treasure: Completed items transform into Artifacts and do not consume the Reforger</TFTRadiantItemBonus><br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Consumable_TrashToTreasure_Reforger.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

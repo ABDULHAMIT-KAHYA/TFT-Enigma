@@ -1,7 +1,17 @@
 {
   "name": "4-cost Champion and 4 Gold",
+  "displayName": "4-cost Champion and 4 Gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Tier4_Units_And_Gold",
+  "description": "4-cost Champion and 4 Gold",
+  "tooltip": "4-cost Champion and 4 Gold",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_4c.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

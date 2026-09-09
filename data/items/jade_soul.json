@@ -1,7 +1,17 @@
 {
   "name": "Jade Soul",
+  "displayName": "Jade Soul",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_JadeTrait2",
+  "description": "Your team counts as having 1 additional Jade. Gain a Titan's Resolve and a Gnar.",
+  "tooltip": "Your team counts as having 1 additional Jade. Gain a Titan's Resolve and a Gnar.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Jade-Crown-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

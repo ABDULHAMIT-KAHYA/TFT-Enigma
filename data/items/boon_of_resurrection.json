@@ -1,7 +1,17 @@
 {
   "name": "Boon of Resurrection",
+  "displayName": "Boon of Resurrection",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_AurelionSolGodAugment_BoonOfResurrection",
+  "description": "The first time you would be eliminated, instead remain at 1 Health",
+  "tooltip": "The first time you would be eliminated, instead remain at 1 Health",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,76 @@
 {
   "name": "Adaptive Helm",
+  "displayName": "Adaptive Helm",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_AdaptiveHelm",
+  "description": "Gain an additional @ManaPercIncrease*100@% Mana from all sources. The holder gains an additional bonus based on their Role:<br><br>Tanks and Fighters: Gain @FrontlineResists@ Armor and Magic Resistance.<br><br>Other Roles: Gain @BacklineADAP@% Attack Damage and Ability Power. ",
+  "tooltip": "Gain an additional @ManaPercIncrease*100@% Mana from all sources. The holder gains an additional bonus based on their Role:<br><br>Tanks and Fighters: Gain @FrontlineResists@ Armor and Magic Resistance.<br><br>Other Roles: Gain @BacklineADAP@% Attack Damage and Ability Power. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_AdaptiveHelm.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Adaptive Helm:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BacklineADAP",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 10, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "FrontlineResists",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 30, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaPercIncrease",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BacklineADAP", "value": "10" }, { "name": "FrontlineResists", "value": "30" }, { "name": "MagicResist", "value": "20" }, { "name": "ManaPercIncrease", "value": "0.15" }, { "name": "ManaRegen", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: BacklineADAP", "Unmapped item variable: FrontlineResists", "Unmapped item variable: ManaPercIncrease", "Unmapped item variable: ManaRegen"]
 }

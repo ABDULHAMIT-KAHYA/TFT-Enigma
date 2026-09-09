@@ -1,7 +1,29 @@
 {
   "name": "We Stick Together",
+  "displayName": "We Stick Together",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_WeStickTogether",
+  "description": "Gain a random Emblem and a completed item anvil. Allies that share a trait with that Emblem gain @ASPercent@% Attack Speed. @TFTUnitProperty.item:TFT_Augment_WeStickTogether_Tooltip@<br><br><tftitemrules>Into The Arcane Tactician's Crown, 2025</tftitemrules>",
+  "tooltip": "Gain a random Emblem and a completed item anvil. Allies that share a trait with that Emblem gain @ASPercent@% Attack Speed. @TFTUnitProperty.item:TFT_Augment_WeStickTogether_Tooltip@<br><br><tftitemrules>Into The Arcane Tactician's Crown, 2025</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WeStickTogether_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ASPercent",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ASPercent", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: ASPercent"]
 }

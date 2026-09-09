@@ -1,7 +1,41 @@
 {
   "name": "LaserBallistics++",
+  "displayName": "LaserBallistics++",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_GravesTrait_Offense_LaserBallistics3",
+  "description": "Attacks travel an additional @BonusHexes@ hexes and pierce enemies, reducing damage by @DamageReductionPerTarget*100@% per target pierced.",
+  "tooltip": "Attacks travel an additional @BonusHexes@ hexes and pierce enemies, reducing damage by @DamageReductionPerTarget*100@% per target pierced.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_LaserBallistics2.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:LaserBallistics++:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.6, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageReductionPerTarget",
+      "rawSourceValue": "0.6",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageReductionPerTarget", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.6, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHexes",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusHexes", "value": "3" }, { "name": "DamageReductionPerTarget", "value": "0.6" }],
+  "importWarnings": ["Unmapped item variable: BonusHexes"]
 }

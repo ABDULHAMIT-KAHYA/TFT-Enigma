@@ -1,7 +1,29 @@
 {
   "name": " The Golden Remover",
+  "displayName": " The Golden Remover",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_GoldenRemover",
+  "description": "Gain a Golden Remover and component item anvil.<br><br><rules>Golden Remover is an Item Remover with infinite uses.</rules>",
+  "tooltip": "Gain a Golden Remover and component item anvil.<br><br><rules>Golden Remover is an Item Remover with infinite uses.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldenRemover_I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Anvil",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Anvil", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Anvil", "Unsupported item effect metadata: Anvil"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "Shimmer Duplicator",
+  "displayName": "Shimmer Duplicator",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Crime_Consumable_ShimmerDuplicator",
+  "description": "Use on a Chem-Baron to create a 1-star copy of them.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Use on a Chem-Baron to create a 1-star copy of them.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Consumable_ShimmerDuplicator.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumCopies",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{0d14760d}",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumCopies", "value": "1" }, { "name": "{0d14760d}", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: NumCopies", "Unmapped item variable: {0d14760d}", "Unsupported item effect metadata: NumCopies", "Unsupported item effect metadata: {0d14760d}"]
 }

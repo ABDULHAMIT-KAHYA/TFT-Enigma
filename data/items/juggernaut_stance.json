@@ -1,7 +1,62 @@
 {
   "name": "Juggernaut Stance",
+  "displayName": "Juggernaut Stance",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Item_DragonFistTankStance",
+  "description": "Briefly gain <scaleLevel>@WindowedDR*100@%</scaleLevel> Durability, then deal <physicalDamage>@ModifiedInitialDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to the target,  <physicalDamage>@ModifiedFinalDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to all enemies behind the target, and <physicalDamage>@ModifiedAllEnemiesDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to other enemies in a 2-hex radius.",
+  "tooltip": "Briefly gain <scaleLevel>@WindowedDR*100@%</scaleLevel> Durability, then deal <physicalDamage>@ModifiedInitialDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to the target,  <physicalDamage>@ModifiedFinalDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to all enemies behind the target, and <physicalDamage>@ModifiedAllEnemiesDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to other enemies in a 2-hex radius.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set15_DragonFist/TFT15_TraitArmory_DF_Juggernaut.TFT_Set15.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ModifiedAllEnemiesDamage",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ModifiedFinalDamage",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ModifiedInitialDamage",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "WindowedDR",
+      "rawSourceValue": "0.6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ModifiedAllEnemiesDamage", "value": "150" }, { "name": "ModifiedFinalDamage", "value": "200" }, { "name": "ModifiedInitialDamage", "value": "500" }, { "name": "WindowedDR", "value": "0.6" }],
+  "importWarnings": ["Unmapped item variable: ModifiedAllEnemiesDamage", "Unmapped item variable: ModifiedFinalDamage", "Unmapped item variable: ModifiedInitialDamage", "Unmapped item variable: WindowedDR"]
 }

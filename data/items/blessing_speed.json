@@ -1,7 +1,29 @@
 {
   "name": "Blessing: Speed",
+  "displayName": "Blessing: Speed",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Consumable_SpeedUp",
+  "description": "Permanently increase a champion's Attack Speed by @ASToGrant*100@% and decrease their size by 20%.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Permanently increase a champion's Attack Speed by @ASToGrant*100@% and decrease their size by 20%.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT14_Consumable_SpeedUp.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ASToGrant",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ASToGrant", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: ASToGrant", "Unsupported item effect metadata: ASToGrant"]
 }

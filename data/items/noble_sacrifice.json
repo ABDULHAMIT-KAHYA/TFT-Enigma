@@ -1,7 +1,40 @@
 {
   "name": "Noble Sacrifice",
+  "displayName": "Noble Sacrifice",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_NobleSacrifice",
+  "description": "When your first ally dies each combat, grant your team @BaseResists@ + @SharePerc*100@% of that ally's Armor and Magic Resistance.",
+  "tooltip": "When your first ally dies each combat, grant your team @BaseResists@ + @SharePerc*100@% of that ally's Armor and Magic Resistance.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ANobleSacrifice_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseResists",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SharePerc",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseResists", "value": "25" }, { "name": "SharePerc", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: BaseResists", "Unmapped item variable: SharePerc", "Unsupported item effect metadata: BaseResists", "Unsupported item effect metadata: SharePerc"]
 }

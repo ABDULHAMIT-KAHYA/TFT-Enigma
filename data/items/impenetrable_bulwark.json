@@ -1,7 +1,17 @@
 {
   "name": "Impenetrable Bulwark",
+  "displayName": "Impenetrable Bulwark",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_ImpenetrableBulwark",
+  "description": "Gain a Bramble Vest, a Dragon's Claw, a Giant's Belt, and a Magnetic Remover.<br><br><rules>Useful for Magic Tanks or Attack Tanks!</rules>",
+  "tooltip": "Gain a Bramble Vest, a Dragon's Claw, a Giant's Belt, and a Magnetic Remover.<br><br><rules>Useful for Magic Tanks or Attack Tanks!</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/StandBehind3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

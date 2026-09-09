@@ -1,7 +1,51 @@
 {
   "name": "Plot Armor",
+  "displayName": "Plot Armor",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PlotArmor",
+  "description": "Your team gains @BaseResists@ Armor and Magic Resist. After falling below @HealthThreshold*100@% Health, increase this to @EnhancedTotalResists@ for the rest of combat.",
+  "tooltip": "Your team gains @BaseResists@ Armor and Magic Resist. After falling below @HealthThreshold*100@% Health, increase this to @EnhancedTotalResists@ for the rest of combat.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PlotArmor_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseResists",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "EnhancedTotalResists",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseResists", "value": "8" }, { "name": "EnhancedTotalResists", "value": "40" }, { "name": "HealthThreshold", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: BaseResists", "Unmapped item variable: EnhancedTotalResists", "Unmapped item variable: HealthThreshold"]
 }

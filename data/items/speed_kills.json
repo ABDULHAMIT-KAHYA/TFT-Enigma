@@ -1,7 +1,73 @@
 {
   "name": "Speed Kills",
+  "displayName": "Speed Kills",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Swift_Vertical",
+  "description": "Rapidfire champions start at @StartingStacks@ stacks and can go to @MaxStacks@. If you win combat within @CombatDuration@ seconds, gain @GoldReward@ gold. Gain a Twisted Fate and a Kog'Maw.",
+  "tooltip": "Rapidfire champions start at @StartingStacks@ stacks and can go to @MaxStacks@. If you win combat within @CombatDuration@ seconds, gain @GoldReward@ gold. Gain a Twisted Fate and a Kog'Maw.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SpeedKills_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CombatDuration",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldReward",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxStacks",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PlayerDamage",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StartingStacks",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CombatDuration", "value": "18" }, { "name": "GoldReward", "value": "2" }, { "name": "MaxStacks", "value": "15" }, { "name": "PlayerDamage", "value": "2" }, { "name": "StartingStacks", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: CombatDuration", "Unmapped item variable: GoldReward", "Unmapped item variable: MaxStacks", "Unmapped item variable: PlayerDamage", "Unmapped item variable: StartingStacks"]
 }

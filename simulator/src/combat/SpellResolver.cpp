@@ -56,57 +56,28 @@ bool SpellResolver::beginCast(GameState& state, Unit& caster, Unit& primaryTarge
     TraitSystem::onCast(state, caster, ability, &primaryTarget);
     ItemSystem::onCast(state, caster, ability, &primaryTarget);
 
-    Unit* casterPtr = &caster;
-    Unit* targetPtr = &primaryTarget;
+    const UnitId casterId = caster.id();
+    const UnitId targetId = primaryTarget.id();
     const std::int32_t startMs = state.timeMs();
 
-    state.scheduleCombatEvent(
-        startMs + windup,
-        [&state, casterPtr, targetPtr]()
-        {
-            if (!casterPtr || !casterPtr->isAlive())
-            {
-                return;
-            }
-            if (!casterPtr->isCasting())
-            {
-                return;
-            }
-            casterPtr->resetManaAfterCast();
-            AbilitySystem::executeTrigger(state, *casterPtr, targetPtr, AbilityTrigger::OnCast);
+    CombatEvent resolve{};
+    resolve.type = CombatEventType::SpellResolve;
+    resolve.executeAtMs = startMs + windup;
+    resolve.sourceId = casterId;
+    resolve.targetId = targetId;
+    resolve.policy = CombatEventTargetPolicy::RequireAliveSource;
+    resolve.debugName = "SpellResolve";
+    state.scheduleCombatEvent(resolve);
 
-            if (CombatValidation::enabled() && CombatValidation::detailedLogs())
-            {
-                std::ostringstream ss;
-                ss << "CAST_RELEASE " << state.timeMs() << "ms " << casterPtr->getName();
-                state.logger().combat(ss.str());
-            }
-        },
-        "SpellResolve"
-    );
-
-    state.scheduleCombatEvent(
-        startMs + windup + recovery,
-        [&state, casterPtr]()
-        {
-            if (!casterPtr || !casterPtr->isAlive())
-            {
-                return;
-            }
-            if (!casterPtr->isCasting())
-            {
-                return;
-            }
-            casterPtr->endCast();
-            if (CombatValidation::enabled() && CombatValidation::detailedLogs())
-            {
-                std::ostringstream ss;
-                ss << "CAST_END " << state.timeMs() << "ms " << casterPtr->getName();
-                state.logger().combat(ss.str());
-            }
-        },
-        "SpellEnd"
-    );
+    CombatEvent end{};
+    end.type = CombatEventType::SpellEnd;
+    end.executeAtMs = startMs + windup + recovery;
+    end.sourceId = casterId;
+    end.targetId = targetId;
+    end.policy = CombatEventTargetPolicy::RequireAliveSource;
+    end.debugName = "SpellEnd";
+    state.scheduleCombatEvent(end);
 
     return true;
 }
+

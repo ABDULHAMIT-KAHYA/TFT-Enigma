@@ -1,7 +1,30 @@
 {
   "name": "Feed the Flames",
+  "displayName": "Feed the Flames",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_FeedTheFlames",
+  "description": "Gain a Sunfire Cape. Your team gains @Omnivamp*100@% Omnivamp when attacking Burning enemies.",
+  "tooltip": "Gain a Sunfire Cape. Your team gains @Omnivamp*100@% Omnivamp when attacking Burning enemies.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FeedTheFlames_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Feed the Flames:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Omnivamp",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Omnivamp", "value": "0.12" }],
+  "importWarnings": ["Metadata-only item effect: Omnivamp -> GrantStats"]
 }

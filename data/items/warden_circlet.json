@@ -1,7 +1,17 @@
 {
   "name": "Warden Circlet",
+  "displayName": "Warden Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_WardenCirclet",
+  "description": "Get a Warden Emblem, a Braum, and a Giant's Belt.",
+  "tooltip": "Get a Warden Emblem, a Braum, and a Giant's Belt.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

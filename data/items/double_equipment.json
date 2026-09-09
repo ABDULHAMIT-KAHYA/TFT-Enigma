@@ -1,7 +1,17 @@
 {
   "name": "Double Equipment",
+  "displayName": "Double Equipment",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_DoubleEquipment",
+  "description": "Gain two copies of a random component.",
+  "tooltip": "Gain two copies of a random component.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

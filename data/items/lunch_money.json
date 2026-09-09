@@ -1,7 +1,42 @@
 {
   "name": "Lunch Money",
+  "displayName": "Lunch Money",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_BloodBank",
+  "description": "Every @Damage@ damage you deal to enemy tacticians gives you @Gold@ gold.<br>Total Payouts: @TFTUnitProperty.item:TFT11_BloodBankPayoutTotal@ Gold<br>",
+  "tooltip": "Every @Damage@ damage you deal to enemy tacticians gives you @Gold@ gold.<br>Total Payouts: @TFTUnitProperty.item:TFT11_BloodBankPayoutTotal@ Gold<br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BloodBank_I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Damage",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 8, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "Damage", "value": "8" }, { "name": "Gold", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Damage", "Unmapped item variable: Gold"]
 }

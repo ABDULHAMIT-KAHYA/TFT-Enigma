@@ -1,7 +1,17 @@
 {
   "name": "Zaun Circlet",
+  "displayName": "Zaun Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ZaunCirclet",
+  "description": "Get a Zaun Emblem, a Recurve Bow, and...a 2-Star Vi!?",
+  "tooltip": "Get a Zaun Emblem, a Recurve Bow, and...a 2-Star Vi!?",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

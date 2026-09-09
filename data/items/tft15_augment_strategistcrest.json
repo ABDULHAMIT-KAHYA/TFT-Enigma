@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_StrategistCrest",
+  "displayName": "Strategist Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_StrategistCrest",
+  "description": "Gain a Strategist Emblem.",
+  "tooltip": "Gain a Strategist Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/StrategistCrest_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

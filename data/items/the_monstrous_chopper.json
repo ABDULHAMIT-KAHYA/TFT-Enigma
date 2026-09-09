@@ -1,7 +1,30 @@
 {
   "name": "The Monstrous Chopper",
+  "displayName": "The Monstrous Chopper",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_Abomination",
+  "description": "The Monstrosity equips an axe! Its attacks now cleave in a cone in front of it for @CleaveRatio*100@% of physical damage. Gain a Kalista and a Nunu. ",
+  "tooltip": "The Monstrosity equips an axe! Its attacks now cleave in a cone in front of it for @CleaveRatio*100@% of physical damage. Gain a Kalista and a Nunu. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/The-Monstrous-Chopper_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "CleaveRatio",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "CleaveRatio", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: CleaveRatio"]
 }

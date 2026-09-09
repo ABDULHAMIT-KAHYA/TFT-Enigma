@@ -1,7 +1,40 @@
 {
   "name": "Training Arc",
+  "displayName": "Training Arc",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_PitFighter",
+  "description": "Pit Fighters permanently gain @ADPerLoss*100@% Attack Damage if they lost the last combat. If they won, gain @HealthPerWin@ Health instead. Gain an Urgot.",
+  "tooltip": "Pit Fighters permanently gain @ADPerLoss*100@% Attack Damage if they lost the last combat. If they won, gain @HealthPerWin@ Health instead. Gain an Urgot.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/OnTheRopes_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.015,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ADPerLoss",
+      "rawSourceValue": "0.015",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPerWin",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADPerLoss", "value": "0.015" }, { "name": "HealthPerWin", "value": "50" }],
+  "importWarnings": ["Unmapped item variable: ADPerLoss", "Unmapped item variable: HealthPerWin"]
 }

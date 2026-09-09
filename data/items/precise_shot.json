@@ -1,7 +1,40 @@
 {
   "name": "Precise Shot",
+  "displayName": "Precise Shot",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_Sniper_PreciseShot",
+  "description": "Every @Cadence@ seconds, all Sniper champions fire a shot that deals @BaseADPercent*100@% of their Basic Attack Damage to the lowest health enemy in range. Gain a Jhin.",
+  "tooltip": "Every @Cadence@ seconds, all Sniper champions fire a shot that deals @BaseADPercent*100@% of their Basic Attack Damage to the lowest health enemy in range. Gain a Jhin.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PreciseShot_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.85,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseADPercent",
+      "rawSourceValue": "0.85",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Cadence",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseADPercent", "value": "0.85" }, { "name": "Cadence", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: BaseADPercent", "Unmapped item variable: Cadence"]
 }

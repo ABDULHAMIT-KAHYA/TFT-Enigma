@@ -1,7 +1,29 @@
 {
   "name": "Solo Plate",
+  "displayName": "Solo Plate",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ItemGargoyleStoneplate",
+  "description": "Gain a Gargoyle Stoneplate. Combat start: Allies holding Gargoyle Stoneplate gain @HealthIncrease*100@% max Health if they're the only one in their row.",
+  "tooltip": "Gain a Gargoyle Stoneplate. Combat start: Allies holding Gargoyle Stoneplate gain @HealthIncrease*100@% max Health if they're the only one in their row.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SoloPlate_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 0.17,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HealthIncrease",
+      "rawSourceValue": "0.17",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthIncrease", "value": "0.17" }],
+  "importWarnings": ["Metadata-only item effect: HealthIncrease -> Heal", "Unmapped item variable: HealthIncrease"]
 }

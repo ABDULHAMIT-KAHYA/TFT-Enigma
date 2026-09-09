@@ -1,0 +1,30 @@
+{
+  "name": "TFTEvent5YR_Storyweaver5_AP",
+  "displayName": "Scroll of Force",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent5YR_Storyweaver5_AP",
+  "description": "Kayle's Ability hits a wider area and deals @APAmt*100@% more damage.",
+  "tooltip": "Kayle's Ability hits a wider area and deals @APAmt*100@% more damage.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/5YR/TFTEvent5YR_Storyweaver_AbilityPower2.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "APAmt",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    }
+  ],
+  "rawVariables": [{ "name": "APAmt", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: APAmt"]
+}

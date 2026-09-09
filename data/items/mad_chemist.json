@@ -1,7 +1,30 @@
 {
   "name": "Mad Chemist",
+  "displayName": "Mad Chemist",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Augment_SingedCarry",
+  "description": "Gain a Singed. Your strongest Singed cannot attack but constantly runs, leaving a poison trail dealing magic damage over time. His Ability will always target himself and instead grants @TOOLTIPONLYOmnivamp@% Omnivamp and Move Speed.",
+  "tooltip": "Gain a Singed. Your strongest Singed cannot attack but constantly runs, leaving a poison trail dealing magic damage over time. His Ability will always target himself and instead grants @TOOLTIPONLYOmnivamp@% Omnivamp and Move Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Singed-Hero-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Mad Chemist:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPONLYOmnivamp",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:TOOLTIPONLYOmnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "TOOLTIPONLYOmnivamp", "value": "30" }],
+  "importWarnings": []
 }

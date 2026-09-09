@@ -1,7 +1,17 @@
 {
   "name": "TFT7_DoubleUpAgument_Copycat_Name",
+  "displayName": "TFT7_DoubleUpAgument_Copycat_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_Copycat",
+  "description": "TFT7_DoubleUpAugment_Copycat_Description",
+  "tooltip": "TFT7_DoubleUpAugment_Copycat_Description",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_Copycat.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

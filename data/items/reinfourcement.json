@@ -1,7 +1,29 @@
 {
   "name": "ReinFOURcement",
+  "displayName": "ReinFOURcement",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_Reinfourcement",
+  "description": "The next 4-cost champion you buy with gold is instantly upgraded to 2-star. Gain @Gold@ gold.",
+  "tooltip": "The next 4-cost champion you buy with gold is instantly upgraded to 2-star. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Reinfourcement_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

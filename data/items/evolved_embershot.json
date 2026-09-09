@@ -1,8 +1,131 @@
 {
   "name": "Evolved Embershot",
+  "displayName": "Evolved Embershot",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_AnimaSquadItem_Tier3_SearingShortbow",
+  "description": "For every <TFTRadiantItemBonus>@ManaPerProjectile@</TFTRadiantItemBonus> mana spent, fire a projectile at a nearby enemy dealing <magicDamage>@ProjectileDamage@ + @APScalar*100@% of the holder's Ability Power</magicDamage> magic damage, and applying @BurnPercent@% <TFTKeyword>Burn</TFTKeyword> and @GrievousWoundsPercent@% <TFTKeyword>Wound</TFTKeyword> to enemies for <TFTRadiantItemBonus>@BurnDuration@</TFTRadiantItemBonus> seconds. <br><br><TFTRadiantItemBonus>Each projectile leaves a lingering field that deals <magicDamage>@FieldDamagePerSecond@</magicDamage> magic damage to enemies each second.</TFTRadiantItemBonus><br><br><tftitemrules>Damage increases based on Stage.<br><tftbold>Burn</tftbold>: Deals a percent of the target's max Health as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules><br><rules>Recommended Roles: Magic Caster</rules>",
+  "tooltip": "For every <TFTRadiantItemBonus>@ManaPerProjectile@</TFTRadiantItemBonus> mana spent, fire a projectile at a nearby enemy dealing <magicDamage>@ProjectileDamage@ + @APScalar*100@% of the holder's Ability Power</magicDamage> magic damage, and applying @BurnPercent@% <TFTKeyword>Burn</TFTKeyword> and @GrievousWoundsPercent@% <TFTKeyword>Wound</TFTKeyword> to enemies for <TFTRadiantItemBonus>@BurnDuration@</TFTRadiantItemBonus> seconds. <br><br><TFTRadiantItemBonus>Each projectile leaves a lingering field that deals <magicDamage>@FieldDamagePerSecond@</magicDamage> magic damage to enemies each second.</TFTRadiantItemBonus><br><br><tftitemrules>Damage increases based on Stage.<br><tftbold>Burn</tftbold>: Deals a percent of the target's max Health as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules><br><rules>Recommended Roles: Magic Caster</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_AnimaSquadItem_SearingShortbow_T3.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Evolved Embershot:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Evolved Embershot:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "APScalar",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BurnDuration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BurnPercent",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FieldDamagePerSecond",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GrievousWoundsPercent",
+      "rawSourceValue": "33",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaPerProjectile",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ProjectileDamage",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.4" }, { "name": "AP", "value": "40" }, { "name": "APScalar", "value": "0.5" }, { "name": "BurnDuration", "value": "10" }, { "name": "BurnPercent", "value": "1" }, { "name": "FieldDamagePerSecond", "value": "null" }, { "name": "GrievousWoundsPercent", "value": "33" }, { "name": "ManaPerProjectile", "value": "15" }, { "name": "ManaRegen", "value": "5" }, { "name": "ProjectileDamage", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: APScalar", "Unmapped item variable: BurnDuration", "Unmapped item variable: BurnPercent", "Unmapped item variable: GrievousWoundsPercent", "Unmapped item variable: ManaPerProjectile", "Unmapped item variable: ManaRegen", "Unmapped non-numeric item variable: FieldDamagePerSecond", "Unmapped non-numeric item variable: ProjectileDamage"]
 }

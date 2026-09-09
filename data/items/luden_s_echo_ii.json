@@ -1,7 +1,78 @@
 {
   "name": "Luden's Echo II",
+  "displayName": "Luden's Echo II",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_LudensEcho2",
+  "description": "Every @ManaThreshold@ Mana spent, your units next instance of Ability damage deals an additional @MagicDamage1@-@MagicDamage4@ (based on current Stage) magic damage to the target and a nearby enemy.",
+  "tooltip": "Every @ManaThreshold@ Mana spent, your units next instance of Ability damage deals an additional @MagicDamage1@-@MagicDamage4@ (based on current Stage) magic damage to the target and a nearby enemy.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Ludens-Echo-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MagicDamage1",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 50, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 70,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MagicDamage2",
+      "rawSourceValue": "70",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 70, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 90,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MagicDamage3",
+      "rawSourceValue": "90",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 90, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 110,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MagicDamage4",
+      "rawSourceValue": "110",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 110, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{26a9a9b1}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "MagicDamage1", "value": "50" }, { "name": "MagicDamage2", "value": "70" }, { "name": "MagicDamage3", "value": "90" }, { "name": "MagicDamage4", "value": "110" }, { "name": "{26a9a9b1}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: MagicDamage1", "Unmapped item variable: MagicDamage2", "Unmapped item variable: MagicDamage3", "Unmapped item variable: MagicDamage4", "Unmapped item variable: {26a9a9b1}"]
 }

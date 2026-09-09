@@ -1,7 +1,17 @@
 {
   "name": "Nightbringer Crown",
+  "displayName": "Nightbringer Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_NightbringerCrown",
+  "description": "Gain a Nightbringer Emblem, a Hand of Justice, and a Sejuani.",
+  "tooltip": "Gain a Nightbringer Emblem, a Hand of Justice, and a Sejuani.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Nightbringer_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

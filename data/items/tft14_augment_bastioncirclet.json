@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_BastionCirclet",
+  "displayName": "Bastion Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_BastionCirclet",
+  "description": "Gain a Bastion Emblem, a Sejuani, and a Giant's Belt.",
+  "tooltip": "Gain a Bastion Emblem, a Sejuani, and a Giant's Belt.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BastionCirclet_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

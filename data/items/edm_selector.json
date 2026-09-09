@@ -1,7 +1,17 @@
 {
   "name": "EDM Selector",
+  "displayName": "EDM Selector",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Consumable_EDM_Selector",
+  "description": "Use this on an EDM champion to select them. The selected champion determines the frequency of EDM casts.<br><br>Jax: Every <scaleLevel>@TFTUnitProperty.trait:TFT10_Trait_EDM_JaxFrequency@</scaleLevel> seconds.<br>Lux: Every <scaleLevel>@TFTUnitProperty.trait:TFT10_Trait_EDM_LuxFrequency@</scaleLevel> seconds.<br>Zac: Every <scaleLevel>@TFTUnitProperty.trait:TFT10_Trait_EDM_ZacFrequency@</scaleLevel> seconds.<br>Zed: Every <scaleLevel>@TFTUnitProperty.trait:TFT10_Trait_EDM_ZedFrequency@</scaleLevel> seconds.<br><br>",
+  "tooltip": "Use this on an EDM champion to select them. The selected champion determines the frequency of EDM casts.<br><br>Jax: Every <scaleLevel>@TFTUnitProperty.trait:TFT10_Trait_EDM_JaxFrequency@</scaleLevel> seconds.<br>Lux: Every <scaleLevel>@TFTUnitProperty.trait:TFT10_Trait_EDM_LuxFrequency@</scaleLevel> seconds.<br>Zac: Every <scaleLevel>@TFTUnitProperty.trait:TFT10_Trait_EDM_ZacFrequency@</scaleLevel> seconds.<br>Zed: Every <scaleLevel>@TFTUnitProperty.trait:TFT10_Trait_EDM_ZedFrequency@</scaleLevel> seconds.<br><br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set10_EDM/EDM_Selector.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

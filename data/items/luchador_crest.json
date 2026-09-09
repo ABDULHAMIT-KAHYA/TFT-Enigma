@@ -1,7 +1,17 @@
 {
   "name": "Luchador Crest",
+  "displayName": "Luchador Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_RingKingCrest",
+  "description": "Gain a Luchador Emblem.",
+  "tooltip": "Gain a Luchador Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Luchador_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

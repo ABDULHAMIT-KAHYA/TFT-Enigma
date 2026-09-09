@@ -1,7 +1,17 @@
 {
   "name": "Augmented Power",
+  "displayName": "Augmented Power",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PowerUp",
+  "description": "Your next augment is one tier higher.",
+  "tooltip": "Your next augment is one tier higher.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PowerUp_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

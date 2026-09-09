@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_StrategistCrown",
+  "displayName": "Strategist Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_StrategistCrown",
+  "description": "Gain a Strategist Emblem, an Adaptive Helm, and an Ekko.",
+  "tooltip": "Gain a Strategist Emblem, an Adaptive Helm, and an Ekko.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/StrategistCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

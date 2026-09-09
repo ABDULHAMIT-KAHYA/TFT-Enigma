@@ -1,7 +1,17 @@
 {
   "name": "Onslaught",
+  "displayName": "Onslaught",
+  "isPlaceholder": true,
+  "sourceId": "TFT8_Item_ArsenalRedGun",
+  "description": "Aphelios enters an onslaught, slinging chakrams and dealing massive damage to nearby enemies.",
+  "tooltip": "Aphelios enters an onslaught, slinging chakrams and dealing massive damage to nearby enemies.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT8/TFT8_Item_ArsenalRedGun.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

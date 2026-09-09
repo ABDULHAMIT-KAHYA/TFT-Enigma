@@ -1,7 +1,17 @@
 {
   "name": "Hellion",
+  "displayName": "Hellion",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitHellionActivator",
+  "description": "When an allied champion dies, a Doppelhellion (a one less star copy) equipped with a Red Buff will leap from the Hellion portal and join the fight!<br><br><row>(@TFTTrait.TFTEvent5YR_Hellion.1:MinUnits@) The first @TFTTrait.TFTEvent5YR_Hellion.1:NumOfUnits@ champions</row><br><row>(@TFTTrait.TFTEvent5YR_Hellion.2:MinUnits@) The first @TFTTrait.TFTEvent5YR_Hellion.2:NumOfUnits@ champions</row>",
+  "tooltip": "When an allied champion dies, a Doppelhellion (a one less star copy) equipped with a Red Buff will leap from the Hellion portal and join the fight!<br><br><row>(@TFTTrait.TFTEvent5YR_Hellion.1:MinUnits@) The first @TFTTrait.TFTEvent5YR_Hellion.1:NumOfUnits@ champions</row><br><row>(@TFTTrait.TFTEvent5YR_Hellion.2:MinUnits@) The first @TFTTrait.TFTEvent5YR_Hellion.2:NumOfUnits@ champions</row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Hellion.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

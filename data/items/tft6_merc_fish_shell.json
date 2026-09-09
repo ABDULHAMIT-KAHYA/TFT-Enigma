@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Fish_Shell",
+  "displayName": "Large Prize",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Fish_Shell",
+  "description": "A defensive item component has been added to your chest.",
+  "tooltip": "A defensive item component has been added to your chest.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "LootObject",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

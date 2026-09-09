@@ -1,7 +1,29 @@
 {
   "name": "4 star Dr. Mundo",
+  "displayName": "4 star Dr. Mundo",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_DrMundo4Star",
+  "description": "4 star Dr. Mundo",
+  "tooltip": "4 star Dr. Mundo",
+  "iconPath": "ASSETS/Characters/TFT14_DrMundo/HUD/TFT14_DrMundo_Square.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
 }

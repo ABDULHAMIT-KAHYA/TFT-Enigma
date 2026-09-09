@@ -1,7 +1,40 @@
 {
   "name": "Axiom Arc III",
+  "displayName": "Axiom Arc III",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_AxiomArc3",
+  "description": "Your allies gain @ManaGain@ Mana on kill. Gain a completed item Anvil.",
+  "tooltip": "Your allies gain @ManaGain@ Mana on kill. Gain a completed item Anvil.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Axiom-Arc-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaGain",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaGain", "value": "15" }, { "name": "NumItems", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: ManaGain", "Unmapped item variable: NumItems", "Unsupported item effect metadata: NumItems"]
 }

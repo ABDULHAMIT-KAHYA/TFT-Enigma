@@ -1,7 +1,17 @@
 {
   "name": "Pyro",
+  "displayName": "Pyro",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitPyroActivator",
+  "description": "Your team gains @TFTTrait.TFTEvent5YR_Pyro:BaseASPct@% %i:scaleAS% Attack Speed.<br><br>For each kill, your team creates an infernal cinder that you collect the next round. For every @TFTTrait.TFTEvent5YR_Pyro:NumCinders@ cinders you collect, your team gains @TFTTrait.TFTEvent5YR_Pyro:ASPctPerNumCinders@% more %i:scaleAS%.<br><br><row>(@TFTTrait.TFTEvent5YR_Pyro.1:MinUnits@) @TFTTrait.TFTEvent5YR_Pyro.1:NumCindersPerKill@ infernal cinder per enemy.</row><br><row>(@TFTTrait.TFTEvent5YR_Pyro.2:MinUnits@) @TFTTrait.TFTEvent5YR_Pyro.2:NumCindersPerKill@ infernal cinders per enemy and execute enemies under @TFTTrait.TFTEvent5YR_Pyro.2:ExecutePct@% Health.</row><br><br>Cinders collected: @TFTUnitProperty.trait:TFTEvent5YR_PyroCindersCollected@<br>Team %i:scaleAS%: @TFTUnitProperty.trait:TFTEvent5YR_PyroAttackSpeed@%",
+  "tooltip": "Your team gains @TFTTrait.TFTEvent5YR_Pyro:BaseASPct@% %i:scaleAS% Attack Speed.<br><br>For each kill, your team creates an infernal cinder that you collect the next round. For every @TFTTrait.TFTEvent5YR_Pyro:NumCinders@ cinders you collect, your team gains @TFTTrait.TFTEvent5YR_Pyro:ASPctPerNumCinders@% more %i:scaleAS%.<br><br><row>(@TFTTrait.TFTEvent5YR_Pyro.1:MinUnits@) @TFTTrait.TFTEvent5YR_Pyro.1:NumCindersPerKill@ infernal cinder per enemy.</row><br><row>(@TFTTrait.TFTEvent5YR_Pyro.2:MinUnits@) @TFTTrait.TFTEvent5YR_Pyro.2:NumCindersPerKill@ infernal cinders per enemy and execute enemies under @TFTTrait.TFTEvent5YR_Pyro.2:ExecutePct@% Health.</row><br><br>Cinders collected: @TFTUnitProperty.trait:TFTEvent5YR_PyroCindersCollected@<br>Team %i:scaleAS%: @TFTUnitProperty.trait:TFTEvent5YR_PyroAttackSpeed@%",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5YR_Set14_Pyro.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

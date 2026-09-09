@@ -1,7 +1,17 @@
 {
   "name": "Black Market Restock",
+  "displayName": "Black Market Restock",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Bilgewater_ShopRefresh",
+  "description": "Replace all items in the Black Market!",
+  "tooltip": "Replace all items in the Black Market!",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Consumables/TFT_Item_Consumable_ShopReroll.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

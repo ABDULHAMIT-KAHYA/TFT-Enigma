@@ -1,7 +1,17 @@
 {
   "name": "Divine Crest",
+  "displayName": "Divine Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_DivineCrest",
+  "description": "Gain a Divine Emblem and a Jax.",
+  "tooltip": "Gain a Divine Emblem and a Jax.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Divine_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,40 @@
 {
   "name": "Heart of Steel",
+  "displayName": "Heart of Steel",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_WarmogsBuckle",
+  "description": "Gain a Steadfast Heart. Every @SecondsPerGain@ seconds of combat its holder survives, Steadfast Heart gains additional @Health@ permanent max Health.",
+  "tooltip": "Gain a Steadfast Heart. Every @SecondsPerGain@ seconds of combat its holder survives, Steadfast Heart gains additional @Health@ permanent max Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HealthyGains_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SecondsPerGain",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "null" }, { "name": "SecondsPerGain", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: SecondsPerGain", "Unmapped non-numeric item variable: Health"]
 }

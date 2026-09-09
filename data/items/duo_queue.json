@@ -1,7 +1,40 @@
 {
   "name": "Duo Queue",
+  "displayName": "Duo Queue",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_DuoQueue",
+  "description": "Gain @NumUnits@ random 5-cost champions and @NumComponents@ copies of a random component.",
+  "tooltip": "Gain @NumUnits@ random 5-cost champions and @NumComponents@ copies of a random component.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DuoQueue_II.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumComponents", "value": "2" }, { "name": "NumUnits", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumComponents", "Unmapped item variable: NumUnits", "Unsupported item effect metadata: NumComponents", "Unsupported item effect metadata: NumUnits"]
 }

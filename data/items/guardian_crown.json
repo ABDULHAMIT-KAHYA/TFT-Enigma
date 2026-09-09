@@ -1,7 +1,17 @@
 {
   "name": "Guardian Crown",
+  "displayName": "Guardian Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_GuardianEmblem2",
+  "description": "Gain a Guardian Emblem, a Sunfire Cape, and a Rakan.",
+  "tooltip": "Gain a Guardian Emblem, a Sunfire Cape, and a Rakan.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Guardian-Crown-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,63 @@
 {
   "name": "Backup Dancers",
+  "displayName": "Backup Dancers",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_BackupDancers",
+  "description": "Combat start:  Every @Period@ seconds, champions in your @BenchSlots@ rightmost bench slots grant your team @AttackSpeedPerUnit*100@% Attack Speed per slot.",
+  "tooltip": "Combat start:  Every @Period@ seconds, champions in your @BenchSlots@ rightmost bench slots grant your team @AttackSpeedPerUnit*100@% Attack Speed per slot.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BackupDancers_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Backup Dancers:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.03, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.03,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeedPerUnit",
+      "rawSourceValue": "0.03",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeedPerUnit", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.03, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BaseAttackSpeed",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BenchSlots",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Period",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeedPerUnit", "value": "0.03" }, { "name": "BaseAttackSpeed", "value": "null" }, { "name": "BenchSlots", "value": "3" }, { "name": "Period", "value": "3" }],
+  "importWarnings": ["Metadata-only item effect: AttackSpeedPerUnit -> GrantStats", "Unmapped item variable: BenchSlots", "Unmapped item variable: Period", "Unmapped non-numeric item variable: BaseAttackSpeed", "Unsupported item effect metadata: BaseAttackSpeed", "Unsupported item effect metadata: BenchSlots", "Unsupported item effect metadata: Period"]
 }

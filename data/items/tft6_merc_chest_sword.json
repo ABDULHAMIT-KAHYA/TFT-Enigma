@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Chest_Sword",
+  "displayName": "Large Prize",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Chest_Sword",
+  "description": "A 4-cost champion and 10 gold has been added to your chest.",
+  "tooltip": "A 4-cost champion and 10 gold has been added to your chest.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

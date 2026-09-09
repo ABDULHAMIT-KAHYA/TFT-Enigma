@@ -1,7 +1,29 @@
 {
   "name": "The Strongest Survive",
+  "displayName": "The Strongest Survive",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SupremeCells_AllForOne",
+  "description": "Whenever an ally dies, they grant the Supreme Cell with the most damage this round @PercentHealth*100@% of their maximum health. Gain a Kai'Sa and Kennen.",
+  "tooltip": "Whenever an ally dies, they grant the Supreme Cell with the most damage this round @PercentHealth*100@% of their maximum health. Gain a Kai'Sa and Kennen.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AllForOne_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentHealth",
+      "rawSourceValue": "0.08",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PercentHealth", "value": "0.08" }],
+  "importWarnings": ["Unmapped item variable: PercentHealth"]
 }

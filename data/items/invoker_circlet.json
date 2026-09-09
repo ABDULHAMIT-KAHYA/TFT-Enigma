@@ -1,7 +1,17 @@
 {
   "name": "Invoker Circlet",
+  "displayName": "Invoker Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_InvokerCirclet",
+  "description": "Get an InvokerEmblem, a Lissandra, and a Needlessly Large Rod.",
+  "tooltip": "Get an InvokerEmblem, a Lissandra, and a Needlessly Large Rod.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

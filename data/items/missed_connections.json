@@ -1,7 +1,17 @@
 {
   "name": "Missed Connections",
+  "displayName": "Missed Connections",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_MissedConnections",
+  "description": "Gain a copy of each 1-cost champion.",
+  "tooltip": "Gain a copy of each 1-cost champion.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missed-Connections-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

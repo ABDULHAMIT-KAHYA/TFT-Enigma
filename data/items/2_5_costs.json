@@ -1,7 +1,62 @@
 {
   "name": "2  5-costs",
+  "displayName": "2  5-costs",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_1star5cost_Eve",
+  "description": "Gain @NumChamps_TOOLTIPONLY@ random @StarLevel_TOOLTIPONLY@-star @ChampCost_TOOLTIPONLY@ cost champions. Lose @HealthLoss@ Tactician Health.",
+  "tooltip": "Gain @NumChamps_TOOLTIPONLY@ random @StarLevel_TOOLTIPONLY@-star @ChampCost_TOOLTIPONLY@ cost champions. Lose @HealthLoss@ Tactician Health.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_5c.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ChampCost_TOOLTIPONLY",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthLoss",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumChamps_TOOLTIPONLY",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StarLevel_TOOLTIPONLY",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ChampCost_TOOLTIPONLY", "value": "5" }, { "name": "HealthLoss", "value": "null" }, { "name": "NumChamps_TOOLTIPONLY", "value": "2" }, { "name": "StarLevel_TOOLTIPONLY", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: ChampCost_TOOLTIPONLY", "Unmapped item variable: NumChamps_TOOLTIPONLY", "Unmapped item variable: StarLevel_TOOLTIPONLY", "Unmapped non-numeric item variable: HealthLoss"]
 }

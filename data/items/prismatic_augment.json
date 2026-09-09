@@ -1,7 +1,17 @@
 {
   "name": "Prismatic Augment",
+  "displayName": "Prismatic Augment",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_PrismaticAugment",
+  "description": "Open an armory of 3 Prismatic augments and choose one.",
+  "tooltip": "Open an armory of 3 Prismatic augments and choose one.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

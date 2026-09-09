@@ -1,7 +1,42 @@
 {
   "name": "Kinetic Barrier",
+  "displayName": "Kinetic Barrier",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_KineticBarrier",
+  "description": "Piltover units gain @HigherResist@ Armor and @LowerResist@ Magic Resist. If they've taken more magic damage than physical, they gain the opposite.",
+  "tooltip": "Piltover units gain @HigherResist@ Armor and @LowerResist@ Magic Resist. If they've taken more magic damage than physical, they gain the opposite.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_KineticBarrier.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 65,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "HigherResist",
+      "rawSourceValue": "65",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 65, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "LowerResist",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 30, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "HigherResist", "value": "65" }, { "name": "LowerResist", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: HigherResist", "Unmapped item variable: LowerResist"]
 }

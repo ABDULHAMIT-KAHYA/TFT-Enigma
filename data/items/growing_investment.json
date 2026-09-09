@@ -1,7 +1,62 @@
 {
   "name": "Growing Investment",
+  "displayName": "Growing Investment",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Consumable_BagOfGold",
+  "description": "Use on a champion to gain @TFTUnitProperty.item:TFT14_BagOfGold_Gold@ gold. After each combat, increase the amount by @GoldPerRound@.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Use on a champion to gain @TFTUnitProperty.item:TFT14_BagOfGold_Gold@ gold. After each combat, increase the amount by @GoldPerRound@.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Consumable_BagOfGold.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldPerRound",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InitialGold",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 99,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxGold",
+      "rawSourceValue": "99",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumCombats",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldPerRound", "value": "1" }, { "name": "InitialGold", "value": "4" }, { "name": "MaxGold", "value": "99" }, { "name": "NumCombats", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: GoldPerRound", "Unmapped item variable: InitialGold", "Unmapped item variable: MaxGold", "Unmapped item variable: NumCombats", "Unsupported item effect metadata: GoldPerRound", "Unsupported item effect metadata: InitialGold", "Unsupported item effect metadata: MaxGold", "Unsupported item effect metadata: NumCombats"]
 }

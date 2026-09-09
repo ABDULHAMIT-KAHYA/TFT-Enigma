@@ -1,7 +1,42 @@
 {
   "name": "Scorch",
+  "displayName": "Scorch",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_RagewingScorch",
+  "description": "Every @DamageFrequency@th instance of Ragewing champion's damage deals @DamageIncrease@% more damage and is converted to true damage. Gain a Senna.",
+  "tooltip": "Every @DamageFrequency@th instance of Ragewing champion's damage deals @DamageIncrease@% more damage and is converted to true damage. Gain a Senna.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Scorch-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "DamageFrequency",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 5, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "DamageIncrease",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 20, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageFrequency", "value": "5" }, { "name": "DamageIncrease", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: DamageFrequency", "Unmapped item variable: DamageIncrease"]
 }

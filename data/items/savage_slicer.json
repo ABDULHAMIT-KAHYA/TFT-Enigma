@@ -1,9 +1,91 @@
 {
   "name": "Savage Slicer",
+  "displayName": "Savage Slicer",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_AnimaSquadItem_Tier1_SavageSlicer",
+  "description": "Attacks hit the target and all adjacent enemies for @SplashDamage*100@% of Basic Attack Damage. Omnivamp applies @OmnivampEffectiveness*100@% to this damage.<br><br><TFTGuildActive enabled=TFT17_AnimaSquad_Tier1Item_IsEnhanced alternate=TFTGuildInactive>Briar Bonus: If this item is equipped on Briar, on cast this effect happens @BriarHitsOnCast@ times.</TFTGuildActive>",
+  "tooltip": "Attacks hit the target and all adjacent enemies for @SplashDamage*100@% of Basic Attack Damage. Omnivamp applies @OmnivampEffectiveness*100@% to this damage.<br><br><TFTGuildActive enabled=TFT17_AnimaSquad_Tier1Item_IsEnhanced alternate=TFTGuildInactive>Briar Bonus: If this item is equipped on Briar, on cast this effect happens @BriarHitsOnCast@ times.</TFTGuildActive>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_AnimaSquadItem_SavageSlicer_T1.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Savage Slicer:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Savage Slicer:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 1.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Savage Slicer:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCast",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BriarHitsOnCast",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 10, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCast",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "HexRange",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCast",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "SplashDamage",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCast",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCast",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "OmnivampEffectiveness",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:OmnivampEffectiveness", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 1.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCast",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StatOmnivamp",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:StatOmnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.1" }, { "name": "BriarHitsOnCast", "value": "10" }, { "name": "HexRange", "value": "1" }, { "name": "OmnivampEffectiveness", "value": "1.5" }, { "name": "SplashDamage", "value": "0.3" }, { "name": "StatOmnivamp", "value": "0.1" }],
+  "importWarnings": ["Metadata-only item effect: AD -> GrantStats", "Metadata-only item effect: BriarHitsOnCast -> DealDamage", "Metadata-only item effect: HexRange -> DealDamage", "Metadata-only item effect: OmnivampEffectiveness -> GrantStats", "Metadata-only item effect: SplashDamage -> DealDamage", "Metadata-only item effect: StatOmnivamp -> GrantStats", "Unmapped item variable: BriarHitsOnCast", "Unmapped item variable: HexRange", "Unmapped item variable: SplashDamage"]
 }

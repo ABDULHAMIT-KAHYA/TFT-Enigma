@@ -1,7 +1,29 @@
 {
   "name": "Vision",
+  "displayName": "Vision",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_TenetVision",
+  "description": "You will be offered Might and Guile augments this game. When you reach Level&nbsp;@LevelReq@, gain a random 5-cost champion, a completed item anvil, and a Champion Duplicator. <br><br><rules>Collecting all 3 Tenet augments grants a powerful reward.</rules>",
+  "tooltip": "You will be offered Might and Guile augments this game. When you reach Level&nbsp;@LevelReq@, gain a random 5-cost champion, a completed item anvil, and a Champion Duplicator. <br><br><rules>Collecting all 3 Tenet augments grants a powerful reward.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vision_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LevelReq",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "LevelReq", "value": "9" }],
+  "importWarnings": ["Unmapped item variable: LevelReq", "Unsupported item effect metadata: LevelReq"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Unlimited Power",
+  "displayName": "Unlimited Power",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_UnlimitedPower",
+  "description": "Gain a Nashor's Tooth, a Jeweled Gauntlet, a Needlessly Large Rod and a Magnetic Remover.<br><br><rules>Useful for Magic Carries!</rules>",
+  "tooltip": "Gain a Nashor's Tooth, a Jeweled Gauntlet, a Needlessly Large Rod and a Magnetic Remover.<br><br><rules>Useful for Magic Carries!</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/UnlimitedPower_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,17 @@
 {
   "name": "Chosen Wolves",
+  "displayName": "Chosen Wolves",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_TeamupAugment_AmbessaKindred",
+  "description": "Gain an Ambessa and a Kindred. When Kindred casts, Ambessa always gains their protection against death and gains Attack Damage while protected. When Ambessa casts, Wolf strikes all enemies hit, dealing reduced damage.",
+  "tooltip": "Gain an Ambessa and a Kindred. When Kindred casts, Ambessa always gains their protection against death and gains Attack Damage while protected. When Ambessa casts, Wolf strikes all enemies hit, dealing reduced damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ChosenWolves_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

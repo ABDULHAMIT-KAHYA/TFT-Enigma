@@ -1,7 +1,54 @@
 {
   "name": "The God's Eye Opens",
+  "displayName": "The God's Eye Opens",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Augment_SoulFighter_TheGodsEyeOpens",
+  "description": "Every @Cadence@ seconds the God's Eye grants a random Soul Fighter @ShieldAmount@ shield and @AS*100@% stacking Attack Speed for the rest of combat. Gain a Kalista and Naafiri.",
+  "tooltip": "Every @Cadence@ seconds the God's Eye grants a random Soul Fighter @ShieldAmount@ shield and @AS*100@% stacking Attack Speed for the rest of combat. Gain a Kalista and Naafiri.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AwakenTheGodsEye_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:The God's Eye Opens:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Cadence",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Cadence", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldAmount",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldAmount", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 200, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "0.12" }, { "name": "Cadence", "value": "4" }, { "name": "ShieldAmount", "value": "200" }],
+  "importWarnings": ["Unmapped item variable: Cadence", "Unmapped item variable: ShieldAmount"]
 }

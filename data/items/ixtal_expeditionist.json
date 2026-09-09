@@ -1,7 +1,29 @@
 {
   "name": "Ixtal Expeditionist",
+  "displayName": "Ixtal Expeditionist",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_Ixtal_Expeditionist",
+  "description": "Gain a Qiyana, a Neeko, and a Milio. Increase your current and max player Health by @PlayerHealth@.",
+  "tooltip": "Gain a Qiyana, a Neeko, and a Milio. Increase your current and max player Health by @PlayerHealth@.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Rejuvenating-Flames-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PlayerHealth",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PlayerHealth", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: PlayerHealth"]
 }

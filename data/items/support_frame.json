@@ -1,7 +1,17 @@
 {
   "name": "Support Frame",
+  "displayName": "Support Frame",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_FrameSupport",
+  "description": "!!DO NOT PICK - NOT YET IMPLEMENTED!!<br>4 Range, Hybrid Caster<br>Specialized in debilitating enemies and empowering allies.",
+  "tooltip": "!!DO NOT PICK - NOT YET IMPLEMENTED!!<br>4 Range, Hybrid Caster<br>Specialized in debilitating enemies and empowering allies.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_FrameSupport.TFT_Set17.tex",
+  "itemCategory": "SupportItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

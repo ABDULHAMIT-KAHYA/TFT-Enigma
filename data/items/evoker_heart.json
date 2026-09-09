@@ -1,7 +1,17 @@
 {
   "name": "Evoker Heart",
+  "displayName": "Evoker Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_EvokerTrait",
+  "description": "Your team counts as having 1 additional Evoker. Gain a Zyra.",
+  "tooltip": "Your team counts as having 1 additional Evoker. Gain a Zyra.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Evoker-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,30 @@
 {
   "name": "Terrify",
+  "displayName": "Terrify",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_WhispersTerrify",
+  "description": "Your units take @DamageReduction@% less damage from enemies shrunken by Whisper champions. Gain a Sylas.",
+  "tooltip": "Your units take @DamageReduction@% less damage from enemies shrunken by Whisper champions. Gain a Sylas.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Terrify-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Terrify:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageReduction",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageReduction", "value": "15" }],
+  "importWarnings": []
 }

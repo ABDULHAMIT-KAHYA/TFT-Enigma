@@ -1,7 +1,17 @@
 {
   "name": "Syndra",
+  "displayName": "Syndra",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Syndra",
+  "description": "Syndra",
+  "tooltip": "Syndra",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Syndra_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Soldier_Kraken",
+  "displayName": "Large Prize",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Soldier_Kraken",
+  "description": "A Loaded Dice and 2 gold are placed in your chest.",
+  "tooltip": "A Loaded Dice and 2 gold are placed in your chest.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

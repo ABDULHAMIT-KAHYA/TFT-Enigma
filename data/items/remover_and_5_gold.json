@@ -1,7 +1,17 @@
 {
   "name": "Remover and 5 Gold",
+  "displayName": "Remover and 5 Gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Remover_And_Gold",
+  "description": "Remover and 5 Gold",
+  "tooltip": "Remover and 5 Gold",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Consumables/TFT_Item_Consumable_ItemRemover.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

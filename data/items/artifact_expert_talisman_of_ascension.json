@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: Talisman Of Ascension",
+  "displayName": "Artifact Expert: Talisman Of Ascension",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_TalismanOfAscension",
+  "description": "Get a 2* Zac, a Talisman Of Ascension, and a Giant Belt",
+  "tooltip": "Get a 2* Zac, a Talisman Of Ascension, and a Giant Belt",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

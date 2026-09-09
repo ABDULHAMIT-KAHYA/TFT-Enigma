@@ -1,0 +1,62 @@
+{
+  "name": "TFT15_Augment_CrystalGambit_DiamondHands",
+  "displayName": "Diamond Hands",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_CrystalGambit_DiamondHands",
+  "description": "Gain @IncreasedGP*100@% more total Gems from Crystal Gambit, but you can only cash out once, on @CashoutStage@-@CashoutRound@. While Double Down is active, winning loses an additional @PercentGPLostOnWin*100@% of your total Gems rather than cashing out.",
+  "tooltip": "Gain @IncreasedGP*100@% more total Gems from Crystal Gambit, but you can only cash out once, on @CashoutStage@-@CashoutRound@. While Double Down is active, winning loses an additional @PercentGPLostOnWin*100@% of your total Gems rather than cashing out.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DiamondHands_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CashoutRound",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CashoutStage",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IncreasedGP",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentGPLostOnWin",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CashoutRound", "value": "7" }, { "name": "CashoutStage", "value": "4" }, { "name": "IncreasedGP", "value": "0.5" }, { "name": "PercentGPLostOnWin", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: CashoutRound", "Unmapped item variable: CashoutStage", "Unmapped item variable: IncreasedGP", "Unmapped item variable: PercentGPLostOnWin", "Unsupported item effect metadata: CashoutRound", "Unsupported item effect metadata: CashoutStage", "Unsupported item effect metadata: IncreasedGP", "Unsupported item effect metadata: PercentGPLostOnWin"]
+}

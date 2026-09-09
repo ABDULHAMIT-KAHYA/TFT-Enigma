@@ -1,0 +1,51 @@
+{
+  "name": "TFT17_MarketOffering_ThreeCostChampion_Owned",
+  "displayName": "Owned @Tier@ cost",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_ThreeCostChampion_Owned",
+  "description": "Gain a copy of a @Tier@-cost champion you own and @BonusGold@ gold.<br><br><rules>If you don't own any @Tier@-cost champions, gain a random one </rules>",
+  "tooltip": "Gain a copy of a @Tier@-cost champion you own and @BonusGold@ gold.<br><br><rules>If you don't own any @Tier@-cost champions, gain a random one </rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_3c.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusGold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Tier",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusGold", "value": "2" }, { "name": "NumUnits", "value": "1" }, { "name": "Tier", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: BonusGold", "Unmapped item variable: NumUnits", "Unmapped item variable: Tier", "Unsupported item effect metadata: BonusGold", "Unsupported item effect metadata: NumUnits", "Unsupported item effect metadata: Tier"]
+}

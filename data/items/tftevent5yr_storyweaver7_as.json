@@ -1,0 +1,42 @@
+{
+  "name": "TFTEvent5YR_Storyweaver7_AS",
+  "displayName": "Tome of Swiftness",
+  "isPlaceholder": false,
+  "sourceId": "TFTEvent5YR_Storyweaver7_AS",
+  "description": "Kayle deals @DamageAmpPercent*100@% more damage. Her attacks now hit in a @HexRadius@-hex radius around the target",
+  "tooltip": "Kayle deals @DamageAmpPercent*100@% more damage. Her attacks now hit in a @HexRadius@-hex radius around the target",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/5YR/TFTEvent5YR_Storyweaver_AttackSpeed3.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+    { "name": "Item:TFTEvent5YR_Storyweaver7_AS:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "HexRadius",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmpPercent",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmpPercent", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmpPercent", "value": "0.2" }, { "name": "HexRadius", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: HexRadius"]
+}

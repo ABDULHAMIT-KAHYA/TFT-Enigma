@@ -1,7 +1,17 @@
 {
   "name": "5-cost champion and 10 Gold",
+  "displayName": "5-cost champion and 10 Gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Tier5_Units_And_Gold",
+  "description": "5-cost champion and 10 Gold",
+  "tooltip": "5-cost champion and 10 Gold",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_5c.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

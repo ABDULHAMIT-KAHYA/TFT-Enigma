@@ -1,7 +1,17 @@
 {
   "name": "Dominator Crown",
+  "displayName": "Dominator Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_DominatorCrown",
+  "description": "Gain a Dominator Emblem, a Protector's Vow, and a Blitzcrank.",
+  "tooltip": "Gain a Dominator Emblem, a Protector's Vow, and a Blitzcrank.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Dominator_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,17 @@
 {
   "name": "6 gold",
+  "displayName": "6 gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Gold_6",
+  "description": "6 gold",
+  "tooltip": "6 gold",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistGiveGold.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

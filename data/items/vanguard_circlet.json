@@ -1,7 +1,17 @@
 {
   "name": "Vanguard Circlet",
+  "displayName": "Vanguard Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_VanguardCirclet",
+  "description": "Gain a Vanguard Emblem, a Leona, and a Giant's Belt.",
+  "tooltip": "Gain a Vanguard Emblem, a Leona, and a Giant's Belt.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Vanguard_III.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

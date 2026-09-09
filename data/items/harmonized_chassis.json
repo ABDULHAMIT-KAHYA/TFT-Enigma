@@ -1,7 +1,113 @@
 {
   "name": "Harmonized Chassis",
+  "displayName": "Harmonized Chassis",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_MordekaiserCyberneticItem_Radiant",
+  "description": "All Shields are <TFTRadiantItemBonus>@ShieldEffectivenessPercent*100@%</TFTRadiantItemBonus> more effective on the holder. <TFTRadiantItemBonus>Every second</TFTRadiantItemBonus>, siphon <TFTRadiantItemBonus>@HealthSiphonAmt*100@%</TFTRadiantItemBonus> of the owner's max Health from the <TFTRadiantItemBonus>nearest @NumEnemies@ enemies<TFTRadiantItemBonus> and convert it to a Shield for </TFTRadiantItemBonus>@ShieldDuration@</TFTRadiantItemBonus> seconds.<br><br><TFTPassive>Shielding This Round: @TFTUnitProperty.item:TFT14_Trait_Cybernetic_MordekaiserItem_TotalShielding@</TFTPassive><br><br><rules>Recommended users: Mordekaiser, Jax, and Sejuani</rules>",
+  "tooltip": "All Shields are <TFTRadiantItemBonus>@ShieldEffectivenessPercent*100@%</TFTRadiantItemBonus> more effective on the holder. <TFTRadiantItemBonus>Every second</TFTRadiantItemBonus>, siphon <TFTRadiantItemBonus>@HealthSiphonAmt*100@%</TFTRadiantItemBonus> of the owner's max Health from the <TFTRadiantItemBonus>nearest @NumEnemies@ enemies<TFTRadiantItemBonus> and convert it to a Shield for </TFTRadiantItemBonus>@ShieldDuration@</TFTRadiantItemBonus> seconds.<br><br><TFTPassive>Shielding This Round: @TFTUnitProperty.item:TFT14_Trait_Cybernetic_MordekaiserItem_TotalShielding@</TFTPassive><br><br><rules>Recommended users: Mordekaiser, Jax, and Sejuani</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14/TFT14_Item_MordekaiserCyberneticItem_Radiant.TFT_Set14.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:Harmonized Chassis:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 400, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 400,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "400",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 400, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthSiphonAmt",
+      "rawSourceValue": "0.08",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:HealthSiphonAmt", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumEnemies",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:NumEnemies", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldEffectivenessPercent",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldEffectivenessPercent", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SiphonFrequency",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:SiphonFrequency", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{5f064173}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:{5f064173}", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{7659e5bd}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:{7659e5bd}", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "400" }, { "name": "HealthSiphonAmt", "value": "0.08" }, { "name": "NumEnemies", "value": "3" }, { "name": "ShieldDuration", "value": "8" }, { "name": "ShieldEffectivenessPercent", "value": "1" }, { "name": "SiphonFrequency", "value": "1" }, { "name": "{5f064173}", "value": "3" }, { "name": "{7659e5bd}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: HealthSiphonAmt", "Unmapped item variable: NumEnemies", "Unmapped item variable: ShieldDuration", "Unmapped item variable: ShieldEffectivenessPercent", "Unmapped item variable: SiphonFrequency", "Unmapped item variable: {5f064173}", "Unmapped item variable: {7659e5bd}"]
 }

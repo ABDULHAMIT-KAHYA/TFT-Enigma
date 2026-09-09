@@ -1,7 +1,51 @@
 {
   "name": "I'm the Carry Now",
+  "displayName": "I'm the Carry Now",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ImTheCarryNow",
+  "description": "Get a Golem with tailored offensive items. It gets stronger at the start of each Stage.",
+  "tooltip": "Get a Golem with tailored offensive items. It gets stronger at the start of each Stage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ImtheCarrynow_III.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{2d6883d7}",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 475,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{8715634f}",
+      "rawSourceValue": "475",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{92c6e7f9}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{2d6883d7}", "value": "0.2" }, { "name": "{8715634f}", "value": "475" }, { "name": "{92c6e7f9}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: {2d6883d7}", "Unmapped item variable: {8715634f}", "Unmapped non-numeric item variable: {92c6e7f9}", "Unsupported item effect metadata: {2d6883d7}", "Unsupported item effect metadata: {8715634f}", "Unsupported item effect metadata: {92c6e7f9}"]
 }

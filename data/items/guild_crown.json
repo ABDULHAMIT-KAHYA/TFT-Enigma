@@ -1,7 +1,17 @@
 {
   "name": "Guild Crown",
+  "displayName": "Guild Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_GuildEmblem2",
+  "description": "Gain a Guild Emblem, a Protector's Vow, and a Twitch.",
+  "tooltip": "Gain a Guild Emblem, a Protector's Vow, and a Twitch.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Guild-Crown-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

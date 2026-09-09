@@ -1,7 +1,52 @@
 {
   "name": "Archdemon's Staff Of Immortality",
+  "displayName": "Archdemon's Staff Of Immortality",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_LudensEchoShadow",
+  "description": "Each time the holder casts their Ability, they gain empty maximum Health equal to @ManaRatio@% of their maximum Mana. The holder then heals for that amount.<br>",
+  "tooltip": "Each time the holder casts their Ability, they gain empty maximum Health equal to @ManaRatio@% of their maximum Mana. The holder then heals for that amount.<br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Archangel_Staff.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Archdemon's Staff Of Immortality:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCast",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCast",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCast",
+      "value": 700,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaRatio",
+      "rawSourceValue": "700",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "10" }, { "name": "Mana", "value": "15" }, { "name": "ManaRatio", "value": "700" }],
+  "importWarnings": ["Metadata-only item effect: AP -> GrantStats", "Metadata-only item effect: Mana -> Heal", "Metadata-only item effect: ManaRatio -> Heal", "Unmapped item variable: Mana", "Unmapped item variable: ManaRatio"]
 }

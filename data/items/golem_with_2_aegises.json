@@ -1,7 +1,17 @@
 {
   "name": "Golem with 2 Aegises.",
+  "displayName": "Golem with 2 Aegises.",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Golem_2xAegis",
+  "description": "A golem with 2 Aegises of the Legion, an item which provides Armor, Magic Resist, and Attack Speed to allies behind it.",
+  "tooltip": "A golem with 2 Aegises of the Legion, an item which provides Armor, Magic Resist, and Attack Speed to allies behind it.",
+  "iconPath": "ASSETS/Characters/TFT_BlueGolem/HUD/TFT_BlueGolem_Spell.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

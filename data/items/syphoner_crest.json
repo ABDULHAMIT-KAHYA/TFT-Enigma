@@ -1,7 +1,17 @@
 {
   "name": "Syphoner Crest",
+  "displayName": "Syphoner Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_SyphonerCrest",
+  "description": "Gain a Syphoner Emblem and a Vladimir.",
+  "tooltip": "Gain a Syphoner Emblem and a Vladimir.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Syphoner_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

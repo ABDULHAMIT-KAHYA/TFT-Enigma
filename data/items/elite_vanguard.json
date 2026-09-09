@@ -1,7 +1,30 @@
 {
   "name": "Elite Vanguard",
+  "displayName": "Elite Vanguard",
+  "isPlaceholder": false,
+  "sourceId": "TFTTutorial_Augment_WithItemAS2",
+  "description": "Your champions holding an item gain @AttackSpeed*100@ Attack Speed.",
+  "tooltip": "Your champions holding an item gain @AttackSpeed*100@ Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tutorial-Elite-Vanguard-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Elite Vanguard:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.2" }],
+  "importWarnings": []
 }

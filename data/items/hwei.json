@@ -1,7 +1,17 @@
 {
   "name": "Hwei",
+  "displayName": "Hwei",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Hwei",
+  "description": "Hwei",
+  "tooltip": "Hwei",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Hwei_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

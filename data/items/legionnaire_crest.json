@@ -1,7 +1,17 @@
 {
   "name": "Legionnaire Crest",
+  "displayName": "Legionnaire Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_LegionnaireCrest",
+  "description": "Gain a Legionnaire Emblem and an Irelia.",
+  "tooltip": "Gain a Legionnaire Emblem and an Irelia.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Legionnaire_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

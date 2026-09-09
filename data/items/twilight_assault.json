@@ -1,7 +1,17 @@
 {
   "name": "Twilight Assault",
+  "displayName": "Twilight Assault",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_ShenCarry",
+  "description": "Gain a Shen. Your strongest Shen becomes a ranged Marksman gaining +3 Range. His ability no longer shields but instead deals additional damage.",
+  "tooltip": "Gain a Shen. Your strongest Shen becomes a ranged Marksman gaining +3 Range. His ability no longer shields but instead deals additional damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/EtherealBlade_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,29 @@
 {
   "name": "Money Monsoon",
+  "displayName": "Money Monsoon",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_MoneyMonsoon",
+  "description": "Gain @RoundGold@ gold now and every round for the rest of the game.",
+  "tooltip": "Gain @RoundGold@ gold now and every round for the rest of the game.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/MoneyMonsoon_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundGold",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RoundGold", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: RoundGold", "Unsupported item effect metadata: RoundGold"]
 }

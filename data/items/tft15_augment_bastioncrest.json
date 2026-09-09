@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_BastionCrest",
+  "displayName": "Bastion Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_BastionCrest",
+  "description": "Gain a Bastion Emblem.",
+  "tooltip": "Gain a Bastion Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Bastion_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

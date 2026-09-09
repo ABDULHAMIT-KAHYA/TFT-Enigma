@@ -1,7 +1,62 @@
 {
   "name": "Scoreboard Scrapper",
+  "displayName": "Scoreboard Scrapper",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_ScoreboardScrapper",
+  "description": "Every round, if you're in the bottom @BottomHalf@, your team permanently gains @LoserBoost*100@% Attack Damage and Ability Power. If you're in the Top @UpperHalf@, they have @WinningStatBoost*100@% more Health.",
+  "tooltip": "Every round, if you're in the bottom @BottomHalf@, your team permanently gains @LoserBoost*100@% Attack Damage and Ability Power. If you're in the Top @UpperHalf@, they have @WinningStatBoost*100@% more Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ScoreboardScrapper_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BottomHalf",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.015,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LoserBoost",
+      "rawSourceValue": "0.015",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UpperHalf",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "WinningStatBoost",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BottomHalf", "value": "4" }, { "name": "LoserBoost", "value": "0.015" }, { "name": "UpperHalf", "value": "4" }, { "name": "WinningStatBoost", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: BottomHalf", "Unmapped item variable: LoserBoost", "Unmapped item variable: UpperHalf", "Unmapped item variable: WinningStatBoost"]
 }

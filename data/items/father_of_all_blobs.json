@@ -1,7 +1,29 @@
 {
   "name": "Father Of All Blobs",
+  "displayName": "Father Of All Blobs",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_GigaZac",
+  "description": "When he calls, all bloblets answer.",
+  "tooltip": "When he calls, all bloblets answer.",
+  "iconPath": "ASSETS/Characters/TFT14_Zac/HUD/TFT14_Zac_Square.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
 }

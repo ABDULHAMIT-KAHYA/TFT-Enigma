@@ -1,7 +1,17 @@
 {
   "name": "Piltover Crown",
+  "displayName": "Piltover Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_PiltoverCrown",
+  "description": "Get a Piltover Crown, a Loris, and a Gargoyle Stoneplate.",
+  "tooltip": "Get a Piltover Crown, a Loris, and a Gargoyle Stoneplate.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

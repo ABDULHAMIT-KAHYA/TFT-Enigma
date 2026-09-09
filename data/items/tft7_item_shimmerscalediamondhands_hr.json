@@ -1,0 +1,87 @@
+{
+  "name": "TFT7_Item_ShimmerscaleDiamondHands_HR",
+  "displayName": "Diamond Hands",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Item_ShimmerscaleDiamondHands_HR",
+  "description": "Once per combat: At @HPThreshold1*100@% Health, become invulnerable for @BaseDamageImmunityTime@ seconds and grant %i:goldCoins% @GoldPerImmunityProc@ gold.",
+  "tooltip": "Once per combat: At @HPThreshold1*100@% Health, become invulnerable for @BaseDamageImmunityTime@ seconds and grant %i:goldCoins% @GoldPerImmunityProc@ gold.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Ornn_Items/TFT10_DiamondHands.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+    { "name": "Item:TFT7_Item_ShimmerscaleDiamondHands_HR:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 200, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT7_Item_ShimmerscaleDiamondHands_HR:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 200, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseDamageImmunityTime",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldPerImmunityProc",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPThreshold1",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": -2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPThreshold2",
+      "rawSourceValue": "-2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "25" }, { "name": "BaseDamageImmunityTime", "value": "1.5" }, { "name": "GoldPerImmunityProc", "value": "2" }, { "name": "HPThreshold1", "value": "0.5" }, { "name": "HPThreshold2", "value": "-2" }, { "name": "Health", "value": "200" }],
+  "importWarnings": ["Unmapped item variable: BaseDamageImmunityTime", "Unmapped item variable: GoldPerImmunityProc", "Unmapped item variable: HPThreshold1", "Unmapped item variable: HPThreshold2"]
+}

@@ -1,7 +1,42 @@
 {
   "name": "Force of Darkness",
+  "displayName": "Force of Darkness",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Item_ForceOfNatureShadow",
+  "description": "The holder's team gains <TFTShadowItemBonus>+@MaxArmySizeIncrease@</TFTShadowItemBonus> maximum team size, but <TFTShadowItemPenalty>the player's Little Legend takes +@PercentDamageIncrease@% damage after losing a battle</TFTShadowItemPenalty>.",
+  "tooltip": "The holder's team gains <TFTShadowItemBonus>+@MaxArmySizeIncrease@</TFTShadowItemBonus> maximum team size, but <TFTShadowItemPenalty>the player's Little Legend takes +@PercentDamageIncrease@% damage after losing a battle</TFTShadowItemPenalty>.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Force_of_Nature.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MaxArmySizeIncrease",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "PercentDamageIncrease",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 100, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "MaxArmySizeIncrease", "value": "2" }, { "name": "PercentDamageIncrease", "value": "100" }],
+  "importWarnings": ["Unmapped item variable: MaxArmySizeIncrease", "Unmapped item variable: PercentDamageIncrease"]
 }

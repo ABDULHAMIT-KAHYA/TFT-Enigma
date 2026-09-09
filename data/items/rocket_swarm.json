@@ -1,7 +1,86 @@
 {
   "name": "Rocket Swarm",
+  "displayName": "Rocket Swarm",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_AnimaSquadItem_Tier1_RocketSwarm",
+  "description": "Every @ManaThreshold@ Mana spent, fire a barrage of @NumRockets@ rockets at the target, each dealing @RocketDamagePercent*100@% %i:TFTBaseAD% physical damage.<br><br><TFTGuildActive enabled=TFT17_AnimaSquad_Tier1Item_IsEnhanced alternate=TFTGuildInactive>Jinx Bonus: If this item is equipped on Jinx, instead replace all ability bullets with rockets that deal <TFTBonus>@JinxPercentIncrease*100@%</TFTBonus> increased damage.</TFTGuildActive>",
+  "tooltip": "Every @ManaThreshold@ Mana spent, fire a barrage of @NumRockets@ rockets at the target, each dealing @RocketDamagePercent*100@% %i:TFTBaseAD% physical damage.<br><br><TFTGuildActive enabled=TFT17_AnimaSquad_Tier1Item_IsEnhanced alternate=TFTGuildInactive>Jinx Bonus: If this item is equipped on Jinx, instead replace all ability bullets with rockets that deal <TFTBonus>@JinxPercentIncrease*100@%</TFTBonus> increased damage.</TFTGuildActive>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_AnimaSquadItem_RocketSwarm_T1.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Rocket Swarm:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "JinxPercentIncrease",
+      "rawSourceValue": "0.35",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumRockets",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "RocketDamagePercent",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaThreshold",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.1" }, { "name": "JinxPercentIncrease", "value": "0.35" }, { "name": "ManaRegen", "value": "3" }, { "name": "ManaThreshold", "value": "30" }, { "name": "NumRockets", "value": "4" }, { "name": "RocketDamagePercent", "value": "0.3" }],
+  "importWarnings": ["Unmapped item variable: JinxPercentIncrease", "Unmapped item variable: ManaRegen", "Unmapped item variable: ManaThreshold", "Unmapped item variable: NumRockets", "Unmapped item variable: RocketDamagePercent"]
 }

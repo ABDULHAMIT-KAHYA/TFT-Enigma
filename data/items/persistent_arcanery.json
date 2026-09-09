@@ -1,7 +1,40 @@
 {
   "name": "Persistent Arcanery",
+  "displayName": "Persistent Arcanery",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_XerathZap_PersistentArcanery",
+  "description": "Next combat: Xerath gains @ManaRegen@ Mana Regen and his spell fires @ExtraBlasts@ extra blasts.<br>",
+  "tooltip": "Next combat: Xerath gains @ManaRegen@ Mana Regen and his spell fires @ExtraBlasts@ extra blasts.<br>",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_XerathWand_Self.TFT_Set12.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ExtraBlasts",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ExtraBlasts", "value": "3" }, { "name": "ManaRegen", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: ExtraBlasts", "Unmapped item variable: ManaRegen", "Unsupported item effect metadata: ExtraBlasts"]
 }

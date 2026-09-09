@@ -1,7 +1,40 @@
 {
   "name": "Oasis",
+  "displayName": "Oasis",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_LagoonOasis",
+  "description": "Every @HealTimer@ seconds, Lagoon champions remove all negative effects on themselves and heal for @MissingHPPercent@% of their missing Health. Gain a Zac.",
+  "tooltip": "Every @HealTimer@ seconds, Lagoon champions remove all negative effects on themselves and heal for @MissingHPPercent@% of their missing Health. Gain a Zac.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Oasis-2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealTimer",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MissingHPPercent",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealTimer", "value": "6" }, { "name": "MissingHPPercent", "value": "18" }],
+  "importWarnings": ["Unmapped item variable: HealTimer", "Unmapped item variable: MissingHPPercent"]
 }

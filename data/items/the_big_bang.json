@@ -1,7 +1,17 @@
 {
   "name": "The Big Bang",
+  "displayName": "The Big Bang",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_IvernMinionCarry",
+  "description": "Gain a Meepsie. Your strongest Meepsie becomes a Magic Fighter that leaps to a nearby hex to deal damage in a large radius.",
+  "tooltip": "Gain a Meepsie. Your strongest Meepsie becomes a Magic Fighter that leaps to a nearby hex to deal damage in a large radius.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/MeepSpace9_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

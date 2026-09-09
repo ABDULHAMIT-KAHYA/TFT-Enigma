@@ -1,7 +1,51 @@
 {
   "name": "Piercing Sight",
+  "displayName": "Piercing Sight",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Crossfire2",
+  "description": "Enemies take @BaseDamage*100@% damage as bonus true damage, increased by @PercentInc*100@% up to @PercentMax*100@% every time they take damage.",
+  "tooltip": "Enemies take @BaseDamage*100@% damage as bonus true damage, increased by @PercentInc*100@% up to @PercentMax*100@% every time they take damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crossfire_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BaseDamage",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "PercentInc",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "PercentMax",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseDamage", "value": "0.01" }, { "name": "PercentInc", "value": "0.01" }, { "name": "PercentMax", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: BaseDamage", "Unmapped item variable: PercentInc", "Unmapped item variable: PercentMax"]
 }

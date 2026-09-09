@@ -1,7 +1,51 @@
 {
   "name": "Lightning Strike",
+  "displayName": "Lightning Strike",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_LightningStrike",
+  "description": "After @StrikeDelay@ seconds, lightning strikes the enemy team dealing @MaxHealthDamage*100@% HP true damage and stunning for @StunDuration@ second.",
+  "tooltip": "After @StrikeDelay@ seconds, lightning strikes the enemy team dealing @MaxHealthDamage*100@% HP true damage and stunning for @StunDuration@ second.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LightningStrike_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealthDamage",
+      "rawSourceValue": "0.08",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StrikeDelay",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunDuration",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxHealthDamage", "value": "0.08" }, { "name": "StrikeDelay", "value": "8" }, { "name": "StunDuration", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: MaxHealthDamage", "Unmapped item variable: StrikeDelay", "Unmapped item variable: StunDuration"]
 }

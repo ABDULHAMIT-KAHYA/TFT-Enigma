@@ -1,7 +1,42 @@
 {
   "name": "Infinity Protection",
+  "displayName": "Infinity Protection",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_InfinityProtection",
+  "description": "Gain @GoldAmount@ gold now. On Stage 3-7, gain an Infinity Force. Infinity Force gives allies in the same row a @HealthPercent@% Health shield.<br><br><tftitemrules>Monsters Attack Championship, 2023 </tftitemrules>",
+  "tooltip": "Gain @GoldAmount@ gold now. On Stage 3-7, gain an Infinity Force. Infinity Force gives allies in the same row a @HealthPercent@% Health shield.<br><br><tftitemrules>Monsters Attack Championship, 2023 </tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/InfinityProtection_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldAmount",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:GoldAmount", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPercent",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:HealthPercent", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "GoldAmount", "value": "3" }, { "name": "HealthPercent", "value": "12" }],
+  "importWarnings": ["Unmapped item variable: GoldAmount", "Unmapped item variable: HealthPercent"]
 }

@@ -1,0 +1,52 @@
+{
+  "name": "TFT7_Item_ShimmerscaleCrownOfChampions",
+  "displayName": "Crown of Champions",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Item_ShimmerscaleCrownOfChampions",
+  "description": "Every @SecondsForEmpoweredAttack@ seconds, the next attack deals @AttackGoldMultiplier@x the amount of %i:goldCoins% gold in your bank in true damage.",
+  "tooltip": "Every @SecondsForEmpoweredAttack@ seconds, the next attack deals @AttackGoldMultiplier@x the amount of %i:goldCoins% gold in your bank in true damage.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set7_Shimmerscale/Shimmerscale_CrownOfChampions_Base.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+    { "name": "Item:TFT7_Item_ShimmerscaleCrownOfChampions:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 9001,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackGoldMultiplier",
+      "rawSourceValue": "9001",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SecondsForEmpoweredAttack",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackGoldMultiplier", "value": "9001" }, { "name": "Health", "value": "100" }, { "name": "SecondsForEmpoweredAttack", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: AttackGoldMultiplier", "Unmapped item variable: SecondsForEmpoweredAttack"]
+}

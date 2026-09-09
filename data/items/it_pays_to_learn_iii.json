@@ -1,7 +1,40 @@
 {
   "name": "It Pays to Learn III",
+  "displayName": "It Pays to Learn III",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_ItPaysToLearnIII",
+  "description": "Gain @XP@ XP and @Gold@ gold. ",
+  "tooltip": "Gain @XP@ XP and @Gold@ gold. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/It-Pays-To-Learn-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 16,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "16",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 24,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "24",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "16" }, { "name": "XP", "value": "24" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: XP", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: XP"]
 }

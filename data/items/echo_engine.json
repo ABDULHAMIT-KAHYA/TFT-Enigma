@@ -1,7 +1,29 @@
 {
   "name": "Echo Engine",
+  "displayName": "Echo Engine",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_EchoEngine",
+  "description": "For the rest of combat, repeat the effects of your other Modules every @RepeatSeconds@ seconds.",
+  "tooltip": "For the rest of combat, repeat the effects of your other Modules every @RepeatSeconds@ seconds.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_UnstableCore.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RepeatSeconds",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RepeatSeconds", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: RepeatSeconds", "Unsupported item effect metadata: RepeatSeconds"]
 }

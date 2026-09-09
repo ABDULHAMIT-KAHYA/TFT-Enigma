@@ -1,7 +1,17 @@
 {
   "name": "Stock Market",
+  "displayName": "Stock Market",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_StockMarket",
+  "description": "At the start of every stage, the cost of each unit tier shuffles. ",
+  "tooltip": "At the start of every stage, the cost of each unit tier shuffles. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Stock-Market-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

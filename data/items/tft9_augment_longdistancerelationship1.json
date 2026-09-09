@@ -1,0 +1,29 @@
+{
+  "name": "TFT9_Augment_LongDistanceRelationship1",
+  "displayName": "Long Distance Pals",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_LongDistanceRelationship1",
+  "description": "Combat start: Your 2 units furthest from each other form a bond, sharing @PercentShare*100@% of their Armor, Magic Resist, Attack Damage, and Ability Power with each other.",
+  "tooltip": "Combat start: Your 2 units furthest from each other form a bond, sharing @PercentShare*100@% of their Armor, Magic Resist, Attack Damage, and Ability Power with each other.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Heart-Crown-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "PercentShare",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PercentShare", "value": "0.2" }],
+  "importWarnings": ["Metadata-only item effect: PercentShare -> DealDamage", "Unmapped item variable: PercentShare"]
+}

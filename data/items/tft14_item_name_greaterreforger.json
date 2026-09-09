@@ -1,7 +1,17 @@
 {
   "name": "TFT14_Item_Name_GreaterReforger",
+  "displayName": "TFT14_Item_Name_GreaterReforger",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Consumable_GreaterReforger",
+  "description": "TFT14_Item_Description_GreaterReforger",
+  "tooltip": "TFT14_Item_Description_GreaterReforger",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Placeholders/TFT_Item_Unknown.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

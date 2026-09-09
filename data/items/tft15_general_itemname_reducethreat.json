@@ -1,7 +1,17 @@
 {
   "name": "tft15_General_itemname_ReduceThreat",
+  "displayName": "tft15_General_itemname_ReduceThreat",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_General_Consumable_ReduceThreat",
+  "description": "tft15_General_itemdescription_ReduceThreat",
+  "tooltip": "tft15_General_itemdescription_ReduceThreat",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT15_CommandModItems/TFT15_Item_Icon_CommandMod_ReduceThreat.TFT_Set15.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

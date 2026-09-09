@@ -1,7 +1,17 @@
 {
   "name": "1-star Fiora",
+  "displayName": "1-star Fiora",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_ChampionItem_Fiora",
+  "description": "Gain a 1-star Fiora",
+  "tooltip": "Gain a 1-star Fiora",
+  "iconPath": "ASSETS/Characters/TFT17_Fiora/HUD/TFT17_Fiora_Square.TFT_Set17.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

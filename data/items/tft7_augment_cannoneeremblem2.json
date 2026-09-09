@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Augment_CannoneerEmblem2",
+  "displayName": "Cannoneer Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_CannoneerEmblem2",
+  "description": "Gain a Cannoneer Emblem, a Giant Slayer, and a Zeri.",
+  "tooltip": "Gain a Cannoneer Emblem, a Giant Slayer, and a Zeri.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Canoneer-Crown-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

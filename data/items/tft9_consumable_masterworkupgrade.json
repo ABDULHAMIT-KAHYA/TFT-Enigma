@@ -1,0 +1,17 @@
+{
+  "name": "TFT9_Consumable_MasterworkUpgrade",
+  "displayName": "Masterwork Upgrade",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Consumable_MasterworkUpgrade",
+  "description": "Use on a champion to choose a Radiant version of that champion's craftable completed items. Upgrade the item you choose to its Radiant equivalent and unequip it.",
+  "tooltip": "Use on a champion to choose a Radiant version of that champion's craftable completed items. Upgrade the item you choose to its Radiant equivalent and unequip it.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT9_RegionItems/MasterworkUpgrade.tex",
+  "itemCategory": "RadiantItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

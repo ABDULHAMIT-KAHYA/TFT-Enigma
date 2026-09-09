@@ -1,7 +1,84 @@
 {
   "name": "Expected Unexpectedness",
+  "displayName": "Expected Unexpectedness",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ExpectedUnexpectedness",
+  "description": "Now and at the start of the next @NumStages@ stages, roll 3 dice. Gain various rewards based on their total.",
+  "tooltip": "Now and at the start of the next @NumStages@ stages, roll 3 dice. Gain various rewards based on their total.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Addicted-to-Rolling-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumReforgers",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumStages",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{144f18ac}",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{36f24d98}",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{dae07608}",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{fcb8577b}",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumReforgers", "value": "3" }, { "name": "NumStages", "value": "2" }, { "name": "{144f18ac}", "value": "5" }, { "name": "{36f24d98}", "value": "9" }, { "name": "{dae07608}", "value": "18" }, { "name": "{fcb8577b}", "value": "12" }],
+  "importWarnings": ["Unmapped item variable: NumReforgers", "Unmapped item variable: NumStages", "Unmapped item variable: {144f18ac}", "Unmapped item variable: {36f24d98}", "Unmapped item variable: {dae07608}", "Unmapped item variable: {fcb8577b}", "Unsupported item effect metadata: NumReforgers", "Unsupported item effect metadata: NumStages", "Unsupported item effect metadata: {144f18ac}", "Unsupported item effect metadata: {36f24d98}", "Unsupported item effect metadata: {dae07608}", "Unsupported item effect metadata: {fcb8577b}"]
 }

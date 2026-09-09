@@ -1,7 +1,17 @@
 {
   "name": "Spellweaver Crest",
+  "displayName": "Spellweaver Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_SpellweaverCrest",
+  "description": "Gain a Spellweaver Emblem and a Brand.",
+  "tooltip": "Gain a Spellweaver Emblem and a Brand.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Spellweaver_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

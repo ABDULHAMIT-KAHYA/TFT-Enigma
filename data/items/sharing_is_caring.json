@@ -1,7 +1,40 @@
 {
   "name": "Sharing Is Caring",
+  "displayName": "Sharing Is Caring",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_SharingIsCaring",
+  "description": "Combat start: You gain @YourGold@ gold and your opponent gains @EnemyGold@ gold.",
+  "tooltip": "Combat start: You gain @YourGold@ gold and your opponent gains @EnemyGold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SharingIsCaring_I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "EnemyGold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "YourGold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "EnemyGold", "value": "1" }, { "name": "YourGold", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: EnemyGold", "Unmapped item variable: YourGold", "Unsupported item effect metadata: EnemyGold", "Unsupported item effect metadata: YourGold"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "Deadlier Blades",
+  "displayName": "Deadlier Blades",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TragicalBlade",
+  "description": "Gain a Deathblade. Deathblades permanently gain @AD*100@% Attack Damage whenever their holders score a takedown.",
+  "tooltip": "Gain a Deathblade. Deathblades permanently gain @AD*100@% Attack Damage whenever their holders score a takedown.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DeadlierBlades_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TakeDowns",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "null" }, { "name": "TakeDowns", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: AD", "Unmapped non-numeric item variable: TakeDowns"]
 }

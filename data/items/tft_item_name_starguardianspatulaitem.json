@@ -1,7 +1,29 @@
 {
   "name": "tft_item_name_StarGuardianSpatulaItem",
+  "displayName": "tft_item_name_StarGuardianSpatulaItem",
+  "isPlaceholder": true,
+  "sourceId": "TFT3_Item_StarGuardianSpatulaItem",
+  "description": "tft_item_description_StarGuardianSpatulaItem",
+  "tooltip": "tft_item_description_StarGuardianSpatulaItem",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT3_Item_StarGuardian.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Mana", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: Mana"]
 }

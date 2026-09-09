@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_RandomCompletedItem",
+  "displayName": "Completed Item",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_RandomCompletedItem",
+  "description": "Completed Item",
+  "tooltip": "Completed Item",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,17 @@
 {
   "name": "Blue Loot Orb",
+  "displayName": "Blue Loot Orb",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_BlueOrb",
+  "description": "Blue Loot Orb",
+  "tooltip": "Blue Loot Orb",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "LootObject",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

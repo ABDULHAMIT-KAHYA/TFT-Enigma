@@ -1,7 +1,29 @@
 {
   "name": "tft_item_name_WindHexBuff",
+  "displayName": "tft_item_name_WindHexBuff",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_Hex_Wind",
+  "description": "tft_item_description_WindHexBuff",
+  "tooltip": "tft_item_description_WindHexBuff",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_Hex_Wind.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{0e4779e5}",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{0e4779e5}", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: {0e4779e5}", "Unsupported item effect metadata: {0e4779e5}"]
 }

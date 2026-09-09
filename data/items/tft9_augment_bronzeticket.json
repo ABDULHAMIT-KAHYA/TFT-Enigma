@@ -1,0 +1,40 @@
+{
+  "name": "TFT9_Augment_BronzeTicket",
+  "displayName": "Silver Ticket",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_BronzeTicket",
+  "description": "Gain a free Shop reroll after every @RollNumber@ rerolls. Gain @Gold@ gold.",
+  "tooltip": "Gain a free Shop reroll after every @RollNumber@ rerolls. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldenTicket1.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RollNumber",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "3" }, { "name": "RollNumber", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: RollNumber", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: RollNumber"]
+}

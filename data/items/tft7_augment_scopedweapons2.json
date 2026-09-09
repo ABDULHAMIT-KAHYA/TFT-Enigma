@@ -1,0 +1,40 @@
+{
+  "name": "TFT7_Augment_ScopedWeapons2",
+  "displayName": "Scoped Weapons II",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_ScopedWeapons2",
+  "description": "Your units that start combat in the back 2 rows gain infinite Attack Range and @AS*100@% Attack Speed.",
+  "tooltip": "Your units that start combat in the back 2 rows gain infinite Attack Range and @AS*100@% Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ScopedWeapons3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRangeIncrease",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "null" }, { "name": "HexRangeIncrease", "value": "9" }],
+  "importWarnings": ["Unmapped item variable: HexRangeIncrease", "Unmapped non-numeric item variable: AS", "Unsupported item effect metadata: AS", "Unsupported item effect metadata: HexRangeIncrease"]
+}

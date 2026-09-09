@@ -1,7 +1,17 @@
 {
   "name": "BoomBot Crest",
+  "displayName": "BoomBot Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_BoomBotsCrest",
+  "description": "Gain a BoomBot emblem.",
+  "tooltip": "Gain a BoomBot emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BoomBotsCrest_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

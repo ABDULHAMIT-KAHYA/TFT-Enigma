@@ -1,7 +1,40 @@
 {
   "name": "Corrosion",
+  "displayName": "Corrosion",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Corrosion",
+  "description": "Enemies in the first two rows lose @ResistLoss@ Armor and Magic Resist every @Time@ seconds.",
+  "tooltip": "Enemies in the first two rows lose @ResistLoss@ Armor and Magic Resist every @Time@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Corrosion_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ResistLoss",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Time",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ResistLoss", "value": "4" }, { "name": "Time", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: ResistLoss", "Unmapped item variable: Time", "Unsupported item effect metadata: ResistLoss", "Unsupported item effect metadata: Time"]
 }

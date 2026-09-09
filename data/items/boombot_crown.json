@@ -1,7 +1,17 @@
 {
   "name": "BoomBot Crown",
+  "displayName": "BoomBot Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_BoomBotsCrown",
+  "description": "Gain a BoomBot Emblem, an Ionic Spark, and a Skarner.",
+  "tooltip": "Gain a BoomBot Emblem, an Ionic Spark, and a Skarner.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BoomBotsCirclet_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

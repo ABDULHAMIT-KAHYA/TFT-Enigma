@@ -1,7 +1,29 @@
 {
   "name": "3 star Draven",
+  "displayName": "3 star Draven",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_Draven3Star",
+  "description": "3 star Draven",
+  "tooltip": "3 star Draven",
+  "iconPath": "ASSETS/Characters/TFT14_Draven/HUD/TFT14_Draven_Square.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
 }

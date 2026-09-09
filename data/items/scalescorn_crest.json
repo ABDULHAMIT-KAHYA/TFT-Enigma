@@ -1,7 +1,17 @@
 {
   "name": "Scalescorn Crest",
+  "displayName": "Scalescorn Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_ScalescornEmblem",
+  "description": "Gain a Scalescorn Emblem and a Braum.",
+  "tooltip": "Gain a Scalescorn Emblem and a Braum.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dragonbane-Crest-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

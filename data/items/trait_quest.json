@@ -1,7 +1,51 @@
 {
   "name": "Trait Quest",
+  "displayName": "Trait Quest",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_AurelionSol_TraitQuest_Stage2",
+  "description": "After fielding @NumTraits@ non-unique traits in a player combat, gain a random Emblem and a Reforger.",
+  "tooltip": "After fielding @NumTraits@ non-unique traits in a player combat, gain a random Emblem and a Reforger.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_Sampler.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumEmblems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumReforgers",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumTraits",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumEmblems", "value": "1" }, { "name": "NumReforgers", "value": "1" }, { "name": "NumTraits", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: NumEmblems", "Unmapped item variable: NumReforgers", "Unmapped item variable: NumTraits"]
 }

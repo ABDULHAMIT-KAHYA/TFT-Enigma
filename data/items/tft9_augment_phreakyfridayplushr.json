@@ -1,0 +1,29 @@
+{
+  "name": "TFT9_Augment_PhreakyFridayPlusHR",
+  "displayName": "Phreaky Friday +",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_PhreakyFridayPlusHR",
+  "description": "Gain an Infinity Force. After @CombatNum@ player combats, gain another.<br><br><rules>Infinity Force: Artifact that offers tons of offensive and defensive stats</rules>",
+  "tooltip": "Gain an Infinity Force. After @CombatNum@ player combats, gain another.<br><br><rules>Infinity Force: Artifact that offers tons of offensive and defensive stats</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Phreaky-Friday-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CombatNum",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CombatNum", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: CombatNum", "Unsupported item effect metadata: CombatNum"]
+}

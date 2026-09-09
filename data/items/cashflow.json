@@ -1,7 +1,29 @@
 {
   "name": "Cashflow",
+  "displayName": "Cashflow",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Cashflow",
+  "description": "Gain @GoldPerTurn@ gold each round.",
+  "tooltip": "Gain @GoldPerTurn@ gold each round.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistGiveGold.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldPerTurn",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldPerTurn", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: GoldPerTurn", "Unsupported item effect metadata: GoldPerTurn"]
 }

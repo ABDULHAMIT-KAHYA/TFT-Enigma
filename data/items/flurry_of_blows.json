@@ -1,7 +1,29 @@
 {
   "name": "Flurry of Blows",
+  "displayName": "Flurry of Blows",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_FlurryOfBlows",
+  "description": "Gain a Zeke's Herald. Champions buffed by Zeke's also gain @CSBonus*100@% Critical Strike Chance.",
+  "tooltip": "Gain a Zeke's Herald. Champions buffed by Zeke's also gain @CSBonus*100@% Critical Strike Chance.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FlurryofBlows_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CSBonus",
+      "rawSourceValue": "0.45",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CSBonus", "value": "0.45" }],
+  "importWarnings": ["Unmapped item variable: CSBonus", "Unsupported item effect metadata: CSBonus"]
 }

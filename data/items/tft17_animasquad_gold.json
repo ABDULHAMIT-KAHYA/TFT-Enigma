@@ -1,0 +1,17 @@
+{
+  "name": "TFT17_AnimaSquad_Gold",
+  "displayName": "Gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_AnimaSquad_Gold",
+  "description": "@TFTUnitProperty.trait:TFT13_Crime_Gold@ Gold",
+  "tooltip": "@TFTUnitProperty.trait:TFT13_Crime_Gold@ Gold",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Gold.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_TacticiansShield",
+  "displayName": "Tactician's Shield",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_TacticiansShield",
+  "description": "Tactician's Shield",
+  "tooltip": "Tactician's Shield",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Tacticians_Scepter.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

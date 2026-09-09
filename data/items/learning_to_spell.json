@@ -1,7 +1,52 @@
 {
   "name": "Learning to Spell",
+  "displayName": "Learning to Spell",
+  "isPlaceholder": false,
+  "sourceId": "TFT10_Augment_LearningToSpell",
+  "description": "Your team gains @StartingAP@ bonus Ability Power, and permanently gains @AP@ Ability Power every @NumTakedowns@ takedowns.",
+  "tooltip": "Your team gains @StartingAP@ bonus Ability Power, and permanently gains @AP@ Ability Power every @NumTakedowns@ takedowns.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Learning-To-Spell-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Learning to Spell:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumTakedowns",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StartingAP",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "1" }, { "name": "NumTakedowns", "value": "2" }, { "name": "StartingAP", "value": "12" }],
+  "importWarnings": ["Unmapped item variable: NumTakedowns", "Unmapped item variable: StartingAP", "Unsupported item effect metadata: NumTakedowns", "Unsupported item effect metadata: StartingAP"]
 }

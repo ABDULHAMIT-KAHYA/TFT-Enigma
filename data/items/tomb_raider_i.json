@@ -1,7 +1,40 @@
 {
   "name": "Tomb Raider I",
+  "displayName": "Tomb Raider I",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TombRaider1",
+  "description": "For the next @NumDead@ players eliminated, choose one of their completed items to keep.",
+  "tooltip": "For the next @NumDead@ players eliminated, choose one of their completed items to keep.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TombRaider_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDead",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumInitialItems",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumDead", "value": "3" }, { "name": "NumInitialItems", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: NumDead", "Unmapped non-numeric item variable: NumInitialItems", "Unsupported item effect metadata: NumDead", "Unsupported item effect metadata: NumInitialItems"]
 }

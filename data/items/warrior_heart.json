@@ -1,7 +1,17 @@
 {
   "name": "Warrior Heart",
+  "displayName": "Warrior Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_WarriorTrait",
+  "description": "Your team counts as having 1 additional Warrior. Gain a Yone.",
+  "tooltip": "Your team counts as having 1 additional Warrior. Gain a Yone.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Warrior-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

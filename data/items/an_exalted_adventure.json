@@ -1,7 +1,40 @@
 {
   "name": "An Exalted Adventure",
+  "displayName": "An Exalted Adventure",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_AnExaltedAdventure",
+  "description": "Gain three 2-cost champions. If you 3-star two of them, gain an orb filled with loot. Gain a Lesser Champion Duplicator at the start of next @NumStages@ stages.<br><br>Champions: @TFTUnitProperty.item:TFT_Augment_ExaltedAdventure_Champs@, @TFTUnitProperty.item:TFT_Augment_ExaltedAdventure_Champs2@, @TFTUnitProperty.item:TFT_Augment_ExaltedAdventure_Champs3@",
+  "tooltip": "Gain three 2-cost champions. If you 3-star two of them, gain an orb filled with loot. Gain a Lesser Champion Duplicator at the start of next @NumStages@ stages.<br><br>Champions: @TFTUnitProperty.item:TFT_Augment_ExaltedAdventure_Champs@, @TFTUnitProperty.item:TFT_Augment_ExaltedAdventure_Champs2@, @TFTUnitProperty.item:TFT_Augment_ExaltedAdventure_Champs3@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ExaltedAdventure_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumStages",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumStages", "value": "2" }, { "name": "NumUnits", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: NumStages", "Unmapped item variable: NumUnits", "Unsupported item effect metadata: NumStages", "Unsupported item effect metadata: NumUnits"]
 }

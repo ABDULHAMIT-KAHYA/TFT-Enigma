@@ -1,7 +1,17 @@
 {
   "name": "Keeper Crown",
+  "displayName": "Keeper Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_KeeperCrown",
+  "description": "Gain a Keeper Emblem, a Morellonomicon, and a Jarvan IV.",
+  "tooltip": "Gain a Keeper Emblem, a Morellonomicon, and a Jarvan IV.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Keeper_III.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT4_Augment_AssassinCrest",
+  "displayName": "Assassin Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_AssassinCrest",
+  "description": "Gain an Assassin Emblem and a Pyke.",
+  "tooltip": "Gain an Assassin Emblem and a Pyke.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Assassin_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

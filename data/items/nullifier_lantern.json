@@ -1,7 +1,74 @@
 {
   "name": "Nullifier Lantern",
+  "displayName": "Nullifier Lantern",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_JaxCyberneticItem_Radiant",
+  "description": "Gain <TFTRadiantItemBonus>@BonusPercentHP*100@%</TFTRadiantItemBonus> health. Every <TFTRadiantItemBonus>@Interval@</TFTRadiantItemBonus> seconds, deal <TFTRadiantItemBonus>@PercHealthDamage*100@%</TFTRadiantItemBonus> of the holder's max health as <magicDamage>magic damage</magicDamage> to all enemies within @Radius@-hex.<br><br><TFTPassive>Total Damage Dealt This Round:</TFTPassive> <magicDamage>@TFTUnitProperty.item:TFT14_Trait_Cybernetic_JaxItem_TotalDamageReflected@</magicDamage><br><br><rules>Recommended users: Jax, Mordekaiser, and Sejuani</rules>",
+  "tooltip": "Gain <TFTRadiantItemBonus>@BonusPercentHP*100@%</TFTRadiantItemBonus> health. Every <TFTRadiantItemBonus>@Interval@</TFTRadiantItemBonus> seconds, deal <TFTRadiantItemBonus>@PercHealthDamage*100@%</TFTRadiantItemBonus> of the holder's max health as <magicDamage>magic damage</magicDamage> to all enemies within @Radius@-hex.<br><br><TFTPassive>Total Damage Dealt This Round:</TFTPassive> <magicDamage>@TFTUnitProperty.item:TFT14_Trait_Cybernetic_JaxItem_TotalDamageReflected@</magicDamage><br><br><rules>Recommended users: Jax, Mordekaiser, and Sejuani</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14/TFT14_Item_JaxCyberneticItem_Radiant.TFT_Set14.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:Nullifier Lantern:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 777, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusPercentHP",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Interval",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercHealthDamage",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "radius",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 777,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "777",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 777, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusPercentHP", "value": "0.5" }, { "name": "Health", "value": "777" }, { "name": "Interval", "value": "1" }, { "name": "PercHealthDamage", "value": "0.1" }, { "name": "radius", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: BonusPercentHP", "Unmapped item variable: Interval", "Unmapped item variable: PercHealthDamage", "Unmapped item variable: radius"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Spellweaver Crown",
+  "displayName": "Spellweaver Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_SpellweaverCrown",
+  "description": "Gain a Spellweaver Emblem, a Jeweled Gauntlet, and a Brand.",
+  "tooltip": "Gain a Spellweaver Emblem, a Jeweled Gauntlet, and a Brand.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Spellweaver_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

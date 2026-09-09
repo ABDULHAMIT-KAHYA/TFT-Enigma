@@ -1,7 +1,17 @@
 {
   "name": "Hellion Crest",
+  "displayName": "Hellion Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_HellionCrest",
+  "description": "Gain a Hellion Emblem and a Kennen.",
+  "tooltip": "Gain a Hellion Emblem and a Kennen.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Hellion_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,29 @@
 {
   "name": "Lesser Rune of Allegiance",
+  "displayName": "Lesser Rune of Allegiance",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_LesserRuneOfAllegiance",
+  "description": "Place on a Tier 1, 2, or 3 champion to transfer them to your partner. Any items held will pop off.<br><br>Once used, this item regenerates in @RoundsToRegain@ rounds. At 4-1 it upgrades into a Rune of Allegiance.<br><br><tftitemrules>[Cannot be used in combat.] <br>[CONSUMABLE - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Place on a Tier 1, 2, or 3 champion to transfer them to your partner. Any items held will pop off.<br><br>Once used, this item regenerates in @RoundsToRegain@ rounds. At 4-1 it upgrades into a Rune of Allegiance.<br><br><tftitemrules>[Cannot be used in combat.] <br>[CONSUMABLE - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/RuneOfAllegiance_Lesser.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundsToRegain",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RoundsToRegain", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: RoundsToRegain", "Unsupported item effect metadata: RoundsToRegain"]
 }

@@ -1,7 +1,29 @@
 {
   "name": "5-cost shop",
+  "displayName": "5-cost shop",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Delayed5CostShop",
+  "description": "After @Delay@ rounds, get a free shop reroll and your next shop contains all 5-cost champions.",
+  "tooltip": "After @Delay@ rounds, get a free shop reroll and your next shop contains all 5-cost champions.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_Delayed5CostShop.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Delay", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Delay", "Unsupported item effect metadata: Delay"]
 }

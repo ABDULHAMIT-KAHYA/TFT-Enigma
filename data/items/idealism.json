@@ -1,7 +1,30 @@
 {
   "name": "Idealism",
+  "displayName": "Idealism",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_Idealism",
+  "description": "Gain a Hand of Justice. Champions holding this item deal @DamageAmp*100@% increased damage.",
+  "tooltip": "Gain a Hand of Justice. Champions holding this item deal @DamageAmp*100@% increased damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Idealism-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Idealism:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "0.12" }],
+  "importWarnings": []
 }

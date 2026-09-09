@@ -1,7 +1,40 @@
 {
   "name": "Verdant Veil",
+  "displayName": "Verdant Veil",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_VerdantVeil",
+  "description": "Your units are immune to crowd control effects for the first @Duration@ seconds of combat and gain @BonusAS*100@% bonus Attack Speed.",
+  "tooltip": "Your units are immune to crowd control effects for the first @Duration@ seconds of combat and gain @BonusAS*100@% bonus Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Verdant-Veil-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAS",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAS", "value": "0.15" }, { "name": "Duration", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: BonusAS", "Unmapped item variable: Duration", "Unsupported item effect metadata: BonusAS", "Unsupported item effect metadata: Duration"]
 }

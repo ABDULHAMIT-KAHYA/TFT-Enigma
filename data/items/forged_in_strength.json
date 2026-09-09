@@ -1,7 +1,51 @@
 {
   "name": "Forged in Strength",
+  "displayName": "Forged in Strength",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ForgedInStrength",
+  "description": "Gain @NumArtifacts@ random Artifact. When you drop below @HealthThreshold@ Health, gain @NumMoreArtifacts@ more random Artifacts.<br><br><tftitemrules>Remix Rumble Championship, 2023</tftitemrules>",
+  "tooltip": "Gain @NumArtifacts@ random Artifact. When you drop below @HealthThreshold@ Health, gain @NumMoreArtifacts@ more random Artifacts.<br><br><tftitemrules>Remix Rumble Championship, 2023</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ForgedInStrength_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumArtifacts",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumMoreArtifacts",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthThreshold", "value": "35" }, { "name": "NumArtifacts", "value": "1" }, { "name": "NumMoreArtifacts", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: HealthThreshold", "Unmapped item variable: NumArtifacts", "Unmapped item variable: NumMoreArtifacts"]
 }

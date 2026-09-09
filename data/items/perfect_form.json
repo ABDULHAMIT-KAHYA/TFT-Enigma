@@ -1,7 +1,17 @@
 {
   "name": "Perfect Form",
+  "displayName": "Perfect Form",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_ZacCarry",
+  "description": "Gain a Zac. Your strongest Zac becomes a Specialist. He now bounces around the battlefield dealing damage in a one hex radius.",
+  "tooltip": "Gain a Zac. Your strongest Zac becomes a Specialist. He now bounces around the battlefield dealing damage in a one hex radius.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PerfectForm_I.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

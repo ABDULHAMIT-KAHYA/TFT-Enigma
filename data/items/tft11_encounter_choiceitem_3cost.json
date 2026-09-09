@@ -1,0 +1,17 @@
+{
+  "name": "TFT11_Encounter_ChoiceItem_3cost",
+  "displayName": "3-cost champion",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Encounter_ChoiceItem_3cost",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

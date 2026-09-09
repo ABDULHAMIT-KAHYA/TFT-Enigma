@@ -1,7 +1,17 @@
 {
   "name": "Pocket Recombobulator<br><br>",
+  "displayName": "Pocket Recombobulator<br><br>",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Consumable_PocketRecombobulator",
+  "description": "Use on a 1 or 2 cost champion to upgrade them to a unit of 1 higher cost.<br><br><tftitemrules>Not for use on living, mechanical, experimental, imaginary, or reanimated creatures . Keep out of reach of Yordles.</tftitemrules>",
+  "tooltip": "Use on a 1 or 2 cost champion to upgrade them to a unit of 1 higher cost.<br><br><tftitemrules>Not for use on living, mechanical, experimental, imaginary, or reanimated creatures . Keep out of reach of Yordles.</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/Magnetron_Enchant.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

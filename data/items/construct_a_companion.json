@@ -1,7 +1,29 @@
 {
   "name": "Construct a Companion",
+  "displayName": "Construct a Companion",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ConstructACompanion",
+  "description": "The next 1-cost champion you buy is 3-star. Gain @Gold@ gold.",
+  "tooltip": "The next 1-cost champion you buy is 3-star. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ConstructaCompanion_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

@@ -1,7 +1,51 @@
 {
   "name": "Loot Singularity",
+  "displayName": "Loot Singularity",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_DarkStar_WhiteHole",
+  "description": "When the Black Hole consumes enemies, it turns them into space matter. After acquiring enough, the Black Hole turns it into loot! Gain a Cho'gath and a Lissandra.<br><br><ShowIf.TFT17_Augment_DarkStar_WhiteHole_IsActive><rules>Space matter and loot quality increase each time. Gain @TwoPiecePoints@/@FourPiecePoints@/@SixPiecePoints@ space matter depending on Dark Star breakpoint.</rules><br><br>Space Matter: @TFTUnitProperty.item:TFT17_Augment_DarkStar_WhiteHole_CurrentStacks@ / @TFTUnitProperty.item:TFT17_Augment_DarkStar_WhiteHole_StacksToNextCashout@</ShowIf.TFT17_Augment_DarkStar_WhiteHole_IsActive>",
+  "tooltip": "When the Black Hole consumes enemies, it turns them into space matter. After acquiring enough, the Black Hole turns it into loot! Gain a Cho'gath and a Lissandra.<br><br><ShowIf.TFT17_Augment_DarkStar_WhiteHole_IsActive><rules>Space matter and loot quality increase each time. Gain @TwoPiecePoints@/@FourPiecePoints@/@SixPiecePoints@ space matter depending on Dark Star breakpoint.</rules><br><br>Space Matter: @TFTUnitProperty.item:TFT17_Augment_DarkStar_WhiteHole_CurrentStacks@ / @TFTUnitProperty.item:TFT17_Augment_DarkStar_WhiteHole_StacksToNextCashout@</ShowIf.TFT17_Augment_DarkStar_WhiteHole_IsActive>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WhiteHole_II.TFT_17_3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{98d937e6}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{b7d58b40}",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{de7067ca}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{98d937e6}", "value": "3" }, { "name": "{b7d58b40}", "value": "4" }, { "name": "{de7067ca}", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: {98d937e6}", "Unmapped item variable: {b7d58b40}", "Unmapped item variable: {de7067ca}", "Unsupported item effect metadata: {98d937e6}", "Unsupported item effect metadata: {b7d58b40}", "Unsupported item effect metadata: {de7067ca}"]
 }

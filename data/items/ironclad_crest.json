@@ -1,7 +1,17 @@
 {
   "name": "Ironclad Crest",
+  "displayName": "Ironclad Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_IroncladCrest",
+  "description": "Gain a Ironclad Emblem and a Nautilus.",
+  "tooltip": "Gain a Ironclad Emblem and a Nautilus.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Ironclad_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

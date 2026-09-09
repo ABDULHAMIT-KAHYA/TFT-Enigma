@@ -1,7 +1,17 @@
 {
   "name": "Academy Crest",
+  "displayName": "Academy Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_AcademyCrest",
+  "description": "Gain an Academy Emblem and a Leona.",
+  "tooltip": "Gain an Academy Emblem and a Leona.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Academy_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

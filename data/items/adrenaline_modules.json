@@ -1,7 +1,53 @@
 {
   "name": "Adrenaline Modules",
+  "displayName": "Adrenaline Modules",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Consumable_Void_AdrenalineModules",
+  "description": "Gain <scaleLevel>@TFTUnitProperty.item:TFT16_Void_AdrenalineModulesDamageAmp@%</scaleLevel> Damage Amp, increased by <scaleLevel>@TFTUnitProperty.item:TFT16_Void_AdrenalineModulesDamageAmpPerTick@%</scaleLevel> after every @AttackNumBreakpoint@ attacks.<br><br><rules>Recommended users: Bel'Veth and Kai'sa</rules>",
+  "tooltip": "Gain <scaleLevel>@TFTUnitProperty.item:TFT16_Void_AdrenalineModulesDamageAmp@%</scaleLevel> Damage Amp, increased by <scaleLevel>@TFTUnitProperty.item:TFT16_Void_AdrenalineModulesDamageAmpPerTick@%</scaleLevel> after every @AttackNumBreakpoint@ attacks.<br><br><rules>Recommended users: Bel'Veth and Kai'sa</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT16_VoidMutation_AdrenalineModules.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Adrenaline Modules:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "AttackNumBreakpoint",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{c91f9b58}",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseDamageAmp",
+      "rawSourceValue": "0.18",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BaseDamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttackNumBreakpoint", "value": "3" }, { "name": "BaseDamageAmp", "value": "0.18" }, { "name": "{c91f9b58}", "value": "0.01" }],
+  "importWarnings": ["Unmapped item variable: AttackNumBreakpoint", "Unmapped item variable: {c91f9b58}"]
 }

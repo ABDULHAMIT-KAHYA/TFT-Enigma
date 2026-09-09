@@ -1,7 +1,17 @@
 {
   "name": "Continue",
+  "displayName": "Continue",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Item_Crime_ArmoryContinue",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Item_Crime_ArmoryContinue.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

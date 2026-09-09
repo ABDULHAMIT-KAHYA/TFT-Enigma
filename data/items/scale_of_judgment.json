@@ -1,7 +1,40 @@
 {
   "name": "Scale Of Judgment",
+  "displayName": "Scale Of Judgment",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_XerathZap_ScaleOfJudgement",
+  "description": "Next combat: If you win, gain @GoldOnWin@ gold; if you lose, gain @HPOnLose@ player health.",
+  "tooltip": "Next combat: If you win, gain @GoldOnWin@ gold; if you lose, gain @HPOnLose@ player health.",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_XerathWand_Self.TFT_Set12.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldOnWin",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPOnLose",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldOnWin", "value": "12" }, { "name": "HPOnLose", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: GoldOnWin", "Unmapped item variable: HPOnLose"]
 }

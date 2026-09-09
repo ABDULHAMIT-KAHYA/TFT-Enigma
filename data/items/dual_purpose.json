@@ -1,7 +1,29 @@
 {
   "name": "Dual Purpose",
+  "displayName": "Dual Purpose",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_DualPurpose",
+  "description": "The first time you buy XP each round, gain @goldtogive@ gold. Whenever you buy XP, reroll your Shop.",
+  "tooltip": "The first time you buy XP each round, gain @goldtogive@ gold. Whenever you buy XP, reroll your Shop.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DualPurpose_III.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "goldtogive",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "goldtogive", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: goldtogive"]
 }

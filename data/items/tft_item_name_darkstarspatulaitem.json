@@ -1,7 +1,41 @@
 {
   "name": "tft_item_name_DarkStarSpatulaItem",
+  "displayName": "tft_item_name_DarkStarSpatulaItem",
+  "isPlaceholder": false,
+  "sourceId": "TFT3_Item_DarkStarSpatulaItem",
+  "description": "tft_item_description_DarkStarSpatulaItem",
+  "tooltip": "tft_item_description_DarkStarSpatulaItem",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT3_Item_DarkStar.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:tft_item_name_DarkStarSpatulaItem:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DodgeChance",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "10" }, { "name": "DodgeChance", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: DodgeChance", "Unsupported item effect metadata: DodgeChance"]
 }

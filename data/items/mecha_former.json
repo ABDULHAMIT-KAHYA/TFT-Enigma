@@ -1,7 +1,17 @@
 {
   "name": "Mecha-Former",
+  "displayName": "Mecha-Former",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Consumable_MechaTransformer",
+  "description": "Use this on a Mecha unit to change their form.<br><br><rules>Transformed Mechas take up two team slots and count twice for the Mecha trait.</rules>",
+  "tooltip": "Use this on a Mecha unit to change their form.<br><br><rules>Transformed Mechas take up two team slots and count twice for the Mecha trait.</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set17/TFT17_MechSelector.TFT_Set17.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

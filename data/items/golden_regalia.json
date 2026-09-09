@@ -1,7 +1,53 @@
 {
   "name": "Golden Regalia",
+  "displayName": "Golden Regalia",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Item_FortuneGoldGenerator",
+  "description": "@OnHitGoldChance*100@% chance to drop gold when taking damage. Capped at @MaxCap@ per round. ",
+  "tooltip": "@OnHitGoldChance*100@% chance to drop gold when taking damage. Capped at @MaxCap@ per round. ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistGiveGold.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnHit",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MaxCap",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnHit",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "OnHitGoldChance",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnHit",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{d4c87fd5}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "MaxCap", "value": "2" }, { "name": "OnHitGoldChance", "value": "0.15" }, { "name": "{d4c87fd5}", "value": "1" }],
+  "importWarnings": ["Metadata-only item effect: MaxCap -> DealDamage", "Metadata-only item effect: OnHitGoldChance -> DealDamage", "Metadata-only item effect: {d4c87fd5} -> DealDamage", "Unmapped item variable: MaxCap", "Unmapped item variable: OnHitGoldChance", "Unmapped item variable: {d4c87fd5}"]
 }

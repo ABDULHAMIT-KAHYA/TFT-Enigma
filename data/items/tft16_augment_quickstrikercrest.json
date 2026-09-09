@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_QuickstrikerCrest",
+  "displayName": "Quickstriker Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_QuickstrikerCrest",
+  "description": "Get a Quickstriker Emblem.",
+  "tooltip": "Get a Quickstriker Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

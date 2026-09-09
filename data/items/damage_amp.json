@@ -1,7 +1,17 @@
 {
   "name": "Damage Amp",
+  "displayName": "Damage Amp",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_DebugDamageAmp",
+  "description": "Cause this unit to deal  @TFTUnitProperty.:TFT_UnitProperty_Debug@% increased damage. Does not stack. Lasts until the unit is deconstructed.",
+  "tooltip": "Cause this unit to deal  @TFTUnitProperty.:TFT_UnitProperty_Debug@% increased damage. Does not stack. Lasts until the unit is deconstructed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_DebugDamageAmp.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

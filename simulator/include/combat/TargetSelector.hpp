@@ -4,6 +4,8 @@
 #include <vector>
 #include "core/TeamId.hpp"
 #include "core/Unit.hpp"
+#include "core/UnitId.hpp"
+
 enum class TargetPriority
 {
     Nearest,
@@ -12,9 +14,9 @@ enum class TargetPriority
 
 struct CombatTargetContext
 {
-    Unit* currentTarget = nullptr;
+    UnitId currentTargetId{};
     std::int32_t retargetLockedUntilMs = 0;
-    Unit* castLockedTarget = nullptr;
+    UnitId castLockedTargetId{};
     std::int32_t castLockUntilMs = 0;
 };
 
@@ -27,4 +29,3 @@ public:
                               std::int32_t timeMs,
                               TargetPriority priority);
 };
-

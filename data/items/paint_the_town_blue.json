@@ -1,7 +1,40 @@
 {
   "name": "Paint the Town Blue",
+  "displayName": "Paint the Town Blue",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Rebel",
+  "description": "When the first @NumOfUnits@ Rebels die each combat, summon a copy of themselves that is one-star lower with @ReducedHealth@ less Health. Gain an Akali and an Irelia.",
+  "tooltip": "When the first @NumOfUnits@ Rebels die each combat, summon a copy of themselves that is one-star lower with @ReducedHealth@ less Health. Gain an Akali and an Irelia.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SymbolOfFreedom_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumOfUnits",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 400,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ReducedHealth",
+      "rawSourceValue": "400",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumOfUnits", "value": "4" }, { "name": "ReducedHealth", "value": "400" }],
+  "importWarnings": ["Unmapped item variable: NumOfUnits", "Unmapped item variable: ReducedHealth"]
 }

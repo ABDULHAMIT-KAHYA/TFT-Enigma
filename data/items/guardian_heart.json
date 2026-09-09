@@ -1,7 +1,17 @@
 {
   "name": "Guardian Heart",
+  "displayName": "Guardian Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_GuardianTrait",
+  "description": "Your team counts as having 1 additional Guardian. Gain a Zac.",
+  "tooltip": "Your team counts as having 1 additional Guardian. Gain a Zac.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Guardian-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

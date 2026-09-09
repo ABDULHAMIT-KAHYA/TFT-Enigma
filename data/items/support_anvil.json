@@ -1,7 +1,17 @@
 {
   "name": "Support Anvil",
+  "displayName": "Support Anvil",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_ItemArmorySupport",
+  "description": "Support Anvil",
+  "tooltip": "Support Anvil",
+  "iconPath": "ASSETS/Characters/TFT_ArmoryKeyOrnn/HUD/Icons2D/TFT_ArmoryKeyOrnn_Square.tex",
+  "itemCategory": "Anvil",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

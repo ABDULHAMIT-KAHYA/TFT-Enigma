@@ -1,7 +1,17 @@
 {
   "name": "Star Guardian Crown",
+  "displayName": "Star Guardian Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_StarGuardianCrown",
+  "description": "Gain a Star Guardian Emblem, a Steadfast Heart, and a Rell.",
+  "tooltip": "Gain a Star Guardian Emblem, a Steadfast Heart, and a Rell.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_StarGuardian_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

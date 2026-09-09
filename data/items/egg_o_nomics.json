@@ -1,7 +1,17 @@
 {
   "name": "Egg-o-nomics",
+  "displayName": "Egg-o-nomics",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_Draconic",
+  "description": "Draconic Eggs hatch into additional Gold. Gain a Sett and an Ashe.",
+  "tooltip": "Draconic Eggs hatch into additional Gold. Gain a Sett and an Ashe.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Egg-o-nomics_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

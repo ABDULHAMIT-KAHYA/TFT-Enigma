@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_JuggernautCrown",
+  "displayName": "Juggernaut Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_JuggernautCrown",
+  "description": "Get a Juggernaut Emblem, a Spirit Visage, and a Dr. Mundo.",
+  "tooltip": "Get a Juggernaut Emblem, a Spirit Visage, and a Dr. Mundo.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Juggernaut_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

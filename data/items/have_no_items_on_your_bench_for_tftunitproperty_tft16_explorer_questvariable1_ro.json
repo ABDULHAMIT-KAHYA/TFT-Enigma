@@ -1,7 +1,17 @@
 {
   "name": "Have no items on your bench for @TFTUnitProperty.:TFT16_Explorer_QuestVariable1@ rounds. ",
+  "displayName": "Have no items on your bench for @TFTUnitProperty.:TFT16_Explorer_QuestVariable1@ rounds. ",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Explorer_ClearItemBenchQuest",
+  "description": "Reward: @TFTUnitProperty.:TFT16_Explorer_QuestExplorerPoints@ %i:Set16Ixtal%",
+  "tooltip": "Reward: @TFTUnitProperty.:TFT16_Explorer_QuestExplorerPoints@ %i:Set16Ixtal%",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,29 @@
 {
   "name": "Teacher's Council",
+  "displayName": "Teacher's Council",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_Mentor_TeachersCouncil",
+  "description": "Mentor bonuses are granted to your team regardless of how many Mentors you play. Gain a Kobuko.",
+  "tooltip": "Mentor bonuses are granted to your team regardless of how many Mentors you play. Gain a Kobuko.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TeachersCouncil_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusIncrease",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusIncrease", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: BonusIncrease", "Unsupported item effect metadata: BonusIncrease"]
 }

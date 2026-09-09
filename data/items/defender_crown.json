@@ -1,7 +1,17 @@
 {
   "name": "Defender Crown",
+  "displayName": "Defender Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_DefenderCrown",
+  "description": "Get a Defender Emblem, a Neeko, and a Steadfast Heart.",
+  "tooltip": "Get a Defender Emblem, a Neeko, and a Steadfast Heart.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

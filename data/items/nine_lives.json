@@ -1,7 +1,40 @@
 {
   "name": "Nine Lives",
+  "displayName": "Nine Lives",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_NineLives",
+  "description": "Set your current and max player Health to @NumberOfLives@. On combat loss, you only lose @HealthLoss@ health and gain loot. You can't gain health.",
+  "tooltip": "Set your current and max player Health to @NumberOfLives@. On combat loss, you only lose @HealthLoss@ health and gain loot. You can't gain health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/NineLives_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthLoss",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumberOfLives",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthLoss", "value": "1" }, { "name": "NumberOfLives", "value": "9" }],
+  "importWarnings": ["Unmapped item variable: HealthLoss", "Unmapped item variable: NumberOfLives"]
 }

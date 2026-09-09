@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Augment_BruiserEmblem",
+  "displayName": "Bruiser Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_BruiserEmblem",
+  "description": "Gain a Bruiser Emblem and a Jax.",
+  "tooltip": "Gain a Bruiser Emblem and a Jax.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BruiserEmblem2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

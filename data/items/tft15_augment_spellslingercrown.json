@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_SpellslingerCrown",
+  "displayName": "Sorcerer Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SpellslingerCrown",
+  "description": "Gain a Sorcerer Emblem, a Jeweled Gauntlet, and an Ahri.",
+  "tooltip": "Gain a Sorcerer Emblem, a Jeweled Gauntlet, and an Ahri.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Sorcerer_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

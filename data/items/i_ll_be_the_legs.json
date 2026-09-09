@@ -1,7 +1,41 @@
 {
   "name": "I'll Be The Legs",
+  "displayName": "I'll Be The Legs",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Augment_SentaiRanger_BeTheLegs",
+  "description": "The Mighty Mech gains @BonusDefenses@ Armor and Magic Resist and @BonusHealth@ Health. Gain 3 Mighty Mech champions. <br><br>Field 7 Mighty Mech, reach level 10, and hold all 3 Mighty Mech Augments to activate MECHA-MERGE PROTOCOL.",
+  "tooltip": "The Mighty Mech gains @BonusDefenses@ Armor and Magic Resist and @BonusHealth@ Health. Gain 3 Mighty Mech champions. <br><br>Field 7 Mighty Mech, reach level 10, and hold all 3 Mighty Mech Augments to activate MECHA-MERGE PROTOCOL.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/IllBeTheLegs_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:I'll Be The Legs:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealth",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealth", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusDefenses",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusDefenses", "value": "10" }, { "name": "BonusHealth", "value": "100" }],
+  "importWarnings": ["Unmapped item variable: BonusDefenses"]
 }

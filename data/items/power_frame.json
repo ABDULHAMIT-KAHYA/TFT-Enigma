@@ -1,7 +1,29 @@
 {
   "name": "Power Frame",
+  "displayName": "Power Frame",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_SharpshooterModule",
+  "description": "Gain <TFTKeyword>Precision</TFTKeyword> and increase Ability damage by @AbilityDamagePercentIncrease*100@%.<br><br>{{TFT_Keyword_Precision}}",
+  "tooltip": "Gain <TFTKeyword>Precision</TFTKeyword> and increase Ability damage by @AbilityDamagePercentIncrease*100@%.<br><br>{{TFT_Keyword_Precision}}",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_SharpshooterModule.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AbilityDamagePercentIncrease",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AbilityDamagePercentIncrease", "value": "0.05" }],
+  "importWarnings": ["Unmapped item variable: AbilityDamagePercentIncrease"]
 }

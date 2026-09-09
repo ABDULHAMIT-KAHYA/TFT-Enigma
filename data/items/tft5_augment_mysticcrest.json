@@ -1,0 +1,17 @@
+{
+  "name": "TFT5_Augment_MysticCrest",
+  "displayName": "Mystic Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_MysticCrest",
+  "description": "Gain a Mystic Emblem and a Lulu.",
+  "tooltip": "Gain a Mystic Emblem and a Lulu.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Mystic_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

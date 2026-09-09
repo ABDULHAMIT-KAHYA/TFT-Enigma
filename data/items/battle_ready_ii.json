@@ -1,7 +1,42 @@
 {
   "name": "Battle Ready II",
+  "displayName": "Battle Ready II",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_BattleReadyII",
+  "description": "Your team deals @BonusDamage@% more damage and takes @DR@% less damage. ",
+  "tooltip": "Your team deals @BonusDamage@% more damage and takes @DR@% less damage. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Battle-Ready-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusDamage",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 6, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "DR",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 6, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusDamage", "value": "6" }, { "name": "DR", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: BonusDamage", "Unmapped item variable: DR"]
 }

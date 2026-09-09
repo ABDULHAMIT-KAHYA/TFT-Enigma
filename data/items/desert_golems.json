@@ -1,7 +1,17 @@
 {
   "name": "Desert Golems",
+  "displayName": "Desert Golems",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_XerathZap_DesertGolem",
+  "description": "Next combat: Gain 2 powerful golems.",
+  "tooltip": "Next combat: Gain 2 powerful golems.",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_XerathWand_Self.TFT_Set12.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

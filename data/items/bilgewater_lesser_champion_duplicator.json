@@ -1,7 +1,29 @@
 {
   "name": "Bilgewater Lesser Champion Duplicator",
+  "displayName": "Bilgewater Lesser Champion Duplicator",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Bilgewater_BWLesserDuplicator",
+  "description": "Use on a 3-cost Bilgewater champion or less to create a 1-star copy on your bench.",
+  "tooltip": "Use on a 3-cost Bilgewater champion or less to create a 1-star copy on your bench.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Item_Bilgewater_LesserDuplicator.TFT_Set16.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{0d14760d}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{0d14760d}", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: {0d14760d}", "Unsupported item effect metadata: {0d14760d}"]
 }

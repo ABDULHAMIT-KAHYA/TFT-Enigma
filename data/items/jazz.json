@@ -1,7 +1,17 @@
 {
   "name": "Jazz",
+  "displayName": "Jazz",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitJazzActivator",
+  "description": "For each active trait, your team gains bonus Health and Damage Amp.<br><rules>(Excludes unique and Anniversary Traits)</rules><br><br><row>(@TFTTrait.TFTEvent5YR_Jazz.1:MinUnits@) @TFTTrait.TFTEvent5YR_Jazz.1:BonusHealth*100@% %i:scaleHealth%, @TFTTrait.TFTEvent5YR_Jazz.1:BonusDamage*100@% %i:scaleDA%</row><br><row>(@TFTTrait.TFTEvent5YR_Jazz.2:MinUnits@) @TFTTrait.TFTEvent5YR_Jazz.2:BonusHealth*100@% %i:scaleHealth%, @TFTTrait.TFTEvent5YR_Jazz.2:BonusDamage*100@% %i:scaleDA%</row><br><br>Bonus Health: @TFTUnitProperty.trait:TFT10_Trait_Jazz_TraitTracker_CurrentBonus@%<br>Bonus Damage Amp: @TFTUnitProperty.trait:TFT10_Trait_Jazz_TraitTracker_CurrentBonus_Damage@%",
+  "tooltip": "For each active trait, your team gains bonus Health and Damage Amp.<br><rules>(Excludes unique and Anniversary Traits)</rules><br><br><row>(@TFTTrait.TFTEvent5YR_Jazz.1:MinUnits@) @TFTTrait.TFTEvent5YR_Jazz.1:BonusHealth*100@% %i:scaleHealth%, @TFTTrait.TFTEvent5YR_Jazz.1:BonusDamage*100@% %i:scaleDA%</row><br><row>(@TFTTrait.TFTEvent5YR_Jazz.2:MinUnits@) @TFTTrait.TFTEvent5YR_Jazz.2:BonusHealth*100@% %i:scaleHealth%, @TFTTrait.TFTEvent5YR_Jazz.2:BonusDamage*100@% %i:scaleDA%</row><br><br>Bonus Health: @TFTUnitProperty.trait:TFT10_Trait_Jazz_TraitTracker_CurrentBonus@%<br>Bonus Damage Amp: @TFTUnitProperty.trait:TFT10_Trait_Jazz_TraitTracker_CurrentBonus_Damage@%",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Jazz.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

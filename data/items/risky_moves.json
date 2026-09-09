@@ -1,7 +1,52 @@
 {
   "name": "Risky Moves",
+  "displayName": "Risky Moves",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_RiskyMoves",
+  "description": "Your Tactician loses @Health@ Health, but after @PlayerCombatNum@ player combats, gain @Gold@ gold.",
+  "tooltip": "Your Tactician loses @Health@ Health, but after @PlayerCombatNum@ player combats, gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Risky-Moves-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Risky Moves:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PlayerCombatNum",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "30" }, { "name": "Health", "value": "20" }, { "name": "PlayerCombatNum", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: PlayerCombatNum"]
 }

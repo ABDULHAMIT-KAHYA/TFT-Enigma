@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Augment_MageEmblem2",
+  "displayName": "Mage Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_MageEmblem2",
+  "description": "Gain a Mage Emblem, a Spear of Shojin, and a Lux.",
+  "tooltip": "Gain a Mage Emblem, a Spear of Shojin, and a Lux.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mage-Crown-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

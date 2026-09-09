@@ -1,7 +1,29 @@
 {
   "name": "tft15_General_itemname_GoldOnKill",
+  "displayName": "tft15_General_itemname_GoldOnKill",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_General_Consumable_GoldOnKill",
+  "description": "tft15_General_itemdescription_GoldOnKill",
+  "tooltip": "tft15_General_itemdescription_GoldOnKill",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT15_CommandModItems/TFT15_Item_Icon_CommandMod_GoldOnKill.TFT_Set15.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a61b4a72}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{a61b4a72}", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: {a61b4a72}", "Unsupported item effect metadata: {a61b4a72}"]
 }

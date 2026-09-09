@@ -1,7 +1,17 @@
 {
   "name": "Prodigy Crest",
+  "displayName": "Prodigy Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_ProdigyCrest",
+  "description": "Gain a Prodigy Emblem.",
+  "tooltip": "Gain a Prodigy Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Prodigy_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

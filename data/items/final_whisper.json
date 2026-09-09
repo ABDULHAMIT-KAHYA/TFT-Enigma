@@ -1,8 +1,87 @@
 {
   "name": "Final Whisper",
+  "displayName": "Final Whisper",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_LastWhisperShadow",
+  "description": "The holder's attacks and abilities reduce the target's Armor <TFTShadowItemBonus>and Magic Resist</TFTShadowItemBonus> by @ArmorMRReductionPercent@% for the rest of combat.<br><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "tooltip": "The holder's attacks and abilities reduce the target's Armor <TFTShadowItemBonus>and Magic Resist</TFTShadowItemBonus> by @ArmorMRReductionPercent@% for the rest of combat.<br><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Last_Whisper.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Final Whisper:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Final Whisper:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmorBreakDuration",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 70,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmorMRReductionPercent",
+      "rawSourceValue": "70",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{43b05566}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{e6eb5174}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "10" }, { "name": "ArmorBreakDuration", "value": "60" }, { "name": "ArmorMRReductionPercent", "value": "70" }, { "name": "CritChance", "value": "15" }, { "name": "{43b05566}", "value": "null" }, { "name": "{e6eb5174}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: ArmorBreakDuration", "Unmapped item variable: ArmorMRReductionPercent", "Unmapped non-numeric item variable: {43b05566}", "Unmapped non-numeric item variable: {e6eb5174}", "Unsupported item effect metadata: ArmorBreakDuration", "Unsupported item effect metadata: ArmorMRReductionPercent", "Unsupported item effect metadata: {43b05566}", "Unsupported item effect metadata: {e6eb5174}"]
 }

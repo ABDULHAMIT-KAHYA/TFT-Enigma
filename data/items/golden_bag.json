@@ -1,7 +1,17 @@
 {
   "name": "Golden Bag",
+  "displayName": "Golden Bag",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_5MercBag",
+  "description": "Gain 2 items.",
+  "tooltip": "Gain 2 items.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

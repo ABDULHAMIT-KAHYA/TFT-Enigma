@@ -1,7 +1,41 @@
 {
   "name": "Unstable Treasure Chest",
+  "displayName": "Unstable Treasure Chest",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_UnstableTreasureChest",
+  "description": "When the holder dies, the @ItemsGranted@ highest percent health allies gain a temporary completed item.<br><br>​​<tftitemrules>[Support item]</tftitemrules>",
+  "tooltip": "When the holder dies, the @ItemsGranted@ highest percent health allies gain a temporary completed item.<br><br>​​<tftitemrules>[Support item]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_UnstableTreasureChest.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Unstable Treasure Chest:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ItemsGranted",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "150" }, { "name": "ItemsGranted", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: ItemsGranted"]
 }

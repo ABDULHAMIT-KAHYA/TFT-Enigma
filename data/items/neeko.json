@@ -1,7 +1,17 @@
 {
   "name": "Neeko",
+  "displayName": "Neeko",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Neeko",
+  "description": "Neeko",
+  "tooltip": "Neeko",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Neeko_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

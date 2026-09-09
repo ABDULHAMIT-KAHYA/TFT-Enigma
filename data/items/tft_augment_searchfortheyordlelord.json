@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Augment_SearchForTheYordleLord",
+  "displayName": "An Upgraded Adventure",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SearchForTheYordleLord",
+  "description": "After upgrading @NumUpgrades@ champions to 3-star, gain a magnificent reward. Gain @NumStartUnits@ 1-cost champions.",
+  "tooltip": "After upgrading @NumUpgrades@ champions to 3-star, gain a magnificent reward. Gain @NumStartUnits@ 1-cost champions.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SearchfortheYordleLord_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumStartUnits",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUpgrades",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumStartUnits", "value": "2" }, { "name": "NumUpgrades", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: NumStartUnits", "Unmapped item variable: NumUpgrades", "Unsupported item effect metadata: NumStartUnits", "Unsupported item effect metadata: NumUpgrades"]
+}

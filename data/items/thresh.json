@@ -1,7 +1,17 @@
 {
   "name": "Thresh",
+  "displayName": "Thresh",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Thresh",
+  "description": "Thresh",
+  "tooltip": "Thresh",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Thresh_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

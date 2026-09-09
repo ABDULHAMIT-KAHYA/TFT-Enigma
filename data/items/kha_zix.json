@@ -1,7 +1,17 @@
 {
   "name": "Kha'Zix",
+  "displayName": "Kha'Zix",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_KhaZix",
+  "description": "Kha'Zix",
+  "tooltip": "Kha'Zix",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_KhaZix_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

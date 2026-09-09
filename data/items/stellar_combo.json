@@ -1,7 +1,17 @@
 {
   "name": "Stellar Combo",
+  "displayName": "Stellar Combo",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_AatroxCarry",
+  "description": "Gain an Aatrox. Your strongest Aatrox becomes an Attack Fighter with an ability that swaps between three different strikes.",
+  "tooltip": "Gain an Aatrox. Your strongest Aatrox becomes an Attack Fighter with an ability that swaps between three different strikes.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AatroxHero_I.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

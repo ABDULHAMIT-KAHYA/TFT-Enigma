@@ -1,7 +1,54 @@
 {
   "name": "Anger Issues",
+  "displayName": "Anger Issues",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_OopsAllRageblades",
+  "description": "All your current and future completed items transform into Guinsoo's Rageblades that grant @ResistStackValue@ Armor and Magic Resist. Every @AttacksPerStack@ Rageblade stacks grant @StackValue@% Attack Damage and Ability Power.",
+  "tooltip": "All your current and future completed items transform into Guinsoo's Rageblades that grant @ResistStackValue@ Armor and Magic Resist. Every @AttacksPerStack@ Rageblade stacks grant @StackValue@% Attack Damage and Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/OopsAllRageblades_III.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "AttacksPerStack",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ResistStackValue",
+      "rawSourceValue": "45",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 45, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "StackValue",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttacksPerStack", "value": "2" }, { "name": "ResistStackValue", "value": "45" }, { "name": "StackValue", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: AttacksPerStack", "Unmapped item variable: ResistStackValue", "Unmapped item variable: StackValue"]
 }

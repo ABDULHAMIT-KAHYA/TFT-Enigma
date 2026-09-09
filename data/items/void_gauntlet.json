@@ -1,7 +1,74 @@
 {
   "name": "Void Gauntlet",
+  "displayName": "Void Gauntlet",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_Artifact_VoidGauntlet",
+  "description": "Combat start: Store @InitialPercentHealthStore*100@% max Health and @PercentHealthStore*100@% more every second. On death, unleash the stored Health as magic damage split between enemies within @HexRadius@-hexes.<br><br><rules>[Unique - only 1 per champion]</rules>",
+  "tooltip": "Combat start: Store @InitialPercentHealthStore*100@% max Health and @PercentHealthStore*100@% more every second. On death, unleash the stored Health as magic damage split between enemies within @HexRadius@-hexes.<br><br><rules>[Unique - only 1 per champion]</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT16_Artifact_VoidGauntlet.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Void Gauntlet:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HexRadius",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "InitialPercentHealthStore",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 0.025,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "PercentHealthStore",
+      "rawSourceValue": "0.025",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{cd951938}",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "300" }, { "name": "HexRadius", "value": "4" }, { "name": "InitialPercentHealthStore", "value": "0.3" }, { "name": "PercentHealthStore", "value": "0.025" }, { "name": "{cd951938}", "value": "0.1" }],
+  "importWarnings": ["Metadata-only item effect: Health -> GrantStats", "Metadata-only item effect: HexRadius -> Aura", "Metadata-only item effect: InitialPercentHealthStore -> Aura", "Metadata-only item effect: PercentHealthStore -> Aura", "Metadata-only item effect: {cd951938} -> Aura", "Unmapped item variable: HexRadius", "Unmapped item variable: InitialPercentHealthStore", "Unmapped item variable: PercentHealthStore", "Unmapped item variable: {cd951938}"]
 }

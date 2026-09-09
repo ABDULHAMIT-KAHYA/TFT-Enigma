@@ -1,7 +1,51 @@
 {
   "name": "Choncc's Crown",
+  "displayName": "Choncc's Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_ChonccsCrown",
+  "description": "Your team gains +@MaxArmySizeIncrease@ max team size.<br><br>@PercentGoldChance@% chance to drop 1 gold when you win combat.<br><br><tftitemrules>\"Choncc's Crown is the perfect accessory to dress up your fancy dinners\"</tftitemrules>",
+  "tooltip": "Your team gains +@MaxArmySizeIncrease@ max team size.<br><br>@PercentGoldChance@% chance to drop 1 gold when you win combat.<br><br><tftitemrules>\"Choncc's Crown is the perfect accessory to dress up your fancy dinners\"</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT_CT/CT_Items_Crown.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxArmySizeIncrease",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentGoldChance",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Timer",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxArmySizeIncrease", "value": "2" }, { "name": "PercentGoldChance", "value": "10" }, { "name": "Timer", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: MaxArmySizeIncrease", "Unmapped item variable: PercentGoldChance", "Unmapped item variable: Timer", "Unsupported item effect metadata: MaxArmySizeIncrease", "Unsupported item effect metadata: PercentGoldChance", "Unsupported item effect metadata: Timer"]
 }

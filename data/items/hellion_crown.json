@@ -1,7 +1,17 @@
 {
   "name": "Hellion Crown",
+  "displayName": "Hellion Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_HellionCrown",
+  "description": "Gain a Hellion Emblem, a Morellonomicon, and a Kennen.",
+  "tooltip": "Gain a Hellion Emblem, a Morellonomicon, and a Kennen.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Hellion_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

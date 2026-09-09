@@ -1,7 +1,29 @@
 {
   "name": "Hard Commit",
+  "displayName": "Hard Commit",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_HardCommit",
+  "description": "Gain a random Emblem. Now and at the start of each Stage, gain a 1-star champion of that trait with a cost equal to the Stage (max 5) and @GoldPerStage@ gold.",
+  "tooltip": "Gain a random Emblem. Now and at the start of each Stage, gain a 1-star champion of that trait with a cost equal to the Stage (max 5) and @GoldPerStage@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HardCommit_III.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldPerStage",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldPerStage", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: GoldPerStage"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Ragewing Heart",
+  "displayName": "Ragewing Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_RagewingTrait",
+  "description": "Your team counts as having 1 additional Ragewing. Gain a Rakan.",
+  "tooltip": "Your team counts as having 1 additional Ragewing. Gain a Rakan.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Ragewing-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

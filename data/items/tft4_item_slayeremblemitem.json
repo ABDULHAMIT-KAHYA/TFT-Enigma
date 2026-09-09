@@ -1,0 +1,30 @@
+{
+  "name": "TFT4_Item_SlayerEmblemItem",
+  "displayName": "Slayer Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT4_Item_SlayerEmblemItem",
+  "description": "The holder gains the Slayer trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
+  "tooltip": "The holder gains the Slayer trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set4/TFT_SR4_5_Emblem_Slayer_128.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+    { "name": "Item:TFT4_Item_SlayerEmblemItem:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.1" }],
+  "importWarnings": []
+}

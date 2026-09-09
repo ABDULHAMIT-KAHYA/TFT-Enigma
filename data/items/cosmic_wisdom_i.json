@@ -1,7 +1,51 @@
 {
   "name": "Cosmic Wisdom I",
+  "displayName": "Cosmic Wisdom I",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_CosmicWisdom",
+  "description": "Buying XP now costs @InitialCost@ gold. Every time you buy XP this turn, increase the cost by @increase@ to a max of @MaxCost@. You can now reach level 10.",
+  "tooltip": "Buying XP now costs @InitialCost@ gold. Every time you buy XP this turn, increase the cost by @increase@ to a max of @MaxCost@. You can now reach level 10.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InitialCost",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxCost",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "increase",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "InitialCost", "value": "2" }, { "name": "MaxCost", "value": "4" }, { "name": "increase", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: InitialCost", "Unmapped item variable: MaxCost", "Unmapped item variable: increase", "Unsupported item effect metadata: InitialCost", "Unsupported item effect metadata: MaxCost", "Unsupported item effect metadata: increase"]
 }

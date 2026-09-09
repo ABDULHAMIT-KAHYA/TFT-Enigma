@@ -1,7 +1,17 @@
 {
   "name": "Scalescorn Crown",
+  "displayName": "Scalescorn Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_ScalescornEmblem2",
+  "description": "Gain a Scalescorn Emblem, a Hand of Justice, and a Diana.",
+  "tooltip": "Gain a Scalescorn Emblem, a Hand of Justice, and a Diana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dragonbane-Crown-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,51 @@
 {
   "name": "Narrow Mind",
+  "displayName": "Narrow Mind",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_NarrowMind",
+  "description": "For the rest of the game you have only have @NumBenchSlots@ bench slots, but your rerolls cost @RerollCost@g. Gain @Gold@ gold.",
+  "tooltip": "For the rest of the game you have only have @NumBenchSlots@ bench slots, but your rerolls cost @RerollCost@g. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumBenchSlots",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RerollCost",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "10" }, { "name": "NumBenchSlots", "value": "2" }, { "name": "RerollCost", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumBenchSlots", "Unmapped item variable: RerollCost", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumBenchSlots", "Unsupported item effect metadata: RerollCost"]
 }

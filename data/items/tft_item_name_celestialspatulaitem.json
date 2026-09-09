@@ -1,7 +1,30 @@
 {
   "name": "tft_item_name_CelestialSpatulaItem",
+  "displayName": "tft_item_name_CelestialSpatulaItem",
+  "isPlaceholder": false,
+  "sourceId": "TFT3_Item_CelestialSpatulaItem",
+  "description": "tft_item_description_CelestialSpatulaItem",
+  "tooltip": "tft_item_description_CelestialSpatulaItem",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT3_Item_Celestial.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:tft_item_name_CelestialSpatulaItem:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "MagicResist", "value": "25" }],
+  "importWarnings": []
 }

@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_RandomBoon_Stage3",
+  "displayName": "Random Boon",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_RandomBoon_Stage3",
+  "description": "Gain a random boon from ANY god, and @Gold@ gold.<br><br>Chosen Boon: @TFTUnitProperty.item:TFT17_ThreshBoon_Stage3UnitProp1@<br>@TFTUnitProperty.item:TFT17_ThreshBoon_Stage3UnitProp2@",
+  "tooltip": "Gain a random boon from ANY god, and @Gold@ gold.<br><br>Chosen Boon: @TFTUnitProperty.item:TFT17_ThreshBoon_Stage3UnitProp1@<br>@TFTUnitProperty.item:TFT17_ThreshBoon_Stage3UnitProp2@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_ThreshRandomBoon.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
+}

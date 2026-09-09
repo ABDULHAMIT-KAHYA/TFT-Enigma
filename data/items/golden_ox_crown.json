@@ -1,7 +1,17 @@
 {
   "name": "Golden Ox Crown",
+  "displayName": "Golden Ox Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_GoldenOxCrown",
+  "description": "Gain a Golden Ox Emblem, a Nashor's Tooth, and a Graves.",
+  "tooltip": "Gain a Golden Ox Emblem, a Nashor's Tooth, and a Graves.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldenOxCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

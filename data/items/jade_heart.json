@@ -1,7 +1,17 @@
 {
   "name": "Jade Heart",
+  "displayName": "Jade Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_JadeTrait",
+  "description": "Your team counts as having 1 additional Jade. Gain a Gnar.",
+  "tooltip": "Your team counts as having 1 additional Jade. Gain a Gnar.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Jade-Heart-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

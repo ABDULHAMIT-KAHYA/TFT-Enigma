@@ -1,7 +1,29 @@
 {
   "name": "Group Hug I",
+  "displayName": "Group Hug I",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_GroupHug1",
+  "description": "Combat start: Allies grant other adjacent allies @Resists@ Armor and Magic Resist. This effect stacks.",
+  "tooltip": "Combat start: Allies grant other adjacent allies @Resists@ Armor and Magic Resist. This effect stacks.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GroupHug1_I.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Resists",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Resists", "value": "6" }],
+  "importWarnings": ["Metadata-only item effect: Resists -> Aura", "Unmapped item variable: Resists"]
 }

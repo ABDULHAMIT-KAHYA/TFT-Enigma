@@ -1,7 +1,17 @@
 {
   "name": "Yorick",
+  "displayName": "Yorick",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Yorick",
+  "description": "Yorick",
+  "tooltip": "Yorick",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Yorick_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

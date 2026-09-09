@@ -1,7 +1,30 @@
 {
   "name": "You Have My Bow",
+  "displayName": "You Have My Bow",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_YouHaveMyBow",
+  "description": "Gain a Recurve Bow. Your team gains @AS@% Attack Speed. ",
+  "tooltip": "Gain a Recurve Bow. Your team gains @AS@% Attack Speed. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/You-Have-My-Bow-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:You Have My Bow:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "12" }],
+  "importWarnings": []
 }

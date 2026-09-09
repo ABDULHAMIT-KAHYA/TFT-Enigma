@@ -1,7 +1,17 @@
 {
   "name": "Longshot Crown",
+  "displayName": "Longshot Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_LongshotCrown",
+  "description": "Get a Longshot Emblem, a Teemo, and a Guinsoo's Rageblade.",
+  "tooltip": "Get a Longshot Emblem, a Teemo, and a Guinsoo's Rageblade.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

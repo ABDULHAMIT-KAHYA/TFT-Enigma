@@ -1,0 +1,51 @@
+{
+  "name": "TFT7_Augment_UrfsGrabBag2",
+  "displayName": "Urf's Grab Bag",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_UrfsGrabBag2",
+  "description": "Gain @NumSpatulas@ Spatula, @NumComponents@ random components, and @NumGold@ gold.",
+  "tooltip": "Gain @NumSpatulas@ Spatula, @NumComponents@ random components, and @NumGold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Urfs-Grab-Bag-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumGold",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumSpatulas",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumComponents", "value": "3" }, { "name": "NumGold", "value": "5" }, { "name": "NumSpatulas", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumComponents", "Unmapped item variable: NumGold", "Unmapped item variable: NumSpatulas", "Unsupported item effect metadata: NumComponents", "Unsupported item effect metadata: NumGold", "Unsupported item effect metadata: NumSpatulas"]
+}

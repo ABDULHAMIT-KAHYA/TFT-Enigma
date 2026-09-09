@@ -1,8 +1,98 @@
 {
   "name": "Perfected Virulent Virus",
+  "displayName": "Perfected Virulent Virus",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Crime_Prismatic_VirulentVirus",
+  "description": "After dealing ability damage, enemies affected take an extra @DoTPercentDamage*100@% damage over @Duration@ seconds as true damage.<br><br><scaleShimmer>Perfected Bonus:</scaleShimmer> Infected enemies deal @PrismaticReducedDamage*100@% less damage. When they die, they join your side with <TFTBonus>@PrismaticZombieHealth@</TFTBonus> Health that decays over @PrismaticZombieDecayDuration@&nbsp;seconds.<br><rules>Recommended users: Silco and Renata Glasc</rules>",
+  "tooltip": "After dealing ability damage, enemies affected take an extra @DoTPercentDamage*100@% damage over @Duration@ seconds as true damage.<br><br><scaleShimmer>Perfected Bonus:</scaleShimmer> Infected enemies deal @PrismaticReducedDamage*100@% less damage. When they die, they join your side with <TFTBonus>@PrismaticZombieHealth@</TFTBonus> Health that decays over @PrismaticZombieDecayDuration@&nbsp;seconds.<br><rules>Recommended users: Silco and Renata Glasc</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Prismatic_VirulentVirus.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Perfected Virulent Virus:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Perfected Virulent Virus:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "45",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.45, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DoTPercentDamage",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PrismaticReducedDamage",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PrismaticZombieDecayDuration",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 800,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PrismaticZombieHealth",
+      "rawSourceValue": "800",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "40" }, { "name": "AS", "value": "45" }, { "name": "DoTPercentDamage", "value": "0.25" }, { "name": "Duration", "value": "3" }, { "name": "PrismaticReducedDamage", "value": "0.15" }, { "name": "PrismaticZombieDecayDuration", "value": "8" }, { "name": "PrismaticZombieHealth", "value": "800" }],
+  "importWarnings": ["Unmapped item variable: DoTPercentDamage", "Unmapped item variable: Duration", "Unmapped item variable: PrismaticReducedDamage", "Unmapped item variable: PrismaticZombieDecayDuration", "Unmapped item variable: PrismaticZombieHealth"]
 }

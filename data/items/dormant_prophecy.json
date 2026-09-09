@@ -1,7 +1,17 @@
 {
   "name": "Dormant Prophecy",
+  "displayName": "Dormant Prophecy",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_HiddenTech_DormantProphecy",
+  "description": "Combat Start: If the holder is 3 star, they star up.",
+  "tooltip": "Combat Start: If the holder is 3 star, they star up.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT15/TFT15_HiddenTech_DormantProphecy.TFT_Set15.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

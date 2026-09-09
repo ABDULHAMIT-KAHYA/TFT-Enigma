@@ -1,7 +1,17 @@
 {
   "name": "Page of Swords",
+  "displayName": "Page of Swords",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PageOfSwords",
+  "description": "Gain 2 B.F. Swords.",
+  "tooltip": "Gain 2 B.F. Swords.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PageofSwords_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

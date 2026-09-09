@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Augment_Isekai_Prodigy",
+  "displayName": "Isekai",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Isekai_Prodigy",
+  "description": "Summon a magical hero from another universe to fight for you. This hero is a  <TFTRadiantItemBonus>Prodigy</TFTRadiantItemBonus> this game.<br><br>",
+  "tooltip": "Summon a magical hero from another universe to fight for you. This hero is a  <TFTRadiantItemBonus>Prodigy</TFTRadiantItemBonus> this game.<br><br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Isekai_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

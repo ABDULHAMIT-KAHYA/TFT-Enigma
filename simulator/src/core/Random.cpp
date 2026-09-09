@@ -11,6 +11,15 @@ void Random::setSeed(std::uint32_t seed)
     state_ = seed == 0u ? 1u : seed;
 }
 
+void Random::setState(std::uint32_t state)
+{
+    state_ = state == 0u ? 1u : state;
+}
+
+std::uint32_t Random::state() const
+{
+    return state_;
+}
 std::uint32_t Random::nextU32()
 {
     std::uint32_t x = state_;
@@ -36,4 +45,5 @@ float Random::nextFloat01()
     const float f = static_cast<float>(x) / static_cast<float>(0xFFFFFFFFu);
     return std::clamp(f, 0.0f, 1.0f);
 }
+
 

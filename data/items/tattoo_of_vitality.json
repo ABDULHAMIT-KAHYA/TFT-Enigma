@@ -1,7 +1,41 @@
 {
   "name": "Tattoo of Vitality",
+  "displayName": "Tattoo of Vitality",
+  "isPlaceholder": false,
+  "sourceId": "TFT11_Item_InkshadowOx",
+  "description": "Attacks heal the holder for @HealthRatio*100@% of their max Health and deal the same amount as bonus magic damage.",
+  "tooltip": "Attacks heal the holder for @HealthRatio*100@% of their max Health and deal the same amount as bonus magic damage.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT11_InkShadowItems/TFT11_Inkshadow_Vitality.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Tattoo of Vitality:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 350, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 350,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "350",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 350, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.03,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthRatio",
+      "rawSourceValue": "0.03",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "350" }, { "name": "HealthRatio", "value": "0.03" }],
+  "importWarnings": ["Unmapped item variable: HealthRatio"]
 }

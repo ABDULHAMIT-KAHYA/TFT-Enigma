@@ -1,7 +1,29 @@
 {
   "name": "Tantrum",
+  "displayName": "Tantrum",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_RagewingTantrum",
+  "description": "After casting their first Ability, Ragewings restore @ManaRestorePct@% of their maximum Rage. Gain a Senna.",
+  "tooltip": "After casting their first Ability, Ragewings restore @ManaRestorePct@% of their maximum Rage. Gain a Senna.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Untamed-Inferno-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCast",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaRestorePct",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaRestorePct", "value": "100" }],
+  "importWarnings": ["Metadata-only item effect: ManaRestorePct -> ModifyMana", "Unmapped item variable: ManaRestorePct"]
 }

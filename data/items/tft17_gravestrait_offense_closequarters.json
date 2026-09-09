@@ -1,0 +1,65 @@
+{
+  "name": "TFT17_GravesTrait_Offense_CloseQuarters",
+  "displayName": "Assault Frame",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_GravesTrait_Offense_CloseQuarters",
+  "description": "Become an Attack Fighter with @Range@ Range. Gain @BaseHealth@ Base Health, @Omnivamp*100@% Omnivamp, and @AttackDamage*100@% Attack Damage.",
+  "tooltip": "Become an Attack Fighter with @Range@ Range. Gain @BaseHealth@ Base Health, @Omnivamp*100@% Omnivamp, and @AttackDamage*100@% Attack Damage.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_AssaultFrame.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+    { "name": "Item:TFT17_GravesTrait_Offense_CloseQuarters:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT17_GravesTrait_Offense_CloseQuarters:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackDamage",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Omnivamp",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseHealth",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": -2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Range",
+      "rawSourceValue": "-2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackDamage", "value": "0.25" }, { "name": "BaseHealth", "value": "250" }, { "name": "Omnivamp", "value": "0.1" }, { "name": "Range", "value": "-2" }],
+  "importWarnings": ["Unmapped item variable: BaseHealth", "Unmapped item variable: Range"]
+}

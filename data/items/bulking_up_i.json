@@ -1,7 +1,40 @@
 {
   "name": "Bulking Up I",
+  "displayName": "Bulking Up I",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_BulkingUp1",
+  "description": "Your team gains @BaseHP@ Health. After each round, they gain @IncreasePerRound@ more. (Current Health: @TFTUnitProperty.item:TFT_BulkingUp1Rounds@)",
+  "tooltip": "Your team gains @BaseHP@ Health. After each round, they gain @IncreasePerRound@ more. (Current Health: @TFTUnitProperty.item:TFT_BulkingUp1Rounds@)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BulkingUp_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseHP",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IncreasePerRound",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseHP", "value": "35" }, { "name": "IncreasePerRound", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: BaseHP", "Unmapped item variable: IncreasePerRound"]
 }

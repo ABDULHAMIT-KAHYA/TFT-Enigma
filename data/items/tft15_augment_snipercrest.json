@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_SniperCrest",
+  "displayName": "Sniper Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SniperCrest",
+  "description": "Gain a Sniper Emblem.",
+  "tooltip": "Gain a Sniper Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Sniper_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,40 @@
 {
   "name": "Shockwave",
+  "displayName": "Shockwave",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_Shockwave",
+  "description": "Combat Start: Unleash a shockwave forward that deals @ShockwavePercentMaxHealthDamage*100@% of Graves' max Health as magic damage and stun enemies hit for @ShockwaveStunDuration@ seconds.",
+  "tooltip": "Combat Start: Unleash a shockwave forward that deals @ShockwavePercentMaxHealthDamage*100@% of Graves' max Health as magic damage and stun enemies hit for @ShockwaveStunDuration@ seconds.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_Shockwave.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ShockwavePercentMaxHealthDamage",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ShockwaveStunDuration",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ShockwavePercentMaxHealthDamage", "value": "0.15" }, { "name": "ShockwaveStunDuration", "value": "2" }],
+  "importWarnings": ["Metadata-only item effect: ShockwavePercentMaxHealthDamage -> Heal", "Metadata-only item effect: ShockwaveStunDuration -> Heal", "Unmapped item variable: ShockwavePercentMaxHealthDamage", "Unmapped item variable: ShockwaveStunDuration"]
 }

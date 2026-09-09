@@ -1,7 +1,17 @@
 {
   "name": "TFT7_Consumable_Name_Dragonling",
+  "displayName": "TFT7_Consumable_Name_Dragonling",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Consumable_NeekosHelpDragon",
+  "description": "TFT7_Consumable_Description_Dragonling",
+  "tooltip": "TFT7_Consumable_Description_Dragonling",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT7_Consumable_Dragonling.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,51 @@
+{
+  "name": "TFT_Augment_WithinTheMargins",
+  "displayName": "Within The Margins",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_WithinTheMargins",
+  "description": "Start with a pool of @MaxGold@ gold. After each combat, subtract @MinusGoldPerUnit@ gold for each remaining champion alive on either team. After @Rounds@ rounds, gain all remaining gold.<br><br>Gold: @TFTUnitProperty.item:TFT_Augment_WithinTheMargins@<br>Rounds Remaining: @TFTUnitProperty.item:TFT_Augment_WithinTheMarginsRounds@",
+  "tooltip": "Start with a pool of @MaxGold@ gold. After each combat, subtract @MinusGoldPerUnit@ gold for each remaining champion alive on either team. After @Rounds@ rounds, gain all remaining gold.<br><br>Gold: @TFTUnitProperty.item:TFT_Augment_WithinTheMargins@<br>Rounds Remaining: @TFTUnitProperty.item:TFT_Augment_WithinTheMarginsRounds@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 80,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxGold",
+      "rawSourceValue": "80",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MinusGoldPerUnit",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "rounds",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxGold", "value": "80" }, { "name": "MinusGoldPerUnit", "value": "4" }, { "name": "rounds", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: MaxGold", "Unmapped item variable: MinusGoldPerUnit", "Unmapped item variable: rounds", "Unsupported item effect metadata: MaxGold", "Unsupported item effect metadata: MinusGoldPerUnit", "Unsupported item effect metadata: rounds"]
+}

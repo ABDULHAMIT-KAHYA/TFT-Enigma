@@ -1,7 +1,17 @@
 {
   "name": "Indiscriminate Killer",
+  "displayName": "Indiscriminate Killer",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_JustSlayer",
+  "description": "Gain a Giant Slayer. Giant Slayers gain their Damage Amp against all enemies instead of just Tanks.",
+  "tooltip": "Gain a Giant Slayer. Giant Slayers gain their Damage Amp against all enemies instead of just Tanks.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/IndiscriminateSlayer_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

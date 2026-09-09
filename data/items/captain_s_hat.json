@@ -1,7 +1,17 @@
 {
   "name": "Captain's Hat",
+  "displayName": "Captain's Hat",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Bilgewater_JollyRoger",
+  "description": "<danger>NYI</danger> The bearer becomes the Captain! Grant allies (a really cool effect) while the bearer is alive.",
+  "tooltip": "<danger>NYI</danger> The bearer becomes the Captain! Grant allies (a really cool effect) while the bearer is alive.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Item_Bilgewater_Jollyroger.TFT_Set16.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

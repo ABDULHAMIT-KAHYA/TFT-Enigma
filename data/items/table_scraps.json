@@ -1,7 +1,40 @@
 {
   "name": "Table Scraps",
+  "displayName": "Table Scraps",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TableScraps",
+  "description": "After the next @NumStages@ carousels, gain one champion that was not taken and its item. Gain @Gold@ gold.",
+  "tooltip": "After the next @NumStages@ carousels, gain one champion that was not taken and its item. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TableScraps_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumStages",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "1" }, { "name": "NumStages", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumStages", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumStages"]
 }

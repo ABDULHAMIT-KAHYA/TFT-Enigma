@@ -1,7 +1,41 @@
 {
   "name": "Scoped Weapons",
+  "displayName": "Scoped Weapons",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_ScopedWeapons1",
+  "description": "Your units that start combat in the back 2 rows gain +@HexRangeIncrease@ Attack Range and @AS*100@% Attack Speed.",
+  "tooltip": "Your units that start combat in the back 2 rows gain +@HexRangeIncrease@ Attack Range and @AS*100@% Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ScopedWeapons2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Scoped Weapons:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRangeIncrease",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "0.15" }, { "name": "HexRangeIncrease", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: HexRangeIncrease", "Unsupported item effect metadata: HexRangeIncrease"]
 }

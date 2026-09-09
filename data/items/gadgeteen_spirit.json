@@ -1,7 +1,40 @@
 {
   "name": "Gadgeteen Spirit",
+  "displayName": "Gadgeteen Spirit",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_GadgeteenSpirit",
+  "description": "Combat start: Distribute @numitems@ temporary items to the champions with the fewest items.",
+  "tooltip": "Combat start: Distribute @numitems@ temporary items to the champions with the fewest items.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{a416e152}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumItems", "value": "1" }, { "name": "{a416e152}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumItems", "Unmapped item variable: {a416e152}", "Unsupported item effect metadata: NumItems", "Unsupported item effect metadata: {a416e152}"]
 }

@@ -1,0 +1,40 @@
+{
+  "name": "TFT17_GravesTrait_Offense_Buckshot",
+  "displayName": "Buckshot",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_Buckshot",
+  "description": "Increase the number of Attack projectiles by @NumBonusProjectiles@. Spread increased by @SpreadIncrease*100@%.",
+  "tooltip": "Increase the number of Attack projectiles by @NumBonusProjectiles@. Spread increased by @SpreadIncrease*100@%.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_Buckshot.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumBonusProjectiles",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SpreadIncrease",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumBonusProjectiles", "value": "2" }, { "name": "SpreadIncrease", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: NumBonusProjectiles", "Unmapped item variable: SpreadIncrease"]
+}

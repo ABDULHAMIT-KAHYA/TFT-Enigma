@@ -1,7 +1,29 @@
 {
   "name": "A Chromatic Snack",
+  "displayName": "A Chromatic Snack",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_GoopBuff_VoraciousAppetite_Consumable",
+  "description": "Consume @HealthToFeed@ player health for Health&nbsp;%i:scaleHealth% and Damage&nbsp;Amp&nbsp;%i:scaleDA%.",
+  "tooltip": "Consume @HealthToFeed@ player health for Health&nbsp;%i:scaleHealth% and Damage&nbsp;Amp&nbsp;%i:scaleDA%.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT13/TFT13_Ravenous_LightSnack.TFT_Set13.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthToFeed",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthToFeed", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: HealthToFeed"]
 }

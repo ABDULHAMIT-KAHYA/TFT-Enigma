@@ -1,0 +1,73 @@
+{
+  "name": "TFT_Augment_AllIn",
+  "displayName": "Training Manual",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_AllIn",
+  "description": "Get a  Training Manual. Once per round, use the Training Manual on a champion to spend five gold and give them @HealthBonus@ Health and @ASBonus@ Attack Speed. <br><br>@TFTUnitProperty.item:TFT_Augment_ALLin_Tooltip@",
+  "tooltip": "Get a  Training Manual. Once per round, use the Training Manual on a champion to spend five gold and give them @HealthBonus@ Health and @ASBonus@ Attack Speed. <br><br>@TFTUnitProperty.item:TFT_Augment_ALLin_Tooltip@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ASBonus",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthBonus",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InstanceCap",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{86c298d2}",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a39ee3a5}",
+      "rawSourceValue": "75",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ASBonus", "value": "10" }, { "name": "HealthBonus", "value": "10" }, { "name": "InstanceCap", "value": "20" }, { "name": "{86c298d2}", "value": "50" }, { "name": "{a39ee3a5}", "value": "75" }],
+  "importWarnings": ["Unmapped item variable: ASBonus", "Unmapped item variable: HealthBonus", "Unmapped item variable: InstanceCap", "Unmapped item variable: {86c298d2}", "Unmapped item variable: {a39ee3a5}"]
+}

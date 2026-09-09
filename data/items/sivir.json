@@ -1,7 +1,17 @@
 {
   "name": "Sivir",
+  "displayName": "Sivir",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Sivir",
+  "description": "Sivir",
+  "tooltip": "Sivir",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Sivir_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

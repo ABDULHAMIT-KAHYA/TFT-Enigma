@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_BrawlerCrown",
+  "displayName": "Bruiser Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_BrawlerCrown",
+  "description": "Get a Bruiser Emblem, a Sion, and a Spirit Visage.",
+  "tooltip": "Get a Bruiser Emblem, a Sion, and a Spirit Visage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

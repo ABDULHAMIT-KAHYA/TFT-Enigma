@@ -1,7 +1,42 @@
 {
   "name": "Battle Scars",
+  "displayName": "Battle Scars",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Watcher",
+  "description": "Every time Watchers are attacked, they gain @IncreaseADByTakeAttack@% Attack Damage. Every time Watchers are hit by an ability, they gain @IncreaseAPByTakeSpell@ Ability Power. Gain a Vander.",
+  "tooltip": "Every time Watchers are attacked, they gain @IncreaseADByTakeAttack@% Attack Damage. Every time Watchers are hit by an ability, they gain @IncreaseAPByTakeSpell@ Ability Power. Gain a Vander.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BattleScars_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "IncreaseADByTakeAttack",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "IncreaseAPByTakeSpell",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    }
+  ],
+  "rawVariables": [{ "name": "IncreaseADByTakeAttack", "value": "2" }, { "name": "IncreaseAPByTakeSpell", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: IncreaseADByTakeAttack", "Unmapped item variable: IncreaseAPByTakeSpell"]
 }

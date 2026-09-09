@@ -1,7 +1,40 @@
 {
   "name": "Switching Gears",
+  "displayName": "Switching Gears",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_SwitchingGears",
+  "description": "Gain @Gold@ gold whenever you break your win or loss streak.",
+  "tooltip": "Gain @Gold@ gold whenever you break your win or loss streak.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Switching-Gears-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{379448fe}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "3" }, { "name": "{379448fe}", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: {379448fe}", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: {379448fe}"]
 }

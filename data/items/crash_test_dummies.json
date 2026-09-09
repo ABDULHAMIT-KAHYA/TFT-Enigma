@@ -1,7 +1,51 @@
 {
   "name": "Crash Test Dummies",
+  "displayName": "Crash Test Dummies",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_CrashTestDummies",
+  "description": "Gain @Numdummies@ Training Dummies. Combat start: Your Training Dummies launch themselves towards a group of enemies and Stun them for @stun@ seconds. ",
+  "tooltip": "Gain @Numdummies@ Training Dummies. Combat start: Your Training Dummies launch themselves towards a group of enemies and Stun them for @stun@ seconds. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crash-Test-Dummies-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "NumDummies",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "SearchRange",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Stun",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumDummies", "value": "2" }, { "name": "SearchRange", "value": "4" }, { "name": "Stun", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumDummies", "Unmapped item variable: SearchRange", "Unmapped item variable: Stun", "Unsupported item effect metadata: NumDummies", "Unsupported item effect metadata: SearchRange", "Unsupported item effect metadata: Stun"]
 }

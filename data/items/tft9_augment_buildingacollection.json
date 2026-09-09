@@ -1,0 +1,40 @@
+{
+  "name": "TFT9_Augment_BuildingACollection",
+  "displayName": "Buried Treasures I",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_BuildingACollection",
+  "description": "Gain a random item component now and at the start of the next @roundsofbonusitems@ rounds.",
+  "tooltip": "Gain a random item component now and at the start of the next @roundsofbonusitems@ rounds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Buried-Treasures-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "roundsofbonusitems",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "null" }, { "name": "roundsofbonusitems", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: roundsofbonusitems", "Unmapped non-numeric item variable: Gold", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: roundsofbonusitems"]
+}

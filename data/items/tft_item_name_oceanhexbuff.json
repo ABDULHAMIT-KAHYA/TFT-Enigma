@@ -1,7 +1,29 @@
 {
   "name": "tft_item_name_OceanHexBuff",
+  "displayName": "tft_item_name_OceanHexBuff",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_Hex_Ocean",
+  "description": "tft_item_description_OceanHexBuff",
+  "tooltip": "tft_item_description_OceanHexBuff",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_Hex_Ocean.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "startingmana",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "startingmana", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: startingmana"]
 }

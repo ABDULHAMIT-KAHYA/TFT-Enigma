@@ -1,7 +1,40 @@
 {
   "name": "Penitence",
+  "displayName": "Penitence",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_JadePenitence",
+  "description": "Jade Statue explosions deal @DamageIncPct@% more damage. Enemies are disarmed for @DisarmDuration@ seconds the first time they attack a Jade Statue or are damaged by a Jade Statue's explosion. Gain a Gnar.",
+  "tooltip": "Jade Statue explosions deal @DamageIncPct@% more damage. Enemies are disarmed for @DisarmDuration@ seconds the first time they attack a Jade Statue or are damaged by a Jade Statue's explosion. Gain a Gnar.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Penitence-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageIncPct",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 2.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DisarmDuration",
+      "rawSourceValue": "2.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageIncPct", "value": "100" }, { "name": "DisarmDuration", "value": "2.5" }],
+  "importWarnings": ["Unmapped item variable: DamageIncPct", "Unmapped item variable: DisarmDuration"]
 }

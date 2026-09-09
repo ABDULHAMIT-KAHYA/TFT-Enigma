@@ -1,7 +1,17 @@
 {
   "name": "16 XP",
+  "displayName": "16 XP",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_XP_16_Stage1",
+  "description": "16 XP",
+  "tooltip": "16 XP",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/LevelUp2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

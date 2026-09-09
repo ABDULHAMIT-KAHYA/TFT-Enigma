@@ -1,7 +1,52 @@
 {
   "name": "Wellness Trust",
+  "displayName": "Wellness Trust",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_MoneyHealsAllWounds",
+  "description": "Round start: Gain @GoldPerTurn@ gold. If you have at least @GoldThreshhold@ gold, heal @Health@ player health.",
+  "tooltip": "Round start: Gain @GoldPerTurn@ gold. If you have at least @GoldThreshhold@ gold, heal @Health@ player health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Money-Heals-all-Wounds-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Wellness Trust:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldPerTurn",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldThreshhold",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldPerTurn", "value": "3" }, { "name": "GoldThreshhold", "value": "40" }, { "name": "Health", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: GoldPerTurn", "Unmapped item variable: GoldThreshhold"]
 }

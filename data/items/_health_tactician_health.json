@@ -1,7 +1,29 @@
 {
   "name": "@Health@ Tactician Health",
+  "displayName": "@Health@ Tactician Health",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Health",
+  "description": "@Health@ Tactician Health",
+  "tooltip": "@Health@ Tactician Health",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_PlayerHealth.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: Health"]
 }

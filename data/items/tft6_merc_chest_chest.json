@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Chest_Chest",
+  "displayName": "JACKPOT",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Chest_Chest",
+  "description": "2 item components are placed in your chest.",
+  "tooltip": "2 item components are placed in your chest.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "LootObject",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

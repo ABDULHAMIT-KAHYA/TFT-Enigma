@@ -1,0 +1,30 @@
+{
+  "name": "TFT5_Item_MysticEmblemItem",
+  "displayName": "Mystic Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_MysticEmblemItem",
+  "description": "The holder gains the Mystic trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
+  "tooltip": "The holder gains the Mystic trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set5/Mystic.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+    { "name": "Item:TFT5_Item_MysticEmblemItem:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "150" }],
+  "importWarnings": []
+}

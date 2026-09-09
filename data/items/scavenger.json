@@ -1,7 +1,29 @@
 {
   "name": "Scavenger",
+  "displayName": "Scavenger",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Scavenger",
+  "description": "The first @NumDeaths@ enemy champions that are killed each combat grant a champion on your team a temporary completed item.",
+  "tooltip": "The first @NumDeaths@ enemy champions that are killed each combat grant a champion on your team a temporary completed item.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Scavenger_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDeaths",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumDeaths", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: NumDeaths", "Unsupported item effect metadata: NumDeaths"]
 }

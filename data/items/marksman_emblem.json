@@ -1,7 +1,41 @@
 {
   "name": "Marksman Emblem",
+  "displayName": "Marksman Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Item_MarksmanEmblemItem",
+  "description": "The holder gains the Marksman trait.<br>Dealing physical damage to an enemy reduces their Armor by @ArmorPerDamage@.",
+  "tooltip": "The holder gains the Marksman trait.<br>Dealing physical damage to an enemy reduces their Armor by @ArmorPerDamage@.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set14/TFT14_Emblem_Marksman.TFT_Set14.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Marksman Emblem:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmorPerDamage",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.1" }, { "name": "ArmorPerDamage", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: ArmorPerDamage"]
 }

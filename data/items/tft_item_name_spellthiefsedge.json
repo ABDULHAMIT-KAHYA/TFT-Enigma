@@ -1,7 +1,29 @@
 {
   "name": "tft_item_name_SpellThiefsEdge",
+  "displayName": "tft_item_name_SpellThiefsEdge",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_SpellThiefsEdge",
+  "description": "tft_item_description_SpellThiefsEdge",
+  "tooltip": "tft_item_description_SpellThiefsEdge",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_SpellThiefsEdge.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{0cc88d45}",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{0cc88d45}", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: {0cc88d45}", "Unsupported item effect metadata: {0cc88d45}"]
 }

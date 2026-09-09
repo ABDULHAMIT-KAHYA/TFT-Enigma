@@ -1,7 +1,52 @@
 {
   "name": "Bringer of Ruin",
+  "displayName": "Bringer of Ruin",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Augment_Noxus_BringerOfRuin",
+  "description": "Every takedown Atakhan scores permanently grants him @AP@% Ability Power and @MaxHealth@ max Health. Gain a Briar and a Sion. <br>(Current Takedowns: @TFTUnitProperty.trait:TFT16_Augment_Noxus_BringerOfRuin_Takedowns@)",
+  "tooltip": "Every takedown Atakhan scores permanently grants him @AP@% Ability Power and @MaxHealth@ max Health. Gain a Briar and a Sion. <br>(Current Takedowns: @TFTUnitProperty.trait:TFT16_Augment_Noxus_BringerOfRuin_Takedowns@)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BringerOfRuin_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Bringer of Ruin:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealth",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TakedownBreakpoint",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "1" }, { "name": "MaxHealth", "value": "30" }, { "name": "TakedownBreakpoint", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: MaxHealth", "Unmapped item variable: TakedownBreakpoint"]
 }

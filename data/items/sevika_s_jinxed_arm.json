@@ -1,10 +1,69 @@
 {
   "name": "Sevika's Jinxed Arm",
+  "displayName": "Sevika's Jinxed Arm",
+  "isPlaceholder": false,
+  "sourceId": "TFTEvent5YR_Item_SevikasJinxedArm",
+  "description": "At the times shown in the High Roller trait, roll a random Jinx mod:<br>- Rocket: Launch @TFTUnitProperty.item:TFTEvent5YR_HighRoller_NumRockets@ rockets at random enemies, dealing<br>@TFTTrait.TFTEvent5YR_HighRoller.1:Spell1RocketADScalar*100@% Attack Damage + @TFTTrait.TFTEvent5YR_HighRoller.1:Spell1RocketAPScalar*100@% Ability Power physical damage per rocket.<br>- Shield: Gain a @TFTUnitProperty.item:TFTEvent5YR_HighRoller_ShieldFlatAmount@ + @TFTUnitProperty.item:TFTEvent5YR_HighRoller_ShieldMaxHPPercentage@% max Health Shield for @TFTTrait.TFTEvent5YR_HighRoller.1:Spell2ShieldDuration@ seconds.<br>- Gold: Gain @TFTUnitProperty.item:TFTEvent5YR_HighRoller_GoldAmount@ gold.<br>",
+  "tooltip": "At the times shown in the High Roller trait, roll a random Jinx mod:<br>- Rocket: Launch @TFTUnitProperty.item:TFTEvent5YR_HighRoller_NumRockets@ rockets at random enemies, dealing<br>@TFTTrait.TFTEvent5YR_HighRoller.1:Spell1RocketADScalar*100@% Attack Damage + @TFTTrait.TFTEvent5YR_HighRoller.1:Spell1RocketAPScalar*100@% Ability Power physical damage per rocket.<br>- Shield: Gain a @TFTUnitProperty.item:TFTEvent5YR_HighRoller_ShieldFlatAmount@ + @TFTUnitProperty.item:TFTEvent5YR_HighRoller_ShieldMaxHPPercentage@% max Health Shield for @TFTTrait.TFTEvent5YR_HighRoller.1:Spell2ShieldDuration@ seconds.<br>- Gold: Gain @TFTUnitProperty.item:TFTEvent5YR_HighRoller_GoldAmount@ gold.<br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/5YR/TFTEvent5YR_Item_SevikasJinxedArm.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
     { "name": "Item:Sevika's Jinxed Arm:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Sevika's Jinxed Arm:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 200, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Sevika's Jinxed Arm:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Sevika's Jinxed Arm:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 200, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StatOmnivamp",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:StatOmnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.25" }, { "name": "AP", "value": "25" }, { "name": "Health", "value": "200" }, { "name": "StatOmnivamp", "value": "0.2" }],
+  "importWarnings": []
 }

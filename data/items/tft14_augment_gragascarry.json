@@ -1,0 +1,29 @@
+{
+  "name": "TFT14_Augment_GragasCarry",
+  "displayName": "The Chug Bug",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_GragasCarry",
+  "description": "Gain @TOOLTIPNumberOfCopies@ Gragas. Your strongest Gragas's attacks have a chance to knockback and deal bonus magic damage. His ability heals and empowers his next attack.",
+  "tooltip": "Gain @TOOLTIPNumberOfCopies@ Gragas. Your strongest Gragas's attacks have a chance to knockback and deal bonus magic damage. His ability heals and empowers his next attack.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TheChugBug_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPNumberOfCopies",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "TOOLTIPNumberOfCopies", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: TOOLTIPNumberOfCopies"]
+}

@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: Dawncore",
+  "displayName": "Artifact Expert: Dawncore",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_Dawncore",
+  "description": "Get a Teemo, a Dawncore, and a Tear Of The Goddess",
+  "tooltip": "Get a Teemo, a Dawncore, and a Tear Of The Goddess",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,17 @@
 {
   "name": "Bruiser Heart",
+  "displayName": "Bruiser Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_BruiserTrait",
+  "description": "Your team counts as having 1 additional Bruiser. Gain a Jax.",
+  "tooltip": "Your team counts as having 1 additional Bruiser. Gain a Jax.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BruiserHeart1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

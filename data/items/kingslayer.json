@@ -1,7 +1,62 @@
 {
   "name": "Kingslayer",
+  "displayName": "Kingslayer",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Kingslayer",
+  "description": "Now and after every player combat, gain @Gold@ gold. If you win against a player who had more health than you, gain @WinBonusGold@ gold instead. ",
+  "tooltip": "Now and after every player combat, gain @Gold@ gold. If you win against a player who had more health than you, gain @WinBonusGold@ gold instead. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Kingslayer_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldNow",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "WinBonusGold",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "WinGold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "1" }, { "name": "GoldNow", "value": "1" }, { "name": "WinBonusGold", "value": "6" }, { "name": "WinGold", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: GoldNow", "Unmapped item variable: WinBonusGold", "Unmapped item variable: WinGold"]
 }

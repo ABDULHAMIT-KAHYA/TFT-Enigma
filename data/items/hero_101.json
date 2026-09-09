@@ -1,7 +1,52 @@
 {
   "name": "Hero 101",
+  "displayName": "Hero 101",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Augment_BattleAcademia_Hero101",
+  "description": "The first time you win @CombatWins@ player combats (Wins: @TFTUnitProperty.:TFT15_Augment_BattleAcademia_Hero101_Wins@), all Battle Academia champions gain @BonusHealth@ Health and @ReducedMana*100@% reduced max Mana. Gain a Garen and Ezreal.",
+  "tooltip": "The first time you win @CombatWins@ player combats (Wins: @TFTUnitProperty.:TFT15_Augment_BattleAcademia_Hero101_Wins@), all Battle Academia champions gain @BonusHealth@ Health and @ReducedMana*100@% reduced max Mana. Gain a Garen and Ezreal.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Hero101_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Hero 101:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealth",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealth", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CombatWins",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ReducedMana",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusHealth", "value": "100" }, { "name": "CombatWins", "value": "4" }, { "name": "ReducedMana", "value": "0.15" }],
+  "importWarnings": ["Unmapped item variable: CombatWins", "Unmapped item variable: ReducedMana"]
 }

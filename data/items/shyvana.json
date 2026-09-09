@@ -1,7 +1,17 @@
 {
   "name": "Shyvana",
+  "displayName": "Shyvana",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Shyvana",
+  "description": "Shyvana",
+  "tooltip": "Shyvana",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Shyvana_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

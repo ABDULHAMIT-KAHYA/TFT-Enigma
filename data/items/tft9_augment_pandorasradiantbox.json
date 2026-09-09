@@ -1,0 +1,17 @@
+{
+  "name": "TFT9_Augment_PandorasRadiantBox",
+  "displayName": "Pandora's Items III",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_PandorasRadiantBox",
+  "description": "Round start: items on your bench are randomized. <br><br>Gain 1 random Radiant item.",
+  "tooltip": "Round start: items on your bench are randomized. <br><br>Gain 1 random Radiant item.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Pandora3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

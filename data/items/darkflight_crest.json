@@ -1,7 +1,17 @@
 {
   "name": "Darkflight Crest",
+  "displayName": "Darkflight Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DarkflightEmblem",
+  "description": "Gain a Darkflight Emblem and a Rell.",
+  "tooltip": "Gain a Darkflight Emblem and a Rell.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DarkflightCrest-2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

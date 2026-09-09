@@ -1,7 +1,52 @@
 {
   "name": "Bad Luck Protection",
+  "displayName": "Bad Luck Protection",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_BadLuckProtection",
+  "description": "Your team can no longer critically strike. Convert each @CritChancePercent@% Critical Strike Chance into @ADPerCrit*100@% Attack Damage. Gain a Sparring Gloves.",
+  "tooltip": "Your team can no longer critically strike. Convert each @CritChancePercent@% Critical Strike Chance into @ADPerCrit*100@% Attack Damage. Gain a Sparring Gloves.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BadLuckProtection_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Bad Luck Protection:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ADPerCrit",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{1a2d5ea3}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChancePercent",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChancePercent", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "ADPerCrit", "value": "0.05" }, { "name": "CritChancePercent", "value": "5" }, { "name": "{1a2d5ea3}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: ADPerCrit", "Unmapped non-numeric item variable: {1a2d5ea3}"]
 }

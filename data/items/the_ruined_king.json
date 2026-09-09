@@ -1,7 +1,40 @@
 {
   "name": "The Ruined King",
+  "displayName": "The Ruined King",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ShadowIsles_RuinedKing",
+  "description": "Gain a 2-star Viego. Your strongest Viego shares @PassiveSharePercent*100@% of his Passive with other Shadow Isles allies. After collecting @SoulReq@ souls, his Ability upgrades.",
+  "tooltip": "Gain a 2-star Viego. Your strongest Viego shares @PassiveSharePercent*100@% of his Passive with other Shadow Isles allies. After collecting @SoulReq@ souls, his Ability upgrades.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RuinedKing_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PassiveSharePercent",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SoulReq",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PassiveSharePercent", "value": "0.3" }, { "name": "SoulReq", "value": "100" }],
+  "importWarnings": ["Unmapped item variable: PassiveSharePercent", "Unmapped item variable: SoulReq", "Unsupported item effect metadata: PassiveSharePercent", "Unsupported item effect metadata: SoulReq"]
 }

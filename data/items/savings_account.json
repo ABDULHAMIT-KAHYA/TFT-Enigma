@@ -1,7 +1,62 @@
 {
   "name": "Savings Account",
+  "displayName": "Savings Account",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SavingsAccount",
+  "description": "After you earn @GoldRequired@ gold in interest, gain @GoldToGain@ gold. Your max interest is increased to @InterestCap@. Gain @GoldNow@ gold now.<br><br><tftitemrules>Gold earned: @TFTUnitProperty.item:TFT_Augment_SavingsAccount_Tracker@</tftitemrules>",
+  "tooltip": "After you earn @GoldRequired@ gold in interest, gain @GoldToGain@ gold. Your max interest is increased to @InterestCap@. Gain @GoldNow@ gold now.<br><br><tftitemrules>Gold earned: @TFTUnitProperty.item:TFT_Augment_SavingsAccount_Tracker@</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SavingsAccount_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldNow",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldToGain",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InterestCap",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "goldrequired",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldNow", "value": "4" }, { "name": "GoldToGain", "value": "25" }, { "name": "InterestCap", "value": "7" }, { "name": "goldrequired", "value": "50" }],
+  "importWarnings": ["Unmapped item variable: GoldNow", "Unmapped item variable: GoldToGain", "Unmapped item variable: InterestCap", "Unmapped item variable: goldrequired", "Unsupported item effect metadata: GoldNow", "Unsupported item effect metadata: GoldToGain", "Unsupported item effect metadata: InterestCap", "Unsupported item effect metadata: goldrequired"]
 }

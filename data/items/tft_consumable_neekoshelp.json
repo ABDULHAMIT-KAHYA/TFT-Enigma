@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Consumable_NeekosHelp",
+  "displayName": "Champion Duplicator",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Consumable_NeekosHelp",
+  "description": "Use on a champion to create a 1-star copy on your bench.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Use on a champion to create a 1-star copy on your bench.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Consumable_NeekosHelp.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

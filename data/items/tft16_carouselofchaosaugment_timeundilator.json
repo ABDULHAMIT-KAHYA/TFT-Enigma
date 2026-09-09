@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_CarouselOfChaosAugment_TimeUndilator",
+  "displayName": "Time UNdilator",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_CarouselOfChaosAugment_TimeUndilator",
+  "description": "Gain a Time Undilator, a dangerous bomb that destroys ALL units in an X-pattern at the start of combat. Also, something is terribly wrong with your shop...",
+  "tooltip": "Gain a Time Undilator, a dangerous bomb that destroys ALL units in an X-pattern at the start of combat. Also, something is terribly wrong with your shop...",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BaBoom_III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

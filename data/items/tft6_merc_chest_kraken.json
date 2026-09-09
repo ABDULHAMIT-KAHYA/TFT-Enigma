@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Chest_Kraken",
+  "displayName": "Large Prize",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Chest_Kraken",
+  "description": "1 Loaded Dice has been added to your chest. ",
+  "tooltip": "1 Loaded Dice has been added to your chest. ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "LootObject",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

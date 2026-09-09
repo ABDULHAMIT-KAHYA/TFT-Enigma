@@ -1,8 +1,43 @@
 {
   "name": "Know Your Enemy",
+  "displayName": "Know Your Enemy",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_KnowYourEnemy",
+  "description": "You can see who you will fight next. Your team gains @BaseDamageAmp@% Damage Amp, increased to @FullDamageAmp@% if you and your opponent have any of the same traits active.",
+  "tooltip": "You can see who you will fight next. Your team gains @BaseDamageAmp@% Damage Amp, increased to @FullDamageAmp@% if you and your opponent have any of the same traits active.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Know-Your-Enemy-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Know Your Enemy:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Know Your Enemy:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseDamageAmp",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BaseDamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FullDamageAmp",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:FullDamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BaseDamageAmp", "value": "8" }, { "name": "FullDamageAmp", "value": "15" }],
+  "importWarnings": []
 }

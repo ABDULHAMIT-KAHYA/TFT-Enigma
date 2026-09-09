@@ -1,7 +1,17 @@
 {
   "name": "Astral Soul",
+  "displayName": "Astral Soul",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_AstralTrait2",
+  "description": "Your team counts as having 1 additional Astral. Gain a Redemption and a Varus.",
+  "tooltip": "Your team counts as having 1 additional Astral. Gain a Redemption and a Varus.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Astral-Crown-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,29 @@
+{
+  "name": "TFT6_Augment_WindfallPlusPlus",
+  "displayName": "Windfall++",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_WindfallPlusPlus",
+  "description": "Gain @AugmentGold@ gold.",
+  "tooltip": "Gain @AugmentGold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Windfall3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AugmentGold",
+      "rawSourceValue": "45",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AugmentGold", "value": "45" }],
+  "importWarnings": ["Unmapped item variable: AugmentGold", "Unsupported item effect metadata: AugmentGold"]
+}

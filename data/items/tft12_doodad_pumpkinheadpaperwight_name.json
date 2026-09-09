@@ -1,7 +1,41 @@
 {
   "name": "TFT12_Doodad_PumpkinheadPaperwight_Name",
+  "displayName": "TFT12_Doodad_PumpkinheadPaperwight_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_PumpkinheadPaperweight",
+  "description": "TFT12_Doodad_PumpkinheadPaperwight_Tooltip",
+  "tooltip": "TFT12_Doodad_PumpkinheadPaperwight_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MagicDamage",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 100, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CD",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CD", "value": "2" }, { "name": "MagicDamage", "value": "100" }],
+  "importWarnings": ["Unmapped item variable: CD", "Unmapped item variable: MagicDamage", "Unsupported item effect metadata: CD"]
 }

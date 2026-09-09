@@ -1,7 +1,62 @@
 {
   "name": "Varus's Obsession",
+  "displayName": "Varus's Obsession",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Item_Artifact_VarusArtifact",
+  "description": "Combat Start: Your strongest Tank becomes the Soulmate. For each second they are alive, the holder gains @StackingStats@% stacking Attack Damage and Ability Power.<br><br>The Soulmate heals for @HealPct*100@% of damage the holder deals.",
+  "tooltip": "Combat Start: Your strongest Tank becomes the Soulmate. For each second they are alive, the holder gains @StackingStats@% stacking Attack Damage and Ability Power.<br><br>The Soulmate heals for @HealPct*100@% of damage the holder deals.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_Item_Artifact_VarusObsession.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HealPct",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Interval",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "StackingStats",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{1543aa48}",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealPct", "value": "0.2" }, { "name": "Interval", "value": "1" }, { "name": "StackingStats", "value": "3" }, { "name": "{1543aa48}", "value": "0.15" }],
+  "importWarnings": ["Metadata-only item effect: HealPct -> Heal", "Metadata-only item effect: Interval -> Heal", "Metadata-only item effect: StackingStats -> Heal", "Metadata-only item effect: {1543aa48} -> Heal", "Unmapped item variable: HealPct", "Unmapped item variable: Interval", "Unmapped item variable: StackingStats", "Unmapped item variable: {1543aa48}"]
 }

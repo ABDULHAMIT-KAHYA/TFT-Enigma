@@ -1,7 +1,40 @@
 {
   "name": "Missing Link",
+  "displayName": "Missing Link",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Jackpot",
+  "description": "After you reroll your Shop @RerollAmount@ times, gain a copy of each @UnitCost@-cost champion. <br><br>(Rerolls this game: @TFTUnitProperty.item:TFT9_JackpotRolls@)",
+  "tooltip": "After you reroll your Shop @RerollAmount@ times, gain a copy of each @UnitCost@-cost champion. <br><br>(Rerolls this game: @TFTUnitProperty.item:TFT9_JackpotRolls@)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Jackpot-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RerollAmount",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UnitCost",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RerollAmount", "value": "40" }, { "name": "UnitCost", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: RerollAmount", "Unmapped item variable: UnitCost", "Unsupported item effect metadata: RerollAmount", "Unsupported item effect metadata: UnitCost"]
 }

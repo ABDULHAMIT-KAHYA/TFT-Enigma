@@ -1,7 +1,17 @@
 {
   "name": "Use your Power Snax on a champion to unlock Power Ups.",
+  "displayName": "Use your Power Snax on a champion to unlock Power Ups.",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_HiddenTech_Test1",
+  "description": "Use your Power Snax on a champion to unlock Power Ups.",
+  "tooltip": "Use your Power Snax on a champion to unlock Power Ups.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT15/TFT15_Railgun.TFT_Set15.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

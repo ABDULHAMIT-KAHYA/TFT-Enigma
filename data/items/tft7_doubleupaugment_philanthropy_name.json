@@ -1,7 +1,17 @@
 {
   "name": "TFT7_DoubleUpAugment_Philanthropy_Name",
+  "displayName": "TFT7_DoubleUpAugment_Philanthropy_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_Philanthropy",
+  "description": "TFT7_DoubleUpAugment_Philanthropy_Description",
+  "tooltip": "TFT7_DoubleUpAugment_Philanthropy_Description",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_Philanthropy.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,41 @@
 {
   "name": "Escape Velocity",
+  "displayName": "Escape Velocity",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Augment_TheCrew_EscapeVelocity",
+  "description": "Gain 1 Velocity per reroll, and @LevelNum@ when you level up. Crew units gain @AS*100%@% Attack Speed for every 3 Velocity.<br><br>(Velocity: @TFTUnitProperty.:TFT15_Augment_TheCrew_EscapeVelocity_Velocity@)",
+  "tooltip": "Gain 1 Velocity per reroll, and @LevelNum@ when you level up. Crew units gain @AS*100%@% Attack Speed for every 3 Velocity.<br><br>(Velocity: @TFTUnitProperty.:TFT15_Augment_TheCrew_EscapeVelocity_Velocity@)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/EscapeVelocity_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Escape Velocity:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.01, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.01, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LevelNum",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "0.01" }, { "name": "LevelNum", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: LevelNum", "Unsupported item effect metadata: LevelNum"]
 }

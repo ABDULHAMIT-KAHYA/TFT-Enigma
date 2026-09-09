@@ -1,7 +1,62 @@
 {
   "name": "Brutal Revenge",
+  "displayName": "Brutal Revenge",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_ChainsawCarry",
+  "description": "Gain 2 Rennis. Your strongest Renni's Ability costs @TOOLTIPManaReduction@ less and causes her to lunge towards the farthest enemy within @TOOLTIPHexDistance@ hexes, dealing @TOOLTIPAbilityDamage*100@% damage to the target and reduced damage to enemies in her path.",
+  "tooltip": "Gain 2 Rennis. Your strongest Renni's Ability costs @TOOLTIPManaReduction@ less and causes her to lunge towards the farthest enemy within @TOOLTIPHexDistance@ hexes, dealing @TOOLTIPAbilityDamage*100@% damage to the target and reduced damage to enemies in her path.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Chainsaw-Hero-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPAbilityDamage",
+      "rawSourceValue": "1.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPHexDistance",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPManaReduction",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{9dff3ac5}",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "TOOLTIPAbilityDamage", "value": "1.1" }, { "name": "TOOLTIPHexDistance", "value": "2" }, { "name": "TOOLTIPManaReduction", "value": "10" }, { "name": "{9dff3ac5}", "value": "0.3" }],
+  "importWarnings": ["Unmapped item variable: TOOLTIPAbilityDamage", "Unmapped item variable: TOOLTIPHexDistance", "Unmapped item variable: TOOLTIPManaReduction", "Unmapped item variable: {9dff3ac5}"]
 }

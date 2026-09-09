@@ -1,7 +1,29 @@
 {
   "name": "2 star Mordekaiser",
+  "displayName": "2 star Mordekaiser",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_Mordekaiser2Star",
+  "description": "2 star Mordekaiser",
+  "tooltip": "2 star Mordekaiser",
+  "iconPath": "ASSETS/Characters/TFT14_Mordekaiser/HUD/TFT14_Mordekaiser_Square.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
 }

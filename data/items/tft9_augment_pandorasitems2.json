@@ -1,0 +1,40 @@
+{
+  "name": "TFT9_Augment_PandorasItems2",
+  "displayName": "Pandora's Items II",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_PandorasItems2",
+  "description": "Round start: items on your bench are randomized.<br><br>Gain @NumComponents@ random components.",
+  "tooltip": "Round start: items on your bench are randomized.<br><br>Gain @NumComponents@ random components.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Pandora2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumCompletedItems",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumCompletedItems", "value": "null" }, { "name": "NumComponents", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumComponents", "Unmapped non-numeric item variable: NumCompletedItems", "Unsupported item effect metadata: NumCompletedItems", "Unsupported item effect metadata: NumComponents"]
+}

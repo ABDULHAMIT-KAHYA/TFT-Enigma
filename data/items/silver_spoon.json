@@ -1,7 +1,29 @@
 {
   "name": "Silver Spoon",
+  "displayName": "Silver Spoon",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_SilverSpoon",
+  "description": "Gain @Experience@ XP.<br>",
+  "tooltip": "Gain @Experience@ XP.<br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Silver-Spoon-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Experience",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Experience", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: Experience", "Unsupported item effect metadata: Experience"]
 }

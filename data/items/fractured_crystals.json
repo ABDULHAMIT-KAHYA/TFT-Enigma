@@ -1,7 +1,30 @@
 {
   "name": "Fractured Crystals",
+  "displayName": "Fractured Crystals",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Automata",
+  "description": "When an Automata champion fires their blast, they fire a second blast at the closest enemy dealing @Percentage*100@% of the original damage. Gain an Amumu and Nocturne.",
+  "tooltip": "When an Automata champion fires their blast, they fire a second blast at the closest enemy dealing @Percentage*100@% of the original damage. Gain an Amumu and Nocturne.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/UnstableCrystals_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Percentage",
+      "rawSourceValue": "0.7",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "Percentage", "value": "0.7" }],
+  "importWarnings": ["Unmapped item variable: Percentage"]
 }

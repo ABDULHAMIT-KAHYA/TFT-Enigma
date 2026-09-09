@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_SlayerCrown",
+  "displayName": "Slayer Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_SlayerCrown",
+  "description": "Gain a Slayer Emblem, a Hand of Justice, and a Vayne.",
+  "tooltip": "Gain a Slayer Emblem, a Hand of Justice, and a Vayne.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SlayerCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

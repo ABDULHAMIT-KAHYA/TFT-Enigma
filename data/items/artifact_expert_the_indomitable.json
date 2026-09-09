@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: The Indomitable",
+  "displayName": "Artifact Expert: The Indomitable",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_IndomitableGauntlet",
+  "description": "Get a Sion, The Indomitable, and a Giant Belt.",
+  "tooltip": "Get a Sion, The Indomitable, and a Giant Belt.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

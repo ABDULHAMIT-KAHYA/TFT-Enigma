@@ -1,7 +1,51 @@
 {
   "name": "Teaming Up II",
+  "displayName": "Teaming Up II",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Commander_TeamingUp2",
+  "description": "Gain @NumItems@ random Support item and @NumUnits@ random 4-cost champions.",
+  "tooltip": "Gain @NumItems@ random Support item and @NumUnits@ random 4-cost champions.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Teaming-Up-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumComponents", "value": "null" }, { "name": "NumItems", "value": "1" }, { "name": "NumUnits", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumItems", "Unmapped item variable: NumUnits", "Unmapped non-numeric item variable: NumComponents", "Unsupported item effect metadata: NumComponents", "Unsupported item effect metadata: NumItems", "Unsupported item effect metadata: NumUnits"]
 }

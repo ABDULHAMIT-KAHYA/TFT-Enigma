@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Augment_MysticEmblem",
+  "displayName": "Mystic Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_MysticEmblem",
+  "description": "Gain a Mystic Emblem and a Rakan.",
+  "tooltip": "Gain a Mystic Emblem and a Rakan.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mystic-Crest-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

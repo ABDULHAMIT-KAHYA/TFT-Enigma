@@ -1,7 +1,30 @@
 {
   "name": "Shadow Sword",
+  "displayName": "Shadow Sword",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_BFSwordShadow",
+  "description": "%i:scaleAD% +@AD*100@% Attack Damage",
+  "tooltip": "%i:scaleAD% +@AD*100@% Attack Damage",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_BF_Sword.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Shadow Sword:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.1" }],
+  "importWarnings": []
 }

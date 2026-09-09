@@ -1,7 +1,40 @@
 {
   "name": "Low Health Quest",
+  "displayName": "Low Health Quest",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_AurelionSol_LowHPQuest_Stage4",
+  "description": "The first time you fall to @HP@ health, gain @GoldReward@ gold.",
+  "tooltip": "The first time you fall to @HP@ health, gain @GoldReward@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_LowHPQuest.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldReward",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HP",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldReward", "value": "18" }, { "name": "HP", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: GoldReward", "Unmapped non-numeric item variable: HP"]
 }

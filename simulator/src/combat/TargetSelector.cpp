@@ -5,19 +5,20 @@
 
 static bool isValidTarget(const Unit& attacker, const Unit& candidate)
 {
-    if (!candidate.isAlive())
-    {
-        return false;
-    }
-    if (!candidate.isEnemyOf(attacker))
-    {
-        return false;
-    }
-    if (candidate.isUntargetable())
-    {
-        return false;
-    }
+    if (!candidate.isAlive()) return false;
+    if (!candidate.isEnemyOf(attacker)) return false;
+    if (candidate.isUntargetable()) return false;
     return true;
+}
+
+static Unit* findById(std::vector<Unit>& allUnits, UnitId id)
+{
+    if (!isValid(id)) return nullptr;
+    for (Unit& unit : allUnits)
+    {
+        if (unit.id() == id) return &unit;
+    }
+    return nullptr;
 }
 
 static int manhattanDistance(const Position& a, const Position& b)
@@ -36,14 +37,16 @@ Unit* TargetSelector::selectTarget(const Unit& attacker,
                                   std::int32_t timeMs,
                                   TargetPriority priority)
 {
-    if (ctx.castLockedTarget && timeMs < ctx.castLockUntilMs && isValidTarget(attacker, *ctx.castLockedTarget))
+    Unit* castLocked = findById(allUnits, ctx.castLockedTargetId);
+    if (castLocked && timeMs < ctx.castLockUntilMs && isValidTarget(attacker, *castLocked))
     {
-        return ctx.castLockedTarget;
+        return castLocked;
     }
 
-    if (ctx.currentTarget && isValidTarget(attacker, *ctx.currentTarget))
+    Unit* current = findById(allUnits, ctx.currentTargetId);
+    if (current && isValidTarget(attacker, *current))
     {
-        return ctx.currentTarget;
+        return current;
     }
 
     if (timeMs < ctx.retargetLockedUntilMs)
@@ -64,10 +67,7 @@ Unit* TargetSelector::selectTarget(const Unit& attacker,
 
     for (Unit& u : allUnits)
     {
-        if (!isValidTarget(attacker, u))
-        {
-            continue;
-        }
+        if (!isValidTarget(attacker, u)) continue;
 
         const int dist = manhattanDistance(attacker.getPosition(), u.getPosition());
         const int front = frontlineScore(u, midY);
@@ -89,14 +89,11 @@ Unit* TargetSelector::selectTarget(const Unit& attacker,
                 bestFront = front;
             }
         }
-        else
+        else if (dist < bestDist)
         {
-            if (dist < bestDist)
-            {
-                best = &u;
-                bestDist = dist;
-                bestFront = front;
-            }
+            best = &u;
+            bestDist = dist;
+            bestFront = front;
         }
     }
 

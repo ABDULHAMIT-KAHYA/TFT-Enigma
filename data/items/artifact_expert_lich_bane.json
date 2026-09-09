@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: Lich Bane",
+  "displayName": "Artifact Expert: Lich Bane",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_LichBane",
+  "description": "Get a 2* Sona , a Lich Bane, and a Tear Of The Goddess",
+  "tooltip": "Get a 2* Sona , a Lich Bane, and a Tear Of The Goddess",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

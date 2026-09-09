@@ -1,7 +1,17 @@
 {
   "name": "Sentinel Swarm",
+  "displayName": "Sentinel Swarm",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_SentinelSwarm",
+  "description": "Every 3 seconds, summon a powerful Sentinel equipped with Completed, Artifact, and Radiant items.",
+  "tooltip": "Every 3 seconds, summon a powerful Sentinel equipped with Completed, Artifact, and Radiant items.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_SentinelSwarm.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

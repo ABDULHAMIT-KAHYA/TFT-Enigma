@@ -1,7 +1,51 @@
 {
   "name": "Guile",
+  "displayName": "Guile",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_TenetGuile",
+  "description": "The first @NumChampions@&nbsp;champions that die each combat spawn copies of your strongest champion. Copies have @ReducedHealth*100@% max&nbsp;Health and deal @ReducedDamage*100@%&nbsp;damage.",
+  "tooltip": "The first @NumChampions@&nbsp;champions that die each combat spawn copies of your strongest champion. Copies have @ReducedHealth*100@% max&nbsp;Health and deal @ReducedDamage*100@%&nbsp;damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Guile_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumChampions",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ReducedDamage",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ReducedHealth",
+      "rawSourceValue": "0.6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumChampions", "value": "2" }, { "name": "ReducedDamage", "value": "0.5" }, { "name": "ReducedHealth", "value": "0.6" }],
+  "importWarnings": ["Unmapped item variable: NumChampions", "Unmapped item variable: ReducedDamage", "Unmapped item variable: ReducedHealth"]
 }

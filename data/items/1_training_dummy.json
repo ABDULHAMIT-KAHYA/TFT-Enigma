@@ -1,7 +1,17 @@
 {
   "name": "1 Training Dummy",
+  "displayName": "1 Training Dummy",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_TrainingDummy",
+  "description": "1 Training Dummy",
+  "tooltip": "1 Training Dummy",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Consumables/TFT_Item_Consumable_Dummy.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

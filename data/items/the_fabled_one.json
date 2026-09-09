@@ -1,7 +1,17 @@
 {
   "name": "The Fabled One",
+  "displayName": "The Fabled One",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_WukongCarry",
+  "description": "Gain a 2-star Wukong. Your strongest Wukong gains the Fabled trait. When Wukong is 3-star and the Fabled trait is active, he restores his past glory.",
+  "tooltip": "Gain a 2-star Wukong. Your strongest Wukong gains the Fabled trait. When Wukong is 3-star and the Fabled trait is active, he restores his past glory.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Fabled-One_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

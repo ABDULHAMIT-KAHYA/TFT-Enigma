@@ -1,7 +1,17 @@
 {
   "name": "Divine Dissolver",
+  "displayName": "Divine Dissolver",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Consumable_Dissolver",
+  "description": "Use on a champion to break apart all items into components and unequip them.<br><br><tftitemrules> [Cannot be used on board champions in combat.]<br>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Use on a champion to break apart all items into components and unequip them.<br><br><tftitemrules> [Cannot be used on board champions in combat.]<br>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_Consumable_Dissolver.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

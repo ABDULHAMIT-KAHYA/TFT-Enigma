@@ -1,7 +1,29 @@
 {
   "name": "March of Progress",
+  "displayName": "March of Progress",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_SlowAndSteady",
+  "description": "Gain @Exp@ XP now, and bonus XP equal to your level at the start of every player combat round. You can no longer use gold to level up.",
+  "tooltip": "Gain @Exp@ XP now, and bonus XP equal to your level at the start of every player combat round. You can no longer use gold to level up.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SlowAndSteady3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "EXP",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "EXP", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: EXP", "Unsupported item effect metadata: EXP"]
 }

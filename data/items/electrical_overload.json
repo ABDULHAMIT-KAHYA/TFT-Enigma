@@ -1,7 +1,40 @@
 {
   "name": "Electrical Overload",
+  "displayName": "Electrical Overload",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_ElectricalOverload",
+  "description": "Deal @FlatDamage@ + @MaxHealthRatio*100@% max Health as true damage to all enemies.",
+  "tooltip": "Deal @FlatDamage@ + @MaxHealthRatio*100@% max Health as true damage to all enemies.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_ElectricalOverload.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FlatDamage",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealthRatio",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "FlatDamage", "value": "50" }, { "name": "MaxHealthRatio", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: FlatDamage", "Unmapped item variable: MaxHealthRatio"]
 }

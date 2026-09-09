@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Item_Unknown",
+  "displayName": "Spatula",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_Unknown",
+  "description": "<tftitemrules>It must do something...</tftitemrules>",
+  "tooltip": "<tftitemrules>It must do something...</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Placeholders/TFT_Item_Unknown.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

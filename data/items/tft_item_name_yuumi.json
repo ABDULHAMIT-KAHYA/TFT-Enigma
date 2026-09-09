@@ -1,7 +1,17 @@
 {
   "name": "TFT_item_name_Yuumi",
+  "displayName": "TFT_item_name_Yuumi",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_Yuumi",
+  "description": "TFT_item_description_Yuumi",
+  "tooltip": "TFT_item_description_Yuumi",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_Yuumi.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

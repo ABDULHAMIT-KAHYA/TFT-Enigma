@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_Gold_8",
+  "displayName": "8 gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Gold_8",
+  "description": "8 gold",
+  "tooltip": "8 gold",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistGiveGold.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

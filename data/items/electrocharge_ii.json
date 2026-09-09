@@ -1,7 +1,84 @@
 {
   "name": "Electrocharge II",
+  "displayName": "Electrocharge II",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_Electrocharge2",
+  "description": "Every @AttacksToProc@ attacks an ally takes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage to nearby enemies (@ICD@ second cooldown).",
+  "tooltip": "Every @AttacksToProc@ attacks an ally takes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage to nearby enemies (@ICD@ second cooldown).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Electrocharge-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttacksToProc",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Damage1",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 80,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Damage2",
+      "rawSourceValue": "80",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 110,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Damage3",
+      "rawSourceValue": "110",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 140,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Damage4",
+      "rawSourceValue": "140",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ICD",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttacksToProc", "value": "4" }, { "name": "Damage1", "value": "50" }, { "name": "Damage2", "value": "80" }, { "name": "Damage3", "value": "110" }, { "name": "Damage4", "value": "140" }, { "name": "ICD", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: AttacksToProc", "Unmapped item variable: Damage1", "Unmapped item variable: Damage2", "Unmapped item variable: Damage3", "Unmapped item variable: Damage4", "Unmapped item variable: ICD"]
 }

@@ -1,7 +1,29 @@
 {
   "name": "Super Parting Gift",
+  "displayName": "Super Parting Gift",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_PenguPairs",
+  "description": "The next time you select God Pengu's gift, gain an extra copy of the champion and @Gold@ gold.",
+  "tooltip": "The next time you select God Pengu's gift, gain an extra copy of the champion and @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_PenguPairs.TFT_17_2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

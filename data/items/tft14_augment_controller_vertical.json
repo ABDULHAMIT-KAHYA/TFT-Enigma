@@ -1,0 +1,40 @@
+{
+  "name": "TFT14_Augment_Controller_Vertical",
+  "displayName": "10,000 IQ",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Controller_Vertical",
+  "description": "Every @Rounds@ rounds with Strategist active, bet whether you'll win more or lose more. After those rounds, gain @GoldReward@ gold. If you're correct, gain a completed item Anvil. Gain&nbsp;a&nbsp;Yuumi&nbsp;and&nbsp;an&nbsp;Ekko.<br><br>@TFTUnitProperty.item:TFT14_Augment_Strategist_BetStatus@",
+  "tooltip": "Every @Rounds@ rounds with Strategist active, bet whether you'll win more or lose more. After those rounds, gain @GoldReward@ gold. If you're correct, gain a completed item Anvil. Gain&nbsp;a&nbsp;Yuumi&nbsp;and&nbsp;an&nbsp;Ekko.<br><br>@TFTUnitProperty.item:TFT14_Augment_Strategist_BetStatus@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/NeuralNetwork_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldReward",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "rounds",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldReward", "value": "4" }, { "name": "rounds", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: GoldReward", "Unmapped item variable: rounds", "Unsupported item effect metadata: GoldReward", "Unsupported item effect metadata: rounds"]
+}

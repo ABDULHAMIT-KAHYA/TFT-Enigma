@@ -1,7 +1,53 @@
 {
   "name": "Soul Awakening",
+  "displayName": "Soul Awakening",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_AwakenedSoul",
+  "description": "Combat start: Your team gains @StatsPerSecond@% Attack Damage and Ability Power per second for @MaxStacks@ seconds. At max stacks, deal @BonusTrueDamage*100@% bonus true damage.",
+  "tooltip": "Combat start: Your team gains @StatsPerSecond@% Attack Damage and Ability Power per second for @MaxStacks@ seconds. At max stacks, deal @BonusTrueDamage*100@% bonus true damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AwakenedSoul_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusTrueDamage",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MaxStacks",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 10, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "StatsPerSecond",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusTrueDamage", "value": "0.12" }, { "name": "MaxStacks", "value": "10" }, { "name": "StatsPerSecond", "value": "1.5" }],
+  "importWarnings": ["Metadata-only item effect: BonusTrueDamage -> DealDamage", "Metadata-only item effect: MaxStacks -> DealDamage", "Metadata-only item effect: StatsPerSecond -> DealDamage", "Unmapped item variable: BonusTrueDamage", "Unmapped item variable: MaxStacks", "Unmapped item variable: StatsPerSecond"]
 }

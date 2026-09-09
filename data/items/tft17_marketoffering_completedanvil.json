@@ -1,0 +1,17 @@
+{
+  "name": "TFT17_MarketOffering_CompletedAnvil",
+  "displayName": "Completed Item Anvil",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_CompletedAnvil",
+  "description": "Drag this to the Shop to open an Armory full of completed items! You will have 30 seconds to choose.",
+  "tooltip": "Drag this to the Shop to open an Armory full of completed items! You will have 30 seconds to choose.",
+  "iconPath": "ASSETS/Characters/TFT_ArmoryKeyCompleted/HUD/Icons2D/TFT_ArmoryKeyCompleted_Square.tex",
+  "itemCategory": "Anvil",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

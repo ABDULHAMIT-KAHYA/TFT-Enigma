@@ -1,7 +1,17 @@
 {
   "name": "Scalescorn Heart",
+  "displayName": "Scalescorn Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_ScalescornTrait",
+  "description": "Your team counts as having 1 additional Scalescorn. Gain a Braum.",
+  "tooltip": "Your team counts as having 1 additional Scalescorn. Gain a Braum.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dragonbane-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

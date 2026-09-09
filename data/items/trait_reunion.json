@@ -1,7 +1,40 @@
 {
   "name": "Trait: Reunion",
+  "displayName": "Trait: Reunion",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_TeamupAugment_Reunion",
+  "description": "When Vi casts, Ekko releases 3 afterimages towards her target dealing @EkkoAfterImageReducedDamage*100@% damage. When Ekko casts, Vi slams an earthquake towards his target dealing @ViEarthquakeReducedDamage*100@% damage.<br><br>Gain a Vi and Ekko.",
+  "tooltip": "When Vi casts, Ekko releases 3 afterimages towards her target dealing @EkkoAfterImageReducedDamage*100@% damage. When Ekko casts, Vi slams an earthquake towards his target dealing @ViEarthquakeReducedDamage*100@% damage.<br><br>Gain a Vi and Ekko.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TeamUp_Reunion_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "EkkoAfterImageReducedDamage",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ViEarthquakeReducedDamage",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "EkkoAfterImageReducedDamage", "value": "0.4" }, { "name": "ViEarthquakeReducedDamage", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: EkkoAfterImageReducedDamage", "Unmapped item variable: ViEarthquakeReducedDamage"]
 }

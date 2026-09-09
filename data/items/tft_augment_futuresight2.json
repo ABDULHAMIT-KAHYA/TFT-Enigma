@@ -1,0 +1,29 @@
+{
+  "name": "TFT_Augment_FutureSight2",
+  "displayName": "Future Sight II",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_FutureSight2",
+  "description": "You can see who you will fight next. Gain @NumDummies@ Training Dummies, each equipped with a Zephyr or Shroud of Stillness.",
+  "tooltip": "You can see who you will fight next. Gain @NumDummies@ Training Dummies, each equipped with a Zephyr or Shroud of Stillness.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Future-Sight-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDummies",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumDummies", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumDummies", "Unsupported item effect metadata: NumDummies"]
+}

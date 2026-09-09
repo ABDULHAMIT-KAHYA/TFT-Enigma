@@ -1,7 +1,17 @@
 {
   "name": "Shimmerscale",
+  "displayName": "Shimmerscale",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitShimmerscaleActivator",
+  "description": "Gain Shimmerscale items. These items give gold as well as combat power.<br><br><row>(@TFTTrait.TFTEvent5YR_Shimmerscale.1:MinUnits@)Gain Goldmancers Staff. At Stage @TFTTrait.TFTEvent5YR_Shimmerscale.1:SecondItemStage@-@TFTTrait.TFTEvent5YR_Shimmerscale.1:SecondItemRound@ gain Draven's Axe.</row><br><row>(@TFTTrait.TFTEvent5YR_Shimmerscale.2:MinUnits@)Gain Crown of Champions.</row>",
+  "tooltip": "Gain Shimmerscale items. These items give gold as well as combat power.<br><br><row>(@TFTTrait.TFTEvent5YR_Shimmerscale.1:MinUnits@)Gain Goldmancers Staff. At Stage @TFTTrait.TFTEvent5YR_Shimmerscale.1:SecondItemStage@-@TFTTrait.TFTEvent5YR_Shimmerscale.1:SecondItemRound@ gain Draven's Axe.</row><br><row>(@TFTTrait.TFTEvent5YR_Shimmerscale.2:MinUnits@)Gain Crown of Champions.</row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Shimmerscale.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

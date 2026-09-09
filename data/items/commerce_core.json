@@ -1,7 +1,51 @@
 {
   "name": "Commerce Core",
+  "displayName": "Commerce Core",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_TradeSector2",
+  "description": "Gain @RerollsNow@ free Shop rerolls now and @RerollCount@ every round for the rest of the game.",
+  "tooltip": "Gain @RerollsNow@ free Shop rerolls now and @RerollCount@ every round for the rest of the game.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Trade3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RerollCount",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 16,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RerollsNow",
+      "rawSourceValue": "16",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "null" }, { "name": "RerollCount", "value": "3" }, { "name": "RerollsNow", "value": "16" }],
+  "importWarnings": ["Unmapped item variable: RerollCount", "Unmapped item variable: RerollsNow", "Unmapped non-numeric item variable: Gold", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: RerollCount", "Unsupported item effect metadata: RerollsNow"]
 }

@@ -1,7 +1,51 @@
 {
   "name": "Big Grab Bag",
+  "displayName": "Big Grab Bag",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_BigGrabBag",
+  "description": "Gain @NumItems@ random components, @Gold@ gold, and 1 Reforger. <br><br><rules>Reforgers allow you to remake any item.</rules>",
+  "tooltip": "Gain @NumItems@ random components, @Gold@ gold, and 1 Reforger. <br><br><rules>Reforgers allow you to remake any item.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Grab-Bag-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumReforgers",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }, { "name": "NumItems", "value": "3" }, { "name": "NumReforgers", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumItems", "Unmapped item variable: NumReforgers", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumItems", "Unsupported item effect metadata: NumReforgers"]
 }

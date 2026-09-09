@@ -1,8 +1,43 @@
 {
   "name": "Timestream",
+  "displayName": "Timestream",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Augment_Timebreaker_Timestream",
+  "description": "Timebreakers gain @Health@ Health and @AttackSpeed@% Attack Speed every time you reroll (including free rerolls). Gain an Ezreal and a Pantheon.<br><br>(Health: @TFTUnitProperty.:TFT17_Augment_Timebreaker_Timestream_HP@, Attack Speed: @TFTUnitProperty.:TFT17_Augment_Timebreaker_Timestream_AS*100@%)",
+  "tooltip": "Timebreakers gain @Health@ Health and @AttackSpeed@% Attack Speed every time you reroll (including free rerolls). Gain an Ezreal and a Pantheon.<br><br>(Health: @TFTUnitProperty.:TFT17_Augment_Timebreaker_Timestream_HP@, Attack Speed: @TFTUnitProperty.:TFT17_Augment_Timebreaker_Timestream_AS*100@%)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Timestream_II.TFT_Set17_PostLaunchAugments.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Timestream:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 7, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Timestream:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 7, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.25" }, { "name": "Health", "value": "7" }],
+  "importWarnings": []
 }

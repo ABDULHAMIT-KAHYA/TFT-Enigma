@@ -1,7 +1,17 @@
 {
   "name": "Protector Crown",
+  "displayName": "Protector Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_ProtectorCrown",
+  "description": "Gain a Protector Emblem, a Protector's Vow, and a Neeko.",
+  "tooltip": "Gain a Protector Emblem, a Protector's Vow, and a Neeko.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Protector_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

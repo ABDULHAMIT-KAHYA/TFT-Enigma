@@ -1,0 +1,52 @@
+{
+  "name": "TFT14_Item_BruiserEmblemItem",
+  "displayName": "Bruiser Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Item_BruiserEmblemItem",
+  "description": "The holder gains the Bruiser trait.<br>For every @HealthPerBonusDamage@ max Health, deal @BonusDamage*100@% bonus damage as magic damage.",
+  "tooltip": "The holder gains the Bruiser trait.<br>For every @HealthPerBonusDamage@ max Health, deal @BonusDamage*100@% bonus damage as magic damage.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set14/TFT14_Emblem_Bruiser.TFT_Set14.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+    { "name": "Item:TFT14_Item_BruiserEmblemItem:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusDamage",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 240,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPerBonusDamage",
+      "rawSourceValue": "240",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusDamage", "value": "0.01" }, { "name": "Health", "value": "150" }, { "name": "HealthPerBonusDamage", "value": "240" }],
+  "importWarnings": ["Unmapped item variable: BonusDamage", "Unmapped item variable: HealthPerBonusDamage"]
+}

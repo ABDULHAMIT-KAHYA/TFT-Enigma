@@ -1,7 +1,17 @@
 {
   "name": "Kayn's Liberation",
+  "displayName": "Kayn's Liberation",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Consumable_KaynBlue",
+  "description": "Place on Kayn to free him from Rhaast, permanently improving his Reaping Slash Ability to deal bonus damage at the start of combat.<br><br><tftitemrules>[KAYN CONSUMABLE - This item disappears when used and DESTROYS Rhaast's Embrace]</tftitemrules><br><br><tftitemrules>[Can only be used during the Planning Phase]</tftitemrules>",
+  "tooltip": "Place on Kayn to free him from Rhaast, permanently improving his Reaping Slash Ability to deal bonus damage at the start of combat.<br><br><tftitemrules>[KAYN CONSUMABLE - This item disappears when used and DESTROYS Rhaast's Embrace]</tftitemrules><br><br><tftitemrules>[Can only be used during the Planning Phase]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT4_Consumable_KaynBlue.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

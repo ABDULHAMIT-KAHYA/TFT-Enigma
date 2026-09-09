@@ -1,7 +1,17 @@
 {
   "name": "Soul Eater",
+  "displayName": "Soul Eater",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_NasusCarry",
+  "description": "Gain a Nasus. Your strongest Nasus becomes a Fighter. He now slams his staff on enemies, dealing physical damage. If this kills the enemy, Nasus gains permanent Attack Damage. ",
+  "tooltip": "Gain a Nasus. Your strongest Nasus becomes a Fighter. He now slams his staff on enemies, dealing physical damage. If this kills the enemy, Nasus gains permanent Attack Damage. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Nasus-Hero-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

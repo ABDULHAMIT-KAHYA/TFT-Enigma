@@ -1,0 +1,51 @@
+{
+  "name": "TFT6_Augment_ForceOfNaturePlus",
+  "displayName": "New Recruit+",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_ForceOfNaturePlus",
+  "description": "Gain +@MaxArmySizeIncrease@ max team size and @NumUnits@ four-cost champions.",
+  "tooltip": "Gain +@MaxArmySizeIncrease@ max team size and @NumUnits@ four-cost champions.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/NewRecruit3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxArmySizeIncrease",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{4a99a5b2}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxArmySizeIncrease", "value": "1" }, { "name": "NumUnits", "value": "2" }, { "name": "{4a99a5b2}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: MaxArmySizeIncrease", "Unmapped item variable: NumUnits", "Unmapped non-numeric item variable: {4a99a5b2}", "Unsupported item effect metadata: MaxArmySizeIncrease", "Unsupported item effect metadata: NumUnits", "Unsupported item effect metadata: {4a99a5b2}"]
+}

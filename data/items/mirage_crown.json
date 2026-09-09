@@ -1,7 +1,17 @@
 {
   "name": "Mirage Crown",
+  "displayName": "Mirage Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_MirageEmblem2",
+  "description": "Gain a Mirage Emblem, a Hand of Justice, and a Nunu.",
+  "tooltip": "Gain a Mirage Emblem, a Hand of Justice, and a Nunu.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mirage-Crown-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

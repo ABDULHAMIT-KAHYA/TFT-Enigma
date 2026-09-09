@@ -1,7 +1,17 @@
 {
   "name": "Irelia",
+  "displayName": "Irelia",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Irelia",
+  "description": "Irelia",
+  "tooltip": "Irelia",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Irelia_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

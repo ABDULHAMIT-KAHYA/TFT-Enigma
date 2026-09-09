@@ -1,7 +1,29 @@
 {
   "name": "Glorious Evolution",
+  "displayName": "Glorious Evolution",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Grant6Cost_Viktor",
+  "description": "Gain an Adaptive Helm. After you upgrade @NumUpgrades@ champions, gain a Viktor and a Jeweled Gauntlet.<br>(Current: @TFTUnitProperty.item:TFT13_Augment_GrantViktor@)<br>",
+  "tooltip": "Gain an Adaptive Helm. After you upgrade @NumUpgrades@ champions, gain a Viktor and a Jeweled Gauntlet.<br>(Current: @TFTUnitProperty.item:TFT13_Augment_GrantViktor@)<br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GloriousEvolution_Evolved_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUpgrades",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumUpgrades", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: NumUpgrades", "Unsupported item effect metadata: NumUpgrades"]
 }

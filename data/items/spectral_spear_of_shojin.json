@@ -1,7 +1,63 @@
 {
   "name": "Spectral Spear of Shojin",
+  "displayName": "Spectral Spear of Shojin",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_SpearOfShojinShadow",
+  "description": "The holder's attacks restore %i:scaleMana% <TFTShadowItemBonus>@FlatManaRestore@ additional Mana.</TFTShadowItemBonus>",
+  "tooltip": "The holder's attacks restore %i:scaleMana% <TFTShadowItemBonus>@FlatManaRestore@ additional Mana.</TFTShadowItemBonus>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Spear_of_Shojin.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Spectral Spear of Shojin:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 16,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FlatManaRestore",
+      "rawSourceValue": "16",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{f30a4313}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "10" }, { "name": "FlatManaRestore", "value": "16" }, { "name": "Mana", "value": "15" }, { "name": "{f30a4313}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: FlatManaRestore", "Unmapped item variable: Mana", "Unmapped non-numeric item variable: {f30a4313}", "Unsupported item effect metadata: {f30a4313}"]
 }

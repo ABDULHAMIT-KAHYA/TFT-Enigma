@@ -1,7 +1,17 @@
 {
   "name": "Revel Crest",
+  "displayName": "Revel Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_RevelEmblem",
+  "description": "Gain a Revel Emblem and a Jinx.",
+  "tooltip": "Gain a Revel Emblem and a Jinx.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Revel-Crest-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

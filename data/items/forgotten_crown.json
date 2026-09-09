@@ -1,7 +1,17 @@
 {
   "name": "Forgotten Crown",
+  "displayName": "Forgotten Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_ForgottenCrown",
+  "description": "Gain a Forgotten Emblem, a Guinsoo's Rageblade, and a Vayne.",
+  "tooltip": "Gain a Forgotten Emblem, a Guinsoo's Rageblade, and a Vayne.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Forgotten_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

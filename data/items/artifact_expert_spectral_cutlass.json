@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: Spectral Cutlass",
+  "displayName": "Artifact Expert: Spectral Cutlass",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_SpectralCutlass",
+  "description": "Get a 2* Yasuo, a Spectral Cutlass, and a Sparring Gloves",
+  "tooltip": "Get a 2* Yasuo, a Spectral Cutlass, and a Sparring Gloves",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

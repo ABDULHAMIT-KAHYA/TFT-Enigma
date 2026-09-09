@@ -1,7 +1,29 @@
 {
   "name": "Trait: Menaces",
+  "displayName": "Trait: Menaces",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_TeamupAugment_Menaces",
+  "description": "While fielded with Silco, Powder gains Dominator, but no longer benefits from Family. When her monkey explodes, it creates @TOOLTIPONLYNumMonstrosities@ of Silco's monstrosities.<br><br>Gain a 2-star Powder and a Silco.",
+  "tooltip": "While fielded with Silco, Powder gains Dominator, but no longer benefits from Family. When her monkey explodes, it creates @TOOLTIPONLYNumMonstrosities@ of Silco's monstrosities.<br><br>Gain a 2-star Powder and a Silco.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TeamUp_Menaces_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPONLYNumMonstrosities",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "TOOLTIPONLYNumMonstrosities", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: TOOLTIPONLYNumMonstrosities"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "Going Long",
+  "displayName": "Going Long",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_GoingLong",
+  "description": "You no longer gain interest. Gain @Gold@ gold now. Round start: gain @XP@ XP.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>",
+  "tooltip": "You no longer gain interest. Gain @Gold@ gold now. Round start: gain @XP@ XP.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Going-Long-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 13,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "13",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "13" }, { "name": "XP", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: XP", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: XP"]
 }

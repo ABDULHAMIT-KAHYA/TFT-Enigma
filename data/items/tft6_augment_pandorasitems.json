@@ -1,0 +1,29 @@
+{
+  "name": "TFT6_Augment_PandorasItems",
+  "displayName": "Pandora's Items",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_PandorasItems",
+  "description": "Round start: items on your bench are randomized. <br><br>Gain @NumComponents@ random component.",
+  "tooltip": "Round start: items on your bench are randomized. <br><br>Gain @NumComponents@ random component.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Pandora1.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumComponents", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumComponents", "Unsupported item effect metadata: NumComponents"]
+}

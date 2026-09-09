@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Augment_RiggedShop",
+  "displayName": "Rigged Shop",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_RiggedShop",
+  "description": "Your next shop and every @NumRolls@ shops will contain all 3-cost champions.",
+  "tooltip": "Your next shop and every @NumRolls@ shops will contain all 3-cost champions.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RiggedShop_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Numrolls",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Rerolls",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Numrolls", "value": "4" }, { "name": "Rerolls", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: Numrolls", "Unmapped non-numeric item variable: Rerolls", "Unsupported item effect metadata: Numrolls", "Unsupported item effect metadata: Rerolls"]
+}

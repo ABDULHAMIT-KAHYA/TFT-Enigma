@@ -1,7 +1,17 @@
 {
   "name": "Ionia Crown",
+  "displayName": "Ionia Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_IoniaCrown",
+  "description": "Get an Ionia Emblem, a Yasuo, and a Deathblade.",
+  "tooltip": "Get an Ionia Emblem, a Yasuo, and a Deathblade.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

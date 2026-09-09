@@ -1,7 +1,17 @@
 {
   "name": "Dynamo Circlet",
+  "displayName": "Dynamo Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_DynamoCirclet",
+  "description": "Gain a Dynamo Emblem, a Miss Fortune, and a BF Sword.",
+  "tooltip": "Gain a Dynamo Emblem, a Miss Fortune, and a BF Sword.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DynamoCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

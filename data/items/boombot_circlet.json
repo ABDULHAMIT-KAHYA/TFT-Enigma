@@ -1,7 +1,17 @@
 {
   "name": "BoomBot Circlet",
+  "displayName": "BoomBot Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_BoomBotsCirclet",
+  "description": "Gain a BoomBot Emblem and a Fiddlesticks.",
+  "tooltip": "Gain a BoomBot Emblem and a Fiddlesticks.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BoomBotsCirclet_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

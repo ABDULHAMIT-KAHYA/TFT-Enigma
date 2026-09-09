@@ -1,7 +1,40 @@
 {
   "name": "Training Reward II",
+  "displayName": "Training Reward II",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_TopDeckPlus",
+  "description": "Gain @Gold@ gold and a Lesser Champion Duplicator.",
+  "tooltip": "Gain @Gold@ gold and a Lesser Champion Duplicator.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Training-Reward-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LesserDuplicatorAmount",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "12" }, { "name": "LesserDuplicatorAmount", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: LesserDuplicatorAmount", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: LesserDuplicatorAmount"]
 }

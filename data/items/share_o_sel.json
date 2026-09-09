@@ -1,7 +1,17 @@
 {
   "name": "Share-o-sel",
+  "displayName": "Share-o-sel",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_Shareosel",
+  "description": "After the carousel, you gain a copy of the item on the unit your partner picked.",
+  "tooltip": "After the carousel, you gain a copy of the item on the unit your partner picked.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_ShareOSel.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

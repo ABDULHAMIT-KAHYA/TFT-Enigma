@@ -1,7 +1,29 @@
 {
   "name": "Divine Refund",
+  "displayName": "Divine Refund",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_DivineRefund",
+  "description": "Gain @Gold@ gold. The next time you create an item, gain a copy of one of the components at random.",
+  "tooltip": "Gain @Gold@ gold. The next time you create an item, gain a copy of one of the components at random.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_DivineRefund.TFT_17_2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

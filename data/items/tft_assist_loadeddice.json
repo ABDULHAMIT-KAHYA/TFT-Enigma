@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_LoadedDice",
+  "displayName": "Loaded Dice",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_LoadedDice",
+  "description": "Loaded Dice",
+  "tooltip": "Loaded Dice",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Consumables/TFT_Item_Consumable_ShopReroll.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

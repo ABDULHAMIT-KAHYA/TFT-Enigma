@@ -1,7 +1,40 @@
 {
   "name": "Hard Bargain",
+  "displayName": "Hard Bargain",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_HardBargain",
+  "description": "You cannot choose your Carousel rewards. Gain an additional @PlayerHealth@ player Health and @Gold@ Gold each carousel round.<br><tftitemrules>When you do not pick a Carousel Reward, you are given an unpicked champion and the item it carries</tftitemrules>",
+  "tooltip": "You cannot choose your Carousel rewards. Gain an additional @PlayerHealth@ player Health and @Gold@ Gold each carousel round.<br><tftitemrules>When you do not pick a Carousel Reward, you are given an unpicked champion and the item it carries</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HardBargain_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PlayerHealth",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "8" }, { "name": "PlayerHealth", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: PlayerHealth"]
 }

@@ -1,8 +1,76 @@
 {
   "name": "Tattoo of Toxin",
+  "displayName": "Tattoo of Toxin",
+  "isPlaceholder": false,
+  "sourceId": "TFT11_Item_InkshadowSnake",
+  "description": "Damage applies a toxin that deals an additional @DamageRatio*100@% of that damage over @Duration@ seconds and @HealingReductionPct@% <TFTKeyword>Wounds</TFTKeyword> the target.<br><br><tftitemrules><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>",
+  "tooltip": "Damage applies a toxin that deals an additional @DamageRatio*100@% of that damage over @Duration@ seconds and @HealingReductionPct@% <TFTKeyword>Wounds</TFTKeyword> the target.<br><br><tftitemrules><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT11_InkShadowItems/TFT11_Inkshadow_Toxin.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Tattoo of Toxin:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Tattoo of Toxin:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageRatio",
+      "rawSourceValue": "0.33",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealingReductionPct",
+      "rawSourceValue": "33",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.25" }, { "name": "AP", "value": "25" }, { "name": "DamageRatio", "value": "0.33" }, { "name": "Duration", "value": "3" }, { "name": "HealingReductionPct", "value": "33" }],
+  "importWarnings": ["Unmapped item variable: DamageRatio", "Unmapped item variable: Duration", "Unmapped item variable: HealingReductionPct"]
 }

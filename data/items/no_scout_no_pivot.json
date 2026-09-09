@@ -1,7 +1,73 @@
 {
   "name": "NO SCOUT NO PIVOT",
+  "displayName": "NO SCOUT NO PIVOT",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_NoScoutNoPivot",
+  "description": "Champions that fight in player combat cannot be benched or sold. Your team gains @HPScale*100@% Health, and @APScale@% Attack Damage and Ability Power after player combat. <br><br>@TFTUnitProperty.item:TFT_Augment_NoScoutNoPivot_TrackerTRAKEY_Holder@",
+  "tooltip": "Champions that fight in player combat cannot be benched or sold. Your team gains @HPScale*100@% Health, and @APScale@% Attack Damage and Ability Power after player combat. <br><br>@TFTUnitProperty.item:TFT_Augment_NoScoutNoPivot_TrackerTRAKEY_Holder@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/NoScoutNoPivot_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ADScale",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "APScale",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPScale",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 99,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxUnits",
+      "rawSourceValue": "99",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{eba92878}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADScale", "value": "0.01" }, { "name": "APScale", "value": "1" }, { "name": "HPScale", "value": "0.01" }, { "name": "MaxUnits", "value": "99" }, { "name": "{eba92878}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: ADScale", "Unmapped item variable: APScale", "Unmapped item variable: HPScale", "Unmapped item variable: MaxUnits", "Unmapped non-numeric item variable: {eba92878}"]
 }

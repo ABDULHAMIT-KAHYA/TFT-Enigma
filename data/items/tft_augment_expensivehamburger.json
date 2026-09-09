@@ -1,0 +1,78 @@
+{
+  "name": "TFT_Augment_ExpensiveHamburger",
+  "displayName": "Training Manual",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_ExpensiveHamburger",
+  "description": "Gain @BaseHealth@ Health and @BaseAttackSpeed*100@% Attack Speed. Gain a Training Manual, which converts @Gold@ gold into  @AttackSpeed*100@% Attack Speed and @Health@ Health. Subsequent uses increase the cost and the bonus.<br><br><tftitemrules>Cost: @TFTUnitProperty.item:TFT_Augment_ExpensiveHamburger_GoldCostTooltip@<br>Giving @TFTUnitProperty.item:TFT_Augment_ExpensiveHamburger_ASTotal@% Attack Speed and @TFTUnitProperty.item:TFT_Augment_ExpensiveHamburger_HealthTotal@ Health</tftitemrules>",
+  "tooltip": "Gain @BaseHealth@ Health and @BaseAttackSpeed*100@% Attack Speed. Gain a Training Manual, which converts @Gold@ gold into  @AttackSpeed*100@% Attack Speed and @Health@ Health. Subsequent uses increase the cost and the bonus.<br><br><tftitemrules>Cost: @TFTUnitProperty.item:TFT_Augment_ExpensiveHamburger_GoldCostTooltip@<br>Giving @TFTUnitProperty.item:TFT_Augment_ExpensiveHamburger_ASTotal@% Attack Speed and @TFTUnitProperty.item:TFT_Augment_ExpensiveHamburger_HealthTotal@ Health</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT_Augment_ExpensiveHamburger:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT_Augment_ExpensiveHamburger:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
+    { "name": "Item:TFT_Augment_ExpensiveHamburger:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.01, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.01, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseAttackSpeed",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BaseAttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.05, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseHealth",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.01" }, { "name": "BaseAttackSpeed", "value": "0.05" }, { "name": "BaseHealth", "value": "50" }, { "name": "Gold", "value": "1" }, { "name": "Health", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: BaseHealth", "Unmapped item variable: Gold"]
+}

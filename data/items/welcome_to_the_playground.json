@@ -1,7 +1,51 @@
 {
   "name": "Welcome to the Playground",
+  "displayName": "Welcome to the Playground",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Family",
+  "description": "If at least @MinNumFamilyMembers@ Family members are alive after @TimeRequirement@ seconds in combat or at the end of combat, gain a random copy of a Vander, Powder, or Violet. Gain a Powder and Violet.",
+  "tooltip": "If at least @MinNumFamilyMembers@ Family members are alive after @TimeRequirement@ seconds in combat or at the end of combat, gain a random copy of a Vander, Powder, or Violet. Gain a Powder and Violet.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WelcomeToThePlayground_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MinNumFamilyMembers",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumCopies",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TimeRequirement",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MinNumFamilyMembers", "value": "2" }, { "name": "NumCopies", "value": "1" }, { "name": "TimeRequirement", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: MinNumFamilyMembers", "Unmapped item variable: NumCopies", "Unmapped item variable: TimeRequirement", "Unsupported item effect metadata: MinNumFamilyMembers", "Unsupported item effect metadata: NumCopies", "Unsupported item effect metadata: TimeRequirement"]
 }

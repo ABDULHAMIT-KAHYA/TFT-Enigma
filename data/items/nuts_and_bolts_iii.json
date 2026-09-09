@@ -1,7 +1,40 @@
 {
   "name": "Nuts and Bolts III",
+  "displayName": "Nuts and Bolts III",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Commander_NutsAndBolts3",
+  "description": "Gain @NumComponents@ item component(s) and @numreforgers@ Reforger(s).",
+  "tooltip": "Gain @NumComponents@ item component(s) and @numreforgers@ Reforger(s).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumReforgers",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumComponents", "value": "3" }, { "name": "NumReforgers", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumComponents", "Unmapped item variable: NumReforgers", "Unsupported item effect metadata: NumComponents", "Unsupported item effect metadata: NumReforgers"]
 }

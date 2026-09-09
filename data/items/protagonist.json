@@ -1,7 +1,29 @@
 {
   "name": "Protagonist",
+  "displayName": "Protagonist",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Protagonist",
+  "description": "Gain a random 1-cost Champion Augment. After @TurnDelay@ turns, gain a copy of the champion at the start of every turn.",
+  "tooltip": "Gain a random 1-cost Champion Augment. After @TurnDelay@ turns, gain a copy of the champion at the start of every turn.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Protaganist_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TurnDelay",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "TurnDelay", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: TurnDelay", "Unsupported item effect metadata: TurnDelay"]
 }

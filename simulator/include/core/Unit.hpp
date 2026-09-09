@@ -1,4 +1,4 @@
-    // Unit.hpp
+﻿    // Unit.hpp
     #pragma once
 
     #include <vector>
@@ -10,10 +10,13 @@
 #include "core/Position.hpp"
 #include "core/Board.hpp"
 #include "core/TeamId.hpp"
+#include "core/UnitId.hpp"
 #include "combat/DamageType.hpp"
 #include "combat/StatModifier.hpp"
 #include "combat/StatusEffect.hpp"
     class Unit {
+        friend class GameState;
+
     public:
         
         // Constructor: unit with no ability (mana disabled)
@@ -49,14 +52,15 @@
         
         // Combat actions
         
-        std::int32_t attack(Unit& target);   // Normal attack — gains mana, resets timer
+        std::int32_t attack(Unit& target);   // Normal attack â€” gains mana, resets timer
         void applyDamage(std::int32_t damage);
         void heal(std::int32_t amount);
 
         
         // Queries
         
-        bool isAlive() const;
+                UnitId id() const;
+bool isAlive() const;
         bool canAttack() const;
         bool isInRange(const Unit& target) const;
         TeamId getTeamId() const;
@@ -159,6 +163,7 @@
 
     private:
         std::string  name_;
+        UnitId       id_;
         TeamId       team_id_;
         std::int32_t ad_;
         float ability_power_;
@@ -207,4 +212,9 @@
         std::vector<std::string> traits_;
         std::vector<Item> items_;
 
+        void assignId(UnitId id);
+
     };
+
+
+

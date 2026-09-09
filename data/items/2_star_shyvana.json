@@ -1,7 +1,29 @@
 {
   "name": "2 star Shyvana",
+  "displayName": "2 star Shyvana",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_Shyvana2Star",
+  "description": "2 star Shyvana",
+  "tooltip": "2 star Shyvana",
+  "iconPath": "ASSETS/Characters/TFT14_Shyvana/HUD/TFT14_Shyvana_Square.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
 }

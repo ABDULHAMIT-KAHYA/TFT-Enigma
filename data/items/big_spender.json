@@ -1,7 +1,30 @@
 {
   "name": "Big Spender",
+  "displayName": "Big Spender",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_BigSpender",
+  "description": "Your team gains @Value@% Attack Damage and Ability Power for every 1 gold in champion value on your board (Gold Value: @TFTUnitProperty.item:TFT_Augment_BigSpender_Value@g).",
+  "tooltip": "Your team gains @Value@% Attack Damage and Ability Power for every 1 gold in champion value on your board (Gold Value: @TFTUnitProperty.item:TFT_Augment_BigSpender_Value@g).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BigSpender_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{425ed3ca}",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "{425ed3ca}", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: {425ed3ca}"]
 }

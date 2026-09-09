@@ -1,0 +1,29 @@
+{
+  "name": "TFT7_Augment_LivingForge",
+  "displayName": "Living Forge",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_LivingForge",
+  "description": "Gain an Artifact anvil now and after every @NumberOfCombats@ player combats.<br><br><rules>Artifacts are more powerful items with a unique effect.</rules>",
+  "tooltip": "Gain an Artifact anvil now and after every @NumberOfCombats@ player combats.<br><br><rules>Artifacts are more powerful items with a unique effect.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Living-Forge-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Numberofcombats",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Numberofcombats", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: Numberofcombats", "Unsupported item effect metadata: Numberofcombats"]
+}

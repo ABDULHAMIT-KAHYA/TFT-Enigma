@@ -1,7 +1,17 @@
 {
   "name": "10 free rerolls",
+  "displayName": "10 free rerolls",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Encounter_ChoiceItem_10Rerolls",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

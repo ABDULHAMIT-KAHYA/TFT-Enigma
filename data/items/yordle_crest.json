@@ -1,7 +1,17 @@
 {
   "name": "Yordle Crest",
+  "displayName": "Yordle Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_YordleCrest",
+  "description": "Get a Yordle Emblem.",
+  "tooltip": "Get a Yordle Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

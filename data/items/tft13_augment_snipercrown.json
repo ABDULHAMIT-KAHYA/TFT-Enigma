@@ -1,0 +1,17 @@
+{
+  "name": "TFT13_Augment_SniperCrown",
+  "displayName": "Sniper Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_SniperCrown",
+  "description": "Gain a Sniper Emblem, an Infinity Edge, and a Zeri.",
+  "tooltip": "Gain a Sniper Emblem, an Infinity Edge, and a Zeri.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Sniper_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

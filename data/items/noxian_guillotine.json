@@ -1,7 +1,51 @@
 {
   "name": "Noxian Guillotine",
+  "displayName": "Noxian Guillotine",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Conqueror",
+  "description": "Conquerors execute enemies below @BaseExecuteThreshold@% Health. When they do, they gain @ArmorandMagicResist@ Armor and Magic Resist for the rest of combat. Gain a Darius and Draven.",
+  "tooltip": "Conquerors execute enemies below @BaseExecuteThreshold@% Health. When they do, they gain @ArmorandMagicResist@ Armor and Magic Resist for the rest of combat. Gain a Darius and Draven.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/NoxianGuillotine_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmorandMagicResist",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseExecuteThreshold",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumKills",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ArmorandMagicResist", "value": "5" }, { "name": "BaseExecuteThreshold", "value": "12" }, { "name": "NumKills", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: ArmorandMagicResist", "Unmapped item variable: BaseExecuteThreshold", "Unmapped item variable: NumKills"]
 }

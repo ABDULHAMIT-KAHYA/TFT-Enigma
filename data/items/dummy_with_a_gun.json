@@ -1,7 +1,62 @@
 {
   "name": "Dummy With A Gun",
+  "displayName": "Dummy With A Gun",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Syndicate_DummyWithAGun",
+  "description": "With Syndicate active, your Training Dummies shoot enemies. Every @NumAttacks@ times they attack, grant the Kingpins @ADAP@% Attack Damage and Ability Power. Gain @NumDummies@ Training Dummy, a Darius, and a Twisted Fate.",
+  "tooltip": "With Syndicate active, your Training Dummies shoot enemies. Every @NumAttacks@ times they attack, grant the Kingpins @ADAP@% Attack Damage and Ability Power. Gain @NumDummies@ Training Dummy, a Darius, and a Twisted Fate.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DummyWithAGun_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ADAP",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumAttacks",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDummies",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{e16de58f}",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADAP", "value": "2" }, { "name": "NumAttacks", "value": "2" }, { "name": "NumDummies", "value": "1" }, { "name": "{e16de58f}", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: ADAP", "Unmapped item variable: NumAttacks", "Unmapped item variable: NumDummies", "Unmapped item variable: {e16de58f}"]
 }

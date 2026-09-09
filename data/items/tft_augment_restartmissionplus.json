@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Augment_RestartMissionPlus",
+  "displayName": "Restart Mission +",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_RestartMissionPlus",
+  "description": "Delete all champions on your board and bench. Gain a random 2-star 4-cost, two 2-star 3-cost,  two 2-star 2-cost, and 2-star 1-cost champion.",
+  "tooltip": "Delete all champions on your board and bench. Gain a random 2-star 4-cost, two 2-star 3-cost,  two 2-star 2-cost, and 2-star 1-cost champion.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnits",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Tier",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumUnits", "value": "2" }, { "name": "Tier", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumUnits", "Unmapped item variable: Tier", "Unsupported item effect metadata: NumUnits", "Unsupported item effect metadata: Tier"]
+}

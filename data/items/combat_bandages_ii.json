@@ -1,7 +1,73 @@
 {
   "name": "Combat Bandages II",
+  "displayName": "Combat Bandages II",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_DawnbringersBlessing2",
+  "description": "The first time each ally unit falls below @HealthThreshold*100@% health, they restore @FlatHealing1@-@flathealing3@ health (based on stage) over @Duration@ seconds.",
+  "tooltip": "The first time each ally unit falls below @HealthThreshold*100@% health, they restore @FlatHealing1@-@flathealing3@ health (based on stage) over @Duration@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dawnbringer-Spirit-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 2.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "2.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 170,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FlatHealing1",
+      "rawSourceValue": "170",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 260,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FlatHealing2",
+      "rawSourceValue": "260",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 350,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FlatHealing3",
+      "rawSourceValue": "350",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "0.6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "2.5" }, { "name": "FlatHealing1", "value": "170" }, { "name": "FlatHealing2", "value": "260" }, { "name": "FlatHealing3", "value": "350" }, { "name": "HealthThreshold", "value": "0.6" }],
+  "importWarnings": ["Unmapped item variable: Duration", "Unmapped item variable: FlatHealing1", "Unmapped item variable: FlatHealing2", "Unmapped item variable: FlatHealing3", "Unmapped item variable: HealthThreshold"]
 }

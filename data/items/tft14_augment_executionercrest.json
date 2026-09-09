@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_ExecutionerCrest",
+  "displayName": "Executioner Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_ExecutionerCrest",
+  "description": "Gain an Executioner emblem.",
+  "tooltip": "Gain an Executioner emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ExecutionerCrest_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

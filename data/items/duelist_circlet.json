@@ -1,7 +1,17 @@
 {
   "name": "Duelist Circlet",
+  "displayName": "Duelist Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_ChallengerCirclet",
+  "description": "Gain a Duelist Emblem, an Ashe, and a BF Sword.",
+  "tooltip": "Gain a Duelist Emblem, an Ashe, and a BF Sword.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Duelist_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

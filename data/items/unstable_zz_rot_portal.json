@@ -1,8 +1,120 @@
 {
   "name": "Unstable Zz'Rot Portal",
+  "displayName": "Unstable Zz'Rot Portal",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_ZzRotPortalShadow",
+  "description": "At the start of combat, the holder taunts enemies within @HexRadius@ hexes.<br><br>When the holder dies, an Unstable Voidspawn with <TFTShadowItemPenalty>@ZombieHealth@ Health</TFTShadowItemPenalty> arises and taunts enemies again. When it dies <TFTShadowItemBonus>it deals @ExplosionDamage@ true damage to enemies within @ExplosionHexRange@ hex(es).</TFTShadowItemBonus><br><br>Voidspawns that arise from summoned units are @SummonedStatReduction@% effective.",
+  "tooltip": "At the start of combat, the holder taunts enemies within @HexRadius@ hexes.<br><br>When the holder dies, an Unstable Voidspawn with <TFTShadowItemPenalty>@ZombieHealth@ Health</TFTShadowItemPenalty> arises and taunts enemies again. When it dies <TFTShadowItemBonus>it deals @ExplosionDamage@ true damage to enemies within @ExplosionHexRange@ hex(es).</TFTShadowItemBonus><br><br>Voidspawns that arise from summoned units are @SummonedStatReduction@% effective.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_ZZRot_Portal.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
     { "name": "Item:Unstable Zz'Rot Portal:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Unstable Zz'Rot Portal:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 1000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ExplosionDamage",
+      "rawSourceValue": "1000",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ExplosionHexRange",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HexRadius",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "SummonedStatReduction",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ZombieHealth",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{0707495a}",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 0.75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{f207284b}",
+      "rawSourceValue": "0.75",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "10" }, { "name": "ExplosionDamage", "value": "1000" }, { "name": "ExplosionHexRange", "value": "1" }, { "name": "Health", "value": "150" }, { "name": "HexRadius", "value": "2" }, { "name": "SummonedStatReduction", "value": "50" }, { "name": "ZombieHealth", "value": "500" }, { "name": "{0707495a}", "value": "100" }, { "name": "{f207284b}", "value": "0.75" }],
+  "importWarnings": ["Metadata-only item effect: AS -> GrantStats", "Metadata-only item effect: ExplosionDamage -> Aura", "Metadata-only item effect: ExplosionHexRange -> Aura", "Metadata-only item effect: Health -> GrantStats", "Metadata-only item effect: HexRadius -> Aura", "Metadata-only item effect: SummonedStatReduction -> Aura", "Metadata-only item effect: ZombieHealth -> Aura", "Metadata-only item effect: {0707495a} -> Aura", "Metadata-only item effect: {f207284b} -> Aura", "Unmapped item variable: ExplosionDamage", "Unmapped item variable: ExplosionHexRange", "Unmapped item variable: HexRadius", "Unmapped item variable: SummonedStatReduction", "Unmapped item variable: ZombieHealth", "Unmapped item variable: {0707495a}", "Unmapped item variable: {f207284b}"]
 }

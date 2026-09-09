@@ -1,7 +1,17 @@
 {
   "name": "Artifact Excavation",
+  "displayName": "Artifact Excavation",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_XerathZap_TheSun",
+  "description": "Gain an Artifact Anvil.",
+  "tooltip": "Gain an Artifact Anvil.",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_XerathWand_Self.TFT_Set12.tex",
+  "itemCategory": "Anvil",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

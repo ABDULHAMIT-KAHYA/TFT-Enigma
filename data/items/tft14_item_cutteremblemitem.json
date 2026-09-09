@@ -1,0 +1,41 @@
+{
+  "name": "TFT14_Item_CutterEmblemItem",
+  "displayName": "Executioner Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Item_CutterEmblemItem",
+  "description": "The holder gains the Executioner trait.<br>Critical Strikes ignore @ResistIgnore*100@% of the target's Armor and Magic Resist.",
+  "tooltip": "The holder gains the Executioner trait.<br>Critical Strikes ignore @ResistIgnore*100@% of the target's Armor and Magic Resist.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set14/TFT14_Emblem_Executioner.TFT_Set14.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+    { "name": "Item:TFT14_Item_CutterEmblemItem:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ResistIgnore",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "20" }, { "name": "ResistIgnore", "value": "0.4" }],
+  "importWarnings": ["Unmapped item variable: ResistIgnore"]
+}

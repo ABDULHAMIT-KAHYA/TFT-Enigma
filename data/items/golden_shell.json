@@ -1,7 +1,17 @@
 {
   "name": "Golden Shell",
+  "displayName": "Golden Shell",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_5MercShield",
+  "description": "Gain 3 Frozen Hearts.",
+  "tooltip": "Gain 3 Frozen Hearts.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

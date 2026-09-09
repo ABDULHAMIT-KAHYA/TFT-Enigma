@@ -1,7 +1,17 @@
 {
   "name": "Sett",
+  "displayName": "Sett",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Sett",
+  "description": "Sett",
+  "tooltip": "Sett",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Sett_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

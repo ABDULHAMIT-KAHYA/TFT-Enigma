@@ -1,7 +1,106 @@
 {
   "name": "Trapper's Delight",
+  "displayName": "Trapper's Delight",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TrappersDelight",
+  "description": "Gain @NumDummies@ Training Dummies. When your dummies die, they explode and stun enemies within @StunStartRadius@ hexes for @StunStartDuration@ seconds. Every  @StunIncrement@ seconds, the duration and size increase to a maximum of @StunMaxDuration@ seconds and @StunMaxRadius@ hexes.",
+  "tooltip": "Gain @NumDummies@ Training Dummies. When your dummies die, they explode and stun enemies within @StunStartRadius@ hexes for @StunStartDuration@ seconds. Every  @StunIncrement@ seconds, the duration and size increase to a maximum of @StunMaxDuration@ seconds and @StunMaxRadius@ hexes.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDummies",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunIncrement",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunMaxDuration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunMaxRadius",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunStartDuration",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunStartRadius",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{ad844421}",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{e9e40f80}",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumDummies", "value": "2" }, { "name": "StunIncrement", "value": "6" }, { "name": "StunMaxDuration", "value": "3" }, { "name": "StunMaxRadius", "value": "2" }, { "name": "StunStartDuration", "value": "1" }, { "name": "StunStartRadius", "value": "1" }, { "name": "{ad844421}", "value": "0.25" }, { "name": "{e9e40f80}", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: NumDummies", "Unmapped item variable: StunIncrement", "Unmapped item variable: StunMaxDuration", "Unmapped item variable: StunMaxRadius", "Unmapped item variable: StunStartDuration", "Unmapped item variable: StunStartRadius", "Unmapped item variable: {ad844421}", "Unmapped item variable: {e9e40f80}"]
 }

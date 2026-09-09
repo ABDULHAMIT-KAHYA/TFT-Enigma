@@ -1,7 +1,17 @@
 {
   "name": "Yone",
+  "displayName": "Yone",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Yone",
+  "description": "Yone",
+  "tooltip": "Yone",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Yone_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

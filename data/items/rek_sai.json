@@ -1,7 +1,17 @@
 {
   "name": "Rek'Sai",
+  "displayName": "Rek'Sai",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_RekSai",
+  "description": "Rek'Sai",
+  "tooltip": "Rek'Sai",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_RekSai_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

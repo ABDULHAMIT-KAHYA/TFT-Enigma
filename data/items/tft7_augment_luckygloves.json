@@ -1,0 +1,40 @@
+{
+  "name": "TFT7_Augment_LuckyGloves",
+  "displayName": "Lucky Gloves",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_LuckyGloves",
+  "description": "Thief's Gloves will always give your champions ideal items. Gain @NumGloves@ Sparring Gloves.",
+  "tooltip": "Thief's Gloves will always give your champions ideal items. Gain @NumGloves@ Sparring Gloves.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Lucky-Gloves-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumGloves",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 9999,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRounds",
+      "rawSourceValue": "9999",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumGloves", "value": "2" }, { "name": "NumRounds", "value": "9999" }],
+  "importWarnings": ["Unmapped item variable: NumGloves", "Unmapped item variable: NumRounds", "Unsupported item effect metadata: NumGloves", "Unsupported item effect metadata: NumRounds"]
+}

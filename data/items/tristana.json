@@ -1,7 +1,17 @@
 {
   "name": "Tristana",
+  "displayName": "Tristana",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Tristana",
+  "description": "Tristana",
+  "tooltip": "Tristana",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Tristana_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

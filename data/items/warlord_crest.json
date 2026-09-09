@@ -1,7 +1,17 @@
 {
   "name": "Warlord Crest",
+  "displayName": "Warlord Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_WarlordCrest",
+  "description": "Gain a Warlord Emblem and a Vi.",
+  "tooltip": "Gain a Warlord Emblem and a Vi.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Warlord_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,29 @@
 {
   "name": "Manaflow I",
+  "displayName": "Manaflow I",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Manaflow1",
+  "description": "Your allies that start combat in the back row gain @ManaPerAttack@ additional Mana per attack.",
+  "tooltip": "Your allies that start combat in the back row gain @ManaPerAttack@ additional Mana per attack.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Manaflow_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaPerAttack",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaPerAttack", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: ManaPerAttack"]
 }

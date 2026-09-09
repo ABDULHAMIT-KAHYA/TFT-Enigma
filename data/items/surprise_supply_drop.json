@@ -1,7 +1,29 @@
 {
   "name": "Surprise Supply Drop",
+  "displayName": "Surprise Supply Drop",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_AnimaSquad_Weapon_SupplyDrop",
+  "description": "Every @Period@ seconds, Supply Drop calls in a support ship that drops powerful goodies onto the battlefield.",
+  "tooltip": "Every @Period@ seconds, Supply Drop calls in a support ship that drops powerful goodies onto the battlefield.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14_AnimaSquadItems/TooltipIcons/TFT14_Icon_AnimaSquad_SupplyDrop.TFT_Set14.tex",
+  "itemCategory": "SupportItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Period",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Period", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: Period", "Unsupported item effect metadata: Period"]
 }

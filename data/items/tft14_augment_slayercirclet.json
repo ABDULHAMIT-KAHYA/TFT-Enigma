@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Augment_SlayerCirclet",
+  "displayName": "Slayer Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_SlayerCirclet",
+  "description": "Gain a Slayer Emblem, a Zed, and a Sparring Gloves.",
+  "tooltip": "Gain a Slayer Emblem, a Zed, and a Sparring Gloves.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SlayerCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

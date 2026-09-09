@@ -1,0 +1,85 @@
+{
+  "name": "TFT17_Item_PsyOps_GrenadeMod_Radiant",
+  "displayName": "Biomatter Preserver",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_Item_PsyOps_GrenadeMod_Radiant",
+  "description": "Gain @PctMaxHP*100%@% max Health and deploy @NumGrenades@ Life Orbs. Every @Interval@ seconds of combat, one drops restoring <scaleHealth>@HealPct*100@%</scaleHealth> of the holder's missing Health.<br><br><TFTRadiantItemBonus>At (4): If the holder is Psionic, they gain @IncreasedHealing*100@% increased healing from all sources.</TFTRadiantItemBonus><br><br><rules>Recommended user: Gragas.</rules>",
+  "tooltip": "Gain @PctMaxHP*100%@% max Health and deploy @NumGrenades@ Life Orbs. Every @Interval@ seconds of combat, one drops restoring <scaleHealth>@HealPct*100@%</scaleHealth> of the holder's missing Health.<br><br><TFTRadiantItemBonus>At (4): If the holder is Psionic, they gain @IncreasedHealing*100@% increased healing from all sources.</TFTRadiantItemBonus><br><br><rules>Recommended user: Gragas.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_PsyOps_Mod_GrenadeMod.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT17_Item_PsyOps_GrenadeMod_Radiant:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 550, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 550,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "550",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 550, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealPct",
+      "rawSourceValue": "0.18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.22,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IncreasedHealing",
+      "rawSourceValue": "0.22",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Interval",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumGrenades",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PctMaxHP",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealPct", "value": "0.18" }, { "name": "Health", "value": "550" }, { "name": "IncreasedHealing", "value": "0.22" }, { "name": "Interval", "value": "8" }, { "name": "NumGrenades", "value": "3" }, { "name": "PctMaxHP", "value": "0.05" }],
+  "importWarnings": ["Unmapped item variable: HealPct", "Unmapped item variable: IncreasedHealing", "Unmapped item variable: Interval", "Unmapped item variable: NumGrenades", "Unmapped item variable: PctMaxHP"]
+}

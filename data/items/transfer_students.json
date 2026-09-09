@@ -1,7 +1,29 @@
 {
   "name": "Transfer Students",
+  "displayName": "Transfer Students",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_BattleAcademia_TransferStudents",
+  "description": "At the start of every stage and after every carousel round, gain @NumChamps@ random 1-3 cost Battle Academia champions. Gain an Ezreal.",
+  "tooltip": "At the start of every stage and after every carousel round, gain @NumChamps@ random 1-3 cost Battle Academia champions. Gain an Ezreal.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TransferStudents_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumChamps",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumChamps", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumChamps", "Unsupported item effect metadata: NumChamps"]
 }

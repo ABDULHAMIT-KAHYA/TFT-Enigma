@@ -1,7 +1,40 @@
 {
   "name": "Heavy Hitters",
+  "displayName": "Heavy Hitters",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_HeavyHitters",
+  "description": "Your units with at least @MaxHealthThreshold@ max Health gain Attack Damage and Ability Power equal to @PercentMaxHealthDamage*100@% of their max Health.",
+  "tooltip": "Your units with at least @MaxHealthThreshold@ max Health gain Attack Damage and Ability Power equal to @PercentMaxHealthDamage*100@% of their max Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Heavy-Hitters-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealthThreshold",
+      "rawSourceValue": "1500",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentMaxHealthDamage",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxHealthThreshold", "value": "1500" }, { "name": "PercentMaxHealthDamage", "value": "0.01" }],
+  "importWarnings": ["Unmapped item variable: MaxHealthThreshold", "Unmapped item variable: PercentMaxHealthDamage"]
 }

@@ -1,7 +1,41 @@
 {
   "name": "Featherweights III",
+  "displayName": "Featherweights III",
+  "isPlaceholder": false,
+  "sourceId": "TFT6_Augment_Featherweights3",
+  "description": "Your Tier 1 and 2 champions gain @AttackSpeed@% Attack Speed and Move Speed.",
+  "tooltip": "Your Tier 1 and 2 champions gain @AttackSpeed@% Attack Speed and Move Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Featherweights3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Featherweights III:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 700,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MoveSpeed",
+      "rawSourceValue": "700",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "50" }, { "name": "MoveSpeed", "value": "700" }],
+  "importWarnings": ["Unmapped item variable: MoveSpeed", "Unsupported item effect metadata: MoveSpeed"]
 }

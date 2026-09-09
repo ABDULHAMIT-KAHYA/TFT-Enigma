@@ -1,7 +1,29 @@
 {
   "name": "Healing Orbs I",
+  "displayName": "Healing Orbs I",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_HealingOrbsI",
+  "description": "When an enemy dies, the nearest ally is healed for @Heal@.",
+  "tooltip": "When an enemy dies, the nearest ally is healed for @Heal@.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Healing-Orbs-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 220,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Heal",
+      "rawSourceValue": "220",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Heal", "value": "220" }],
+  "importWarnings": ["Unmapped item variable: Heal"]
 }

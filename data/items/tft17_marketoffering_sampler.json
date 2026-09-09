@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_Sampler",
+  "displayName": "Mystery Loot",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Sampler",
+  "description": "What could it be?",
+  "tooltip": "What could it be?",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c201134a}",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{c201134a}", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: {c201134a}", "Unsupported item effect metadata: {c201134a}"]
+}

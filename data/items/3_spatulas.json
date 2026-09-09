@@ -1,7 +1,17 @@
 {
   "name": "3 Spatulas",
+  "displayName": "3 Spatulas",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Spatula_3",
+  "description": "3 Spatulas",
+  "tooltip": "3 Spatulas",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Spatula.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

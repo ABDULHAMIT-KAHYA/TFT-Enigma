@@ -1,7 +1,17 @@
 {
   "name": "Mascot",
+  "displayName": "Mascot",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitMascotActivator",
+  "description": "Your team heals a percentage of their max Health every @TFTTrait.TFTEvent5YR_Mascot.1:Seconds@ seconds.<br><br>When a champion dies, they retreat to the sidelines to cheer on your team. Your team's healing increases for each cheering champion.<br><br><row> (@TFTTrait.TFTEvent5YR_Mascot.1:MinUnits@) @TFTTrait.TFTEvent5YR_Mascot.1:BaseHealthRegen@% %i:scaleHealth% base, @TFTTrait.TFTEvent5YR_Mascot.1:HealthRegenPerMascot@% %i:scaleHealth% per cheering champion</row><br><row> (@TFTTrait.TFTEvent5YR_Mascot.2:MinUnits@) @TFTTrait.TFTEvent5YR_Mascot.2:BaseHealthRegen@% %i:scaleHealth% base, @TFTTrait.TFTEvent5YR_Mascot.2:HealthRegenPerMascot@% %i:scaleHealth% per cheering champion</row>",
+  "tooltip": "Your team heals a percentage of their max Health every @TFTTrait.TFTEvent5YR_Mascot.1:Seconds@ seconds.<br><br>When a champion dies, they retreat to the sidelines to cheer on your team. Your team's healing increases for each cheering champion.<br><br><row> (@TFTTrait.TFTEvent5YR_Mascot.1:MinUnits@) @TFTTrait.TFTEvent5YR_Mascot.1:BaseHealthRegen@% %i:scaleHealth% base, @TFTTrait.TFTEvent5YR_Mascot.1:HealthRegenPerMascot@% %i:scaleHealth% per cheering champion</row><br><row> (@TFTTrait.TFTEvent5YR_Mascot.2:MinUnits@) @TFTTrait.TFTEvent5YR_Mascot.2:BaseHealthRegen@% %i:scaleHealth% base, @TFTTrait.TFTEvent5YR_Mascot.2:HealthRegenPerMascot@% %i:scaleHealth% per cheering champion</row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Mascot.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,17 @@
 {
   "name": "TFT7_DoubleUpAugment_MatchingOutfits_Name",
+  "displayName": "TFT7_DoubleUpAugment_MatchingOutfits_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_DoubleUpAugment_MatchingOutfits",
+  "description": "TFT7_DoubleUpAugment_MatchingOutfits_Description",
+  "tooltip": "TFT7_DoubleUpAugment_MatchingOutfits_Description",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_MatchingOutfits.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

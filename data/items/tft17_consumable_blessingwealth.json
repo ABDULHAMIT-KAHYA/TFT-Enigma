@@ -1,0 +1,54 @@
+{
+  "name": "TFT17_Consumable_BlessingWealth",
+  "displayName": "Blessing: Wealth",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Consumable_BlessingWealth",
+  "description": "Permanently grant a champion @ADAP@% Attack Damage and Ability Power, and a @GoldChance@% chance to generate @Gold@ gold on takedown.",
+  "tooltip": "Permanently grant a champion @ADAP@% Attack Damage and Ability Power, and a @GoldChance@% chance to generate @Gold@ gold on takedown.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_BlessingWealth.TFT_17_3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ADAP",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 8, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "GoldChance",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 12, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "ADAP", "value": "8" }, { "name": "Gold", "value": "1" }, { "name": "GoldChance", "value": "12" }],
+  "importWarnings": ["Unmapped item variable: ADAP", "Unmapped item variable: Gold", "Unmapped item variable: GoldChance"]
+}

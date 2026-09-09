@@ -1,8 +1,65 @@
 {
   "name": "Gargoyle Stoneplate Of Immortality",
+  "displayName": "Gargoyle Stoneplate Of Immortality",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_GargoyleStoneplateShadow",
+  "description": "The holder heals themself for @HealingPerEnemy@ Health every @SecondsBetweenHeals@ seconds for each unit targeting them.",
+  "tooltip": "The holder heals themself for @HealingPerEnemy@ Health every @SecondsBetweenHeals@ seconds for each unit targeting them.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Gargoyle_Stoneplate.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Gargoyle Stoneplate Of Immortality:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Gargoyle Stoneplate Of Immortality:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 70,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealingPerEnemy",
+      "rawSourceValue": "70",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SecondsBetweenHeals",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "20" }, { "name": "HealingPerEnemy", "value": "70" }, { "name": "MagicResist", "value": "20" }, { "name": "SecondsBetweenHeals", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: HealingPerEnemy", "Unmapped item variable: SecondsBetweenHeals"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "Blue Battery I",
+  "displayName": "Blue Battery I",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_BlueBattery1",
+  "description": "Your units gain @BonusAP@ Ability Power. After casting their Ability, set the caster's Mana to @ManaRestore@.",
+  "tooltip": "Your units gain @BonusAP@ Ability Power. After casting their Ability, set the caster's Mana to @ManaRestore@.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Blue-Battery-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCast",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaRestore",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCast",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BonusAP",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAP", "value": "8" }, { "name": "ManaRestore", "value": "10" }],
+  "importWarnings": ["Metadata-only item effect: ManaRestore -> ModifyMana", "Unmapped item variable: BonusAP", "Unmapped item variable: ManaRestore", "Unsupported item effect metadata: BonusAP"]
 }

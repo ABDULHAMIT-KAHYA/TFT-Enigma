@@ -4,6 +4,7 @@
 #include "validation/ScenarioSystem.hpp"
 #include "ai/SelfPlay.hpp"
 #include "import/TFTDataImporter.hpp"
+#include "validation/ReplaySystem.hpp"
 #include "macro/MacroSimulation.hpp"
 #include "core/RandomManager.hpp"
 #include "macro/PlayerState.hpp"
@@ -27,10 +28,15 @@ int main(int argc, char** argv)
     bool validate = false;
     bool importLive = false;
     bool importCachedTraits = false;
+    bool importCachedItems = false;
     bool useMonteCarlo = false;
     bool mcDebug = false;
     int selfplay = 0;
     std::string scenarioPath;
+    std::string recordReplayScenario;
+    std::string recordReplayOutput;
+    std::string playReplayPath;
+    std::string verifyReplayPath;
     for (int i = 1; i < argc; ++i)
     {
         const std::string arg(argv[i]);
@@ -45,6 +51,10 @@ int main(int argc, char** argv)
         else if (arg == "--import-cached-traits")
         {
             importCachedTraits = true;
+        }
+        else if (arg == "--import-cached-items")
+        {
+            importCachedItems = true;
         }
         else if (arg == "--selfplay" && i + 1 < argc)
         {
@@ -63,6 +73,22 @@ int main(int argc, char** argv)
         else if (arg == "--scenario" && i + 1 < argc)
         {
             scenarioPath = argv[i + 1];
+            i += 1;
+        }
+        else if (arg == "--record-replay" && i + 2 < argc)
+        {
+            recordReplayScenario = argv[i + 1];
+            recordReplayOutput = argv[i + 2];
+            i += 2;
+        }
+        else if (arg == "--play-replay" && i + 1 < argc)
+        {
+            playReplayPath = argv[i + 1];
+            i += 1;
+        }
+        else if (arg == "--verify-replay" && i + 1 < argc)
+        {
+            verifyReplayPath = argv[i + 1];
             i += 1;
         }
     }
@@ -84,6 +110,15 @@ int main(int argc, char** argv)
         std::cout << "Data root: " << dataRoot.string() << "\n";
         TFTDataImporter importer;
         importer.importTraitsFromCachedTft(dataRoot.string(), std::cout);
+        return 0;
+    }
+
+    if (importCachedItems)
+    {
+        std::cout << "TFT cached item import\n";
+        std::cout << "Data root: " << dataRoot.string() << "\n";
+        TFTDataImporter importer;
+        importer.importItemsFromCachedTft(dataRoot.string(), std::cout);
         return 0;
     }
 
@@ -162,6 +197,24 @@ int main(int argc, char** argv)
     std::cout << "\n\n";
     std::cout << std::flush;
 
+    if (!recordReplayScenario.empty())
+    {
+        const ReplayRunResult r = ReplaySystem::recordScenario(content, recordReplayScenario, recordReplayOutput, std::cout);
+        return r.ok ? 0 : 1;
+    }
+
+    if (!playReplayPath.empty())
+    {
+        const ReplayRunResult r = ReplaySystem::playReplay(content, playReplayPath, std::cout, false);
+        return r.ok ? 0 : 1;
+    }
+
+    if (!verifyReplayPath.empty())
+    {
+        const ReplayRunResult r = ReplaySystem::playReplay(content, verifyReplayPath, std::cout, true);
+        return r.ok ? 0 : 1;
+    }
+
     if (!scenarioPath.empty())
     {
         const CombatScenario scenario = ScenarioSystem::loadFromFile(scenarioPath);
@@ -230,3 +283,5 @@ int main(int argc, char** argv)
 
     return MacroSimulation::run(content, baseSeed, useMonteCarlo, mcDebug, std::cout);
 }
+
+

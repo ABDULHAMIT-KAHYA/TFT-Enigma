@@ -1,7 +1,17 @@
 {
   "name": "Syndicate Crown",
+  "displayName": "Syndicate Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_SyndicateCrown",
+  "description": "Gain a Syndicate Emblem, an Infinity Edge, and a Darius.",
+  "tooltip": "Gain a Syndicate Emblem, an Infinity Edge, and a Darius.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SyndicateCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

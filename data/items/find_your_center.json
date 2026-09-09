@@ -1,7 +1,41 @@
 {
   "name": "Find Your Center",
+  "displayName": "Find Your Center",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_FindYourCenter",
+  "description": "Your champion that starts combat in the center of the front row gains @BonusDamage*100@% Damage Amp and @BonusHealth*100@% max Health.",
+  "tooltip": "Your champion that starts combat in the center of the front row gains @BonusDamage*100@% Damage Amp and @BonusHealth*100@% max Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FindYourCenter_I.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Find Your Center:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealth",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealth", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusDamage",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusDamage", "value": "0.15" }, { "name": "BonusHealth", "value": "0.25" }],
+  "importWarnings": ["Unmapped item variable: BonusDamage"]
 }

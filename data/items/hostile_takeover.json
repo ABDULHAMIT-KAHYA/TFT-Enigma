@@ -1,7 +1,51 @@
 {
   "name": "Hostile Takeover",
+  "displayName": "Hostile Takeover",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Suits_CorporateCashOut",
+  "description": "Cypher gains @CombatMultiplier*100@% of its combat bonus now. Gain @KillMultiplier*100@% Intel from kills, but only @LossMultiplier*100@% from losses. Gain a Draven.",
+  "tooltip": "Cypher gains @CombatMultiplier*100@% of its combat bonus now. Gain @KillMultiplier*100@% Intel from kills, but only @LossMultiplier*100@% from losses. Gain a Draven.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HostileTakeover_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CombatMultiplier",
+      "rawSourceValue": "0.75",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "KillMultiplier",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LossMultiplier",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CombatMultiplier", "value": "0.75" }, { "name": "KillMultiplier", "value": "2" }, { "name": "LossMultiplier", "value": "0.3" }],
+  "importWarnings": ["Unmapped item variable: CombatMultiplier", "Unmapped item variable: KillMultiplier", "Unmapped item variable: LossMultiplier", "Unsupported item effect metadata: CombatMultiplier", "Unsupported item effect metadata: KillMultiplier", "Unsupported item effect metadata: LossMultiplier"]
 }

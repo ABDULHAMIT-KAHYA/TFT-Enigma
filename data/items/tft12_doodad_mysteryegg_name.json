@@ -1,7 +1,40 @@
 {
   "name": "TFT12_Doodad_MysteryEgg_Name",
+  "displayName": "TFT12_Doodad_MysteryEgg_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_MysteryEgg",
+  "description": "TFT12_Doodad_MysteryEgg_Tooltip",
+  "tooltip": "TFT12_Doodad_MysteryEgg_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseCost",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{6160782c}",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseCost", "value": "4" }, { "name": "{6160782c}", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: BaseCost", "Unmapped item variable: {6160782c}", "Unsupported item effect metadata: BaseCost", "Unsupported item effect metadata: {6160782c}"]
 }

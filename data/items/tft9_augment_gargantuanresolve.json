@@ -1,0 +1,29 @@
+{
+  "name": "TFT9_Augment_GargantuanResolve",
+  "displayName": "Gargantuan Resolve",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_GargantuanResolve",
+  "description": "Gain a Titan's Resolve. Your Titan's Resolves can continue stacking to @MaxStacks@ instead of 25.",
+  "tooltip": "Gain a Titan's Resolve. Your Titan's Resolves can continue stacking to @MaxStacks@ instead of 25.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Gargantuan-Resolve-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxStacks",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxStacks", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: MaxStacks", "Unsupported item effect metadata: MaxStacks"]
+}

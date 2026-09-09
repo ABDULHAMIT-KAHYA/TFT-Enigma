@@ -1,7 +1,51 @@
 {
   "name": "Blistering Strikes",
+  "displayName": "Blistering Strikes",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_RedBuff",
+  "description": "Your team's attacks Burn their targets for @BurnPercent@% of their max Health over @Duration@ seconds. Attacks also reduce their targets' healing received by @HealingReductionPct@%.",
+  "tooltip": "Your team's attacks Burn their targets for @BurnPercent@% of their max Health over @Duration@ seconds. Attacks also reduce their targets' healing received by @HealingReductionPct@%.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Red-Buff-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BurnPercent",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealingReductionPct",
+      "rawSourceValue": "33",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BurnPercent", "value": "5" }, { "name": "Duration", "value": "5" }, { "name": "HealingReductionPct", "value": "33" }],
+  "importWarnings": ["Unmapped item variable: BurnPercent", "Unmapped item variable: Duration", "Unmapped item variable: HealingReductionPct"]
 }

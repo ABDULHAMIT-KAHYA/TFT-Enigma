@@ -1,7 +1,17 @@
 {
   "name": "Jade Crest",
+  "displayName": "Jade Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_JadeEmblem",
+  "description": "Gain a Jade Emblem and a Gnar.",
+  "tooltip": "Gain a Jade Emblem and a Gnar.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Jade-Crest-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

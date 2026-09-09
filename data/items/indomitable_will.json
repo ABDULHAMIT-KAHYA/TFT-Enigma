@@ -1,7 +1,29 @@
 {
   "name": "Indomitable Will",
+  "displayName": "Indomitable Will",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_IndomitableWill",
+  "description": "When your team scores a takedown, they shed all negative effects and become immune to crowd control for @duration@ seconds.",
+  "tooltip": "When your team scores a takedown, they shed all negative effects and become immune to crowd control for @duration@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Indomitable-Will-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: Duration", "Unsupported item effect metadata: Duration"]
 }

@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Augment_InstantGratification2",
+  "displayName": "Instant Gratification",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_InstantGratification2",
+  "description": "The first time you unlock each champion, immediately gain a copy.",
+  "tooltip": "The first time you unlock each champion, immediately gain a copy.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxCost",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "null" }, { "name": "MaxCost", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: MaxCost", "Unmapped non-numeric item variable: Gold"]
+}

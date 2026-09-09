@@ -1,7 +1,40 @@
 {
   "name": "Road to Redemption",
+  "displayName": "Road to Redemption",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_Redeemed",
+  "description": "Redeemed units heal for @Heal@ (split evenly) when a Redeemed ally dies. The first time you heal @HealingGoal@ this way, gain a Redemption. Gain a Lux.<br>(Current:&nbsp;@TFTUnitProperty.item:TFT5_Augment_Redeemed_AmountHealed@)",
+  "tooltip": "Redeemed units heal for @Heal@ (split evenly) when a Redeemed ally dies. The first time you heal @HealingGoal@ this way, gain a Redemption. Gain a Lux.<br>(Current:&nbsp;@TFTUnitProperty.item:TFT5_Augment_Redeemed_AmountHealed@)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Road-To-Redemption_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Heal",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 12500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealingGoal",
+      "rawSourceValue": "12500",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Heal", "value": "500" }, { "name": "HealingGoal", "value": "12500" }],
+  "importWarnings": ["Unmapped item variable: Heal", "Unmapped item variable: HealingGoal"]
 }

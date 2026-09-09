@@ -1,7 +1,106 @@
 {
   "name": "Two Much Value",
+  "displayName": "Two Much Value",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TwoMuchValue",
+  "description": "Gain @FreeRerolls@ reroll for every @UnitCount@ unique 2-cost champions fielded last player combat. Gain @NumChampsToGrant@ 2-cost champions.",
+  "tooltip": "Gain @FreeRerolls@ reroll for every @UnitCount@ unique 2-cost champions fielded last player combat. Gain @NumChampsToGrant@ 2-cost champions.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TwoMuchValue_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FreeRerolls",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumChampsToGrant",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UnitCost",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UnitCount",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "augmentselectbonusgold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{10307c7b}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d5279bbe}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{e0965628}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "FreeRerolls", "value": "1" }, { "name": "NumChampsToGrant", "value": "1" }, { "name": "UnitCost", "value": "2" }, { "name": "UnitCount", "value": "2" }, { "name": "augmentselectbonusgold", "value": "null" }, { "name": "{10307c7b}", "value": "null" }, { "name": "{d5279bbe}", "value": "2" }, { "name": "{e0965628}", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: FreeRerolls", "Unmapped item variable: NumChampsToGrant", "Unmapped item variable: UnitCost", "Unmapped item variable: UnitCount", "Unmapped item variable: {d5279bbe}", "Unmapped item variable: {e0965628}", "Unmapped non-numeric item variable: augmentselectbonusgold", "Unmapped non-numeric item variable: {10307c7b}", "Unsupported item effect metadata: FreeRerolls", "Unsupported item effect metadata: NumChampsToGrant", "Unsupported item effect metadata: UnitCost", "Unsupported item effect metadata: UnitCount", "Unsupported item effect metadata: augmentselectbonusgold", "Unsupported item effect metadata: {10307c7b}", "Unsupported item effect metadata: {d5279bbe}", "Unsupported item effect metadata: {e0965628}"]
 }

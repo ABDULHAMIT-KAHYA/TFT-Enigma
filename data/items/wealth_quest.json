@@ -1,7 +1,40 @@
 {
   "name": "Wealth Quest",
+  "displayName": "Wealth Quest",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_AurelionSol_GoldQuest_Stage2",
+  "description": "When you reach @GoldRequired@ gold, gain a component anvil and @GoldReward@ gold.",
+  "tooltip": "When you reach @GoldRequired@ gold, gain a component anvil and @GoldReward@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_DelayedGold.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldReward",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "goldrequired",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldReward", "value": "4" }, { "name": "goldrequired", "value": "50" }],
+  "importWarnings": ["Unmapped item variable: GoldReward", "Unmapped item variable: goldrequired", "Unsupported item effect metadata: GoldReward", "Unsupported item effect metadata: goldrequired"]
 }

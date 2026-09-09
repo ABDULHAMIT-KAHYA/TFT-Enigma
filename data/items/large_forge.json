@@ -1,7 +1,17 @@
 {
   "name": "Large Forge",
+  "displayName": "Large Forge",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Commander_LargeForge",
+  "description": "Gain an Artifact anvil and a component item anvil.",
+  "tooltip": "Gain an Artifact anvil and a component item anvil.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Forge-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

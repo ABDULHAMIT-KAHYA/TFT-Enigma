@@ -1,0 +1,151 @@
+{
+  "name": "TFT16_TheDarkinStaff",
+  "displayName": "The Darkin Staff",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_TheDarkinStaff",
+  "description": "The holder gains the Darkin trait.<br><br>For every @ManaSpent@ Mana spent, launch a tendril at enemies near the current target, dealing @TFTUnitProperty.trait:TFT_Item_Artifact_DarkinStaff_Damage@&nbsp;magic damage.<br><br><rules>Damage increases based on Stage</rules>",
+  "tooltip": "The holder gains the Darkin trait.<br><br>For every @ManaSpent@ Mana spent, launch a tendril at enemies near the current target, dealing @TFTUnitProperty.trait:TFT_Item_Artifact_DarkinStaff_Damage@&nbsp;magic damage.<br><br><rules>Damage increases based on Stage</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT16_TheDarkinStaff.TFT_Set16.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT16_TheDarkinStaff:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{1feb18d6}",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{25eb2248}",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{26eb23db}",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{28eb2701}",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{29eb2894}",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{2aeb2a27}",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{2beb2bba}",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{2ceb2d4d}",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{ca76adb3}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaSpent",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "35" }, { "name": "ManaRegen", "value": "3" }, { "name": "ManaSpent", "value": "20" }, { "name": "{1feb18d6}", "value": "300" }, { "name": "{25eb2248}", "value": "100" }, { "name": "{26eb23db}", "value": "150" }, { "name": "{28eb2701}", "value": "100" }, { "name": "{29eb2894}", "value": "300" }, { "name": "{2aeb2a27}", "value": "300" }, { "name": "{2beb2bba}", "value": "200" }, { "name": "{2ceb2d4d}", "value": "250" }, { "name": "{ca76adb3}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: ManaRegen", "Unmapped item variable: ManaSpent", "Unmapped item variable: {1feb18d6}", "Unmapped item variable: {25eb2248}", "Unmapped item variable: {26eb23db}", "Unmapped item variable: {28eb2701}", "Unmapped item variable: {29eb2894}", "Unmapped item variable: {2aeb2a27}", "Unmapped item variable: {2beb2bba}", "Unmapped item variable: {2ceb2d4d}", "Unmapped non-numeric item variable: {ca76adb3}"]
+}

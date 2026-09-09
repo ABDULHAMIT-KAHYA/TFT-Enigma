@@ -1,7 +1,51 @@
 {
   "name": "Battle Academia Emblem",
+  "displayName": "Battle Academia Emblem",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Item_BattleAcademiaEmblemItem",
+  "description": "The holder gains the Battle Academia trait, and @HealthPerPotential@ Health and @DAPerPotential*100@% Damage Amp per %i:set14AmpIcon%.",
+  "tooltip": "The holder gains the Battle Academia trait, and @HealthPerPotential@ Health and @DAPerPotential*100@% Damage Amp per %i:set14AmpIcon%.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set15/TFT15_Emblem_BattleAcademia.TFT_Set15.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.06,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DAPerPotential",
+      "rawSourceValue": "0.06",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 120,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPerPotential",
+      "rawSourceValue": "120",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DAPerPotential", "value": "0.06" }, { "name": "HealthPerPotential", "value": "120" }, { "name": "ManaRegen", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: DAPerPotential", "Unmapped item variable: HealthPerPotential", "Unmapped item variable: ManaRegen"]
 }

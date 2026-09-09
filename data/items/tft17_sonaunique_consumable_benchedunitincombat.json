@@ -1,0 +1,17 @@
+{
+  "name": "TFT17_SonaUnique_Consumable_BenchedUnitInCombat",
+  "displayName": "tft15_General_itemname_BenchedUnitInCombat",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_SonaUnique_Consumable_BenchedUnitInCombat",
+  "description": "tft15_General_itemdescription_BenchedUnitInCombat",
+  "tooltip": "tft15_General_itemdescription_BenchedUnitInCombat",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT15_CommandModItems/TFT15_Item_Icon_CommandMod_BenchedUnitInCombat.TFT_Set15.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

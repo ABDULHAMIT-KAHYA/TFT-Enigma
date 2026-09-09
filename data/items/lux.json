@@ -1,7 +1,17 @@
 {
   "name": "Lux",
+  "displayName": "Lux",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Lux",
+  "description": "Lux",
+  "tooltip": "Lux",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Lux_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

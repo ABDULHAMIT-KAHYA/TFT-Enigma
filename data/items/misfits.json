@@ -1,7 +1,30 @@
 {
   "name": "Misfits",
+  "displayName": "Misfits",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_Misfits",
+  "description": "Your team gains @Health@ Health for each active Unique trait. Gain a Rhaast and a Miss Fortune.<br><br>@TFTUnitProperty.item:TFT_Augment_Misfits_TotalHealthTooltip@<br><br><rules>Unique traits belong to 1 champion and are shown in orange.</rules>",
+  "tooltip": "Your team gains @Health@ Health for each active Unique trait. Gain a Rhaast and a Miss Fortune.<br><br>@TFTUnitProperty.item:TFT_Augment_Misfits_TotalHealthTooltip@<br><br><rules>Unique traits belong to 1 champion and are shown in orange.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Misfits_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Misfits:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 55,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "55",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 55, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "55" }],
+  "importWarnings": []
 }

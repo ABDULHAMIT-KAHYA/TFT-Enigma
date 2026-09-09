@@ -1,7 +1,40 @@
 {
   "name": "TFT_item_name_Catalyst",
+  "displayName": "TFT_item_name_Catalyst",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_Catalyst",
+  "description": "TFT_item_description_Catalyst",
+  "tooltip": "TFT_item_description_Catalyst",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_GiantSlayer.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DodgeChance",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DodgeChance", "value": "20" }, { "name": "Mana", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: DodgeChance", "Unmapped item variable: Mana", "Unsupported item effect metadata: DodgeChance"]
 }

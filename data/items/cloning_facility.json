@@ -1,7 +1,62 @@
 {
   "name": "Cloning Facility",
+  "displayName": "Cloning Facility",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_CloningFacility",
+  "description": "Empower the hex in the center of the third row. Summon a clone of the champion in it with @HealthPercent*100@% base Health and @ManaPercent*100@% increased Mana cost.",
+  "tooltip": "Empower the hex in the center of the third row. Summon a clone of the champion in it with @HealthPercent*100@% base Health and @ManaPercent*100@% increased Mana cost.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TrickMirror_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPercent",
+      "rawSourceValue": "0.8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaPercent",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{4074ec36}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{d47f9a80}",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthPercent", "value": "0.8" }, { "name": "ManaPercent", "value": "0.1" }, { "name": "{4074ec36}", "value": "2" }, { "name": "{d47f9a80}", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: HealthPercent", "Unmapped item variable: ManaPercent", "Unmapped item variable: {4074ec36}", "Unmapped item variable: {d47f9a80}"]
 }

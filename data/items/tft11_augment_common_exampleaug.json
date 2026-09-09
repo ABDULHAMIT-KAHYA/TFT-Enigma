@@ -1,0 +1,29 @@
+{
+  "name": "TFT11_Augment_Common_ExampleAug",
+  "displayName": "Vampirism I",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_Common_ExampleAug",
+  "description": "Your team gains @BaseHP@ Health. Gain another @BonusHPPer5MissingHealth@ Health and @OmnivampPercentPer5MissingHealth*100@% Omnivamp per 5 missing player health.<br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>",
+  "tooltip": "Your team gains @BaseHP@ Health. Gain another @BonusHPPer5MissingHealth@ Health and @OmnivampPercentPer5MissingHealth*100@% Omnivamp per 5 missing player health.<br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{c56ea2ab}",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{c56ea2ab}", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: {c56ea2ab}"]
+}

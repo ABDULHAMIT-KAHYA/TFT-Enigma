@@ -1,7 +1,29 @@
 {
   "name": "Epic Rolldown",
+  "displayName": "Epic Rolldown",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_EpicRolldown",
+  "description": "When you reach Level 8, gain @NumRerolls@ Shop rerolls.<br><br><tftitemrules>Runeterra Reforged Championship, 2023</tftitemrules>",
+  "tooltip": "When you reach Level 8, gain @NumRerolls@ Shop rerolls.<br><br><tftitemrules>Runeterra Reforged Championship, 2023</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/EpicRolldown_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRerolls",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumRerolls", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: NumRerolls", "Unsupported item effect metadata: NumRerolls"]
 }

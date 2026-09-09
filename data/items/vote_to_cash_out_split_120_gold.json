@@ -1,7 +1,29 @@
 {
   "name": "Vote to CASH OUT: Split 120 Gold",
+  "displayName": "Vote to CASH OUT: Split 120 Gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Armory_Invested_TotalPot3",
+  "description": "Vote to gain @Gold@ gold, split evenly among all players (rounded down).<br><br><rules>Chosen if the majority of players vote for this option, or if the vote results in a tie.</rules>",
+  "tooltip": "Vote to gain @Gold@ gold, split evenly among all players (rounded down).<br><br><rules>Chosen if the majority of players vote for this option, or if the vote results in a tie.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Gold.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 120,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "120",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "120" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "Support Golem I",
+  "displayName": "Support Golem I",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SupportSentinel",
+  "description": "Gain @NumOfDummies@ Golem that fights for your team, holding @NumOfItems@ permanently attached Support item(s).",
+  "tooltip": "Gain @NumOfDummies@ Golem that fights for your team, holding @NumOfItems@ permanently attached Support item(s).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Support-Sentinel-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumOfDummies",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumOfItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumOfDummies", "value": "1" }, { "name": "NumOfItems", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumOfDummies", "Unmapped item variable: NumOfItems", "Unsupported item effect metadata: NumOfDummies", "Unsupported item effect metadata: NumOfItems"]
 }

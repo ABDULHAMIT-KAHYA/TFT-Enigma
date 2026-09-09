@@ -1,7 +1,29 @@
 {
   "name": "Three's Company",
+  "displayName": "Three's Company",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_ThreesCompany",
+  "description": "Gain @NumChamps@ random 3-cost champions.",
+  "tooltip": "Gain @NumChamps@ random 3-cost champions.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Threes-Company-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumChamps",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumChamps", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: NumChamps", "Unsupported item effect metadata: NumChamps"]
 }

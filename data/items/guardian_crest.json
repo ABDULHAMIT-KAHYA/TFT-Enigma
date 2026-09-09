@@ -1,7 +1,17 @@
 {
   "name": "Guardian Crest",
+  "displayName": "Guardian Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_GuardianEmblem",
+  "description": "Gain a Guardian Emblem and a Zac.",
+  "tooltip": "Gain a Guardian Emblem and a Zac.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Guardian-Crest-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

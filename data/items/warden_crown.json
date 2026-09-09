@@ -1,7 +1,17 @@
 {
   "name": "Warden Crown",
+  "displayName": "Warden Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_WardenCrown",
+  "description": "Get a Warden Emblem, a Xin Zhao, and an Adaptive Helm.",
+  "tooltip": "Get a Warden Emblem, a Xin Zhao, and an Adaptive Helm.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

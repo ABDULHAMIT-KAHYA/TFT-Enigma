@@ -1,7 +1,29 @@
 {
   "name": "Swordsmith",
+  "displayName": "Swordsmith",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ForgeSword",
+  "description": "Gain @NumItems@ random completed items that build from B.F. Sword.",
+  "tooltip": "Gain @NumItems@ random completed items that build from B.F. Sword.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Swordsmith_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumItems", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumItems", "Unsupported item effect metadata: NumItems"]
 }

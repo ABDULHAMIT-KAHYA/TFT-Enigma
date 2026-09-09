@@ -1,7 +1,30 @@
 {
   "name": "Spellblades",
+  "displayName": "Spellblades",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_Spellblades",
+  "description": "Whenever one of your champion casts, their next attack deals bonus magic damage equal to @abilitypower*100@% of their Ability Power.",
+  "tooltip": "Whenever one of your champion casts, their next attack deals bonus magic damage equal to @abilitypower*100@% of their Ability Power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Spellblades_II.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Spellblades:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCast",
+      "value": 1.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AbilityPower",
+      "rawSourceValue": "1.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 1.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AbilityPower", "value": "1.2" }],
+  "importWarnings": ["Metadata-only item effect: AbilityPower -> GrantStats"]
 }

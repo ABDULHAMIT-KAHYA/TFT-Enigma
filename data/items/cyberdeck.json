@@ -1,7 +1,40 @@
 {
   "name": "Cyberdeck",
+  "displayName": "Cyberdeck",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Exotech_Cyberdeck",
+  "description": "On combat start, @MaxNum@ of your Exotech units with @NumItems@ items gains their ideal Exotech item. Gain a Jax and Naafiri.",
+  "tooltip": "On combat start, @MaxNum@ of your Exotech units with @NumItems@ items gains their ideal Exotech item. Gain a Jax and Naafiri.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cyberdeck_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "MaxNum",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxNum", "value": "1" }, { "name": "NumItems", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: MaxNum", "Unmapped item variable: NumItems", "Unsupported item effect metadata: MaxNum", "Unsupported item effect metadata: NumItems"]
 }

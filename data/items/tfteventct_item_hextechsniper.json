@@ -1,0 +1,63 @@
+{
+  "name": "TFTEventCT_Item_HextechSniper",
+  "displayName": "Hextech Sniper Rifle",
+  "isPlaceholder": false,
+  "sourceId": "TFTEventCT_Item_HextechSniper",
+  "description": "Combat start: Fire a sniper shot that instantly executes enemies.",
+  "tooltip": "Combat start: Fire a sniper shot that instantly executes enemies.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/Caitlyn_AceintheHole.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFTEventCT_Item_HextechSniper:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Execute",
+      "trigger": "OnCombatStart",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "CostIncrease",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Execute",
+      "trigger": "OnCombatStart",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaLockDuration",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BonusAllyHealth",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAllyHealth", "value": "60" }, { "name": "CostIncrease", "value": "30" }, { "name": "Health", "value": "150" }, { "name": "ManaLockDuration", "value": "60" }],
+  "importWarnings": ["Metadata-only item effect: BonusAllyHealth -> Heal", "Metadata-only item effect: CostIncrease -> Execute", "Metadata-only item effect: Health -> GrantStats", "Metadata-only item effect: ManaLockDuration -> Execute", "Unmapped item variable: BonusAllyHealth", "Unmapped item variable: CostIncrease", "Unmapped item variable: ManaLockDuration"]
+}

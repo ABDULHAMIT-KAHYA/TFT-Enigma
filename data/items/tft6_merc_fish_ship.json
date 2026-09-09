@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Fish_Ship",
+  "displayName": "Small Prize",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Fish_Ship",
+  "description": "A 4-cost champion has been added to your chest. ",
+  "tooltip": "A 4-cost champion has been added to your chest. ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "LootObject",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

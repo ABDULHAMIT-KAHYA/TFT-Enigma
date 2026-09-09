@@ -1,7 +1,17 @@
 {
   "name": "Burning Bright",
+  "displayName": "Burning Bright",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_UdyrCarry",
+  "description": "Gain an Udyr. Your strongest Udyr becomes an Attack Fighter and sends bouncing gusts of flame out with every attack. His spell no longer rapidly attacks, but instead grants him stacking Attack Speed.",
+  "tooltip": "Gain an Udyr. Your strongest Udyr becomes an Attack Fighter and sends bouncing gusts of flame out with every attack. His spell no longer rapidly attacks, but instead grants him stacking Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TigerStance_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

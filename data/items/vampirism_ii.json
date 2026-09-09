@@ -1,7 +1,52 @@
 {
   "name": "Vampirism II",
+  "displayName": "Vampirism II",
+  "isPlaceholder": false,
+  "sourceId": "TFT10_Augment_VampirismPlus",
+  "description": "Your team gains @BaseHP@ Health. Gain another @BonusHPPer5MissingHealth@ Health and @OmnivampPercentPer5MissingHealth*100@% Omnivamp per 5 missing player health.<br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>",
+  "tooltip": "Your team gains @BaseHP@ Health. Gain another @BonusHPPer5MissingHealth@ Health and @OmnivampPercentPer5MissingHealth*100@% Omnivamp per 5 missing player health.<br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Vampirism II:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.01, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "OmnivampPercentPer5MissingHealth",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:OmnivampPercentPer5MissingHealth", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.01, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseHP",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHPPer5MissingHealth",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseHP", "value": "50" }, { "name": "BonusHPPer5MissingHealth", "value": "6" }, { "name": "OmnivampPercentPer5MissingHealth", "value": "0.01" }],
+  "importWarnings": ["Unmapped item variable: BaseHP", "Unmapped item variable: BonusHPPer5MissingHealth"]
 }

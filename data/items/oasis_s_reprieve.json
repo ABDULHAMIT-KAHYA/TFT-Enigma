@@ -1,7 +1,51 @@
 {
   "name": "Oasis's Reprieve",
+  "displayName": "Oasis's Reprieve",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_XerathZap_OasissReprieve",
+  "description": "Next combat: After @Delay@ seconds, your team rapidly recovers @PercentHeal*100@% maximum Health.",
+  "tooltip": "Next combat: After @Delay@ seconds, your team rapidly recovers @PercentHeal*100@% maximum Health.",
+  "iconPath": "ASSETS/UX/TFT/Hud/ZAPS/Wands/ZAPS_ScoreboardBadge_XerathWand_Self.TFT_Set12.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealDuration",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentHeal",
+      "rawSourceValue": "0.18",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Delay", "value": "10" }, { "name": "HealDuration", "value": "2" }, { "name": "PercentHeal", "value": "0.18" }],
+  "importWarnings": ["Unmapped item variable: Delay", "Unmapped item variable: HealDuration", "Unmapped item variable: PercentHeal"]
 }

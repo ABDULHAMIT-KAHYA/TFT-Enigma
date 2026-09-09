@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_Gold_Stage4",
+  "displayName": "@Gold@ gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Gold_Stage4",
+  "description": "<rules>Make it rain!</rules>",
+  "tooltip": "<rules>Make it rain!</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistGiveGold.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
+}

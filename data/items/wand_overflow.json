@@ -1,7 +1,40 @@
 {
   "name": "Wand Overflow",
+  "displayName": "Wand Overflow",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_WandOverflow",
+  "description": "Gain @NumItems@ Needlessly Large Rods. Your Needlessly Large Rods grant +@BonusStat*100@% Attack Speed.",
+  "tooltip": "Gain @NumItems@ Needlessly Large Rods. Your Needlessly Large Rods grant +@BonusStat*100@% Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WandOverflow_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusStat",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusStat", "value": "0.05" }, { "name": "NumItems", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: BonusStat", "Unmapped item variable: NumItems", "Unsupported item effect metadata: BonusStat", "Unsupported item effect metadata: NumItems"]
 }

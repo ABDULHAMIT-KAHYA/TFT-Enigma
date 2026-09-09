@@ -1,7 +1,99 @@
 {
   "name": "Perfected Unleashed Toxins",
+  "displayName": "Perfected Unleashed Toxins",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Crime_Prismatic_UnleashedToxins",
+  "description": "Attacks grant @ExtraManaOnAttack@ bonus Mana. After casting, launch @NumMissiles@ missiles at the current target that deal @FlatDamage@ magic damage.<br><br><scaleShimmer>Perfected Bonus:</scaleShimmer> Casts also launch a wave of toxins that deals @PrismaticWaveDamage@ magic damage.<br><rules>Recommended users: Silco and Renata Glasc</rules>",
+  "tooltip": "Attacks grant @ExtraManaOnAttack@ bonus Mana. After casting, launch @NumMissiles@ missiles at the current target that deal @FlatDamage@ magic damage.<br><br><scaleShimmer>Perfected Bonus:</scaleShimmer> Casts also launch a wave of toxins that deals @PrismaticWaveDamage@ magic damage.<br><rules>Recommended users: Silco and Renata Glasc</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Prismatic_UnleashedToxins.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Perfected Unleashed Toxins:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "FlatDamage",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 250, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumMissiles",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "PrismaticWaveDamage",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 150, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnAttack",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "PrismaticWaveStunDuration",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnAttack",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnAttack",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ExtraManaOnAttack",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnAttack",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "30" }, { "name": "ExtraManaOnAttack", "value": "10" }, { "name": "FlatDamage", "value": "250" }, { "name": "Mana", "value": "30" }, { "name": "NumMissiles", "value": "4" }, { "name": "PrismaticWaveDamage", "value": "150" }, { "name": "PrismaticWaveStunDuration", "value": "null" }],
+  "importWarnings": ["Metadata-only item effect: AP -> GrantStats", "Metadata-only item effect: ExtraManaOnAttack -> ModifyMana", "Metadata-only item effect: FlatDamage -> DealDamage", "Metadata-only item effect: Mana -> ModifyMana", "Metadata-only item effect: NumMissiles -> DealDamage", "Metadata-only item effect: PrismaticWaveDamage -> DealDamage", "Metadata-only item effect: PrismaticWaveStunDuration -> DealDamage", "Unmapped item variable: ExtraManaOnAttack", "Unmapped item variable: FlatDamage", "Unmapped item variable: Mana", "Unmapped item variable: NumMissiles", "Unmapped item variable: PrismaticWaveDamage", "Unmapped non-numeric item variable: PrismaticWaveStunDuration"]
 }

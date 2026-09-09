@@ -1,7 +1,17 @@
 {
   "name": "Elderwood Crest",
+  "displayName": "Elderwood Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_ElderwoodCrest",
+  "description": "Gain an Elderwood Emblem and a Rakan.",
+  "tooltip": "Gain an Elderwood Emblem and a Rakan.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Elderwood_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

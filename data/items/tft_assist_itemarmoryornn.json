@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_ItemArmoryOrnn",
+  "displayName": "Artifact Anvil",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_ItemArmoryOrnn",
+  "description": "Artifact Anvil",
+  "tooltip": "Artifact Anvil",
+  "iconPath": "ASSETS/Characters/TFT_ArmoryKeyOrnn/HUD/Icons2D/TFT_ArmoryKeyOrnn_Square.tex",
+  "itemCategory": "Anvil",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

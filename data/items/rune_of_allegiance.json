@@ -1,7 +1,29 @@
 {
   "name": "Rune of Allegiance",
+  "displayName": "Rune of Allegiance",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_RuneOfAllegiance",
+  "description": "Use on any champion to transfer them to your partner. Any items held will pop off.<br><br>Once used, this item regenerates in @RoundsToRegain@ rounds.<br><br><tftitemrules>[Cannot be used in combat.] <br>[Consumable - this item disappears when used.]</tftitemrules>",
+  "tooltip": "Use on any champion to transfer them to your partner. Any items held will pop off.<br><br>Once used, this item regenerates in @RoundsToRegain@ rounds.<br><br><tftitemrules>[Cannot be used in combat.] <br>[Consumable - this item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/RuneOfAllegiance.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundsToRegain",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RoundsToRegain", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: RoundsToRegain", "Unsupported item effect metadata: RoundsToRegain"]
 }

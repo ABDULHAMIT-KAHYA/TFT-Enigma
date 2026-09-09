@@ -1,7 +1,30 @@
 {
   "name": "Pay to Win",
+  "displayName": "Pay to Win",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_ShimmerscaleSpending",
+  "description": "If you purchase a Shop reroll during Planning, champions holding a Shimmerscale Item and all Shimmerscale champions gain @DamageAmp@% damage when the next combat begins. Gain a Jax.",
+  "tooltip": "If you purchase a Shop reroll during Planning, champions holding a Shimmerscale Item and all Shimmerscale champions gain @DamageAmp@% damage when the next combat begins. Gain a Jax.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Reckless-Spending-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Pay to Win:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "35" }],
+  "importWarnings": []
 }

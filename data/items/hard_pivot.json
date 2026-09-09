@@ -1,7 +1,40 @@
 {
   "name": "Hard Pivot",
+  "displayName": "Hard Pivot",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_HardPivot",
+  "description": "Sell your board and bench. Gain @FreeRerolls@ free rerolls, and your next @FiveCostShops@ shops have all 5 costs.",
+  "tooltip": "Sell your board and bench. Gain @FreeRerolls@ free rerolls, and your next @FiveCostShops@ shops have all 5 costs.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_HardPivot.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FiveCostShops",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FreeRerolls",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "FiveCostShops", "value": "3" }, { "name": "FreeRerolls", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: FiveCostShops", "Unmapped item variable: FreeRerolls", "Unsupported item effect metadata: FiveCostShops", "Unsupported item effect metadata: FreeRerolls"]
 }

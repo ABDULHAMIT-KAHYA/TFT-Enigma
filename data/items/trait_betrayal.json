@@ -1,7 +1,29 @@
 {
   "name": "Trait: Betrayal",
+  "displayName": "Trait: Betrayal",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_TeamupAugment_Betrayal",
+  "description": "Maddie always targets Ambessa's target with her Ability and attacks. Every round where either gets at least @NumKills@ kills, gain a Maddie.<br><br>Gain a 2-star Maddie and Ambessa.",
+  "tooltip": "Maddie always targets Ambessa's target with her Ability and attacks. Every round where either gets at least @NumKills@ kills, gain a Maddie.<br><br>Gain a 2-star Maddie and Ambessa.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TeamUp_Betrayal_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumKills",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumKills", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumKills"]
 }

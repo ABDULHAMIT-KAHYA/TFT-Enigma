@@ -1,7 +1,40 @@
 {
   "name": "Job's Done",
+  "displayName": "Job's Done",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Commander_SmallForgePlus",
+  "description": "Gain @anvils@ component anvil and @RandomComponents@ random component.",
+  "tooltip": "Gain @anvils@ component anvil and @RandomComponents@ random component.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Job_s-Done-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RandomComponents",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "anvils",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RandomComponents", "value": "1" }, { "name": "anvils", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: RandomComponents", "Unmapped item variable: anvils", "Unsupported item effect metadata: RandomComponents", "Unsupported item effect metadata: anvils"]
 }

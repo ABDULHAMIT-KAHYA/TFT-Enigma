@@ -1,7 +1,17 @@
 {
   "name": "Swiftshot Heart",
+  "displayName": "Swiftshot Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_SwiftshotTrait",
+  "description": "Your team counts has having 1 additional Swiftshot. Gain a Twitch.",
+  "tooltip": "Your team counts has having 1 additional Swiftshot. Gain a Twitch.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Swiftshot-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

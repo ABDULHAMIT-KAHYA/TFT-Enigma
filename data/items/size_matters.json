@@ -1,7 +1,29 @@
 {
   "name": "Size Matters",
+  "displayName": "Size Matters",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SizeMatters",
+  "description": "Gain a Giant's Belt. After a champion starts combat with more than @HealthRequired@ max Health, gain a Warmog's Armor.",
+  "tooltip": "Gain a Giant's Belt. After a champion starts combat with more than @HealthRequired@ max Health, gain a Warmog's Armor.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SizeMatters_I.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthRequired",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthRequired", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: HealthRequired"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "War for the Undercity",
+  "displayName": "War for the Undercity",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Chembaron",
+  "description": "Everytime you choose to save your Shimmer on a Black Market, heal @Heal@ player health and gain @Gold@ gold. Gain a Renni.",
+  "tooltip": "Everytime you choose to save your Shimmer on a Black Market, heal @Heal@ player health and gain @Gold@ gold. Gain a Renni.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WarForTheUndercity_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Heal",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "6" }, { "name": "Heal", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: Heal"]
 }

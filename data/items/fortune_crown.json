@@ -1,7 +1,17 @@
 {
   "name": "Fortune Crown",
+  "displayName": "Fortune Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_FortuneCrown",
+  "description": "Gain a Fortune Emblem, a Gargoyle Stoneplate, and an Annie.",
+  "tooltip": "Gain a Fortune Emblem, a Gargoyle Stoneplate, and an Annie.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Fortune_III.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

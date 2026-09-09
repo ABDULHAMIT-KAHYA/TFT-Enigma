@@ -1,8 +1,54 @@
 {
   "name": "Lethal Rerouting",
+  "displayName": "Lethal Rerouting",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Augment_Strong_Vertical",
+  "description": "Slayers above @HealthThreshold*100@% Health gain @AttackDamageBonus*100@% Attack Damage. While under @HealthThreshold*100@%, they gain @OmnivampBonus*100@% Omnivamp. Gain a Vayne and a Shaco.",
+  "tooltip": "Slayers above @HealthThreshold*100@% Health gain @AttackDamageBonus*100@% Attack Damage. While under @HealthThreshold*100@%, they gain @OmnivampBonus*100@% Omnivamp. Gain a Vayne and a Shaco.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LethalRerouting_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Lethal Rerouting:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Lethal Rerouting:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackDamageBonus",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackDamageBonus", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "OmnivampBonus",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:OmnivampBonus", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackDamageBonus", "value": "0.2" }, { "name": "HealthThreshold", "value": "0.5" }, { "name": "OmnivampBonus", "value": "0.15" }],
+  "importWarnings": ["Unmapped item variable: HealthThreshold"]
 }

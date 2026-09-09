@@ -1,8 +1,87 @@
 {
   "name": "Tentacle Slam",
+  "displayName": "Tentacle Slam",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_AnimaSquadItem_Tier1_TentacleSlam",
+  "description": "Every @Frequency@ seconds, summon a tentacle that slams down on the target, dealing <physicalDamage>@SlamDamage@</physicalDamage> physical damage and healing the holder for @Heal*100@% max health.<br><br><TFTGuildActive enabled=TFT17_AnimaSquad_Tier1Item_IsEnhanced alternate=TFTGuildInactive>Illaoi Bonus: If this item is equipped on Illaoi, an additional tentacle slams targets drained by her ability at @IllaoiEffectiveness*100@% effectiveness. </TFTGuildActive><br><br><rules>Damage increases based on Stage.</rules>",
+  "tooltip": "Every @Frequency@ seconds, summon a tentacle that slams down on the target, dealing <physicalDamage>@SlamDamage@</physicalDamage> physical damage and healing the holder for @Heal*100@% max health.<br><br><TFTGuildActive enabled=TFT17_AnimaSquad_Tier1Item_IsEnhanced alternate=TFTGuildInactive>Illaoi Bonus: If this item is equipped on Illaoi, an additional tentacle slams targets drained by her ability at @IllaoiEffectiveness*100@% effectiveness. </TFTGuildActive><br><br><rules>Damage increases based on Stage.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_AnimaSquadItem_TentacleSlam_T1.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Tentacle Slam:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Tentacle Slam:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Durability",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Durability", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Frequency",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Heal",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IllaoiEffectiveness",
+      "rawSourceValue": "0.35",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SlamDamage",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Durability", "value": "0.1" }, { "name": "Frequency", "value": "5" }, { "name": "Heal", "value": "0.12" }, { "name": "Health", "value": "150" }, { "name": "IllaoiEffectiveness", "value": "0.35" }, { "name": "SlamDamage", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: Frequency", "Unmapped item variable: Heal", "Unmapped item variable: IllaoiEffectiveness", "Unmapped non-numeric item variable: SlamDamage"]
 }

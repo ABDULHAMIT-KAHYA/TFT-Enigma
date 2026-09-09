@@ -1,7 +1,41 @@
 {
   "name": "What the Forge",
+  "displayName": "What the Forge",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_WhatTheForge",
+  "description": "Completed items you own (except Tactician's Items and Emblems) are transformed into random Artifacts. Champions gain @Health@ Health per equipped Artifact. Gain @NumAnvil@ Artifact Anvil.",
+  "tooltip": "Completed items you own (except Tactician's Items and Emblems) are transformed into random Artifacts. Champions gain @Health@ Health per equipped Artifact. Gain @NumAnvil@ Artifact Anvil.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/What-The-Forge-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:What the Forge:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 60, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 60, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumAnvil",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "60" }, { "name": "NumAnvil", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumAnvil"]
 }

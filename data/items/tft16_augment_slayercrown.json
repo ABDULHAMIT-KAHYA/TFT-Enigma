@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_SlayerCrown",
+  "displayName": "Slayer Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_SlayerCrown",
+  "description": "Get a Slayer Emblem, a Yasuo, and a Quicksilver.",
+  "tooltip": "Get a Slayer Emblem, a Yasuo, and a Quicksilver.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

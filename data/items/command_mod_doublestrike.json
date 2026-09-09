@@ -1,7 +1,29 @@
 {
   "name": "Command Mod: Doublestrike",
+  "displayName": "Command Mod: Doublestrike",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_SonaUnique_Consumable_Doublestrike",
+  "description": "Command a unit to have a @DoublestrikeChance@% chance to attack twice when attacking.<br><br><rules>(Good on carries)</rules>",
+  "tooltip": "Command a unit to have a @DoublestrikeChance@% chance to attack twice when attacking.<br><br><rules>(Good on carries)</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17_CommandModItems/TFT17_Item_Icon_CommandMod_DoubleStrike.TFT_Set17.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnAttack",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "DoublestrikeChance",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DoublestrikeChance", "value": "25" }],
+  "importWarnings": ["Unmapped item variable: DoublestrikeChance", "Unsupported item effect metadata: DoublestrikeChance"]
 }

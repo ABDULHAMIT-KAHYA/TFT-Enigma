@@ -1,7 +1,29 @@
 {
   "name": "Martyr",
+  "displayName": "Martyr",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Martyr",
+  "description": "Whenever one of your allies die, your team heals for @Missinghealth@% of their max Health.",
+  "tooltip": "Whenever one of your allies die, your team heals for @Missinghealth@% of their max Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Martyr-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Missinghealth",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Missinghealth", "value": "9" }],
+  "importWarnings": ["Unmapped item variable: Missinghealth"]
 }

@@ -1,0 +1,40 @@
+{
+  "name": "TFT6_Augment_BandOfThieves2Plus",
+  "displayName": "Band of Thieves II+",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_BandOfThieves2Plus",
+  "description": "Gain @NumGloves@ Thief's Gloves. After @DelayTurns@ player combats, gain another.",
+  "tooltip": "Gain @NumGloves@ Thief's Gloves. After @DelayTurns@ player combats, gain another.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BandThieves3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DelayTurns",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumGloves",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DelayTurns", "value": "6" }, { "name": "NumGloves", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: DelayTurns", "Unmapped item variable: NumGloves", "Unsupported item effect metadata: DelayTurns", "Unsupported item effect metadata: NumGloves"]
+}

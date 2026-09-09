@@ -1,0 +1,40 @@
+{
+  "name": "TFT17_MarketOffering_Augment_StarterKit",
+  "displayName": "Starter Kit",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Augment_StarterKit",
+  "description": "Gain a 4-cost champion, a 2-star 1-cost champion that shares a trait with them, and @Gold@ gold.<br><br>At the start of the next @FutureChampionCount@ stages, gain that 4-cost champion again.",
+  "tooltip": "Gain a 4-cost champion, a 2-star 1-cost champion that shares a trait with them, and @Gold@ gold.<br><br>At the start of the next @FutureChampionCount@ stages, gain that 4-cost champion again.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Starter-Kit-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FutureChampionCount",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "FutureChampionCount", "value": "2" }, { "name": "Gold", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: FutureChampionCount", "Unmapped item variable: Gold"]
+}

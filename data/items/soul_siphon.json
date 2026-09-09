@@ -1,7 +1,17 @@
 {
   "name": "Soul Siphon",
+  "displayName": "Soul Siphon",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DarkflightSoulSiphon",
+  "description": "Darkflight champions benefit from the first-listed trait of a sacrificed champion. This does not increase the trait count for that trait. Gain an Aphelios.",
+  "tooltip": "Darkflight champions benefit from the first-listed trait of a sacrificed champion. This does not increase the trait count for that trait. Gain an Aphelios.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SoulSiphon-1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

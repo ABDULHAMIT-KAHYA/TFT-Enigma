@@ -1,8 +1,166 @@
 {
   "name": "tft_item_name_TFT8_AdminCause_Every6Seconds",
+  "displayName": "tft_item_name_TFT8_AdminCause_Every6Seconds",
+  "isPlaceholder": false,
+  "sourceId": "TFT8_AdminCause_EveryXSeconds",
+  "description": "tft_item_description_TFT8_AdminCause_Every6Seconds",
+  "tooltip": "tft_item_description_TFT8_AdminCause_Every6Seconds",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/InnovatorSoul1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:tft_item_name_TFT8_AdminCause_Every6Seconds:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:tft_item_name_TFT8_AdminCause_Every6Seconds:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "AoEDamage",
+      "rawSourceValue": "75",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 75, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SingleTargetDamage",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeedAmount",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeedAmount", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeedDuration",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeedDuration", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 250,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealAmount",
+      "rawSourceValue": "250",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentHealthShield",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:PercentHealthShield", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "APToGain",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldChance",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumSeconds",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{00ac4fc9}",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{2d7e43a8}",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{5d8ecbba}",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "APToGain", "value": "18" }, { "name": "AoEDamage", "value": "75" }, { "name": "AttackSpeedAmount", "value": "18" }, { "name": "AttackSpeedDuration", "value": "200" }, { "name": "GoldChance", "value": "25" }, { "name": "HealAmount", "value": "250" }, { "name": "NumSeconds", "value": "5" }, { "name": "PercentHealthShield", "value": "15" }, { "name": "ShieldDuration", "value": "4" }, { "name": "SingleTargetDamage", "value": "null" }, { "name": "{00ac4fc9}", "value": "10" }, { "name": "{2d7e43a8}", "value": "40" }, { "name": "{5d8ecbba}", "value": "18" }],
+  "importWarnings": ["Unmapped item variable: APToGain", "Unmapped item variable: AoEDamage", "Unmapped item variable: GoldChance", "Unmapped item variable: HealAmount", "Unmapped item variable: NumSeconds", "Unmapped item variable: PercentHealthShield", "Unmapped item variable: ShieldDuration", "Unmapped item variable: {00ac4fc9}", "Unmapped item variable: {2d7e43a8}", "Unmapped item variable: {5d8ecbba}", "Unmapped non-numeric item variable: SingleTargetDamage", "Unsupported item effect metadata: APToGain", "Unsupported item effect metadata: GoldChance", "Unsupported item effect metadata: NumSeconds", "Unsupported item effect metadata: {00ac4fc9}", "Unsupported item effect metadata: {2d7e43a8}", "Unsupported item effect metadata: {5d8ecbba}"]
 }

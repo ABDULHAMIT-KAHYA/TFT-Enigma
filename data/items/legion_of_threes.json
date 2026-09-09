@@ -1,7 +1,41 @@
 {
   "name": "Legion of Threes",
+  "displayName": "Legion of Threes",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_LegionOfThrees",
+  "description": "Gain a random Emblem. Your 3-cost champions and all allies equipped with an Emblem gain @HealthAmount@ Health and @AS*100@% Attack Speed.<br><br><tftitemrules>Reckoning Championship, 2021</tftitemrules>",
+  "tooltip": "Gain a random Emblem. Your 3-cost champions and all allies equipped with an Emblem gain @HealthAmount@ Health and @AS*100@% Attack Speed.<br><br><tftitemrules>Reckoning Championship, 2021</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LegionofThrees_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Legion of Threes:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthAmount",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "0.12" }, { "name": "HealthAmount", "value": "150" }],
+  "importWarnings": ["Unmapped item variable: HealthAmount"]
 }

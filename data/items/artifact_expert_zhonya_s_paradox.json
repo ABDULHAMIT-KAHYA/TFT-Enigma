@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: Zhonya's Paradox",
+  "displayName": "Artifact Expert: Zhonya's Paradox",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_ZhonyasParadox",
+  "description": "Get a 2* Milio, a Zhonya's Paradox, and a Negatron Cloak",
+  "tooltip": "Get a 2* Milio, a Zhonya's Paradox, and a Negatron Cloak",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

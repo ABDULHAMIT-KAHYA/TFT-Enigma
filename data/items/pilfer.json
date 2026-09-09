@@ -1,7 +1,40 @@
 {
   "name": "Pilfer",
+  "displayName": "Pilfer",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Pilfer",
+  "description": "Each round, gain a 1-star copy of the first champion you killed last combat. The first time you gain @GoldRequired@ gold worth of champions in this way, gain a Thief's Gloves. @TFTUnitProperty.item:TFT_Augment_Pilfer_Tooltip@",
+  "tooltip": "Each round, gain a 1-star copy of the first champion you killed last combat. The first time you gain @GoldRequired@ gold worth of champions in this way, gain a Thief's Gloves. @TFTUnitProperty.item:TFT_Augment_Pilfer_Tooltip@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Pilfer_II.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 21,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "goldrequired",
+      "rawSourceValue": "21",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "null" }, { "name": "goldrequired", "value": "21" }],
+  "importWarnings": ["Unmapped item variable: goldrequired", "Unmapped non-numeric item variable: Gold"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Artifact Expert: Blighting Jewel",
+  "displayName": "Artifact Expert: Blighting Jewel",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArtifactExpert_BlightingJewel",
+  "description": "Get a Teemo, a Blighting Jewel, and a Needlessly Large Rod",
+  "tooltip": "Get a Teemo, a Blighting Jewel, and a Needlessly Large Rod",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

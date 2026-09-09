@@ -1,7 +1,29 @@
 {
   "name": "Gain 14 Experience.",
+  "displayName": "Gain 14 Experience.",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Encounter_ChoiceItem_14XP",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 14,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "14",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "XP", "value": "14" }],
+  "importWarnings": ["Unmapped item variable: XP", "Unsupported item effect metadata: XP"]
 }

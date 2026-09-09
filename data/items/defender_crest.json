@@ -1,7 +1,17 @@
 {
   "name": "Defender Crest",
+  "displayName": "Defender Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_DefenderCrest",
+  "description": "Get a Defender Emblem.",
+  "tooltip": "Get a Defender Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

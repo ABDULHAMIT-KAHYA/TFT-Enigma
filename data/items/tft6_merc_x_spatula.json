@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_X_Spatula",
+  "displayName": "Large Prize",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_X_Spatula",
+  "description": "1 Spatula has been added to your chest.",
+  "tooltip": "1 Spatula has been added to your chest.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLootSilver.tex",
+  "itemCategory": "LootObject",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

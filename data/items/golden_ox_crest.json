@@ -1,7 +1,17 @@
 {
   "name": "Golden Ox Crest",
+  "displayName": "Golden Ox Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_GoldenOxCrest",
+  "description": "Gain a Golden Ox emblem.",
+  "tooltip": "Gain a Golden Ox emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldenOxCrest_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

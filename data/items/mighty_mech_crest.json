@@ -1,7 +1,17 @@
 {
   "name": "Mighty Mech Crest",
+  "displayName": "Mighty Mech Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SentaiCrest",
+  "description": "Gain a Mighty Mech Crest.",
+  "tooltip": "Gain a Mighty Mech Crest.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

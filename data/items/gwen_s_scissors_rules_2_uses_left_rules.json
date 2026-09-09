@@ -1,7 +1,29 @@
 {
   "name": "Gwen's Scissors <rules>(2 uses left!)</rules>",
+  "displayName": "Gwen's Scissors <rules>(2 uses left!)</rules>",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Consumable_GwensScissors_2",
+  "description": "Use on a champion to remove all their items and break them down into components.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Use on a champion to remove all their items and break them down into components.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT16_Consumable_GwensScissors_2.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{27d80030}",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{27d80030}", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: {27d80030}", "Unsupported item effect metadata: {27d80030}"]
 }

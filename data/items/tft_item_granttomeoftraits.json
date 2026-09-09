@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Item_GrantTomeOfTraits",
+  "displayName": "Tome of Traits",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_GrantTomeOfTraits",
+  "description": "Gain a Tome of Traits",
+  "tooltip": "Gain a Tome of Traits",
+  "iconPath": "ASSETS/Characters/TFT8_TeamUpProp/HUD/Icons2D/TFT5_EmblemArmoryKey_Square.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

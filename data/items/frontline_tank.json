@@ -1,7 +1,17 @@
 {
   "name": "Frontline Tank",
+  "displayName": "Frontline Tank",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Armory_Sentinel_Tank",
+  "description": "Holds the frontline.<br><br><i>(Comes with Anima Visage, Innervating Locket, and Warmog's Armor.)</i>",
+  "tooltip": "Holds the frontline.<br><br><i>(Comes with Anima Visage, Innervating Locket, and Warmog's Armor.)</i>",
+  "iconPath": "ASSETS/Characters/TFT_BlueGolem/HUD/TFT_BlueGolem_Spell.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

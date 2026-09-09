@@ -1,7 +1,40 @@
 {
   "name": "Power of Friendship",
+  "displayName": "Power of Friendship",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_StarGuardian_PowerOfFriendship",
+  "description": "Star Guardians who start combat adjacent to at least one other Star Guardian gain @Mana@ Mana Regeneration, @Defenses@ Armor, and @Defenses@ Magic Resist. Gain a Rell.",
+  "tooltip": "Star Guardians who start combat adjacent to at least one other Star Guardian gain @Mana@ Mana Regeneration, @Defenses@ Armor, and @Defenses@ Magic Resist. Gain a Rell.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PowerOfFriendship_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Defenses",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Defenses", "value": "20" }, { "name": "Mana", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Defenses", "Unmapped item variable: Mana", "Unsupported item effect metadata: Defenses"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Pilot Selector",
+  "displayName": "Pilot Selector",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent5YR_Consumable_MechPilot_PilotMarker",
+  "description": "Use this on a champion to make it the Pilot of the Mech.<br><br><tftitemrules> [Cannot be used on champions in combat.]</tftitemrules><br><tftitemrules> [Unlimited uses]</tftitemrules>",
+  "tooltip": "Use this on a champion to make it the Pilot of the Mech.<br><br><tftitemrules> [Cannot be used on champions in combat.]</tftitemrules><br><tftitemrules> [Unlimited uses]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/5YR/MechPilotMarker.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

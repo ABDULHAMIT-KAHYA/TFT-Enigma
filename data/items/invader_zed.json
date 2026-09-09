@@ -1,7 +1,40 @@
 {
   "name": "Invader Zed",
+  "displayName": "Invader Zed",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_InvaderZed",
+  "description": "Gain a Spear of Shojin. On Stage @StageNum@-@RoundNum@, gain a Zed. After receiving Zed, he can then appear in your shops.<br><br>Zed is a 5-cost Attack Fighter that creates clones of himself.",
+  "tooltip": "Gain a Spear of Shojin. On Stage @StageNum@-@RoundNum@, gain a Zed. After receiving Zed, he can then appear in your shops.<br><br>Zed is a 5-cost Attack Fighter that creates clones of himself.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/InvaderZed_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundNum",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StageNum",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RoundNum", "value": "2" }, { "name": "StageNum", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: RoundNum", "Unmapped item variable: StageNum"]
 }

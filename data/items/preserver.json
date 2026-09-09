@@ -1,7 +1,17 @@
 {
   "name": "Preserver",
+  "displayName": "Preserver",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitPreserverActivator",
+  "description": "Your team heals for a percent of their Max Health every @TFTTrait.TFTEvent5YR_Preserver.1:Duration@ seconds. If they are full Health, restore Mana instead.<br><br><row> (@TFTTrait.TFTEvent5YR_Preserver.1:MinUnits@) @TFTTrait.TFTEvent5YR_Preserver.1:HealthPct*100@% %i:scaleHealth%, or @TFTTrait.TFTEvent5YR_Preserver.1:ManaPct*100@% %i:scaleMana%.</row><br><row> (@TFTTrait.TFTEvent5YR_Preserver.2:MinUnits@) @TFTTrait.TFTEvent5YR_Preserver.2:HealthPct*100@% %i:scaleHealth%, and @TFTTrait.TFTEvent5YR_Preserver.2:ManaPct*100@% %i:scaleMana%. Always get both.</row><br><br>",
+  "tooltip": "Your team heals for a percent of their Max Health every @TFTTrait.TFTEvent5YR_Preserver.1:Duration@ seconds. If they are full Health, restore Mana instead.<br><br><row> (@TFTTrait.TFTEvent5YR_Preserver.1:MinUnits@) @TFTTrait.TFTEvent5YR_Preserver.1:HealthPct*100@% %i:scaleHealth%, or @TFTTrait.TFTEvent5YR_Preserver.1:ManaPct*100@% %i:scaleMana%.</row><br><row> (@TFTTrait.TFTEvent5YR_Preserver.2:MinUnits@) @TFTTrait.TFTEvent5YR_Preserver.2:HealthPct*100@% %i:scaleHealth%, and @TFTTrait.TFTEvent5YR_Preserver.2:ManaPct*100@% %i:scaleMana%. Always get both.</row><br><br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5YR_Set14_Preserver.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

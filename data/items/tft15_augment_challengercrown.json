@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_ChallengerCrown",
+  "displayName": "Duelist Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_ChallengerCrown",
+  "description": "Gain a Duelist Emblem, a Kraken's Fury, and a Gangplank.",
+  "tooltip": "Gain a Duelist Emblem, a Kraken's Fury, and a Gangplank.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Duelist_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,40 @@
 {
   "name": "Gigantification Ray",
+  "displayName": "Gigantification Ray",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_GigantificationRay",
+  "description": "Piltover units gain @MaxHealthGain*100@% max Health and become much larger.",
+  "tooltip": "Piltover units gain @MaxHealthGain*100@% max Health and become much larger.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_GigantificationRay.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.28,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealthGain",
+      "rawSourceValue": "0.28",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SizeIncrease",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxHealthGain", "value": "0.28" }, { "name": "SizeIncrease", "value": "0.3" }],
+  "importWarnings": ["Unmapped item variable: MaxHealthGain", "Unmapped item variable: SizeIncrease"]
 }

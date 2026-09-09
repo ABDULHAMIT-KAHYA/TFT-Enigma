@@ -1,7 +1,30 @@
 {
   "name": "tft_item_name_UmbralGlaive",
+  "displayName": "tft_item_name_UmbralGlaive",
+  "isPlaceholder": false,
+  "sourceId": "TFT3_Item_BlademasterSpatulaItem",
+  "description": "tft_item_description_SlicerSpatulaItem",
+  "tooltip": "tft_item_description_SlicerSpatulaItem",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT3_Item_Blademaster.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:tft_item_name_UmbralGlaive:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "15" }],
+  "importWarnings": []
 }

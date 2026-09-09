@@ -1,0 +1,17 @@
+{
+  "name": "TFTEvent_5YR_Item_TraitHighRollerActivator",
+  "displayName": "High Roller",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitHighRollerActivator",
+  "description": "Gain a Sevika's Jinxed Arm!<br><br>Combat start: roll a random Jinx mod. Roll another one:<br><row>(@TFTTrait.TFTEvent5YR_HighRoller.1:MinUnits@) after @TFTTrait.TFTEvent5YR_HighRoller.1:RollingFrequency@ seconds.</row><br><row>(@TFTTrait.TFTEvent5YR_HighRoller.2:MinUnits@) every @TFTTrait.TFTEvent5YR_HighRoller.2:RollingFrequency@ seconds. Mods are stronger, and the holder can now hit a Jinxed Jackpot!</row><br><br>Mods:<br>- Rocket: Launch rockets at random enemies. <br>- Shield: Gain a shield for @TFTTrait.TFTEvent5YR_HighRoller.1:Spell2ShieldDuration@ seconds.<br>- Coin: Gain gold.<br><br>Rockets Fired: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_RocketsFired@<br>Shields Gained: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_ShieldsGained@<br>Gold Gained: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_GoldGained@<br>Jackpots Hit: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_JackpotsHit@",
+  "tooltip": "Gain a Sevika's Jinxed Arm!<br><br>Combat start: roll a random Jinx mod. Roll another one:<br><row>(@TFTTrait.TFTEvent5YR_HighRoller.1:MinUnits@) after @TFTTrait.TFTEvent5YR_HighRoller.1:RollingFrequency@ seconds.</row><br><row>(@TFTTrait.TFTEvent5YR_HighRoller.2:MinUnits@) every @TFTTrait.TFTEvent5YR_HighRoller.2:RollingFrequency@ seconds. Mods are stronger, and the holder can now hit a Jinxed Jackpot!</row><br><br>Mods:<br>- Rocket: Launch rockets at random enemies. <br>- Shield: Gain a shield for @TFTTrait.TFTEvent5YR_HighRoller.1:Spell2ShieldDuration@ seconds.<br>- Coin: Gain gold.<br><br>Rockets Fired: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_RocketsFired@<br>Shields Gained: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_ShieldsGained@<br>Gold Gained: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_GoldGained@<br>Jackpots Hit: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_JackpotsHit@",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5YR_Set14_HighRoller.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

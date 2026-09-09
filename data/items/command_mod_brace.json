@@ -1,7 +1,41 @@
 {
   "name": "Command Mod: Brace",
+  "displayName": "Command Mod: Brace",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_SonaUnique_Consumable_Freeze",
+  "description": "Command a unit to gain a @PctHealth*100@% Health shield for @FreezeDuration@ seconds at the start of combat.<br><br><rules>(Good on tanks)</rules>",
+  "tooltip": "Command a unit to gain a @PctHealth*100@% Health shield for @FreezeDuration@ seconds at the start of combat.<br><br><rules>(Good on tanks)</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17_CommandModItems/TFT17_Item_Icon_CommandMod_Freeze.TFT_Set17.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "FreezeDuration",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PctHealth",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:PctHealth", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "FreezeDuration", "value": "8" }, { "name": "PctHealth", "value": "0.2" }],
+  "importWarnings": ["Metadata-only item effect: FreezeDuration -> Shield", "Metadata-only item effect: PctHealth -> Shield", "Unmapped item variable: FreezeDuration", "Unmapped item variable: PctHealth"]
 }

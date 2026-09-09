@@ -1,7 +1,51 @@
 {
   "name": "Cryogenic Hex",
+  "displayName": "Cryogenic Hex",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_EmpoweredHex_Ice",
+  "description": "Place the hex on a champion. The first time an ally in the hex falls below @HealthThreshold@% Health, they freeze for @BlockDuration@ second and heal @HealPercent*100@% of their max Health.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Place the hex on a champion. The first time an ally in the hex falls below @HealthThreshold@% Health, they freeze for @BlockDuration@ second and heal @HealPercent*100@% of their max Health.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_HexPaintbrush.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BlockDuration",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealPercent",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BlockDuration", "value": "1" }, { "name": "HealPercent", "value": "0.3" }, { "name": "HealthThreshold", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: BlockDuration", "Unmapped item variable: HealPercent", "Unmapped item variable: HealthThreshold"]
 }

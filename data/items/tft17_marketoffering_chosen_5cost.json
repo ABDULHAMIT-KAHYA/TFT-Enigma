@@ -1,0 +1,51 @@
+{
+  "name": "TFT17_MarketOffering_Chosen_5Cost",
+  "displayName": "2 Salvagers",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Chosen_5Cost",
+  "description": "Use on a champion to remove all their items and break them down into components.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Use on a champion to remove all their items and break them down into components.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_FiveCostChosen.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ChampCost",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumChampions",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{2e4acff3}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ChampCost", "value": "5" }, { "name": "NumChampions", "value": "3" }, { "name": "{2e4acff3}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: ChampCost", "Unmapped item variable: NumChampions", "Unmapped non-numeric item variable: {2e4acff3}", "Unsupported item effect metadata: ChampCost", "Unsupported item effect metadata: NumChampions", "Unsupported item effect metadata: {2e4acff3}"]
+}

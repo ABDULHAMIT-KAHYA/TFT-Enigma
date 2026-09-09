@@ -1,7 +1,17 @@
 {
   "name": "Arcanist Crown",
+  "displayName": "Arcanist Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_ArcanistCrown",
+  "description": "Get an Arcanist Emblem, an Ahri, and a Jeweled Gauntlet.",
+  "tooltip": "Get an Arcanist Emblem, an Ahri, and a Jeweled Gauntlet.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

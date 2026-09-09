@@ -1,7 +1,17 @@
 {
   "name": "Tempest Crest",
+  "displayName": "Tempest Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_TempestEmblem",
+  "description": "Gain a Tempest Emblem and a Qiyana.",
+  "tooltip": "Gain a Tempest Emblem and a Qiyana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tempest-Crest-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

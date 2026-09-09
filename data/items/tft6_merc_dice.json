@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Dice",
+  "displayName": "tft_item_name_Mercenary_X",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Dice",
+  "description": "tft_item_description_Mercenary_Dice",
+  "tooltip": "tft_item_description_Mercenary_Dice",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Consumables/TFT_Item_Consumable_ShopReroll.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,17 @@
 {
   "name": "Cease and Desist",
+  "displayName": "Cease and Desist",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_ViCarry",
+  "description": "Gain a Vi. Your strongest Vi gains Attack Speed and her ability dashes to the farthest target within 3-hexes, Stuns, and deals bonus physical damage.",
+  "tooltip": "Gain a Vi. Your strongest Vi gains Attack Speed and her ability dashes to the farthest target within 3-hexes, Stuns, and deals bonus physical damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CeaseandDesist_I.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

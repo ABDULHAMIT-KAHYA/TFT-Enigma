@@ -1,0 +1,17 @@
+{
+  "name": "TFT5_Augment_AssassinCrown",
+  "displayName": "Assassin Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_AssassinCrown",
+  "description": "Gain an Assassin Emblem, a Last Whisper, and a Khazix.",
+  "tooltip": "Gain an Assassin Emblem, a Last Whisper, and a Khazix.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Assassin_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

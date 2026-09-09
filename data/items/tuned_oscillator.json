@@ -1,7 +1,30 @@
 {
   "name": "Tuned Oscillator",
+  "displayName": "Tuned Oscillator",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_TunedOscillator",
+  "description": "Increase your team's Healing and Shielding by @HealingShielding*100@%.",
+  "tooltip": "Increase your team's Healing and Shielding by @HealingShielding*100@%.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_TunedOscillator.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.28,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealingShielding",
+      "rawSourceValue": "0.28",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:HealingShielding", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.28, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "HealingShielding", "value": "0.28" }],
+  "importWarnings": ["Unmapped item variable: HealingShielding"]
 }

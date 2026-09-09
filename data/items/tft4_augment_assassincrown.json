@@ -1,0 +1,17 @@
+{
+  "name": "TFT4_Augment_AssassinCrown",
+  "displayName": "Assassin Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_AssassinCrown",
+  "description": "Gain a Assassin Emblem, an Edge of Night and a Pyke.",
+  "tooltip": "Gain a Assassin Emblem, an Edge of Night and a Pyke.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Assassin_III.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

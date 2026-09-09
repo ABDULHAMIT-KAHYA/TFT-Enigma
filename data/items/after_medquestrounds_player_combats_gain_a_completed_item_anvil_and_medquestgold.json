@@ -1,7 +1,51 @@
 {
   "name": "After @MedQuestRounds@ player combats, gain a completed item anvil and @MedQuestGold@ gold.",
+  "displayName": "After @MedQuestRounds@ player combats, gain a completed item anvil and @MedQuestGold@ gold.",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_AurelionSolGodAugment_MediumQuest",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 22,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MedQuestGold",
+      "rawSourceValue": "22",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MedQuestRounds",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{7c96bf44}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MedQuestGold", "value": "22" }, { "name": "MedQuestRounds", "value": "3" }, { "name": "{7c96bf44}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: MedQuestGold", "Unmapped item variable: MedQuestRounds", "Unmapped item variable: {7c96bf44}", "Unsupported item effect metadata: MedQuestGold", "Unsupported item effect metadata: MedQuestRounds", "Unsupported item effect metadata: {7c96bf44}"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Family Crown",
+  "displayName": "Family Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_FamilyCrown",
+  "description": "Gain a Family Emblem and a Redemption.",
+  "tooltip": "Gain a Family Emblem and a Redemption.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Family_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

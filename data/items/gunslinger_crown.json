@@ -1,7 +1,17 @@
 {
   "name": "Gunslinger Crown",
+  "displayName": "Gunslinger Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_GunslingerCrown",
+  "description": "Get a Gunslinger Emblem, a Tristana, and an Infinity Edge.",
+  "tooltip": "Get a Gunslinger Emblem, a Tristana, and an Infinity Edge.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

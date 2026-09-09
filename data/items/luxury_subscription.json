@@ -1,7 +1,40 @@
 {
   "name": "Luxury Subscription",
+  "displayName": "Luxury Subscription",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_LuxurySubscription",
+  "description": "Gain a package containing a 5-cost champion, a 2-star 1-cost champion, and @Gold@ gold.<br><br>At the start of the next @FutureChampionCount@ stages, gain the package again.",
+  "tooltip": "Gain a package containing a 5-cost champion, a 2-star 1-cost champion, and @Gold@ gold.<br><br>At the start of the next @FutureChampionCount@ stages, gain the package again.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LuxurySubscription_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FutureChampionCount",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "FutureChampionCount", "value": "2" }, { "name": "Gold", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: FutureChampionCount", "Unmapped item variable: Gold", "Unsupported item effect metadata: FutureChampionCount", "Unsupported item effect metadata: Gold"]
 }

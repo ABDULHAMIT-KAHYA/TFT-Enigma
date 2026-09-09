@@ -1,7 +1,17 @@
 {
   "name": "Dummy with Shroud",
+  "displayName": "Dummy with Shroud",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Dummy_Shroud",
+  "description": "A training dummy with a Shroud of Stillness, an item which increases enemies' mana costs.",
+  "tooltip": "A training dummy with a Shroud of Stillness, an item which increases enemies' mana costs.",
+  "iconPath": "ASSETS/Characters/TFT_TrainingDummy/HUD/Icons2D/TFT_TrainingDummy_DoNothing.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,17 @@
 {
   "name": "+1 to all traits",
+  "displayName": "+1 to all traits",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_PlusOneAllTraits",
+  "description": "Gain +1 to all non-unique traits.",
+  "tooltip": "Gain +1 to all non-unique traits.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT14/TFT14_CypherArmoryItem_PlusOneAllTraits.TFT_Set14.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

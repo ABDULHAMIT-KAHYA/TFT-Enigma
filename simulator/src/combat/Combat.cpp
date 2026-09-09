@@ -397,82 +397,14 @@ static void beginAutoAttackAccurate(GameState& state, std::int32_t attackerIndex
         state.logger().combat(ss.str());
     }
 
-    state.scheduleCombatEvent(
-        state.timeMs() + windup,
-        [&state, attackerIndex, targetIndex]()
-        {
-            std::vector<Unit>& unitsAt = state.units();
-            if (attackerIndex < 0 || targetIndex < 0 ||
-                attackerIndex >= static_cast<std::int32_t>(unitsAt.size()) ||
-                targetIndex >= static_cast<std::int32_t>(unitsAt.size()))
-            {
-                return;
-            }
-
-            Unit& attackerAt = unitsAt[attackerIndex];
-            Unit& targetAt = unitsAt[targetIndex];
-
-            if (!attackerAt.isAlive() || !targetAt.isAlive())
-            {
-                return;
-            }
-            if (!targetAt.isEnemyOf(attackerAt))
-            {
-                return;
-            }
-            if (attackerAt.isCasting())
-            {
-                return;
-            }
-            if (attackerAt.hasCrowdControl(CrowdControlType::Stun) ||
-                attackerAt.hasCrowdControl(CrowdControlType::Knockup) ||
-                attackerAt.hasCrowdControl(CrowdControlType::Suppression) ||
-                attackerAt.hasCrowdControl(CrowdControlType::Fear) ||
-                attackerAt.hasCrowdControl(CrowdControlType::Disarm))
-            {
-                return;
-            }
-
-            const std::int32_t manaGain = StatSystem::getFinalStatInt(attackerAt, StatType::ManaGainOnAttack);
-            attackerAt.gainMana(manaGain);
-
-            TraitSystem::onAttack(state, attackerAt, targetAt);
-            ItemSystem::onAttack(state, attackerAt, targetAt);
-            AbilitySystem::executeTrigger(state, attackerAt, &targetAt, AbilityTrigger::OnAttack);
-
-            const std::int32_t rawBeforeCrit =
-                StatSystem::getFinalStatInt(attackerAt, StatType::AttackDamage);
-
-            bool didCrit = false;
-            float critChanceUsed = std::clamp(StatSystem::getFinalStat(attackerAt, StatType::CritChance), 0.0f, 1.0f);
-            float critDamageUsed = std::max(1.0f, StatSystem::getFinalStat(attackerAt, StatType::CritDamage));
-
-            std::int32_t rawAfterCrit = rawBeforeCrit;
-            if (DamageSystem::rollChance(critChanceUsed))
-            {
-                didCrit = true;
-                rawAfterCrit = static_cast<std::int32_t>(std::lround(static_cast<float>(rawBeforeCrit) * critDamageUsed));
-            }
-
-            const std::int32_t travel = projectileTravelMs(attackerAt, targetAt);
-
-            ProjectileSpec spec{};
-            spec.attackerIndex = attackerIndex;
-            spec.targetIndex = targetIndex;
-            spec.damageType = attackerAt.getAutoAttackDamageType();
-            spec.rawDamage = rawAfterCrit;
-            spec.didCrit = didCrit;
-            spec.critChanceUsed = critChanceUsed;
-            spec.critDamageUsed = critDamageUsed;
-            spec.rawBeforeCrit = rawBeforeCrit;
-            spec.rawAfterCrit = rawAfterCrit;
-            spec.travelTimeMs = travel;
-            spec.debugName = "AutoAttack";
-
-            ProjectileSystem::spawnAutoAttackProjectile(state, spec);
-        },
-        "AutoAttackRelease"
-    );
+    CombatEvent event{};
+    event.type = CombatEventType::AutoAttackRelease;
+    event.executeAtMs = state.timeMs() + windup;
+    event.sourceId = attacker.id();
+    event.targetId = target.id();
+    event.policy = CombatEventTargetPolicy::RequireAliveSourceAndTarget;
+    event.debugName = "AutoAttackRelease";
+    state.scheduleCombatEvent(event);
 }
 
 void Combat::run(GameState& state)
@@ -502,6 +434,8 @@ void Combat::run(GameState& state)
     }
 
     logger.info("");
+
+    state.captureSnapshot("combat_start");
 
     TraitSystem::onCombatStart(state);
     ItemSystem::onCombatStart(state);
@@ -547,9 +481,9 @@ void Combat::run(GameState& state)
                 unit.tick(dtMs);
 
                 CombatTargetContext& ctx = targetCtx[unitIndex];
-                if (ctx.currentTarget && (!ctx.currentTarget->isAlive() || ctx.currentTarget->getTeamId() == unit.getTeamId() || ctx.currentTarget->isUntargetable()))
+                if (state.findUnit(ctx.currentTargetId) && (!state.findUnit(ctx.currentTargetId)->isAlive() || state.findUnit(ctx.currentTargetId)->getTeamId() == unit.getTeamId() || state.findUnit(ctx.currentTargetId)->isUntargetable()))
                 {
-                    ctx.currentTarget = nullptr;
+                    ctx.currentTargetId = UnitId{};
                     ctx.retargetLockedUntilMs = timeMs + CombatConstants::RetargetLockMs;
                 }
 
@@ -562,17 +496,17 @@ void Combat::run(GameState& state)
                         TargetPriority::FrontlineFirst
                     );
 
-                if (!target && ctx.currentTarget)
+                if (!target && isValid(ctx.currentTargetId))
                 {
-                    target = ctx.currentTarget;
+                    target = state.findUnit(ctx.currentTargetId);
                 }
 
                 if (CombatValidation::enabled())
                 {
-                    CombatValidation::logTargetChange(state, unit, ctx.currentTarget, target);
+                    CombatValidation::logTargetChange(state, unit, state.findUnit(ctx.currentTargetId), target);
                 }
 
-                ctx.currentTarget = target;
+                ctx.currentTargetId = target ? target->id() : UnitId{};
                 if (!target) { continue; }
 
                 if (!unit.isInRange(*target))
@@ -614,7 +548,7 @@ void Combat::run(GameState& state)
                         if (casted)
                         {
                             unit.setCastThisTurn(true);
-                            ctx.castLockedTarget = target;
+                            ctx.castLockedTargetId = target ? target->id() : UnitId{};
                             ctx.castLockUntilMs = timeMs + CombatConstants::CastTargetLockMs;
                         }
                     }
@@ -633,6 +567,8 @@ void Combat::run(GameState& state)
             }
         }
 
+        state.captureSnapshot("tick");
+
         if (timeMs % CombatConstants::VerboseBoardPrintIntervalMs == 0 && logger.mode() == LogMode::Verbose)
         {
             BoardRenderer::print(board, units, highlightedCells);
@@ -646,6 +582,13 @@ void Combat::run(GameState& state)
         }
     }
 
+    state.captureSnapshot("combat_end");
+
     logger.info("");
     logger.info(state.hasAlive(TeamId::TeamA) ? "Winner: Team A" : "Winner: Team B");
 }
+
+
+
+
+

@@ -1,0 +1,51 @@
+{
+  "name": "TFT14_Augment_BlackMarketGargantuanResolvePlus",
+  "displayName": "Gargantuan Resolve",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_BlackMarketGargantuanResolvePlus",
+  "description": "Gain a Titan's Resolve and another after @Delay@ player combats. Your Titan's Resolves can continue stacking to @MaxStacks@ instead of 25. The total resist bonus is increased by @ResistIncrease*100@%.",
+  "tooltip": "Gain a Titan's Resolve and another after @Delay@ player combats. Your Titan's Resolves can continue stacking to @MaxStacks@ instead of 25. The total resist bonus is increased by @ResistIncrease*100@%.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Gargantuan-Resolve-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxStacks",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ResistIncrease",
+      "rawSourceValue": "0.8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Delay", "value": "1" }, { "name": "MaxStacks", "value": "50" }, { "name": "ResistIncrease", "value": "0.8" }],
+  "importWarnings": ["Unmapped item variable: Delay", "Unmapped item variable: MaxStacks", "Unmapped item variable: ResistIncrease", "Unsupported item effect metadata: Delay", "Unsupported item effect metadata: MaxStacks", "Unsupported item effect metadata: ResistIncrease"]
+}

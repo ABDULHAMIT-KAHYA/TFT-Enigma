@@ -1,7 +1,51 @@
 {
   "name": "Focused Fire",
+  "displayName": "Focused Fire",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_MarksMan",
+  "description": "Your team gains @BaselineAD*100@% Attack Damage. Every @ProcDelay@ seconds, they gain @ADPerProc*100@% more.",
+  "tooltip": "Your team gains @BaselineAD*100@% Attack Damage. Every @ProcDelay@ seconds, they gain @ADPerProc*100@% more.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/MarksMan_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ADPerProc",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BaselineAD",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ProcDelay",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADPerProc", "value": "0.05" }, { "name": "BaselineAD", "value": "0.1" }, { "name": "ProcDelay", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: ADPerProc", "Unmapped item variable: BaselineAD", "Unmapped item variable: ProcDelay"]
 }

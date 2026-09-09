@@ -1,7 +1,17 @@
 {
   "name": "Knight Crown",
+  "displayName": "Knight Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_KnightCrown",
+  "description": "Gain a Knight Emblem, a Gargoyle Stoneplate, and a Thresh.",
+  "tooltip": "Gain a Knight Emblem, a Gargoyle Stoneplate, and a Thresh.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Knight_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

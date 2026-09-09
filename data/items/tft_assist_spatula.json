@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_Spatula",
+  "displayName": "Spatula",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Spatula",
+  "description": "Spatula",
+  "tooltip": "Spatula",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Spatula.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

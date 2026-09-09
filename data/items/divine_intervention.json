@@ -1,7 +1,29 @@
 {
   "name": "Divine Intervention",
+  "displayName": "Divine Intervention",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Stimmy",
+  "description": "After falling to @HealthThreshold@ player health, gain a special loot orb.",
+  "tooltip": "After falling to @HealthThreshold@ player health, gain a special loot orb.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_Stimmy.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthThreshold", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: HealthThreshold"]
 }

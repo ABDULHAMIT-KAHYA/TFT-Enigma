@@ -1,7 +1,17 @@
 {
   "name": "Power",
+  "displayName": "Power",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Item_PiltoverProgress",
+  "description": "Gain Power by winning combats after gaining Charges. More Power gives more stats.<br><br><tftitemrules>[This does not count as an item.]</tftitemrules>",
+  "tooltip": "Gain Power by winning combats after gaining Charges. More Power gives more stats.<br><br><tftitemrules>[This does not count as an item.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set9_Inventor/TFT9_PiltoverPower.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

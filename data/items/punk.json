@@ -1,7 +1,17 @@
 {
   "name": "Punk",
+  "displayName": "Punk",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitPunkActivator",
+  "description": "Your team gain bonus Health, Attack Damage and Ability Power, which increases by 1% every time you spend gold on a Shop reroll.<br><br>After each combat, gain a 1 gold reroll for that round. Your first reroll each round grants @TFTTrait.TFTEvent5YR_Punk:FIRST_ROLL_BONUS@% bonus instead!<br><br><row>(@TFTTrait.TFTEvent5YR_Punk.1:MinUnits@ )@TFTTrait.TFTEvent5YR_Punk.1:BONUS_HEALTH@ %i:scaleHealth% and @TFTTrait.TFTEvent5YR_Punk.1:BONUS_AD_AP*100@% %i:scaleAD%%i:scaleAP%</row><br><row>(@TFTTrait.TFTEvent5YR_Punk.2:MinUnits@ )@TFTTrait.TFTEvent5YR_Punk.2:BONUS_HEALTH@ %i:scaleHealth% and @TFTTrait.TFTEvent5YR_Punk.2:BONUS_AD_AP*100@% %i:scaleAD%%i:scaleAP%</row><br><br>Current Bonus: @TFTUnitProperty.trait:TFTEvent5YR_Punk_CurrentBonus@%<br>@TFTUnitProperty.trait:TFTEvent5YR_Punk_CurrentHealthBonus@ %i:scaleHealth% and @TFTUnitProperty.trait:TFTEvent5YR_Punk_CurrentADBonus@% %i:scaleAD%%i:scaleAP%",
+  "tooltip": "Your team gain bonus Health, Attack Damage and Ability Power, which increases by 1% every time you spend gold on a Shop reroll.<br><br>After each combat, gain a 1 gold reroll for that round. Your first reroll each round grants @TFTTrait.TFTEvent5YR_Punk:FIRST_ROLL_BONUS@% bonus instead!<br><br><row>(@TFTTrait.TFTEvent5YR_Punk.1:MinUnits@ )@TFTTrait.TFTEvent5YR_Punk.1:BONUS_HEALTH@ %i:scaleHealth% and @TFTTrait.TFTEvent5YR_Punk.1:BONUS_AD_AP*100@% %i:scaleAD%%i:scaleAP%</row><br><row>(@TFTTrait.TFTEvent5YR_Punk.2:MinUnits@ )@TFTTrait.TFTEvent5YR_Punk.2:BONUS_HEALTH@ %i:scaleHealth% and @TFTTrait.TFTEvent5YR_Punk.2:BONUS_AD_AP*100@% %i:scaleAD%%i:scaleAP%</row><br><br>Current Bonus: @TFTUnitProperty.trait:TFTEvent5YR_Punk_CurrentBonus@%<br>@TFTUnitProperty.trait:TFTEvent5YR_Punk_CurrentHealthBonus@ %i:scaleHealth% and @TFTUnitProperty.trait:TFTEvent5YR_Punk_CurrentADBonus@% %i:scaleAD%%i:scaleAP%",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5YR_Set14_Punk.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

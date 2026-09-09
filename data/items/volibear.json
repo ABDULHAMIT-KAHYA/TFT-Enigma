@@ -1,7 +1,17 @@
 {
   "name": "Volibear",
+  "displayName": "Volibear",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Volibear",
+  "description": "Volibear",
+  "tooltip": "Volibear",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Volibear_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,51 @@
 {
   "name": "Conditioning II",
+  "displayName": "Conditioning II",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Conditioning2",
+  "description": "Your team permanently gains @healthperstack@ max Health every @secondspertrigger@ seconds in combat. Combat start: Your team gains @StartingHealth@ bonus max Health.",
+  "tooltip": "Your team permanently gains @healthperstack@ max Health every @secondspertrigger@ seconds in combat. Combat start: Your team gains @StartingHealth@ bonus max Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HealthPerStack",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "StartingHealth",
+      "rawSourceValue": "75",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "secondspertrigger",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthPerStack", "value": "8" }, { "name": "StartingHealth", "value": "75" }, { "name": "secondspertrigger", "value": "5" }],
+  "importWarnings": ["Metadata-only item effect: HealthPerStack -> Heal", "Metadata-only item effect: StartingHealth -> Heal", "Metadata-only item effect: secondspertrigger -> Heal", "Unmapped item variable: HealthPerStack", "Unmapped item variable: StartingHealth", "Unmapped item variable: secondspertrigger"]
 }

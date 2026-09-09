@@ -1,7 +1,17 @@
 {
   "name": "3 Lightshield Crests",
+  "displayName": "3 Lightshield Crests",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_3xLightshield",
+  "description": "3 Lightshield Crests",
+  "tooltip": "3 Lightshield Crests",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_Artifact_LightshieldCrest.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

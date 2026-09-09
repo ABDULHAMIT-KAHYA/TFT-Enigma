@@ -1,7 +1,17 @@
 {
   "name": "Heavy Is the Crown",
+  "displayName": "Heavy Is the Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_HeavyIsTheCrown",
+  "description": "Gain a Crown of Demacia, which provides significant bonuses to the wearer. If the holder dies, lose the round.",
+  "tooltip": "Gain a Crown of Demacia, which provides significant bonuses to the wearer. If the holder dies, lose the round.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HeavyIsTheCrown_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

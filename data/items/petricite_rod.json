@@ -1,7 +1,73 @@
 {
   "name": "Petricite Rod",
+  "displayName": "Petricite Rod",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_JunkerKing_PertriciteRod",
+  "description": "<spellPassive>Petricite Rod:</spellPassive> Every @PetriciteRod_RefreshDuration@ seconds, fire a blast at the furthest enemy within 4 hexes that deals @PetriciteRod_APDamage_Level1@%&nbsp;/&nbsp;@PetriciteRod_APDamage_Level2@%&nbsp;/&nbsp;@PetriciteRod_APDamage_Level3@%&nbsp;%i:scaleAP% magic damage over @PetriciteRod_DOTDuration@&nbsp;seconds.<br><br>",
+  "tooltip": "<spellPassive>Petricite Rod:</spellPassive> Every @PetriciteRod_RefreshDuration@ seconds, fire a blast at the furthest enemy within 4 hexes that deals @PetriciteRod_APDamage_Level1@%&nbsp;/&nbsp;@PetriciteRod_APDamage_Level2@%&nbsp;/&nbsp;@PetriciteRod_APDamage_Level3@%&nbsp;%i:scaleAP% magic damage over @PetriciteRod_DOTDuration@&nbsp;seconds.<br><br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT13/TFT13_JunkerKing_PetriciteRod_Icon.TFT_Set13.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 350,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PetriciteRod_APDamage_Level1",
+      "rawSourceValue": "350",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 525,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PetriciteRod_APDamage_Level2",
+      "rawSourceValue": "525",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 6000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PetriciteRod_APDamage_Level3",
+      "rawSourceValue": "6000",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PetriciteRod_DOTDuration",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PetriciteRod_RefreshDuration",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PetriciteRod_APDamage_Level1", "value": "350" }, { "name": "PetriciteRod_APDamage_Level2", "value": "525" }, { "name": "PetriciteRod_APDamage_Level3", "value": "6000" }, { "name": "PetriciteRod_DOTDuration", "value": "15" }, { "name": "PetriciteRod_RefreshDuration", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: PetriciteRod_APDamage_Level1", "Unmapped item variable: PetriciteRod_APDamage_Level2", "Unmapped item variable: PetriciteRod_APDamage_Level3", "Unmapped item variable: PetriciteRod_DOTDuration", "Unmapped item variable: PetriciteRod_RefreshDuration"]
 }

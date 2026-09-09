@@ -1,7 +1,40 @@
 {
   "name": "Treasure Hunt",
+  "displayName": "Treasure Hunt",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TreasureHunt",
+  "description": "Gain a locked chest each Stage between now and Stage @MaxNumChests@. Unlock each chest when you spend @GoldNeededPerChest@ gold on Shop rerolls. These chests persist until opened.",
+  "tooltip": "Gain a locked chest each Stage between now and Stage @MaxNumChests@. Unlock each chest when you spend @GoldNeededPerChest@ gold on Shop rerolls. These chests persist until opened.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TreasureHunt_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldNeededPerChest",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxNumChests",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldNeededPerChest", "value": "null" }, { "name": "MaxNumChests", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: GoldNeededPerChest", "Unmapped non-numeric item variable: MaxNumChests", "Unsupported item effect metadata: GoldNeededPerChest", "Unsupported item effect metadata: MaxNumChests"]
 }

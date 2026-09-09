@@ -1,7 +1,17 @@
 {
   "name": "tft_item_name_TFT7_Item_Trainer_Shred",
+  "displayName": "tft_item_name_TFT7_Item_Trainer_Shred",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Item_Trainer_Tristana",
+  "description": "tft_item_description_TFT7_Item_Trainer_Shred",
+  "tooltip": "tft_item_description_TFT7_Item_Trainer_Shred",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set7_Trainer/TFT7_DragonItems_AttackSpeed.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

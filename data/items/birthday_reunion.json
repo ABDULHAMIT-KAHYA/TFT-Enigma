@@ -1,7 +1,40 @@
 {
   "name": "Birthday Reunion",
+  "displayName": "Birthday Reunion",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_BirthdayReunion",
+  "description": "Gain a random 2-star 2-cost champion. When you reach Level @FirstLevelBreakpoint@, gain a Thief's Gloves. When you reach Level @SecondLevelBreakpoint@, gain a random 2-star 5-cost champion.<br><br><tftitemrules>Inkborn Fables Tactician's Crown, 2024</tftitemrules>",
+  "tooltip": "Gain a random 2-star 2-cost champion. When you reach Level @FirstLevelBreakpoint@, gain a Thief's Gloves. When you reach Level @SecondLevelBreakpoint@, gain a random 2-star 5-cost champion.<br><br><tftitemrules>Inkborn Fables Tactician's Crown, 2024</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BirthdayReunion_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FirstLevelBreakpoint",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SecondLevelBreakpoint",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "FirstLevelBreakpoint", "value": "7" }, { "name": "SecondLevelBreakpoint", "value": "9" }],
+  "importWarnings": ["Unmapped item variable: FirstLevelBreakpoint", "Unmapped item variable: SecondLevelBreakpoint", "Unsupported item effect metadata: FirstLevelBreakpoint", "Unsupported item effect metadata: SecondLevelBreakpoint"]
 }

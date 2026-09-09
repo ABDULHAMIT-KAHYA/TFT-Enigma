@@ -1,7 +1,17 @@
 {
   "name": "Ixtal Crest",
+  "displayName": "Ixtal Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_IxtalCrest",
+  "description": "Get an Ixtal Emblem.",
+  "tooltip": "Get an Ixtal Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

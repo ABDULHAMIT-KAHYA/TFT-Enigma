@@ -1,7 +1,40 @@
 {
   "name": "Eagle Eye",
+  "displayName": "Eagle Eye",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_EagleEye",
+  "description": "You know who your next opponent will be. Your units gain @ArmorAmount@ Armor or @MRAmount@ Magic Resist, and you can swap between the two during the planning phase.",
+  "tooltip": "You know who your next opponent will be. Your units gain @ArmorAmount@ Armor or @MRAmount@ Magic Resist, and you can swap between the two during the planning phase.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TFT_Augment_EagleEye.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmorAmount",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MRAmount",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ArmorAmount", "value": "40" }, { "name": "MRAmount", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: ArmorAmount", "Unmapped item variable: MRAmount", "Unsupported item effect metadata: ArmorAmount", "Unsupported item effect metadata: MRAmount"]
 }

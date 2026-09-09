@@ -1,7 +1,17 @@
 {
   "name": "Dragon Blessing",
+  "displayName": "Dragon Blessing",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Consumable_Dragonmancer_DragonBlessing",
+  "description": "Use on a Dragonmancer to make them your Dragonmancer Hero.<br><br><tftitemrules>[Cannot be used during combat.]</tftitemrules>",
+  "tooltip": "Use on a Dragonmancer to make them your Dragonmancer Hero.<br><br><tftitemrules>[Cannot be used during combat.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set7_Dragonmancer/TFT7_Consumable_Dragonmancer_DragonBlessing.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

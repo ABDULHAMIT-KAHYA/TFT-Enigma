@@ -1,7 +1,29 @@
 {
   "name": "Artillery Barrage",
+  "displayName": "Artillery Barrage",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_RumbleCarry",
+  "description": "Gain a Rumble. Your strongest Rumble gains +@MaxRange@ Range and constantly fires missiles at enemies, increased with Attack Speed.",
+  "tooltip": "Gain a Rumble. Your strongest Rumble gains +@MaxRange@ Range and constantly fires missiles at enemies, increased with Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ArtilleryBarrage_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxRange",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxRange", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: MaxRange", "Unsupported item effect metadata: MaxRange"]
 }

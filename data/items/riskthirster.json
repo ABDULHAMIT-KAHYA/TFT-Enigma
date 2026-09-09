@@ -1,9 +1,100 @@
 {
   "name": "Riskthirster",
+  "displayName": "Riskthirster",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_BloodthirsterShadow",
+  "description": "Physical damage heals the holder for @Lifesteal@% of the damage dealt. <TFTShadowItemBonus>Each time the holder heals to @HealthThresholdPercent@% Health, they gain @BonusAS@% Attack Speed for @BonusASDuration@ seconds.</TFTShadowItemBonus> <TFTShadowItemPenalty>The holder takes @HealthLossPercent@% of their maximum Health in true damage at the beginning of combat or upon being equipped.</TFTShadowItemPenalty>",
+  "tooltip": "Physical damage heals the holder for @Lifesteal@% of the damage dealt. <TFTShadowItemBonus>Each time the holder heals to @HealthThresholdPercent@% Health, they gain @BonusAS@% Attack Speed for @BonusASDuration@ seconds.</TFTShadowItemBonus> <TFTShadowItemPenalty>The holder takes @HealthLossPercent@% of their maximum Health in true damage at the beginning of combat or upon being equipped.</TFTShadowItemPenalty>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Bloodthirster.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Riskthirster:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Riskthirster:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Riskthirster:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LifeSteal",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:LifeSteal", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MagicResist",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAS",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusASDuration",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthLossPercent",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 90,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThresholdPercent",
+      "rawSourceValue": "90",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "10" }, { "name": "BonusAS", "value": "60" }, { "name": "BonusASDuration", "value": "4" }, { "name": "HealthLossPercent", "value": "10" }, { "name": "HealthThresholdPercent", "value": "90" }, { "name": "LifeSteal", "value": "40" }, { "name": "MagicResist", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: BonusAS", "Unmapped item variable: BonusASDuration", "Unmapped item variable: HealthLossPercent", "Unmapped item variable: HealthThresholdPercent"]
 }

@@ -1,7 +1,41 @@
 {
   "name": "TFT12_Doodad_FairyFlower_Name",
+  "displayName": "TFT12_Doodad_FairyFlower_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_FairyFlower",
+  "description": "TFT12_Doodad_FairyFlower_Tooltip",
+  "tooltip": "TFT12_Doodad_FairyFlower_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MagicDamage",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 100, "adRatio": 0, "apRatio": 0, "damageType": "Magic" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShredDuration",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MagicDamage", "value": "100" }, { "name": "ShredDuration", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: MagicDamage", "Unmapped item variable: ShredDuration", "Unsupported item effect metadata: ShredDuration"]
 }

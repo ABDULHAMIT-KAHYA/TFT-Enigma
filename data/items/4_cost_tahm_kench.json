@@ -1,7 +1,29 @@
 {
   "name": "4-cost: Tahm Kench",
+  "displayName": "4-cost: Tahm Kench",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_ChampionItem_Chosen_TahmKench",
+  "description": "Arcana<br>Brawler",
+  "tooltip": "Arcana<br>Brawler",
+  "iconPath": "ASSETS/Characters/TFT17_TahmKench/HUD/TFT17_TahmKench_Square.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Amount",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Amount", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Amount", "Unsupported item effect metadata: Amount"]
 }

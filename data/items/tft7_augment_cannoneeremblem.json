@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Augment_CannoneerEmblem",
+  "displayName": "Cannoneer Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_CannoneerEmblem",
+  "description": "Gain a Cannoneer Emblem and an Aphelios.",
+  "tooltip": "Gain a Cannoneer Emblem and an Aphelios.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Canoneer-Crest-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

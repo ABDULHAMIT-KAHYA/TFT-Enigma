@@ -1,7 +1,17 @@
 {
   "name": "Void Crest",
+  "displayName": "Void Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_VoidCrest",
+  "description": "Get a Void Emblem.",
+  "tooltip": "Get a Void Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

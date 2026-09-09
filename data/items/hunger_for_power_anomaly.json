@@ -1,7 +1,29 @@
 {
   "name": "Hunger For Power Anomaly",
+  "displayName": "Hunger For Power Anomaly",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Consumable_Anomaly_HungerForPower",
+  "description": "<br><br>Use on a unit to grant them the Hunger For Power anomaly. Sell the unit to regain this consumable.<br><br>Hunger For Power<br>Combat start: Consume an adjacent ally Champion and gain @HealthAndADPercent_TOOLTIPONLY@% of their Health and Attack Damage.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "<br><br>Use on a unit to grant them the Hunger For Power anomaly. Sell the unit to regain this consumable.<br><br>Hunger For Power<br>Combat start: Consume an adjacent ally Champion and gain @HealthAndADPercent_TOOLTIPONLY@% of their Health and Attack Damage.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT13/TFT13_GoopItem_Icon.TFT_Set13.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HealthAndADPercent_TOOLTIPONLY",
+      "rawSourceValue": "75",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthAndADPercent_TOOLTIPONLY", "value": "75" }],
+  "importWarnings": ["Metadata-only item effect: HealthAndADPercent_TOOLTIPONLY -> Heal", "Unmapped item variable: HealthAndADPercent_TOOLTIPONLY"]
 }

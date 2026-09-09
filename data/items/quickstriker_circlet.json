@@ -1,7 +1,17 @@
 {
   "name": "Quickstriker Circlet",
+  "displayName": "Quickstriker Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_QuickstrikerCirclet",
+  "description": "Get a Quickstriker Emblem, a Yunara, and a B.F. Sword.",
+  "tooltip": "Get a Quickstriker Emblem, a Yunara, and a B.F. Sword.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

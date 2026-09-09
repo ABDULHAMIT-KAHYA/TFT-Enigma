@@ -1,0 +1,30 @@
+{
+  "name": "TFT16_Item_Bilgewater_FirstFreeHealth",
+  "displayName": "First One's Free!",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Item_Bilgewater_FirstFreeHealth",
+  "description": "Bilgewater champions gain @BonusHealthPercent*100@% max Health.",
+  "tooltip": "Bilgewater champions gain @BonusHealthPercent*100@% max Health.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/FreeHealth.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+    { "name": "Item:TFT16_Item_Bilgewater_FirstFreeHealth:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealthPercent",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealthPercent", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusHealthPercent", "value": "0.1" }],
+  "importWarnings": []
+}

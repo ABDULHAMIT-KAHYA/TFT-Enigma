@@ -1,7 +1,30 @@
 {
   "name": "tft_item_name_Set5Cavalier_RadiantSpat",
+  "displayName": "tft_item_name_Set5Cavalier_RadiantSpat",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_CavalierSpatulaItem_Radiant",
+  "description": "tft_item_description_Set5Cavalier_RadiantSpat",
+  "tooltip": "tft_item_description_Set5Cavalier_RadiantSpat",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set5/Cavalier_Radiant.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:tft_item_name_Set5Cavalier_RadiantSpat:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "20" }],
+  "importWarnings": []
 }

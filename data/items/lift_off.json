@@ -1,7 +1,62 @@
 {
   "name": "Lift Off",
+  "displayName": "Lift Off",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_Weightlifting",
+  "description": "At the start of each round, if the combined Health of all your unique Brawlers is high enough, gain a reward and increase the threshold (up to four times). Gain a Cho'Gath and a Gragas.<br><br>@TFTUnitProperty.item:TFT17_Augment_Weightlifting_RewardName@@TFTUnitProperty.item:TFT17_Augment_Weightlifting_CurrentHealth@ / @TFTUnitProperty.item:TFT17_Augment_Weightlifting_MaxHealth@ ",
+  "tooltip": "At the start of each round, if the combined Health of all your unique Brawlers is high enough, gain a reward and increase the threshold (up to four times). Gain a Cho'Gath and a Gragas.<br><br>@TFTUnitProperty.item:TFT17_Augment_Weightlifting_RewardName@@TFTUnitProperty.item:TFT17_Augment_Weightlifting_CurrentHealth@ / @TFTUnitProperty.item:TFT17_Augment_Weightlifting_MaxHealth@ ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LiftingCompetition_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Breakpoint2",
+      "rawSourceValue": "8500",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 14000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Breakpoint3",
+      "rawSourceValue": "14000",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 36000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Breakpoint4",
+      "rawSourceValue": "36000",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{79f7dcbd}",
+      "rawSourceValue": "3500",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Breakpoint2", "value": "8500" }, { "name": "Breakpoint3", "value": "14000" }, { "name": "Breakpoint4", "value": "36000" }, { "name": "{79f7dcbd}", "value": "3500" }],
+  "importWarnings": ["Unmapped item variable: Breakpoint2", "Unmapped item variable: Breakpoint3", "Unmapped item variable: Breakpoint4", "Unmapped item variable: {79f7dcbd}"]
 }

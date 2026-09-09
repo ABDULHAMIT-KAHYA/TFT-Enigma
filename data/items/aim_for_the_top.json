@@ -1,7 +1,40 @@
 {
   "name": "Aim For The Top!",
+  "displayName": "Aim For The Top!",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_AimForTheTop",
+  "description": "You are more likely to fight stronger players, and you know who you will fight. When you lose, gain @XP@ XP. After your first win and every @WinsPerComponent@ wins after, gain a component.<br><br><rules>Foes vanquished: @TFTUnitProperty.item:TFT15_AimForTheTop_EnemiesBeaten@</rules>",
+  "tooltip": "You are more likely to fight stronger players, and you know who you will fight. When you lose, gain @XP@ XP. After your first win and every @WinsPerComponent@ wins after, gain a component.<br><br><rules>Foes vanquished: @TFTUnitProperty.item:TFT15_AimForTheTop_EnemiesBeaten@</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AimForTheTop_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "WinsPerComponent",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "WinsPerComponent", "value": "3" }, { "name": "XP", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: WinsPerComponent", "Unmapped item variable: XP", "Unsupported item effect metadata: WinsPerComponent", "Unsupported item effect metadata: XP"]
 }

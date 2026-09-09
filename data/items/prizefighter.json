@@ -1,7 +1,40 @@
 {
   "name": "Prizefighter",
+  "displayName": "Prizefighter",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_Prizefighter",
+  "description": "Gain @component@ item components. Every @WinsNeeded@ wins gives you an item&nbsp;component.",
+  "tooltip": "Gain @component@ item components. Every @WinsNeeded@ wins gives you an item&nbsp;component.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PrizeFighter_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "WinsNeeded",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "component",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "WinsNeeded", "value": "5" }, { "name": "component", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: WinsNeeded", "Unmapped item variable: component", "Unsupported item effect metadata: WinsNeeded", "Unsupported item effect metadata: component"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Yordle Crown",
+  "displayName": "Yordle Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_YordleCrown",
+  "description": "Get a Yordle Emblem, a Teemo, and a Rabadon's Deathcap.",
+  "tooltip": "Get a Yordle Emblem, a Teemo, and a Rabadon's Deathcap.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

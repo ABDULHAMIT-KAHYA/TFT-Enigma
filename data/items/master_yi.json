@@ -1,7 +1,17 @@
 {
   "name": "Master Yi",
+  "displayName": "Master Yi",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_MasterYi",
+  "description": "Master Yi",
+  "tooltip": "Master Yi",
+  "iconPath": "ASSETS/Characters/TFT11_MasterYi/Skins/Base/Images/TFT11_MasterYi_splash_tile_89.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

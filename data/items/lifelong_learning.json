@@ -1,7 +1,51 @@
 {
   "name": "Lifelong Learning",
+  "displayName": "Lifelong Learning",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_LifeLongLearningBlackMarket",
+  "description": "Your units gain @BaselineHP*100@% health every round. If they survive combat, they gain an additional @BonusAP@ Ability Power and @BonusAD*100@% Attack Damage.",
+  "tooltip": "Your units gain @BaselineHP*100@% health every round. If they survive combat, they gain an additional @BonusAP@ Ability Power and @BonusAD*100@% Attack Damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LifelongLearner3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.02,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaselineHP",
+      "rawSourceValue": "0.02",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.03,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAD",
+      "rawSourceValue": "0.03",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAP",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaselineHP", "value": "0.02" }, { "name": "BonusAD", "value": "0.03" }, { "name": "BonusAP", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: BaselineHP", "Unmapped item variable: BonusAD", "Unmapped item variable: BonusAP"]
 }

@@ -1,0 +1,41 @@
+{
+  "name": "TFT9_Augment_Commander_Ascension",
+  "displayName": "Ascension",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_Commander_Ascension",
+  "description": "After @Delay@ seconds of combat, your team gains @DamageAmp@% Damage Amp.",
+  "tooltip": "After @Delay@ seconds of combat, your team gains @DamageAmp@% Damage Amp.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Ascension2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT9_Augment_Commander_Ascension:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "35",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.35, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "35" }, { "name": "Delay", "value": "12" }],
+  "importWarnings": ["Unmapped item variable: Delay"]
+}

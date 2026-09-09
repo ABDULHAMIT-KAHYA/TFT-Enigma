@@ -1,0 +1,17 @@
+{
+  "name": "TFT17_ChampionItem_Illaoi_2Star",
+  "displayName": "2-star Illaoi",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_ChampionItem_Illaoi_2Star",
+  "description": "Gain a 2-star Illaoi",
+  "tooltip": "Gain a 2-star Illaoi",
+  "iconPath": "ASSETS/Characters/TFT17_Illaoi/HUD/TFT17_Illaoi_Square.TFT_Set17.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

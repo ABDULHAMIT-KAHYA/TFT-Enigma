@@ -1,7 +1,53 @@
 {
   "name": "Domination",
+  "displayName": "Domination",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Dominator",
+  "description": "Dominators gain @ShieldPercentAS*100@% Attack Speed while shielded. When a Dominator gets a kill, all Dominators gain @ShieldAmount@ Shield for @ShieldDuration@ seconds. Gain a Cassiopeia.",
+  "tooltip": "Dominators gain @ShieldPercentAS*100@% Attack Speed while shielded. When a Dominator gets a kill, all Dominators gain @ShieldAmount@ Shield for @ShieldDuration@ seconds. Gain a Cassiopeia.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Domination-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldAmount",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldAmount", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 100, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldPercentAS",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ShieldPercentAS", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "ShieldAmount", "value": "100" }, { "name": "ShieldDuration", "value": "3" }, { "name": "ShieldPercentAS", "value": "0.1" }],
+  "importWarnings": ["Unmapped item variable: ShieldAmount", "Unmapped item variable: ShieldDuration", "Unmapped item variable: ShieldPercentAS"]
 }

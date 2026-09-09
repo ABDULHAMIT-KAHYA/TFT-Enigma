@@ -1,7 +1,74 @@
 {
   "name": "Deathfire Grasp",
+  "displayName": "Deathfire Grasp",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Item_OrnnDeathfireGrasp",
+  "description": "Combat start: Blast the current target for @PercentMaxHealthDamage@% of their max Health as magic damage. Repeat this every @RepeatTime@ seconds.",
+  "tooltip": "Combat start: Blast the current target for @PercentMaxHealthDamage@% of their max Health as magic damage. Repeat this every @RepeatTime@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT9_Item_OrnnDeathfireGrasp.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Deathfire Grasp:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 30, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "PercentMaxHealthDamage",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 13,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "RepeatTime",
+      "rawSourceValue": "13",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "{1543aa48}",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "30" }, { "name": "ManaRegen", "value": "2" }, { "name": "PercentMaxHealthDamage", "value": "40" }, { "name": "RepeatTime", "value": "13" }, { "name": "{1543aa48}", "value": "0.25" }],
+  "importWarnings": ["Metadata-only item effect: AP -> GrantStats", "Metadata-only item effect: ManaRegen -> Heal", "Metadata-only item effect: PercentMaxHealthDamage -> Heal", "Metadata-only item effect: RepeatTime -> Heal", "Metadata-only item effect: {1543aa48} -> Heal", "Unmapped item variable: ManaRegen", "Unmapped item variable: PercentMaxHealthDamage", "Unmapped item variable: RepeatTime", "Unmapped item variable: {1543aa48}"]
 }

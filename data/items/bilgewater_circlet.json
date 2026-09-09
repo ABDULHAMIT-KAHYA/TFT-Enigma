@@ -1,7 +1,17 @@
 {
   "name": "Bilgewater Circlet",
+  "displayName": "Bilgewater Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_BilgewaterCirclet",
+  "description": "Get a Bilgewater Emblem, a Miss Fortune, and a Recurve Bow.",
+  "tooltip": "Get a Bilgewater Emblem, a Miss Fortune, and a Recurve Bow.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -95,6 +95,8 @@ struct AbilityEffect
     std::int32_t radius = 0;
 
     std::int32_t delayMs = 0;
+    std::int32_t cooldownMs = 0;
+    bool oncePerCombat = false;
 
     StatusEffect appliedStatusEffect{};
     bool appliesStatusEffect = false;

@@ -1,7 +1,62 @@
 {
   "name": "Fire Axiom",
+  "displayName": "Fire Axiom",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_FireAxiom",
+  "description": "Gain a Fire Hex. Champions within gain @ADAP@% Attack Damage and Ability Power. Their damage @BurnPercent*100@% Burns and @GrievousWoundsPercent*100@% Wounds for @Duration@ seconds.",
+  "tooltip": "Gain a Fire Hex. Champions within gain @ADAP@% Attack Damage and Ability Power. Their damage @BurnPercent*100@% Burns and @GrievousWoundsPercent*100@% Wounds for @Duration@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FireAxiom_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ADAP",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BurnPercent",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 0.33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GrievousWoundsPercent",
+      "rawSourceValue": "0.33",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ADAP", "value": "15" }, { "name": "BurnPercent", "value": "0.01" }, { "name": "Duration", "value": "6" }, { "name": "GrievousWoundsPercent", "value": "0.33" }],
+  "importWarnings": ["Unmapped item variable: ADAP", "Unmapped item variable: BurnPercent", "Unmapped item variable: Duration", "Unmapped item variable: GrievousWoundsPercent"]
 }

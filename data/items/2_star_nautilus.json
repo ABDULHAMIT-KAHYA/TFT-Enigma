@@ -1,7 +1,29 @@
 {
   "name": "2-star Nautilus",
+  "displayName": "2-star Nautilus",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_ChampionItem_Nautilus_2Star",
+  "description": "Gain a 2-star Nautilus",
+  "tooltip": "Gain a 2-star Nautilus",
+  "iconPath": "ASSETS/Characters/TFT16_Nautilus/HUD/TFT16_Nautilus_Square.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Amount",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Amount", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Amount", "Unsupported item effect metadata: Amount"]
 }

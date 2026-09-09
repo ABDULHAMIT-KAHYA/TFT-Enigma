@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_IncreasedFiveCostOdds",
+  "displayName": "@PercentIncrease@% Increased 5-Cost Odds",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_IncreasedFiveCostOdds",
+  "description": "Permanently increase your shop odds for 5-costs by @PercentIncrease@%.",
+  "tooltip": "Permanently increase your shop odds for 5-costs by @PercentIncrease@%.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/RuneOfAllegiance.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentIncrease",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PercentIncrease", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: PercentIncrease", "Unsupported item effect metadata: PercentIncrease"]
+}

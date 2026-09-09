@@ -1,7 +1,29 @@
 {
   "name": "tft_item_name_MountainHexBuff",
+  "displayName": "tft_item_name_MountainHexBuff",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_Hex_Mountain",
+  "description": "tft_item_description_MountainHexBuff",
+  "tooltip": "tft_item_description_MountainHexBuff",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_Hex_Mountain.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{1bb18b94}",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{1bb18b94}", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: {1bb18b94}", "Unsupported item effect metadata: {1bb18b94}"]
 }

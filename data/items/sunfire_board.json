@@ -1,7 +1,51 @@
 {
   "name": "Sunfire Board",
+  "displayName": "Sunfire Board",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_SunfireBoard",
+  "description": "Combat Start: Burn all enemies for @TotalBurnPercent@% of their max Health over @Duration@ seconds and reduce healing received by @GrievousWoundsPercent@%.",
+  "tooltip": "Combat Start: Burn all enemies for @TotalBurnPercent@% of their max Health over @Duration@ seconds and reduce healing received by @GrievousWoundsPercent@%.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SunfireBoard2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "GrievousWoundsPercent",
+      "rawSourceValue": "33",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "TotalBurnPercent",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Duration", "value": "15" }, { "name": "GrievousWoundsPercent", "value": "33" }, { "name": "TotalBurnPercent", "value": "15" }],
+  "importWarnings": ["Metadata-only item effect: Duration -> Heal", "Metadata-only item effect: GrievousWoundsPercent -> Heal", "Metadata-only item effect: TotalBurnPercent -> Heal", "Unmapped item variable: Duration", "Unmapped item variable: GrievousWoundsPercent", "Unmapped item variable: TotalBurnPercent"]
 }

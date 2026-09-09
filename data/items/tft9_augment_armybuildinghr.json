@@ -1,0 +1,29 @@
+{
+  "name": "TFT9_Augment_ArmyBuildingHR",
+  "displayName": "Team Building",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_ArmyBuildingHR",
+  "description": "Gain a Lesser Champion Duplicator. Gain another after @PlayerCombatNum@ player combats.<br><br><rules>This item allows you to copy a 3-cost or less champion.</rules>",
+  "tooltip": "Gain a Lesser Champion Duplicator. Gain another after @PlayerCombatNum@ player combats.<br><br><rules>This item allows you to copy a 3-cost or less champion.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Building-an-army-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PlayerCombatNum",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PlayerCombatNum", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: PlayerCombatNum", "Unsupported item effect metadata: PlayerCombatNum"]
+}

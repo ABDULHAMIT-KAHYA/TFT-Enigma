@@ -1,7 +1,51 @@
 {
   "name": "Final Reserves",
+  "displayName": "Final Reserves",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_FinalReserves",
+  "description": "The first time you would be eliminated, you instead remain alive. After this happens, gain @xp@ XP and set your gold to @gold@. Excess gold is converted to XP.",
+  "tooltip": "The first time you would be eliminated, you instead remain alive. After this happens, gain @xp@ XP and set your gold to @gold@. Excess gold is converted to XP.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Final-Reserves-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 90,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "90",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{9652277e}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "90" }, { "name": "XP", "value": "30" }, { "name": "{9652277e}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: XP", "Unmapped item variable: {9652277e}"]
 }

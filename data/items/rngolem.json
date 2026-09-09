@@ -1,7 +1,17 @@
 {
   "name": "RNGolem",
+  "displayName": "RNGolem",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Armory_Sentinel_Fighter",
+  "description": "Equipped with a random assortment of powerful items.<br><br><i>(Comes with a random Emblem, Artifact, and Radiant Item)</I>",
+  "tooltip": "Equipped with a random assortment of powerful items.<br><br><i>(Comes with a random Emblem, Artifact, and Radiant Item)</I>",
+  "iconPath": "ASSETS/Characters/TFT_BlueGolem/HUD/TFT_BlueGolem_Spell.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Sword_Sword",
+  "displayName": "JACKPOT",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Sword_Sword",
+  "description": "A Thief's Gloves has been added to your chest.",
+  "tooltip": "A Thief's Gloves has been added to your chest.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "LootObject",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

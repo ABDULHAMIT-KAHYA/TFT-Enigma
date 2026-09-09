@@ -1,7 +1,64 @@
 {
   "name": "Final Ascension",
+  "displayName": "Final Ascension",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_Commander_FinalAscension",
+  "description": "Your team gains @damageamp@% Damage Amp. After @delay@ seconds, this increases to @AscendedAmpTOOLTIPONLY@% Damage Amp.",
+  "tooltip": "Your team gains @damageamp@% Damage Amp. After @delay@ seconds, this increases to @AscendedAmpTOOLTIPONLY@% Damage Amp.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Ascension3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Final Ascension:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "AscendedAmpTOOLTIPONLY",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 60, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{bc570508}",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AscendedAmpTOOLTIPONLY", "value": "60" }, { "name": "DamageAmp", "value": "20" }, { "name": "Delay", "value": "15" }, { "name": "{bc570508}", "value": "0.4" }],
+  "importWarnings": ["Unmapped item variable: AscendedAmpTOOLTIPONLY", "Unmapped item variable: Delay", "Unmapped item variable: {bc570508}"]
 }

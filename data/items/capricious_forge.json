@@ -1,7 +1,17 @@
 {
   "name": "Capricious Forge",
+  "displayName": "Capricious Forge",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_CapriciousForge",
+  "description": "Gain a Blacksmith's Gloves, which equips two random Artifacts each round.<br><br><rules>Artifacts are more powerful items with a unique effect.</rules>",
+  "tooltip": "Gain a Blacksmith's Gloves, which equips two random Artifacts each round.<br><br><rules>Artifacts are more powerful items with a unique effect.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Prototype-Forge-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

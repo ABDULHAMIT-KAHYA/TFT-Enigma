@@ -1,7 +1,17 @@
 {
   "name": "Gunslinger Crest",
+  "displayName": "Gunslinger Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_GunslingerCrest",
+  "description": "Get a Gunslinger Emblem.",
+  "tooltip": "Get a Gunslinger Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,29 @@
 {
   "name": "Transference",
+  "displayName": "Transference",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Supercharge_Splash",
+  "description": "When A.M.P. champions die, the nearest A.M.P. champion gains @AmpBonus@ Amp until the end of combat. Gain a Naafiri and a Nidalee.",
+  "tooltip": "When A.M.P. champions die, the nearest A.M.P. champion gains @AmpBonus@ Amp until the end of combat. Gain a Naafiri and a Nidalee.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Transference_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AmpBonus",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AmpBonus", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: AmpBonus", "Unsupported item effect metadata: AmpBonus"]
 }

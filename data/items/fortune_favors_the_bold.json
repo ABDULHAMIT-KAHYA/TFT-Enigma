@@ -1,7 +1,17 @@
 {
   "name": "Fortune Favors the Bold",
+  "displayName": "Fortune Favors the Bold",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_FortuneFavorsTheBold",
+  "description": "Winning combat against a player will give bonus orbs. The longer your loss streak, the bigger the payout.",
+  "tooltip": "Winning combat against a player will give bonus orbs. The longer your loss streak, the bigger the payout.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/FortuneFavorsTheBold_II.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

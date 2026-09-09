@@ -1,7 +1,41 @@
 {
   "name": "Clockwork Accelerator",
+  "displayName": "Clockwork Accelerator",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_ClockworkAccelerator",
+  "description": "Your team gains @attackspeed*100@% Attack Speed every @frequency@ seconds in combat.",
+  "tooltip": "Your team gains @attackspeed*100@% Attack Speed every @frequency@ seconds in combat.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ClockworkAccelerator_II.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Clockwork Accelerator:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Frequency",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.1" }, { "name": "Frequency", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Frequency", "Unsupported item effect metadata: Frequency"]
 }

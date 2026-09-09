@@ -1,7 +1,17 @@
 {
   "name": "2 Components",
+  "displayName": "2 Components",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_RandomComponent_2",
+  "description": "2 Components",
+  "tooltip": "2 Components",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

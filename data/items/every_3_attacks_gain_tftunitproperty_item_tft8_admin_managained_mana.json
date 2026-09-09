@@ -1,7 +1,17 @@
 {
   "name": "Every 3 attacks, gain @TFTUnitProperty.item:TFT8_Admin_ManaGained@ Mana",
+  "displayName": "Every 3 attacks, gain @TFTUnitProperty.item:TFT8_Admin_ManaGained@ Mana",
+  "isPlaceholder": true,
+  "sourceId": "TFT8_AdminCauseEffect_EveryXAttacks_Mana",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

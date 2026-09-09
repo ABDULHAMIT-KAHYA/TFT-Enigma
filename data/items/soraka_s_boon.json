@@ -1,7 +1,40 @@
 {
   "name": "Soraka's Boon",
+  "displayName": "Soraka's Boon",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_SorakaGodAugment",
+  "description": "Your team gains @HealthPerTacHealth@ Health for each missing player health. At the start of each player combat, gain an additional @Heal@ player health.",
+  "tooltip": "Your team gains @HealthPerTacHealth@ Health for each missing player health. At the start of each player combat, gain an additional @Heal@ player health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GodAugmentSoraka_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Heal",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPerTacHealth",
+      "rawSourceValue": "2.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Heal", "value": "1" }, { "name": "HealthPerTacHealth", "value": "2.5" }],
+  "importWarnings": ["Unmapped item variable: Heal", "Unmapped item variable: HealthPerTacHealth"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "@Cost_TOOLTIPONLY@-cost champion",
+  "displayName": "@Cost_TOOLTIPONLY@-cost champion",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Delayed4Cost",
+  "description": "After @Delay@ rounds, gain a @Cost_TOOLTIPONLY@-cost champion.",
+  "tooltip": "After @Delay@ rounds, gain a @Cost_TOOLTIPONLY@-cost champion.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_4c.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Cost_TOOLTIPONLY",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Cost_TOOLTIPONLY", "value": "4" }, { "name": "Delay", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Cost_TOOLTIPONLY", "Unmapped item variable: Delay", "Unsupported item effect metadata: Cost_TOOLTIPONLY", "Unsupported item effect metadata: Delay"]
 }

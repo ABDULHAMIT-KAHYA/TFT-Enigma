@@ -1,0 +1,17 @@
+{
+  "name": "TFT4_Augment_BrawlerCrown",
+  "displayName": "Brawler Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_BrawlerCrown",
+  "description": "Gain a Brawler Emblem, a Bloodthirster, and a Vi.",
+  "tooltip": "Gain a Brawler Emblem, a Bloodthirster, and a Vi.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Brawler_III.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,17 @@
 {
   "name": "Cavalier Heart",
+  "displayName": "Cavalier Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_CavalierTrait",
+  "description": "Your team counts as having 1 additional Cavalier. Gain a Rell.",
+  "tooltip": "Your team counts as having 1 additional Cavalier. Gain a Rell.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cavalier-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

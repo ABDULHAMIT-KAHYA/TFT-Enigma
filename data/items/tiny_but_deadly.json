@@ -1,7 +1,63 @@
 {
   "name": "Tiny, but Deadly",
+  "displayName": "Tiny, but Deadly",
+  "isPlaceholder": false,
+  "sourceId": "TFT11_Augment_TinyButDeadly",
+  "description": "Your team becomes small, gaining @AttackSpeed*100@% Attack Speed and Movement Speed.",
+  "tooltip": "Your team becomes small, gaining @AttackSpeed*100@% Attack Speed and Movement Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TinyButDeadly_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Tiny, but Deadly:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MoveSpeed",
+      "rawSourceValue": "0.75",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TooltipSizeScale",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{858a62b6}",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "0.3" }, { "name": "MoveSpeed", "value": "0.75" }, { "name": "TooltipSizeScale", "value": "0.5" }, { "name": "{858a62b6}", "value": "0.3" }],
+  "importWarnings": ["Unmapped item variable: MoveSpeed", "Unmapped item variable: TooltipSizeScale", "Unmapped item variable: {858a62b6}", "Unsupported item effect metadata: MoveSpeed", "Unsupported item effect metadata: TooltipSizeScale", "Unsupported item effect metadata: {858a62b6}"]
 }

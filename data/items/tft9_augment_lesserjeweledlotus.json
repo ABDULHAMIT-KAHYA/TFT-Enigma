@@ -1,0 +1,30 @@
+{
+  "name": "TFT9_Augment_LesserJeweledLotus",
+  "displayName": "Jeweled Lotus I",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_LesserJeweledLotus",
+  "description": "Combat start: Your strongest unit gains @CritChance@% Critical Strike Chance and their abilities can critically strike.",
+  "tooltip": "Combat start: Your strongest unit gains @CritChance@% Critical Strike Chance and their abilities can critically strike.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Jeweled-Lotus-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT9_Augment_LesserJeweledLotus:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "40" }],
+  "importWarnings": ["Metadata-only item effect: CritChance -> GrantStats"]
+}

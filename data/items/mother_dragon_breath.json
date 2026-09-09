@@ -1,7 +1,63 @@
 {
   "name": "Mother Dragon Breath",
+  "displayName": "Mother Dragon Breath",
+  "isPlaceholder": false,
+  "sourceId": "TFT4_Augment_Dragonsoul",
+  "description": "After @DelayTime@ seconds of combat, the Dragon strikes the board, dealing @TrueDamageHPRatio*100@% of max Health in magic damage to enemies and granting all allies @AttackSpeedBuff*100@% Attack Speed for the rest of combat. Gain a Tristana and a Braum.",
+  "tooltip": "After @DelayTime@ seconds of combat, the Dragon strikes the board, dealing @TrueDamageHPRatio*100@% of max Health in magic damage to enemies and granting all allies @AttackSpeedBuff*100@% Attack Speed for the rest of combat. Gain a Tristana and a Braum.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mother-Dragon-Breath_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Mother Dragon Breath:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeedBuff",
+      "rawSourceValue": "0.12",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeedBuff", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.12, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ASDuration",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DelayTime",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TrueDamageHPRatio",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ASDuration", "value": "60" }, { "name": "AttackSpeedBuff", "value": "0.12" }, { "name": "DelayTime", "value": "8" }, { "name": "TrueDamageHPRatio", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: ASDuration", "Unmapped item variable: DelayTime", "Unmapped item variable: TrueDamageHPRatio"]
 }

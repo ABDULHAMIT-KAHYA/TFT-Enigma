@@ -1,8 +1,76 @@
 {
   "name": "Fully-Charged Flux Capacitor",
+  "displayName": "Fully-Charged Flux Capacitor",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_ZeriCyberneticItem_Radiant",
+  "description": "<TFTRadiantItemBonus>Every other attack is charged</TFTRadiantItemBonus>, dealing <TFTRadiantItemBonus>@ShockDamage*100@%</TFTRadiantItemBonus> of the target's max health as physical damage and reduces their Armor by <TFTRadiantItemBonus>@FlatArmorReduction@</TFTRadiantItemBonus>.<br><br><TFTPassive>Total Charge Damage This Round: @TFTUnitProperty.item:TFT14_Trait_Cybernetic_ZeriItem_TotalLightningDamage@</TFTPassive><br><br><rules>Recommended users: Zeri and Naafiri</rules>",
+  "tooltip": "<TFTRadiantItemBonus>Every other attack is charged</TFTRadiantItemBonus>, dealing <TFTRadiantItemBonus>@ShockDamage*100@%</TFTRadiantItemBonus> of the target's max health as physical damage and reduces their Armor by <TFTRadiantItemBonus>@FlatArmorReduction@</TFTRadiantItemBonus>.<br><br><TFTPassive>Total Charge Damage This Round: @TFTUnitProperty.item:TFT14_Trait_Cybernetic_ZeriItem_TotalLightningDamage@</TFTPassive><br><br><rules>Recommended users: Zeri and Naafiri</rules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14/TFT14_Item_ZeriCyberneticItem_Radiant.TFT_Set14.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:Fully-Charged Flux Capacitor:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Fully-Charged Flux Capacitor:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ChargeCap",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FlatArmorReduction",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShockDamage",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.3" }, { "name": "AS", "value": "50" }, { "name": "ChargeCap", "value": "1" }, { "name": "FlatArmorReduction", "value": "15" }, { "name": "ShockDamage", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: ChargeCap", "Unmapped item variable: FlatArmorReduction", "Unmapped item variable: ShockDamage"]
 }

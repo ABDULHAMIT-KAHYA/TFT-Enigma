@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_JuggernautCrown",
+  "displayName": "Juggernaut Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_JuggernautCrown",
+  "description": "Get a Juggernaut Emblem, a Cho'gath, and a Protector's Vow.",
+  "tooltip": "Get a Juggernaut Emblem, a Cho'gath, and a Protector's Vow.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

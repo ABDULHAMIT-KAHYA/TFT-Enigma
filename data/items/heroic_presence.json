@@ -1,7 +1,40 @@
 {
   "name": "Heroic Presence",
+  "displayName": "Heroic Presence",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_GuardianHeroicPresence",
+  "description": "Every @TauntInterval@ seconds, Guardians taunt all enemies within range. Enemies that attack a Guardian's shield take magic damage equal to @HealthPercent@% of the shielded unit's max Health (up to once per second). Gain a Braum.",
+  "tooltip": "Every @TauntInterval@ seconds, Guardians taunt all enemies within range. Enemies that attack a Guardian's shield take magic damage equal to @HealthPercent@% of the shielded unit's max Health (up to once per second). Gain a Braum.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Heroic-Presence-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPercent",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TauntInterval",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealthPercent", "value": "7" }, { "name": "TauntInterval", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: HealthPercent", "Unmapped item variable: TauntInterval"]
 }

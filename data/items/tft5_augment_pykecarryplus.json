@@ -1,0 +1,41 @@
+{
+  "name": "TFT5_Augment_PykeCarryPlus",
+  "displayName": "The Bloodharbor Zealot+",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Augment_PykeCarryPlus",
+  "description": "Gain a 2-star Pyke. Your strongest Pyke's Ability deals 200% damage, Mana cost is reduced by 60 (down from 120), but no longer Stuns.",
+  "tooltip": "Gain a 2-star Pyke. Your strongest Pyke's Ability deals 200% damage, Mana cost is reduced by 60 (down from 120), but no longer Stuns.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/The-Bloodharbor-Zealot_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT5_Augment_PykeCarryPlus:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 1.8, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 1.8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "1.8",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 1.8, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaReduction",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "1.8" }, { "name": "ManaReduction", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: ManaReduction"]
+}

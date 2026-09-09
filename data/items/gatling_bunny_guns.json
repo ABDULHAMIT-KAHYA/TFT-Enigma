@@ -1,7 +1,30 @@
 {
   "name": "Gatling Bunny-Guns",
+  "displayName": "Gatling Bunny-Guns",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_AnimaSquad_Weapon_GatlingBunnyGuns",
+  "description": "Every @CastPeriod@ seconds, a random Anima Squad champion fires Gatling Bunny-Guns in a long cone, dealing high physical damage.",
+  "tooltip": "Every @CastPeriod@ seconds, a random Anima Squad champion fires Gatling Bunny-Guns in a long cone, dealing high physical damage.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14_AnimaSquadItems/TooltipIcons/TFT14_Icon_AnimaSquad_GatlingGun.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 5.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "CastPeriod",
+      "rawSourceValue": "5.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 6, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "CastPeriod", "value": "5.5" }],
+  "importWarnings": ["Unmapped item variable: CastPeriod"]
 }

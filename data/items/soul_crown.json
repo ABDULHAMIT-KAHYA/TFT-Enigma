@@ -1,8 +1,54 @@
 {
   "name": "Soul Crown",
+  "displayName": "Soul Crown",
+  "isPlaceholder": false,
+  "sourceId": "TFTEvent_SF_Item_PowerUp_Rank4",
+  "description": "Prevents the holder's first death. When they revive after 2 seconds, they shed all negative effects and gain <active>@TFTUnitProperty.item:TFT_Event_SF_SoulCrownHealthRestore@</active> Health (double your Soul Power).<br><br>Contribute +1 to the last listed Trait. (Unique traits excluded.)<br><br><tftitemrules> [Cannot be used on champions in combat.]</tftitemrules><br><tftitemrules> [Unlimited uses.]</tftitemrules>",
+  "tooltip": "Prevents the holder's first death. When they revive after 2 seconds, they shed all negative effects and gain <active>@TFTUnitProperty.item:TFT_Event_SF_SoulCrownHealthRestore@</active> Health (double your Soul Power).<br><br>Contribute +1 to the last listed Trait. (Unique traits excluded.)<br><br><tftitemrules> [Cannot be used on champions in combat.]</tftitemrules><br><tftitemrules> [Unlimited uses.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/SF/TFT_Event_SF_SoulCrown_Tournament.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
     { "name": "Item:Soul Crown:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Soul Crown:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAbilityPower",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusAbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 40, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAttackDamage",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusAttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.4, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusPercentHealth",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAbilityPower", "value": "40" }, { "name": "BonusAttackDamage", "value": "0.4" }, { "name": "BonusPercentHealth", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: BonusPercentHealth"]
 }

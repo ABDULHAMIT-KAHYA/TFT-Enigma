@@ -1,7 +1,17 @@
 {
   "name": "Give 'em the Chair!",
+  "displayName": "Give 'em the Chair!",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_DrMundoCarry",
+  "description": "Gain a Dr. Mundo. Your strongest Dr. Mundo becomes a Ranged Marksman. He now throws chairs that deal heavy damage, but cost Health.",
+  "tooltip": "Gain a Dr. Mundo. Your strongest Dr. Mundo becomes a Ranged Marksman. He now throws chairs that deal heavy damage, but cost Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GiveEmTheChair_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

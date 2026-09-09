@@ -1,7 +1,29 @@
 {
   "name": "TFT12_Doodad_ShopDowner_Name",
+  "displayName": "TFT12_Doodad_ShopDowner_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT12_Doodad_ShopDowner",
+  "description": "TFT12_Doodad_ShopDowner_Tooltip",
+  "tooltip": "TFT12_Doodad_ShopDowner_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{47078566}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{47078566}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: {47078566}", "Unsupported item effect metadata: {47078566}"]
 }

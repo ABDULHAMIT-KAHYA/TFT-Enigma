@@ -1,0 +1,40 @@
+{
+  "name": "TFT9_Augment_PumpingUp3HR",
+  "displayName": "Pumping Up III",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_PumpingUp3HR",
+  "description": "Your team gains @BaseAS@% Attack Speed. After each round, they gain @IncreasePerRound@% more. (Current Attack Speed: @TFTUnitProperty.item:TFT9_PumpingUp3Rounds@%)",
+  "tooltip": "Your team gains @BaseAS@% Attack Speed. After each round, they gain @IncreasePerRound@% more. (Current Attack Speed: @TFTUnitProperty.item:TFT9_PumpingUp3Rounds@%)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Pumping-Up-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseAS",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IncreasePerRound",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseAS", "value": "12" }, { "name": "IncreasePerRound", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: BaseAS", "Unmapped item variable: IncreasePerRound", "Unsupported item effect metadata: BaseAS", "Unsupported item effect metadata: IncreasePerRound"]
+}

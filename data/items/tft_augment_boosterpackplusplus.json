@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Augment_BoosterPackPlusPlus",
+  "displayName": "Booster Pack++",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_BoosterPackPlusPlus",
+  "description": "Gain @TotalValue@ gold of random champions. (At least one @GuaranteedCost@-cost guaranteed!)<br><br><rules>(Each champion has a small chance of being holographic!)</rules>",
+  "tooltip": "Gain @TotalValue@ gold of random champions. (At least one @GuaranteedCost@-cost guaranteed!)<br><br><rules>(Each champion has a small chance of being holographic!)</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/BoosterPack1_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GuaranteedCost",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 26,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TotalValue",
+      "rawSourceValue": "26",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GuaranteedCost", "value": "5" }, { "name": "TotalValue", "value": "26" }],
+  "importWarnings": ["Unmapped item variable: GuaranteedCost", "Unmapped item variable: TotalValue", "Unsupported item effect metadata: GuaranteedCost", "Unsupported item effect metadata: TotalValue"]
+}

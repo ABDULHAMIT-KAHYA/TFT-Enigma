@@ -1,7 +1,40 @@
 {
   "name": "Wandering Trainer II",
+  "displayName": "Wandering Trainer II",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_WanderingTrainer",
+  "description": "Gain a Training Dummy with @NumOfEmblems@ permanently attached Emblems. Gain @Gold@ gold.",
+  "tooltip": "Gain a Training Dummy with @NumOfEmblems@ permanently attached Emblems. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Wandering-Trainer-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "SummonUnit",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumOfEmblems",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "8" }, { "name": "NumOfEmblems", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumOfEmblems"]
 }

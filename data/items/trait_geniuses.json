@@ -1,7 +1,62 @@
 {
   "name": "Trait: Geniuses",
+  "displayName": "Trait: Geniuses",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_TeamupAugment_Geniuses",
+  "description": "When Heimerdinger casts, Ekko releases @NumEkkoAfterImages@ afterimages, each dealing @ReducedEkkoDamage*100@% damage. When Ekko casts, Heimerdinger fires @NumHeimerMissiles@ missiles, each dealing @ReducedHeimerDamage*100@% damage.<br><br>Gain a Heimerdinger, Ekko, and a Jeweled Gauntlet.",
+  "tooltip": "When Heimerdinger casts, Ekko releases @NumEkkoAfterImages@ afterimages, each dealing @ReducedEkkoDamage*100@% damage. When Ekko casts, Heimerdinger fires @NumHeimerMissiles@ missiles, each dealing @ReducedHeimerDamage*100@% damage.<br><br>Gain a Heimerdinger, Ekko, and a Jeweled Gauntlet.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TeamUp_Geniuses_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumEkkoAfterImages",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumHeimerMissiles",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ReducedEkkoDamage",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ReducedHeimerDamage",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumEkkoAfterImages", "value": "3" }, { "name": "NumHeimerMissiles", "value": "3" }, { "name": "ReducedEkkoDamage", "value": "0.5" }, { "name": "ReducedHeimerDamage", "value": "1.5" }],
+  "importWarnings": ["Unmapped item variable: NumEkkoAfterImages", "Unmapped item variable: NumHeimerMissiles", "Unmapped item variable: ReducedEkkoDamage", "Unmapped item variable: ReducedHeimerDamage"]
 }

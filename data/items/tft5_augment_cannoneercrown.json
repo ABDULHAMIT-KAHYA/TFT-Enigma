@@ -1,0 +1,17 @@
+{
+  "name": "TFT5_Augment_CannoneerCrown",
+  "displayName": "Cannoneer Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_CannoneerCrown",
+  "description": "Gain a Cannoneer Emblem, a Guinsoo Rageblade, and a Tristana.",
+  "tooltip": "Gain a Cannoneer Emblem, a Guinsoo Rageblade, and a Tristana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Cannoneer_III.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

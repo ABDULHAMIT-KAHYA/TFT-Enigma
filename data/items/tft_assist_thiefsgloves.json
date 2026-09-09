@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_ThiefsGloves",
+  "displayName": "Thief's Gloves",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_ThiefsGloves",
+  "description": "Thief's Gloves",
+  "tooltip": "Thief's Gloves",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Thieves_Gloves.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

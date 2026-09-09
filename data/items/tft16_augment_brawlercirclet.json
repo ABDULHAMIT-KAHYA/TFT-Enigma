@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_BrawlerCirclet",
+  "displayName": "Bruiser Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_BrawlerCirclet",
+  "description": "Get a Bruiser Emblem and a Wukong.",
+  "tooltip": "Get a Bruiser Emblem and a Wukong.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

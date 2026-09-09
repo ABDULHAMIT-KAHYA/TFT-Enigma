@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_SniperCrown",
+  "displayName": "Sniper Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SniperCrown",
+  "description": "Gain a Sniper Emblem, an Infinity Edge, and a Caitlyn.",
+  "tooltip": "Gain a Sniper Emblem, an Infinity Edge, and a Caitlyn.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Sniper_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

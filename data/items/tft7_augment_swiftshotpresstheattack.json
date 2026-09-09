@@ -1,0 +1,40 @@
+{
+  "name": "TFT7_Augment_SwiftshotPressTheAttack",
+  "displayName": "Press the Attack",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_SwiftshotPressTheAttack",
+  "description": "Your Swiftshots' attacks apply a stack on their target for @StackDuration@ seconds. Every third stack deals true damage equal to @PercentHPDamage@% of the target's maximum Health. Gain a Twitch.",
+  "tooltip": "Your Swiftshots' attacks apply a stack on their target for @StackDuration@ seconds. Every third stack deals true damage equal to @PercentHPDamage@% of the target's maximum Health. Gain a Twitch.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Press-the-Attack-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentHPDamage",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StackDuration",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PercentHPDamage", "value": "4" }, { "name": "StackDuration", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: PercentHPDamage", "Unmapped item variable: StackDuration"]
+}

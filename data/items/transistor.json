@@ -1,7 +1,42 @@
 {
   "name": "Transistor",
+  "displayName": "Transistor",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Augment_Armorclad_Splash",
+  "description": "When Bastions' start of combat bonus ends, @ConversionRate*100@% of it converts into Attack Damage and Ability Power and they gain @AttackSpeedBonus*100@% Attack Speed. Gain an Illaoi and Jax.",
+  "tooltip": "When Bastions' start of combat bonus ends, @ConversionRate*100@% of it converts into Attack Damage and Ability Power and they gain @AttackSpeedBonus*100@% Attack Speed. Gain an Illaoi and Jax.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Transistor_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Transistor:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ConversionRate",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeedBonus",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeedBonus", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeedBonus", "value": "0.5" }, { "name": "ConversionRate", "value": "0.5" }],
+  "importWarnings": ["Metadata-only item effect: AttackSpeedBonus -> GrantStats", "Metadata-only item effect: ConversionRate -> DealDamage", "Unmapped item variable: ConversionRate"]
 }

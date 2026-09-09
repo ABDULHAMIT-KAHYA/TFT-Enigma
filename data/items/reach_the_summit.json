@@ -1,7 +1,51 @@
 {
   "name": "Reach the Summit",
+  "displayName": "Reach the Summit",
+  "isPlaceholder": true,
+  "sourceId": "TFT10_Augment_ReachTheSummit",
+  "description": "When you reach Level @LevelReq@, gain @ExpBonus@ XP and @Gold@ Gold.",
+  "tooltip": "When you reach Level @LevelReq@, gain @ExpBonus@ XP and @Gold@ Gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Reach-The-Summit-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ExpBonus",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LevelReq",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ExpBonus", "value": "50" }, { "name": "Gold", "value": "10" }, { "name": "LevelReq", "value": "9" }],
+  "importWarnings": ["Unmapped item variable: ExpBonus", "Unmapped item variable: Gold", "Unmapped item variable: LevelReq", "Unsupported item effect metadata: ExpBonus", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: LevelReq"]
 }

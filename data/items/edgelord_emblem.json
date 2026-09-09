@@ -1,7 +1,41 @@
 {
   "name": "Edgelord Emblem",
+  "displayName": "Edgelord Emblem",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Item_EdgelordEmblemItem",
+  "description": "The holder gains the Edgelord trait.<br>Dealing physical damage to an enemy reduces their Armor by @ArmorPerDamage@.",
+  "tooltip": "The holder gains the Edgelord trait.<br>Dealing physical damage to an enemy reduces their Armor by @ArmorPerDamage@.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set15/TFT15_Emblem_Edgelord.TFT_Set15.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
     { "name": "Item:Edgelord Emblem:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmorPerDamage",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.1" }, { "name": "ArmorPerDamage", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: ArmorPerDamage"]
 }

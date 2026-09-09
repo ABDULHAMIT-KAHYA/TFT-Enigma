@@ -1,7 +1,40 @@
 {
   "name": "Lock Step",
+  "displayName": "Lock Step",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_LockStep",
+  "description": "Round start: If your last opponent was higher leveled than you, gain @Experience@ XP. Otherwise, gain @Gold@ gold.",
+  "tooltip": "Round start: If your last opponent was higher leveled than you, gain @Experience@ XP. Otherwise, gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Spoils-of-War-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Experience",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Experience", "value": "4" }, { "name": "Gold", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Experience", "Unmapped item variable: Gold", "Unsupported item effect metadata: Experience", "Unsupported item effect metadata: Gold"]
 }

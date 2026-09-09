@@ -1,7 +1,17 @@
 {
   "name": "Evoker Crest",
+  "displayName": "Evoker Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_EvokerEmblem",
+  "description": "Gain an Evoker Emblem and a Zyra.",
+  "tooltip": "Gain an Evoker Emblem and a Zyra.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Evoker-Crest-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

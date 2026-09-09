@@ -1,7 +1,42 @@
 {
   "name": "Reactive Shell",
+  "displayName": "Reactive Shell",
+  "isPlaceholder": false,
+  "sourceId": "TFT14_Augment_Guardian_Vertical",
+  "description": "Vanguards gain @BonusHealth*100@% Health. When the Vanguard Shield ends, deal @ExplosionDamage*100@% of the initial Shield as magic damage to their current target. Gain a Skarner and a Vi.",
+  "tooltip": "Vanguards gain @BonusHealth*100@% Health. When the Vanguard Shield ends, deal @ExplosionDamage*100@% of the initial Shield as magic damage to their current target. Gain a Skarner and a Vi.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ReactiveShell_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Reactive Shell:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealth",
+      "rawSourceValue": "0.08",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealth", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ExplosionDamage",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:ExplosionDamage", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusHealth", "value": "0.08" }, { "name": "ExplosionDamage", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: ExplosionDamage"]
 }

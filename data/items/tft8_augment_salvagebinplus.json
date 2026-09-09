@@ -1,0 +1,29 @@
+{
+  "name": "TFT8_Augment_SalvageBinPlus",
+  "displayName": "Salvage Bin+",
+  "isPlaceholder": true,
+  "sourceId": "TFT8_Augment_SalvageBinPlus",
+  "description": "Gain 1 random completed item now, and 1 component after @NumRounds@ player combats. Selling champions breaks completed items into components (excluding Tactician's items and Emblems).",
+  "tooltip": "Gain 1 random completed item now, and 1 component after @NumRounds@ player combats. Selling champions breaks completed items into components (excluding Tactician's items and Emblems).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Salvage2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRounds",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumRounds", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: NumRounds"]
+}

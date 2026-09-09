@@ -1,7 +1,29 @@
 {
   "name": "3 star LeBlanc",
+  "displayName": "3 star LeBlanc",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_LeBlanc3Star",
+  "description": "3 star LeBlanc",
+  "tooltip": "3 star LeBlanc",
+  "iconPath": "ASSETS/Characters/TFT14_LeBlanc/HUD/TFT14_LeBlanc_Square.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
 }

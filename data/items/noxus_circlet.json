@@ -1,7 +1,17 @@
 {
   "name": "Noxus Circlet",
+  "displayName": "Noxus Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_NoxusCirclet",
+  "description": "Get an Noxus Emblem, an Ambessa, and a Sparring Glove.",
+  "tooltip": "Get an Noxus Emblem, an Ambessa, and a Sparring Glove.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

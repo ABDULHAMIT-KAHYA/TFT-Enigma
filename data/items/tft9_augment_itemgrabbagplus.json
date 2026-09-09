@@ -1,0 +1,95 @@
+{
+  "name": "TFT9_Augment_ItemGrabBagPlus",
+  "displayName": "Item Grab Bag II",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_ItemGrabBagPlus",
+  "description": "Gain a random completed item, a random component, and @Gold@ gold. ",
+  "tooltip": "Gain a random completed item, a random component, and @Gold@ gold. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ItemGrabBag2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumFullItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumReforgers",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRemovers",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{466ef38d}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{4a99a5b2}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "1" }, { "name": "NumFullItems", "value": "1" }, { "name": "NumItems", "value": "1" }, { "name": "NumReforgers", "value": "null" }, { "name": "NumRemovers", "value": "null" }, { "name": "{466ef38d}", "value": "null" }, { "name": "{4a99a5b2}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumFullItems", "Unmapped item variable: NumItems", "Unmapped non-numeric item variable: NumReforgers", "Unmapped non-numeric item variable: NumRemovers", "Unmapped non-numeric item variable: {466ef38d}", "Unmapped non-numeric item variable: {4a99a5b2}", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumFullItems", "Unsupported item effect metadata: NumItems", "Unsupported item effect metadata: NumReforgers", "Unsupported item effect metadata: NumRemovers", "Unsupported item effect metadata: {466ef38d}", "Unsupported item effect metadata: {4a99a5b2}"]
+}

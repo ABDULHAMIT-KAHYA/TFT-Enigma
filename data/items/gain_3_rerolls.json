@@ -1,7 +1,17 @@
 {
   "name": "Gain 3 rerolls.",
+  "displayName": "Gain 3 rerolls.",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Encounter_ChoiceItem_3Rerolls",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

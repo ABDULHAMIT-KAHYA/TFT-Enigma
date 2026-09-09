@@ -1,0 +1,41 @@
+{
+  "name": "TFT17_GravesTrait_Offense_BlastRadius2",
+  "displayName": "Blast Radius+",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_GravesTrait_Offense_BlastRadius2",
+  "description": "Secondary blast radius is increased by @IncreasedRadius@ hexes, dealing @DamageReductionPerHex*100@% less for each additional hex.",
+  "tooltip": "Secondary blast radius is increased by @IncreasedRadius@ hexes, dealing @DamageReductionPerHex*100@% less for each additional hex.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_BlastRadius1.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+    { "name": "Item:TFT17_GravesTrait_Offense_BlastRadius2:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageReductionPerHex",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageReductionPerHex", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IncreasedRadius",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageReductionPerHex", "value": "0.3" }, { "name": "IncreasedRadius", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: IncreasedRadius"]
+}

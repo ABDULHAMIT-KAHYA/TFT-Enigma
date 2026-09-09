@@ -1,7 +1,17 @@
 {
   "name": "Sylas",
+  "displayName": "Sylas",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Sylas",
+  "description": "Sylas",
+  "tooltip": "Sylas",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Sylas_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

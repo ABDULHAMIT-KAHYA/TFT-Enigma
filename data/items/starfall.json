@@ -1,7 +1,17 @@
 {
   "name": "Starfall",
+  "displayName": "Starfall",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_NeekoCarry",
+  "description": "Gain a Neeko. Your strongest Neeko becomes a Magic Fighter and gains increased Attack Speed. Her Ability deals more damage, and increases its radius with every cast.",
+  "tooltip": "Gain a Neeko. Your strongest Neeko becomes a Magic Fighter and gains increased Attack Speed. Her Ability deals more damage, and increases its radius with every cast.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DropBloosom_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,17 @@
 {
   "name": "3 Lesser Champion Duplicators",
+  "displayName": "3 Lesser Champion Duplicators",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_LesserDuplicator_3",
+  "description": "3 Lesser Champion Duplicators",
+  "tooltip": "3 Lesser Champion Duplicators",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Consumables/ChampionDuplicator_III.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

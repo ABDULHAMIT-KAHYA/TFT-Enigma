@@ -1,7 +1,17 @@
 {
   "name": "Adaptive Strikes",
+  "displayName": "Adaptive Strikes",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_JaxCarry",
+  "description": "Gain a Jax. Your strongest Jax's attacks deal bonus magic damage every 3rd attack which gets stronger each time. His ability grants Attack Speed.",
+  "tooltip": "Gain a Jax. Your strongest Jax's attacks deal bonus magic damage every 3rd attack which gets stronger each time. His ability grants Attack Speed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cyberpsychosis_I.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

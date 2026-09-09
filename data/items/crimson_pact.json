@@ -1,7 +1,74 @@
 {
   "name": "Crimson Pact",
+  "displayName": "Crimson Pact",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Augment_VladCarry",
+  "description": "Gain a Vladimir. Your strongest Vladimir gains +@IncRange@ Range and gains @BonusMana@ bonus Mana each attack. His Ability no longer heals but grants @TOOLTIPDamageAmp*100@% Damage Amp, deals @TOOLTIPBonusDamage*100@% bonus damage, and spreads additional damage to the nearest enemy.",
+  "tooltip": "Gain a Vladimir. Your strongest Vladimir gains +@IncRange@ Range and gains @BonusMana@ bonus Mana each attack. His Ability no longer heals but grants @TOOLTIPDamageAmp*100@% Damage Amp, deals @TOOLTIPBonusDamage*100@% bonus damage, and spreads additional damage to the nearest enemy.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vlad-Hero-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Crimson Pact:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TOOLTIPDamageAmp",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:TOOLTIPDamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusMana",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IncRange",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TooltipBonusDamage",
+      "rawSourceValue": "0.8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{256e31ce}",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusMana", "value": "5" }, { "name": "IncRange", "value": "3" }, { "name": "TOOLTIPDamageAmp", "value": "0.1" }, { "name": "TooltipBonusDamage", "value": "0.8" }, { "name": "{256e31ce}", "value": "50" }],
+  "importWarnings": ["Unmapped item variable: BonusMana", "Unmapped item variable: IncRange", "Unmapped item variable: TooltipBonusDamage", "Unmapped item variable: {256e31ce}"]
 }

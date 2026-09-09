@@ -1,7 +1,40 @@
 {
   "name": "The Exiled One",
+  "displayName": "The Exiled One",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_Exile",
+  "description": "Gain a Yasuo and Yone. This Yone cannot be fielded until Stage 5 or when Yasuo gains 30 kills, whichever comes sooner.<br>(Kills:&nbsp;@TFTUnitProperty.item:TFT4_Augment_Exile_KillCounter@)",
+  "tooltip": "Gain a Yasuo and Yone. This Yone cannot be fielded until Stage 5 or when Yasuo gains 30 kills, whichever comes sooner.<br>(Kills:&nbsp;@TFTUnitProperty.item:TFT4_Augment_Exile_KillCounter@)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Exiled-One_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "KillsRequired",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{3acc91d8}",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "KillsRequired", "value": "30" }, { "name": "{3acc91d8}", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: KillsRequired", "Unmapped item variable: {3acc91d8}", "Unsupported item effect metadata: KillsRequired", "Unsupported item effect metadata: {3acc91d8}"]
 }

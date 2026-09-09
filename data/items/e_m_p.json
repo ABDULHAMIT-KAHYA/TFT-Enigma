@@ -1,7 +1,29 @@
 {
   "name": "E.M.P.",
+  "displayName": "E.M.P.",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_EMP",
+  "description": "Increase the Mana cost of all enemies' next cast by @ManaCostIncrease@.",
+  "tooltip": "Increase the Mana cost of all enemies' next cast by @ManaCostIncrease@.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_EMP.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaCostIncrease",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaCostIncrease", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: ManaCostIncrease"]
 }

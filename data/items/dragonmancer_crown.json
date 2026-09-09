@@ -1,7 +1,17 @@
 {
   "name": "Dragonmancer Crown",
+  "displayName": "Dragonmancer Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DragonmancerEmblem2",
+  "description": "Gain a Dragonmancer Emblem, a Hand of Justice, and a Lee Sin.",
+  "tooltip": "Gain a Dragonmancer Emblem, a Hand of Justice, and a Lee Sin.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dragonmancer-Soul-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

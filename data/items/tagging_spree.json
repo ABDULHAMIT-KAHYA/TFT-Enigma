@@ -1,7 +1,40 @@
 {
   "name": "Tagging Spree",
+  "displayName": "Tagging Spree",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_StreetDemon_TaggingSpree",
+  "description": "Signature Street Demon hexes grant @BonusAS*100@% Attack Speed. Gain 3 Street Demons and @ItemCount@ Spray Can items that create signature Street Demon hexes.",
+  "tooltip": "Signature Street Demon hexes grant @BonusAS*100@% Attack Speed. Gain 3 Street Demons and @ItemCount@ Spray Can items that create signature Street Demon hexes.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TaggingSpree_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAS",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ItemCount",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAS", "value": "0.05" }, { "name": "ItemCount", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: BonusAS", "Unmapped item variable: ItemCount", "Unsupported item effect metadata: BonusAS", "Unsupported item effect metadata: ItemCount"]
 }

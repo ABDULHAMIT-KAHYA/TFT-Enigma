@@ -1,7 +1,40 @@
 {
   "name": "Dragon Imperialist",
+  "displayName": "Dragon Imperialist",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DragonImperialist",
+  "description": "If you only have @DragonLimit@ Dragon, Dragons execute enemies they damage who are below @ExecutePct@% Health. Gain a Nomsy.",
+  "tooltip": "If you only have @DragonLimit@ Dragon, Dragons execute enemies they damage who are below @ExecutePct@% Health. Gain a Nomsy.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dragon-Brood-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DragonLimit",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ExecutePct",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DragonLimit", "value": "1" }, { "name": "ExecutePct", "value": "18" }],
+  "importWarnings": ["Unmapped item variable: DragonLimit", "Unmapped item variable: ExecutePct"]
 }

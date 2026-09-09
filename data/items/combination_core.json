@@ -1,7 +1,17 @@
 {
   "name": "Combination Core",
+  "displayName": "Combination Core",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_RoboRanger_Core",
+  "description": "Mighty Mech champions heal The Mighty Mech for @TFTUnitProperty.Item:TFT15_SentaiRanger_GalioHealRatio@% of the damage they deal.<br><br><rules>By our powers combined!</rules>",
+  "tooltip": "Mighty Mech champions heal The Mighty Mech for @TFTUnitProperty.Item:TFT15_SentaiRanger_GalioHealRatio@% of the damage they deal.<br><br><rules>By our powers combined!</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT15_ShieldMatrix.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

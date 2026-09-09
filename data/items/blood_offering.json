@@ -1,7 +1,65 @@
 {
   "name": "Blood Offering",
+  "displayName": "Blood Offering",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TheDarkinBlade",
+  "description": "Gain a Bloodthirster. Combat start: Allies holding Bloodthirsters lose @HPLossPercent*100@% Health but gain a @HPShieldPercent*100@% Health shield and @BonusAD*100@% Attack Damage. ",
+  "tooltip": "Gain a Bloodthirster. Combat start: Allies holding Bloodthirsters lose @HPLossPercent*100@% Health but gain a @HPShieldPercent*100@% Health shield and @BonusAD*100@% Attack Damage. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TrailofBlood_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAD",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusAD", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPLossPercent",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:HPLossPercent", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPShieldPercent",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:HPShieldPercent", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAD", "value": "0.1" }, { "name": "HPLossPercent", "value": "0.2" }, { "name": "HPShieldPercent", "value": "0.3" }, { "name": "ShieldDuration", "value": "60" }],
+  "importWarnings": ["Metadata-only item effect: BonusAD -> Shield", "Metadata-only item effect: HPLossPercent -> Shield", "Metadata-only item effect: HPShieldPercent -> Shield", "Metadata-only item effect: ShieldDuration -> Shield", "Unmapped item variable: BonusAD", "Unmapped item variable: HPLossPercent", "Unmapped item variable: HPShieldPercent", "Unmapped item variable: ShieldDuration"]
 }

@@ -1,7 +1,63 @@
 {
   "name": "Aegis of the Legion",
+  "displayName": "Aegis of the Legion",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_AegisOfTheLegion",
+  "description": "Combat start: Grant @ASBuff@% Attack Speed and @BonusResists@ Armor and Magic Resist to the holder, adjacent allies in the same row, and all allies behind them for @BuffDuration@ seconds.<br><br>​​<tftitemrules>[Support item]</tftitemrules>",
+  "tooltip": "Combat start: Grant @ASBuff@% Attack Speed and @BonusResists@ Armor and Magic Resist to the holder, adjacent allies in the same row, and all allies behind them for @BuffDuration@ seconds.<br><br>​​<tftitemrules>[Support item]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_AegisOfTheLegion.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Aegis of the Legion:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ASBuff",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BonusResists",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BuffDuration",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "ASBuff", "value": "25" }, { "name": "BonusResists", "value": "15" }, { "name": "BuffDuration", "value": "12" }, { "name": "Health", "value": "150" }],
+  "importWarnings": ["Metadata-only item effect: ASBuff -> Aura", "Metadata-only item effect: BonusResists -> Aura", "Metadata-only item effect: BuffDuration -> Aura", "Metadata-only item effect: Health -> GrantStats", "Unmapped item variable: ASBuff", "Unmapped item variable: BonusResists", "Unmapped item variable: BuffDuration"]
 }

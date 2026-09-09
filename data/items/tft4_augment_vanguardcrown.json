@@ -1,0 +1,17 @@
+{
+  "name": "TFT4_Augment_VanguardCrown",
+  "displayName": "Vanguard Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_VanguardCrown",
+  "description": "Gain a Vanguard Emblem, a Bramble Vest, and a Nautilus.",
+  "tooltip": "Gain a Vanguard Emblem, a Bramble Vest, and a Nautilus.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vanguard_III.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,30 @@
 {
   "name": "Knife's Edge III",
+  "displayName": "Knife's Edge III",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_MeleeStarBlade3",
+  "description": "Your allies that start combat in the front 2 rows gain @ADPerStarLevel*100@% Attack Damage.",
+  "tooltip": "Your allies that start combat in the front 2 rows gain @ADPerStarLevel*100@% Attack Damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CQCTraining3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.55,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ADPerStarLevel",
+      "rawSourceValue": "0.55",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "ADPerStarLevel", "value": "0.55" }],
+  "importWarnings": ["Unmapped item variable: ADPerStarLevel"]
 }

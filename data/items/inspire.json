@@ -1,7 +1,41 @@
 {
   "name": "Inspire",
+  "displayName": "Inspire",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_DragonmancerInspire",
+  "description": "When the Dragonmancer Hero gets a takedown, champions that share a trait with the Dragonmancer Hero gain @AttackSpeed@% Attack Speed for @Duration@ seconds. Gain a Kaisa.",
+  "tooltip": "When the Dragonmancer Hero gets a takedown, champions that share a trait with the Dragonmancer Hero gain @AttackSpeed@% Attack Speed for @Duration@ seconds. Gain a Kaisa.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Inspire-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Inspire:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.7, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AttackSpeed",
+      "rawSourceValue": "70",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.7, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AttackSpeed", "value": "70" }, { "name": "Duration", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Duration"]
 }

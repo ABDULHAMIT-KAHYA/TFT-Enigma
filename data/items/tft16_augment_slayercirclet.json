@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_SlayerCirclet",
+  "displayName": "Slayer Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_SlayerCirclet",
+  "description": "Get a Slayer Emblem, a Bel'veth, and a Sparring Glove.",
+  "tooltip": "Get a Slayer Emblem, a Bel'veth, and a Sparring Glove.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

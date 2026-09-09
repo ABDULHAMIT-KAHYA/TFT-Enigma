@@ -1,7 +1,17 @@
 {
   "name": "Tahm Kench",
+  "displayName": "Tahm Kench",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_TahmKench",
+  "description": "Tahm Kench",
+  "tooltip": "Tahm Kench",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_TahmKench_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

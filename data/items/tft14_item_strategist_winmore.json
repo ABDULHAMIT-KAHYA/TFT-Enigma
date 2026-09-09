@@ -1,0 +1,17 @@
+{
+  "name": "TFT14_Item_Strategist_WinMore",
+  "displayName": "Win More",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Item_Strategist_WinMore",
+  "description": "Bet that you'll win 3 or more of the next 5 combats.",
+  "tooltip": "Bet that you'll win 3 or more of the next 5 combats.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT9_HeimerUpgrades/TFT9_HeimerUpgrade_Goldification.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

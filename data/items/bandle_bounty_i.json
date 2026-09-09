@@ -1,7 +1,29 @@
 {
   "name": "Bandle Bounty I",
+  "displayName": "Bandle Bounty I",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_BandleBounty",
+  "description": "Reach level 10 and field 10 unique Yordles to reveal the Bandle Path's secret. Gain a Lulu and a Rumble.",
+  "tooltip": "Reach level 10 and field 10 unique Yordles to reveal the Bandle Path's secret. Gain a Lulu and a Rumble.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BandleBounty_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

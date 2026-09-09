@@ -1,7 +1,17 @@
 {
   "name": "Chem-Baron Crest",
+  "displayName": "Chem-Baron Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_ChembaronCrest",
+  "description": "Gain a Chem-Baron Emblem and a Renata Glasc.",
+  "tooltip": "Gain a Chem-Baron Emblem and a Renata Glasc.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Crime_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

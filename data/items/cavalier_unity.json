@@ -1,7 +1,17 @@
 {
   "name": "Cavalier Unity",
+  "displayName": "Cavalier Unity",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_CavalierForAllUnits",
+  "description": "The Cavalier trait grants its bonuses to all of your champions. This does not increase your number of Cavaliers. Gain a Rell.",
+  "tooltip": "The Cavalier trait grants its bonuses to all of your champions. This does not increase your number of Cavaliers. Gain a Rell.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cavalier-Unity-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

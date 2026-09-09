@@ -1,7 +1,41 @@
 {
   "name": "Endurance Training",
+  "displayName": "Endurance Training",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_EnduranceTraining",
+  "description": "Your team permanently gains @Health@ Health on enemy kill. Combat start: Your team gains @StartingHealth@ bonus Health.",
+  "tooltip": "Your team permanently gains @Health@ Health on enemy kill. Combat start: Your team gains @StartingHealth@ bonus Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Endurance-Training-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Endurance Training:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 18, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "StartingHealth",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "18" }, { "name": "StartingHealth", "value": "100" }],
+  "importWarnings": ["Metadata-only item effect: Health -> GrantStats", "Metadata-only item effect: StartingHealth -> Heal", "Unmapped item variable: StartingHealth"]
 }

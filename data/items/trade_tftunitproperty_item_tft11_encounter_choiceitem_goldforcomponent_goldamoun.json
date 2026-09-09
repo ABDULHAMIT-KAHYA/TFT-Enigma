@@ -1,7 +1,17 @@
 {
   "name": "Trade @TFTUnitProperty.item:TFT11_Encounter_ChoiceItem_GoldForComponent_GoldAmount@ gold for a random component. You currently have @TFTUnitProperty.item:TFT11_Encounter_ChoiceItem_GoldForComponent_CurrentGold@ gold.",
+  "displayName": "Trade @TFTUnitProperty.item:TFT11_Encounter_ChoiceItem_GoldForComponent_GoldAmount@ gold for a random component. You currently have @TFTUnitProperty.item:TFT11_Encounter_ChoiceItem_GoldForComponent_CurrentGold@ gold.",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Encounter_ChoiceItem_TradeGoldForComponent",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,17 @@
 {
   "name": "Spatula and 5 Gold",
+  "displayName": "Spatula and 5 Gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Spatula_And_Gold",
+  "description": "Spatula",
+  "tooltip": "Spatula",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Spatula.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

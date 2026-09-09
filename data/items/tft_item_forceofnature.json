@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Item_ForceOfNature",
+  "displayName": "Tactician's Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_ForceOfNature",
+  "description": "Your team gains +@MaxArmySizeIncrease@ max team size.<br><br>@PercentGoldChance@% chance to drop 1 gold when you win combat.<br><br><tftitemrules>\"...the Heart of a hero...\"</tftitemrules>",
+  "tooltip": "Your team gains +@MaxArmySizeIncrease@ max team size.<br><br>@PercentGoldChance@% chance to drop 1 gold when you win combat.<br><br><tftitemrules>\"...the Heart of a hero...\"</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_ForceOfNature.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxArmySizeIncrease",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentGoldChance",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxArmySizeIncrease", "value": "1" }, { "name": "PercentGoldChance", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: MaxArmySizeIncrease", "Unmapped item variable: PercentGoldChance", "Unsupported item effect metadata: MaxArmySizeIncrease", "Unsupported item effect metadata: PercentGoldChance"]
+}

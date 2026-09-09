@@ -1,7 +1,84 @@
 {
   "name": "Chaos Magic",
+  "displayName": "Chaos Magic",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_Arcanist_ChaosMagic",
+  "description": "Arcanists gain @ManaRegen@ Mana Regen. After every @ManaToSpend@ Mana they spend, a magical effect hits the board. Gain a Neeko and an Ahri.",
+  "tooltip": "Arcanists gain @ManaRegen@ Mana Regen. After every @ManaToSpend@ Mana they spend, a magical effect hits the board. Gain a Neeko and an Ahri.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ChaosMagic_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaToSpend",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{6223e95a}",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{9e0975ad}",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{ad289016}",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{f74e5d89}",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaRegen", "value": "1" }, { "name": "ManaToSpend", "value": "150" }, { "name": "{6223e95a}", "value": "0.1" }, { "name": "{9e0975ad}", "value": "4" }, { "name": "{ad289016}", "value": "0.05" }, { "name": "{f74e5d89}", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: ManaRegen", "Unmapped item variable: ManaToSpend", "Unmapped item variable: {6223e95a}", "Unmapped item variable: {9e0975ad}", "Unmapped item variable: {ad289016}", "Unmapped item variable: {f74e5d89}", "Unsupported item effect metadata: {6223e95a}", "Unsupported item effect metadata: {9e0975ad}", "Unsupported item effect metadata: {ad289016}", "Unsupported item effect metadata: {f74e5d89}"]
 }

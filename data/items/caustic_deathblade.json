@@ -1,7 +1,65 @@
 {
   "name": "Caustic Deathblade",
+  "displayName": "Caustic Deathblade",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_DeathbladeShadow",
+  "description": "Contributing to a kill grants the holder %i:scaleAD% <TFTShadowItemBonus>@ADPerStack@ Attack Damage</TFTShadowItemBonus> for the rest of combat. This effect can stack any number of times (starting at @StartingStacks@).",
+  "tooltip": "Contributing to a kill grants the holder %i:scaleAD% <TFTShadowItemBonus>@ADPerStack@ Attack Damage</TFTShadowItemBonus> for the rest of combat. This effect can stack any number of times (starting at @StartingStacks@).",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Death_Blade.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Caustic Deathblade:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "ADPerStack",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 20, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "StartingStacks",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 4, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{446bf6cd}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "20" }, { "name": "ADPerStack", "value": "20" }, { "name": "StartingStacks", "value": "4" }, { "name": "{446bf6cd}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: ADPerStack", "Unmapped item variable: StartingStacks", "Unmapped non-numeric item variable: {446bf6cd}"]
 }

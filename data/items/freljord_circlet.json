@@ -1,7 +1,17 @@
 {
   "name": "Freljord Circlet",
+  "displayName": "Freljord Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_FreljordCirclet",
+  "description": "Get a Freljord Emblem, a Lissandra, and a Needlessly Large Rod.",
+  "tooltip": "Get a Freljord Emblem, a Lissandra, and a Needlessly Large Rod.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

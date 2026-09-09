@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_Chest_Spatula",
+  "displayName": "Large Prize",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_Chest_Spatula",
+  "description": "1 random full item and 2 components are placed in your chest.",
+  "tooltip": "1 random full item and 2 components are placed in your chest.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "LootObject",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

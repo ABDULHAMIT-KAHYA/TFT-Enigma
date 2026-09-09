@@ -1,7 +1,52 @@
 {
   "name": "tft_item_name_FrozenFist",
+  "displayName": "tft_item_name_FrozenFist",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_IcebornGauntlet",
+  "description": "tft_item_description_FrozenFist",
+  "tooltip": "tft_item_description_FrozenFist",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_IcebornGauntlet.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:tft_item_name_FrozenFist:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 25, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DodgeChance",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FreezeDuration",
+      "rawSourceValue": "2.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "25" }, { "name": "DodgeChance", "value": "20" }, { "name": "FreezeDuration", "value": "2.5" }],
+  "importWarnings": ["Unmapped item variable: DodgeChance", "Unmapped item variable: FreezeDuration", "Unsupported item effect metadata: DodgeChance", "Unsupported item effect metadata: FreezeDuration"]
 }

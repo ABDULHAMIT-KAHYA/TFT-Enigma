@@ -1,7 +1,40 @@
 {
   "name": "Keepers I",
+  "displayName": "Keepers I",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_Keepers1",
+  "description": "Combat start: Grant units with adjacent allies a @ShieldHealth@ Health Shield for @ShieldDuration@ seconds. This Shield stacks.",
+  "tooltip": "Combat start: Grant units with adjacent allies a @ShieldHealth@ Health Shield for @ShieldDuration@ seconds. This Shield stacks.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Keepers-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 130,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ShieldHealth",
+      "rawSourceValue": "130",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ShieldDuration", "value": "8" }, { "name": "ShieldHealth", "value": "130" }],
+  "importWarnings": ["Metadata-only item effect: ShieldDuration -> Aura", "Metadata-only item effect: ShieldHealth -> Aura", "Unmapped item variable: ShieldDuration", "Unmapped item variable: ShieldHealth"]
 }

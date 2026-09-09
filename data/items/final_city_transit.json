@@ -1,7 +1,17 @@
 {
   "name": "Final City Transit",
+  "displayName": "Final City Transit",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_AnimaSquad_T3_Train",
+  "description": "Every few seconds, Final City Transit summons trains that run through the battlefield, dealing devastating damage and carrying away low health enemies.",
+  "tooltip": "Every few seconds, Final City Transit summons trains that run through the battlefield, dealing devastating damage and carrying away low health enemies.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14_AnimaSquadItems/TooltipIcons/TFT14_Icon_AnimaSquad_Train.TFT_Set14.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

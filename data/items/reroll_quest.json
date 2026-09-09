@@ -1,7 +1,40 @@
 {
   "name": "Reroll Quest",
+  "displayName": "Reroll Quest",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_AurelionSol_RerollQuest_Stage4",
+  "description": "After rolling the shop @RerollsNeeded@ times, gain @AnvilsToGrant@ component anvils.",
+  "tooltip": "After rolling the shop @RerollsNeeded@ times, gain @AnvilsToGrant@ component anvils.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_RerollQuest.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AnvilsToGrant",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RerollsNeeded",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AnvilsToGrant", "value": "2" }, { "name": "RerollsNeeded", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: AnvilsToGrant", "Unmapped item variable: RerollsNeeded", "Unsupported item effect metadata: AnvilsToGrant", "Unsupported item effect metadata: RerollsNeeded"]
 }

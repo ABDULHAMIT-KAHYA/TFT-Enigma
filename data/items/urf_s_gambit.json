@@ -1,7 +1,29 @@
 {
   "name": "Urf's Gambit",
+  "displayName": "Urf's Gambit",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_UrfsGambit",
+  "description": "If you win your next player combat, gain a Spatula. If you lose, gain a Frying Pan. Gain a component anvil and @Gold@ gold now.",
+  "tooltip": "If you win your next player combat, gain a Spatula. If you lose, gain a Frying Pan. Gain a component anvil and @Gold@ gold now.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/UrfsGambit_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "tft15_General_itemname_JumpToBackline",
+  "displayName": "tft15_General_itemname_JumpToBackline",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_General_Consumable_JumpToBackline",
+  "description": "tft15_General_itemdescription_JumpToBackline",
+  "tooltip": "tft15_General_itemdescription_JumpToBackline",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT15_CommandModItems/TFT15_Item_Icon_CommandMod_JumpToBackline.TFT_Set15.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

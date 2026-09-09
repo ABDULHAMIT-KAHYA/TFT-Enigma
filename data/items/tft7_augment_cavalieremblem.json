@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Augment_CavalierEmblem",
+  "displayName": "Cavalier Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_CavalierEmblem",
+  "description": "Gain a Cavalier Emblem and a Sejuani.",
+  "tooltip": "Gain a Cavalier Emblem and a Sejuani.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cavalier-Crest-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

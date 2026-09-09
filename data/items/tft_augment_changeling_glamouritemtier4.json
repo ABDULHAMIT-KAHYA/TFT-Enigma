@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Augment_Changeling_GlamourItemTier4",
+  "displayName": "Changing Glamour",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Changeling_GlamourItemTier4",
+  "description": "Use this on the Changeling to transform them into a new champion!<br><br><rules>Refreshes each round</rules>",
+  "tooltip": "Use this on the Changeling to transform them into a new champion!<br><br><rules>Refreshes each round</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Augment_Changeling_GlamourItemTier4.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

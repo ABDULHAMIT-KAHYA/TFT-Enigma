@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Item_Bilgewater_TreasureTyphoon",
+  "displayName": "Treasure Typhoon",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Bilgewater_TreasureTyphoon",
+  "description": "Summon a tidal wave that brings valuable treasures from the deep.",
+  "tooltip": "Summon a tidal wave that brings valuable treasures from the deep.",
+  "iconPath": "ASSETS/Characters/TFT12_Nami/HUD/Icons2D/NamiR.TFT_Set12.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

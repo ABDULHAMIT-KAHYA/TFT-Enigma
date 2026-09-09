@@ -1,7 +1,51 @@
 {
   "name": "Dummify",
+  "displayName": "Dummify",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Dummify",
+  "description": "Lose all champions on your board and bench. Gain a Training Dummy with @HealthPercent@% of their combined Health. The Training Dummy gains @HPPerStage@ Health per stage. Gain a non-Tank 2-star @ChampCost@-cost champion.",
+  "tooltip": "Lose all champions on your board and bench. Gain a Training Dummy with @HealthPercent@% of their combined Health. The Training Dummy gains @HPPerStage@ Health per stage. Gain a non-Tank 2-star @ChampCost@-cost champion.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dummify_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ChampCost",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPPerStage",
+      "rawSourceValue": "1000",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthPercent",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ChampCost", "value": "2" }, { "name": "HPPerStage", "value": "1000" }, { "name": "HealthPercent", "value": "60" }],
+  "importWarnings": ["Unmapped item variable: ChampCost", "Unmapped item variable: HPPerStage", "Unmapped item variable: HealthPercent"]
 }

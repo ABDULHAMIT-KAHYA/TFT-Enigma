@@ -1,7 +1,29 @@
 {
   "name": "Unyielding Covenant",
+  "displayName": "Unyielding Covenant",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_HiddenTech_UnyieldingCovenant",
+  "description": "This champion is <TFTKeyword>Untargetable</TFTKeyword> while at least @NumAlliesAlive@ allies are alive (does not include the holder).",
+  "tooltip": "This champion is <TFTKeyword>Untargetable</TFTKeyword> while at least @NumAlliesAlive@ allies are alive (does not include the holder).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT15/TFT15_HiddenTech_UnyieldingConvenant.TFT_Set15.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumAlliesAlive",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumAlliesAlive", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: NumAlliesAlive", "Unsupported item effect metadata: NumAlliesAlive"]
 }

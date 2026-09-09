@@ -1,7 +1,17 @@
 {
   "name": "Rammus",
+  "displayName": "Rammus",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_MonsterTrainerChoice_Rammus",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Characters/TFT15_Rammus/Skins/Base/Images/TFT15_Rammus_splash_tile_26.TFT_Set15.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

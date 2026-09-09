@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Item_KnightsVow",
+  "displayName": "Knight's Vow",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_KnightsVow",
+  "description": "Extra %i:scaleArmor% +@Armor@<br>Holder is also a Knight<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+  "tooltip": "Extra %i:scaleArmor% +@Armor@<br>Holder is also a Knight<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_KnightsVow.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

@@ -1,7 +1,53 @@
 {
   "name": "Equestrian Training",
+  "displayName": "Equestrian Training",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Augment_KledCarry",
+  "description": "Gain a 2-star Kled. Your strongest Kled gains @DamageAmp*100@% Damage Amp and the ability to remount after attacking or getting hit @NumToAttack@ times in dismounted state.",
+  "tooltip": "Gain a 2-star Kled. Your strongest Kled gains @DamageAmp*100@% Damage Amp and the ability to remount after attacking or getting hit @NumToAttack@ times in dismounted state.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Equestrian-Training_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Equestrian Training:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "CooldownGate",
+      "trigger": "OnHit",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ICD",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnHit",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumToAttack",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 9, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnHit",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "0.1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "0.1" }, { "name": "ICD", "value": "1.5" }, { "name": "NumToAttack", "value": "9" }],
+  "importWarnings": ["Metadata-only item effect: DamageAmp -> GrantStats", "Metadata-only item effect: ICD -> CooldownGate", "Metadata-only item effect: NumToAttack -> DealDamage", "Unmapped item variable: ICD", "Unmapped item variable: NumToAttack"]
 }

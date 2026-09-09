@@ -1,7 +1,29 @@
 {
   "name": "Marksman Frame",
+  "displayName": "Marksman Frame",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_DoubleTap",
+  "description": "@DoubleAttackChance*100@% chance to attack twice.",
+  "tooltip": "@DoubleAttackChance*100@% chance to attack twice.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_DoubleTap.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DoubleAttackChance",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DoubleAttackChance", "value": "0.25" }],
+  "importWarnings": ["Unmapped item variable: DoubleAttackChance"]
 }

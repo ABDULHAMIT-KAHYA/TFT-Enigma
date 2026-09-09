@@ -1,7 +1,40 @@
 {
   "name": "Push your luck",
+  "displayName": "Push your luck",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Fortune_PushYourLuck",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHearts",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "WinPenalty",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusHearts", "value": "100" }, { "name": "WinPenalty", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: BonusHearts", "Unmapped item variable: WinPenalty", "Unsupported item effect metadata: BonusHearts", "Unsupported item effect metadata: WinPenalty"]
 }

@@ -1,7 +1,54 @@
 {
   "name": "Nightfall",
+  "displayName": "Nightfall",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Augment_Nightbringer",
+  "description": "Nightbringers take @HealthLossPercent*100@% max health damage at the start of combat, and gain additional @BonusShieldPercent*100@% max Health shield and @BonusDamageAmp@% bonus damage when the trait activates. Gain a Yasuo.<br>",
+  "tooltip": "Nightbringers take @HealthLossPercent*100@% max health damage at the start of combat, and gain additional @BonusShieldPercent*100@% max Health shield and @BonusDamageAmp@% bonus damage when the trait activates. Gain a Yasuo.<br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Nightfall_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Nightfall:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusDamageAmp",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusDamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusShieldPercent",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusShieldPercent", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Shield",
+      "trigger": "OnCombatStart",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthLossPercent",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:HealthLossPercent", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 0.3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusDamageAmp", "value": "10" }, { "name": "BonusShieldPercent", "value": "0.3" }, { "name": "HealthLossPercent", "value": "0.3" }],
+  "importWarnings": ["Metadata-only item effect: BonusDamageAmp -> GrantStats", "Metadata-only item effect: BonusShieldPercent -> Shield", "Metadata-only item effect: HealthLossPercent -> Shield", "Unmapped item variable: BonusShieldPercent", "Unmapped item variable: HealthLossPercent"]
 }

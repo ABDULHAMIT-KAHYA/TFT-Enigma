@@ -1,8 +1,65 @@
 {
   "name": "Warmog's Sacrificial Armor",
+  "displayName": "Warmog's Sacrificial Armor",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_WarmogsArmorShadow",
+  "description": "Grants %i:scaleHealth% <TFTShadowItemBonus>@TooltipDisplayHealth@ bonus Health</TFTShadowItemBonus> (including components).",
+  "tooltip": "Grants %i:scaleHealth% <TFTShadowItemBonus>@TooltipDisplayHealth@ bonus Health</TFTShadowItemBonus> (including components).",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Warmogs_Armor.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Warmog's Sacrificial Armor:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Warmog's Sacrificial Armor:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 1700, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 1700,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusHealth",
+      "rawSourceValue": "1700",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusHealth", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 1700, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthLoss",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TooltipDisplayHealth",
+      "rawSourceValue": "2000",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusHealth", "value": "1700" }, { "name": "Health", "value": "300" }, { "name": "HealthLoss", "value": "null" }, { "name": "TooltipDisplayHealth", "value": "2000" }],
+  "importWarnings": ["Unmapped item variable: TooltipDisplayHealth", "Unmapped non-numeric item variable: HealthLoss"]
 }

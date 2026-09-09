@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Random_5_Cost",
+  "displayName": "tft_item_name_PrisonBreak",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Random_5_Cost",
+  "description": "tft_item_description_PrisonBreak_Random5Cost",
+  "tooltip": "tft_item_description_PrisonBreak_Random5Cost",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/RuneOfAllegiance.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

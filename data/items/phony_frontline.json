@@ -1,7 +1,29 @@
 {
   "name": "Phony Frontline",
+  "displayName": "Phony Frontline",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_TargetDummies",
+  "description": "Gain @NumDummies@ Target Dummies.",
+  "tooltip": "Gain @NumDummies@ Target Dummies.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PhonyFrontline2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDummies",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumDummies", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumDummies", "Unsupported item effect metadata: NumDummies"]
 }

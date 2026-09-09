@@ -1,7 +1,51 @@
 {
   "name": "Spirit of Redemption",
+  "displayName": "Spirit of Redemption",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ItemSpiritVisage",
+  "description": "Gain a Spirit Visage. Every @Frequency@ seconds, Spirit Visage heals allies within @HexRadius@ hex for @MissingHealth@% of their missing Health.",
+  "tooltip": "Gain a Spirit Visage. Every @Frequency@ seconds, Spirit Visage heals allies within @HexRadius@ hex for @MissingHealth@% of their missing Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SpiritofRedemption_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Frequency",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HexRadius",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 7.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Missinghealth",
+      "rawSourceValue": "7.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Frequency", "value": "5" }, { "name": "HexRadius", "value": "1" }, { "name": "Missinghealth", "value": "7.5" }],
+  "importWarnings": ["Unmapped item variable: Frequency", "Unmapped item variable: HexRadius", "Unmapped item variable: Missinghealth"]
 }

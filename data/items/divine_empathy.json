@@ -1,7 +1,40 @@
 {
   "name": "Divine Empathy",
+  "displayName": "Divine Empathy",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_DivineEmpathy",
+  "description": "At @FirstPlayerHPThreshold@ and @SecondPlayerHPThreshold@ player Health, gain a random component.",
+  "tooltip": "At @FirstPlayerHPThreshold@ and @SecondPlayerHPThreshold@ player Health, gain a random component.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_DivineEmpathy.TFT_17_3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{8d5465d3}",
+      "rawSourceValue": "33",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 66,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{eca0e587}",
+      "rawSourceValue": "66",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{8d5465d3}", "value": "33" }, { "name": "{eca0e587}", "value": "66" }],
+  "importWarnings": ["Unmapped item variable: {8d5465d3}", "Unmapped item variable: {eca0e587}"]
 }

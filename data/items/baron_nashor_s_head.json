@@ -1,7 +1,17 @@
 {
   "name": "Baron Nashor's Head",
+  "displayName": "Baron Nashor's Head",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Item_BaronsHead",
+  "description": "<tftitemrules>The terror from the Void was no match for the ingenuity, firepower, and weapons of dubious legality from Piltover.</tftitemrules>",
+  "tooltip": "<tftitemrules>The terror from the Void was no match for the ingenuity, firepower, and weapons of dubious legality from Piltover.</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT9_MiscItems/Baron_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,29 @@
 {
   "name": "Growth Mindset",
+  "displayName": "Growth Mindset",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_GrowthMindset",
+  "description": "Gain @UpfrontXP@ XP.",
+  "tooltip": "Gain @UpfrontXP@ XP.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GrowthMindset_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UpfrontXP",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "UpfrontXP", "value": "50" }],
+  "importWarnings": ["Unmapped item variable: UpfrontXP", "Unsupported item effect metadata: UpfrontXP"]
 }

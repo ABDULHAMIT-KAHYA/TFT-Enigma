@@ -1,7 +1,17 @@
 {
   "name": "Mage Heart",
+  "displayName": "Mage Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_MageTrait",
+  "description": "Your team counts as having 1 additional Mage. Gain a Lillia.",
+  "tooltip": "Your team counts as having 1 additional Mage. Gain a Lillia.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mage-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

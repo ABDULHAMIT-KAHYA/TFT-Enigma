@@ -1,7 +1,40 @@
 {
   "name": "Last Second Save",
+  "displayName": "Last Second Save",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_LastSecondSave",
+  "description": "The first time each ally falls below @HealthThreshold*100@% Health, they restore @HealPercent*100@% maximum Health.",
+  "tooltip": "The first time each ally falls below @HealthThreshold*100@% Health, they restore @HealPercent*100@% maximum Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LastSecondSave_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealPercent",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.35,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "0.35",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HealPercent", "value": "0.2" }, { "name": "HealthThreshold", "value": "0.35" }],
+  "importWarnings": ["Unmapped item variable: HealPercent", "Unmapped item variable: HealthThreshold"]
 }

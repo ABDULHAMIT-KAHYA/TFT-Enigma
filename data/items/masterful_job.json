@@ -1,7 +1,29 @@
 {
   "name": "Masterful Job",
+  "displayName": "Masterful Job",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Commander_LargeForgePlus",
+  "description": "Gain an Artifact anvil and a completed item anvil.",
+  "tooltip": "Gain an Artifact anvil and a completed item anvil.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Job_s-Done-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
 }

@@ -1,7 +1,41 @@
 {
   "name": "Cutthroat",
+  "displayName": "Cutthroat",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_AssassinCutthroat",
+  "description": "Assassins Mana-Reave the first unit they attack, increasing their maximum Mana by @ManaReavePercent@% until they cast. Assassins deal @DamageAmp@% more damage against Mana-Reaved enemies. Gain a Qiyana.",
+  "tooltip": "Assassins Mana-Reave the first unit they attack, increasing their maximum Mana by @ManaReavePercent@% until they cast. Assassins deal @DamageAmp@% more damage against Mana-Reaved enemies. Gain a Qiyana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cutthroat2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Cutthroat:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 65,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaReavePercent",
+      "rawSourceValue": "65",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "20" }, { "name": "ManaReavePercent", "value": "65" }],
+  "importWarnings": ["Unmapped item variable: ManaReavePercent"]
 }

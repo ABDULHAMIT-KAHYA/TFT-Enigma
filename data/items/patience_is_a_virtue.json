@@ -1,7 +1,51 @@
 {
   "name": "Patience is a Virtue",
+  "displayName": "Patience is a Virtue",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PatienceIsAVirtue",
+  "description": "Gain @InitialRerolls@ rerolls now. Each round, gain @FreeRerolls@ free rerolls if you did not buy a champion last round.",
+  "tooltip": "Gain @InitialRerolls@ rerolls now. Each round, gain @FreeRerolls@ free rerolls if you did not buy a champion last round.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PatienceIsAVirtue_I.TFT_Set12.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FreeRerolls",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{4293de94}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{a4a3332a}",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "FreeRerolls", "value": "1" }, { "name": "{4293de94}", "value": "null" }, { "name": "{a4a3332a}", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: FreeRerolls", "Unmapped item variable: {a4a3332a}", "Unmapped non-numeric item variable: {4293de94}", "Unsupported item effect metadata: FreeRerolls", "Unsupported item effect metadata: {4293de94}", "Unsupported item effect metadata: {a4a3332a}"]
 }

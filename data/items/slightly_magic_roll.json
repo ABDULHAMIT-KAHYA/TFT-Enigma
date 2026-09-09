@@ -1,7 +1,73 @@
 {
   "name": "Slightly Magic Roll",
+  "displayName": "Slightly Magic Roll",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_MagicRollMinus",
+  "description": "Roll a die. Gain rewards based on the number rolled.<br><br>Reward: @TFTUnitProperty.item:TFT_Augment_MagicRoll@",
+  "tooltip": "Roll a die. Gain rewards based on the number rolled.<br><br>Reward: @TFTUnitProperty.item:TFT_Augment_MagicRoll@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SlightlyMagicRoll_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRerolls",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 160,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{3b0ef232}",
+      "rawSourceValue": "160",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{88f01f60}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{f3bceefa}",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "8" }, { "name": "NumRerolls", "value": "6" }, { "name": "{3b0ef232}", "value": "160" }, { "name": "{88f01f60}", "value": "1" }, { "name": "{f3bceefa}", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: NumRerolls", "Unmapped item variable: {3b0ef232}", "Unmapped item variable: {88f01f60}", "Unmapped item variable: {f3bceefa}", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: NumRerolls", "Unsupported item effect metadata: {3b0ef232}", "Unsupported item effect metadata: {88f01f60}", "Unsupported item effect metadata: {f3bceefa}"]
 }

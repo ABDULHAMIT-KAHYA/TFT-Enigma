@@ -1,7 +1,17 @@
 {
   "name": "Ranger Crest",
+  "displayName": "Ranger Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_RangerCrest",
+  "description": "Gain a Ranger Emblem and a Varus.",
+  "tooltip": "Gain a Ranger Emblem and a Varus.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Ranger_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

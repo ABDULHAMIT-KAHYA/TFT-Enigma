@@ -1,7 +1,17 @@
 {
   "name": "Shadow Transformer",
+  "displayName": "Shadow Transformer",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Consumable_ShadowTransformer",
+  "description": "Turns all items on a champion into shadow items when used.<br><br><tftitemrules>[CONSUMABLE - This item disappears when used.]</tftitemrules><br><tftitemrules>This Item cannot transform Force of Nature, which is above corruption.</tftitemrules>",
+  "tooltip": "Turns all items on a champion into shadow items when used.<br><br><tftitemrules>[CONSUMABLE - This item disappears when used.]</tftitemrules><br><tftitemrules>This Item cannot transform Force of Nature, which is above corruption.</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/TFT_Item_Consumable_ShadowTransformer.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Item_Bilgewater_MyronsDark",
+  "displayName": "Treasure Typhoon",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Bilgewater_MyronsDark",
+  "description": "Summon a tidal wave that brings valuable treasures from the deep.",
+  "tooltip": "Summon a tidal wave that brings valuable treasures from the deep.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Item_Bilgewater_Jollyroger.TFT_Set16.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

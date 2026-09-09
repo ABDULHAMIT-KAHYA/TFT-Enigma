@@ -1,7 +1,17 @@
 {
   "name": "9 components",
+  "displayName": "9 components",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_RandomComponent_9",
+  "description": "9 components",
+  "tooltip": "9 components",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

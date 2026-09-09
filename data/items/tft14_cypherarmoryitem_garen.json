@@ -1,0 +1,29 @@
+{
+  "name": "TFT14_CypherArmoryItem_Garen",
+  "displayName": "Garen",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_Garen",
+  "description": "Garen",
+  "tooltip": "Garen",
+  "iconPath": "ASSETS/Characters/TFT14_Garen/HUD/TFT14_Garen_Square.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
+}

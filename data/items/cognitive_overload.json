@@ -1,7 +1,84 @@
 {
   "name": "Cognitive Overload",
+  "displayName": "Cognitive Overload",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_CognitiveOverload",
+  "description": "Gain @Gold@ gold, @OneCostCount@ 2-star 1-cost champion, @TwoCostCount@ 2-cost champion, @ThreeCostCount@ 3-cost champions, @XP@ XP, and @FreeRolls@ Shop reroll.",
+  "tooltip": "Gain @Gold@ gold, @OneCostCount@ 2-star 1-cost champion, @TwoCostCount@ 2-cost champion, @ThreeCostCount@ 3-cost champions, @XP@ XP, and @FreeRolls@ Shop reroll.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CognitiveOverload_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FreeRolls",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "OneCostCount",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ThreeCostCount",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TwoCostCount",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "FreeRolls", "value": "1" }, { "name": "Gold", "value": "7" }, { "name": "OneCostCount", "value": "1" }, { "name": "ThreeCostCount", "value": "2" }, { "name": "TwoCostCount", "value": "1" }, { "name": "XP", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: FreeRolls", "Unmapped item variable: Gold", "Unmapped item variable: OneCostCount", "Unmapped item variable: ThreeCostCount", "Unmapped item variable: TwoCostCount", "Unmapped item variable: XP", "Unsupported item effect metadata: FreeRolls", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: OneCostCount", "Unsupported item effect metadata: ThreeCostCount", "Unsupported item effect metadata: TwoCostCount", "Unsupported item effect metadata: XP"]
 }

@@ -1,7 +1,63 @@
 {
   "name": "Spite",
+  "displayName": "Spite",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Item_Spite",
+  "description": "Combat start: The holder and all adjacent allies gain @ADIncrease*100@% Attack Damage and @APIncrease@ Ability Power.<br><br>When the holder dies, Stun all enemies within 2-hexes for @Duration@ seconds.<br><br>​​<tftitemrules>[Support item]</tftitemrules>",
+  "tooltip": "Combat start: The holder and all adjacent allies gain @ADIncrease*100@% Attack Damage and @APIncrease@ Ability Power.<br><br>When the holder dies, Stun all enemies within 2-hexes for @Duration@ seconds.<br><br>​​<tftitemrules>[Support item]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_Spite.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Spite:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ADIncrease",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "APIncrease",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 150,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "150",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 150, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "ADIncrease", "value": "0.15" }, { "name": "APIncrease", "value": "20" }, { "name": "Duration", "value": "2" }, { "name": "Health", "value": "150" }],
+  "importWarnings": ["Metadata-only item effect: ADIncrease -> Aura", "Metadata-only item effect: APIncrease -> Aura", "Metadata-only item effect: Duration -> Aura", "Metadata-only item effect: Health -> GrantStats", "Unmapped item variable: ADIncrease", "Unmapped item variable: APIncrease", "Unmapped item variable: Duration"]
 }

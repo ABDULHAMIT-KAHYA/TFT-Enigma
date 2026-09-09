@@ -1,7 +1,29 @@
 {
   "name": "Star Power",
+  "displayName": "Star Power",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_StarGuardian_Superstar",
+  "description": "Star Guardians with a Power Up grant @PercentIncrease*100@% increased Star Guardian bonuses. Gain a Xayah.",
+  "tooltip": "Star Guardians with a Power Up grant @PercentIncrease*100@% increased Star Guardian bonuses. Gain a Xayah.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/StarSailors_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentIncrease",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PercentIncrease", "value": "1.5" }],
+  "importWarnings": ["Unmapped item variable: PercentIncrease", "Unsupported item effect metadata: PercentIncrease"]
 }

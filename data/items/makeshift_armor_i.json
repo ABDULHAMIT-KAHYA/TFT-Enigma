@@ -1,7 +1,29 @@
 {
   "name": "Makeshift Armor I",
+  "displayName": "Makeshift Armor I",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_MakeshiftArmor1",
+  "description": "Allies without items equipped gain @Resists@ Armor and Magic Resist.",
+  "tooltip": "Allies without items equipped gain @Resists@ Armor and Magic Resist.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Makeshift1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Resists",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Resists", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: Resists", "Unsupported item effect metadata: Resists"]
 }

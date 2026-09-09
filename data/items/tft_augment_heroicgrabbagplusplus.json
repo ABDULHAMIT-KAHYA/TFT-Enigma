@@ -1,0 +1,40 @@
+{
+  "name": "TFT_Augment_HeroicGrabBagPlusPlus",
+  "displayName": "Heroic Grab Bag++",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_HeroicGrabBagPlusPlus",
+  "description": "Gain @LesserDuplicatorAmount@ Lesser Champion Duplicators and @Gold@ gold.<br><br><rules>This item allows you to copy a 3-cost or less champion.</rules>",
+  "tooltip": "Gain @LesserDuplicatorAmount@ Lesser Champion Duplicators and @Gold@ gold.<br><br><rules>This item allows you to copy a 3-cost or less champion.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Heroic-Grab-Bag-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 14,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "14",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LesserDuplicatorAmount",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "14" }, { "name": "LesserDuplicatorAmount", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: LesserDuplicatorAmount", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: LesserDuplicatorAmount"]
+}

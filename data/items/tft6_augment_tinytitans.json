@@ -1,0 +1,29 @@
+{
+  "name": "TFT6_Augment_TinyTitans",
+  "displayName": "Tiny Titans",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_TinyTitans",
+  "description": "Increase your current and max player health by @heal@.",
+  "tooltip": "Increase your current and max player health by @heal@.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tiny-Titans-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Heal",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Heal", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: Heal"]
+}

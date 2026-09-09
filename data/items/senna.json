@@ -1,7 +1,17 @@
 {
   "name": "Senna",
+  "displayName": "Senna",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Senna",
+  "description": "Senna",
+  "tooltip": "Senna",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Senna_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

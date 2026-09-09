@@ -1,7 +1,17 @@
 {
   "name": "Storyweaver",
+  "displayName": "Storyweaver",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitStoryweaverActivator",
+  "description": "Summon a Hero named Kayle and evolve her as you level up!<br><br><row>(@TFTTrait.TFTEvent5YR_Storyweaver.1:MinUnits@) When you reach level @TFTTrait.TFTEvent5YR_Storyweaver:FirstArmoryLevel@, Kayle upgrades to 2-star. Pick a supportive effect.</row><br><row>(@TFTTrait.TFTEvent5YR_Storyweaver.2:MinUnits@) Kayle evolves again at levels @TFTTrait.TFTEvent5YR_Storyweaver:SecondArmoryLevel@, @TFTTrait.TFTEvent5YR_Storyweaver:ThirdArmoryLevel@ and @TFTTrait.TFTEvent5YR_Storyweaver:FourStarUpgradeLevel@:<br>Level @TFTTrait.TFTEvent5YR_Storyweaver:SecondArmoryLevel@: Pick a combat effect. <br>Level @TFTTrait.TFTEvent5YR_Storyweaver:ThirdArmoryLevel@: Kayle upgrades to 3-star. Pick a combat effect.<br>Level @TFTTrait.TFTEvent5YR_Storyweaver:FourStarUpgradeLevel@: Kayle upgrades to 4-star.</row><br>",
+  "tooltip": "Summon a Hero named Kayle and evolve her as you level up!<br><br><row>(@TFTTrait.TFTEvent5YR_Storyweaver.1:MinUnits@) When you reach level @TFTTrait.TFTEvent5YR_Storyweaver:FirstArmoryLevel@, Kayle upgrades to 2-star. Pick a supportive effect.</row><br><row>(@TFTTrait.TFTEvent5YR_Storyweaver.2:MinUnits@) Kayle evolves again at levels @TFTTrait.TFTEvent5YR_Storyweaver:SecondArmoryLevel@, @TFTTrait.TFTEvent5YR_Storyweaver:ThirdArmoryLevel@ and @TFTTrait.TFTEvent5YR_Storyweaver:FourStarUpgradeLevel@:<br>Level @TFTTrait.TFTEvent5YR_Storyweaver:SecondArmoryLevel@: Pick a combat effect. <br>Level @TFTTrait.TFTEvent5YR_Storyweaver:ThirdArmoryLevel@: Kayle upgrades to 3-star. Pick a combat effect.<br>Level @TFTTrait.TFTEvent5YR_Storyweaver:FourStarUpgradeLevel@: Kayle upgrades to 4-star.</row><br>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5YR_Set14_Storyweaver.tex",
+  "itemCategory": "SupportItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

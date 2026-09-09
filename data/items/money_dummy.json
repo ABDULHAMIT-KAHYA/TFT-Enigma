@@ -1,7 +1,17 @@
 {
   "name": "Money Dummy",
+  "displayName": "Money Dummy",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_Fortune",
+  "description": "When Fortune is active, gain a helpful Money Dummy that aids you in combat or drops gold depending on if it is in the front or back row. Gain a Tahm Kench and Annie. ",
+  "tooltip": "When Fortune is active, gain a helpful Money Dummy that aids you in combat or drops gold depending on if it is in the front or back row. Gain a Tahm Kench and Annie. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Money-Sprout_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

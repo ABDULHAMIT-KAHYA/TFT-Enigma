@@ -1,7 +1,40 @@
 {
   "name": "Top of the Scrap Heap",
+  "displayName": "Top of the Scrap Heap",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Scrap",
+  "description": "Every @NumScrapItemsConverted@ components Scrap champions convert, gain a random component (max @MaxComponents@). Gain a Powder and a Trundle.<br><br>Converted: @TFTUnitProperty.item:TFT13_Augment_Scrap_NumComponents@/@NumScrapItemsConverted@",
+  "tooltip": "Every @NumScrapItemsConverted@ components Scrap champions convert, gain a random component (max @MaxComponents@). Gain a Powder and a Trundle.<br><br>Converted: @TFTUnitProperty.item:TFT13_Augment_Scrap_NumComponents@/@NumScrapItemsConverted@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TopOfTheScrapHeap_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxComponents",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumScrapItemsConverted",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxComponents", "value": "5" }, { "name": "NumScrapItemsConverted", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: MaxComponents", "Unmapped item variable: NumScrapItemsConverted", "Unsupported item effect metadata: MaxComponents", "Unsupported item effect metadata: NumScrapItemsConverted"]
 }

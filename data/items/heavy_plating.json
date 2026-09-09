@@ -1,7 +1,52 @@
 {
   "name": "Heavy Plating",
+  "displayName": "Heavy Plating",
+  "isPlaceholder": false,
+  "sourceId": "TFT17_GravesTrait_Offense_HeavyPlating",
+  "description": "Gain @BaseHealth@ Base Health, @BonusAR@ Armor, and @BonusMR@ Magic Resistance.",
+  "tooltip": "Gain @BaseHealth@ Base Health, @BonusAR@ Armor, and @BonusMR@ Magic Resistance.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_HeavyPlating.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Heavy Plating:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusMR",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:BonusMR", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseHealth",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAR",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseHealth", "value": "300" }, { "name": "BonusAR", "value": "20" }, { "name": "BonusMR", "value": "20" }],
+  "importWarnings": ["Unmapped item variable: BaseHealth", "Unmapped item variable: BonusAR"]
 }

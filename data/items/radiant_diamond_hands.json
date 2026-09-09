@@ -1,8 +1,87 @@
 {
   "name": "Radiant Diamond Hands",
+  "displayName": "Radiant Diamond Hands",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Item_ShimmerscaleDiamondHands_Radiant",
+  "description": "Once per combat: At @HPThreshold1*100@% Health and @HPThreshold2*100@% Health, become invulnerable for @BaseDamageImmunityTime@ second and grant %i:goldCoins% <TFTRadiantItemBonus>@GoldPerImmunityProc@</TFTRadiantItemBonus> gold.",
+  "tooltip": "Once per combat: At @HPThreshold1*100@% Health and @HPThreshold2*100@% Health, become invulnerable for @BaseDamageImmunityTime@ second and grant %i:goldCoins% <TFTRadiantItemBonus>@GoldPerImmunityProc@</TFTRadiantItemBonus> gold.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set7_Shimmerscale/Shimmerscale_DiamondHands_Radiant.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:Radiant Diamond Hands:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 1200, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Radiant Diamond Hands:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 75, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "75",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 75, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 1200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "1200",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 1200, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseDamageImmunityTime",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldPerImmunityProc",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.66,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPThreshold1",
+      "rawSourceValue": "0.66",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 0.33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPThreshold2",
+      "rawSourceValue": "0.33",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "75" }, { "name": "BaseDamageImmunityTime", "value": "1" }, { "name": "GoldPerImmunityProc", "value": "3" }, { "name": "HPThreshold1", "value": "0.66" }, { "name": "HPThreshold2", "value": "0.33" }, { "name": "Health", "value": "1200" }],
+  "importWarnings": ["Unmapped item variable: BaseDamageImmunityTime", "Unmapped item variable: GoldPerImmunityProc", "Unmapped item variable: HPThreshold1", "Unmapped item variable: HPThreshold2"]
 }

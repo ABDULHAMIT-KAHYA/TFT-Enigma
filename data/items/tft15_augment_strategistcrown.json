@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_StrategistCrown",
+  "displayName": "Strategist Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_StrategistCrown",
+  "description": "Gain a Strategist Emblem, a Janna, and an Adaptive Helm.",
+  "tooltip": "Gain a Strategist Emblem, a Janna, and an Adaptive Helm.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/StrategistCrown_III.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

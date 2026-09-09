@@ -1,0 +1,40 @@
+{
+  "name": "TFT13_JunkerKing_Pass",
+  "displayName": "Spare Parts!",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_JunkerKing_Pass",
+  "description": "Keep your gold! Rumble permanently gains @Pass_AP@ Ability Power and @Pass_Health@&nbsp;Health.",
+  "tooltip": "Keep your gold! Rumble permanently gains @Pass_AP@ Ability Power and @Pass_Health@&nbsp;Health.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT13/TFT13_JunkerKing_Pass_Icon.TFT_Set13.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Pass_AP",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Pass_Health",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Pass_AP", "value": "3" }, { "name": "Pass_Health", "value": "50" }],
+  "importWarnings": ["Unmapped item variable: Pass_AP", "Unmapped item variable: Pass_Health"]
+}

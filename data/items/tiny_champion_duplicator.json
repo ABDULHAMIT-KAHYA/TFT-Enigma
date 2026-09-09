@@ -1,7 +1,17 @@
 {
   "name": "Tiny Champion Duplicator",
+  "displayName": "Tiny Champion Duplicator",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Consumable_ChampionDuplicator_I",
+  "description": "Use on a 1-cost champion to create a 1-star copy of them.",
+  "tooltip": "Use on a 1-cost champion to create a 1-star copy of them.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Consumable_ChampionDuplicator_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

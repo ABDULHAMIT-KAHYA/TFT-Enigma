@@ -1,7 +1,29 @@
 {
   "name": "Small Grab Bag",
+  "displayName": "Small Grab Bag",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_SmallGrabBag",
+  "description": "Gain @NumComponents@ random item components.",
+  "tooltip": "Gain @NumComponents@ random item components.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SmallGrabBag_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumComponents",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumComponents", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumComponents", "Unsupported item effect metadata: NumComponents"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "Deadlier Caps",
+  "displayName": "Deadlier Caps",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_DeadlierCaps",
+  "description": "Gain a Rabadon's Deathcap. Rabadon's Deathcaps permanently gain @AP@% Ability Power whenever their holders score a takedown.",
+  "tooltip": "Gain a Rabadon's Deathcap. Rabadon's Deathcaps permanently gain @AP@% Ability Power whenever their holders score a takedown.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DeadlierCaps_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TakeDowns",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "null" }, { "name": "TakeDowns", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: AP", "Unmapped non-numeric item variable: TakeDowns", "Unsupported item effect metadata: AP", "Unsupported item effect metadata: TakeDowns"]
 }

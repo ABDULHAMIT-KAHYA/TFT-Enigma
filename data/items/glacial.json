@@ -1,7 +1,17 @@
 {
   "name": "Glacial",
+  "displayName": "Glacial",
+  "isPlaceholder": true,
+  "sourceId": "TFTEvent_5YR_Item_TraitGlacialActivator",
+  "description": "Gain a Glacial Mallet. Attacks from champions holding a mallet have a @TFTTrait.TFTEvent5YR_Glacial.1:ProcPercent*100@% chance to stun their target for @TFTTrait.TFTEvent5YR_Glacial.1:StunDuration@ second and deal bonus magic damage. <br><br><row>(@TFTTrait.TFTEvent5YR_Glacial.1:MinUnits@) @TFTTrait.TFTEvent5YR_Glacial.1:BonusDamage@ magic damage.</row><br><row>(@TFTTrait.TFTEvent5YR_Glacial.2:MinUnits@) @TFTTrait.TFTEvent5YR_Glacial.2:BonusDamage@ magic damage. Gain another Glacial Mallet.</row>",
+  "tooltip": "Gain a Glacial Mallet. Attacks from champions holding a mallet have a @TFTTrait.TFTEvent5YR_Glacial.1:ProcPercent*100@% chance to stun their target for @TFTTrait.TFTEvent5YR_Glacial.1:StunDuration@ second and deal bonus magic damage. <br><br><row>(@TFTTrait.TFTEvent5YR_Glacial.1:MinUnits@) @TFTTrait.TFTEvent5YR_Glacial.1:BonusDamage@ magic damage.</row><br><row>(@TFTTrait.TFTEvent5YR_Glacial.2:MinUnits@) @TFTTrait.TFTEvent5YR_Glacial.2:BonusDamage@ magic damage. Gain another Glacial Mallet.</row>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/TFTEvent5YR/5Year_TraitArmory_Glacial.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

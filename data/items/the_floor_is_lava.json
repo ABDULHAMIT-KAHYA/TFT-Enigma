@@ -1,7 +1,52 @@
 {
   "name": "The Floor is Lava",
+  "displayName": "The Floor is Lava",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_TheFloorIsLava",
+  "description": "During combat, ALL units are @BurnPctTooltip@% Burned and @GrievousWoundsPct@% Wounded. Your team gains @Omnivamp*100@% Omnivamp.<br><br><tftitemrules><tftbold>Burn</tftbold>: Deals a percent of the target's max Health as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>",
+  "tooltip": "During combat, ALL units are @BurnPctTooltip@% Burned and @GrievousWoundsPct@% Wounded. Your team gains @Omnivamp*100@% Omnivamp.<br><br><tftitemrules><tftbold>Burn</tftbold>: Deals a percent of the target's max Health as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TheFloorIsLava_II.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:The Floor is Lava:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Omnivamp",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Omnivamp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "Omnivamp", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BurnPctTooltip",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GrievousWoundsPct",
+      "rawSourceValue": "33",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BurnPctTooltip", "value": "1" }, { "name": "GrievousWoundsPct", "value": "33" }, { "name": "Omnivamp", "value": "0.2" }],
+  "importWarnings": ["Unmapped item variable: BurnPctTooltip", "Unmapped item variable: GrievousWoundsPct"]
 }

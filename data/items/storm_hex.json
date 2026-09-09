@@ -1,7 +1,29 @@
 {
   "name": "Storm Hex",
+  "displayName": "Storm Hex",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_EmpoweredHex_Electric",
+  "description": "Place the hex on a champion. The first time an ally in the hex hits an enemy with an Ability, that enemy is Stunned for @StunDuration@ seconds.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Place the hex on a champion. The first time an ally in the hex hits an enemy with an Ability, that enemy is Stunned for @StunDuration@ seconds.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_HexPaintbrush.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "OncePerCombatGate",
+      "trigger": "Passive",
+      "value": 1.75,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StunDuration",
+      "rawSourceValue": "1.75",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "StunDuration", "value": "1.75" }],
+  "importWarnings": ["Unmapped item variable: StunDuration"]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Janna",
+  "displayName": "Janna",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Janna",
+  "description": "Janna",
+  "tooltip": "Janna",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Janna_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

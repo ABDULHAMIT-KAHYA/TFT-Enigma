@@ -1,7 +1,41 @@
 {
   "name": "Trickster's Gloves",
+  "displayName": "Trickster's Gloves",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_ThiefsGlovesShadow",
+  "description": "At the beginning of each planning phase, the holder equips 2 temporary items. These are always full shadow items.<br><br><tftitemrules>[Consumes Three Item Slots]</tftitemrules>",
+  "tooltip": "At the beginning of each planning phase, the holder equips 2 temporary items. These are always full shadow items.<br><br><tftitemrules>[Consumes Three Item Slots]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Thieves_Gloves.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Trickster's Gloves:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DodgeChance",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "15" }, { "name": "DodgeChance", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: DodgeChance", "Unsupported item effect metadata: DodgeChance"]
 }

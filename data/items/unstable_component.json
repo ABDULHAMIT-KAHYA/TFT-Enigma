@@ -1,7 +1,17 @@
 {
   "name": "Unstable Component",
+  "displayName": "Unstable Component",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Hack_Item_UnstableComponent",
+  "description": "Until equipped, this component transforms each round",
+  "tooltip": "Until equipped, this component transforms each round",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistRandomComponent.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

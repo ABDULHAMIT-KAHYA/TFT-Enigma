@@ -1,7 +1,41 @@
 {
   "name": "Dazzling Display",
+  "displayName": "Dazzling Display",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Augment_Sorcerer_DazzlingDisplay",
+  "description": "Enemies who take damage from Sorcerer Abilities deal @DamageReduction*100%@% less damage for @Duration@ seconds. Gain a Lux and a Lucian.",
+  "tooltip": "Enemies who take damage from Sorcerer Abilities deal @DamageReduction*100%@% less damage for @Duration@ seconds. Gain a Lux and a Lucian.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DazzlingDisplay_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Dazzling Display:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Duration",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageReduction",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageReduction", "value": "0.2" }, { "name": "Duration", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: Duration"]
 }

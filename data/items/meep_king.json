@@ -1,7 +1,17 @@
 {
   "name": "Meep King",
+  "displayName": "Meep King",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_Augment_Astronaut_KingMeep",
+  "description": "Gain one of the four Meeplords.<br><br><rules>(Power scales with Stage.)</rules>",
+  "tooltip": "Gain one of the four Meeplords.<br><br><rules>(Power scales with Stage.)</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

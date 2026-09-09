@@ -1,7 +1,41 @@
 {
   "name": "Spear's Will",
+  "displayName": "Spear's Will",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_ShojinSpirit",
+  "description": "Your team gains @AD*100@% Attack Damage and @Mana@ Mana. Gain a B.F. Sword and a Tear of the Goddess.",
+  "tooltip": "Your team gains @AD*100@% Attack Damage and @Mana@ Mana. Gain a B.F. Sword and a Tear of the Goddess.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Will-of-the-Spear-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Spear's Will:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.08,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.08",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.08, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.08" }, { "name": "Mana", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: Mana"]
 }

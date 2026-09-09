@@ -1,7 +1,17 @@
 {
   "name": "Psychic Forge",
+  "displayName": "Psychic Forge",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_PsychicForge",
+  "description": "Round start Completed Items on benched champions turn into one of their recommended items. Gain a random completed item.",
+  "tooltip": "Round start Completed Items on benched champions turn into one of their recommended items. Gain a random completed item.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/PsychicForge_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

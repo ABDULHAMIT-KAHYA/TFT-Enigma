@@ -1,7 +1,17 @@
 {
   "name": "Darius",
+  "displayName": "Darius",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Darius",
+  "description": "Darius",
+  "tooltip": "Darius",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Darius_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

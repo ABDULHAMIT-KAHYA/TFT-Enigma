@@ -1,0 +1,17 @@
+{
+  "name": "TFT7_Item_TreasureDragonGold4",
+  "displayName": "4 Gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Item_TreasureDragonGold4",
+  "description": "4 Gold",
+  "tooltip": "4 Gold",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistGiveGold.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

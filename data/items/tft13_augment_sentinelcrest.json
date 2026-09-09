@@ -1,0 +1,17 @@
+{
+  "name": "TFT13_Augment_SentinelCrest",
+  "displayName": "Sentinel Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_SentinelCrest",
+  "description": "Gain a Sentinel Emblem and a Rell.",
+  "tooltip": "Gain a Sentinel Emblem and a Rell.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crest_Sentinel_II.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

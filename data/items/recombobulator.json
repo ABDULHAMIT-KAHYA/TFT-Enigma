@@ -1,7 +1,29 @@
 {
   "name": "Recombobulator",
+  "displayName": "Recombobulator",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_Recombobulator",
+  "description": "Champions on your board permanently transform into random champions 1 cost tier higher (max 5). Gain @NumRemovers@ Magnetic Removers.",
+  "tooltip": "Champions on your board permanently transform into random champions 1 cost tier higher (max 5). Gain @NumRemovers@ Magnetic Removers.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Recombobulator-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRemovers",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumRemovers", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumRemovers", "Unsupported item effect metadata: NumRemovers"]
 }

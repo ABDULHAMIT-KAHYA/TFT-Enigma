@@ -1,0 +1,41 @@
+{
+  "name": "TFT11_Encounter_ChoiceItem_GiveWarmogs",
+  "displayName": "Warmog's Armor",
+  "isPlaceholder": false,
+  "sourceId": "TFT11_Encounter_ChoiceItem_GiveWarmogs",
+  "description": "Gain @BonusPercentHP*100@% max Health.<br>",
+  "tooltip": "Gain @BonusPercentHP*100@% max Health.<br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_WarmogsArmor.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+    { "name": "Item:TFT11_Encounter_ChoiceItem_GiveWarmogs:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 500, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "500",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 500, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusPercentHP",
+      "rawSourceValue": "0.18",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusPercentHP", "value": "0.18" }, { "name": "Health", "value": "500" }],
+  "importWarnings": ["Unmapped item variable: BonusPercentHP"]
+}

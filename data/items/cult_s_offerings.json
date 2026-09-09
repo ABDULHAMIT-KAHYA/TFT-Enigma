@@ -1,7 +1,51 @@
 {
   "name": "Cult's Offerings",
+  "displayName": "Cult's Offerings",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_Cultist",
+  "description": "For every Gold above @MinimumGold@, up to @MaximumGold@, that you have at the start of planning, Galio permanently gains 5 health. Gain a Twisted Fate, Pyke, and Elise. <br>(Health Gained:&nbsp;@TFTUnitProperty.item:TFT4_Augment_Cultist_HealthGained@)",
+  "tooltip": "For every Gold above @MinimumGold@, up to @MaximumGold@, that you have at the start of planning, Galio permanently gains 5 health. Gain a Twisted Fate, Pyke, and Elise. <br>(Health Gained:&nbsp;@TFTUnitProperty.item:TFT4_Augment_Cultist_HealthGained@)",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cults-Offering_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaximumGold",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MinimumGold",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{39ea6827}",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaximumGold", "value": "60" }, { "name": "MinimumGold", "value": "30" }, { "name": "{39ea6827}", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: MaximumGold", "Unmapped item variable: MinimumGold", "Unmapped item variable: {39ea6827}"]
 }

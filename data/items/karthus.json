@@ -1,7 +1,17 @@
 {
   "name": "Karthus",
+  "displayName": "Karthus",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Karthus",
+  "description": "Karthus",
+  "tooltip": "Karthus",
+  "iconPath": "ASSETS/Characters/TFT11_Karthus/Skins/Base/Images/TFT11_Karthus_splash_centered_26.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

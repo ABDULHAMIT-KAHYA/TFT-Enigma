@@ -1,0 +1,51 @@
+{
+  "name": "TFT_Augment_AllThatShimmersPlus",
+  "displayName": "All That Shimmers+",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_AllThatShimmersPlus",
+  "description": "Choose a gold-generating Artifact. Gain a Magnetic Remover and @GoldGranted@ gold.",
+  "tooltip": "Choose a gold-generating Artifact. Gain a Magnetic Remover and @GoldGranted@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/All-that-Shimmers-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmoryChoiceCount",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldGranted",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InterestCap",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ArmoryChoiceCount", "value": "3" }, { "name": "GoldGranted", "value": "4" }, { "name": "InterestCap", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: ArmoryChoiceCount", "Unmapped item variable: GoldGranted", "Unmapped item variable: InterestCap", "Unsupported item effect metadata: ArmoryChoiceCount", "Unsupported item effect metadata: GoldGranted", "Unsupported item effect metadata: InterestCap"]
+}

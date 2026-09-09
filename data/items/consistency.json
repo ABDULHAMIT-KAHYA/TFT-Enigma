@@ -1,7 +1,17 @@
 {
   "name": "Consistency",
+  "displayName": "Consistency",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_Consistency",
+  "description": "Gain double win and loss streak gold.",
+  "tooltip": "Gain double win and loss streak gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Consistency-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

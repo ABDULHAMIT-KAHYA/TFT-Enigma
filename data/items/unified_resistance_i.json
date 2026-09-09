@@ -1,8 +1,43 @@
 {
   "name": "Unified Resistance I",
+  "displayName": "Unified Resistance I",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_Formation1",
+  "description": "If you have 3 or more champions in the same row at the start of combat, they all gain @armor@ Armor and Magic Resist. ",
+  "tooltip": "If you have 3 or more champions in the same row at the start of combat, they all gain @armor@ Armor and Magic Resist. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Red-Rover-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Unified Resistance I:MagicResist", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Unified Resistance I:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MR",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MR", "effectType": "BonusMagicResist", "crowdControlType": "None", "affectedStat": "MagicResist", "modifierType": "Flat", "value": 15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "15" }, { "name": "MR", "value": "15" }],
+  "importWarnings": ["Metadata-only item effect: Armor -> GrantStats", "Metadata-only item effect: MR -> GrantStats"]
 }

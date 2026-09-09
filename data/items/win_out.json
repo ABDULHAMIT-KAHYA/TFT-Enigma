@@ -1,7 +1,51 @@
 {
   "name": "Win Out",
+  "displayName": "Win Out",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_WinOut",
+  "description": "When you reach level 9, immediately level to 10 and gain @RerollCount@ free Shop rerolls. Gain @InstantXP@ XP now.",
+  "tooltip": "When you reach level 9, immediately level to 10 and gain @RerollCount@ free Shop rerolls. Gain @InstantXP@ XP now.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WinOut_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InstantXP",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LevelReq",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RerollCount",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "InstantXP", "value": "6" }, { "name": "LevelReq", "value": "9" }, { "name": "RerollCount", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: InstantXP", "Unmapped item variable: LevelReq", "Unmapped item variable: RerollCount", "Unsupported item effect metadata: InstantXP", "Unsupported item effect metadata: LevelReq", "Unsupported item effect metadata: RerollCount"]
 }

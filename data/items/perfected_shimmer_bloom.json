@@ -1,8 +1,131 @@
 {
   "name": "Perfected Shimmer Bloom",
+  "displayName": "Perfected Shimmer Bloom",
+  "isPlaceholder": false,
+  "sourceId": "TFT13_Crime_Prismatic_ShimmerBloom",
+  "description": "Increase healing and shielding by <TFTBonus>@IncreasedHealShieldPercent*100@%</TFTBonus>. Every @Cadence@ seconds, gain <TFTBonus>@ShieldAmount@</TFTBonus> Shield for @ShieldDuration@ seconds and grant the same Shield to the @NumAllies@ lowest Health allies.<br><br><scaleShimmer>Perfected Bonus:</scaleShimmer> Shielding or healing allies grants them @PrismaticAllyAP@ Ability Power and @PrismaticAllyAS*100@% Attack Speed. (Cooldown: @PrismaticCooldownTime@s)<br><rules>Recommended users: Renni and Renata Glasc</rules>",
+  "tooltip": "Increase healing and shielding by <TFTBonus>@IncreasedHealShieldPercent*100@%</TFTBonus>. Every @Cadence@ seconds, gain <TFTBonus>@ShieldAmount@</TFTBonus> Shield for @ShieldDuration@ seconds and grant the same Shield to the @NumAllies@ lowest Health allies.<br><br><scaleShimmer>Perfected Bonus:</scaleShimmer> Shielding or healing allies grants them @PrismaticAllyAP@ Ability Power and @PrismaticAllyAS*100@% Attack Speed. (Cooldown: @PrismaticCooldownTime@s)<br><rules>Recommended users: Renni and Renata Glasc</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT13_Crime_Prismatic_ShimmerBloom.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Perfected Shimmer Bloom:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 450, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Perfected Shimmer Bloom:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 60, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Cadence",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "IncreasedHealShieldPercent",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumAllies",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PrismaticAllyAP",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 0.25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PrismaticAllyAS",
+      "rawSourceValue": "0.25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PrismaticCooldownTime",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 400,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldAmount",
+      "rawSourceValue": "400",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "CooldownGate",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 60, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 450,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "450",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 450, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "60" }, { "name": "Cadence", "value": "6" }, { "name": "Health", "value": "450" }, { "name": "IncreasedHealShieldPercent", "value": "0.4" }, { "name": "NumAllies", "value": "3" }, { "name": "PrismaticAllyAP", "value": "25" }, { "name": "PrismaticAllyAS", "value": "0.25" }, { "name": "PrismaticCooldownTime", "value": "2" }, { "name": "ShieldAmount", "value": "400" }, { "name": "ShieldDuration", "value": "10" }],
+  "importWarnings": ["Unmapped item variable: Cadence", "Unmapped item variable: IncreasedHealShieldPercent", "Unmapped item variable: NumAllies", "Unmapped item variable: PrismaticAllyAP", "Unmapped item variable: PrismaticAllyAS", "Unmapped item variable: PrismaticCooldownTime", "Unmapped item variable: ShieldAmount", "Unmapped item variable: ShieldDuration"]
 }

@@ -1,7 +1,63 @@
 {
   "name": "Rabadon's Caustic Deathcap",
+  "displayName": "Rabadon's Caustic Deathcap",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_RabadonsDeathcapShadow",
+  "description": "Grants %i:scaleAP% <TFTShadowItemBonus>@TooltipDisplayAP@</TFTShadowItemBonus> bonus Ability Power (including components). ",
+  "tooltip": "Grants %i:scaleAP% <TFTShadowItemBonus>@TooltipDisplayAP@</TFTShadowItemBonus> bonus Ability Power (including components). ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Rabadons_Deathcap.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Rabadon's Caustic Deathcap:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAP",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 120,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TooltipDisplayAP",
+      "rawSourceValue": "120",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{446bf6cd}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AP", "value": "20" }, { "name": "BonusAP", "value": "100" }, { "name": "TooltipDisplayAP", "value": "120" }, { "name": "{446bf6cd}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: BonusAP", "Unmapped item variable: TooltipDisplayAP", "Unmapped non-numeric item variable: {446bf6cd}", "Unsupported item effect metadata: BonusAP", "Unsupported item effect metadata: TooltipDisplayAP", "Unsupported item effect metadata: {446bf6cd}"]
 }

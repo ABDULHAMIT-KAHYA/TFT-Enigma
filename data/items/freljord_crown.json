@@ -1,7 +1,17 @@
 {
   "name": "Freljord Crown",
+  "displayName": "Freljord Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_FreljordCrown",
+  "description": "Get a Freljord Emblem, a Hextech Gunblade, and an Anivia.",
+  "tooltip": "Get a Freljord Emblem, a Hextech Gunblade, and an Anivia.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

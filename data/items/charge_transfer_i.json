@@ -1,7 +1,42 @@
 {
   "name": "Charge Transfer I",
+  "displayName": "Charge Transfer I",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_ChargeTransfer1",
+  "description": "Your team gains @DamageAmp@% Damage Amp. @OverkillPercent*100@% of overkill damage is dealt to the nearest enemy as magic damage.",
+  "tooltip": "Your team gains @DamageAmp@% Damage Amp. @OverkillPercent*100@% of overkill damage is dealt to the nearest enemy as magic damage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ChargeTransfer1_I.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Charge Transfer I:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.07, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "OverkillPercent",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.07,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageAmp",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.07, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageAmp", "value": "7" }, { "name": "OverkillPercent", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: OverkillPercent"]
 }

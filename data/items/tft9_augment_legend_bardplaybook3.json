@@ -1,0 +1,51 @@
+{
+  "name": "TFT9_Augment_Legend_BardPlaybook3",
+  "displayName": "Caretaker's Chosen",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Legend_BardPlaybook3",
+  "description": "As you level, gain more powerful items.<br>Level @levelreqa@: Component anvil<br>Level @levelreqb@: Completed item anvil<br>Level @levelreqc@: Choose 1 of 5 Radiant items",
+  "tooltip": "As you level, gain more powerful items.<br>Level @levelreqa@: Component anvil<br>Level @levelreqb@: Completed item anvil<br>Level @levelreqc@: Choose 1 of 5 Radiant items",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Caretaker_s-Chosen-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "levelreqa",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "levelreqb",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "levelreqc",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "levelreqa", "value": "4" }, { "name": "levelreqb", "value": "6" }, { "name": "levelreqc", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: levelreqa", "Unmapped item variable: levelreqb", "Unmapped item variable: levelreqc", "Unsupported item effect metadata: levelreqa", "Unsupported item effect metadata: levelreqb", "Unsupported item effect metadata: levelreqc"]
+}

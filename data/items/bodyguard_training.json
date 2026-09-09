@@ -1,7 +1,40 @@
 {
   "name": "Bodyguard Training",
+  "displayName": "Bodyguard Training",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_BodyguardTraining",
+  "description": "Allies gain @BaseResistGained@ Armor and Magic Resist, increased by @ResistsPerLevel@ per player level.<br><br><tftitemrules>Gizmos & Gadgets Championship, 2022</tftitemrules>",
+  "tooltip": "Allies gain @BaseResistGained@ Armor and Magic Resist, increased by @ResistsPerLevel@ per player level.<br><br><tftitemrules>Gizmos & Gadgets Championship, 2022</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/BodyguardsTraining_II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseResistGained",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ResistsPerLevel",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BaseResistGained", "value": "10" }, { "name": "ResistsPerLevel", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: BaseResistGained", "Unmapped item variable: ResistsPerLevel", "Unsupported item effect metadata: BaseResistGained", "Unsupported item effect metadata: ResistsPerLevel"]
 }

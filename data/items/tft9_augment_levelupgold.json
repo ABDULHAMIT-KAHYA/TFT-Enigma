@@ -1,0 +1,29 @@
+{
+  "name": "TFT9_Augment_LevelUpGold",
+  "displayName": "Level Up.",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_LevelUpGold",
+  "description": "Gain [newvarplz] XP now. When you buy XP, gain @XP@ more for free.",
+  "tooltip": "Gain [newvarplz] XP now. When you buy XP, gain @XP@ more for free.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LevelUp2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "XP",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "XP", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: XP", "Unsupported item effect metadata: XP"]
+}

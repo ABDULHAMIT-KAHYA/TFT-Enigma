@@ -1,7 +1,51 @@
 {
   "name": "Executioner III",
+  "displayName": "Executioner III",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_ExecutionerPlusPlus",
+  "description": "Your team executes enemies below @Healththreshold@% Health on hit. Executions have a @GoldChance@% chance to drop @goldgenerated@ gold.",
+  "tooltip": "Your team executes enemies below @Healththreshold@% Health on hit. Executions have a @GoldChance@% chance to drop @goldgenerated@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "OnHit",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "GoldChance",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnHit",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnHit",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "goldgenerated",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldChance", "value": "25" }, { "name": "HealthThreshold", "value": "12" }, { "name": "goldgenerated", "value": "1" }],
+  "importWarnings": ["Metadata-only item effect: GoldChance -> Heal", "Metadata-only item effect: HealthThreshold -> Heal", "Metadata-only item effect: goldgenerated -> Heal", "Unmapped item variable: GoldChance", "Unmapped item variable: HealthThreshold", "Unmapped item variable: goldgenerated"]
 }

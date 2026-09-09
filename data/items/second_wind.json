@@ -1,7 +1,40 @@
 {
   "name": "Second Wind",
+  "displayName": "Second Wind",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_SecondWind1",
+  "description": "After @Delay@ seconds of combat, your team heals @HealPercent@% of their missing Health.",
+  "tooltip": "After @Delay@ seconds of combat, your team heals @HealPercent@% of their missing Health.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Second--Wind-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 40,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HealPercent",
+      "rawSourceValue": "40",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Delay", "value": "10" }, { "name": "HealPercent", "value": "40" }],
+  "importWarnings": ["Unmapped item variable: Delay", "Unmapped item variable: HealPercent"]
 }

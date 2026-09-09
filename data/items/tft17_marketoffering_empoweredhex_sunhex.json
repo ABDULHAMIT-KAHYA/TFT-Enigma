@@ -1,7 +1,17 @@
 {
   "name": "TFT17_MarketOffering_EmpoweredHex_SunHex",
+  "displayName": "TFT17_MarketOffering_EmpoweredHex_SunHex",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_EmpoweredHex_Sun",
+  "description": "TFT17_MarketOffering_Desc_EmpoweredHex_SunHex",
+  "tooltip": "TFT17_MarketOffering_Desc_EmpoweredHex_SunHex",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_SunHex.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,40 @@
 {
   "name": "Trait: What Could Have Been",
+  "displayName": "Trait: What Could Have Been",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_TeamupAugment_BloodBrothers",
+  "description": "Vander gains @MaxHealthGainPerCast@ permanent max Health each time Silco casts. Silco gains @APGainPerDeath@ permanent Ability Power each time Vander dies.<br><br>Gain a 2-star Vander, a Silco, and a Spear of Shojin.",
+  "tooltip": "Vander gains @MaxHealthGainPerCast@ permanent max Health each time Silco casts. Silco gains @APGainPerDeath@ permanent Ability Power each time Vander dies.<br><br>Gain a 2-star Vander, a Silco, and a Spear of Shojin.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TeamUp_BloodBrothers_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "APGainPerDeath",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxHealthGainPerCast",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "APGainPerDeath", "value": "6" }, { "name": "MaxHealthGainPerCast", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: APGainPerDeath", "Unmapped item variable: MaxHealthGainPerCast"]
 }

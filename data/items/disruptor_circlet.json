@@ -1,7 +1,17 @@
 {
   "name": "Disruptor Circlet",
+  "displayName": "Disruptor Circlet",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_DisruptorCirclet",
+  "description": "Get a Disruptor Emblem, a Seraphine, and a Tear of the Goddess.",
+  "tooltip": "Get a Disruptor Emblem, a Seraphine, and a Tear of the Goddess.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

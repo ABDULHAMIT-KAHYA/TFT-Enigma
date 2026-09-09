@@ -1,7 +1,29 @@
 {
   "name": "Unbound Arcana",
+  "displayName": "Unbound Arcana",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_Prodigy_UnboundArcana",
+  "description": "Every 2 seconds, Prodigies gain Ability Power equal to @PercentManaToAP*100@% of their Mana Regeneration (rounded down).",
+  "tooltip": "Every 2 seconds, Prodigies gain Ability Power equal to @PercentManaToAP*100@% of their Mana Regeneration (rounded down).",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/UnboundArcane_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentManaToAP",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PercentManaToAP", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: PercentManaToAP"]
 }

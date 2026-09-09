@@ -1,7 +1,17 @@
 {
   "name": "Scuttle Party",
+  "displayName": "Scuttle Party",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_NextPVEScuttle",
+  "description": "Your next PVE round will be replaced with a Scuttle Crab round with bonus loot!",
+  "tooltip": "Your next PVE round will be replaced with a Scuttle Crab round with bonus loot!",
+  "iconPath": "ASSETS/Characters/TFT9_SLIME_Crab/HUD/TFT9_SLIME_Crab_Square.tex",
+  "itemCategory": "LootObject",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

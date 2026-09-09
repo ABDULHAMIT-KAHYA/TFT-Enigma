@@ -1,7 +1,17 @@
 {
   "name": "Silver Augment",
+  "displayName": "Silver Augment",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_SilverAugment",
+  "description": "Open an armory of 3 Silver augments and choose one.",
+  "tooltip": "Open an armory of 3 Silver augments and choose one.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

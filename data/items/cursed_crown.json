@@ -1,7 +1,54 @@
 {
   "name": "Cursed Crown",
+  "displayName": "Cursed Crown",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_CursedCrown",
+  "description": "Gain +@MaxArmySizeIncrease@ max team size and your team gains @DurabilityBonus*100@% Durability, but you take double player damage when you lose a player combat.",
+  "tooltip": "Gain +@MaxArmySizeIncrease@ max team size and your team gains @DurabilityBonus*100@% Durability, but you take double player damage when you lose a player combat.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/CursedCrown-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Cursed Crown:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.04, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MaxArmySizeIncrease",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "PlayerCombatDamageIncrease",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 100, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.04,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DurabilityBonus",
+      "rawSourceValue": "0.04",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DurabilityBonus", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.04, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "DurabilityBonus", "value": "0.04" }, { "name": "MaxArmySizeIncrease", "value": "2" }, { "name": "PlayerCombatDamageIncrease", "value": "100" }],
+  "importWarnings": ["Unmapped item variable: MaxArmySizeIncrease", "Unmapped item variable: PlayerCombatDamageIncrease"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "Second Coronation",
+  "displayName": "Second Coronation",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ItemCrownguard",
+  "description": "Gain a Crownguard. At @HealthThreshold*100@% Health, Crownguard's start of combat effect triggers again at @EffectMultiplier*100@% power.",
+  "tooltip": "Gain a Crownguard. At @HealthThreshold*100@% Health, Crownguard's start of combat effect triggers again at @EffectMultiplier*100@% power.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/SecondCoronation_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 0.9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "EffectMultiplier",
+      "rawSourceValue": "0.9",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "OnCombatStart",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HealthThreshold",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "EffectMultiplier", "value": "0.9" }, { "name": "HealthThreshold", "value": "0.5" }],
+  "importWarnings": ["Metadata-only item effect: EffectMultiplier -> Heal", "Metadata-only item effect: HealthThreshold -> Heal", "Unmapped item variable: EffectMultiplier", "Unmapped item variable: HealthThreshold"]
 }

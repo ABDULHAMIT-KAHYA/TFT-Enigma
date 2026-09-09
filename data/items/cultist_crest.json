@@ -1,7 +1,17 @@
 {
   "name": "Cultist Crest",
+  "displayName": "Cultist Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_CultistCrest",
+  "description": "Gain a Cultist Emblem and a Pyke.",
+  "tooltip": "Gain a Cultist Emblem and a Pyke.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cultist_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

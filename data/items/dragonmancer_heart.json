@@ -1,7 +1,17 @@
 {
   "name": "Dragonmancer Heart",
+  "displayName": "Dragonmancer Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DragonmancerTrait",
+  "description": "Your team counts as having 1 additional Dragonmancer. Gain a Kai'Sa.",
+  "tooltip": "Your team counts as having 1 additional Dragonmancer. Gain a Kai'Sa.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Dragonmancer-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

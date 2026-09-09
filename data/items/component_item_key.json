@@ -1,7 +1,17 @@
 {
   "name": "Component Item Key",
+  "displayName": "Component Item Key",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_GrantComponentAnvil",
+  "description": "Component Item Key",
+  "tooltip": "Component Item Key",
+  "iconPath": "ASSETS/Characters/TFT_ArmoryKeyComponent/HUD/Icons2D/TFT_ArmoryKeyComponent_Square.tex",
+  "itemCategory": "Anvil",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

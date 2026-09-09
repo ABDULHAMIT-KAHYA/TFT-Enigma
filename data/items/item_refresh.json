@@ -1,7 +1,29 @@
 {
   "name": "Item Refresh",
+  "displayName": "Item Refresh",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ItemRefresh",
+  "description": "Lose all completed items, and gain 2 random components for each item lost. Then gain @ComponentsToGive@ random components. ",
+  "tooltip": "Lose all completed items, and gain 2 random components for each item lost. Then gain @ComponentsToGive@ random components. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ItemRefresh_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ComponentsToGive",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ComponentsToGive", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: ComponentsToGive", "Unsupported item effect metadata: ComponentsToGive"]
 }

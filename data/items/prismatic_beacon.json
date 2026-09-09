@@ -1,7 +1,17 @@
 {
   "name": "Prismatic Beacon",
+  "displayName": "Prismatic Beacon",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_PrismaticBeacon",
+  "description": "Gain +10 Anima Squad, Street Demon, or Exotech. All allies benefit from the chosen trait.",
+  "tooltip": "Gain +10 Anima Squad, Street Demon, or Exotech. All allies benefit from the chosen trait.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT14/TFT14_CypherArmoryItem_PrismaticBeacon.TFT_Set14.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,41 @@
 {
   "name": "TFT12_Doodad_ToughCookie_Name",
+  "displayName": "TFT12_Doodad_ToughCookie_Name",
+  "isPlaceholder": false,
+  "sourceId": "TFT12_Doodad_ToughCookie",
+  "description": "TFT12_Doodad_ToughCookie_Tooltip",
+  "tooltip": "TFT12_Doodad_ToughCookie_Tooltip",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT11/TFT11_Item_Storyweaver_APHigh.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:TFT12_Doodad_ToughCookie_Name:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 300, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Size",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "300" }, { "name": "Size", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: Size", "Unsupported item effect metadata: Size"]
 }

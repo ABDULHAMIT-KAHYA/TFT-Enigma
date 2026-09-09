@@ -1,7 +1,17 @@
 {
   "name": "Revel Unity",
+  "displayName": "Revel Unity",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_RevelForAllUnits",
+  "description": "The Revel trait grants its bonuses to all of your champions. This does not increase your number of Revel units. Gain a Jinx.",
+  "tooltip": "The Revel trait grants its bonuses to all of your champions. This does not increase your number of Revel units. Gain a Jinx.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Revel-Unity-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

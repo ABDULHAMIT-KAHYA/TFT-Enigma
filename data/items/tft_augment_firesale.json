@@ -1,0 +1,29 @@
+{
+  "name": "TFT_Augment_Firesale",
+  "displayName": "Firesale",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Firesale",
+  "description": "Each round, steal a random @CostLimit@-cost or lower champion from the shop. Gain @Gold@ gold.",
+  "tooltip": "Each round, steal a random @CostLimit@-cost or lower champion from the shop. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Firesale_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unsupported item effect metadata: Gold"]
+}

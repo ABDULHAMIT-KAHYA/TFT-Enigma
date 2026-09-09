@@ -1,7 +1,40 @@
 {
   "name": "Balanced Budget III",
+  "displayName": "Balanced Budget III",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_BalancedBudget3",
+  "description": "At the start of the next @rounds@ rounds, gain @gold@ gold.",
+  "tooltip": "At the start of the next @rounds@ rounds, gain @gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Balanced-Budget-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 11,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "11",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "rounds",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "11" }, { "name": "rounds", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: rounds", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: rounds"]
 }

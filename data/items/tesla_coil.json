@@ -1,7 +1,78 @@
 {
   "name": "Tesla Coil",
+  "displayName": "Tesla Coil",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TeslaCoil",
+  "description": "Each of your allies with @MinItems@ items equipped emits @NumArcs@ arcs of lightning every @Frequency@ seconds, dealing @Stage2Damage@-@Stage6Damage@ magic damage based on stage.",
+  "tooltip": "Each of your allies with @MinItems@ items equipped emits @NumArcs@ arcs of lightning every @Frequency@ seconds, dealing @Stage2Damage@-@Stage6Damage@ magic damage based on stage.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TeslaCoil_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Frequency",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 5, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "MinItems",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 3, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumArcs",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 2, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 240,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Stage2Damage",
+      "rawSourceValue": "240",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 240, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 270,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "Stage6Damage",
+      "rawSourceValue": "270",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 270, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "Frequency", "value": "5" }, { "name": "MinItems", "value": "3" }, { "name": "NumArcs", "value": "2" }, { "name": "Stage2Damage", "value": "240" }, { "name": "Stage6Damage", "value": "270" }],
+  "importWarnings": ["Unmapped item variable: Frequency", "Unmapped item variable: MinItems", "Unmapped item variable: NumArcs", "Unmapped item variable: Stage2Damage", "Unmapped item variable: Stage6Damage"]
 }

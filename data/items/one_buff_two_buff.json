@@ -1,7 +1,17 @@
 {
   "name": "One Buff, Two Buff",
+  "displayName": "One Buff, Two Buff",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_OneBuffTwoBuff",
+  "description": "Gain a Red Buff, a Blue Buff, and a Champion Duplicator.",
+  "tooltip": "Gain a Red Buff, a Blue Buff, and a Champion Duplicator.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/OneBuffTwoBuff_III.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

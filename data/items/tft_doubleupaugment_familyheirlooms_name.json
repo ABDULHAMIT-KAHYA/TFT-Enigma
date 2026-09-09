@@ -1,7 +1,17 @@
 {
   "name": "TFT_DoubleUpAugment_FamilyHeirlooms_Name",
+  "displayName": "TFT_DoubleUpAugment_FamilyHeirlooms_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT_DoubleUpAugment_FamilyHeirlooms",
+  "description": "TFT_DoubleUpAugment_FamilyHeirlooms_Description",
+  "tooltip": "TFT_DoubleUpAugment_FamilyHeirlooms_Description",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_FamilyHeirlooms.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

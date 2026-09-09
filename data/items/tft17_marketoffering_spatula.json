@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_Spatula",
+  "displayName": "Spatula",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Spatula",
+  "description": "After @Delay@ rounds, gain a Spatula.",
+  "tooltip": "After @Delay@ rounds, gain a Spatula.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_Spatula.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Delay", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: Delay", "Unsupported item effect metadata: Delay"]
+}

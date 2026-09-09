@@ -1,7 +1,29 @@
 {
   "name": "Hero-In-Training",
+  "displayName": "Hero-In-Training",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DragonmancerInTraining",
+  "description": "The Dragonmancer nearest to the Dragonmancer Hero gains @PercentOfBuff@% of the Dragonmancer Trait's bonuses. Gain a Sett.",
+  "tooltip": "The Dragonmancer nearest to the Dragonmancer Hero gains @PercentOfBuff@% of the Dragonmancer Trait's bonuses. Gain a Sett.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Veterancy-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 66,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentOfBuff",
+      "rawSourceValue": "66",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PercentOfBuff", "value": "66" }],
+  "importWarnings": ["Unmapped item variable: PercentOfBuff"]
 }

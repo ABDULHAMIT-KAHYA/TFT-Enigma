@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Assist_ItemArmoryCompleted",
+  "displayName": "Completed Item Anvil",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_ItemArmoryCompleted",
+  "description": "Completed Item Anvil",
+  "tooltip": "Completed Item Anvil",
+  "iconPath": "ASSETS/Characters/TFT_ArmoryKeyCompleted/HUD/Icons2D/TFT_ArmoryKeyCompleted_Square.tex",
+  "itemCategory": "Anvil",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

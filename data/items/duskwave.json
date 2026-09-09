@@ -1,7 +1,17 @@
 {
   "name": "Duskwave",
+  "displayName": "Duskwave",
+  "isPlaceholder": true,
+  "sourceId": "TFT8_Item_ArsenalBlueGun",
+  "description": "Aphelios unleashes a wave of energy in a cone in his target's direction, locking onto and dealing damage to all enemies hit. ",
+  "tooltip": "Aphelios unleashes a wave of energy in a cone in his target's direction, locking onto and dealing damage to all enemies hit. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT8/TFT8_Item_ArsenalBlueGun.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

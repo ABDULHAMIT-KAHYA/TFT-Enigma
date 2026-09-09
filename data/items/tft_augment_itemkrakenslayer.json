@@ -1,0 +1,29 @@
+{
+  "name": "TFT_Augment_ItemKrakenSlayer",
+  "displayName": "Press the Attack",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ItemKrakenSlayer",
+  "description": "Gain a Kraken's Fury. Allies holding Kraken's Fury apply a stack on their target every attack. Every third stack deals true damage equal to @PercentHPDamage@% of the target's max Health. ",
+  "tooltip": "Gain a Kraken's Fury. Allies holding Kraken's Fury apply a stack on their target every attack. Every third stack deals true damage equal to @PercentHPDamage@% of the target's max Health. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/KrakensFury_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentHPDamage",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "PercentHPDamage", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: PercentHPDamage"]
+}

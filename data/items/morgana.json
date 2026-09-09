@@ -1,7 +1,17 @@
 {
   "name": "Morgana",
+  "displayName": "Morgana",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Morgana",
+  "description": "Morgana",
+  "tooltip": "Morgana",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Morgana_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_MarketOffering_DelayedRandomArtifact",
+  "displayName": "Artifact Item",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_DelayedRandomArtifact",
+  "description": "After @Delay@ rounds, gain a random Artifact.",
+  "tooltip": "After @Delay@ rounds, gain a random Artifact.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_RandomItem_Ornn.tex",
+  "itemCategory": "Artifact",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 8,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Delay",
+      "rawSourceValue": "8",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Delay", "value": "8" }],
+  "importWarnings": ["Unmapped item variable: Delay", "Unsupported item effect metadata: Delay"]
+}

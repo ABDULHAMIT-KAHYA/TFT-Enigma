@@ -1,7 +1,17 @@
 {
   "name": "Binding Eclipse",
+  "displayName": "Binding Eclipse",
+  "isPlaceholder": true,
+  "sourceId": "TFT8_Item_ArsenalPurpleGun",
+  "description": "Aphelios casts forth a lunar spotlight towards the largest group of units, stunning all enemies hit and dealing damage to them. ",
+  "tooltip": "Aphelios casts forth a lunar spotlight towards the largest group of units, stunning all enemies hit and dealing damage to them. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT8/TFT8_Item_ArsenalPurpleGun.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

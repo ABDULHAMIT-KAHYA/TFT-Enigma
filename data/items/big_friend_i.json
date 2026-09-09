@@ -1,7 +1,41 @@
 {
   "name": "Big Friend I",
+  "displayName": "Big Friend I",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Augment_BigFriend",
+  "description": "Allies that start combat next to an ally with over @RequiredHealth@ Health gain @DamageReductionPercent@% Durability. Gain a Giant's Belt.",
+  "tooltip": "Allies that start combat next to an ally with over @RequiredHealth@ Health gain @DamageReductionPercent@% Durability. Gain a Giant's Belt.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Big-Friend-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Big Friend I:DamageReduction", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageReductionPercent",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:DamageReductionPercent", "effectType": "DamageReduction", "crowdControlType": "None", "affectedStat": "DamageReduction", "modifierType": "Flat", "value": 0.1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1750,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RequiredHealth",
+      "rawSourceValue": "1750",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageReductionPercent", "value": "10" }, { "name": "RequiredHealth", "value": "1750" }],
+  "importWarnings": ["Unmapped item variable: RequiredHealth"]
 }

@@ -1,7 +1,29 @@
 {
   "name": "Starlight Hex",
+  "displayName": "Starlight Hex",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_EmpoweredHex_Socialite",
+  "description": "Place the hex on a champion. Allies in the hex gain @ManaRegen@ Mana Regen.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Place the hex on a champion. Allies in the hex gain @ManaRegen@ Mana Regen.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_HexPaintbrush.TFT_Set17.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ManaRegen",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ManaRegen", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: ManaRegen"]
 }

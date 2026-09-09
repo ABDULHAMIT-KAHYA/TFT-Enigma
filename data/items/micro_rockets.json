@@ -1,7 +1,42 @@
 {
   "name": "Micro-Rockets",
+  "displayName": "Micro-Rockets",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_MicroRockets",
+  "description": "Fire a barrage of missiles that repeats @DamageRepeat*100@% of the damage dealt by Piltover units this combat as magic damage.",
+  "tooltip": "Fire a barrage of missiles that repeats @DamageRepeat*100@% of the damage dealt by Piltover units this combat as magic damage.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_MicroRockets.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 0.66,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "DamageRepeat",
+      "rawSourceValue": "0.66",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 16,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "NumMissiles",
+      "rawSourceValue": "16",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 16, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "DamageRepeat", "value": "0.66" }, { "name": "NumMissiles", "value": "16" }],
+  "importWarnings": ["Unmapped item variable: DamageRepeat", "Unmapped item variable: NumMissiles"]
 }

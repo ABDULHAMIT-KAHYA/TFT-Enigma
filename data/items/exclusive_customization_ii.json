@@ -1,7 +1,51 @@
 {
   "name": "Exclusive Customization II",
+  "displayName": "Exclusive Customization II",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ExclusiveCustomization2",
+  "description": "Gain @ItemCount@ Lucky Item Chests, a Magnetic Remover, and @Gold@ gold.<br><br><rules>Use a Lucky Item Chest on a champion to choose from an armory of recommended items!</rules>",
+  "tooltip": "Gain @ItemCount@ Lucky Item Chests, a Magnetic Remover, and @Gold@ gold.<br><br><rules>Use a Lucky Item Chest on a champion to choose from an armory of recommended items!</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ExclusiveCustomization_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ItemCount",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumRemovers",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "7" }, { "name": "ItemCount", "value": "2" }, { "name": "NumRemovers", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: ItemCount", "Unmapped item variable: NumRemovers", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: ItemCount", "Unsupported item effect metadata: NumRemovers"]
 }

@@ -1,7 +1,40 @@
 {
   "name": "Tactician's Tools",
+  "displayName": "Tactician's Tools",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_TacticiansTools",
+  "description": "Gain @NumSpatulas@ Spatulas and @NumItemAnvils@ component anvil.",
+  "tooltip": "Gain @NumSpatulas@ Spatulas and @NumItemAnvils@ component anvil.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tactician_s-Tools-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumItemAnvils",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumSpatulas",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumItemAnvils", "value": "1" }, { "name": "NumSpatulas", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: NumItemAnvils", "Unmapped item variable: NumSpatulas", "Unsupported item effect metadata: NumItemAnvils", "Unsupported item effect metadata: NumSpatulas"]
 }

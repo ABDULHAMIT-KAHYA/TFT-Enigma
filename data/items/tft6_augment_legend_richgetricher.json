@@ -1,0 +1,40 @@
+{
+  "name": "TFT6_Augment_Legend_RichGetRicher",
+  "displayName": "Rich Get Richer",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_Legend_RichGetRicher",
+  "description": "Gain @Gold@ gold. Your max interest is increased to @InterestCap@.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>",
+  "tooltip": "Gain @Gold@ gold. Your max interest is increased to @InterestCap@.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RichGetRicher2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 12,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "12",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InterestCap",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "12" }, { "name": "InterestCap", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: InterestCap", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: InterestCap"]
+}

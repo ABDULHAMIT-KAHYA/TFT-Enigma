@@ -1,7 +1,63 @@
 {
   "name": "tft_item_name_VoltaicBattery",
+  "displayName": "tft_item_name_VoltaicBattery",
+  "isPlaceholder": false,
+  "sourceId": "TFT15_Mecha_VoltaicBattery",
+  "description": "tft_item_description_VoltaicBattery",
+  "tooltip": "tft_item_description_VoltaicBattery",
+  "iconPath": "ASSETS/Maps/TFT/Icons/TFT15/TFT15_VoltaicBattery.TFT_Set15.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:tft_item_name_VoltaicBattery:AttackSpeed", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AS",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AS", "effectType": "BonusAttackSpeed", "crowdControlType": "None", "affectedStat": "AttackSpeed", "modifierType": "Percent", "value": 0.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BurstAS",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BurstDuration",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Cadence",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AS", "value": "50" }, { "name": "BurstAS", "value": "2" }, { "name": "BurstDuration", "value": "2" }, { "name": "Cadence", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: BurstAS", "Unmapped item variable: BurstDuration", "Unmapped item variable: Cadence", "Unsupported item effect metadata: BurstAS", "Unsupported item effect metadata: BurstDuration", "Unsupported item effect metadata: Cadence"]
 }

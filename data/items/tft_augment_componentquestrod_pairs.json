@@ -1,0 +1,53 @@
+{
+  "name": "TFT_Augment_ComponentQuestRod_PAIRS",
+  "displayName": "Continuous Conjuration",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_ComponentQuestRod_PAIRS",
+  "description": "Gain a Needlessly Large Rod. After your team deals @StacksForReward@ magic damage, gain @NumDelayed@ more.<br><br><tftitemrules>Damage dealt: @TFTUnitProperty.item:TFT_Augment_ComponentQuest_Tracker@</tftitemrules>",
+  "tooltip": "Gain a Needlessly Large Rod. After your team deals @StacksForReward@ magic damage, gain @NumDelayed@ more.<br><br><tftitemrules>Damage dealt: @TFTUnitProperty.item:TFT_Augment_ComponentQuest_Tracker@</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/HyperbolicRodExtender_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumDelayed",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 45000,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "StacksForReward",
+      "rawSourceValue": "45000",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 45000, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    },
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "{1ed24481}",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 1, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "NumDelayed", "value": "2" }, { "name": "StacksForReward", "value": "45000" }, { "name": "{1ed24481}", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: NumDelayed", "Unmapped item variable: StacksForReward", "Unmapped item variable: {1ed24481}"]
+}

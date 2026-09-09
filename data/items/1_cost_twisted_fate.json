@@ -1,7 +1,29 @@
 {
   "name": "1-cost: Twisted Fate",
+  "displayName": "1-cost: Twisted Fate",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_ChampionItem_Chosen_TwistedFate",
+  "description": "Stargazer<br>Fateweaver",
+  "tooltip": "Stargazer<br>Fateweaver",
+  "iconPath": "ASSETS/Characters/TFT17_TwistedFate/HUD/TFT17_TwistedFate_Square.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Amount",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Amount", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Amount", "Unsupported item effect metadata: Amount"]
 }

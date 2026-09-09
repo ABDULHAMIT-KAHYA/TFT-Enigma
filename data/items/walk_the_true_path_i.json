@@ -1,7 +1,40 @@
 {
   "name": "Walk The True Path I",
+  "displayName": "Walk The True Path I",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_WalkTheTruePath",
+  "description": "Gain a Lesser Champion Duplicator and a Yasuo. Reach level 10 and field 10 unique Ionians to unlock a Prismatic Upgrade.",
+  "tooltip": "Gain a Lesser Champion Duplicator and a Yasuo. Reach level 10 and field 10 unique Ionians to unlock a Prismatic Upgrade.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WalkTheTruePath_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LesserDuplicatorAmount",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "null" }, { "name": "LesserDuplicatorAmount", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: LesserDuplicatorAmount", "Unmapped non-numeric item variable: Gold", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: LesserDuplicatorAmount"]
 }

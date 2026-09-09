@@ -1,7 +1,17 @@
 {
   "name": "Vanquisher Crown",
+  "displayName": "Vanquisher Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_VanquisherCrown",
+  "description": "Get a Vanquisher Emblem, a Gangplank, and a Hand of Justice.",
+  "tooltip": "Get a Vanquisher Emblem, a Gangplank, and a Hand of Justice.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

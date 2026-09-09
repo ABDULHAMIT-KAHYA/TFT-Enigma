@@ -1,0 +1,17 @@
+{
+  "name": "TFT17_MarketOffering_TwoCostChampion",
+  "displayName": "2-cost champion",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_TwoCostChampion",
+  "description": "2-cost champion",
+  "tooltip": "2-cost champion",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/DoubleUp_AssistArmory_Champ_2c.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

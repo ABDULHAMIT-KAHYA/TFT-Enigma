@@ -1,0 +1,29 @@
+{
+  "name": "TFT_Item_Spatula",
+  "displayName": "Spatula",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Item_Spatula",
+  "description": "<tftitemrules>It must do something...</tftitemrules>",
+  "tooltip": "<tftitemrules>It must do something...</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT_Item_Spatula.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{fe9818ef}",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{fe9818ef}", "value": "5" }],
+  "importWarnings": ["Unmapped item variable: {fe9818ef}", "Unsupported item effect metadata: {fe9818ef}"]
+}

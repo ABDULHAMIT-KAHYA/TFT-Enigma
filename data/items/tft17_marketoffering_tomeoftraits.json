@@ -1,0 +1,17 @@
+{
+  "name": "TFT17_MarketOffering_TomeOfTraits",
+  "displayName": "Tome of Traits",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_TomeOfTraits",
+  "description": "Drag this Tome to the Shop to open an Armory full of emblems! You will have 30 seconds to choose.",
+  "tooltip": "Drag this Tome to the Shop to open an Armory full of emblems! You will have 30 seconds to choose.",
+  "iconPath": "ASSETS/Characters/TFT5_EmblemArmoryKey/HUD/TFT5_EmblemArmoryKey_Square.tex",
+  "itemCategory": "Emblem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

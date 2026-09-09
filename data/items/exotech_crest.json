@@ -1,7 +1,17 @@
 {
   "name": "Exotech Crest",
+  "displayName": "Exotech Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_ExotechCrest",
+  "description": "Gain an Exotech emblem.",
+  "tooltip": "Gain an Exotech emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ExotechCrest_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

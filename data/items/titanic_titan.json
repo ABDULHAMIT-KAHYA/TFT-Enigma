@@ -1,7 +1,29 @@
 {
   "name": "Titanic Titan",
+  "displayName": "Titanic Titan",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_TitanicTitan",
+  "description": "Increase your current and max player Health by @Heal@. On carousel rounds you are released earlier, but are much slower.",
+  "tooltip": "Increase your current and max player Health by @Heal@. On carousel rounds you are released earlier, but are much slower.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/TitanicTitan_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Heal",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Heal", "value": "25" }],
+  "importWarnings": ["Unmapped item variable: Heal"]
 }

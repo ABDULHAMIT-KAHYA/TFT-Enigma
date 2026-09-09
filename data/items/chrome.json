@@ -1,7 +1,17 @@
 {
   "name": "Chrome",
+  "displayName": "Chrome",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Item_Nitro_ChromeCounter",
+  "description": "<TFTTrackerLabel>Total Chrome: @TFTUnitProperty.item:TFT14_HotRod_TotalScrap@<br>Total Bonuses: @TFTUnitProperty.item:TFT14_HotRod_TotalBonusAP@% %i:scaleAP% / @TFTUnitProperty.item:TFT14_HotRod_TotalBonusHP@ %i:scaleHealth%</TFTTrackerLabel>",
+  "tooltip": "<TFTTrackerLabel>Total Chrome: @TFTUnitProperty.item:TFT14_HotRod_TotalScrap@<br>Total Bonuses: @TFTUnitProperty.item:TFT14_HotRod_TotalBonusAP@% %i:scaleAP% / @TFTUnitProperty.item:TFT14_HotRod_TotalBonusHP@ %i:scaleHealth%</TFTTrackerLabel>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT14/TFT14_Item_ChromeCounter.TFT_Set14.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

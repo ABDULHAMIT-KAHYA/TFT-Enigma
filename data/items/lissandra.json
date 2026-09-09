@@ -1,7 +1,17 @@
 {
   "name": "Lissandra",
+  "displayName": "Lissandra",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Lissandra",
+  "description": "Lissandra",
+  "tooltip": "Lissandra",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Lissandra_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

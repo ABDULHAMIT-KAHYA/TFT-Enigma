@@ -1,7 +1,17 @@
 {
   "name": "Dummy with 2 Zeke's",
+  "displayName": "Dummy with 2 Zeke's",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Assist_Dummy_2xZekes",
+  "description": "A training dummy with 2 Zeke's Heralds, which provides Attack Speed to nearby allies.",
+  "tooltip": "A training dummy with 2 Zeke's Heralds, which provides Attack Speed to nearby allies.",
+  "iconPath": "ASSETS/Characters/TFT_TrainingDummy/HUD/Icons2D/TFT_TrainingDummy_DoNothing.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

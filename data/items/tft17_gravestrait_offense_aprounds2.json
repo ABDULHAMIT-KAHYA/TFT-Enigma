@@ -1,0 +1,29 @@
+{
+  "name": "TFT17_GravesTrait_Offense_APRounds2",
+  "displayName": "AP Rounds+",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_APRounds2",
+  "description": "Attacks and Abilities ignore @ArmorPen*100@% of enemy Armor",
+  "tooltip": "Attacks and Abilities ignore @ArmorPen*100@% of enemy Armor",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_APRounds1.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ArmorPen",
+      "rawSourceValue": "0.6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ArmorPen", "value": "0.6" }],
+  "importWarnings": ["Unmapped item variable: ArmorPen"]
+}

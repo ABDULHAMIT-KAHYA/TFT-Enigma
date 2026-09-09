@@ -1,7 +1,17 @@
 {
   "name": "Eagle's Armor",
+  "displayName": "Eagle's Armor",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Consumable_EagleEye_Armor",
+  "description": "Your team gains temporary armor.",
+  "tooltip": "Your team gains temporary armor.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set8_MechaPrime/TFT8_MechaPrime_Consumable.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

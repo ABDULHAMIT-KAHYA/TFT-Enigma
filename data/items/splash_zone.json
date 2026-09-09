@@ -1,7 +1,29 @@
 {
   "name": "Splash Zone",
+  "displayName": "Splash Zone",
+  "isPlaceholder": true,
+  "sourceId": "TFTTutorial_Augment_FrontRowMana1",
+  "description": "Combat start: Your champions in the front 2 rows gain @Mana@ Mana.",
+  "tooltip": "Combat start: Your champions in the front 2 rows gain @Mana@ Mana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tutorial-Splash-Zone-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCombatStart",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "20",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Mana", "value": "20" }],
+  "importWarnings": ["Metadata-only item effect: Mana -> ModifyMana", "Unmapped item variable: Mana"]
 }

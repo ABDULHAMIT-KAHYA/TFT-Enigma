@@ -1,0 +1,17 @@
+{
+  "name": "TFT6_Merc_X",
+  "displayName": "tft_item_name_Mercenary_X",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Merc_X",
+  "description": "tft_item_description_Mercenary_Dice",
+  "tooltip": "tft_item_description_Mercenary_Dice",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/Mercenary_Scratch.tex",
+  "itemCategory": "Unknown",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

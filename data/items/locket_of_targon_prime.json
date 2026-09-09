@@ -1,8 +1,139 @@
 {
   "name": "Locket of Targon Prime",
+  "displayName": "Locket of Targon Prime",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_LocketOfTheIronSolariRadiant",
+  "description": "Combat start: Shields the holder and allies within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes in the same row for <TFTRadiantItemBonus>@1StarShieldValue@/@2StarShieldValue@/@3StarShieldValue@</TFTRadiantItemBonus> %i:star% damage for <TFTRadiantItemBonus>@ShieldDuration@</TFTRadiantItemBonus> seconds.<br><TFTRadiantItemBonus>Your team gains %i:scaleHealth% @BonusAllyHealth@ Health.</TFTRadiantItemBonus>",
+  "tooltip": "Combat start: Shields the holder and allies within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes in the same row for <TFTRadiantItemBonus>@1StarShieldValue@/@2StarShieldValue@/@3StarShieldValue@</TFTRadiantItemBonus> %i:star% damage for <TFTRadiantItemBonus>@ShieldDuration@</TFTRadiantItemBonus> seconds.<br><TFTRadiantItemBonus>Your team gains %i:scaleHealth% @BonusAllyHealth@ Health.</TFTRadiantItemBonus>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Radiant/Locket_of_the_Iron_Solari_Radiant.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:Locket of Targon Prime:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Locket of Targon Prime:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [
+    {
+      "name": "Item:Locket of Targon Prime:AP",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Locket of Targon Prime:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "name": "Item:Locket of Targon Prime:Armor",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Locket of Targon Prime:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 275,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "1StarShieldValue",
+      "rawSourceValue": "275",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 325,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "2StarShieldValue",
+      "rawSourceValue": "325",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 375,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "3StarShieldValue",
+      "rawSourceValue": "375",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 425,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "4StarShieldValue",
+      "rawSourceValue": "425",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 200,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "BonusAllyHealth",
+      "rawSourceValue": "200",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "HexRange",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "OnCombatStart",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ShieldDuration",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "10",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 10, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "20",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "1StarShieldValue", "value": "275" }, { "name": "2StarShieldValue", "value": "325" }, { "name": "3StarShieldValue", "value": "375" }, { "name": "4StarShieldValue", "value": "425" }, { "name": "AP", "value": "10" }, { "name": "Armor", "value": "20" }, { "name": "BonusAllyHealth", "value": "200" }, { "name": "HexRange", "value": "3" }, { "name": "ShieldDuration", "value": "60" }],
+  "importWarnings": ["Metadata-only item effect: 1StarShieldValue -> Aura", "Metadata-only item effect: 2StarShieldValue -> Aura", "Metadata-only item effect: 3StarShieldValue -> Aura", "Metadata-only item effect: 4StarShieldValue -> Aura", "Metadata-only item effect: BonusAllyHealth -> Aura", "Metadata-only item effect: HexRange -> Aura", "Metadata-only item effect: ShieldDuration -> Aura", "Unmapped item variable: 1StarShieldValue", "Unmapped item variable: 2StarShieldValue", "Unmapped item variable: 3StarShieldValue", "Unmapped item variable: 4StarShieldValue", "Unmapped item variable: BonusAllyHealth", "Unmapped item variable: HexRange", "Unmapped item variable: ShieldDuration"]
 }

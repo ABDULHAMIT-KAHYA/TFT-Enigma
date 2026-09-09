@@ -1,0 +1,29 @@
+{
+  "name": "TFT16_Item_Bilgewater_APTier1",
+  "displayName": "+@BonusAP@ Ability Power",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Bilgewater_APTier1",
+  "description": "Bilgewater champions gain @BonusAP@ Ability Power.",
+  "tooltip": "Bilgewater champions gain @BonusAP@ Ability Power.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Bilgewater/TFT16_Bilgewater_AP_Tier1.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusAP",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusAP", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: BonusAP", "Unsupported item effect metadata: BonusAP"]
+}

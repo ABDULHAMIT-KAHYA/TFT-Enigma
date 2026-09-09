@@ -1,0 +1,51 @@
+{
+  "name": "TFT_Augment_DiversifiedPortfolio1",
+  "displayName": "Diversified Portfolio",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_DiversifiedPortfolio1",
+  "description": "Gain @InstantGold@ gold. Each round, gain @GoldRate@ gold for every @TraitsActive@ non-unique traits active.<br><br>Gold Bonus: @TFTUnitProperty.item:TFT_Augment_DiversifiedPortfolio_GoldReturned@",
+  "tooltip": "Gain @InstantGold@ gold. Each round, gain @GoldRate@ gold for every @TraitsActive@ non-unique traits active.<br><br>Gold Bonus: @TFTUnitProperty.item:TFT_Augment_DiversifiedPortfolio_GoldReturned@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DiversifiedPortfolio_I.TFT_Set13.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldRate",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "InstantGold",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "TraitsActive",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldRate", "value": "1" }, { "name": "InstantGold", "value": "1" }, { "name": "TraitsActive", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: GoldRate", "Unmapped item variable: InstantGold", "Unmapped item variable: TraitsActive"]
+}

@@ -1,7 +1,30 @@
 {
   "name": "This WILL Work",
+  "displayName": "This WILL Work",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_BlueCarry",
+  "description": "Gain a Powder. Your strongest Powder's explosion radius is increased by two hexes, has different damage falloff, but deals @TOOLTIPONLYFriendlyDamage@% damage to ALLIES.",
+  "tooltip": "Gain a Powder. Your strongest Powder's explosion radius is increased by two hexes, has different damage falloff, but deals @TOOLTIPONLYFriendlyDamage@% damage to ALLIES.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/IHopeThisWorks_I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "Passive",
+      "value": 50,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "TOOLTIPONLYFriendlyDamage",
+      "rawSourceValue": "50",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 50, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "TOOLTIPONLYFriendlyDamage", "value": "50" }],
+  "importWarnings": ["Unmapped item variable: TOOLTIPONLYFriendlyDamage"]
 }

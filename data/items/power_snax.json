@@ -1,7 +1,17 @@
 {
   "name": "Power Snax",
+  "displayName": "Power Snax",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_SetMechanic_Consumable",
+  "description": "<spellPassive>Power Up:</spellPassive> Use on a champion to choose a Power Up! Sell that champion or use a Power Remover to regain a Power Snax.",
+  "tooltip": "<spellPassive>Power Up:</spellPassive> Use on a champion to choose a Power Up! Sell that champion or use a Power Remover to regain a Power Snax.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/PowerUp_Item_Consumable_128.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

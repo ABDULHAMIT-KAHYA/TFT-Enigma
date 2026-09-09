@@ -1,7 +1,17 @@
 {
   "name": "Dummy Backpacks",
+  "displayName": "Dummy Backpacks",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_DummyPower",
+  "description": "Your dummies can equip items and use item-related consumables. Gain a Training Dummy.",
+  "tooltip": "Your dummies can equip items and use item-related consumables. Gain a Training Dummy.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

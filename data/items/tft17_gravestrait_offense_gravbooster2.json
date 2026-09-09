@@ -1,0 +1,40 @@
+{
+  "name": "TFT17_GravesTrait_Offense_GravBooster2",
+  "displayName": "Grav Booster+",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_GravesTrait_Offense_GravBooster2",
+  "description": "On takedown, dash to the next target and attack @BonusMultAS*100@% faster for @NumAttacks@ attacks.",
+  "tooltip": "On takedown, dash to the next target and attack @BonusMultAS*100@% faster for @NumAttacks@ attacks.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT17/TFT17_GravesTrait_Offense_GravBooster1.TFT_Set17.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusMultAS",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumAttacks",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusMultAS", "value": "0.4" }, { "name": "NumAttacks", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: BonusMultAS", "Unmapped item variable: NumAttacks"]
+}

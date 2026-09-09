@@ -1,7 +1,51 @@
 {
   "name": "Superior Lifeform",
+  "displayName": "Superior Lifeform",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_SuperiorLifeform",
+  "description": "Summon a robot copy of your @NumUnitsToCopy@ strongest Piltover units. They have @PercentHealthOfOriginal*100@% of the original's Health and deal @DamageOutput*100@% as much damage.",
+  "tooltip": "Summon a robot copy of your @NumUnitsToCopy@ strongest Piltover units. They have @PercentHealthOfOriginal*100@% of the original's Health and deal @DamageOutput*100@% as much damage.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_SuperiorLifeform.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "DamageOutput",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "NumUnitsToCopy",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "PercentHealthOfOriginal",
+      "rawSourceValue": "0.4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "DamageOutput", "value": "0.5" }, { "name": "NumUnitsToCopy", "value": "2" }, { "name": "PercentHealthOfOriginal", "value": "0.4" }],
+  "importWarnings": ["Unmapped item variable: DamageOutput", "Unmapped item variable: NumUnitsToCopy", "Unmapped item variable: PercentHealthOfOriginal"]
 }

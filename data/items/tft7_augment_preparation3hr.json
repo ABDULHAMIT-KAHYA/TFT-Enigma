@@ -1,0 +1,62 @@
+{
+  "name": "TFT7_Augment_Preparation3HR",
+  "displayName": "Preparation III",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_Preparation3HR",
+  "description": "Champions on your bench permanently gain @HPBonus@ Health, @Stats@% Attack Damage, and @Stats@% Ability Power every round. Champions start with @StartingStacks@ stack of this effect, and can stack up to @MaxStacks@ times.",
+  "tooltip": "Champions on your bench permanently gain @HPBonus@ Health, @Stats@% Attack Damage, and @Stats@% Ability Power every round. Champions start with @StartingStacks@ stack of this effect, and can stack up to @MaxStacks@ times.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Preparation-III.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 70,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "HPBonus",
+      "rawSourceValue": "70",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxStacks",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "StartingStacks",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 9,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Stats",
+      "rawSourceValue": "9",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "HPBonus", "value": "70" }, { "name": "MaxStacks", "value": "3" }, { "name": "StartingStacks", "value": "1" }, { "name": "Stats", "value": "9" }],
+  "importWarnings": ["Unmapped item variable: HPBonus", "Unmapped item variable: MaxStacks", "Unmapped item variable: StartingStacks", "Unmapped item variable: Stats"]
+}

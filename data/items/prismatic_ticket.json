@@ -1,7 +1,29 @@
 {
   "name": "Prismatic Ticket",
+  "displayName": "Prismatic Ticket",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_Augment_GachaAddict",
+  "description": "Each time your Shop is rerolled, you have a @RerollPercent@% chance to gain a free reroll.",
+  "tooltip": "Each time your Shop is rerolled, you have a @RerollPercent@% chance to gain a free reroll.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldenTicket3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 45,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RerollPercent",
+      "rawSourceValue": "45",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RerollPercent", "value": "45" }],
+  "importWarnings": ["Unmapped item variable: RerollPercent", "Unsupported item effect metadata: RerollPercent"]
 }

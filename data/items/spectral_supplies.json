@@ -1,7 +1,29 @@
 {
   "name": "Spectral Supplies",
+  "displayName": "Spectral Supplies",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_GiftsFromAbove",
+  "description": "Combat start: Distribute @numitems@ temporary items to the champions with the fewest items.",
+  "tooltip": "Combat start: Distribute @numitems@ temporary items to the champions with the fewest items.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Gifts-from-Above-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 4,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "NumItems",
+      "rawSourceValue": "4",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "NumItems", "value": "4" }],
+  "importWarnings": ["Unmapped item variable: NumItems", "Unsupported item effect metadata: NumItems"]
 }

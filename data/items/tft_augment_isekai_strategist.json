@@ -1,0 +1,17 @@
+{
+  "name": "TFT_Augment_Isekai_Strategist",
+  "displayName": "Isekai",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_Isekai_Strategist",
+  "description": "Summon a magical hero from another universe to fight for you. This hero is a <TFTRadiantItemBonus>Strategist</TFTRadiantItemBonus> this game.<br>",
+  "tooltip": "Summon a magical hero from another universe to fight for you. This hero is a <TFTRadiantItemBonus>Strategist</TFTRadiantItemBonus> this game.<br>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Isekai_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

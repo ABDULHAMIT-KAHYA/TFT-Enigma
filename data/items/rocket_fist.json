@@ -1,7 +1,30 @@
 {
   "name": "Rocket Fist",
+  "displayName": "Rocket Fist",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_BlitzcrankCarry",
+  "description": "Gain a Blitzcrank. Your strongest one becomes an Attack Fighter. His Ability no longer shields but instead fires a hook towards the furthest enemy and gains powerful punches for a set amount of attacks.",
+  "tooltip": "Gain a Blitzcrank. Your strongest one becomes an Attack Fighter. His Ability no longer shields but instead fires a hook towards the furthest enemy and gains powerful punches for a set amount of attacks.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/RollingGolem_I.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Shield",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RangeIncrease",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:RangeIncrease", "effectType": "Shield", "crowdControlType": "None", "affectedStat": "None", "modifierType": "Flat", "value": 1, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "RangeIncrease", "value": "1" }],
+  "importWarnings": ["Unmapped item variable: RangeIncrease"]
 }

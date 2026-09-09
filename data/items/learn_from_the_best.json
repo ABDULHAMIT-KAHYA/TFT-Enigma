@@ -1,7 +1,29 @@
 {
   "name": "Learn From The Best",
+  "displayName": "Learn From The Best",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_Mentor_LearnFromTheBest",
+  "description": "Whenever you star-up a champion they permanently gain @BonusPercent*100@% of every unique Mentor bonus of Mentors on your board or bench. Gain a Yasuo.",
+  "tooltip": "Whenever you star-up a champion they permanently gain @BonusPercent*100@% of every unique Mentor bonus of Mentors on your board or bench. Gain a Yasuo.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/LeanFromTheBest_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusPercent",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusPercent", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: BonusPercent", "Unsupported item effect metadata: BonusPercent"]
 }

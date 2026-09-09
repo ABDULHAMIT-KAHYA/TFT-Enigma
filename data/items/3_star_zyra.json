@@ -1,7 +1,29 @@
 {
   "name": "3 star Zyra",
+  "displayName": "3 star Zyra",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_CypherArmoryItem_Zyra2Star",
+  "description": "3 star Zyra",
+  "tooltip": "3 star Zyra",
+  "iconPath": "ASSETS/Characters/TFT14_Zyra/HUD/TFT14_Zyra_Square.TFT_Set14.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "starLevel",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "starLevel", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: starLevel", "Unsupported item effect metadata: starLevel"]
 }

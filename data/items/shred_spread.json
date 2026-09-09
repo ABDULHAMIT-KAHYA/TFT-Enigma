@@ -1,7 +1,73 @@
 {
   "name": "Shred Spread",
+  "displayName": "Shred Spread",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_VoidTouched",
+  "description": "Gain a Void Staff. Enemies who die while Shredded explode, dealing @MinDamageTOOLTIPONLY@-@MaxDamageTOOLTIPONLY@ magic damage and @ShredPercentage@% Shredding enemies within @ExplosionHexRange@ hexes for @ShredDuration@ seconds.",
+  "tooltip": "Gain a Void Staff. Enemies who die while Shredded explode, dealing @MinDamageTOOLTIPONLY@-@MaxDamageTOOLTIPONLY@ magic damage and @ShredPercentage@% Shredding enemies within @ExplosionHexRange@ hexes for @ShredDuration@ seconds.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/ShredSpread_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ExplosionHexRange",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 300,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxDamageTOOLTIPONLY",
+      "rawSourceValue": "300",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 100,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MinDamageTOOLTIPONLY",
+      "rawSourceValue": "100",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShredDuration",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Aura",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ShredPercentage",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ExplosionHexRange", "value": "1" }, { "name": "MaxDamageTOOLTIPONLY", "value": "300" }, { "name": "MinDamageTOOLTIPONLY", "value": "100" }, { "name": "ShredDuration", "value": "3" }, { "name": "ShredPercentage", "value": "30" }],
+  "importWarnings": ["Unmapped item variable: ExplosionHexRange", "Unmapped item variable: MaxDamageTOOLTIPONLY", "Unmapped item variable: MinDamageTOOLTIPONLY", "Unmapped item variable: ShredDuration", "Unmapped item variable: ShredPercentage"]
 }

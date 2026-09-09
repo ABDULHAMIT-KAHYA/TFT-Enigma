@@ -1,0 +1,40 @@
+{
+  "name": "TFT11_Augment_SoulCollector",
+  "displayName": "Blood Money",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Augment_SoulCollector",
+  "description": "Gain @Gold@ gold per @HealthPerGold@ Health your Tactician loses.",
+  "tooltip": "Gain @Gold@ gold per @HealthPerGold@ Health your Tactician loses.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Blood-Money-I.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Damage",
+      "rawSourceValue": "1",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{521fb564}",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Damage", "value": "1" }, { "name": "{521fb564}", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: Damage", "Unmapped item variable: {521fb564}"]
+}

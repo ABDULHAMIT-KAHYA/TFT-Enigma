@@ -1,7 +1,51 @@
 {
   "name": "Unstable Core",
+  "displayName": "Unstable Core",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Item_Piltover_UnstableCore",
+  "description": "If Piltover units have cast at least @CastBreakpoint@ times this combat, deal @SuccessMaxHealthDamage*100@% max Health true damage to all enemies. Otherwise, deal @FailureMaxHealthDamage*100@%. ",
+  "tooltip": "If Piltover units have cast at least @CastBreakpoint@ times this combat, deal @SuccessMaxHealthDamage*100@% max Health true damage to all enemies. Otherwise, deal @FailureMaxHealthDamage*100@%. ",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/TFT16/TFT16_Piltover/TFT16_Item_Piltover_UnstableCore.TFT_Set16.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 10,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CastBreakpoint",
+      "rawSourceValue": "10",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FailureMaxHealthDamage",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SuccessMaxHealthDamage",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CastBreakpoint", "value": "10" }, { "name": "FailureMaxHealthDamage", "value": "0.15" }, { "name": "SuccessMaxHealthDamage", "value": "0.3" }],
+  "importWarnings": ["Unmapped item variable: CastBreakpoint", "Unmapped item variable: FailureMaxHealthDamage", "Unmapped item variable: SuccessMaxHealthDamage"]
 }

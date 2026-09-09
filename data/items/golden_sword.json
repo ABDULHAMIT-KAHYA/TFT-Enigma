@@ -1,7 +1,17 @@
 {
   "name": "Golden Sword",
+  "displayName": "Golden Sword",
+  "isPlaceholder": true,
+  "sourceId": "TFT6_5MercSword",
+  "description": "Gain 1 5-cost champion and 12 gold.",
+  "tooltip": "Gain 1 5-cost champion and 12 gold.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set6_Mercenary/MercenaryLoot.tex",
+  "itemCategory": "Consumable",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

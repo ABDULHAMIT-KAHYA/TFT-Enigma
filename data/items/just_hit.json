@@ -1,7 +1,40 @@
 {
   "name": "Just Hit",
+  "displayName": "Just Hit",
+  "isPlaceholder": true,
+  "sourceId": "TFT_Augment_JustHit",
+  "description": "Gain a Champion Duplicator, @NumRolls@ Shop rerolls, and @Gold@ gold.",
+  "tooltip": "Gain a Champion Duplicator, @NumRolls@ Shop rerolls, and @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/JustHit_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 18,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Numrolls",
+      "rawSourceValue": "18",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "3" }, { "name": "Numrolls", "value": "18" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: Numrolls", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: Numrolls"]
 }

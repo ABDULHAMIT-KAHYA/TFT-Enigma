@@ -1,7 +1,30 @@
 {
   "name": "You Have My Sword",
+  "displayName": "You Have My Sword",
+  "isPlaceholder": false,
+  "sourceId": "TFT9_Augment_YouHaveMySword",
+  "description": "Gain a B.F. Sword. Your units gain @AD@% Attack Damage. ",
+  "tooltip": "Gain a B.F. Sword. Your units gain @AD@% Attack Damage. ",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/You-Have-My-Sword-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:You Have My Sword:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "15" }],
+  "importWarnings": []
 }

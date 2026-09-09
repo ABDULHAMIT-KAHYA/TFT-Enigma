@@ -1,0 +1,17 @@
+{
+  "name": "TFT17_MarketOffering_Gold_4",
+  "displayName": "4 gold",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_Gold_4",
+  "description": "4 gold",
+  "tooltip": "4 gold",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Pairs/AssistGiveGold.tex",
+  "itemCategory": "Consumable",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

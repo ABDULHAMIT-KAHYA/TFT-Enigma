@@ -1,7 +1,29 @@
 {
   "name": "New Contenders",
+  "displayName": "New Contenders",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_SupremeCells_NewContenders",
+  "description": "Grant @BonusSharePercent*100@% of Supreme Cell's bonus to all champions on your team. Any champion on your team can now become the Supreme Cell. Gain a Kai'Sa and Kennen.",
+  "tooltip": "Grant @BonusSharePercent*100@% of Supreme Cell's bonus to all champions on your team. Any champion on your team can now become the Supreme Cell. Gain a Kai'Sa and Kennen.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/NewContenders_II.TFT_Set15.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusSharePercent",
+      "rawSourceValue": "0.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "BonusSharePercent", "value": "0.5" }],
+  "importWarnings": ["Unmapped item variable: BonusSharePercent", "Unsupported item effect metadata: BonusSharePercent"]
 }

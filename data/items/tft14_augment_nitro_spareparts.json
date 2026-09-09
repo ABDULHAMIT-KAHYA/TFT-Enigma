@@ -1,0 +1,29 @@
+{
+  "name": "TFT14_Augment_Nitro_SpareParts",
+  "displayName": "Spare Parts",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Augment_Nitro_SpareParts",
+  "description": "Get a Nitro Hex Turret that has @SharePercent*100@% of your total Chrome. Gain a Shyvana.",
+  "tooltip": "Get a Nitro Hex Turret that has @SharePercent*100@% of your total Chrome. Gain a Shyvana.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/NitroTurret_II.TFT_Set14.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.33,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "SharePercent",
+      "rawSourceValue": "0.33",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "SharePercent", "value": "0.33" }],
+  "importWarnings": ["Unmapped item variable: SharePercent", "Unsupported item effect metadata: SharePercent"]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "TFT17_MarketOffering_ExtraAugmentRollsPlus",
+  "displayName": "Augment Rerolls",
+  "isPlaceholder": true,
+  "sourceId": "TFT17_MarketOffering_ExtraAugmentRollsPlus",
+  "description": "You get +@ExtraRolls@ Augment rerolls for all future augment choices. Gain @Gold@ gold.",
+  "tooltip": "You get +@ExtraRolls@ Augment rerolls for all future augment choices. Gain @Gold@ gold.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_AugmentRerolls.TFT_Set17.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ExtraRolls",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 6,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "6",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "ExtraRolls", "value": "2" }, { "name": "Gold", "value": "6" }],
+  "importWarnings": ["Unmapped item variable: ExtraRolls", "Unmapped item variable: Gold", "Unsupported item effect metadata: ExtraRolls", "Unsupported item effect metadata: Gold"]
+}

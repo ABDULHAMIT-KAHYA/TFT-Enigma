@@ -1,7 +1,29 @@
 {
   "name": "A Change Of Fate",
+  "displayName": "A Change Of Fate",
+  "isPlaceholder": true,
+  "sourceId": "TFT13_Augment_Grant6Cost_MissMage",
+  "description": "Gain a Blue Buff. After starting a round with @RoundGold@ gold and winning a player combat, gain a Mel and a Hextech Gunblade.<br><br><rules>Tasks can be completed in any order.</rules>",
+  "tooltip": "Gain a Blue Buff. After starting a round with @RoundGold@ gold and winning a player combat, gain a Mel and a Hextech Gunblade.<br><br><rules>Tasks can be completed in any order.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/AGoldenReturn_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RoundGold",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "RoundGold", "value": "60" }],
+  "importWarnings": ["Unmapped item variable: RoundGold", "Unsupported item effect metadata: RoundGold"]
 }

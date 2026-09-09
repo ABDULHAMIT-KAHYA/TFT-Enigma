@@ -16,23 +16,22 @@ static std::int32_t lroundToInt(float v)
     return static_cast<std::int32_t>(std::lround(v));
 }
 
-static void resolveAutoAttackHit(GameState& state, const ProjectileSpec& spec)
+void ProjectileSystem::resolveAutoAttackHit(GameState& state, const ProjectileSpec& spec)
 {
-    std::vector<Unit>& units = state.units();
-    if (spec.attackerIndex < 0 || spec.targetIndex < 0)
+    Unit* attackerPtr = state.findUnit(spec.attackerId);
+    Unit* targetPtr = state.findUnit(spec.targetId);
+    if (!attackerPtr || !targetPtr)
     {
-        return;
-    }
-    if (spec.attackerIndex >= static_cast<std::int32_t>(units.size()) ||
-        spec.targetIndex >= static_cast<std::int32_t>(units.size()))
-    {
+        state.logger().combat("ProjectileHit fizzle: missing source or target");
         return;
     }
 
-    Unit& attacker = units[spec.attackerIndex];
-    Unit& target = units[spec.targetIndex];
+    Unit& attacker = *attackerPtr;
+    Unit& target = *targetPtr;
 
-    if (!attacker.isAlive() || !target.isAlive())
+    // Fired projectiles may resolve after their attacker dies, but they still
+    // require a live, targetable enemy target at impact time.
+    if (!target.isAlive())
     {
         return;
     }
@@ -121,12 +120,20 @@ void ProjectileSystem::spawnAutoAttackProjectile(GameState& state, const Project
         state.logger().combat(ss.str());
     }
 
-    state.scheduleCombatEvent(
-        hitAt,
-        [&state, spec]()
-        {
-            resolveAutoAttackHit(state, spec);
-        },
-        spec.debugName.empty() ? "ProjectileHit" : spec.debugName
-    );
+    CombatEvent event{};
+    event.type = CombatEventType::ProjectileHit;
+    event.executeAtMs = hitAt;
+    event.sourceId = spec.attackerId;
+    event.targetId = spec.targetId;
+    event.policy = CombatEventTargetPolicy::AllowDeadSourceRequireAliveTarget;
+    event.projectile.damageType = spec.damageType;
+    event.projectile.rawDamage = spec.rawDamage;
+    event.projectile.didCrit = spec.didCrit;
+    event.projectile.critChanceUsed = spec.critChanceUsed;
+    event.projectile.critDamageUsed = spec.critDamageUsed;
+    event.projectile.rawBeforeCrit = spec.rawBeforeCrit;
+    event.projectile.rawAfterCrit = spec.rawAfterCrit;
+    event.debugName = spec.debugName.empty() ? "ProjectileHit" : spec.debugName;
+    state.scheduleCombatEvent(event);
 }
+

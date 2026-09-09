@@ -1,7 +1,17 @@
 {
   "name": "Radiant Rascal",
+  "displayName": "Radiant Rascal",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_RollTheDice",
+  "description": "Gain a Rascal's Gloves item. This equips 2 random Radiant items every round.<br><br><rules>Radiant items are very powerful versions of completed items.</rules>",
+  "tooltip": "Gain a Rascal's Gloves item. This equips 2 random Radiant items every round.<br><br><rules>Radiant items are very powerful versions of completed items.</rules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Roll-the-Dice-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

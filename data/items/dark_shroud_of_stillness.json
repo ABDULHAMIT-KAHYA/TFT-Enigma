@@ -1,8 +1,84 @@
 {
   "name": "Dark Shroud of Stillness",
+  "displayName": "Dark Shroud of Stillness",
+  "isPlaceholder": false,
+  "sourceId": "TFT5_Item_ShroudOfStillnessShadow",
+  "description": "Combat start: Shoot a beam straight ahead <TFTShadowItemPenalty>and behind</TFTShadowItemPenalty> that <TFTShadowItemBonus>@CostIncrease@% </TFTShadowItemBonus><TFTKeyword>Mana Reaves</TFTKeyword> enemies and <TFTShadowItemPenalty>other allies</TFTShadowItemPenalty>.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br><tftitemrules><tftbold>Mana Reave</tftbold>: increase maximum Mana until the next cast</tftitemrules>",
+  "tooltip": "Combat start: Shoot a beam straight ahead <TFTShadowItemPenalty>and behind</TFTShadowItemPenalty> that <TFTShadowItemBonus>@CostIncrease@% </TFTShadowItemBonus><TFTKeyword>Mana Reaves</TFTKeyword> enemies and <TFTShadowItemPenalty>other allies</TFTShadowItemPenalty>.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br><tftitemrules><tftbold>Mana Reave</tftbold>: increase maximum Mana until the next cast</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Shroud_of_Stillness.tex",
+  "itemCategory": "CombatItem",
   "passiveStats": [
     { "name": "Item:Dark Shroud of Stillness:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Dark Shroud of Stillness:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [
+    {
+      "name": "Item:Dark Shroud of Stillness:Armor",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Dark Shroud of Stillness:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "name": "Item:Dark Shroud of Stillness:CritChance",
+      "trigger": "OnCombatStart",
+      "areaShape": "Self",
+      "radius": 0,
+      "delayMs": 0,
+      "appliesStatusEffect": true,
+      "appliedStatusEffect": { "name": "Item:Dark Shroud of Stillness:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 20,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Armor",
+      "rawSourceValue": "20",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:Armor", "effectType": "BonusArmor", "crowdControlType": "None", "affectedStat": "Armor", "modifierType": "Flat", "value": 20, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "OnCombatStart",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "20",
+      "supportedForRuntime": true,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "ModifyMana",
+      "trigger": "OnCombatStart",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "ManaLockDuration",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 65,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "CostIncrease",
+      "rawSourceValue": "65",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Armor", "value": "20" }, { "name": "CostIncrease", "value": "65" }, { "name": "CritChance", "value": "20" }, { "name": "ManaLockDuration", "value": "60" }],
+  "importWarnings": ["Metadata-only item effect: ManaLockDuration -> ModifyMana", "Unmapped item variable: CostIncrease", "Unmapped item variable: ManaLockDuration", "Unsupported item effect metadata: CostIncrease"]
 }

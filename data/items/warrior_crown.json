@@ -1,7 +1,17 @@
 {
   "name": "Warrior Crown",
+  "displayName": "Warrior Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_WarriorEmblem2",
+  "description": "Gain a Warrior Emblem, a Giant Slayer, and a Yone.",
+  "tooltip": "Gain a Warrior Emblem, a Giant Slayer, and a Yone.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Warrior-Crownl-III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

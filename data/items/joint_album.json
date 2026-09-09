@@ -1,7 +1,17 @@
 {
   "name": "Joint Album",
+  "displayName": "Joint Album",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_TeamupAugment_SeraphineSona",
+  "description": "Gain a Seraphine. Seraphine's heal is increased based on her ally's missing Health. Sona gains the Disruptor trait and fires an additional bolt with every cast. Gain a Sona after each player combat.",
+  "tooltip": "Gain a Seraphine. Seraphine's heal is increased based on her ally's missing Health. Sona gains the Disruptor trait and fires an additional bolt with every cast. Gain a Sona after each player combat.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/JointAlbum_II.TFT_16_3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

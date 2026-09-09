@@ -1,8 +1,43 @@
 {
   "name": "Stand United II",
+  "displayName": "Stand United II",
+  "isPlaceholder": false,
+  "sourceId": "TFT6_Augment_Diversify2",
+  "description": "Gain @AD*100@% Attack Damage and @AP@% Ability Power for each non-unique Trait active across your team.<br><br>@TFTUnitProperty.item:TFT_Augment_Diversify_TRAKEY_Holder@",
+  "tooltip": "Gain @AD*100@% Attack Damage and @AP@% Ability Power for each non-unique Trait active across your team.<br><br>@TFTUnitProperty.item:TFT_Augment_Diversify_TRAKEY_Holder@",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/StandUnited2.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Stand United II:AbilityPower", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 2.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Stand United II:AttackDamage", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.025, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.025,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AD",
+      "rawSourceValue": "0.025",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AD", "effectType": "BonusAttackDamage", "crowdControlType": "None", "affectedStat": "AttackDamage", "modifierType": "Percent", "value": 0.025, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 2.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AP",
+      "rawSourceValue": "2.5",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:AP", "effectType": "BonusAbilityPower", "crowdControlType": "None", "affectedStat": "AbilityPower", "modifierType": "Flat", "value": 2.5, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    }
+  ],
+  "rawVariables": [{ "name": "AD", "value": "0.025" }, { "name": "AP", "value": "2.5" }],
+  "importWarnings": []
 }

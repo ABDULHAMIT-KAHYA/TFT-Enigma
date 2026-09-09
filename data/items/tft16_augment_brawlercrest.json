@@ -1,0 +1,17 @@
+{
+  "name": "TFT16_Augment_BrawlerCrest",
+  "displayName": "Bruiser Crest",
+  "isPlaceholder": true,
+  "sourceId": "TFT16_Augment_BrawlerCrest",
+  "description": "Get a Bruiser Emblem.",
+  "tooltip": "Get a Bruiser Emblem.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

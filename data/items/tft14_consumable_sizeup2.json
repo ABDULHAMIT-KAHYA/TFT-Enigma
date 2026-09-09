@@ -1,0 +1,29 @@
+{
+  "name": "TFT14_Consumable_SizeUp2",
+  "displayName": "Blessing: Size",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Consumable_SizeUp2",
+  "description": "Permanently increase a champion's Health by @FlatHealthBonus@ and size by 20%.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "tooltip": "Permanently increase a champion's Health by @FlatHealthBonus@ and size by 20%.<br><br><tftitemrules>[Consumable - This item disappears when used.]</tftitemrules>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT14_Consumable_SizeUp.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 350,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "FlatHealthBonus",
+      "rawSourceValue": "350",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "FlatHealthBonus", "value": "350" }],
+  "importWarnings": ["Unmapped item variable: FlatHealthBonus"]
+}

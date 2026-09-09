@@ -1,7 +1,41 @@
 {
   "name": "Retribution",
+  "displayName": "Retribution",
+  "isPlaceholder": false,
+  "sourceId": "TFT_Augment_Retribution",
+  "description": "Gain @ItemCount@ Hands of Justice. Allies equipped with Hand of Justice gain <TFTKeyword>Precision</TFTKeyword> and @CritChance*100@% Critical Strike Chance.<br><br>{{TFT_Keyword_Precision}}",
+  "tooltip": "Gain @ItemCount@ Hands of Justice. Allies equipped with Hand of Justice gain <TFTKeyword>Precision</TFTKeyword> and @CritChance*100@% Critical Strike Chance.<br><br>{{TFT_Keyword_Precision}}",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Retribution_III.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Retribution:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "CritChance",
+      "rawSourceValue": "0.15",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:CritChance", "effectType": "CritChanceBonus", "crowdControlType": "None", "affectedStat": "CritChance", "modifierType": "Flat", "value": 0.15, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ItemCount",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "CritChance", "value": "0.15" }, { "name": "ItemCount", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: ItemCount", "Unsupported item effect metadata: ItemCount"]
 }

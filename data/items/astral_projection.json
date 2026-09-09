@@ -1,7 +1,17 @@
 {
   "name": "Astral Projection",
+  "displayName": "Astral Projection",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_AstralProjection",
+  "description": "When an Astral unit dies, they leave behind a projection of themselves with reduced stats that casts immediately then rapidly loses Health. Gain a Skarner and a Nidalee.",
+  "tooltip": "When an Astral unit dies, they leave behind a projection of themselves with reduced stats that casts immediately then rapidly loses Health. Gain a Skarner and a Nidalee.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/Astral-Projection_III.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,30 @@
 {
   "name": "Tyrannical Warlord",
+  "displayName": "Tyrannical Warlord",
+  "isPlaceholder": true,
+  "sourceId": "TFT4_Augment_Warlord",
+  "description": "At the start of combat, the Warlord who dealt the most damage last combat becomes the Tyrant. The Tyrant gains @BonusDamage@% Damage Amp. Gain a Jarvan IV and a Nidalee.",
+  "tooltip": "At the start of combat, the Warlord who dealt the most damage last combat becomes the Tyrant. The Tyrant gains @BonusDamage@% Damage Amp. Gain a Jarvan IV and a Nidalee.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tyrannical-Warlord_II.TFT_Set4_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "DealDamage",
+      "trigger": "OnCombatStart",
+      "value": 25,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "CurrentEnemy",
+      "rawSourceName": "BonusDamage",
+      "rawSourceValue": "25",
+      "supportedForRuntime": false,
+      "damageFormula": { "baseDamage": 25, "adRatio": 0, "apRatio": 0, "damageType": "Physical" }
+    }
+  ],
+  "rawVariables": [{ "name": "BonusDamage", "value": "25" }],
+  "importWarnings": ["Metadata-only item effect: BonusDamage -> DealDamage", "Unmapped item variable: BonusDamage"]
 }

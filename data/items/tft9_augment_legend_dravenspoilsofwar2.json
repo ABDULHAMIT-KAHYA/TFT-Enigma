@@ -1,0 +1,40 @@
+{
+  "name": "TFT9_Augment_Legend_DravenSpoilsOfWar2",
+  "displayName": "Spoils of War II",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Legend_DravenSpoilsOfWar2",
+  "description": "Enemies have a @LootDropChance*100@% chance to drop loot when killed.",
+  "tooltip": "Enemies have a @LootDropChance*100@% chance to drop loot when killed.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Spoils-Of-War-Legend-II.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "LootDropChance",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{ac7ef35a}",
+      "rawSourceValue": "0.3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "LootDropChance", "value": "0.3" }, { "name": "{ac7ef35a}", "value": "0.3" }],
+  "importWarnings": ["Unmapped item variable: LootDropChance", "Unmapped item variable: {ac7ef35a}", "Unsupported item effect metadata: LootDropChance", "Unsupported item effect metadata: {ac7ef35a}"]
+}

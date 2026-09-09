@@ -1,0 +1,17 @@
+{
+  "name": "TFT15_Augment_DestroyerCrown",
+  "displayName": "Executioner Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT15_Augment_DestroyerCrown",
+  "description": "Gain a Executioner Emblem, a Striker's Flail, and a Katarina.",
+  "tooltip": "Gain a Executioner Emblem, a Striker's Flail, and a Katarina.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Executioner_III.TFT_Set15.tex",
+  "itemCategory": "Augment",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
+}

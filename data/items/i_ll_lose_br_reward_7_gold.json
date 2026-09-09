@@ -1,7 +1,29 @@
 {
   "name": "I'll lose!<br>Reward: 7 gold.",
+  "displayName": "I'll lose!<br>Reward: 7 gold.",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Encounter_ChoiceItem_PredictLose",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 7,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldReward",
+      "rawSourceValue": "7",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "GoldReward", "value": "7" }],
+  "importWarnings": ["Unmapped item variable: GoldReward", "Unsupported item effect metadata: GoldReward"]
 }

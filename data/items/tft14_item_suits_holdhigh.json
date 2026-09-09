@@ -1,0 +1,29 @@
+{
+  "name": "TFT14_Item_Suits_HoldHigh",
+  "displayName": "Win More",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Item_Suits_HoldHigh",
+  "description": "Bet that you'll win 3 or more of the next 5 combats.",
+  "tooltip": "Bet that you'll win 3 or more of the next 5 combats.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Placeholders/TFT_Item_UnusableSlot.tex",
+  "itemCategory": "CombatItem",
+  "passiveStats": [
+
+  ],
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0.03,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{00df445b}",
+      "rawSourceValue": "0.03",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{00df445b}", "value": "0.03" }],
+  "importWarnings": ["Unmapped item variable: {00df445b}", "Unsupported item effect metadata: {00df445b}"]
+}

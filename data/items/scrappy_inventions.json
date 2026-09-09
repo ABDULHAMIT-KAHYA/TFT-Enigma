@@ -1,7 +1,40 @@
 {
   "name": "Scrappy Inventions",
+  "displayName": "Scrappy Inventions",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_ImpromptuInventions",
+  "description": "Combat start: Up to @MaxComponents@ equipped components turn into completed items for the rest of combat. Gain a component at the start of the next @NumStages@ stages.",
+  "tooltip": "Combat start: Up to @MaxComponents@ equipped components turn into completed items for the rest of combat. Gain a component at the start of the next @NumStages@ stages.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Impromptu-Invention-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "MaxComponents",
+      "rawSourceValue": "5",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "OnCombatStart",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "SourceContext",
+      "rawSourceName": "NumStages",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "MaxComponents", "value": "5" }, { "name": "NumStages", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: MaxComponents", "Unmapped item variable: NumStages", "Unsupported item effect metadata: MaxComponents", "Unsupported item effect metadata: NumStages"]
 }

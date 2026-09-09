@@ -1,7 +1,17 @@
 {
   "name": "Astral Heart",
+  "displayName": "Astral Heart",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_AstralTrait",
+  "description": "Your team counts as having 1 additional Astral. Gain a Lux.",
+  "tooltip": "Your team counts as having 1 additional Astral. Gain a Lux.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Astral-Heart-I.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

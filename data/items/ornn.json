@@ -1,7 +1,17 @@
 {
   "name": "Ornn",
+  "displayName": "Ornn",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_ChampionItem_Ornn",
+  "description": "Ornn",
+  "tooltip": "Ornn",
+  "iconPath": "ASSETS/UX/TFT/ChampionSplashes/TFT11_Ornn_Square.tex",
+  "itemCategory": "Unknown",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

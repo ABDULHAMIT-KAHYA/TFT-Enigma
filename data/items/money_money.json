@@ -1,7 +1,40 @@
 {
   "name": "Money Money!",
+  "displayName": "Money Money!",
+  "isPlaceholder": true,
+  "sourceId": "TFT9_Augment_Commander_Money2",
+  "description": "Gain @gold@ gold. In @Numberofcombats@ turns, gain @gold@ gold again.",
+  "tooltip": "Gain @gold@ gold. In @Numberofcombats@ turns, gain @gold@ gold again.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Money-II.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 16,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Gold",
+      "rawSourceValue": "16",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Numberofcombats",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Gold", "value": "16" }, { "name": "Numberofcombats", "value": "3" }],
+  "importWarnings": ["Unmapped item variable: Gold", "Unmapped item variable: Numberofcombats", "Unsupported item effect metadata: Gold", "Unsupported item effect metadata: Numberofcombats"]
 }

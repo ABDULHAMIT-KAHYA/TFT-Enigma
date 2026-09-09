@@ -1,8 +1,120 @@
 {
   "name": "Radiant Needlessly Big Gem",
+  "displayName": "Radiant Needlessly Big Gem",
+  "isPlaceholder": false,
+  "sourceId": "TFT7_Item_ShimmerscaleHeartOfGold_Radiant",
+  "description": "If the holder is alive after @ProcTimeInSeconds@ seconds, your team deals <TFTRadiantItemBonus>@BonusDamagePerGold*100@%</TFTRadiantItemBonus> more damage per %i:goldCoins% gold in your bank (up to %i:goldCoins% @GoldLimit@ gold). For every @UnitsPerGold@ units alive when this happens, gain <TFTRadiantItemBonus>@GoldAmount@</TFTRadiantItemBonus> gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>",
+  "tooltip": "If the holder is alive after @ProcTimeInSeconds@ seconds, your team deals <TFTRadiantItemBonus>@BonusDamagePerGold*100@%</TFTRadiantItemBonus> more damage per %i:goldCoins% gold in your bank (up to %i:goldCoins% @GoldLimit@ gold). For every @UnitsPerGold@ units alive when this happens, gain <TFTRadiantItemBonus>@GoldAmount@</TFTRadiantItemBonus> gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Set7_Shimmerscale/Shimmerscale_HeartOfGold_Radiant.tex",
+  "itemCategory": "RadiantItem",
   "passiveStats": [
     { "name": "Item:Radiant Needlessly Big Gem:DamageAmplification", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" },
     { "name": "Item:Radiant Needlessly Big Gem:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 1500, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 1500,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "1500",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 1500, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 0.2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "MaxDamageAmp",
+      "rawSourceValue": "0.2",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:MaxDamageAmp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "DamageAmplification", "modifierType": "Flat", "value": 0.2, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.01,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "AmpPerSec",
+      "rawSourceValue": "0.01",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.05,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BaseBonusDamage",
+      "rawSourceValue": "0.05",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 0.02,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "BonusDamagePerGold",
+      "rawSourceValue": "0.02",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldAmount",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 60,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "GoldLimit",
+      "rawSourceValue": "60",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "ProcTimeInSeconds",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "GrantTrait",
+      "trigger": "Passive",
+      "value": 2,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "UnitsPerGold",
+      "rawSourceValue": "2",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "AmpPerSec", "value": "0.01" }, { "name": "BaseBonusDamage", "value": "0.05" }, { "name": "BonusDamagePerGold", "value": "0.02" }, { "name": "GoldAmount", "value": "3" }, { "name": "GoldLimit", "value": "60" }, { "name": "Health", "value": "1500" }, { "name": "MaxDamageAmp", "value": "0.2" }, { "name": "ProcTimeInSeconds", "value": "15" }, { "name": "UnitsPerGold", "value": "2" }],
+  "importWarnings": ["Unmapped item variable: AmpPerSec", "Unmapped item variable: BaseBonusDamage", "Unmapped item variable: BonusDamagePerGold", "Unmapped item variable: GoldAmount", "Unmapped item variable: GoldLimit", "Unmapped item variable: ProcTimeInSeconds", "Unmapped item variable: UnitsPerGold"]
 }

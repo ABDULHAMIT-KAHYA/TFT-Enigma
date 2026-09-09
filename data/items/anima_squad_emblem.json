@@ -1,7 +1,29 @@
 {
   "name": "Anima Squad Emblem",
+  "displayName": "Anima Squad Emblem",
+  "isPlaceholder": true,
+  "sourceId": "TFT14_Item_DarkWebEmblemItem",
+  "description": "The holder gains the Anima Squad trait.",
+  "tooltip": "The holder gains the Anima Squad trait.",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set14/TFT14_Emblem_AnimaSquad.TFT_Set14.tex",
+  "itemCategory": "Emblem",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "ModifyMana",
+      "trigger": "Passive",
+      "value": 15,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Mana",
+      "rawSourceValue": "15",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Mana", "value": "15" }],
+  "importWarnings": ["Unmapped item variable: Mana"]
 }

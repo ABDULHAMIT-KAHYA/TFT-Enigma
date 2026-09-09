@@ -1,7 +1,17 @@
 {
   "name": "Darkflight Crown",
+  "displayName": "Darkflight Crown",
+  "isPlaceholder": true,
+  "sourceId": "TFT7_Augment_DarkflightEmblem2",
+  "description": "Gain a Darkflight Emblem, a Titan's Resolve, and a Rengar.",
+  "tooltip": "Gain a Darkflight Emblem, a Titan's Resolve, and a Rengar.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DarkflightCrown-3.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

@@ -1,7 +1,52 @@
 {
   "name": "Demacia Forever",
+  "displayName": "Demacia Forever",
+  "isPlaceholder": false,
+  "sourceId": "TFT16_Augment_DemaciaForever",
+  "description": "Demacians gain @Health@ permanent Health every time they rally. They also gain @Stats@% permanent Attack Damage and Ability Power every @RallyCount@ rallies. Gain a Jarvan IV, a Sona, and a Xin Zhao.",
+  "tooltip": "Demacians gain @Health@ permanent Health every time they rally. They also gain @Stats@% permanent Attack Damage and Ability Power every @RallyCount@ rallies. Gain a Jarvan IV, a Sona, and a Xin Zhao.",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DemaciaForever_II.TFT_Set16.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
     { "name": "Item:Demacia Forever:MaxHp", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "GrantStats",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Health",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false,
+      "statusEffect": { "name": "ItemGeneric:Health", "effectType": "Buff", "crowdControlType": "None", "affectedStat": "MaxHp", "modifierType": "Flat", "value": 3, "durationMs": 60000, "remainingMs": 60000, "tickIntervalMs": 0, "tickTimerMs": 0, "damageType": "True" }
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 3,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "RallyCount",
+      "rawSourceValue": "3",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "Heal",
+      "trigger": "Passive",
+      "value": 1.5,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "Stats",
+      "rawSourceValue": "1.5",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "Health", "value": "3" }, { "name": "RallyCount", "value": "3" }, { "name": "Stats", "value": "1.5" }],
+  "importWarnings": ["Unmapped item variable: RallyCount", "Unmapped item variable: Stats"]
 }

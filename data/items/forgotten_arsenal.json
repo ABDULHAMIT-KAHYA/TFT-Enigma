@@ -1,7 +1,17 @@
 {
   "name": "Forgotten Arsenal",
+  "displayName": "Forgotten Arsenal",
+  "isPlaceholder": true,
+  "sourceId": "TFT5_Augment_Forgotten",
+  "description": "For each active tier of the Forgotten trait, gain a different Shadow Support item. Gain a Thresh.<br><br><i>Shadow Support items give powerful bonuses to allies at a cost.</i>",
+  "tooltip": "For each active tier of the Forgotten trait, gain a different Shadow Support item. Gain a Thresh.<br><br><i>Shadow Support items give powerful bonuses to allies at a cost.</i>",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/Forgotten-Arsenal_II.TFT_Set5_5_Revival.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [],
+  "rawVariables": [],
+  "importWarnings": []
 }

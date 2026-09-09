@@ -1,7 +1,40 @@
 {
   "name": "TFT_DoubleUpAugment_GoodParenting_Name",
+  "displayName": "TFT_DoubleUpAugment_GoodParenting_Name",
+  "isPlaceholder": true,
+  "sourceId": "TFT_DoubleUpAugment_GoodParenting",
+  "description": "TFT_DoubleUpAugment_GoodParenting_Description",
+  "tooltip": "TFT_DoubleUpAugment_GoodParenting_Description",
+  "iconPath": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/DU_Augment_GoodParenting.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 30,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "EggTurns",
+      "rawSourceValue": "30",
+      "supportedForRuntime": false
+    },
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{ecb4463d}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "EggTurns", "value": "30" }, { "name": "{ecb4463d}", "value": "null" }],
+  "importWarnings": ["Unmapped item variable: EggTurns", "Unmapped non-numeric item variable: {ecb4463d}", "Unsupported item effect metadata: EggTurns", "Unsupported item effect metadata: {ecb4463d}"]
 }

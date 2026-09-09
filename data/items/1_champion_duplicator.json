@@ -1,7 +1,29 @@
 {
   "name": "1 Champion Duplicator",
+  "displayName": "1 Champion Duplicator",
+  "isPlaceholder": true,
+  "sourceId": "TFT11_Encounter_ChoiceItem_1NormalDupe",
+  "description": "",
+  "tooltip": "",
+  "iconPath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex",
+  "itemCategory": "Augment",
   "passiveStats": [
 
   ],
-  "triggeredEffects": []
+  "triggeredEffects": [],
+  "genericEffects": [
+    {
+      "effectType": "UnknownUnsupported",
+      "trigger": "Passive",
+      "value": 0,
+      "durationMs": 0,
+      "cooldownMs": 0,
+      "targetHint": "Self",
+      "rawSourceName": "{4a99a5b2}",
+      "rawSourceValue": "null",
+      "supportedForRuntime": false
+    }
+  ],
+  "rawVariables": [{ "name": "{4a99a5b2}", "value": "null" }],
+  "importWarnings": ["Unmapped non-numeric item variable: {4a99a5b2}", "Unsupported item effect metadata: {4a99a5b2}"]
 }
