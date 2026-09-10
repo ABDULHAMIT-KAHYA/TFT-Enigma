@@ -16,6 +16,7 @@
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
+#include <unordered_map>
 #include <utility>
 #include <vector>
 
@@ -562,6 +563,414 @@ static Ability parseAbility(const JsonValue& root)
     return a;
 }
 
+
+static std::string toLowerAscii(std::string s)
+{
+    for (char& c : s)
+    {
+        c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+    }
+    return s;
+}
+
+static bool containsText(std::string_view haystack, std::string_view needle)
+{
+    return toLowerAscii(std::string(haystack)).find(toLowerAscii(std::string(needle))) != std::string::npos;
+}
+
+static std::string jsonValueSummaryForMetadata(const JsonValue& v)
+{
+    if (v.isNull()) return "null";
+    if (v.isBool()) return v.asBool() ? "true" : "false";
+    if (v.isNumber())
+    {
+        std::ostringstream ss;
+        ss << v.asNumber();
+        return ss.str();
+    }
+    if (v.isString()) return v.asString();
+    if (v.isArray())
+    {
+        std::ostringstream ss;
+        ss << "[";
+        const auto& arr = v.asArray();
+        for (std::size_t i = 0; i < arr.size(); ++i)
+        {
+            if (i) ss << ",";
+            ss << jsonValueSummaryForMetadata(arr[i]);
+        }
+        ss << "]";
+        return ss.str();
+    }
+    if (v.isObject()) return "object(" + std::to_string(v.asObject().size()) + ")";
+    return "";
+}
+
+static double numericValueAtRank(const JsonValue& value, std::size_t rankIndex)
+{
+    if (value.isNumber())
+    {
+        return value.asNumber();
+    }
+    if (value.isArray())
+    {
+        const auto& arr = value.asArray();
+        if (rankIndex < arr.size() && arr[rankIndex].isNumber())
+        {
+            return arr[rankIndex].asNumber();
+        }
+        for (const JsonValue& v : arr)
+        {
+            if (v.isNumber() && std::fabs(v.asNumber()) > 0.00001)
+            {
+                return v.asNumber();
+            }
+        }
+    }
+    return 0.0;
+}
+
+static std::vector<RawVariableMetadata> collectRawSpellVariablesForMetadata(const JsonValue& spell)
+{
+    std::vector<RawVariableMetadata> vars;
+    if (!spell.isObject() || !hasKey(spell, "variables") || !spell.at("variables").isArray())
+    {
+        return vars;
+    }
+    for (const JsonValue& v : spell.at("variables").asArray())
+    {
+        if (!v.isObject()) continue;
+        RawVariableMetadata raw{};
+        raw.name = optionalString(v, "name", "");
+        if (raw.name.empty()) continue;
+        if (hasKey(v, "value")) raw.value = jsonValueSummaryForMetadata(v.at("value"));
+        else if (hasKey(v, "values")) raw.value = jsonValueSummaryForMetadata(v.at("values"));
+        vars.push_back(std::move(raw));
+    }
+    std::sort(vars.begin(), vars.end(), [](const auto& a, const auto& b) { return a.name < b.name; });
+    return vars;
+}
+
+static double spellVariableValue(const JsonValue& spell, std::string_view nameNeedle, std::size_t rankIndex)
+{
+    if (!spell.isObject() || !hasKey(spell, "variables") || !spell.at("variables").isArray())
+    {
+        return 0.0;
+    }
+    double best = 0.0;
+    for (const JsonValue& v : spell.at("variables").asArray())
+    {
+        if (!v.isObject()) continue;
+        const std::string name = optionalString(v, "name", "");
+        if (name.empty() || !containsText(name, nameNeedle)) continue;
+        const JsonValue* value = nullptr;
+        if (hasKey(v, "value")) value = &v.at("value");
+        else if (hasKey(v, "values")) value = &v.at("values");
+        if (!value) continue;
+        const double candidate = numericValueAtRank(*value, rankIndex);
+        if (std::fabs(candidate) > std::fabs(best))
+        {
+            best = candidate;
+        }
+    }
+    return best;
+}
+
+static double bestNamedSpellVariableValue(const JsonValue& spell,
+                                          const std::vector<std::string_view>& needles,
+                                          std::size_t rankIndex)
+{
+    double best = 0.0;
+    for (std::string_view needle : needles)
+    {
+        const double candidate = spellVariableValue(spell, needle, rankIndex);
+        if (std::fabs(candidate) > std::fabs(best))
+        {
+            best = candidate;
+        }
+    }
+    return best;
+}
+
+static DamageType inferAbilityDamageType(const std::string& text)
+{
+    const std::string lower = toLowerAscii(text);
+    if (lower.find("true damage") != std::string::npos) return DamageType::TrueDamage;
+    if (lower.find("physical damage") != std::string::npos) return DamageType::Physical;
+    if (lower.find("magic damage") != std::string::npos) return DamageType::Magic;
+    return DamageType::Magic;
+}
+
+static std::int32_t inferAbilityDurationMs(const JsonValue& spell, const std::string& text)
+{
+    const double seconds = bestNamedSpellVariableValue(spell, { "duration", "stunduration", "ccduration" }, 1);
+    if (seconds > 0.0 && seconds < 120.0)
+    {
+        return static_cast<std::int32_t>(std::lround(seconds * 1000.0));
+    }
+    if (containsText(text, "stun") || containsText(text, "knock") || containsText(text, "root"))
+    {
+        return 1500;
+    }
+    return 0;
+}
+
+static StatusEffect makeAbilityStatus(std::string name,
+                                      StatusEffectType type,
+                                      CrowdControlType crowdControl,
+                                      StatType stat,
+                                      ModifierType modifier,
+                                      float value,
+                                      std::int32_t durationMs)
+{
+    StatusEffect e{};
+    e.name = std::move(name);
+    e.effectType = type;
+    e.crowdControlType = crowdControl;
+    e.affectedStat = stat;
+    e.modifierType = modifier;
+    e.value = value;
+    e.durationMs = durationMs;
+    e.remainingMs = durationMs;
+    e.tickIntervalMs = 0;
+    e.tickTimerMs = 0;
+    e.damageType = DamageType::TrueDamage;
+    return e;
+}
+
+static AbilityEffect inferAbilityEffectFromRawSpell(const Ability& current, const JsonValue& spell, bool& mapped)
+{
+    AbilityEffect e{};
+    if (!current.effects.empty())
+    {
+        e = current.effects.front();
+    }
+    e.name = current.name;
+    e.trigger = AbilityTrigger::OnCast;
+
+    const std::string desc = optionalString(spell, "desc", optionalString(spell, "description", ""));
+    const std::string text = desc + " " + optionalString(spell, "tooltip", "");
+    const std::string lower = toLowerAscii(text);
+
+    const bool mentionsDamage = lower.find("damage") != std::string::npos;
+    const bool mentionsShield = lower.find("shield") != std::string::npos;
+    const bool mentionsHeal = lower.find("heal") != std::string::npos || lower.find("restore") != std::string::npos;
+    const bool mentionsCc = lower.find("stun") != std::string::npos || lower.find("knock up") != std::string::npos ||
+                            lower.find("knockup") != std::string::npos || lower.find("root") != std::string::npos ||
+                            lower.find("disarm") != std::string::npos || lower.find("silence") != std::string::npos;
+
+    const double flatDamage = bestNamedSpellVariableValue(spell,
+        { "totaldamage", "modifieddamage", "damage", "apdamage", "spelldamage" }, 1);
+    if (mentionsDamage || flatDamage > 0.0)
+    {
+        e.damageFormula.baseDamage = static_cast<std::int32_t>(std::max(0.0, std::round(flatDamage)));
+        e.damageFormula.damageType = inferAbilityDamageType(text);
+        const double adRatio = spellVariableValue(spell, "addamage", 0);
+        if (adRatio > 0.0 && adRatio <= 20.0 && lower.find("scalead") != std::string::npos)
+        {
+            e.damageFormula.adRatio = static_cast<float>(adRatio);
+        }
+        const double percentMaxHp = bestNamedSpellVariableValue(spell, { "percentmaxhealth", "maxhealth", "percenthealth" }, 1);
+        if (percentMaxHp > 0.0 && percentMaxHp <= 1.0 && lower.find("max health") != std::string::npos)
+        {
+            e.targetMaxHpPercentDamage = static_cast<float>(percentMaxHp);
+        }
+        mapped = true;
+    }
+
+    if (mentionsShield)
+    {
+        const double shield = bestNamedSpellVariableValue(spell, { "shield", "shieldamount" }, 1);
+        if (shield > 0.0)
+        {
+            e.shieldAmount = static_cast<std::int32_t>(std::lround(shield));
+            mapped = true;
+        }
+    }
+
+    if (mentionsHeal)
+    {
+        const double heal = bestNamedSpellVariableValue(spell, { "heal", "healing", "healamount" }, 1);
+        if (heal > 0.0)
+        {
+            e.healAmount = static_cast<std::int32_t>(std::lround(heal));
+            mapped = true;
+        }
+    }
+
+    if (mentionsCc)
+    {
+        CrowdControlType cc = CrowdControlType::Stun;
+        if (lower.find("root") != std::string::npos) cc = CrowdControlType::Root;
+        else if (lower.find("disarm") != std::string::npos) cc = CrowdControlType::Disarm;
+        else if (lower.find("silence") != std::string::npos) cc = CrowdControlType::Silence;
+        else if (lower.find("knock") != std::string::npos) cc = CrowdControlType::Knockup;
+        e.appliesStatusEffect = true;
+        e.appliedStatusEffect = makeAbilityStatus(current.name + " CC",
+                                                  StatusEffectType::CrowdControl,
+                                                  cc,
+                                                  StatType::None,
+                                                  ModifierType::Flat,
+                                                  0.0f,
+                                                  inferAbilityDurationMs(spell, text));
+        mapped = true;
+    }
+
+    if (lower.find("all enemies") != std::string::npos || lower.find("area") != std::string::npos ||
+        lower.find("nearby") != std::string::npos || lower.find("adjacent") != std::string::npos ||
+        lower.find("around") != std::string::npos || lower.find("explosion") != std::string::npos)
+    {
+        e.areaShape = AreaShape::CircleRadius;
+        const double radiusValue = bestNamedSpellVariableValue(spell, { "radius", "hex", "area" }, 1);
+        e.radius = static_cast<std::int32_t>(std::clamp(radiusValue > 0.0 ? std::lround(radiusValue) : 1L, 1L, 4L));
+        mapped = true;
+    }
+    else if (lower.find("line") != std::string::npos || lower.find("pierce") != std::string::npos || lower.find("beam") != std::string::npos)
+    {
+        e.areaShape = AreaShape::Line;
+        e.radius = 4;
+        mapped = true;
+    }
+    else if (lower.find("cone") != std::string::npos)
+    {
+        e.areaShape = AreaShape::Cone;
+        e.radius = 3;
+        mapped = true;
+    }
+
+    const double delaySeconds = bestNamedSpellVariableValue(spell, { "delay", "windup" }, 1);
+    if (delaySeconds > 0.0 && delaySeconds < 10.0)
+    {
+        e.delayMs = static_cast<std::int32_t>(std::lround(delaySeconds * 1000.0));
+        mapped = true;
+    }
+
+    return e;
+}
+
+static std::unordered_map<std::string, JsonValue> loadRawAbilitySpellsByName(const std::filesystem::path& dataRoot)
+{
+    std::unordered_map<std::string, JsonValue> out;
+    const std::filesystem::path cachePath = dataRoot / "_import_cache" / "cdragon_tft_en_us.json";
+    if (!std::filesystem::exists(cachePath))
+    {
+        return out;
+    }
+
+    JsonValue root;
+    try
+    {
+        root = parseJson(readFileToString(cachePath));
+    }
+    catch (const std::exception&)
+    {
+        return out;
+    }
+
+    const JsonValue* setObj = nullptr;
+    int bestSet = -1;
+    if (hasKey(root, "sets") && root.at("sets").isObject())
+    {
+        for (const auto& [key, value] : root.at("sets").asObject())
+        {
+            if (!value.isObject() || !hasKey(value, "champions")) continue;
+            try
+            {
+                const int setNumber = std::stoi(key);
+                if (setNumber > bestSet)
+                {
+                    bestSet = setNumber;
+                    setObj = &value;
+                }
+            }
+            catch (const std::exception&)
+            {
+            }
+        }
+    }
+    if (!setObj || !hasKey(*setObj, "champions") || !setObj->at("champions").isArray())
+    {
+        return out;
+    }
+
+    for (const JsonValue& champion : setObj->at("champions").asArray())
+    {
+        if (!champion.isObject() || !hasKey(champion, "ability") || !champion.at("ability").isObject()) continue;
+        const JsonValue& spell = champion.at("ability");
+        const std::string abilityName = optionalString(spell, "name", "");
+        if (!abilityName.empty())
+        {
+            out[abilityName] = spell;
+            out[toLowerAscii(abilityName)] = spell;
+        }
+        const std::string apiName = optionalString(spell, "apiName", "");
+        if (!apiName.empty())
+        {
+            out[apiName] = spell;
+            out[toLowerAscii(apiName)] = spell;
+        }
+    }
+    return out;
+}
+
+static void enrichAbilitiesFromRawCache(const std::filesystem::path& dataRoot,
+                                        std::unordered_map<std::string, Ability>& abilities)
+{
+    const std::unordered_map<std::string, JsonValue> rawSpells = loadRawAbilitySpellsByName(dataRoot);
+    if (rawSpells.empty())
+    {
+        return;
+    }
+
+    for (auto& [id, ability] : abilities)
+    {
+        const JsonValue* spell = nullptr;
+        auto it = rawSpells.find(ability.name);
+        if (it == rawSpells.end()) it = rawSpells.find(toLowerAscii(ability.name));
+        if (it == rawSpells.end()) it = rawSpells.find(id);
+        if (it == rawSpells.end()) it = rawSpells.find(toLowerAscii(id));
+        if (it != rawSpells.end()) spell = &it->second;
+        if (!spell)
+        {
+            continue;
+        }
+
+        if (ability.metadata.sourceId.empty()) ability.metadata.sourceId = optionalString(*spell, "apiName", id);
+        if (ability.metadata.displayName.empty()) ability.metadata.displayName = ability.name;
+        if (ability.metadata.description.empty()) ability.metadata.description = optionalString(*spell, "desc", "");
+        if (ability.metadata.tooltip.empty()) ability.metadata.tooltip = optionalString(*spell, "tooltip", "");
+        if (ability.metadata.iconPath.empty()) ability.metadata.iconPath = optionalString(*spell, "icon", "");
+        if (ability.metadata.rawVariables.empty()) ability.metadata.rawVariables = collectRawSpellVariablesForMetadata(*spell);
+        if (ability.metadata.effectMetadata.empty()) ability.metadata.effectMetadata = "runtime-enriched from raw CommunityDragon ability metadata";
+
+        const bool placeholder = ability.metadata.isPlaceholder || isPlaceholderSingleTargetMagicAbility(ability);
+        if (!placeholder)
+        {
+            continue;
+        }
+
+        bool mapped = false;
+        AbilityEffect inferred = inferAbilityEffectFromRawSpell(ability, *spell, mapped);
+        if (mapped)
+        {
+            ability.effects.clear();
+            ability.effects.push_back(std::move(inferred));
+            ability.metadata.isPlaceholder = false;
+            ability.metadata.importWarnings.push_back("Ability runtime effect inferred from preserved raw metadata");
+        }
+        else
+        {
+            ability.metadata.importWarnings.push_back("Ability remains placeholder: raw metadata did not map to current generic vocabulary");
+        }
+
+        const std::string desc = ability.metadata.description;
+        if (containsText(desc, "dash") || containsText(desc, "summon") || containsText(desc, "transform") || containsText(desc, "choose"))
+        {
+            ability.metadata.importWarnings.push_back("Ability contains advanced mechanics not represented by current generic vocabulary");
+        }
+    }
+}
+
 static Item parseItem(const JsonValue& root)
 {
     Item item{};
@@ -832,6 +1241,7 @@ bool ContentManager::loadAll(const std::string& dataRootDir)
         abilities_.emplace(id, parseAbility(j));
         std::cout << "Loaded ability: " << id << "\n";
     }
+    enrichAbilitiesFromRawCache(root, abilities_);
 
     for (const auto& path : listJsonFiles(traitsDir))
     {

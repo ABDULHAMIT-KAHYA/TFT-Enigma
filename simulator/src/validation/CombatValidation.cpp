@@ -2957,6 +2957,63 @@ static void contentFidelityValidationTest(const ContentManager& content, Validat
     }
     const std::size_t nonPlaceholderAbilities = content.abilityCount() - placeholderAbilities;
 
+    std::unordered_set<std::string> playableAbilityIds;
+    for (const auto& [_, champion] : content.champions())
+    {
+        if (isPlayableChampion(champion) && !champion.abilityId.empty())
+        {
+            playableAbilityIds.insert(champion.abilityId);
+        }
+    }
+
+    std::size_t playableAbilities = 0;
+    std::size_t playablePlaceholderAbilities = 0;
+    std::size_t playableNonPlaceholderAbilities = 0;
+    std::size_t playableAbilitiesWithRawVariables = 0;
+    std::size_t playableUnsupportedWarnings = 0;
+    std::map<std::string, std::size_t> playableAbilityMechanics;
+    std::map<std::string, std::size_t> playableAbilityDamageTypes;
+    std::vector<std::string> playablePlaceholderExamples;
+    for (const std::string& abilityId : playableAbilityIds)
+    {
+        const Ability* ability = content.getAbility(abilityId);
+        if (!ability) continue;
+        playableAbilities += 1;
+        const bool placeholder = ability->metadata.isPlaceholder || isPlaceholderSingleTargetMagicAbility(*ability);
+        if (placeholder)
+        {
+            playablePlaceholderAbilities += 1;
+            if (playablePlaceholderExamples.size() < 8)
+            {
+                playablePlaceholderExamples.push_back(abilityId);
+            }
+        }
+        else playableNonPlaceholderAbilities += 1;
+        if (!ability->metadata.rawVariables.empty()) playableAbilitiesWithRawVariables += 1;
+        for (const std::string& warning : ability->metadata.importWarnings)
+        {
+            if (warning.find("advanced mechanics") != std::string::npos || warning.find("remains placeholder") != std::string::npos)
+            {
+                playableUnsupportedWarnings += 1;
+            }
+        }
+        for (const AbilityEffect& effect : ability->effects)
+        {
+            if (effect.damageFormula.baseDamage > 0 || effect.damageFormula.adRatio > 0.0f ||
+                effect.damageFormula.apRatio > 0.0f || effect.targetMaxHpPercentDamage > 0.0f)
+            {
+                playableAbilityMechanics["Damage"] += 1;
+                playableAbilityDamageTypes[damageTypeJsonName(effect.damageFormula.damageType)] += 1;
+            }
+            if (effect.shieldAmount > 0) playableAbilityMechanics["Shield"] += 1;
+            if (effect.healAmount > 0 || effect.healPercentOfDamage > 0.0f) playableAbilityMechanics["Heal"] += 1;
+            if (effect.appliesStatusEffect) playableAbilityMechanics["Status"] += 1;
+            if (effect.areaShape != AreaShape::SingleTarget && effect.areaShape != AreaShape::Self) playableAbilityMechanics["Area"] += 1;
+            if (effect.delayMs > 0) playableAbilityMechanics["Delay"] += 1;
+            if (effect.targetMaxHpPercentDamage > 0.0f) playableAbilityMechanics["PercentMaxHp"] += 1;
+        }
+    }
+
     std::size_t traitsWithEffects = 0;
     std::size_t traitsWithoutEffects = 0;
     std::size_t explicitPlaceholderTraits = 0;
@@ -3070,6 +3127,33 @@ static void contentFidelityValidationTest(const ContentManager& content, Validat
         << " items=" << content.itemCount() << "\n";
     out << "Abilities | placeholder_single_target_magic=" << placeholderAbilities
         << " non_placeholder=" << nonPlaceholderAbilities << "\n";
+    out << "Playable ability fidelity | total=" << playableAbilities
+        << " non_placeholder=" << playableNonPlaceholderAbilities
+        << " placeholder=" << playablePlaceholderAbilities
+        << " raw_metadata=" << playableAbilitiesWithRawVariables
+        << " unsupported_warnings=" << playableUnsupportedWarnings << "\n";
+    out << "Playable ability mechanics |"
+        << " Damage=" << playableAbilityMechanics["Damage"]
+        << " Shield=" << playableAbilityMechanics["Shield"]
+        << " Heal=" << playableAbilityMechanics["Heal"]
+        << " Status=" << playableAbilityMechanics["Status"]
+        << " Area=" << playableAbilityMechanics["Area"]
+        << " Delay=" << playableAbilityMechanics["Delay"]
+        << " PercentMaxHp=" << playableAbilityMechanics["PercentMaxHp"] << "\n";
+    out << "Playable ability damage types |"
+        << " Physical=" << playableAbilityDamageTypes["Physical"]
+        << " Magic=" << playableAbilityDamageTypes["Magic"]
+        << " True=" << playableAbilityDamageTypes["True"] << "\n";
+    out << "Playable ability placeholder examples |";
+    if (playablePlaceholderExamples.empty())
+    {
+        out << " none";
+    }
+    for (const std::string& abilityId : playablePlaceholderExamples)
+    {
+        out << " " << abilityId;
+    }
+    out << "\n";
     out << "Traits | executable_effects=" << traitsWithEffects
         << " empty_or_no_executable_effects=" << traitsWithoutEffects << "\n";
     out << "Trait variants | groups=" << traitVariantGroups.size()
@@ -3181,6 +3265,10 @@ static void contentFidelityValidationTest(const ContentManager& content, Validat
     if (placeholderAbilities > 0)
     {
         report.warning("Content fidelity: placeholder single-target magic abilities present");
+    }
+    if (playablePlaceholderAbilities > 0)
+    {
+        report.warning("Content fidelity: playable champion abilities still have placeholders");
     }
     if (traitsWithoutEffects > 0)
     {
