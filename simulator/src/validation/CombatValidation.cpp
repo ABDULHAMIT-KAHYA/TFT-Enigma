@@ -3594,6 +3594,69 @@ static void benchmarkTest(const ContentManager& content, ValidationReport& repor
     }
 }
 
+static void combatOvertimeResolutionTest(const ContentManager& content, ValidationReport& report, std::ostream& out)
+{
+    RandomManager::global().setSeed(ValidationConstants::ReplaySeed);
+    DamageSystem::setSeed(ValidationConstants::ReplaySeed);
+
+    std::ostringstream log;
+    Logger logger(log);
+    logger.setMode(LogMode::Silent);
+
+    Board board(GameConstants::BoardWidth, GameConstants::BoardHeight);
+    std::vector<Unit> units;
+    units.emplace_back("OvertimeA",
+                       2000,
+                       30,
+                       0,
+                       0,
+                       1000,
+                       1,
+                       DamageType::Physical,
+                       Position{ 4, 4 },
+                       TeamId::TeamA);
+    units.emplace_back("OvertimeB",
+                       2000,
+                       20,
+                       0,
+                       0,
+                       1000,
+                       1,
+                       DamageType::Physical,
+                       Position{ 5, 4 },
+                       TeamId::TeamB);
+
+    GameState state(std::move(board), std::move(units), std::move(logger), content);
+    state.setDtMs(ValidationConstants::DefaultDtMs);
+
+    CombatValidation::setEnabled(false);
+    CombatValidation::setDetailedLogs(false);
+
+    Combat combat;
+    combat.run(state);
+
+    const bool aAlive = state.hasAlive(TeamId::TeamA);
+    const bool bAlive = state.hasAlive(TeamId::TeamB);
+    const bool hasWinner = aAlive != bAlive;
+    const bool noTimeout = log.str().find("Combat timeout") == std::string::npos;
+    const bool resolvedBeforeHardTimeout = state.timeMs() < CombatConstants::MaxCombatDurationMs;
+
+    out << "Combat overtime fixtures"
+        << " | overtime_start_ms=" << CombatConstants::OvertimeStartMs
+        << " | resolved_time_ms=" << state.timeMs()
+        << " | winner=" << (aAlive ? "TeamA" : bAlive ? "TeamB" : "None")
+        << " | timeout=" << (noTimeout ? 0 : 1)
+        << "\n";
+
+    if (hasWinner && noTimeout && resolvedBeforeHardTimeout)
+    {
+        report.pass("Combat: overtime resolves active slow duel before hard timeout");
+    }
+    else
+    {
+        report.fail("Combat: overtime resolves active slow duel before hard timeout");
+    }
+}
 static void attackSpeedTimerTest(ValidationReport& report, std::ostream& out)
 {
     struct Case { float as; };
@@ -4479,6 +4542,30 @@ static void macroSystemValidationTest(const ContentManager& content, ValidationR
         }
         if (ok) report.pass("Macro: Selling returns to pool");
         else report.fail("Macro: Selling returns to pool");
+    }
+    {
+        SharedUnitPool sellPool(content);
+        ShopSystem sellShop(content, sellPool);
+        PlayerState sellGold("SellGold");
+        const std::string champ = pickChampionByIndex(content, 0);
+        const ChampionDefinition* def = content.getChampion(champ);
+        OwnedUnit u{};
+        u.championName = champ;
+        u.starLevel = 1;
+        u.cost = def ? def->cost : 1;
+        sellGold.addToBench(u);
+        const int beforeGold = static_cast<int>(sellGold.gold());
+        const bool ok = sellShop.sellBench(sellGold, 0);
+        const int afterGold = static_cast<int>(sellGold.gold());
+        if (ok && afterGold == beforeGold + u.cost) report.pass("Macro: Selling returns correct gold");
+        else report.fail("Macro: Selling returns correct gold");
+    }
+
+    {
+        PlayerState interestCap("InterestCap");
+        interestCap.addGold(99);
+        if (interestCap.interest() == MacroConstants::MaxInterest) report.pass("Macro: Interest is capped");
+        else report.fail("Macro: Interest is capped");
     }
 
     {
@@ -5883,6 +5970,7 @@ static void lobbySimulationValidationTest(const ContentManager& content, Validat
     int winners = 0;
     bool placementRangeOk = true;
     bool duplicatePlacement = false;
+    bool compStylePopulated = true;
     for (const LobbyPlayerResult& p : a.players)
     {
         if (p.placement < 1 || p.placement > 8)
@@ -5897,6 +5985,10 @@ static void lobbySimulationValidationTest(const ContentManager& content, Validat
         {
             winners += 1;
         }
+        if (p.compStyle.empty())
+        {
+            compStylePopulated = false;
+        }
     }
 
     const bool deterministic = a.summary == b.summary;
@@ -5906,6 +5998,16 @@ static void lobbySimulationValidationTest(const ContentManager& content, Validat
         << " winner=" << a.winner
         << " unique_placements=" << placements.size()
         << " actions_after_elimination=" << a.actionsAfterElimination
+        << " economy_accounting=" << (a.economyAccountingBalanced ? 1 : 0)
+        << " max_final_gold=" << a.maxFinalGold
+        << " max_observed_gold=" << a.maxObservedGold
+        << " max_economy_events_per_player_round=" << a.maxEconomyEventsPerPlayerRound
+        << " total_economy_income=" << a.totalEconomyIncome
+        << " total_turn_gold_delta=" << a.totalTurnGoldDelta
+        << " items_granted=" << a.totalItemsGranted
+        << " items_equipped=" << a.totalItemsEquipped
+        << " items_bench=" << a.totalItemsOnBench
+        << " max_unit_items=" << a.maxEquippedItemsOnUnit
         << " shared_pool_valid=" << (a.sharedPoolValid ? 1 : 0)
         << " deterministic=" << (deterministic ? 1 : 0)
         << "\n";
@@ -5921,6 +6023,27 @@ static void lobbySimulationValidationTest(const ContentManager& content, Validat
 
     if (a.actionsAfterElimination == 0) report.pass("Lobby: eliminated players stop acting");
     else report.fail("Lobby: eliminated players stop acting");
+
+    if (a.economyAccountingBalanced) report.pass("Lobby: economy accounting balances");
+    else report.fail("Lobby: economy accounting balances");
+
+    if (a.maxEconomyEventsPerPlayerRound <= 1) report.pass("Lobby: round-end economy applies at most once per player round");
+    else report.fail("Lobby: round-end economy applies at most once per player round");
+
+    if (a.totalEconomyIncome > 0 && a.maxObservedGold >= a.maxFinalGold) report.pass("Lobby: economy accounting metrics populated");
+    else report.fail("Lobby: economy accounting metrics populated");
+
+    if (a.totalItemsGranted > 0 && a.totalItemsEquipped > 0) report.pass("Lobby: combat items enter and equip through macro turns");
+    else report.fail("Lobby: combat items enter and equip through macro turns");
+
+    if (a.totalItemsGranted == a.totalItemsEquipped + a.totalItemsOnBench) report.pass("Lobby: item accounting preserves granted items");
+    else report.fail("Lobby: item accounting preserves granted items");
+
+    if (a.maxEquippedItemsOnUnit <= GameConstants::MaxItemsPerUnit) report.pass("Lobby: item equip limit respected");
+    else report.fail("Lobby: item equip limit respected");
+
+    if (compStylePopulated) report.pass("Lobby: comp style output populated");
+    else report.fail("Lobby: comp style output populated");
 
     if (a.sharedPoolValid) report.pass("Lobby: shared pool remains valid");
     else report.fail("Lobby: shared pool remains valid");
@@ -5962,6 +6085,7 @@ ValidationReport CombatValidation::runAll(const ContentManager& content, std::os
     step("Delayed events", [&]() { delayedEventTest(content, report); });
     step("Replay consistency", [&]() { replayConsistencyTest(content, report, out); });
     step("Benchmark", [&]() { benchmarkTest(content, report, out); });
+    step("Combat overtime", [&]() { combatOvertimeResolutionTest(content, report, out); });
     step("Trait effect vocabulary", [&]() { traitEffectVocabularyValidationTest(report); });
     step("Regenerated trait JSON effects", [&]() { regeneratedTraitJsonValidationTest(content, report); });
     step("Item runtime fixtures", [&]() { itemRuntimeFixtureValidationTest(content, report, out); });

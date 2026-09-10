@@ -25,6 +25,8 @@ namespace
 constexpr int LobbyPlayerCount = 8;
 constexpr int LobbyOpeningGold = 12;
 constexpr int LobbyMaxOpeningBuys = 3;
+constexpr int LobbyOpeningItemRewards = 2;
+constexpr int LobbyPveItemRewards = 1;
 
 std::uint32_t mixLobbySeed(std::uint32_t a, std::uint32_t b)
 {
@@ -38,6 +40,66 @@ std::uint32_t mixLobbySeed(std::uint32_t a, std::uint32_t b)
 struct NullBuffer final : std::streambuf
 {
     int overflow(int c) override { return c; }
+};
+
+struct LobbyEconomyLedger
+{
+    std::array<int, LobbyPlayerCount> expectedGold{};
+    int maxObservedGold = 0;
+    int maxEconomyEventsPerPlayerRound = 0;
+    int totalEconomyIncome = 0;
+    int totalTurnGoldDelta = 0;
+    bool balanced = true;
+
+    void initialize(const std::vector<PlayerState>& players)
+    {
+        for (std::size_t i = 0; i < players.size() && i < expectedGold.size(); ++i)
+        {
+            expectedGold[i] = static_cast<int>(players[i].gold());
+            maxObservedGold = std::max(maxObservedGold, expectedGold[i]);
+        }
+    }
+
+    void recordTurnDelta(std::size_t playerIndex, int beforeGold, int afterGold)
+    {
+        const int delta = afterGold - beforeGold;
+        totalTurnGoldDelta += delta;
+        expectedGold[playerIndex] += delta;
+        if (expectedGold[playerIndex] != afterGold)
+        {
+            balanced = false;
+        }
+        maxObservedGold = std::max(maxObservedGold, afterGold);
+    }
+
+    void recordRoundIncome(std::size_t playerIndex,
+                           PlayerState& player,
+                           bool won,
+                           std::array<int, LobbyPlayerCount>& economyEventsThisRound)
+    {
+        const int beforeGold = static_cast<int>(player.gold());
+        const EconomyResult economy = EconomySystem::applyRoundEnd(player, won);
+        economyEventsThisRound[playerIndex] += 1;
+        totalEconomyIncome += economy.total;
+        expectedGold[playerIndex] += economy.total;
+        if (expectedGold[playerIndex] != player.gold() || player.gold() != beforeGold + economy.total)
+        {
+            balanced = false;
+        }
+        maxObservedGold = std::max(maxObservedGold, static_cast<int>(player.gold()));
+    }
+
+    void finishRound(const std::array<int, LobbyPlayerCount>& economyEventsThisRound)
+    {
+        for (int events : economyEventsThisRound)
+        {
+            maxEconomyEventsPerPlayerRound = std::max(maxEconomyEventsPerPlayerRound, events);
+            if (events > 1)
+            {
+                balanced = false;
+            }
+        }
+    }
 };
 
 bool alive(const PlayerState& p)
@@ -83,10 +145,9 @@ void takeAliveTurn(PlayerState& player,
                    const SharedUnitPool* pool,
                    int stage,
                    int roundIndex,
-                   std::ostream& out)
+                   std::ostream& out,
+                   MacroTurnStats& stats)
 {
-    shop.reroll(player, rng, false);
-    MacroTurnStats stats{};
     MacroSimulation::takeTurnForValidationAt(player, ai, shop, rng, content, enemy, pool, stage, roundIndex, out, stats);
 }
 
@@ -128,6 +189,285 @@ std::vector<std::pair<int, int>> deterministicPairs(std::vector<int> active, int
     return pairs;
 }
 
+std::vector<std::string> collectLobbyCombatItemNames(const ContentManager& content)
+{
+    std::vector<std::string> names;
+    for (const auto& [name, item] : content.items())
+    {
+        if (item.metadata.itemCategory != "CombatItem")
+        {
+            continue;
+        }
+        if (item.passiveStats.empty() && item.triggeredEffects.empty() && item.genericEffects.empty())
+        {
+            continue;
+        }
+        names.push_back(name);
+    }
+    std::sort(names.begin(), names.end());
+    return names;
+}
+
+int grantLobbyCombatItems(PlayerState& player,
+                          const std::vector<std::string>& itemPool,
+                          Random& rng,
+                          int count)
+{
+    if (itemPool.empty() || count <= 0)
+    {
+        return 0;
+    }
+
+    int granted = 0;
+    for (int i = 0; i < count; ++i)
+    {
+        const int itemIndex = rng.nextInt(static_cast<int>(itemPool.size()));
+        if (player.addItemToBench(itemPool[static_cast<std::size_t>(itemIndex)]))
+        {
+            granted += 1;
+        }
+    }
+    return granted;
+}
+
+struct LobbyItemTotals
+{
+    int equipped = 0;
+    int bench = 0;
+    int maxEquippedOnUnit = 0;
+};
+
+LobbyItemTotals countLobbyItems(const std::vector<PlayerState>& players)
+{
+    LobbyItemTotals totals{};
+    for (const PlayerState& player : players)
+    {
+        totals.bench += static_cast<int>(player.itemBench().size());
+        for (const OwnedUnit& unit : player.board())
+        {
+            const int itemCount = static_cast<int>(unit.items.size());
+            totals.equipped += itemCount;
+            totals.maxEquippedOnUnit = std::max(totals.maxEquippedOnUnit, itemCount);
+        }
+        for (const OwnedUnit& unit : player.bench())
+        {
+            const int itemCount = static_cast<int>(unit.items.size());
+            totals.equipped += itemCount;
+            totals.maxEquippedOnUnit = std::max(totals.maxEquippedOnUnit, itemCount);
+        }
+    }
+    return totals;
+}
+std::string unitCollectionSummary(const std::vector<OwnedUnit>& units)
+{
+    int totalStars = 0;
+    int totalCost = 0;
+    int totalItems = 0;
+    for (const OwnedUnit& unit : units)
+    {
+        totalStars += std::clamp(unit.starLevel, 1, 3);
+        totalCost += std::max(1, unit.cost);
+        totalItems += static_cast<int>(unit.items.size());
+    }
+
+    std::ostringstream ss;
+    ss << "units=" << units.size()
+       << ";stars=" << totalStars
+       << ";cost=" << totalCost
+       << ";items=" << totalItems;
+    return ss.str();
+}
+
+std::string traitFeatureSummary(const PlayerState& player, const ContentManager& content)
+{
+    std::vector<std::pair<std::string, int>> counts;
+    auto addTrait = [&](const std::string& trait)
+    {
+        for (auto& entry : counts)
+        {
+            if (entry.first == trait)
+            {
+                entry.second += 1;
+                return;
+            }
+        }
+        counts.push_back({ trait, 1 });
+    };
+
+    for (const OwnedUnit& unit : player.board())
+    {
+        const ChampionDefinition* champion = content.getChampion(unit.championName);
+        if (!champion)
+        {
+            continue;
+        }
+        for (const std::string& trait : champion->traits)
+        {
+            if (!trait.empty())
+            {
+                addTrait(trait);
+            }
+        }
+    }
+
+    std::sort(counts.begin(), counts.end(), [](const auto& a, const auto& b)
+    {
+        if (a.second != b.second) return a.second > b.second;
+        return a.first < b.first;
+    });
+
+    std::ostringstream ss;
+    ss << "traits=" << counts.size();
+    const std::size_t limit = std::min<std::size_t>(3, counts.size());
+    for (std::size_t i = 0; i < limit; ++i)
+    {
+        ss << ";" << counts[i].first << "=" << counts[i].second;
+    }
+    return ss.str();
+}
+
+std::string itemFeatureSummary(const PlayerState& player)
+{
+    int equipped = 0;
+    int unitsWithItems = 0;
+    int maxItems = 0;
+    for (const OwnedUnit& unit : player.board())
+    {
+        const int count = static_cast<int>(unit.items.size());
+        equipped += count;
+        if (count > 0)
+        {
+            unitsWithItems += 1;
+        }
+        maxItems = std::max(maxItems, count);
+    }
+
+    std::ostringstream ss;
+    ss << "bench=" << player.itemBench().size()
+       << ";equipped=" << equipped
+       << ";units=" << unitsWithItems
+       << ";max=" << maxItems;
+    return ss.str();
+}
+
+std::string shopFeatureSummary(const PlayerState& player)
+{
+    int offers = 0;
+    int totalCost = 0;
+    int affordable = 0;
+    for (const ShopOffer& offer : player.shop())
+    {
+        if (offer.championName.empty())
+        {
+            continue;
+        }
+        offers += 1;
+        totalCost += offer.cost;
+        if (player.canAfford(offer.cost))
+        {
+            affordable += 1;
+        }
+    }
+
+    std::ostringstream ss;
+    ss << "offers=" << offers
+       << ";cost=" << totalCost
+       << ";affordable=" << affordable;
+    return ss.str();
+}
+
+float placementReward(int placement)
+{
+    switch (placement)
+    {
+        case 1: return 1.00f;
+        case 2: return 0.70f;
+        case 3: return 0.45f;
+        case 4: return 0.20f;
+        case 5: return -0.10f;
+        case 6: return -0.35f;
+        case 7: return -0.65f;
+        case 8: return -1.00f;
+        default: return 0.0f;
+    }
+}
+
+LobbyDecisionRecord makeDecisionRecord(std::uint32_t seed,
+                                       int roundIndex,
+                                       int playerId,
+                                       const PlayerState& player,
+                                       const ContentManager& content)
+{
+    LobbyDecisionRecord record{};
+    record.gameSeed = seed;
+    record.round = roundIndex;
+    record.playerId = playerId;
+    record.hp = player.health();
+    record.gold = player.gold();
+    record.level = player.level();
+    record.boardSummary = unitCollectionSummary(player.board());
+    record.benchSummary = unitCollectionSummary(player.bench());
+    record.traitSummary = traitFeatureSummary(player, content);
+    record.itemSummary = itemFeatureSummary(player);
+    record.shopSummary = shopFeatureSummary(player);
+    return record;
+}
+std::string inferCompStyle(const PlayerState& player, const ContentManager& content)
+{
+    std::vector<std::pair<std::string, int>> counts;
+
+    auto addTrait = [&](const std::string& trait)
+    {
+        for (auto& entry : counts)
+        {
+            if (entry.first == trait)
+            {
+                entry.second += 1;
+                return;
+            }
+        }
+        counts.push_back({ trait, 1 });
+    };
+
+    for (const OwnedUnit& unit : player.board())
+    {
+        const ChampionDefinition* champion = content.getChampion(unit.championName);
+        if (!champion)
+        {
+            continue;
+        }
+        for (const std::string& trait : champion->traits)
+        {
+            if (!trait.empty())
+            {
+                addTrait(trait);
+            }
+        }
+    }
+
+    if (counts.empty())
+    {
+        return "No board";
+    }
+
+    std::sort(counts.begin(), counts.end(), [](const auto& a, const auto& b)
+    {
+        if (a.second != b.second) return a.second > b.second;
+        return a.first < b.first;
+    });
+
+    std::ostringstream ss;
+    const std::size_t limit = std::min<std::size_t>(2, counts.size());
+    for (std::size_t i = 0; i < limit; ++i)
+    {
+        if (i > 0)
+        {
+            ss << "/";
+        }
+        ss << counts[i].first << "(" << counts[i].second << ")";
+    }
+    return ss.str();
+}
 bool sharedPoolCountsValid(const ContentManager& content, const SharedUnitPool& pool)
 {
     for (const auto& [name, champ] : content.champions())
@@ -147,6 +487,17 @@ bool sharedPoolCountsValid(const ContentManager& content, const SharedUnitPool& 
 std::string summarize(const std::vector<LobbyPlayerResult>& players,
                       int roundsPlayed,
                       int actionsAfterElimination,
+                      int maxFinalGold,
+                      int maxObservedGold,
+                      int maxEconomyEventsPerPlayerRound,
+                      int totalEconomyIncome,
+                      int totalTurnGoldDelta,
+                      int totalItemsGranted,
+                      int totalItemsEquipped,
+                      int totalItemsOnBench,
+                      int maxEquippedItemsOnUnit,
+                      int combatTimeoutCount,
+                      bool economyAccountingBalanced,
                       bool sharedPoolValid,
                       bool completed)
 {
@@ -160,11 +511,22 @@ std::string summarize(const std::vector<LobbyPlayerResult>& players,
     std::ostringstream ss;
     ss << "rounds=" << roundsPlayed
        << "|afterElim=" << actionsAfterElimination
+       << "|maxFinalGold=" << maxFinalGold
+       << "|maxObservedGold=" << maxObservedGold
+       << "|maxEconEvents=" << maxEconomyEventsPerPlayerRound
+       << "|econIncome=" << totalEconomyIncome
+       << "|turnGoldDelta=" << totalTurnGoldDelta
+       << "|itemsGranted=" << totalItemsGranted
+       << "|itemsEquipped=" << totalItemsEquipped
+       << "|itemsBench=" << totalItemsOnBench
+       << "|maxUnitItems=" << maxEquippedItemsOnUnit
+       << "|combatTimeouts=" << combatTimeoutCount
+       << "|accounting=" << (economyAccountingBalanced ? 1 : 0)
        << "|pool=" << (sharedPoolValid ? 1 : 0)
        << "|done=" << (completed ? 1 : 0);
     for (const LobbyPlayerResult& p : sorted)
     {
-        ss << "|" << p.placement << ":" << p.name << ":" << p.health << ":" << p.gold << ":" << p.level << ":" << (p.eliminated ? 1 : 0);
+        ss << "|" << p.placement << ":" << p.name << ":" << p.health << ":" << p.gold << ":" << p.level << ":" << (p.eliminated ? 1 : 0) << ":" << p.compStyle;
     }
     return ss.str();
 }
@@ -182,6 +544,8 @@ LobbySimulationResult LobbySimulation::simulate(const ContentManager& content,
     SharedUnitPool pool(content);
     ShopSystem shop(content, pool);
     RoundSystem rounds(content, pool);
+    const std::vector<std::string> lobbyItemPool = collectLobbyCombatItemNames(content);
+    int totalItemsGranted = 0;
 
     std::vector<PlayerState> players;
     players.reserve(LobbyPlayerCount);
@@ -209,12 +573,21 @@ LobbySimulationResult LobbySimulation::simulate(const ContentManager& content,
             players.back().setLevel(3);
         }
         buyOpeningBoard(players.back(), shop, rngs[static_cast<std::size_t>(i)]);
+        totalItemsGranted += grantLobbyCombatItems(players.back(),
+                                                  lobbyItemPool,
+                                                  rngs[static_cast<std::size_t>(i)],
+                                                  LobbyOpeningItemRewards);
     }
+
+    LobbyEconomyLedger ledger{};
+    ledger.initialize(players);
 
     std::array<int, LobbyPlayerCount> placements{};
     int nextPlacement = LobbyPlayerCount;
     int roundsPlayed = 0;
     int actionsAfterElimination = 0;
+    int combatTimeoutCount = 0;
+    std::vector<LobbyDecisionRecord> decisionRecords;
 
     for (int roundIndex = 0; roundIndex < MacroConstants::MaxRounds; ++roundIndex)
     {
@@ -249,6 +622,15 @@ LobbySimulationResult LobbySimulation::simulate(const ContentManager& content,
                     break;
                 }
             }
+
+            shop.reroll(player, rngs[i], false);
+            LobbyDecisionRecord decision = makeDecisionRecord(seed,
+                                                              roundIndex,
+                                                              static_cast<int>(i) + 1,
+                                                              player,
+                                                              content);
+            const int beforeTurnGold = static_cast<int>(player.gold());
+            MacroTurnStats stats{};
             takeAliveTurn(player,
                           ais[i],
                           shop,
@@ -258,10 +640,16 @@ LobbySimulationResult LobbySimulation::simulate(const ContentManager& content,
                           &pool,
                           info.stage,
                           roundIndex,
-                          log);
+                          log,
+                          stats);
+            decision.legalActionIds = stats.legalActionKeys;
+            decision.chosenAction = stats.chosenActionKey.empty() ? "EndTurn" : stats.chosenActionKey;
+            decisionRecords.push_back(std::move(decision));
+            ledger.recordTurnDelta(i, beforeTurnGold, static_cast<int>(player.gold()));
         }
 
         std::vector<int> eliminatedThisRound;
+        std::array<int, LobbyPlayerCount> economyEventsThisRound{};
         if (info.isPve)
         {
             for (int idx : activeBefore)
@@ -269,8 +657,16 @@ LobbySimulationResult LobbySimulation::simulate(const ContentManager& content,
                 PlayerState& player = players[static_cast<std::size_t>(idx)];
                 const std::uint32_t fightSeed = mixLobbySeed(seed, static_cast<std::uint32_t>(roundIndex * LobbyPlayerCount + idx));
                 const RoundResult r = rounds.runPvE(player, roundIndex, fightSeed);
+                if (r.combatTimedOut) combatTimeoutCount += 1;
                 player.takeDamage(r.damageToA);
-                (void)EconomySystem::applyRoundEnd(player, r.playerAWon);
+                ledger.recordRoundIncome(static_cast<std::size_t>(idx), player, r.playerAWon, economyEventsThisRound);
+                if (alive(player))
+                {
+                    totalItemsGranted += grantLobbyCombatItems(player,
+                                                              lobbyItemPool,
+                                                              rngs[static_cast<std::size_t>(idx)],
+                                                              LobbyPveItemRewards);
+                }
                 if (!alive(player))
                 {
                     eliminatedThisRound.push_back(idx);
@@ -289,19 +685,22 @@ LobbySimulationResult LobbySimulation::simulate(const ContentManager& content,
                 PlayerState& b = players[static_cast<std::size_t>(bi)];
                 const std::uint32_t fightSeed = mixLobbySeed(seed, static_cast<std::uint32_t>(roundIndex * LobbyPlayerCount + static_cast<int>(pairIndex)));
                 const RoundResult r = rounds.runPvP(a, b, roundIndex, fightSeed);
+                if (r.combatTimedOut) combatTimeoutCount += 1;
                 a.takeDamage(r.damageToA);
                 b.takeDamage(r.damageToB);
-                (void)EconomySystem::applyRoundEnd(a, r.playerAWon);
-                (void)EconomySystem::applyRoundEnd(b, r.playerBWon);
+                ledger.recordRoundIncome(static_cast<std::size_t>(ai), a, r.playerAWon, economyEventsThisRound);
+                ledger.recordRoundIncome(static_cast<std::size_t>(bi), b, r.playerBWon, economyEventsThisRound);
                 if (!alive(a)) eliminatedThisRound.push_back(ai);
                 if (!alive(b)) eliminatedThisRound.push_back(bi);
             }
             if (bye >= 0)
             {
-                players[static_cast<std::size_t>(bye)].recordWin();
-                players[static_cast<std::size_t>(bye)].addGold(MacroConstants::BaseRoundGold + players[static_cast<std::size_t>(bye)].interest() + MacroConstants::WinBonusGold);
+                PlayerState& player = players[static_cast<std::size_t>(bye)];
+                ledger.recordRoundIncome(static_cast<std::size_t>(bye), player, true, economyEventsThisRound);
             }
         }
+
+        ledger.finishRound(economyEventsThisRound);
 
         std::sort(eliminatedThisRound.begin(), eliminatedThisRound.end(), [&](int a, int b)
         {
@@ -342,11 +741,23 @@ LobbySimulationResult LobbySimulation::simulate(const ContentManager& content,
         }
     }
 
+    const LobbyItemTotals itemTotals = countLobbyItems(players);
+
     LobbySimulationResult result{};
     result.seed = seed;
     result.initialPlayers = LobbyPlayerCount;
     result.roundsPlayed = roundsPlayed;
     result.actionsAfterElimination = actionsAfterElimination;
+    result.maxObservedGold = ledger.maxObservedGold;
+    result.maxEconomyEventsPerPlayerRound = ledger.maxEconomyEventsPerPlayerRound;
+    result.totalEconomyIncome = ledger.totalEconomyIncome;
+    result.totalTurnGoldDelta = ledger.totalTurnGoldDelta;
+    result.totalItemsGranted = totalItemsGranted;
+    result.totalItemsEquipped = itemTotals.equipped;
+    result.totalItemsOnBench = itemTotals.bench;
+    result.maxEquippedItemsOnUnit = itemTotals.maxEquippedOnUnit;
+    result.combatTimeoutCount = combatTimeoutCount;
+    result.economyAccountingBalanced = ledger.balanced;
     result.sharedPoolValid = sharedPoolCountsValid(content, pool);
     result.completed = !survivors.empty();
     result.players.reserve(players.size());
@@ -360,6 +771,8 @@ LobbySimulationResult LobbySimulation::simulate(const ContentManager& content,
         p.level = players[i].level();
         p.placement = placements[i];
         p.eliminated = p.health <= 0;
+        p.compStyle = inferCompStyle(players[i], content);
+        result.maxFinalGold = std::max(result.maxFinalGold, static_cast<int>(p.gold));
         if (p.placement == 1)
         {
             result.winner = p.name;
@@ -367,7 +780,33 @@ LobbySimulationResult LobbySimulation::simulate(const ContentManager& content,
         result.players.push_back(std::move(p));
     }
 
-    result.summary = summarize(result.players, result.roundsPlayed, result.actionsAfterElimination, result.sharedPoolValid, result.completed);
+    for (LobbyDecisionRecord& record : decisionRecords)
+    {
+        const std::size_t playerIndex = record.playerId > 0 ? static_cast<std::size_t>(record.playerId - 1) : result.players.size();
+        if (playerIndex < result.players.size())
+        {
+            record.eventualPlacement = result.players[playerIndex].placement;
+            record.terminalReward = placementReward(record.eventualPlacement);
+        }
+    }
+    result.decisionRecords = std::move(decisionRecords);
+
+    result.summary = summarize(result.players,
+                               result.roundsPlayed,
+                               result.actionsAfterElimination,
+                               result.maxFinalGold,
+                               result.maxObservedGold,
+                               result.maxEconomyEventsPerPlayerRound,
+                               result.totalEconomyIncome,
+                               result.totalTurnGoldDelta,
+                               result.totalItemsGranted,
+                               result.totalItemsEquipped,
+                               result.totalItemsOnBench,
+                               result.maxEquippedItemsOnUnit,
+                               result.combatTimeoutCount,
+                               result.economyAccountingBalanced,
+                               result.sharedPoolValid,
+                               result.completed);
     return result;
 }
 
@@ -389,9 +828,23 @@ int LobbySimulation::run(const ContentManager& content, std::uint32_t seed, std:
             << " HP=" << p.health
             << " Gold=" << p.gold
             << " Level=" << p.level
+            << " Comp=" << p.compStyle
             << (p.eliminated ? " eliminated" : " alive")
             << "\n";
     }
+    out << "Economy accounting: " << (result.economyAccountingBalanced ? "balanced" : "failed")
+        << " | maxFinalGold=" << result.maxFinalGold
+        << " maxObservedGold=" << result.maxObservedGold
+        << " maxEconomyEventsPerPlayerRound=" << result.maxEconomyEventsPerPlayerRound
+        << " totalEconomyIncome=" << result.totalEconomyIncome
+        << " totalTurnGoldDelta=" << result.totalTurnGoldDelta
+        << " combatTimeoutCount=" << result.combatTimeoutCount
+        << "\n";
+    out << "Items: granted=" << result.totalItemsGranted
+        << " equipped=" << result.totalItemsEquipped
+        << " bench=" << result.totalItemsOnBench
+        << " maxEquippedOnUnit=" << result.maxEquippedItemsOnUnit
+        << "\n";
     out << "Shared pool valid: " << (result.sharedPoolValid ? "yes" : "no") << "\n";
-    return result.completed && result.sharedPoolValid ? 0 : 1;
+    return result.completed && result.sharedPoolValid && result.economyAccountingBalanced ? 0 : 1;
 }

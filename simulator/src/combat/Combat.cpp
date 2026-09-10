@@ -359,6 +359,277 @@ static std::int32_t projectileTravelMs(const Unit& attacker, const Unit& target)
     return static_cast<std::int32_t>(std::lround(travelSec * static_cast<float>(CombatConstants::MsPerSecond)));
 }
 
+static const char* teamName(TeamId team)
+{
+    return team == TeamId::TeamA ? "A" : "B";
+}
+
+static const char* crowdControlName(CrowdControlType type)
+{
+    switch (type)
+    {
+        case CrowdControlType::None: return "None";
+        case CrowdControlType::Stun: return "Stun";
+        case CrowdControlType::Knockup: return "Knockup";
+        case CrowdControlType::Root: return "Root";
+        case CrowdControlType::Silence: return "Silence";
+        case CrowdControlType::Disarm: return "Disarm";
+        case CrowdControlType::Taunt: return "Taunt";
+        case CrowdControlType::Fear: return "Fear";
+        case CrowdControlType::Suppression: return "Suppression";
+    }
+    return "Unknown";
+}
+
+static std::int32_t activeShieldValue(const Unit& unit)
+{
+    std::int32_t total = 0;
+    for (const StatusEffect& effect : unit.statusEffects())
+    {
+        if (effect.effectType == StatusEffectType::Shield &&
+            effect.remainingMs > 0 &&
+            effect.value > 0.0f)
+        {
+            total += static_cast<std::int32_t>(std::lround(effect.value));
+        }
+    }
+    return total;
+}
+
+static std::int32_t combatVitality(const std::vector<Unit>& units)
+{
+    std::int32_t total = 0;
+    for (const Unit& unit : units)
+    {
+        if (!unit.isAlive())
+        {
+            continue;
+        }
+        total += unit.getHp();
+        total += activeShieldValue(unit);
+    }
+    return total;
+}
+
+static std::uint64_t progressSignature(const GameState& state)
+{
+    std::uint64_t h = 1469598103934665603ull;
+    auto mix = [&](std::uint64_t v)
+    {
+        h ^= v;
+        h *= 1099511628211ull;
+    };
+
+    mix(static_cast<std::uint64_t>(state.scheduledEventCount()));
+    mix(static_cast<std::uint64_t>(state.executedEventCount()));
+
+    for (const Unit& unit : state.units())
+    {
+        mix(unit.id().value);
+        mix(static_cast<std::uint64_t>(unit.isAlive() ? 1 : 0));
+        mix(static_cast<std::uint64_t>(unit.getHp()));
+        mix(static_cast<std::uint64_t>(activeShieldValue(unit)));
+        mix(static_cast<std::uint64_t>(unit.getMana()));
+        mix(static_cast<std::uint64_t>(unit.getPosition().x + 64));
+        mix(static_cast<std::uint64_t>(unit.getPosition().y + 64));
+    }
+
+    return h;
+}
+
+static std::string activeCrowdControlSummary(const Unit& unit)
+{
+    std::ostringstream ss;
+    bool first = true;
+    for (const StatusEffect& effect : unit.statusEffects())
+    {
+        if (effect.remainingMs <= 0 || effect.crowdControlType == CrowdControlType::None)
+        {
+            continue;
+        }
+        if (!first)
+        {
+            ss << ",";
+        }
+        ss << crowdControlName(effect.crowdControlType) << ":" << effect.remainingMs << "ms";
+        first = false;
+    }
+    return first ? "none" : ss.str();
+}
+
+static std::int32_t effectiveAttackCooldownMs(const Unit& unit)
+{
+    const float attackSpeed = StatSystem::getFinalStat(unit, StatType::AttackSpeed);
+    if (attackSpeed <= 0.0f)
+    {
+        return 0;
+    }
+    return std::max<std::int32_t>(
+        1,
+        static_cast<std::int32_t>(
+            std::lround(static_cast<float>(CombatConstants::MsPerSecond) / attackSpeed)));
+}
+
+static bool hasActiveStatusNamed(const Unit& unit, const char* name)
+{
+    for (const StatusEffect& effect : unit.statusEffects())
+    {
+        if (effect.remainingMs > 0 && effect.name == name)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+static StatusEffect makeOvertimeStatus(const char* name,
+                                       StatusEffectType effectType,
+                                       StatType affectedStat,
+                                       ModifierType modifierType,
+                                       float value,
+                                       std::int32_t durationMs)
+{
+    StatusEffect effect{};
+    effect.name = name;
+    effect.effectType = effectType;
+    effect.crowdControlType = CrowdControlType::None;
+    effect.affectedStat = affectedStat;
+    effect.modifierType = modifierType;
+    effect.value = value;
+    effect.durationMs = durationMs;
+    effect.remainingMs = durationMs;
+    effect.tickIntervalMs = 0;
+    effect.tickTimerMs = 0;
+    effect.damageType = DamageType::TrueDamage;
+    return effect;
+}
+
+static void applyCombatOvertime(GameState& state)
+{
+    static constexpr const char* DamageStatusName = "Combat Overtime Damage";
+    static constexpr const char* AttackSpeedStatusName = "Combat Overtime Attack Speed";
+
+    const std::int32_t durationMs =
+        std::max<std::int32_t>(1, CombatConstants::MaxCombatDurationMs - state.timeMs());
+
+    StatusEffect damageAmp =
+        makeOvertimeStatus(DamageStatusName,
+                           StatusEffectType::Buff,
+                           StatType::DamageAmplification,
+                           ModifierType::Flat,
+                           CombatConstants::OvertimeDamageAmplification,
+                           durationMs);
+
+    StatusEffect attackSpeed =
+        makeOvertimeStatus(AttackSpeedStatusName,
+                           StatusEffectType::BonusAttackSpeed,
+                           StatType::AttackSpeed,
+                           ModifierType::Percent,
+                           CombatConstants::OvertimeAttackSpeedPercent,
+                           durationMs);
+
+    int affected = 0;
+    for (Unit& unit : state.units())
+    {
+        if (!unit.isAlive())
+        {
+            continue;
+        }
+        if (!hasActiveStatusNamed(unit, DamageStatusName))
+        {
+            unit.addStatusEffect(damageAmp);
+        }
+        if (!hasActiveStatusNamed(unit, AttackSpeedStatusName))
+        {
+            unit.addStatusEffect(attackSpeed);
+        }
+        affected += 1;
+    }
+
+    std::ostringstream ss;
+    ss << state.timeMs() << "ms Combat overtime begins"
+       << " | units=" << affected
+       << " | damageAmp=" << static_cast<std::int32_t>(std::lround(CombatConstants::OvertimeDamageAmplification * AIConstants::PercentScale)) << "%"
+       << " | attackSpeed=" << static_cast<std::int32_t>(std::lround(CombatConstants::OvertimeAttackSpeedPercent * AIConstants::PercentScale)) << "%";
+    state.logger().combat(ss.str());
+}
+static void logCombatTimeoutDiagnostics(GameState& state,
+                                        const std::vector<CombatTargetContext>& targetCtx,
+                                        std::int32_t lastMeaningfulEventMs,
+                                        std::int32_t lastVitalityDelta)
+{
+    const std::vector<Unit>& units = state.units();
+
+    int aliveA = 0;
+    int aliveB = 0;
+    for (const Unit& unit : units)
+    {
+        if (!unit.isAlive())
+        {
+            continue;
+        }
+        if (unit.getTeamId() == TeamId::TeamA) { aliveA += 1; }
+        else { aliveB += 1; }
+    }
+
+    std::ostringstream summary;
+    summary << "Combat timeout diagnostics:"
+            << " aliveA=" << aliveA
+            << " aliveB=" << aliveB
+            << " vitality=" << combatVitality(units)
+            << " lastMeaningfulMs=" << lastMeaningfulEventMs
+            << " idleMs=" << (state.timeMs() - lastMeaningfulEventMs)
+            << " lastVitalityDelta=" << lastVitalityDelta
+            << " scheduled=" << state.scheduledEventCount()
+            << " executed=" << state.executedEventCount()
+            << " pending=" << state.scheduledEvents().size();
+    state.logger().error(summary.str());
+
+    for (std::size_t i = 0; i < units.size(); ++i)
+    {
+        const Unit& unit = units[i];
+        if (!unit.isAlive())
+        {
+            continue;
+        }
+
+        const CombatTargetContext* ctx = i < targetCtx.size() ? &targetCtx[i] : nullptr;
+        const Unit* target = ctx ? state.findUnit(ctx->currentTargetId) : nullptr;
+
+        std::ostringstream ss;
+        ss << "TIMEOUT_UNIT"
+           << " team=" << teamName(unit.getTeamId())
+           << " id=" << unit.id()
+           << " name=" << unit.getName()
+           << " hp=" << unit.getHp() << "/" << StatSystem::getFinalStatInt(unit, StatType::MaxHp)
+           << " shield=" << activeShieldValue(unit)
+           << " pos=(" << unit.getPosition().x << "," << unit.getPosition().y << ")"
+           << " target=" << (target ? target->getName() : "none");
+
+        if (target)
+        {
+            ss << " targetId=" << target->id()
+               << " targetHp=" << target->getHp()
+               << " inRange=" << (unit.isInRange(*target) ? 1 : 0);
+        }
+
+        ss << " canMove=" << (unit.canMoveNow() ? 1 : 0)
+           << " canAttack=" << (unit.canAttack() ? 1 : 0)
+           << " canAutoAttack=" << (unit.canAutoAttackNow() ? 1 : 0)
+           << " canCast=" << (unit.canCastNow() && unit.canCastAbility() ? 1 : 0)
+           << " casting=" << (unit.isCasting() ? 1 : 0)
+           << " mana=" << unit.getMana() << "/" << unit.getMaxMana()
+           << " attackTimer=" << unit.getAttackTimerMs()
+           << " attackCd=" << effectiveAttackCooldownMs(unit)
+           << " moved=" << (unit.didMoveThisTurn() ? 1 : 0)
+           << " attacked=" << (unit.didAttackThisTurn() ? 1 : 0)
+           << " cast=" << (unit.didCastThisTurn() ? 1 : 0)
+           << " statuses=" << unit.statusEffects().size()
+           << " cc=" << activeCrowdControlSummary(unit);
+
+        state.logger().error(ss.str());
+    }
+}
 static void beginAutoAttackAccurate(GameState& state, std::int32_t attackerIndex, std::int32_t targetIndex)
 {
     std::vector<Unit>& units = state.units();
@@ -450,6 +721,12 @@ void Combat::run(GameState& state)
     }
 
     const std::int32_t maxCombatMs = CombatConstants::MaxCombatDurationMs;
+    std::uint64_t lastProgressSignature = progressSignature(state);
+    std::int32_t previousVitality = combatVitality(units);
+    std::int32_t lastMeaningfulEventMs = state.timeMs();
+    std::int32_t lastVitalityDelta = 0;
+    bool overtimeApplied = false;
+
     while (state.hasAlive(TeamId::TeamA) && state.hasAlive(TeamId::TeamB))
     {
         state.advanceTick();
@@ -462,7 +739,14 @@ void Combat::run(GameState& state)
             std::ostringstream ss;
             ss << "Combat timeout: forced draw after " << CombatConstants::MaxCombatDurationMs << "ms";
             logger.error(ss.str());
+            logCombatTimeoutDiagnostics(state, targetCtx, lastMeaningfulEventMs, lastVitalityDelta);
             return;
+        }
+
+        if (!overtimeApplied && timeMs >= CombatConstants::OvertimeStartMs)
+        {
+            applyCombatOvertime(state);
+            overtimeApplied = true;
         }
 
         state.processCombatEvents();
@@ -574,6 +858,19 @@ void Combat::run(GameState& state)
         }
 
         state.captureSnapshot("tick");
+
+        const std::int32_t currentVitality = combatVitality(units);
+        const std::uint64_t currentProgressSignature = progressSignature(state);
+        if (currentProgressSignature != lastProgressSignature)
+        {
+            lastMeaningfulEventMs = timeMs;
+            lastProgressSignature = currentProgressSignature;
+        }
+        if (currentVitality != previousVitality)
+        {
+            lastVitalityDelta = previousVitality - currentVitality;
+            previousVitality = currentVitality;
+        }
 
         if (timeMs % CombatConstants::VerboseBoardPrintIntervalMs == 0 && logger.mode() == LogMode::Verbose)
         {

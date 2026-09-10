@@ -213,6 +213,7 @@ RoundResult RoundSystem::runPvP(PlayerState& a, PlayerState& b, std::int32_t rou
     RoundResult result;
     result.survivingA = aliveA;
     result.survivingB = aliveB;
+    result.combatTimedOut = state.combatTimedOut();
     result.playerAWon = aliveA > 0 && aliveB == 0;
     result.playerBWon = aliveB > 0 && aliveA == 0;
 
@@ -259,6 +260,7 @@ RoundResult RoundSystem::runPvE(PlayerState& player, std::int32_t roundIndex, st
     RoundResult result;
     result.survivingA = aliveA;
     result.survivingB = aliveB;
+    result.combatTimedOut = state.combatTimedOut();
     result.playerAWon = aliveA > 0 && aliveB == 0;
 
     if (!result.playerAWon)

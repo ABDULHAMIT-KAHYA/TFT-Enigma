@@ -19,6 +19,7 @@ struct RoundResult
     std::int32_t damageToB = 0;
     int survivingA = 0;
     int survivingB = 0;
+    bool combatTimedOut = false;
 };
 
 class RoundSystem

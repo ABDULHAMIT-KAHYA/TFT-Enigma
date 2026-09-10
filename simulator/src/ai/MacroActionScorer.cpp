@@ -216,6 +216,13 @@ static float traitAlignmentBonus(const OwnedUnit& unit,
     return b;
 }
 
+static int strategicGoldTargetForStage(int stage)
+{
+    if (stage <= 2) return AIConstants::StrategicStage2GoldTarget;
+    if (stage == 3) return AIConstants::StrategicStage3GoldTarget;
+    if (stage == 4) return AIConstants::StrategicStage4GoldTarget;
+    return AIConstants::StrategicStage5PlusGoldTarget;
+}
 static int expectedLevelForStage(int stage, int roundIndex)
 {
     if (stage <= 1) return 3;
@@ -247,6 +254,8 @@ std::vector<ActionScore> MacroActionScorer::scoreActions(const PlayerState& play
     const int expLvl = expectedLevelForStage(stage, roundIndex);
     const int lvlDef = std::max(0, expLvl - player.level());
     const bool underLeveled = lvlDef > 0;
+    const int strategicGoldTarget = strategicGoldTargetForStage(stage);
+    const int excessStrategicGold = std::max(0, gold - strategicGoldTarget);
 
     auto add = [&](const MacroAction& a, float s, std::string reason)
     {
@@ -578,7 +587,7 @@ std::vector<ActionScore> MacroActionScorer::scoreActions(const PlayerState& play
             if (gold >= floor && pressure <= AIConstants::EndTurnLowPressureThreshold)
             {
                 s += AIConstants::EndTurnGreedBonus;
-                if (gold >= MacroConstants::MaxInterestGold)
+                if (gold >= MacroConstants::MaxInterestGold && excessStrategicGold <= 0)
                 {
                     s += AIConstants::EndTurnMaxInterestPreservationBonus;
                     why << "max-interest ";
@@ -592,6 +601,25 @@ std::vector<ActionScore> MacroActionScorer::scoreActions(const PlayerState& play
                 why << "lvl-pressure ";
             }
             why << "end";
+        }
+
+        if (excessStrategicGold > 0)
+        {
+            if (a.type == MacroActionType::EndTurn)
+            {
+                s -= static_cast<float>(excessStrategicGold) * AIConstants::StrategicExcessGoldEndTurnPenaltyPer;
+                why << "spend-down ";
+            }
+            else if (a.goldCost > 0)
+            {
+                const int spend = std::min(excessStrategicGold, std::max(0, a.goldCost));
+                s += static_cast<float>(spend) * AIConstants::StrategicExcessGoldSpendRewardPerGold;
+                if (a.type == MacroActionType::RerollShop)
+                {
+                    s += static_cast<float>(excessStrategicGold) * AIConstants::StrategicExcessGoldRerollRewardPer;
+                }
+                why << "spend-down ";
+            }
         }
 
         if (enemy)

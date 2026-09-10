@@ -6,6 +6,9 @@ struct CombatConstants
 {
     static constexpr std::int32_t MsPerSecond = 1000;
     static constexpr std::int32_t MaxCombatDurationMs = 60000;
+    static constexpr std::int32_t OvertimeStartMs = 30000;
+    static constexpr float OvertimeDamageAmplification = 1.0f;
+    static constexpr float OvertimeAttackSpeedPercent = 1.0f;
 
     static constexpr float LowHealthThresholdPct = 0.25f;
 

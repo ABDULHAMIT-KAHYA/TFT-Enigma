@@ -49,6 +49,9 @@ public:
 
     bool hasAlive(TeamId team) const;
 
+    void markCombatTimedOut();
+    bool combatTimedOut() const;
+
     TraitRuntimeState& traitRuntime();
     const TraitRuntimeState& traitRuntime() const;
 
@@ -98,6 +101,7 @@ private:
     UnitId next_unit_id_;
     TraitRuntimeState trait_runtime_;
     std::vector<ItemEffectGateState> item_effect_gate_state_;
+    bool combat_timed_out_;
     bool snapshot_recording_;
     std::vector<std::string> snapshots_;
 };

@@ -68,6 +68,7 @@ GameState::GameState(Board board, std::vector<Unit> units, Logger logger, const 
       tick_count_(0),
       next_event_sequence_(1),
       next_unit_id_{1},
+      combat_timed_out_(false),
       snapshot_recording_(false)
 {
     assignMissingUnitIds();
@@ -229,6 +230,9 @@ bool GameState::hasAlive(TeamId team) const
     return false;
 }
 
+void GameState::markCombatTimedOut() { combat_timed_out_ = true; }
+bool GameState::combatTimedOut() const { return combat_timed_out_; }
+
 TraitRuntimeState& GameState::traitRuntime() { return trait_runtime_; }
 const TraitRuntimeState& GameState::traitRuntime() const { return trait_runtime_; }
 
@@ -289,6 +293,7 @@ GameState GameState::clone() const
     copy.next_event_sequence_ = next_event_sequence_;
     copy.next_unit_id_ = next_unit_id_;
     copy.trait_runtime_ = trait_runtime_;
+    copy.combat_timed_out_ = combat_timed_out_;
     copy.item_effect_gate_state_ = item_effect_gate_state_;
     copy.snapshot_recording_ = snapshot_recording_;
     copy.snapshots_ = snapshots_;

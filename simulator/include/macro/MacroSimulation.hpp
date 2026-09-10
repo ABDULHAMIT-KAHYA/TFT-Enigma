@@ -17,6 +17,8 @@ struct EnemySnapshot;
 struct MacroTurnStats
 {
     int repositionActionsExecuted = 0;
+    std::vector<std::string> legalActionKeys{};
+    std::string chosenActionKey{};
     std::vector<std::string> executedActionKeys{};
 };
 

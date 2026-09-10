@@ -34,7 +34,9 @@ int main(int argc, char** argv)
     bool mcDebug = false;
     bool lobby = false;
     std::uint32_t lobbySeed = baseSeed;
+    std::uint32_t selfplaySeed = baseSeed;
     int selfplay = 0;
+    std::string selfplayOutput = "results/selfplay_results.json";
     std::string scenarioPath;
     std::string recordReplayScenario;
     std::string recordReplayOutput;
@@ -62,6 +64,16 @@ int main(int argc, char** argv)
         else if (arg == "--selfplay" && i + 1 < argc)
         {
             selfplay = std::max(1, std::stoi(argv[i + 1]));
+            i += 1;
+        }
+        else if (arg == "--selfplay-seed" && i + 1 < argc)
+        {
+            selfplaySeed = static_cast<std::uint32_t>(std::stoul(argv[i + 1]));
+            i += 1;
+        }
+        else if (arg == "--selfplay-output" && i + 1 < argc)
+        {
+            selfplayOutput = argv[i + 1];
             i += 1;
         }
         else if (arg == "--mc")
@@ -288,7 +300,7 @@ int main(int argc, char** argv)
 
     if (selfplay > 0)
     {
-        return SelfPlay::run(content, baseSeed, selfplay, std::cout);
+        return SelfPlay::run(content, selfplaySeed, selfplay, selfplayOutput, std::cout);
     }
 
     if (lobby)

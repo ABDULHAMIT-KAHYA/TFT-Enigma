@@ -308,6 +308,8 @@ static void takeTurn(PlayerState& player,
     if (turnStats)
     {
         turnStats->repositionActionsExecuted = 0;
+        turnStats->legalActionKeys.clear();
+        turnStats->chosenActionKey.clear();
         turnStats->executedActionKeys.clear();
     }
 
@@ -487,6 +489,18 @@ static void takeTurn(PlayerState& player,
             filtered.push_back(a);
         }
 
+        if (turnStats && turnStats->legalActionKeys.empty())
+        {
+            for (const MacroAction& a : filtered)
+            {
+                const std::string k = actionKey(a);
+                if (!k.empty())
+                {
+                    turnStats->legalActionKeys.push_back(k);
+                }
+            }
+        }
+
         MacroAction chosen{};
         if (forcedFirstAction && step == 0)
         {
@@ -517,6 +531,10 @@ static void takeTurn(PlayerState& player,
         if (!chosenKey.empty())
         {
             actionCounts[chosenKey] += 1;
+            if (turnStats && turnStats->chosenActionKey.empty())
+            {
+                turnStats->chosenActionKey = chosenKey;
+            }
         }
 
         if (isTransaction(chosen.type))

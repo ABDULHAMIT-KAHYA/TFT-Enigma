@@ -292,6 +292,13 @@ struct AIConstants
     static constexpr float StrategicDeathRiskHpBuffer = 3.0f;
     static constexpr float StrategicDeathRiskImmediateBoardWeight = 0.9f;
     static constexpr float StrategicDeathRiskNonImprovingPenalty = 120.0f;
+    static constexpr int StrategicStage2GoldTarget = 50;
+    static constexpr int StrategicStage3GoldTarget = 40;
+    static constexpr int StrategicStage4GoldTarget = 30;
+    static constexpr int StrategicStage5PlusGoldTarget = 20;
+    static constexpr float StrategicExcessGoldEndTurnPenaltyPer = 4.0f;
+    static constexpr float StrategicExcessGoldSpendRewardPerGold = 10.0f;
+    static constexpr float StrategicExcessGoldRerollRewardPer = 1.2f;
 
     static constexpr float PositioningMinAttackSpeed = 0.1f;
     static constexpr float PositioningRangeBonus = 12.0f;
