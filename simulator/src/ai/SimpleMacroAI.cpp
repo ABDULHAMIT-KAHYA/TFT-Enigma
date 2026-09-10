@@ -2,6 +2,7 @@
 #include "constants/AIConstants.hpp"
 #include "ai/BoardStrengthEvaluator.hpp"
 #include "ai/CompDirectionPlanner.hpp"
+#include "ai/LearnedPolicyModel.hpp"
 #include "ai/MacroActionScorer.hpp"
 #include "ai/RolloutPlanner.hpp"
 #include "macro/RoundSchedule.hpp"
@@ -37,6 +38,11 @@ MacroAction SimpleMacroAI::chooseAction(const PlayerState& player,
                                         bool verbose,
                                         std::ostream& out)
 {
+    if (config_.learnedPolicy && config_.learnedPolicy->isLoaded())
+    {
+        return config_.learnedPolicy->chooseAction(player, content, legalActions, enemy, stage, roundIndex);
+    }
+
     if (config_.enableRollouts && isTurnStart)
     {
         RolloutPlannerConfig cfg{};
@@ -246,3 +252,4 @@ MacroAction SimpleMacroAI::chooseAction(const PlayerState& player,
         ? MacroAction{ MacroActionType::EndTurn }
         : best;
 }
+

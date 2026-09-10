@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "actionDim": 10,
+    "actionSchemaVersion": 1,
+    "config": {
+      "lr": 0.01,
+      "policy_epochs": 8,
+      "seed": 1337,
+      "value_epochs": 8,
+      "weight_decay": 1e-05
+    },
+    "datasetSchemaVersion": 2,
+    "featureSchemaVersion": 2,
+    "policyFeatureDim": 461,
+    "sourceDataset": "D:\\TFT-Galaxy-engine\\tft-ai\\simulator\\src\\results\\gen_001_selfplay.json",
+    "stateDim": 41,
+    "trainRecords": 183,
+    "trainSeeds": [
+      12001
+    ],
+    "validationRecords": 184,
+    "validationSeeds": [
+      12000
+    ]
+  },
+  "policy": {
+    "train": {
+      "loss": 6.891800271357344,
+      "top1": 0.366120218579235,
+      "top3": 0.48633879781420764
+    },
+    "validation": {
+      "loss": 98.67572462569376,
+      "top1": 0.40217391304347827,
+      "top3": 0.5
+    }
+  },
+  "value": {
+    "train": {
+      "correlation": 0.20301894952744395,
+      "loss": 2.532747745513916,
+      "mae": 1.4268869161605835
+    },
+    "validation": {
+      "correlation": 0.5500788480678477,
+      "loss": 24.873699188232422,
+      "mae": 4.516625881195068
+    }
+  }
+}

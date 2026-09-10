@@ -9,6 +9,7 @@
 #include "ai/ScoutSystem.hpp"
 #include "core/Random.hpp"
 class SharedUnitPool;
+class LearnedPolicyModel;
 
 struct SimpleMacroAIConfig
 {
@@ -18,6 +19,7 @@ struct SimpleMacroAIConfig
     int rolloutBranchesPerAction = 8;
     int rolloutTopKActions = 10;
     int rolloutMaxActionsPerTurn = 12;
+    const LearnedPolicyModel* learnedPolicy = nullptr;
 };
 
 class SimpleMacroAI
@@ -45,3 +47,7 @@ private:
     std::uint32_t seed_ = 0;
     SimpleMacroAIConfig config_{};
 };
+
+
+
+

@@ -65,6 +65,50 @@ void writeStringArray(std::ostream& out, const std::vector<std::string>& values)
     out << "]";
 }
 
+void writeFloatArray(std::ostream& out, const std::vector<float>& values)
+{
+    out << "[";
+    for (std::size_t i = 0; i < values.size(); ++i)
+    {
+        if (i > 0)
+        {
+            out << ",";
+        }
+        out << std::fixed << std::setprecision(4) << values[i];
+    }
+    out << "]";
+}
+
+void writeActionEncoding(std::ostream& out, const ActionEncoding& action)
+{
+    out << "{"
+        << "\"schemaVersion\":" << action.schemaVersion
+        << ",\"actionType\":" << action.actionType
+        << ",\"shopIndex\":" << action.shopIndex
+        << ",\"boardIndex\":" << action.boardIndex
+        << ",\"benchIndex\":" << action.benchIndex
+        << ",\"itemIndex\":" << action.itemIndex
+        << ",\"targetX\":" << action.targetX
+        << ",\"targetY\":" << action.targetY
+        << ",\"unitContentId\":" << action.unitContentId
+        << ",\"auxiliaryId\":" << action.auxiliaryId
+        << ",\"goldCost\":" << action.goldCost
+        << "}";
+}
+
+void writeActionArray(std::ostream& out, const std::vector<ActionEncoding>& actions)
+{
+    out << "[";
+    for (std::size_t i = 0; i < actions.size(); ++i)
+    {
+        if (i > 0)
+        {
+            out << ",";
+        }
+        writeActionEncoding(out, actions[i]);
+    }
+    out << "]";
+}
 bool gameHasUniquePlacements(const LobbySimulationResult& game)
 {
     std::unordered_set<int> placements;
@@ -203,14 +247,21 @@ void writeTrainingRecord(std::ostream& out, const LobbyDecisionRecord& record)
         << ", \"traits\": " << jsonString(record.traitSummary)
         << ", \"items\": " << jsonString(record.itemSummary)
         << ", \"shop\": " << jsonString(record.shopSummary)
+        << ", \"stateFeatures\": { \"schemaVersion\": " << record.stateFeatures.schemaVersion
+        << ", \"values\": ";
+    writeFloatArray(out, record.stateFeatures.values);
+    out << " }"
         << ", \"legal\": ";
     writeStringArray(out, record.legalActionIds);
+    out << ", \"legalActions\": ";
+    writeActionArray(out, record.legalActionEncodings);
     out << ", \"chosen\": " << jsonString(record.chosenAction)
-        << ", \"placement\": " << record.eventualPlacement
+        << ", \"chosenAction\": ";
+    writeActionEncoding(out, record.chosenActionEncoding);
+    out << ", \"placement\": " << record.eventualPlacement
         << ", \"reward\": " << std::fixed << std::setprecision(2) << record.terminalReward
         << " }";
 }
-
 bool writeBatch(const std::filesystem::path& outputPath,
                 std::uint32_t baseSeed,
                 const std::vector<LobbySimulationResult>& games,
@@ -230,10 +281,15 @@ bool writeBatch(const std::filesystem::path& outputPath,
     }
 
     file << "{\n";
-    file << "  \"schemaVersion\": 1,\n";
+    file << "  \"schemaVersion\": 2,\n";
     file << "  \"type\": \"lobby_selfplay\",\n";
     file << "  \"baseSeed\": " << baseSeed << ",\n";
     file << "  \"gamesRequested\": " << summary.games << ",\n";
+    file << "  \"featureSchemaVersion\": " << TrainingData::featureSchemaVersion() << ",\n";
+    file << "  \"actionSchemaVersion\": " << TrainingData::actionSchemaVersion() << ",\n";
+    file << "  \"stateFeatureNames\": ";
+    writeStringArray(file, TrainingData::stateFeatureNames());
+    file << ",\n";
     file << "  \"summary\": {\n";
     file << "    \"games\": " << summary.games << ",\n";
     file << "    \"completedGames\": " << summary.completedGames << ",\n";
@@ -332,3 +388,5 @@ int SelfPlay::run(const ContentManager& content,
     out << "Saved " << outPath.string() << "\n";
     return summary.invalidGames == 0 ? 0 : 1;
 }
+
+

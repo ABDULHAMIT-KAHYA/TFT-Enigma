@@ -309,7 +309,9 @@ static void takeTurn(PlayerState& player,
     {
         turnStats->repositionActionsExecuted = 0;
         turnStats->legalActionKeys.clear();
+        turnStats->legalActions.clear();
         turnStats->chosenActionKey.clear();
+        turnStats->chosenAction = MacroAction{};
         turnStats->executedActionKeys.clear();
     }
 
@@ -497,6 +499,7 @@ static void takeTurn(PlayerState& player,
                 if (!k.empty())
                 {
                     turnStats->legalActionKeys.push_back(k);
+                    turnStats->legalActions.push_back(a);
                 }
             }
         }
@@ -534,6 +537,7 @@ static void takeTurn(PlayerState& player,
             if (turnStats && turnStats->chosenActionKey.empty())
             {
                 turnStats->chosenActionKey = chosenKey;
+                turnStats->chosenAction = chosen;
             }
         }
 
@@ -831,3 +835,4 @@ int MacroSimulation::run(const ContentManager& content, std::uint32_t seed, bool
 
     return 0;
 }
+

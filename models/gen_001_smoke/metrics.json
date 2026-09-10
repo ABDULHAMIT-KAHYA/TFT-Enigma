@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "actionDim": 10,
+    "actionSchemaVersion": 1,
+    "config": {
+      "lr": 0.01,
+      "policy_epochs": 2,
+      "seed": 2026,
+      "value_epochs": 2,
+      "weight_decay": 1e-05
+    },
+    "datasetSchemaVersion": 2,
+    "featureSchemaVersion": 2,
+    "policyFeatureDim": 461,
+    "sourceDataset": "simulator\\src\\results\\train_v2_smoke_a.json",
+    "stateDim": 41,
+    "trainRecords": 194,
+    "trainSeeds": [
+      10001
+    ],
+    "validationRecords": 187,
+    "validationSeeds": [
+      10000
+    ]
+  },
+  "policy": {
+    "train": {
+      "loss": 3.0042348924985864,
+      "top1": 0.42783505154639173,
+      "top3": 0.5567010309278351
+    },
+    "validation": {
+      "loss": 10.58224002024866,
+      "top1": 0.43315508021390375,
+      "top3": 0.5240641711229946
+    }
+  },
+  "value": {
+    "train": {
+      "correlation": 0.024821612975796034,
+      "loss": 0.6164581179618835,
+      "mae": 0.6477378606796265
+    },
+    "validation": {
+      "correlation": 0.13915856862381182,
+      "loss": 6.628780841827393,
+      "mae": 1.0424565076828003
+    }
+  }
+}

@@ -5,7 +5,10 @@
 #include <string>
 #include <vector>
 
+#include "macro/TrainingData.hpp"
+
 class ContentManager;
+struct SimpleMacroAIConfig;
 
 struct LobbyPlayerResult
 {
@@ -33,6 +36,9 @@ struct LobbyDecisionRecord
     std::string shopSummary{};
     std::vector<std::string> legalActionIds{};
     std::string chosenAction{};
+    StateFeatures stateFeatures{};
+    std::vector<ActionEncoding> legalActionEncodings{};
+    ActionEncoding chosenActionEncoding{};
     int eventualPlacement = 0;
     float terminalReward = 0.0f;
 };
@@ -67,7 +73,11 @@ public:
     static LobbySimulationResult simulate(const ContentManager& content,
                                           std::uint32_t seed,
                                           bool verbose,
-                                          std::ostream* out);
+                                          std::ostream* out,
+                                          const std::vector<SimpleMacroAIConfig>* aiConfigs = nullptr);
 
     static int run(const ContentManager& content, std::uint32_t seed, std::ostream& out);
 };
+
+
+

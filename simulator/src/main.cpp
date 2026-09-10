@@ -3,6 +3,7 @@
 #include "validation/CombatValidation.hpp"
 #include "validation/ScenarioSystem.hpp"
 #include "ai/SelfPlay.hpp"
+#include "ai/AgentEvaluator.hpp"
 #include "import/TFTDataImporter.hpp"
 #include "validation/ReplaySystem.hpp"
 #include "macro/LobbySimulation.hpp"
@@ -36,6 +37,9 @@ int main(int argc, char** argv)
     std::uint32_t lobbySeed = baseSeed;
     std::uint32_t selfplaySeed = baseSeed;
     int selfplay = 0;
+    int evaluateAgents = 0;
+    std::uint32_t evalSeed = 500000u;
+    std::string policyModelPath{};
     std::string selfplayOutput = "results/selfplay_results.json";
     std::string scenarioPath;
     std::string recordReplayScenario;
@@ -74,6 +78,21 @@ int main(int argc, char** argv)
         else if (arg == "--selfplay-output" && i + 1 < argc)
         {
             selfplayOutput = argv[i + 1];
+            i += 1;
+        }
+        else if (arg == "--evaluate-agents" && i + 1 < argc)
+        {
+            evaluateAgents = std::max(1, std::stoi(argv[i + 1]));
+            i += 1;
+        }
+        else if (arg == "--eval-seed" && i + 1 < argc)
+        {
+            evalSeed = static_cast<std::uint32_t>(std::stoul(argv[i + 1]));
+            i += 1;
+        }
+        else if (arg == "--policy-model" && i + 1 < argc)
+        {
+            policyModelPath = argv[i + 1];
             i += 1;
         }
         else if (arg == "--mc")
@@ -158,6 +177,10 @@ int main(int argc, char** argv)
     else if (selfplay > 0)
     {
         std::cout << "Selfplay\n";
+    }
+    else if (evaluateAgents > 0)
+    {
+        std::cout << "Agent evaluation\n";
     }
     else
     {
@@ -303,6 +326,16 @@ int main(int argc, char** argv)
         return SelfPlay::run(content, selfplaySeed, selfplay, selfplayOutput, std::cout);
     }
 
+    if (evaluateAgents > 0)
+    {
+        if (policyModelPath.empty())
+        {
+            std::cerr << "ERROR: --evaluate-agents requires --policy-model <path>\n";
+            return 1;
+        }
+        return AgentEvaluator::run(content, evaluateAgents, evalSeed, policyModelPath, std::cout);
+    }
+
     if (lobby)
     {
         return LobbySimulation::run(content, lobbySeed, std::cout);
@@ -317,5 +350,8 @@ int main(int argc, char** argv)
 
     return MacroSimulation::run(content, baseSeed, useMonteCarlo, mcDebug, std::cout);
 }
+
+
+
 
 

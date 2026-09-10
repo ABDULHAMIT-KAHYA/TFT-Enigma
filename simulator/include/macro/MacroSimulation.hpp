@@ -11,14 +11,16 @@ class Random;
 class ShopSystem;
 class SimpleMacroAI;
 class SharedUnitPool;
-struct MacroAction;
+#include "macro/MacroAction.hpp"
 struct EnemySnapshot;
 
 struct MacroTurnStats
 {
     int repositionActionsExecuted = 0;
     std::vector<std::string> legalActionKeys{};
+    std::vector<MacroAction> legalActions{};
     std::string chosenActionKey{};
+    MacroAction chosenAction{};
     std::vector<std::string> executedActionKeys{};
 };
 
@@ -62,3 +64,5 @@ public:
                                               int maxActions,
                                               std::ostream& out);
 };
+
+

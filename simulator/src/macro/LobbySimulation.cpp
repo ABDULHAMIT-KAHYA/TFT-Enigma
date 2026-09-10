@@ -394,9 +394,12 @@ float placementReward(int placement)
 
 LobbyDecisionRecord makeDecisionRecord(std::uint32_t seed,
                                        int roundIndex,
+                                       int stage,
                                        int playerId,
+                                       int alivePlayers,
                                        const PlayerState& player,
-                                       const ContentManager& content)
+                                       const ContentManager& content,
+                                       const EnemySnapshot* enemy)
 {
     LobbyDecisionRecord record{};
     record.gameSeed = seed;
@@ -410,6 +413,7 @@ LobbyDecisionRecord makeDecisionRecord(std::uint32_t seed,
     record.traitSummary = traitFeatureSummary(player, content);
     record.itemSummary = itemFeatureSummary(player);
     record.shopSummary = shopFeatureSummary(player);
+    record.stateFeatures = TrainingData::encodeState(player, content, roundIndex, stage, alivePlayers, enemy);
     return record;
 }
 std::string inferCompStyle(const PlayerState& player, const ContentManager& content)
@@ -535,7 +539,8 @@ std::string summarize(const std::vector<LobbyPlayerResult>& players,
 LobbySimulationResult LobbySimulation::simulate(const ContentManager& content,
                                                 std::uint32_t seed,
                                                 bool verbose,
-                                                std::ostream* out)
+                                                std::ostream* out,
+                                                const std::vector<SimpleMacroAIConfig>* aiConfigs)
 {
     NullBuffer nb;
     std::ostream nullOut(&nb);
@@ -553,10 +558,17 @@ LobbySimulationResult LobbySimulation::simulate(const ContentManager& content,
         Random(seed ^ 0x1001u), Random(seed ^ 0x1002u), Random(seed ^ 0x1003u), Random(seed ^ 0x1004u),
         Random(seed ^ 0x1005u), Random(seed ^ 0x1006u), Random(seed ^ 0x1007u), Random(seed ^ 0x1008u)
     };
-    std::array<SimpleMacroAI, LobbyPlayerCount> ais = {
-        SimpleMacroAI(seed ^ 0xA001u), SimpleMacroAI(seed ^ 0xA002u), SimpleMacroAI(seed ^ 0xA003u), SimpleMacroAI(seed ^ 0xA004u),
-        SimpleMacroAI(seed ^ 0xA005u), SimpleMacroAI(seed ^ 0xA006u), SimpleMacroAI(seed ^ 0xA007u), SimpleMacroAI(seed ^ 0xA008u)
-    };
+    std::vector<SimpleMacroAI> ais;
+    ais.reserve(LobbyPlayerCount);
+    for (int i = 0; i < LobbyPlayerCount; ++i)
+    {
+        SimpleMacroAIConfig cfg{};
+        if (aiConfigs && static_cast<std::size_t>(i) < aiConfigs->size())
+        {
+            cfg = (*aiConfigs)[static_cast<std::size_t>(i)];
+        }
+        ais.emplace_back(seed ^ static_cast<std::uint32_t>(0xA001u + i), cfg);
+    }
 
     for (int i = 0; i < LobbyPlayerCount; ++i)
     {
@@ -626,9 +638,13 @@ LobbySimulationResult LobbySimulation::simulate(const ContentManager& content,
             shop.reroll(player, rngs[i], false);
             LobbyDecisionRecord decision = makeDecisionRecord(seed,
                                                               roundIndex,
+                                                              info.stage,
                                                               static_cast<int>(i) + 1,
+                                                              static_cast<int>(currentActive.size()),
                                                               player,
-                                                              content);
+                                                              content,
+                                                              &enemy);
+            const PlayerState decisionPlayerSnapshot = player;
             const int beforeTurnGold = static_cast<int>(player.gold());
             MacroTurnStats stats{};
             takeAliveTurn(player,
@@ -644,6 +660,17 @@ LobbySimulationResult LobbySimulation::simulate(const ContentManager& content,
                           stats);
             decision.legalActionIds = stats.legalActionKeys;
             decision.chosenAction = stats.chosenActionKey.empty() ? "EndTurn" : stats.chosenActionKey;
+            decision.legalActionEncodings.reserve(stats.legalActions.size());
+            for (const MacroAction& action : stats.legalActions)
+            {
+                decision.legalActionEncodings.push_back(TrainingData::encodeAction(action, decisionPlayerSnapshot, content));
+            }
+            MacroAction chosenForEncoding = stats.chosenAction;
+            if (stats.chosenActionKey.empty())
+            {
+                chosenForEncoding.type = MacroActionType::EndTurn;
+            }
+            decision.chosenActionEncoding = TrainingData::encodeAction(chosenForEncoding, decisionPlayerSnapshot, content);
             decisionRecords.push_back(std::move(decision));
             ledger.recordTurnDelta(i, beforeTurnGold, static_cast<int>(player.gold()));
         }
@@ -848,3 +875,8 @@ int LobbySimulation::run(const ContentManager& content, std::uint32_t seed, std:
     out << "Shared pool valid: " << (result.sharedPoolValid ? "yes" : "no") << "\n";
     return result.completed && result.sharedPoolValid && result.economyAccountingBalanced ? 0 : 1;
 }
+
+
+
+
+
